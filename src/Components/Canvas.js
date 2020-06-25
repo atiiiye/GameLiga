@@ -37,20 +37,19 @@ class Canvas extends Component {
         ctx.lineWidth = "1";
         ctx.stroke();
 
-        // let ctx2 = this.canvas2.current.getContext("2d");
         ctx.beginPath();
-        ctx.moveTo(10, 150);
-        ctx.lineTo(35, 150);
+        ctx.moveTo(0, 140);
+        ctx.lineTo(35, 140);
         ctx.lineWidth = "1";
         ctx.strokeStyle = "rgb(54,54,59)";
+        
         ctx.stroke();
     }
 
     render() {
         return (
             <>
-                <canvas className="col-lg-3" id="mycanvas" ref={this.canvas}></canvas>
-               
+                <canvas className="" id="mycanvas" ref={this.canvas}></canvas>
             </>
         )
     }

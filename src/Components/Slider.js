@@ -32,35 +32,37 @@ class Slider extends Component {
         )
     }
 
+
     render() {
         return (
             <section className="main-slider">
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
-                        <Canvas className="col-lg-3" />
+                        
+                        <div className="row aaa">
 
-                        <div className="row col-lg-9">
-                            <div className="col-lg-1">
+                            <div className="sidebar bbb">
+                        <Canvas />
+
                             </div>
 
-                            <div className="card col-lg-11">
-
-                                <div className="card-body col-lg-3">
+                            <div className="card ccc">
+                                <div className="card-body">
                                     <h1 className="h Tournament">Tournament</h1>
                                     <h1 className="h1 title">20<span className="h1">000kr</span></h1>
                                     <h1 className="h1 garanti">Garanti</h1>
                                 </div>
-
-                                <OwlCarousel items={1}
-                                    autoplay={true}
+                                <OwlCarousel className="card-body" items={1}
+                                    // autoplay={true}
                                     autoplayHoverPause={true}
                                     dots={false}
-                                    marginWidth={8}
-                                    autoplayTimeout={3000}
+                                    marginWidth={0}
+                                    autoplayTimeout={5000}
                                     center={true}
                                     pagination={true}
                                     loop={true}
                                     className="owl-theme">
+                                        
 
                                     <div><img src={slide1} className="card-img-top" /></div>
                                     <div><img src={slide3} className="card-img-top" /></div>
