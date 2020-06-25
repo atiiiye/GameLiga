@@ -27,7 +27,6 @@ class Slider extends Component {
         pagination: false
     }
     componentDidUpdate(props, state, snapshot) {
-        console.log("AAA");
         return (
             this.setState({ pagination: true })
         )
