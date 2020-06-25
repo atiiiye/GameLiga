@@ -1,0 +1,88 @@
+@import 'base';
+
+
+div.container-fluid{
+    padding: 0;
+    width: 100%;
+
+    div.navbar{
+        direction: rtl;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        margin-top: 8px;
+
+        div.nav-right{
+            width:max-content;
+            ul.navbar-nav{
+                display: flex;
+                padding-right: 0;
+                align-items: center;
+
+                li.nav-item{
+                    padding-right: 7px;
+                    a.nav-link{
+                        font-size: 90%;
+                        color: $color-white;
+                        cursor: pointer;
+                        padding: .5rem 1rem;
+
+                        &::first-letter{
+                            color:$color-orange-1;
+                        }
+                    }
+                    a.nav-link#signin,
+                    a.nav-link#login{
+                        border: 1px solid $color-orange-1;
+                        border-radius: 28px;
+                        padding-left: 1.8rem;
+                        padding-right: 1.8rem;
+
+                        &:hover{
+                            background-color: rgba($color: $color-orange-1, $alpha: .12);
+                        }
+
+                        &:active{
+                            background-color: rgba($color: $color-orange-1, $alpha: .12);
+                            border-color:rgba($color: $color-orange-1, $alpha: .12);
+                        }
+                    }
+                }
+
+            }
+
+        }
+        div.nav-left{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 27%;
+            div.empty-content{
+                display: flex;
+                width: 90% !important;
+                color: $color-gray-1;
+                height: 2rem ;
+                background-color: rgba($color: $color-gray-1, $alpha: 1.0);
+                position: relative;
+                left: -25px
+            }
+            h4.UFOGame{
+                color: $color-orange-1;
+                font-weight: 600;
+                z-index: 10;
+                width: auto;
+                margin-bottom: 0;
+                span{
+                    color: $color-white;
+                }
+            }
+            img.logo{
+                margin-right: 8px;
+                width: 60px;
+                height: 55px;
+            }
+
+        }
+
+    }
+}

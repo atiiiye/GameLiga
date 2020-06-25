@@ -1,0 +1,98 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-fluid {
+  padding: 0;
+  width: 100%;
+}
+
+div.container-fluid div.navbar {
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+div.container-fluid div.navbar div.nav-right {
+  width: max-content;
+}
+
+div.container-fluid div.navbar div.nav-right ul.navbar-nav {
+  display: flex;
+  padding-right: 0;
+  align-items: center;
+}
+
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item {
+  padding-right: 7px;
+}
+
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link {
+  font-size: 90%;
+  color: #fff;
+  cursor: pointer;
+  padding: .5rem 1rem;
+}
+
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link::first-letter {
+  color: #ff9300;
+}
+
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link#signin,
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link#login {
+  border: 1px solid #ff9300;
+  border-radius: 28px;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link#signin:hover,
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link#login:hover {
+  background-color: rgba(255, 147, 0, 0.12);
+}
+
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link#signin:active,
+div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link#login:active {
+  background-color: rgba(255, 147, 0, 0.12);
+  border-color: rgba(255, 147, 0, 0.12);
+}
+
+div.container-fluid div.navbar div.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+}
+
+div.container-fluid div.navbar div.nav-left div.empty-content {
+  display: flex;
+  width: 90% !important;
+  color: #36363b;
+  height: 2rem;
+  background-color: #36363b;
+  position: relative;
+  left: -25px;
+}
+
+div.container-fluid div.navbar div.nav-left h4.UFOGame {
+  color: #ff9300;
+  font-weight: 600;
+  z-index: 10;
+  width: auto;
+  margin-bottom: 0;
+}
+
+div.container-fluid div.navbar div.nav-left h4.UFOGame span {
+  color: #fff;
+}
+
+div.container-fluid div.navbar div.nav-left img.logo {
+  margin-right: 8px;
+  width: 60px;
+  height: 55px;
+}
+/*# sourceMappingURL=Header.css.map */
