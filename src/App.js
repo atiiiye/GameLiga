@@ -5,6 +5,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header';
 import Slider from './Components/Slider';
+// import Canvas from './Components/Canvas';
 
 
 
@@ -14,6 +15,8 @@ function App() {
     <div>
       <Header></Header>
       <Slider>
+        {/* <Canvas /> */}
+
       </Slider>
     </div>
   );

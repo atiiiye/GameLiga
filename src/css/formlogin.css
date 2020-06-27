@@ -4,38 +4,54 @@ body {
   background-color: #1c1c22;
 }
 
-div.container {
+div.modal .modal-dialogs {
+  margin-top: 0;
+}
+
+div.modal .modal-dialogs div.form-register {
+  background-color: transparent;
+}
+
+div.modal .modal-dialogs div.form-register div.modal-bodys {
+  padding: 0;
+}
+
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card {
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
-}
-
-div.container div.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   box-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+  border-color: #ff9300;
+  border-radius: 28px;
   padding: 0;
-  height: 40%;
+  height: 100%;
+  margin-right: 0;
+  width: 100%;
 }
 
-div.container div.card div.card-body {
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-div.container div.card div.card-body div.card-title {
-  margin-bottom: 0;
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body div.card-title h2 {
+  color: #fff;
+  font-weight: bold;
 }
 
-div.container div.card div.card-body div.card-title img.card-img-top {
-  width: auto;
-  height: 100px;
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body div.card-title h2 span {
+  font-weight: bold;
+  color: #ff9300;
 }
 
-div.container div.card div.card-body form.form-login {
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body div.card-title p.text-white a {
+  color: red;
+}
+
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login {
   padding-top: 0;
   display: flex;
   flex-direction: column;
@@ -43,29 +59,54 @@ div.container div.card div.card-body form.form-login {
   align-items: center;
 }
 
-div.container div.card div.card-body form.form-login div.form-fields {
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields {
+  padding: 0;
   margin-top: .5rem;
 }
 
-div.container div.card div.card-body form.form-login div.form-fields div.input-group div.input-group-prepend span {
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields label {
+  font-size: 80%;
+  color: red;
+  margin-bottom: 0;
+}
+
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields div.input-group {
+  display: flex;
+  align-items: center;
+}
+
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields div.input-group span {
   position: absolute;
   right: 10px;
   z-index: 10;
   top: 5px;
 }
 
-div.container div.card div.card-body form.form-login div.form-fields input {
-  padding-right: calc(1.5em + .70rem);
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields input {
+  direction: ltr;
+  border-color: #36363b;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
 }
 
-div.container div.card div.card-body form.form-login div.form-group {
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields small a {
+  color: #ff9300;
+  font-weight: bold;
+}
+
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-div.container div.card div.card-body form.form-login div.form-group button {
-  background-color: #36363b;
+div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-group button {
+  background-color: #ff9300;
+  border-color: #ff9300;
+  box-shadow: #ff9300;
+  border-radius: 28px;
+  outline: none;
+  font-size: 95%;
 }
 /*# sourceMappingURL=formlogin.css.map */

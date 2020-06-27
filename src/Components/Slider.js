@@ -7,6 +7,7 @@ import Sidebar from './../Components/Sidebar'
 //import css
 import './../css/reset.css'
 import './../css/Slider.css';
+import './../css/formlogin.css'
 
 //import image
 import slide1 from './../images/slide-1.1.png';

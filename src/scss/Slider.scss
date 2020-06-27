@@ -13,15 +13,19 @@ section.main-slider {
         // max-width: 100%;
         padding: 0;
         margin: 0;
+        position: relative;
+
 
 
         div.row {
             width: 100%;
             height: auto;
+
             div.aaa{
                 padding-left: 0;
                 padding-right: 0;
                 // width: 100%;
+
                 div.sidebar.bbb {
                     padding-right: 0 !important;
                     margin-right: 0 !important;
@@ -33,6 +37,7 @@ section.main-slider {
                 div.card.ccc {
                     display: flex;
                     flex-direction: row;
+                    justify-content: flex-end;
                     border-left: 2px solid $color-orange-1;
                     border-top: 2px solid $color-orange-1;
                     border-bottom: 0;
@@ -50,7 +55,7 @@ section.main-slider {
                         // height: 50%;
                         display: flex;
                         flex-direction: column;
-                        justify-content: flex-end;
+                        justify-content: center;
                         align-items: center;
                         padding: 0;
                         margin-top: 0;
@@ -154,7 +159,7 @@ section.main-slider {
                     div.indicators {
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items: center;
                         width: 4%;
                         height: 100%;
@@ -166,7 +171,7 @@ section.main-slider {
                             margin-left: 0;
                             span.number {
                                 color: #ffffff;
-                                line-height: 25px;
+                                line-height: 30px;
                                 font-size: 16px;
                             }
     
