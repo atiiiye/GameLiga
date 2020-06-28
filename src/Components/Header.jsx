@@ -34,8 +34,7 @@ export default class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          show: false,
-          close: false,
+          show: false
         };
       } 
 
@@ -90,7 +89,7 @@ export default class Header extends Component {
                         </div>
                     </div>
 
-                    <Modal className="modal fade" show={this.state.show}>
+                    <Modal className="modal fade" show={this.state.show} onHide={()=>this.setState({ show: false })}>
                         <Modal.Dialog className="modal-dialogs modal-dialog-centered">
                             <div className="form-register modal-content mt-3">
                                 <Modal.Body className="modal-body d-block">
@@ -123,7 +122,7 @@ export default class Header extends Component {
                                                 </div>
 
                                                 <div className="mt-5 form-group w-75">
-                                                    <Button className="btn-lg btn-light btn-block" variant="none" id="submit" onClick={() => this.setState({ show: false })} type="submit">LOG
+                                                    <Button className="btn-lg btn-light btn-block" variant="none" id="submit" onClick={()=> this.setState({ show: false })} type="submit">LOG
                                                                  IN</Button>
                                                 </div>
                                             </Form>
