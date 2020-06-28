@@ -15,13 +15,12 @@ section.main-slider {
         margin: 0;
         position: relative;
 
-
-
         div.row {
             width: 100%;
             height: auto;
+            margin-left: 0;
 
-            div.aaa{
+            div.aaa {
                 padding-left: 0;
                 padding-right: 0;
                 // width: 100%;
@@ -31,160 +30,200 @@ section.main-slider {
                     margin-right: 0 !important;
                     margin-left: 0 !important;
                     width: 10%;
+
                     // height: 100vh;
-                }
-    
-                div.card.ccc {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-end;
-                    border-left: 2px solid $color-orange-1;
-                    border-top: 2px solid $color-orange-1;
-                    border-bottom: 0;
-                    border-right: 0;
-                    border-radius: 0;
-                    background: transparent;
-                    position: relative;
-                    left: 0;
-                    // height: 100vh;
-                    padding-left: 0;
-                    padding-right: 0;
-                    width: 90%;
-    
-                    div.card-body {
-                        // height: 50%;
+                    // div.card-group {
+
+                    div.card-columns {
+                        column-count: 1;
+                        column-gap: 0;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        width: 100%;
                         align-items: center;
-                        padding: 0;
-                        margin-top: 0;
-                        position: absolute;
-                        left: inherit;
-                        height: 100%;
-                        width: 30%;
-                        // top: 5%;
-    
-                        h1.Tournament {
-                            font-size: 2.8rem;
-                            color: $color-orange-1;
-                            font-weight: bold;
-                        }
-    
-                        h1.title {
-                            color: $color-orange-1;
-                            font-weight: bold;
-                            font-size: 2.8rem;
-                            margin-top: .5rem;
-    
-                            span.h1 {
-    
-                                color: $color-white;
-                                font-weight: bold;
-                                font-size: 2.8rem;
-                            }
-                        }
-    
-                        h1.garanti {
-                            font-size: 3rem;
-                            color: $color-white;
-                            font-weight: bold;
-                        }
-                    }
-    
-                    div.owl-carousel.owl-theme.owl-loaded.owl-drag {
-                        width: 70%;
-    
-                        div.owl-stage-outer {
-                            width: 100%;
-                            margin-right: 0 !important;
-    
-                            div.owl-stage {
-                                transform: translate3d(0px, 0px, 0px);
-                                transition: all .1s ease .2s;
-                                width: 100%;
-                                height: 60vh;
-                                display: flex !important;
-                                justify-content: center !important;
-                                align-items: center;
-                                margin-right: 0- !important;
-    
-                                div.owl-item {
-                                    display: flex;
-                                    justify-content: center;
-                                    margin-right: 0 !important;
-                                    float: none;
-                                    width: 100% !important;
-                                    height: 60vh;
-    
-                                    div {
-                                        img.card-img-top {
-                                            display: flex;
-                                            width: 100%;
-                                            height: 100vh;
-                                            margin-right: 0 !important;
-                                            overflow-y: hidden;
-                                        }
-                                    }
-    
-                                }
-                            }
-                        }
-    
-                        div.owl-nav {
-    
-                            button.owl-prev {
-                                color: #ffffff;
-                                font-size: 24px;
-    
-                                &:focus {
-                                    border: none;
-                                }
-                            }
-    
-                            button.owl-next {
-                                color: #ffffff;
-                                font-size: 24px;
-    
-                                &:focus {
-                                    border: none;
-                                }
-    
-                            }
-                        }
-    
-                    }
-    
-    
-                    div.indicators {
-                        display: flex;
-                        flex-direction: column;
                         justify-content: flex-end;
-                        align-items: center;
-                        width: 4%;
                         height: 100%;
-    
-                        div.row.indicator {
+                        background-color: transparent;
+
+                        div.card {
+                            background-color: transparent;
+                            border-color: $color-gray-1;
+                            border-radius: 0;
+                            border-width: 2px;
                             display: flex;
-                            justify-content: center;
-                            margin-right: 0;
-                            margin-left: 0;
-                            span.number {
-                                color: #ffffff;
-                                line-height: 30px;
-                                font-size: 16px;
-                            }
-    
-                            span.number.active {
-                                font-size: 24px;
-                            }
+                            flex-direction: column;
+                            margin-bottom: 0;
+                            width: 60px;
+                            height: 60px;
+
+                            div.card-body {}
                         }
+
+                        // }
                     }
-    
-    
                 }
             }
 
+            div.card.ccc {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                border-left: 2px solid $color-orange-1;
+                border-top: 2px solid $color-orange-1;
+                border-bottom: 0;
+                border-right: 0;
+                border-radius: 0;
+                background: transparent;
+                position: relative;
+                left: 0;
+                // height: 100vh;
+                padding-left: 0;
+                padding-right: 0;
+                width: 90%;
+
+                div.card-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    margin-top: 0;
+                    // position: absolute;
+                    // left: inherit;
+                    height: 100%;
+                    width: 30%;
+                    // top: 5%;
+
+                    h1.Tournament {
+                        font-size: 2.8rem;
+                        color: $color-orange-1;
+                        font-weight: bold;
+                    }
+
+                    h1.title {
+                        color: $color-orange-1;
+                        font-weight: bold;
+                        font-size: 2.8rem;
+                        margin-top: .5rem;
+
+                        span.h1 {
+                            color: $color-white;
+                            font-weight: bold;
+                            font-size: 2.8rem;
+                        }
+                    }
+
+                    h1.garanti {
+                        font-size: 3rem;
+                        color: $color-white;
+                        font-weight: bold;
+                    }
+                }
+
+                div.owl-carousel.owl-theme.owl-loaded.owl-drag {
+                    // width: 50%;
+                    div.owl-stage-outer {
+                        width: 100%;
+                        margin-right: 0 !important;
+
+                        div.owl-stage {
+                            transform: translate3d(0px, 0px, 0px);
+                            transition: all .1s ease .2s;
+                            width: 100%;
+                            height: 60vh;
+                            display: flex !important;
+                            justify-content: center !important;
+                            align-items: center;
+                            margin-right: 0 !important;
+
+                            div.owl-item {
+                                display: flex;
+                                justify-content: center;
+                                // margin-right: 0 !important;
+                                // padding-left: 2rem;
+                                // margin-left: 2rem;
+                                float: none;
+                                // width: 22% !important;
+                                height: 60vh;
+
+                                div {
+
+                                    // width: 100%;
+                                    img.card-img-top {
+                                        display: flex;
+                                        width: 100%;
+                                        // height: 80vh;
+                                        // margin-right: 0;
+                                        overflow-y: hidden;
+                                    }
+                                }
+                            }
+
+                            div.owl-item.active.center {
+                                div {
+                                    // width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    div.owl-nav {
+
+                        button.owl-prev {
+                            color: #ffffff;
+                            font-size: 24px;
+
+                            &:focus {
+                                border: none;
+                            }
+                        }
+
+                        button.owl-next {
+                            color: #ffffff;
+                            font-size: 24px;
+
+                            &:focus {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+                div.indicators {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    width: 4%;
+                    height: 100%;
+
+                    div.row.indicator {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        margin-right: 0;
+                        margin-left: 0;
+
+                        span.number {
+                            display: flex;
+                            justify-content: center;
+                            color: #ffffff;
+                            line-height: 30px;
+                            font-size: 16px;
+                        }
+
+                        span.number.active {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+
+            div.row.images {
+                width: 90%;
+                height: max-content;
+                background-color: #000000;
+            }
         }
     }
 }

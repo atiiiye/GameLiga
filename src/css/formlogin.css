@@ -4,19 +4,19 @@ body {
   background-color: #1c1c22;
 }
 
-div.modal .modal-dialogs {
+div.modal div.modal-dialogs {
   margin-top: 0;
 }
 
-div.modal .modal-dialogs div.form-register {
+div.modal div.modal-dialogs div.form-register {
   background-color: transparent;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys {
+div.modal div.modal-dialogs div.form-register div.modal-body {
   padding: 0;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card {
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -31,27 +31,27 @@ div.modal .modal-dialogs div.form-register div.modal-bodys div.card {
   width: 100%;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body div.card-title h2 {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body div.card-title h2 {
   color: #fff;
   font-weight: bold;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body div.card-title h2 span {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body div.card-title h2 span {
   font-weight: bold;
   color: #ff9300;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body div.card-title p.text-white a {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body div.card-title p.text-white a {
   color: red;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login {
   padding-top: 0;
   display: flex;
   flex-direction: column;
@@ -59,49 +59,49 @@ div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-bod
   align-items: center;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields {
   padding: 0;
   margin-top: .5rem;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields label {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields label {
   font-size: 80%;
   color: red;
   margin-bottom: 0;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields div.input-group {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields div.input-group {
   display: flex;
   align-items: center;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields div.input-group span {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields div.input-group span {
   position: absolute;
   right: 10px;
   z-index: 10;
   top: 5px;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields input {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields input {
   direction: ltr;
   border-color: #36363b;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 7px;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-fields small a {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields small a {
   color: #ff9300;
   font-weight: bold;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-group {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-div.modal .modal-dialogs div.form-register div.modal-bodys div.card div.card-body form.form-login div.form-group button {
+div.modal div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-group button {
   background-color: #ff9300;
   border-color: #ff9300;
   box-shadow: #ff9300;

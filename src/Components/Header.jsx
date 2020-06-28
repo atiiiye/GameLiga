@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 //import css
 import './../css/reset.css'
 import './../css/Header.css';
+import './../css/formlogin.css'
 import logo2 from './../images/logo2.png';
 
 //import boostrap
@@ -81,7 +82,7 @@ export default class Header extends Component {
                                                 <h2>Welcome <span>back</span></h2>
                                                 <p className="text-white">Do not have account ? <a href="#">Sign up</a></p>
                                             </div>
-                                            <form action="#" className="form-login py-4" >
+                                            <Form action="#" className="form-login py-4" >
                                                 <div className="form-fields mb-4">
                                                     <label>
                                                         : User name
@@ -104,7 +105,7 @@ export default class Header extends Component {
                                                 </div>
 
 
-                                            </form>
+                                            </Form>
                                         </div>
                                     </div>
                                 </Modal.Body>

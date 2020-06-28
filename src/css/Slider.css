@@ -23,6 +23,7 @@ section.main-slider div.container-fluid {
 section.main-slider div.container-fluid div.row {
   width: 100%;
   height: auto;
+  margin-left: 0;
 }
 
 section.main-slider div.container-fluid div.row div.aaa {
@@ -37,7 +38,31 @@ section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb {
   width: 10%;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc {
+section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb div.card-columns {
+  column-count: 1;
+  column-gap: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  background-color: transparent;
+}
+
+section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb div.card-columns div.card {
+  background-color: transparent;
+  border-color: #36363b;
+  border-radius: 0;
+  border-width: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  width: 60px;
+  height: 60px;
+}
+
+section.main-slider div.container-fluid div.row div.card.ccc {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -54,54 +79,48 @@ section.main-slider div.container-fluid div.row div.aaa div.card.ccc {
   width: 90%;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.card-body {
+section.main-slider div.container-fluid div.row div.card.ccc div.card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin-top: 0;
-  position: absolute;
-  left: inherit;
   height: 100%;
   width: 30%;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.card-body h1.Tournament {
+section.main-slider div.container-fluid div.row div.card.ccc div.card-body h1.Tournament {
   font-size: 2.8rem;
   color: #ff9300;
   font-weight: bold;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.card-body h1.title {
+section.main-slider div.container-fluid div.row div.card.ccc div.card-body h1.title {
   color: #ff9300;
   font-weight: bold;
   font-size: 2.8rem;
   margin-top: .5rem;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.card-body h1.title span.h1 {
+section.main-slider div.container-fluid div.row div.card.ccc div.card-body h1.title span.h1 {
   color: #fff;
   font-weight: bold;
   font-size: 2.8rem;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.card-body h1.garanti {
+section.main-slider div.container-fluid div.row div.card.ccc div.card-body h1.garanti {
   font-size: 3rem;
   color: #fff;
   font-weight: bold;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag {
-  width: 70%;
-}
-
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer {
   width: 100%;
   margin-right: 0 !important;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer div.owl-stage {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer div.owl-stage {
   transform: translate3d(0px, 0px, 0px);
   transition: all .1s ease .2s;
   width: 100%;
@@ -109,45 +128,41 @@ section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-car
   display: flex !important;
   justify-content: center !important;
   align-items: center;
-  margin-right: 0-!important;
+  margin-right: 0 !important;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer div.owl-stage div.owl-item {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer div.owl-stage div.owl-item {
   display: flex;
   justify-content: center;
-  margin-right: 0 !important;
   float: none;
-  width: 100% !important;
   height: 60vh;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer div.owl-stage div.owl-item div img.card-img-top {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-stage-outer div.owl-stage div.owl-item div img.card-img-top {
   display: flex;
   width: 100%;
-  height: 100vh;
-  margin-right: 0 !important;
   overflow-y: hidden;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-prev {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-prev {
   color: #ffffff;
   font-size: 24px;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-prev:focus {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-prev:focus {
   border: none;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-next {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-next {
   color: #ffffff;
   font-size: 24px;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-next:focus {
+section.main-slider div.container-fluid div.row div.card.ccc div.owl-carousel.owl-theme.owl-loaded.owl-drag div.owl-nav button.owl-next:focus {
   border: none;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.indicators {
+section.main-slider div.container-fluid div.row div.card.ccc div.indicators {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -156,20 +171,29 @@ section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.indicat
   height: 100%;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.indicators div.row.indicator {
+section.main-slider div.container-fluid div.row div.card.ccc div.indicators div.row.indicator {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-right: 0;
   margin-left: 0;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.indicators div.row.indicator span.number {
+section.main-slider div.container-fluid div.row div.card.ccc div.indicators div.row.indicator span.number {
+  display: flex;
+  justify-content: center;
   color: #ffffff;
   line-height: 30px;
   font-size: 16px;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.card.ccc div.indicators div.row.indicator span.number.active {
-  font-size: 24px;
+section.main-slider div.container-fluid div.row div.card.ccc div.indicators div.row.indicator span.number.active {
+  font-size: 22px;
+}
+
+section.main-slider div.container-fluid div.row div.row.images {
+  width: 90%;
+  height: max-content;
+  background-color: #000000;
 }
 /*# sourceMappingURL=Slider.css.map */
