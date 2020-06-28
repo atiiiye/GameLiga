@@ -26,6 +26,7 @@ div.container-fluid{
                         color: $color-white;
                         cursor: pointer;
                         padding: .5rem 1rem;
+                        outline: none;
 
                         &::first-letter{
                             color:$color-orange-1;

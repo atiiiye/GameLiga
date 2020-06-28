@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 
 //import css
@@ -10,7 +9,7 @@ import logo2 from './../images/logo2.png';
 //import boostrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form } from 'react-bootstrap'
-import { Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
 //import routes
@@ -31,11 +30,19 @@ export default class Header extends Component {
     //     setValidated(true);
     // };
 
-    state = {
-        show: false
-    }
 
-    handleShow = () =>{ this.setShow(true)};
+    constructor(props) {
+        super(props);
+        this.state = {
+          show: false,
+          close: false,
+        };
+      } 
+
+    // handleShow = () => this.setState({ show: true });
+    // handleClose = () => this.setSatate({ show: false });
+
+
     render() {
         return (
             <>
@@ -46,19 +53,15 @@ export default class Header extends Component {
                                 <Route>
                                     <ul className="navbar-nav">
                                         <li className="nav-item">
-                                            {/* <Button className=""> */}
-                                            <Link className="nav-link " id="login" to="/login" onClick={this.handleShow}>LOG IN</Link>
-                                            {/* </Button> */}
+                                            <Link className="nav-link" id="login" to="/" onClick= {() => this.setState({ show: true })}>LOG IN</Link>
                                         </li>
+
+
                                         <li className="nav-item">
-                                            {/* <Button className=""> */}
                                             <Link className="nav-link" id="signin" to="/signin">SIGN UP</Link>
-                                            {/* </Button> */}
                                         </li>
                                         <li className="nav-item">
-                                            {/* <Button type="button"> */}
                                             <Link className="nav-link" to="more">More</Link>
-                                            {/* </Button> */}
                                         </li>
                                         <li className="nav-item">
                                             {/* <Button className=""> */}
@@ -87,47 +90,50 @@ export default class Header extends Component {
                         </div>
                     </div>
 
-                    <Modal className="modal fade" show={this.state.show} id="loginModal">
-                        <Modal.Dialog className="modal-dialogs modal-dialog-centered modal-sm">
+                    <Modal className="modal fade" show={this.state.show}>
+                        <Modal.Dialog className="modal-dialogs modal-dialog-centered">
                             <div className="form-register modal-content mt-3">
-                                <Modal.Body className="modal-bodys d-block">
+                                <Modal.Body className="modal-body d-block">
                                     <Card>
                                         <Card.Body className="px-0">
-                                            <Card.Title className="text-center">
-                                                <h2>Welcome <span>back</span></h2>
-                                                <p className="text-white">Do not have account ? <Link to="#">Sign up</Link></p>
+                                            <Card.Title className="text-center mx-2">
+                                                <BrowserRouter>
+                                                    <Route>
+                                                        <h2>Welcome <span>back</span></h2>
+                                                        <p className="text-white px-2">Do not have account ? <Link to="#">Sign up</Link></p>
+                                                    </Route>
+                                                </BrowserRouter>
+
                                             </Card.Title>
                                             <Form action="#" className="form-login py-4" >
                                                 <div className="form-fields mb-4">
                                                     <label>
-                                                        : User name
-                                                        <input type="text" className="form-control mb-2" id="username"
-                                                            placeholder="User" required></input>
+                                                        User name :
+                                                        <input type="text" className="form-control mb-2 mt-1" id="username"
+                                                            placeholder="User"></input>
                                                     </label>
 
                                                 </div>
                                                 <div className="form-fields mb-4">
                                                     <label>
-                                                        : Password
-                                                        <input type="password" className="form-control mb-2" id="password"
-                                                            placeholder="Password" required></input>
+                                                        Password :
+                                                        <input type="password" className="form-control mb-2 mt-1" id="password"
+                                                            placeholder="Password"></input>
                                                     </label>
                                                 </div>
 
-                                                <div className="mt-5 form-group">
-                                                    <Button className="btn btn-info btn-lg btn-block" id="submit" type="submit">LOG
+                                                <div className="mt-5 form-group w-75">
+                                                    <Button className="btn-lg btn-light btn-block" variant="none" id="submit" onClick={() => this.setState({ show: false })} type="submit">LOG
                                                                  IN</Button>
                                                 </div>
                                             </Form>
                                         </Card.Body>
                                     </Card>
                                 </Modal.Body>
-
                             </div>
-
                         </Modal.Dialog>
-
                     </Modal>
+
                 </div>
 
             </>

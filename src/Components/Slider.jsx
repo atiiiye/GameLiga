@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 //import components
 import Canvas from './../Components/Canvas'
-import Sidebar from './../Components/Sidebar'
 
 //import css
 import './../css/reset.css'
@@ -128,10 +127,8 @@ class Slider extends Component {
                                     pagination="true"
                                     loop={true}
                                 >
-                                    {console.log("aaa")}
                                     {this.state.data.map((img) => <div key={img.id}>
                                         <img src={img.source} className="card-img-top" alt="" />
-                                        {console.log("bbb")}
                                     </div>)}
                                 </OwlCarousel>
 

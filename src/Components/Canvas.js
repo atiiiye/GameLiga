@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './../css/canvas.css';
-import Sidebar from './Sidebar';
 
 class Canvas extends Component {
 

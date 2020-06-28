@@ -1,11 +1,15 @@
 @import 'base';
 
-div.modal {
+div.modal-content {
+    background-color: transparent;
+
     div.modal-dialogs {
         margin-top: 0;
+
         // margin-right: 50px;
         div.form-register {
-            background-color: transparent;
+            background-color: rgba($color: $color-gray-1, $alpha: .4);
+            border-radius: 28px;
 
             div.modal-body {
                 padding: 0;
@@ -34,8 +38,6 @@ div.modal {
                         // justify-content: center;
                         // align-items: center;
                         div.card-title {
-
-
                             h2 {
                                 color: $color-white;
                                 font-weight: bold;
@@ -47,8 +49,14 @@ div.modal {
                             }
 
                             p.text-white {
+                                margin-top: .5rem;
+                                font-size: 90%;
+
                                 a {
+                                    font-size: 80%;
                                     color: red;
+                                    font-weight: bold;
+
                                 }
                             }
                         }
@@ -69,7 +77,8 @@ div.modal {
                                 label {
                                     font-size: 80%;
                                     color: red;
-                                    margin-bottom: 0;
+                                    font-weight: bold;
+
                                 }
 
                                 div.input-group {
@@ -110,10 +119,15 @@ div.modal {
                                 button {
                                     background-color: $color-orange-1;
                                     border-color: $color-orange-1;
-                                    box-shadow: $color-orange-1;
                                     border-radius: 28px;
                                     outline: none;
                                     font-size: 95%;
+                                    color: $color-white;
+
+                                    &:active {
+                                        box-shadow: 1px 1px 0 0 $color-orange-1;
+
+                                    }
                                 }
                             }
 
