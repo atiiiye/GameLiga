@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+//import css
 import './../css/canvas.css';
 
 class Canvas extends Component {

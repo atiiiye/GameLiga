@@ -20,11 +20,11 @@ import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
 
 
-
-// import { Carousel } from 'react-responsive-carousel'
+// import packages
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+
 
 class Slider extends Component {
 
@@ -75,12 +75,14 @@ class Slider extends Component {
     }
 
     isActive = () => {
-        // this.setState(prevState => {
-        //     return ({
-        //         ...prevState,
-        //         pagination: ! prevState.pagination}
-        //     )
-        // })
+        this.setState(prevState => {
+            return (
+                {
+                    ...prevState,
+                    pagination: !prevState.pagination
+                }
+            )
+        })
     }
     render() {
         return (
@@ -90,7 +92,6 @@ class Slider extends Component {
                         <div className="row aaa">
                             <div className="sidebar bbb">
                                 <Canvas />
-                                {/* <div className='card-group'> */}
                                 <CardColumns>
                                     <Card>
                                         <Card.Body>
@@ -109,7 +110,6 @@ class Slider extends Component {
                                         </Card.Body>
                                     </Card>
                                 </CardColumns>
-                                {/* </div> */}
                             </div>
                             <div className="card row ccc">
                                 <div className="card-body">
@@ -118,7 +118,7 @@ class Slider extends Component {
                                     <h1 className="h1 garanti">Garanti</h1>
                                 </div>
                                 <OwlCarousel className="card-body owl-theme" items={1}
-                                    // autoplay={true}
+                                    autoplay={true}
                                     autoplayHoverPause={true}
                                     dots={false}
                                     marginWidth={10}
