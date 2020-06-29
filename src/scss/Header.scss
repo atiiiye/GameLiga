@@ -1,5 +1,4 @@
 @import 'base';
-@import 'mediaHeader';
 
 div.container-fluid{
     padding: 0;
@@ -11,9 +10,12 @@ div.container-fluid{
         justify-content:space-between;
         align-items: center;
         margin-top: 8px;
+       
 
         div.nav-right{
-            width:max-content;
+            display: flex;
+            width:70%;
+
             ul.navbar-nav{
                 display: flex;
                 padding-right: 0;
@@ -87,3 +89,7 @@ div.container-fluid{
 
     }
 }
+
+
+
+

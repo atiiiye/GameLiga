@@ -16,24 +16,24 @@ class Canvas extends Component {
     componentDidMount(props, state) {
         let ctx = this.canvas.current.getContext("2d");
         ctx.beginPath();
-        ctx.moveTo(55, 40);
-        ctx.lineTo(55, 20);
-        ctx.lineTo(80, 20);
+        ctx.moveTo(55, 20);
+        ctx.lineTo(55, 0);
+        ctx.lineTo(80, 0);
         ctx.strokeStyle = 'rgb(54,54,59)';
         ctx.lineWidth = "2";
         ctx.stroke();
 
         ctx.beginPath();
         ctx.strokeStyle = "rgb(255,147,0)";
-        ctx.moveTo(115, 30);
-        ctx.lineTo(150, 30);
+        ctx.moveTo(115, 10);
+        ctx.lineTo(150, 10);
         ctx.lineWidth = "2";
         ctx.stroke();
 
         ctx.beginPath();
-        ctx.moveTo(55, 110);
-        ctx.lineTo(55, 130);
-        ctx.lineTo(80, 130);
+        ctx.moveTo(55, 90);
+        ctx.lineTo(55, 110);
+        ctx.lineTo(80, 110);
         ctx.strokeStyle = "rgb(54,54,59)";
         ctx.lineWidth = "2";
         ctx.stroke();

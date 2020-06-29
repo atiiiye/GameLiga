@@ -4,7 +4,6 @@ div.modal-content {
     background-color: transparent;
 
     div.modal-dialogs {
-        margin-top: 0;
 
         // margin-right: 50px;
         div.form-register {
@@ -23,7 +22,6 @@ div.modal-content {
                     box-shadow: 1px 2px rgba(0, 0, 0, .3);
                     border-color: $color-orange-1;
                     border-radius: 28px;
-                    padding: 0;
                     height: 100%;
                     margin-right: 0;
                     width: 100%;
@@ -67,13 +65,13 @@ div.modal-content {
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
+                            width: 100%;
 
                             div.form-fields {
                                 padding: 0;
-
                                 margin-top: .5rem;
-
                                 // margin-right: 2rem;
+                                
                                 label {
                                     font-size: 80%;
                                     color: red;

@@ -11,5 +11,6 @@ canvas#mycanvas {
   height: 50vh;
   position: absolute;
   left: .5rem;
+  overflow: scroll;
 }
 /*# sourceMappingURL=canvas.css.map */

@@ -75,14 +75,14 @@ class Slider extends Component {
     }
 
     isActive = () => {
-        this.setState(prevState => {
-            return (
-                {
-                    ...prevState,
-                    pagination: !prevState.pagination
-                }
-            )
-        })
+        // this.setState(prevState => {
+        //     return (
+        //         {
+        //             ...prevState,
+        //             pagination: !prevState.pagination
+        //         }
+        //     )
+        // })
     }
     render() {
         return (
@@ -112,10 +112,13 @@ class Slider extends Component {
                                 </CardColumns>
                             </div>
                             <div className="card row ccc">
+
                                 <div className="card-body">
-                                    <h1 className="h Tournament">Tournament</h1>
-                                    <h1 className="h1 title">20<span className="h1">000kr</span></h1>
-                                    <h1 className="h1 garanti">Garanti</h1>
+                                    <div className="card-text">
+                                        <h1 className="h Tournament">Tournament</h1>
+                                        <h1 className="h1 title">20<span className="h1">000kr</span></h1>
+                                        <h1 className="h1 garanti">Garanti</h1>
+                                    </div>
                                 </div>
                                 <OwlCarousel className="card-body owl-theme" items={1}
                                     autoplay={true}

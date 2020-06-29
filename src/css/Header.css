@@ -18,7 +18,8 @@ div.container-fluid div.navbar {
 }
 
 div.container-fluid div.navbar div.nav-right {
-  width: max-content;
+  display: flex;
+  width: 70%;
 }
 
 div.container-fluid div.navbar div.nav-right ul.navbar-nav {
