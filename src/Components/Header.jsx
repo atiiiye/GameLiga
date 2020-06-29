@@ -5,33 +5,21 @@ import './../css/reset.css'
 import './../css/Header.css';
 import './../css/mediaHeader.css'
 import './../css/formlogin.css';
+
+//import image
 import logo2 from './../images/logo2.png';
 
 //import boostrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form } from 'react-bootstrap'
-import { Modal } from 'react-bootstrap';
+import { Button, Form, Navbar , Modal } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card';
-import Navbar from 'react-bootstrap/Navbar';
+
 
 //import routes
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
-    // function FormExample() {
-    // const [validated, setValidated] = useState(false);
-
-    // const handleSubmit = (event) => {
-    //     const form = event.currentTarget;
-    //     if (form.checkValidity() === false) {
-    //         event.preventDefault();
-    //         event.stopPropagation();
-    //     }
-
-    //     setValidated(true);
-    // };
-
 
     constructor(props) {
         super(props);
@@ -40,33 +28,32 @@ export default class Header extends Component {
         };
     }
 
-    // handleShow = () => this.setState({ show: true });
-    // handleClose = () => this.setSatate({ show: false });
-
-
     render() {
         return (
             <>
                 <div className="container-fluid">
-                    <div className="navbar navbar-expand-md">
-                        <div className="hamburger-menu navbar-toggler" data-target="#coll-navbar" data-toggle="collapse">
-                            <span className="menu navbar-toggler-icon">
-                                <div className="menu-line menu-line-1"></div>
-                                <div className="menu-line menu-line-2"></div>
-                                <div className="menu-line menu-line-3"></div>
-                            </span>
+                    <Navbar className="" collapseOnSelect expand="md" bg="none">
+                        <div className="hamburger-menu navbar-toggler px-0" data-target="#coll-navbar">
+                            <Navbar.Toggle aria-controls="collapse" className="px-0">
+                                <span className="menu navbar-toggler-icon">
+                                    <div className="menu-line menu-line-1"></div>
+                                    <div className="menu-line menu-line-2"></div>
+                                    <div className="menu-line menu-line-3"></div>
+                                </span>
+                            </Navbar.Toggle>
+
                         </div>
                         <div className="nav-right">
                             <BrowserRouter>
                                 <Route>
                                     <ul className="navbar-nav">
                                         <li className="nav-item">
-                                            <Link className="nav-link" id="login" to="/" onClick={() => this.setState({ show: true })}>LOG IN</Link>
+                                            <Link className="nav-link" id="login" to="/" onClick={()=> this.setState({ show: true })}>LOG IN</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" id="signin" to="/signin">SIGN UP</Link>
                                         </li>
-                                        <div className="collapse navbar-collapse" id="coll-navbar">
+                                        <Navbar.Collapse className="navbar-collapse" id="coll-navbar">
                                             <li className="nav-item">
                                                 <Link className="nav-link" to="more">More</Link>
                                             </li>
@@ -79,7 +66,7 @@ export default class Header extends Component {
                                             <li className="nav-item">
                                                 <Link className="nav-link" to="studi">Studi</Link>
                                             </li>
-                                        </div>
+                                        </Navbar.Collapse>
                                     </ul>
                                 </Route>
                             </BrowserRouter>
@@ -90,7 +77,7 @@ export default class Header extends Component {
                             <h4 className="UFOGame">UFO<span>Game</span></h4>
                             <img className="logo" src={logo2} alt="" />
                         </div>
-                    </div>
+                    </Navbar>
 
                     <Modal className="modal fade" show={this.state.show} onHide={() => this.setState({ show: false })}>
                         <Modal.Dialog className="modal-dialogs modal-dialog-centered">
@@ -110,7 +97,7 @@ export default class Header extends Component {
                                                 <div className="form-fields mb-4">
                                                     <label>
                                                         User name :
-                                                        <input type="text" className="form-control mb-2 mt-1" i="username"
+                                                        <input type="text" className="form-control mb-2 mt-1" id="username"
                                                             placeholder="User"></input>
                                                     </label>
 

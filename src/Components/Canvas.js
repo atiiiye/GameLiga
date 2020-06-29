@@ -39,8 +39,8 @@ class Canvas extends Component {
         ctx.stroke();
 
         ctx.beginPath();
-        ctx.moveTo(5, 120);
-        ctx.lineTo(35, 120);
+        ctx.moveTo(12, 120);
+        ctx.lineTo(29, 120);
         ctx.lineWidth = "2";
         ctx.strokeStyle = "rgb(54,54,59)";
         

@@ -91,14 +91,14 @@ section.main-slider {
                     width: 30%;
                     // top: 5%;
 
-                   div.card-text{
+                   div.card-text {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: flex-start;
+                    align-items: center;
                     position: relative;
-                    width: 100%;
-                    height: 100%;
+                    width: 70%;
+                    height: 80%;
 
 
                     h1.Tournament {
@@ -155,11 +155,10 @@ section.main-slider {
                                 height: 60vh;
 
                                 div {
-
                                     // width: 100%;
                                     img.card-img-top {
-                                        display: flex;
-                                        width: 100%;
+                                        // display: flex;
+                                        // width: 100%;
                                         // height: 80vh;
                                         // margin-right: 0;
                                         // overflow-y: hidden;
@@ -171,27 +170,6 @@ section.main-slider {
                                 div {
                                     // width: 100%;
                                 }
-                            }
-                        }
-                    }
-
-                    div.owl-nav {
-
-                        button.owl-prev {
-                            color: #ffffff;
-                            font-size: 24px;
-
-                            &:focus {
-                                border: none;
-                            }
-                        }
-
-                        button.owl-next {
-                            color: #ffffff;
-                            font-size: 24px;
-
-                            &:focus {
-                                border: none;
                             }
                         }
                     }

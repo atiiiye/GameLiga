@@ -6,6 +6,7 @@ import Canvas from './../Components/Canvas'
 //import css
 import './../css/reset.css'
 import './../css/Slider.css';
+import './../css/mediaSlider.css';
 import './../css/formlogin.css'
 
 //import image
