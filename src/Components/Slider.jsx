@@ -22,9 +22,11 @@ import CardColumns from 'react-bootstrap/CardColumns';
 
 
 // import packages
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css';
 
 
 class Slider extends Component {
@@ -53,39 +55,39 @@ class Slider extends Component {
                 name: "img5",
                 source: slide8
             }
-        ],
-        indicators: [
-            {
-                id: 1,
-                name: "slide1",
-            }, {
-                id: 2,
-                name: "slide2",
-            }, {
-                id: 3,
-                name: "slide3",
-            }, {
-                id: 4,
-                name: "slide4",
-            }, {
-                id: 5,
-                name: "slide5",
-            },
-        ],
-        pagination: false
+        ]
     }
 
-    isActive = () => {
-        // this.setState(prevState => {
-        //     return (
-        //         {
-        //             ...prevState,
-        //             pagination: !prevState.pagination
-        //         }
-        //     )
-        // })
-    }
+    // isActive = () => {
+    // this.setState(prevState => {
+    //     return (
+    //         {
+    //             ...prevState,
+    //             pagination: !prevState.pagination
+    //         }
+    //     )
+    // })
+    // }
+
     render() {
+        const params =
+        {
+            spaceBetween: 30,
+            centeredSlides: true,
+            mousewheel: true,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: (index, className) => {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                }
+            }
+        }
         return (
             <section className="main-slider">
                 <div className="container-fluid">
@@ -121,27 +123,11 @@ class Slider extends Component {
                                         <h1 className="h1 garanti">Garanti</h1>
                                     </div>
                                 </div>
-                                <OwlCarousel className="card-body owl-theme" items={1}
-                                    autoplay={true}
-                                    autoplayHoverPause={true}
-                                    dots={false}
-                                    marginWidth={10}
-                                    autoplayTimeout={3000}
-                                    center={true}
-                                    pagination="true"
-                                    loop={true}
-                                >
-                                    {this.state.data.map((img) => <div key={img.id}>
+                                <Swiper {...params}>
+                                    {this.state.data.map((img) => <div key={img.id} className="slides">
                                         <img src={img.source} className="card-img-top" alt="" />
                                     </div>)}
-                                </OwlCarousel>
-
-                                <div className="indicators">
-                                    <div className="row indicator">
-                                        {this.state.indicators.map(item => <span key={item.id} className={`number ${this.isActive() ? 'active' : ''}`}>0{item.id}</span>)}
-                                    </div>
-
-                                </div>
+                                </Swiper>
                                 <div className="row images">
 
                                 </div>
