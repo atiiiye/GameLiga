@@ -32,27 +32,30 @@ export default class Header extends Component {
         return (
             <>
                 <div className="container-fluid">
-                    <Navbar className="" collapseOnSelect expand="md" bg="none">
-                        <div className="hamburger-menu navbar-toggler px-0" data-target="#coll-navbar">
-                            <Navbar.Toggle aria-controls="collapse" className="px-0">
-                                <span className="menu navbar-toggler-icon">
-                                    <div className="menu-line menu-line-1"></div>
-                                    <div className="menu-line menu-line-2"></div>
-                                    <div className="menu-line menu-line-3"></div>
-                                </span>
-                            </Navbar.Toggle>
+                    <BrowserRouter>
+                        <Route>
+                            <Navbar className="" collapseOnSelect expand="md" bg="none">
+                                <div className="hamburger-menu px-0" data-target="#coll-navbar">
+                                    <Navbar.Toggle aria-controls="collapse" className="px-0">
+                                        <span className="menu navbar-toggler-icon">
+                                            <div className="menu-line menu-line-1"></div>
+                                            <div className="menu-line menu-line-2"></div>
+                                            <div className="menu-line menu-line-3"></div>
+                                        </span>
+                                    </Navbar.Toggle>
 
-                        </div>
-                        <div className="nav-right">
-                            <BrowserRouter>
-                                <Route>
+                                </div>
+                                <div className="nav-right">
+
                                     <ul className="navbar-nav">
-                                        <li className="nav-item">
-                                            <Link className="nav-link" id="login" to="/" onClick={() => this.setState({ show: true })}>LOG IN</Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" id="signin" to="/signin">SIGN UP</Link>
-                                        </li>
+                                        <div className="buttons">
+                                            <li className="nav-item">
+                                                <Link className="nav-link" id="login" to="/" onClick={() => this.setState({ show: true })}>LOG IN</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link" id="signin" to="/signin">SIGN UP</Link>
+                                            </li>
+                                        </div>
                                         <Navbar.Collapse className="navbar-collapse" id="coll-navbar">
                                             <li className="nav-item">
                                                 <Link className="nav-link" to="more">More</Link>
@@ -68,19 +71,18 @@ export default class Header extends Component {
                                             </li>
                                         </Navbar.Collapse>
                                     </ul>
-                                </Route>
-                            </BrowserRouter>
 
-                        </div>
-                        <div className="nav-left">
-                            <div className="empty-content"></div>
-                            <h4 className="UFOGame">UFO<span>Game</span></h4>
-                            <img className="logo" src={logo2} alt="" />
-                        </div>
-                    </Navbar>
 
-                    <Modal className="modal fade" show={this.state.show} onHide={() => this.setState({ show: false })}>
-                        <Modal.Dialog className="modal-dialogs modal-dialog-centered">
+                                </div>
+                                <div className="nav-left">
+                                    <div className="empty-content"></div>
+                                    <h4 className="UFOGame">UFO<span>Game</span></h4>
+                                    <img className="logo" src={logo2} alt="" />
+                                </div>
+                            </Navbar>
+
+                            <Modal className="fade" show={this.state.show} onHide={() => this.setState({ show: false })}>
+                                {/* <Modal.Dialog className="modal-dialog-centered"> */}
                                 <Modal.Body>
                                     <Modal.Title className="text-center mx-2">
                                         <BrowserRouter>
@@ -99,22 +101,25 @@ export default class Header extends Component {
                                             </label>
 
                                         </div>
-                                        <div className="form-fields mb-4">
+                                        <div className="form-fields">
                                             <label>
                                                 Password :
                                                         <input type="password" className="form-control mb-2 mt-1" id="password"
                                                     placeholder="Password"></input>
                                             </label>
                                         </div>
+                                        <Link className="forgot mb-4" to="/" alt="" >Forget your password?</Link>
 
                                         <div className="mt-5 form-group w-75">
-                                            <Button className="btn-lg btn-light btn-block" variant="none" id="submit" onClick={() => this.setState({ show: false })} type="submit">LOG
+                                            <Button className="btn-block" variant="none" id="submit" onClick={() => this.setState({ show: false })} type="submit">LOG
                                                                  IN</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
-                        </Modal.Dialog>
-                    </Modal>
+                                {/* </Modal.Dialog> */}
+                            </Modal>
+                        </Route>
+                    </BrowserRouter>
 
                 </div>
 

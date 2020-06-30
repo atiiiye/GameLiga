@@ -1,129 +1,129 @@
 @import 'base';
 
 div.modal-content {
-    background-color: transparent;
+    background-color: rgba($color: $color-background-1, $alpha: .5);
     border-color: $color-orange-1;
+    border-radius: 28px;
+    margin-top: 14%;
 
-    div.modal-dialogs {
+    div.modal-body {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 2px rgba(0, 0, 0, .3);
 
-        // margin-right: 50px;
+        height: 100%;
+        margin-right: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
 
-        div.modal-content {
-            border-color: $color-orange-1;
-            border-radius: 28px;
-            div.modal-body {
-                background-color: transparent;
+        div.modal-title {
+            h2 {
+                color: $color-white;
+                font-weight: bold;
+
+                span {
+                    font-weight: bold;
+                    color: $color-orange-1;
+                }
+            }
+
+            p.text-white {
+                margin-top: .5rem;
+                font-size: 90%;
+
+                a {
+                    font-size: 80%;
+                    color: red;
+                    font-weight: bold;
+
+                }
+            }
+        }
+
+        form.form-login {
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            div.form-fields {
+                padding: 0;
+                margin-top: .5rem;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+
+                label {
+                    font-size: 80%;
+                    color: red;
+                    font-weight: bold;
+                    width: 70%;
+                }
+
+                div.input-group {
+
+                    span {
+                        position: absolute;
+                        right: 10px;
+                        z-index: 10;
+                        top: 5px;
+                    }
+                }
+
+                input {
+                    direction: ltr;
+                    border-color: $color-gray-1;
+                    background-color: rgba($color: $color-white, $alpha: .5);
+                    // padding-left: calc(1.5em + .70rem);
+                    border-radius: 7px;
+                }
+
+                small {
+                    a {
+                        color: $color-orange-1;
+                        font-weight: bold;
+                    }
+                }
+
+            }
+
+            a.forgot {
+                font-size: 85%;
+                color: $color-orange-1;
+                font-weight: bold;
+                width: 55%;
+                text-align: right;
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            div.form-group {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 1px 2px rgba(0, 0, 0, .3);
-            
-                height: 100%;
-                margin-right: 0;
-                width: 100%;
-                padding-left: 0;
-                padding-right: 0;
 
-                div.modal-title {
-                    h2 {
-                        color: $color-white;
-                        font-weight: bold;
+                button {
+                    background-color: $color-orange-1;
+                    border-color: $color-orange-1;
+                    border-radius: 28px;
+                    outline: none;
+                    font-size: 95%;
+                    color: $color-white;
 
-                        span {
-                            font-weight: bold;
-                            color: $color-orange-1;
-                        }
-                    }
+                    &:active {
+                        box-shadow: 1px 1px 0 0 $color-orange-1;
 
-                    p.text-white {
-                        margin-top: .5rem;
-                        font-size: 90%;
-
-                        a {
-                            font-size: 80%;
-                            color: red;
-                            font-weight: bold;
-
-                        }
                     }
                 }
-
-                form.form-login {
-                    padding-top: 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-
-                    div.form-fields {
-                        padding: 0;
-                        margin-top: .5rem;
-                        // margin-right: 2rem;
-
-                        label {
-                            font-size: 80%;
-                            color: red;
-                            font-weight: bold;
-
-                        }
-
-                        div.input-group {
-                            display: flex;
-                            align-items: center;
-
-                            span {
-                                position: absolute;
-                                right: 10px;
-                                z-index: 10;
-                                top: 5px;
-                            }
-                        }
-
-                        input {
-                            direction: ltr;
-                            border-color: $color-gray-1;
-                            background-color: rgba($color: $color-white, $alpha: .1);
-                            // padding-left: calc(1.5em + .70rem);
-                            border-radius: 7px;
-                        }
-
-                        small {
-                            a {
-                                color: $color-orange-1;
-                                font-weight: bold;
-                            }
-                        }
-
-                    }
-
-                    div.form-group {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        button {
-                            background-color: $color-orange-1;
-                            border-color: $color-orange-1;
-                            border-radius: 28px;
-                            outline: none;
-                            font-size: 95%;
-                            color: $color-white;
-
-                            &:active {
-                                box-shadow: 1px 1px 0 0 $color-orange-1;
-
-                            }
-                        }
-                    }
-
-                }
-
-
             }
         }
-
     }
 }
