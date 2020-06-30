@@ -6,59 +6,50 @@ body {
 
 div.modal-content {
   background-color: transparent;
+  border-color: #ff9300;
 }
 
-div.modal-content div.modal-dialogs div.form-register {
-  background-color: rgba(54, 54, 59, 0.4);
+div.modal-content div.modal-dialogs div.modal-content {
+  border-color: #ff9300;
   border-radius: 28px;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body {
-  padding: 0;
-}
-
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body {
   background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 2px rgba(0, 0, 0, 0.3);
-  border-color: #ff9300;
-  border-radius: 28px;
   height: 100%;
   margin-right: 0;
   width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body div.card-title h2 {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body div.modal-title h2 {
   color: #fff;
   font-weight: bold;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body div.card-title h2 span {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body div.modal-title h2 span {
   font-weight: bold;
   color: #ff9300;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body div.card-title p.text-white {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body div.modal-title p.text-white {
   margin-top: .5rem;
   font-size: 90%;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body div.card-title p.text-white a {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body div.modal-title p.text-white a {
   font-size: 80%;
   color: red;
   font-weight: bold;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login {
   padding-top: 0;
   display: flex;
   flex-direction: column;
@@ -67,49 +58,49 @@ div.modal-content div.modal-dialogs div.form-register div.modal-body div.card di
   width: 100%;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-fields {
   padding: 0;
   margin-top: .5rem;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields label {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-fields label {
   font-size: 80%;
   color: red;
   font-weight: bold;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields div.input-group {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-fields div.input-group {
   display: flex;
   align-items: center;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields div.input-group span {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-fields div.input-group span {
   position: absolute;
   right: 10px;
   z-index: 10;
   top: 5px;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields input {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-fields input {
   direction: ltr;
   border-color: #36363b;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 7px;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-fields small a {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-fields small a {
   color: #ff9300;
   font-weight: bold;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-group {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-group button {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-group button {
   background-color: #ff9300;
   border-color: #ff9300;
   border-radius: 28px;
@@ -118,7 +109,7 @@ div.modal-content div.modal-dialogs div.form-register div.modal-body div.card di
   color: #fff;
 }
 
-div.modal-content div.modal-dialogs div.form-register div.modal-body div.card div.card-body form.form-login div.form-group button:active {
+div.modal-content div.modal-dialogs div.modal-content div.modal-body form.form-login div.form-group button:active {
   box-shadow: 1px 1px 0 0 #ff9300;
 }
 /*# sourceMappingURL=formlogin.css.map */
