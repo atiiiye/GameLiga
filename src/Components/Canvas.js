@@ -45,12 +45,20 @@ class Canvas extends Component {
         ctx.strokeStyle = "rgb(54,54,59)";
         
         ctx.stroke();
+        // this.draw();
     }
+    // draw() {
+    //     let ctx = this.canvas.current.getContext("2d");
+    //     ctx.beginPath();
+    //     this.ctx.lineTo(this.canvas.width, this.canvas.height);
+    //   }
 
     render() {
         return (
             <>
-                <canvas className="" id="mycanvas" ref={this.canvas}></canvas>
+                <canvas className="" id="mycanvas" ref={this.canvas}
+                // onResize={this.draw} 
+                ></canvas>
             </>
         )
     }

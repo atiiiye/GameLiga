@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACMA,AAAA,IAAI,CAAA;EACA,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,UAAU;EACvB,gBAAgB,EARC,OAAa;CASjC",
+    "sources": [
+        "../scss/mediacanvas.scss",
+        "../scss/_base.scss"
+    ],
+    "names": [],
+    "file": "mediacanvas.css"
+}

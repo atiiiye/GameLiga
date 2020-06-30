@@ -12,7 +12,6 @@ import logo2 from './../images/logo2.png';
 //import boostrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Navbar, Modal } from 'react-bootstrap';
-import ModalDialog from 'react-bootstrap/ModalDialog'
 
 
 //import routes

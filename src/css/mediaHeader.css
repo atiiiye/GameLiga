@@ -58,7 +58,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 798px) {
   div.container-fluid nav.navbar {
     position: relative;
   }
@@ -115,8 +115,6 @@ body {
     display: flex;
     padding-right: 5px;
     padding-top: 0;
-    position: relative;
-    left: -3rem;
   }
   div.container-fluid nav.navbar div.nav-left {
     width: 240px;
@@ -136,6 +134,36 @@ body {
     margin-right: 5px;
     width: 45px;
     height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  div.nav-right {
+    width: max-content;
+  }
+  div.nav-right ul.navbar-nav {
+    padding-right: 0;
+  }
+  div.nav-right ul.navbar-nav div.buttons {
+    display: flex;
+  }
+  div.nav-right ul.navbar-nav div.buttons li.nav-item {
+    padding-right: 7px;
+  }
+  div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signin,
+  div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
+    font-size: 85%;
+    border: 1px solid #ff9300;
+    border-radius: 28px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  div.nav-right ul.navbar-nav li.nav-item {
+    display: flex;
+    padding-right: 5px;
+    padding-top: 0;
+    position: relative;
+    left: -3rem;
   }
 }
 

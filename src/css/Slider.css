@@ -140,14 +140,14 @@ section.main-slider div.container-fluid div.row div.card.ccc div.swiper-containe
 section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
   display: flex;
   flex-direction: column;
-  height: 25%;
+  height: 130px;
 }
 
 section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 20%;
+  height: 50px;
   padding-right: 1.5rem;
   color: #ffffff;
   font-size: 16px;
