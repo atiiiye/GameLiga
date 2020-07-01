@@ -123,7 +123,6 @@ section.main-slider div.container-fluid div.row div.card.ccc div.card-body div.c
 
 section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
   width: 55%;
-  height: 60vh;
 }
 
 section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper {
@@ -150,13 +149,12 @@ section.main-slider div.container-fluid div.row div.card.ccc div.swiper-containe
   height: 50px;
   padding-right: 1.5rem;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   background: transparent;
 }
 
 section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 19px;
 }
 
 section.main-slider div.container-fluid div.row div.card.ccc div.indicators {

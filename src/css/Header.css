@@ -79,7 +79,7 @@ div.container-fluid nav.navbar div.nav-left {
 
 div.container-fluid nav.navbar div.nav-left div.empty-content {
   display: flex;
-  width: 90% !important;
+  width: 90px !important;
   color: #36363b;
   height: 2rem;
   background-color: #36363b;

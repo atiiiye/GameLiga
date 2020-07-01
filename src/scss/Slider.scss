@@ -130,7 +130,6 @@ section.main-slider {
 
                 div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
                     width: 55%;
-                    height: 60vh;
                     div.swiper-wrapper {
                         width: 100%;
                         margin-right: 0 !important;
@@ -157,47 +156,18 @@ section.main-slider {
                             height: 50px;
                             padding-right: 1.5rem;
                             color: #ffffff;
-                            font-size: 16px;
+                            font-size: 14px;
                             background: transparent;
                         }
                         span.swiper-pagination-bullet.swiper-pagination-bullet-active{
-                            font-size: 22px;
-                            font-weight: bold;
+                            font-size: 19px;
+                            // font-weight: bold;
 
                         }
 
                     }
                 }
 
-                div.indicators {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    align-items: center;
-                    width: 4%;
-                    height: 100%;
-
-                    div.row.indicator {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        margin-right: 0;
-                        margin-left: 0;
-                        
-
-                        span.number {
-                            display: flex;
-                            justify-content: center;
-                            color: #ffffff;
-                            line-height: 30px;
-                            font-size: 16px;
-                        }
-
-                        span.number.active {
-                            font-size: 22px;
-                        }
-                    }
-                }
             }
 
             div.row.images {

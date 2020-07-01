@@ -5,6 +5,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header';
 import Slider from './Components/Slider.jsx';
+import Header2 from './Components/Header2';
+
 // import Canvas from './Components/Canvas';
 
 
@@ -13,10 +15,12 @@ import Slider from './Components/Slider.jsx';
 function App() {
   return (
     <div>
-      <Header></Header>
+      {/* <Header></Header> */}
+      <Header2></Header2>
       <Slider>
         {/* <Canvas /> */}
       </Slider>
+
     </div>
   );
 }

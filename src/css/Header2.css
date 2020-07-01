@@ -1,0 +1,53 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-fluid {
+  padding: 0;
+  width: 100%;
+}
+
+div.container-fluid nav.navbar {
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.container-fluid nav.navbar div.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+}
+
+div.container-fluid nav.navbar div.nav-left div.empty-content {
+  display: flex;
+  width: 90px !important;
+  color: #36363b;
+  height: 2rem;
+  background-color: #36363b;
+  position: relative;
+  left: -25px;
+}
+
+div.container-fluid nav.navbar div.nav-left h4.UFOGame {
+  color: #ff9300;
+  font-weight: 600;
+  z-index: 10;
+  width: auto;
+  margin-bottom: 0;
+}
+
+div.container-fluid nav.navbar div.nav-left h4.UFOGame span {
+  color: #fff;
+}
+
+div.container-fluid nav.navbar div.nav-left img.logo {
+  margin-right: 8px;
+  width: 60px;
+  height: 55px;
+}
+/*# sourceMappingURL=Header2.css.map */

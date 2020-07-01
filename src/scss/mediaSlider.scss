@@ -5,84 +5,88 @@
     section.main-slider {
         div.container-fluid {
             div.row {
-                div.aaa{
+                div.aaa {
                     div.sidebar.bbb {
                         div.card-columns {
                             div.card {
                                 width: 50px;
                                 height: 50px;
                             }
+
                             div.card-body {}
                         }
                     }
                 }
+
                 div.card.ccc {
                     div.card-body {
                         div.card-text {
+                            width: 80%;
+
                             h1.Tournament {
                                 font-size: 2.5rem;
                             }
-        
+
                             h1.title {
-                                font-size: 2.5rem;        
+                                font-size: 2.5rem;
+
                                 span.h1 {
                                     font-size: 2.5rem;
                                 }
                             }
-        
+
                             h1.garanti {
                                 font-size: 2.6rem;
                             }
                         }
                     }
 
-                    div.owl-carousel.owl-theme.owl-loaded.owl-drag {
-                        div.owl-stage-outer {
+                    div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                        width: 55%;
+
+                        div.swiper-wrapper {
                             width: 100%;
-                            margin-right: 0 !important;
-    
-                            div.owl-stage {
+                            margin-right: 0;
+
+                            div.swiper-slide {
                                 width: 100%;
                                 height: 60vh;
-                                margin-right: 0 !important;
-    
-                                div.owl-item {
-                                    height: 60vh;
-    
-                                    div {
-                                        img.card-img-top {
-                                            width: 100%;
-                                            // height: 80vh;
-                                            // margin-right: 0;
-                                            // overflow-y: hidden;
-                                        }
-                                    }
-                                }
-    
-                                div.owl-item.active.center {
-                                    div {}
+                                display: flex;
+
+                                div.slides {
+
+                                    // width: 100%;
+                                    img.card-img-top {}
                                 }
                             }
                         }
-    
-                    }
-    
-                    div.indicators {
-                        width: 4%;
-                        height: 100%;
-                        div.row.indicator {
-                            span.number {
-                                line-height: 28px;
+
+                        div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                            display: flex;
+                            flex-direction: column;
+                            height: 130px;
+
+                            span.swiper-pagination-bullet {
+                                display: flex;
+                                justify-content: flex-end;
+                                width: 100%;
+                                height: 50px;
+                                padding-right: 1.2rem;
+                                color: #ffffff;
                                 font-size: 14px;
+                                background: transparent;
                             }
-    
-                            span.number.active {
-                                font-size: 20px;
-                                font-weight: bold;
+
+                            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                font-size: 18px;
+                                // font-weight: bold;
+
                             }
+
                         }
                     }
                 }
+
                 div.row.images {
                     width: 90%;
                 }
@@ -95,75 +99,86 @@
     section.main-slider {
         div.container-fluid {
             div.row {
-                div.aaa{
+                div.aaa {
                     div.sidebar.bbb {
                         div.card-columns {
                             div.card {
                                 width: 50px;
                                 height: 50px;
                             }
+
                             div.card-body {}
                         }
                     }
                 }
+
                 div.card.ccc {
                     div.card-body {
                         div.card-text {
                             h1.Tournament {
                                 font-size: 2.3rem;
                             }
-        
+
                             h1.title {
-                                font-size: 2.3rem;        
+                                font-size: 2.3rem;
+
                                 span.h1 {
                                     font-size: 2.3rem;
                                 }
                             }
-        
+
                             h1.garanti {
                                 font-size: 2.4rem;
                             }
                         }
                     }
 
-                    div.owl-carousel.owl-theme.owl-loaded.owl-drag {
-                        div.owl-stage-outer {
-                            div.owl-stage {
-                                div.owl-item {
-                                    div {
-                                        img.card-img-top {
-                                            width: 100%;
-                                            // height: 80vh;
-                                            // margin-right: 0;
-                                            // overflow-y: hidden;
-                                        }
-                                    }
-                                }
-    
-                                div.owl-item.active.center {
-                                    div {}
+                    div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                        width: 55%;
+
+                        div.swiper-wrapper {
+                            width: 100%;
+                            margin-right: 0;
+
+                            div.swiper-slide {
+                                width: 100%;
+                                height: 60vh;
+                                display: flex;
+
+                                div.slides {
+
+                                    // width: 100%;
+                                    img.card-img-top {}
                                 }
                             }
                         }
-    
-                    }
-    
-                    div.indicators {
-                        width: 4%;
-                        height: 100%;
-                        div.row.indicator {
-                            span.number {
-                                line-height: 28px;
-                                font-size: 14px;
+
+                        div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                            display: flex;
+                            flex-direction: column;
+                            height: 130px;
+
+                            span.swiper-pagination-bullet {
+                                display: flex;
+                                justify-content: flex-end;
+                                width: 100%;
+                                height: 50px;
+                                padding-right: 1rem;
+                                color: #ffffff;
+                                font-size: 13px;
+                                background: transparent;
                             }
-    
-                            span.number.active {
-                                font-size: 20px;
-                                font-weight: bold;
+
+                            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                font-size: 17px;
+                                // font-weight: bold;
+
                             }
+
                         }
                     }
                 }
+
                 div.row.images {
                     width: 90%;
                 }
@@ -177,87 +192,182 @@
     section.main-slider {
         div.container-fluid {
             div.row {
-                div.aaa{
+                div.aaa {
                     div.sidebar.bbb {
                         div.card-columns {
                             div.card {
                                 width: 45px;
                                 height: 45px;
                             }
+
                             div.card-body {}
                         }
                     }
                 }
+
                 div.card.ccc {
                     div.card-body {
                         div.card-text {
                             h1.Tournament {
                                 font-size: 2rem;
                             }
-        
+
                             h1.title {
-                                font-size: 2rem;        
+                                font-size: 2rem;
+
                                 span.h1 {
                                     font-size: 2rem;
                                 }
                             }
-        
+
                             h1.garanti {
                                 font-size: 2.1rem;
                             }
                         }
                     }
+                    div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                        width: 55%;
 
-                    div.owl-carousel.owl-theme.owl-loaded.owl-drag {
-                        div.owl-stage-outer {
+                        div.swiper-wrapper {
                             width: 100%;
-                            margin-right: 0 !important;
-    
-                            div.owl-stage {
+                            margin-right: 0;
+
+                            div.swiper-slide {
                                 width: 100%;
                                 height: 60vh;
-                                margin-right: 0 !important;
-    
-                                div.owl-item {
-                                    height: 60vh;
-    
-                                    div {
-                                        img.card-img-top {
-                                            width: 100%;
-                                            // height: 80vh;
-                                            // margin-right: 0;
-                                            // overflow-y: hidden;
-                                        }
-                                    }
-                                }
-    
-                                div.owl-item.active.center {
-                                    div {}
+                                display: flex;
+
+                                div.slides {
+
+                                    // width: 100%;
+                                    img.card-img-top {}
                                 }
                             }
                         }
-    
-                    }
-    
-                    div.indicators {
-                        width: 4%;
-                        height: 100%;
-                        div.row.indicator {
-                            span.number {
-                                line-height: 28px;
-                                font-size: 14px;
+
+                        div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                            display: flex;
+                            flex-direction: column;
+                            height: 130px;
+
+                            span.swiper-pagination-bullet {
+                                display: flex;
+                                justify-content: flex-end;
+                                width: 100%;
+                                height: 50px;
+                                padding-right: 1rem;
+                                color: #ffffff;
+                                font-size: 13px;
+                                background: transparent;
                             }
-    
-                            span.number.active {
-                                font-size: 20px;
-                                font-weight: bold;
+
+                            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                font-size: 17px;
+                                // font-weight: bold;
+
                             }
+
                         }
                     }
                 }
+
                 div.row.images {
                     width: 90%;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width:690px) {
+
+    section.main-slider {
+        div.container-fluid {
+            div.row {
+                div.aaa {
+                    div.sidebar.bbb {
+                        div.card-columns {
+                            div.card {
+                                width: 45px;
+                                height: 45px;
+                            }
+
+                            div.card-body {}
+                        }
+                    }
+                }
+
+                div.card.ccc {
+                    div.card-body {
+                        height: 85%;
+                        div.card-text {
+                            h1.Tournament {
+                                font-size: 1.8rem;
+                            }
+
+                            h1.title {
+                                font-size: 1.8rem;
+
+                                span.h1 {
+                                    font-size: 1.8rem;
+                                }
+                            }
+
+                            h1.garanti {
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+
+                    div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                        width: 55%;
+
+                        div.swiper-wrapper {
+                            width: 100%;
+                            margin-right: 0;
+
+                            div.swiper-slide {
+                                width: 100%;
+                                height: 60vh;
+                                display: flex;
+
+                                div.slides {
+                                    // width: 100%;
+                                    img.card-img-top {}
+                                }
+                            }
+                        }
+
+                        div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                            display: flex;
+                            flex-direction: column;
+                            height: 130px;
+
+                            span.swiper-pagination-bullet {
+                                display: flex;
+                                justify-content: flex-end;
+                                width: 100%;
+                                height: 50px;
+                                padding-right: 1rem;
+                                color: #ffffff;
+                                font-size: 13px;
+                                background: transparent;
+                            }
+
+                            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                font-size: 17px;
+                                // font-weight: bold;
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+            div.row.images {
+                width: 90%;
             }
         }
     }

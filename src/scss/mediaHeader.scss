@@ -191,6 +191,7 @@
 
                 position: absolute;
                 right: 1rem;
+                top: 0;
 
                 button.navbar-toggler {
                   
@@ -206,6 +207,7 @@
                         width: 2em;
                         height: 2em;
                         padding-bottom: 0;
+                        padding-left: 0;
                         justify-content: center;
 
                     }
@@ -230,45 +232,56 @@
                     }
 
                 }
-
-
-
-
-
+                
             }
 
             div.nav-right {
-                width: max-content;
+                width: 35%;
 
                 ul.navbar-nav {
                     padding-right: 0;
 
-                    div.buttons {
-                        display: flex;
-
-                        li.nav-item {
-                            padding-right: 7px;
-
-                            a.nav-link#signin,
-                            a.nav-link#login {
-                                font-size: 85%;
-                                border: 1px solid $color-orange-1;
-                                border-radius: 28px;
-                                padding-left: 1.2rem;
-                                padding-right: 1.2rem;
-                            }
-                        }
-                    }
-
                     li.nav-item {
                         display: flex;
-                        padding-right: 5px;
+                        padding-right: 3px;
                         padding-top: 0;
                         position: relative;
                         left: -3rem;
 
-                        a.nav-link {}
+                        a.nav-link {
+                            padding-left: .5rem;
+                            padding-right: .5rem;
+                            font-size: 85%;
+                        }
                     }
+
+                    div.buttons {
+                        display: flex;
+                        width: 100%;
+
+                        li.nav-item {
+                            padding-right: 5px;
+
+                            a.nav-link#signin,
+                            a.nav-link#login {
+                                font-size: 75%;
+                                border: 1px solid $color-orange-1;
+                                border-radius: 28px;
+                                padding-left: .8rem;
+                                padding-right: .8rem;
+                            }
+                        }
+                    }
+                    div.navbar-collapse.collapse.show{
+                        display: flex;
+                        transform: translate(0,25%);
+                        transition: transform .2s linear;
+                    }
+                    div.navbar-collapse.collapsing{
+                      height: 0;
+                    }
+
+                   
                 }
             }
 

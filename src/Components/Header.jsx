@@ -16,7 +16,7 @@ import { Button, Form, Navbar, Modal } from 'react-bootstrap';
 
 //import routes
 import { Route, BrowserRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default class Header extends Component {
 
@@ -50,24 +50,24 @@ export default class Header extends Component {
                                     <ul className="navbar-nav">
                                         <div className="buttons">
                                             <li className="nav-item">
-                                                <Link className="nav-link" id="login" to="/" onClick={() => this.setState({ show: true })}>LOG IN</Link>
+                                                <NavLink className="nav-link" id="login" to="/" onClick={() => this.setState({ show: true })}>LOG IN</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" id="signin" to="/signin">SIGN UP</Link>
+                                                <NavLink className="nav-link" id="signin" to="/signin">SIGN UP</NavLink>
                                             </li>
                                         </div>
-                                        <Navbar.Collapse className="navbar-collapse" id="coll-navbar">
+                                        <Navbar.Collapse className="" id="coll-navbar">
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="more">More</Link>
+                                                <NavLink className="nav-link" to="more">More</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="about">About</Link>
+                                                <NavLink className="nav-link" to="about">About</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="news">News</Link>
+                                                <NavLink className="nav-link" to="news">News</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="studi">Studi</Link>
+                                                <NavLink className="nav-link" to="studi">Studi</NavLink>
                                             </li>
                                         </Navbar.Collapse>
                                     </ul>
@@ -88,7 +88,7 @@ export default class Header extends Component {
                                         <BrowserRouter>
                                             <Route>
                                                 <h2>Welcome <span>back</span></h2>
-                                                <p className="text-white px-2">Do not have account ? <Link to="#">Sign up</Link></p>
+                                                <p className="text-white px-2">Do not have account ? <NavLink to="#">Sign up</NavLink></p>
                                             </Route>
                                         </BrowserRouter>
                                     </Modal.Title>
@@ -108,7 +108,7 @@ export default class Header extends Component {
                                                     placeholder="Password"></input>
                                             </label>
                                         </div>
-                                        <Link className="forgot mb-4" to="/" alt="" >Forget your password?</Link>
+                                        <NavLink className="forgot mb-4" to="/" alt="" >Forget your password?</NavLink>
 
                                         <div className="mt-5 form-group w-75">
                                             <Button className="btn-block" variant="none" id="submit" onClick={() => this.setState({ show: false })} type="submit">LOG
