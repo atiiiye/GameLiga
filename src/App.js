@@ -15,8 +15,8 @@ import Header2 from './Components/Header2';
 function App() {
   return (
     <div>
-      {/* <Header></Header> */}
-      <Header2></Header2>
+      <Header></Header>
+      {/* <Header2></Header2> */}
       <Slider>
         {/* <Canvas /> */}
       </Slider>

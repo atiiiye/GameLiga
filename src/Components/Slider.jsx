@@ -76,10 +76,10 @@ class Slider extends Component {
             centeredSlides: true,
             mousewheel: true,
             loop: true,
-            // autoplay: {
-            //     delay: 3500,
-            //     disableOnInteraction: false
-            // },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
