@@ -157,35 +157,6 @@ section.main-slider div.container-fluid div.row div.card.ccc div.swiper-containe
   font-size: 19px;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.indicators {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 4%;
-  height: 100%;
-}
-
-section.main-slider div.container-fluid div.row div.card.ccc div.indicators div.row.indicator {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-section.main-slider div.container-fluid div.row div.card.ccc div.indicators div.row.indicator span.number {
-  display: flex;
-  justify-content: center;
-  color: #ffffff;
-  line-height: 30px;
-  font-size: 16px;
-}
-
-section.main-slider div.container-fluid div.row div.card.ccc div.indicators div.row.indicator span.number.active {
-  font-size: 22px;
-}
-
 section.main-slider div.container-fluid div.row div.row.images {
   width: 90%;
   height: max-content;

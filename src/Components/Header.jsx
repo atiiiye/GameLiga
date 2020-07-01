@@ -25,7 +25,6 @@ export default class Header extends Component {
         this.state = {
             show: false
         };
-        
     }
 
     render() {
@@ -71,8 +70,6 @@ export default class Header extends Component {
                                             </li>
                                         </Navbar.Collapse>
                                     </ul>
-
-
                                 </div>
                                 <div className="nav-left">
                                     <div className="empty-content"></div>

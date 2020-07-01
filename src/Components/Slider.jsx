@@ -11,8 +11,8 @@ import './../css/formlogin.css'
 
 //import image
 import slide1 from './../images/slide-1.1.png';
-import slide3 from './../images/slide-3.png';
-import slide5 from './../images/slide-5.png';
+import slide3 from './../images/slide-3.1.png';
+import slide5 from './../images/slide-5.1.png';
 import slide7 from './../images/slide-7.png';
 import slide8 from './../images/slide-8.png';
 

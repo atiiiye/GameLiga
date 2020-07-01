@@ -16,11 +16,21 @@ div.container-fluid nav.navbar {
   align-items: center;
 }
 
+div.container-fluid nav.navbar div.nav-right {
+  display: flex;
+}
+
+div.container-fluid nav.navbar div.nav-right p.text-muted {
+  margin-right: 2rem;
+  width: max-content;
+  font-size: 95%;
+}
+
 div.container-fluid nav.navbar div.nav-left {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 27%;
+  width: 45%;
 }
 
 div.container-fluid nav.navbar div.nav-left div.empty-content {
@@ -49,5 +59,17 @@ div.container-fluid nav.navbar div.nav-left img.logo {
   margin-right: 8px;
   width: 60px;
   height: 55px;
+}
+
+div.container-fluid nav.navbar div.nav-left input[type="search"] {
+  direction: ltr;
+  width: 150px;
+  height: 2rem;
+  background-color: #000;
+  border: 1px solid #36363b;
+  border-radius: 9px;
+  font-size: 85%;
+  color: #959aa2;
+  padding-left: 5px;
 }
 /*# sourceMappingURL=Header2.css.map */
