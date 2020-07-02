@@ -94,7 +94,6 @@ export default class Header extends Component {
                                             <Form.Label>User name :</Form.Label>
                                             <Form.Control type="text" className="mb-2 mt-1" id="username"
                                                     placeholder="User"></Form.Control>
-
                                         </div>
                                         <div className="form-fields">
                                             <Form.Label>Password :</Form.Label>

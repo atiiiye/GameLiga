@@ -6,7 +6,7 @@ div.container-fluid {
             border-radius: 9px;
             background-color: rgba($color: $color-gray-1, $alpha: .5) ;
             margin-left: 3rem;
-            width: 40%;
+            width: 45%;
             h1.h1{
                 color:rgba($color: $color-gray-1, $alpha: .7)  ;
                 text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2) ;
@@ -68,6 +68,7 @@ div.container-fluid {
                             font-size: 80%;
                             a{
                                 color: $color-blue-1;
+                                padding-left: 3px;
                             }
 
                         }

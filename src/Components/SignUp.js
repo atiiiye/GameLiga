@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
 //import css
-import './../css/signup.css'
+import './../css/signup.css';
+import './../css/mediaSignup.css'
+
 
 //import boostrap
 import { Card, Form , Button} from "react-bootstrap";
@@ -90,11 +92,9 @@ class SignUp extends Component {
 
                   <Form.Group className="row ml-1">
                     <Form.Check inline type="checkbox" className="col-1 form-control-plaintext" placeholder="">
-                    <span className="mycheckbox">
-                    </span>
+                    <span className="mycheckbox"></span>
                     </Form.Check>
-
-                    <Form.Label className="label-check-box col-10 col-form-label px-0">I confirm that I have read and accepted all the <NavLink to=""> rules and condition  </NavLink> </Form.Label>
+                    <Form.Label className="label-check-box col-10 col-form-label px-0">I confirm that I have read and accepted all the<NavLink to=""> rules and condition </NavLink></Form.Label>
                   </Form.Group>
 
                   <Form.Group className="row ml-1">

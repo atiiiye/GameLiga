@@ -1,0 +1,19 @@
+@import 'base';
+
+@media(max-width:991px) {
+
+    div.container-fluid {
+        div.card {
+            width: 60%;
+        }
+    }
+}
+
+@media(max-width:575px) {
+
+    div.container-fluid {
+        div.card {
+            width: 100%;
+        }
+    }
+}
