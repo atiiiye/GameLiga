@@ -19,10 +19,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header>
+        {/* <Header> */}
           <Route path="/" exact component={Slider} />
-        </Header>
-        <Slider></Slider>
+        {/* </Header> */}
+        {/* <Slider></Slider> */}
 
         <Route path="/signup" exact component={SignUp} />
         {/* <Header2></Header2> */}
