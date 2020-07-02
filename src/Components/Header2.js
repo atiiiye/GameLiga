@@ -20,6 +20,7 @@ class Header2 extends Component {
                     <Navbar expand="md">
                         <div className="nav-right">
                             <p className="text-muted">user name</p>
+                            
                         </div>
                         <div className="nav-left">
                             <input type="search" placeholder="search"></input>

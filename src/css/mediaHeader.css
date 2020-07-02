@@ -20,7 +20,7 @@ body {
   div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item {
     padding-right: 7px;
   }
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signin,
+  div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signup,
   div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
     font-size: 88%;
     border: 1px solid #ff9300;
@@ -103,7 +103,7 @@ body {
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item {
     padding-right: 7px;
   }
-  div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signin,
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signup,
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
     font-size: 85%;
     border: 1px solid #ff9300;
@@ -197,7 +197,7 @@ body {
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item {
     padding-right: 5px;
   }
-  div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signin,
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signup,
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
     font-size: 75%;
     border: 1px solid #ff9300;

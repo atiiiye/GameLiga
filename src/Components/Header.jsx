@@ -18,6 +18,9 @@ import { Button, Form, Navbar, Modal } from 'react-bootstrap';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
+//import components
+import SignUp from './../Components/SignUp';
+
 export default class Header extends Component {
 
     constructor(props) {
@@ -31,8 +34,6 @@ export default class Header extends Component {
         return (
             <>
                 <div className="container-fluid">
-                    <BrowserRouter>
-                        <Route>
                             <Navbar className="" collapseOnSelect expand="md" bg="none">
                                 <div className="hamburger-menu px-0" data-target="#coll-navbar">
                                     <Navbar.Toggle aria-controls="collapse" className="px-0">
@@ -49,24 +50,24 @@ export default class Header extends Component {
                                     <ul className="navbar-nav">
                                         <div className="buttons">
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" id="login" to="/" onClick={() => this.setState({ show: true })}>LOG IN</NavLink>
+                                                <NavLink className="nav-link" id="login" to="/" exact onClick={() => this.setState({ show: true })}>LOG IN</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" id="signin" to="/signin">SIGN UP</NavLink>
+                                                <NavLink className="nav-link" id="signup" to="/signup">SIGN UP</NavLink>
                                             </li>
                                         </div>
                                         <Navbar.Collapse className="" id="coll-navbar">
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" to="more">More</NavLink>
+                                                <NavLink className="nav-link" to="/more">More</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" to="about">About</NavLink>
+                                                <NavLink className="nav-link" to="/about">About</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" to="news">News</NavLink>
+                                                <NavLink className="nav-link" to="/news">News</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" to="studi">Studi</NavLink>
+                                                <NavLink className="nav-link" to="/studi">Studi</NavLink>
                                             </li>
                                         </Navbar.Collapse>
                                     </ul>
@@ -79,7 +80,6 @@ export default class Header extends Component {
                             </Navbar>
 
                             <Modal className="fade" show={this.state.show} onHide={() => this.setState({ show: false })}>
-                                {/* <Modal.Dialog className="modal-dialog-centered"> */}
                                 <Modal.Body>
                                     <Modal.Title className="text-center mx-2">
                                         <BrowserRouter>
@@ -91,19 +91,15 @@ export default class Header extends Component {
                                     </Modal.Title>
                                     <Form action="#" className="form-login py-4" >
                                         <div className="form-fields mb-4">
-                                            <label>
-                                                User name :
-                                                        <input type="text" className="form-control mb-2 mt-1" id="username"
-                                                    placeholder="User"></input>
-                                            </label>
+                                            <Form.Label>User name :</Form.Label>
+                                            <Form.Control type="text" className="mb-2 mt-1" id="username"
+                                                    placeholder="User"></Form.Control>
 
                                         </div>
                                         <div className="form-fields">
-                                            <label>
-                                                Password :
-                                                        <input type="password" className="form-control mb-2 mt-1" id="password"
-                                                    placeholder="Password"></input>
-                                            </label>
+                                            <Form.Label>Password :</Form.Label>
+                                            <Form.Control type="password" className="mb-2 mt-1" id="password"
+                                                    placeholder="Password"></Form.Control>
                                         </div>
                                         <NavLink className="forgot mb-4" to="/" alt="" >Forget your password?</NavLink>
 
@@ -113,10 +109,8 @@ export default class Header extends Component {
                                         </div>
                                     </Form>
                                 </Modal.Body>
-                                {/* </Modal.Dialog> */}
                             </Modal>
-                        </Route>
-                    </BrowserRouter>
+                 
 
                 </div>
 

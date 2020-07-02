@@ -1,0 +1,90 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-fluid div.row div.card {
+  border: 2px solid rgba(255, 147, 0, 0.5);
+  border-radius: 9px;
+  background-color: rgba(54, 54, 59, 0.5);
+  margin-left: 3rem;
+  width: 40%;
+}
+
+div.container-fluid div.row div.card h1.h1 {
+  color: rgba(54, 54, 59, 0.7);
+  text-shadow: -3px -1px 0 rgba(255, 147, 0, 0.2);
+  font-weight: bold;
+  text-align: center;
+}
+
+div.container-fluid div.row div.card p.text-muted {
+  font-weight: bold;
+  font-size: 75%;
+  margin-bottom: .3rem;
+  text-align: center;
+}
+
+div.container-fluid div.row div.card a#goLogin {
+  color: red;
+  font-weight: bold;
+  font-size: 75%;
+  text-align: center;
+  text-decoration: underline red;
+}
+
+div.container-fluid div.row div.card a#goLogin:focus {
+  outline: none;
+}
+
+div.container-fluid div.row div.card form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin-top: 2rem;
+}
+
+div.container-fluid div.row div.card form h3.h3 {
+  display: flex;
+  color: #fff;
+  font-size: 95%;
+  font-weight: bold;
+  justify-content: center;
+}
+
+div.container-fluid div.row div.card form div.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+div.container-fluid div.row div.card form div.form-group label {
+  display: flex;
+  justify-content: center;
+  color: #959aa2;
+  justify-content: flex-start;
+  font-size: 90%;
+}
+
+div.container-fluid div.row div.card form div.form-group label a {
+  color: blue;
+  font-size: 95%;
+  font-weight: bold;
+}
+
+div.container-fluid div.row div.card form div.form-group label a:focus {
+  outline: none;
+}
+
+div.container-fluid div.row div.card form div.form-group input {
+  border: 1px solid #959aa2;
+  border-radius: 9px;
+  background-color: #000;
+  color: #959aa2;
+  font-size: 80%;
+  padding-left: .5rem;
+}
+/*# sourceMappingURL=signup.css.map */
