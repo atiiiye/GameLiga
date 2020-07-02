@@ -70,13 +70,23 @@ div.container-fluid div.row div.card form div.form-group label {
 }
 
 div.container-fluid div.row div.card form div.form-group label a {
-  color: blue;
+  color: #0084ff;
   font-size: 95%;
   font-weight: bold;
 }
 
 div.container-fluid div.row div.card form div.form-group label a:focus {
   outline: none;
+}
+
+div.container-fluid div.row div.card form div.form-group label.label-check-box {
+  font-size: 80%;
+  margin-left: 10px;
+  display: flex;
+}
+
+div.container-fluid div.row div.card form div.form-group label.label-check-box a {
+  color: #0084ff;
 }
 
 div.container-fluid div.row div.card form div.form-group input {
@@ -86,5 +96,58 @@ div.container-fluid div.row div.card form div.form-group input {
   color: #959aa2;
   font-size: 80%;
   padding-left: .5rem;
+}
+
+div.container-fluid div.row div.card form div.form-group input:focus {
+  box-shadow: 0 0 0 0.1rem rgba(255, 147, 0, 0.25);
+}
+
+div.container-fluid div.row div.card form div.form-group input[type="checkbox"] {
+  opacity: 0;
+}
+
+div.container-fluid div.row div.card form div.form-group input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 0;
+}
+
+div.container-fluid div.row div.card form div.form-group span.my-checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: #959aa2;
+  border: 1px solid #959aa2;
+  border-radius: 2px;
+}
+
+div.container-fluid div.row div.card form div.form-group div.captcha-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-fluid div.row div.card form div.form-group div.captcha-block div.captcha {
+  width: 100px;
+  height: 50px;
+  background-color: #959aa2;
+  margin-bottom: 1rem;
+  font-size: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+div.container-fluid div.row div.card form button.register {
+  background-color: #ff9300;
+  border-color: #ff9300;
+  border-radius: 28px;
+  outline: none;
+  font-size: 95%;
+  position: relative;
+  left: 16%;
+}
+
+div.container-fluid div.row div.card form button.register:active {
+  box-shadow: 1px 1px 0 0 #ff9300;
 }
 /*# sourceMappingURL=signup.css.map */

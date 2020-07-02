@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import './../css/signup.css'
 
 //import boostrap
-import { Card, Form } from "react-bootstrap";
+import { Card, Form , Button} from "react-bootstrap";
 
 //import routes
 // import { Route, BrowserRouter } from "react-router-dom";
@@ -66,6 +66,32 @@ class SignUp extends Component {
                     <Form.Label className="col-4 col-form-label px-0">Phone number :</Form.Label>
                     <Form.Control type="email" className="col-7 form-control-plaintext" placeholder="Phone number"/>
                   </Form.Group>
+                  <Form.Group className="row ml-1">
+                    <Form.Label className="col-4 col-form-label px-0">Promotional Code :</Form.Label>
+                    <Form.Control type="text" className="col-7 form-control-plaintext" placeholder="Promotional code"/>
+                  </Form.Group>
+                  <Form.Group className="row ml-1">
+                    <Form.Label className="col-4 col-form-label px-0">Referred by :</Form.Label>
+                    <Form.Control type="text" className="col-7 form-control-plaintext" placeholder="Referred by"/>
+                  </Form.Group>
+                  <Form.Group className="row ml-1">
+                    <Form.Label className="col-4 col-form-label px-0">Captcha :</Form.Label>
+                    <div className="captcha-block col-7">
+                      <div className="captcha">7A223</div>
+                      <Form.Control type="" className="form-control-plaintext" placeholder=""/>
+                    </div>
+                  </Form.Group>
+                  <Form.Group className="row ml-1">
+                    <Form.Control type="checkbox" className="col-1 form-control-plaintext" placeholder=""/>
+                    <span className="mycheckbox"></span>
+                    <Form.Label className="label-check-box col-10 col-form-label px-0">I confirm that I have read and accepted all the <NavLink to=""> rules and condition  </NavLink> </Form.Label>
+                  </Form.Group>
+                  <Form.Group className="row ml-1">
+                  <Button className="register col-6" variant="none" type="submit">
+                    Register
+                  </Button>
+                  </Form.Group>
+
                 </Form>
             </Card>
           </div>

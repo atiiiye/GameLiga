@@ -56,12 +56,21 @@ div.container-fluid {
                             justify-content: flex-start;
                             font-size: 90%;
                             a{
-                                color: blue;
+                                color: $color-blue-1;
                                 font-size: 95%;
                                 font-weight: bold;
                                 &:focus{
                                     outline: none;
                                 }
+                            }
+
+                        }
+                        label.label-check-box{
+                            font-size: 80%;
+                            margin-left: 10px;
+                            display: flex;
+                            a{
+                                color: $color-blue-1;
                             }
 
                         }
@@ -72,6 +81,60 @@ div.container-fluid {
                             color: $color-gray-2;
                             font-size: 80%;
                             padding-left: .5rem;
+                            &:focus{
+                                box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
+                            }
+                        }
+                        input[type ="checkbox"]{
+                            opacity: 0;
+                            &:focus{
+                                box-shadow: 0 0 0 0 ;
+                            }
+                        }
+                        span.my-checkbox{
+                            width: 20px;
+                            height: 20px;
+                            background-color: $color-gray-2;
+                            border:1px solid $color-gray-2;
+                            border-radius: 2px;
+                        }
+                        div.captcha-block{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            div.captcha{
+                                width: 100px;
+                                height: 50px;
+                                background-color: $color-gray-2;
+                                // border:1px solid #000000 ;
+                                margin-bottom: 1rem;
+                                font-size: 90%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: $color-white;
+    
+                            }
+                            input{
+
+                            }
+
+                        }
+
+                    }
+                    button.register{
+                        background-color: $color-orange-1;
+                        border-color: $color-orange-1;
+                        border-radius: 28px;
+                        outline: none;
+                        font-size: 95%;
+                        position: relative;
+                        left: 16%;
+    
+                        &:active {
+                            box-shadow: 1px 1px 0 0 $color-orange-1;
+
                         }
                     }
                 }
