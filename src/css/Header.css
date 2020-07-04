@@ -73,7 +73,7 @@ div.container-fluid nav.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-lin
 div.container-fluid nav.navbar div.nav-left {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 27%;
 }
 

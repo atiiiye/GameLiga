@@ -5,7 +5,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //import components
-import Header from "./Components/Header";
+import Header from "./Components/Header.js";
 import Slider from "./Components/Slider.jsx";
 import Header2 from "./Components/Header2";
 import SignUp from "./Components/SignUp";

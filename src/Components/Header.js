@@ -15,16 +15,15 @@ import { Button, Form, Navbar, Modal } from 'react-bootstrap';
 
 
 //import routes
-import { Route, BrowserRouter } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 //import components
-import SignUp from './../Components/SignUp';
+import SignUp from './SignUp';
 
 export default class Header extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             show: false
         };
@@ -55,8 +54,8 @@ export default class Header extends Component {
                                             <li className="nav-item">
                                                 <NavLink className="nav-link" id="login" to="/" exact onClick={() => {
                                                     this.setState({ show: true })
-                                                    this.addingRefButton.bind(this)
-                                            }
+                                                    // this.addingRefButton.bind(this)
+                                                }
                                             }
                                             >LOG IN</NavLink>
                                             </li>
@@ -87,15 +86,11 @@ export default class Header extends Component {
                                 </div>
                             </Navbar>
 
-                            <Modal className="fade" show={this.state.show} ref={this.refrence} onHide={() => this.setState({ show: false })}>
+                            <Modal show={this.state.show} ref={this.refrence} onHide={() => this.setState({ show: false })}>
                                 <Modal.Body>
                                     <Modal.Title className="text-center mx-2">
-                                        <BrowserRouter>
-                                            <Route>
                                                 <h2>Welcome <span>back</span></h2>
-                                                <p className="text-white px-2">Do not have account ? <NavLink to="/signup">Sign up</NavLink></p>
-                                            </Route>
-                                        </BrowserRouter>
+                                                <p className="text-white px-2">Do not have account ? <NavLink to="/signup" onClick={() => this.setState({ show: false })}>Sign up</NavLink></p>
                                     </Modal.Title>
                                     <Form action="#" className="form-login py-4" >
                                         <div className="form-fields mb-4">
