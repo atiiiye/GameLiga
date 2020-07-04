@@ -1,198 +1,220 @@
 @import 'base';
 
 div.container-fluid {
-        div.card{
-            border: 2px solid rgba($color: $color-orange-1, $alpha: .5);
-            border-radius: 9px;
-            background-color: rgba($color: $color-gray-1, $alpha: .5) ;
-            margin-left: 3rem;
-            width: 45%;
-            h1.h1{
-                color:rgba($color: $color-gray-1, $alpha: .7)  ;
-                text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2) ;
-                font-weight: bold;
-                text-align: center;
+    div.card {
+        border: 2px solid rgba($color: $color-orange-1, $alpha: .5);
+        border-radius: 9px;
+        background-color: rgba($color: $color-gray-1, $alpha: .5);
+        margin-left: 3rem;
+        width: 45%;
+
+        h1.h1 {
+            color: rgba($color: $color-gray-1, $alpha: .7);
+            text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p.text-muted {
+            font-weight: bold;
+            font-size: 75%;
+            margin-bottom: .3rem;
+            text-align: center;
+        }
+
+        a#goLogin {
+            color: red;
+            font-weight: bold;
+            font-size: 75%;
+            text-align: center;
+            text-decoration: underline red;
+
+            &:focus {
+                outline: none;
             }
-            p.text-muted{
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            margin-top: 2rem;
+
+            h3.h3 {
+                display: flex;
+                color: $color-white;
+                font-size: 95%;
                 font-weight: bold;
-                font-size: 75%;
-                margin-bottom: .3rem;
-                text-align: center;
+                justify-content: center;
+                margin-top: .5rem;
+                margin-bottom: 1rem;
             }
-            a#goLogin{
-                color: red;
-                font-weight: bold;
-                font-size: 75%;
-                text-align: center;
-                text-decoration: underline red;
-                &:focus{
-                    outline: none;
-                }
-            }
-                form{
+
+            div.form-group {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // margin-top: 1rem;
+                margin-left: 0;
+
+                label {
                     display: flex;
-                    flex-direction: column;
                     justify-content: center;
-                    width: 90%;
-                    margin-top: 2rem;
-                    h3.h3{
-                        display: flex;
-                        color: $color-white;
+                    color: $color-gray-2;
+                    justify-content: flex-start;
+                    font-size: 90%;
+
+                    a {
+                        color: $color-blue-1;
                         font-size: 95%;
                         font-weight: bold;
-                       justify-content: center;
-                    }
-                    div.form-group{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        // margin-top: 1rem;
-                        margin-left: 0;
-                        label{
-                            display: flex;
-                            justify-content: center;
-                            color: $color-gray-2;
-                            justify-content: flex-start;
-                            font-size: 90%;
-                            a{
-                                color: $color-blue-1;
-                                font-size: 95%;
-                                font-weight: bold;
-                                &:focus{
-                                    outline: none;
-                                }
-                            }
 
-                        }
-                        label.label-check-box{
-                            font-size: 80%;
-                            a{
-                                color: $color-blue-1;
-                                padding-left: 3px;
-                            }
-
-                        }
-                        input{
-                            border:1px solid $color-gray-2;
-                            border-radius: 9px;
-                            background-color: #000;
-                            color: $color-gray-2;
-                            font-size: 80%;
-                            padding-left: .5rem;
-                            &:focus{
-                                box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
-                            }
-                        }
-                        div.form-check-inline{
-                            margin-right: 0;
-                            align-items: center;
-                            input[type ="checkbox"]{
-                                width: 25px;
-                                height: 25px;
-                                opacity: 1;
-                                margin-right: 0;
-                                cursor: pointer;
-                                &:focus {
-                                    box-shadow: 0 0 0 0.1rem rgba($color: $color-blue-1, $alpha: .25);
-                                }
-                            }
-                            // input[type ="checkbox"]:checked span.my-checkbox {
-                            //     background: $color-orange-1;
-                            //     border-color: $color-orange-1;
-                            //     animation: wave 0.4s ease;
-                            // }
-        
-                            // input[type ="checkbox"]:checked span:first-child svg {
-                            //     stroke-dashoffset: 0;
-                            // }
-
-                            // @keyframes wave {
-                            //     50% {
-                            //         transform: scale(0.9);
-                            //     }
-                            // }
-                        }
-
-                        // span.mycheckbox{
-                        //     width: 25px;
-                        //     height: 25px;
-                        //     background-color:  rgba($color: $color-gray-2, $alpha: .25);
-                        //     border:1px solid $color-gray-1;
-                        //     border-radius: 4px;
-                        //     position: relative;
-                        //     left: -2rem;
-                        //     cursor: pointer;
-                        //     transform: translate3d(0, 0, 0);
-                        //     transform: scale(1);
-                        //     transition: all 0.2s ease;
-                        //     box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
-
-                            
-                        //     svg.check-mark {
-                        //         position: absolute;
-                        //         width: 12px;
-                        //         height: 10px;
-                        //         top: 3px;
-                        //         left: 2px;
-                        //         fill: none;
-                        //         stroke: #fff;
-                        //         stroke-width: 2;
-                        //         stroke-linecap: round;
-                        //         stroke-linejoin: round;
-                        //         stroke-dasharray: 16px;
-                        //         stroke-dashoffset: 16px;
-                        //         transition: all 0.3s ease;
-                        //         transition-delay: 0.1s;
-                        //         transform: translate3d(0, 0, 0);
-                        //     }
-
-                        //     svg.inline-svg {
-                        //         position: absolute;
-                        //         width: 0;
-                        //         height: 0;
-                        //         pointer-events: none;
-                        //         user-select: none;
-                        //     }
-                        // }
-
-                        div.captcha-block{
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            div.captcha{
-                                width: 100px;
-                                height: 50px;
-                                background-color:rgba($color: $color-gray-2, $alpha: .5) ;
-                                // border:1px solid #000000 ;
-                                margin-bottom: 1rem;
-                                font-size: 90%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: $color-white;
-    
-                            }
-
-                        }
-
-                    }
-                    button.register{
-                        background-color: $color-orange-1;
-                        border-color: $color-orange-1;
-                        border-radius: 28px;
-                        outline: none;
-                        font-size: 95%;
-                        position: relative;
-                        left: 16%;
-    
                         &:focus {
-                            box-shadow: none;
-                            color: $color-white;
-
+                            outline: none;
                         }
+                    }
+
+                }
+
+                label.label-check-box {
+                    font-size: 80%;
+
+                    a {
+                        color: $color-blue-1;
+                        padding-left: 3px;
+                    }
+
+                }
+
+                input {
+                    border: 1px solid $color-gray-2;
+                    border-radius: 9px;
+                    background-color: #000;
+                    color: $color-gray-2;
+                    font-size: 80%;
+                    padding-left: .5rem;
+
+                    &:focus {
+                        box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
                     }
                 }
 
+                div.form-check-inline {
+                    margin-right: 0;
+                    align-items: center;
+
+                    input[type="checkbox"] {
+                        width: 25px;
+                        height: 25px;
+                        opacity: 1;
+                        margin-right: 0;
+                        cursor: pointer;
+
+                        &:focus {
+                            box-shadow: 0 0 0 0.1rem rgba($color: $color-blue-1, $alpha: .25);
+                        }
+                    }
+
+                    // input[type ="checkbox"]:checked span.my-checkbox {
+                    //     background: $color-orange-1;
+                    //     border-color: $color-orange-1;
+                    //     animation: wave 0.4s ease;
+                    // }
+
+                    // input[type ="checkbox"]:checked span:first-child svg {
+                    //     stroke-dashoffset: 0;
+                    // }
+
+                    // @keyframes wave {
+                    //     50% {
+                    //         transform: scale(0.9);
+                    //     }
+                    // }
+                }
+
+                // span.mycheckbox{
+                //     width: 25px;
+                //     height: 25px;
+                //     background-color:  rgba($color: $color-gray-2, $alpha: .25);
+                //     border:1px solid $color-gray-1;
+                //     border-radius: 4px;
+                //     position: relative;
+                //     left: -2rem;
+                //     cursor: pointer;
+                //     transform: translate3d(0, 0, 0);
+                //     transform: scale(1);
+                //     transition: all 0.2s ease;
+                //     box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
+
+
+                //     svg.check-mark {
+                //         position: absolute;
+                //         width: 12px;
+                //         height: 10px;
+                //         top: 3px;
+                //         left: 2px;
+                //         fill: none;
+                //         stroke: #fff;
+                //         stroke-width: 2;
+                //         stroke-linecap: round;
+                //         stroke-linejoin: round;
+                //         stroke-dasharray: 16px;
+                //         stroke-dashoffset: 16px;
+                //         transition: all 0.3s ease;
+                //         transition-delay: 0.1s;
+                //         transform: translate3d(0, 0, 0);
+                //     }
+
+                //     svg.inline-svg {
+                //         position: absolute;
+                //         width: 0;
+                //         height: 0;
+                //         pointer-events: none;
+                //         user-select: none;
+                //     }
+                // }
+
+                div.captcha-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    div.captcha {
+                        width: 100px;
+                        height: 50px;
+                        background-color: rgba($color: $color-gray-2, $alpha: .5);
+                        // border:1px solid #000000 ;
+                        margin-bottom: 1rem;
+                        font-size: 90%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $color-white;
+
+                    }
+
+                }
+
+            }
+
+            button.register {
+                background-color: $color-orange-1;
+                border-color: $color-orange-1;
+                border-radius: 28px;
+                outline: none;
+                font-size: 95%;
+                position: relative;
+                left: 16%;
+
+                &:focus {
+                    box-shadow: none;
+                    color: $color-white;
+
+                }
+            }
         }
+
+    }
 }

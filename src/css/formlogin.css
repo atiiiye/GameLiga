@@ -45,6 +45,10 @@ div.modal-content div.modal-body div.modal-title p.text-white a {
   font-weight: bold;
 }
 
+div.modal-content div.modal-body div.modal-title p.text-white a:focus {
+  outline: none;
+}
+
 div.modal-content div.modal-body form.form-login {
   padding-top: 0;
   display: flex;

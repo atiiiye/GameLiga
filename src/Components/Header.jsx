@@ -28,7 +28,11 @@ export default class Header extends Component {
         this.state = {
             show: false
         };
+        this.refrence =React.createRef();
     }
+    addingRefButton() {  
+        this.refrence.current.focus();  
+      } 
 
     render() {
         return (
@@ -43,14 +47,18 @@ export default class Header extends Component {
                                             <div className="menu-line menu-line-3"></div>
                                         </span>
                                     </Navbar.Toggle>
-
                                 </div>
                                 <div className="nav-right">
 
                                     <ul className="navbar-nav">
                                         <div className="buttons">
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" id="login" to="/" exact onClick={() => this.setState({ show: true })}>LOG IN</NavLink>
+                                                <NavLink className="nav-link" id="login" to="/" exact onClick={() => {
+                                                    this.setState({ show: true })
+                                                    this.addingRefButton.bind(this)
+                                            }
+                                            }
+                                            >LOG IN</NavLink>
                                             </li>
                                             <li className="nav-item">
                                                 <NavLink className="nav-link" id="signup" to="/signup">SIGN UP</NavLink>
@@ -79,13 +87,13 @@ export default class Header extends Component {
                                 </div>
                             </Navbar>
 
-                            <Modal className="fade" show={this.state.show} onHide={() => this.setState({ show: false })}>
+                            <Modal className="fade" show={this.state.show} ref={this.refrence} onHide={() => this.setState({ show: false })}>
                                 <Modal.Body>
                                     <Modal.Title className="text-center mx-2">
                                         <BrowserRouter>
                                             <Route>
                                                 <h2>Welcome <span>back</span></h2>
-                                                <p className="text-white px-2">Do not have account ? <NavLink to="#">Sign up</NavLink></p>
+                                                <p className="text-white px-2">Do not have account ? <NavLink to="/signup">Sign up</NavLink></p>
                                             </Route>
                                         </BrowserRouter>
                                     </Modal.Title>

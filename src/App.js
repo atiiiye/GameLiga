@@ -23,15 +23,11 @@ function App() {
           <Header></Header>
           <Slider></Slider>
         </Route>
-        {/* <Header>
-          <Route path="/" exact component={Slider} />
-        </Header> */}
         <Route path="/signup">
           <SignUp></SignUp>
         </Route>
       </BrowserRouter>
     </div>
-    
   );
 }
 

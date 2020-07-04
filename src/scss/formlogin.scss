@@ -37,6 +37,9 @@ div.modal-content {
                     font-size: 80%;
                     color: red;
                     font-weight: bold;
+                    &:focus{
+                        outline: none;
+                    }
 
                 }
             }

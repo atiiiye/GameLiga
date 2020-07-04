@@ -53,13 +53,14 @@ class Canvas extends Component {
     //     this.ctx.lineTo(this.canvas.width, this.canvas.height);
     //   }
 
+
     render() {
         return (
-            <>
+            <div>
                 <canvas className="" id="mycanvas" ref={this.canvas}
                 // onResize={this.draw} 
                 ></canvas>
-            </>
+            </div>
         )
     }
 }

@@ -24,7 +24,7 @@ class SignUp extends Component {
               <p className="text-muted">
                 If you already have an Account with Challenge Stars
               </p>
-              <NavLink to="#" id="goLogin">
+              <NavLink to="/" id="goLogin">
                 click here to login
               </NavLink>
 

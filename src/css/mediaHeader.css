@@ -141,7 +141,6 @@ body {
   div.container-fluid nav.navbar div.hamburger-menu {
     position: absolute;
     right: 1rem;
-    top: 0;
   }
   div.container-fluid nav.navbar div.hamburger-menu button.navbar-toggler {
     display: table;
