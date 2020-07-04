@@ -70,7 +70,7 @@ div.container-fluid div.card form div.form-group label {
 }
 
 div.container-fluid div.card form div.form-group label a {
-  color: #0084ff;
+  color: #0075ff;
   font-size: 95%;
   font-weight: bold;
 }
@@ -84,7 +84,7 @@ div.container-fluid div.card form div.form-group label.label-check-box {
 }
 
 div.container-fluid div.card form div.form-group label.label-check-box a {
-  color: #0084ff;
+  color: #0075ff;
   padding-left: 3px;
 }
 
@@ -103,18 +103,19 @@ div.container-fluid div.card form div.form-group input:focus {
 
 div.container-fluid div.card form div.form-group div.form-check-inline {
   margin-right: 0;
+  align-items: center;
 }
 
 div.container-fluid div.card form div.form-group div.form-check-inline input[type="checkbox"] {
-  opacity: 1;
-}
-
-div.container-fluid div.card form div.form-group div.form-check-inline span.mycheckbox {
   width: 25px;
   height: 25px;
-  background-color: rgba(149, 154, 162, 0.25);
-  border: 1px solid #36363b;
-  border-radius: 4px;
+  opacity: 1;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+div.container-fluid div.card form div.form-group div.form-check-inline input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 0.1rem rgba(0, 117, 255, 0.25);
 }
 
 div.container-fluid div.card form div.form-group div.captcha-block {
@@ -127,7 +128,7 @@ div.container-fluid div.card form div.form-group div.captcha-block {
 div.container-fluid div.card form div.form-group div.captcha-block div.captcha {
   width: 100px;
   height: 50px;
-  background-color: #959aa2;
+  background-color: rgba(149, 154, 162, 0.5);
   margin-bottom: 1rem;
   font-size: 90%;
   display: flex;
@@ -146,7 +147,8 @@ div.container-fluid div.card form button.register {
   left: 16%;
 }
 
-div.container-fluid div.card form button.register:active {
-  box-shadow: 1px 1px 0 0 #ff9300;
+div.container-fluid div.card form button.register:focus {
+  box-shadow: none;
+  color: #fff;
 }
 /*# sourceMappingURL=signup.css.map */

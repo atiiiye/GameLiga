@@ -85,18 +85,75 @@ div.container-fluid {
                         }
                         div.form-check-inline{
                             margin-right: 0;
+                            align-items: center;
                             input[type ="checkbox"]{
-                                opacity: 1;
-                            }
-                            span.mycheckbox{
                                 width: 25px;
                                 height: 25px;
-                                background-color:  rgba($color: $color-gray-2, $alpha: .25);
-                                border:1px solid $color-gray-1;
-                                border-radius: 4px;
-    
+                                opacity: 1;
+                                margin-right: 0;
+                                cursor: pointer;
+                                &:focus {
+                                    box-shadow: 0 0 0 0.1rem rgba($color: $color-blue-1, $alpha: .25);
+                                }
                             }
+                            // input[type ="checkbox"]:checked span.my-checkbox {
+                            //     background: $color-orange-1;
+                            //     border-color: $color-orange-1;
+                            //     animation: wave 0.4s ease;
+                            // }
+        
+                            // input[type ="checkbox"]:checked span:first-child svg {
+                            //     stroke-dashoffset: 0;
+                            // }
+
+                            // @keyframes wave {
+                            //     50% {
+                            //         transform: scale(0.9);
+                            //     }
+                            // }
                         }
+
+                        // span.mycheckbox{
+                        //     width: 25px;
+                        //     height: 25px;
+                        //     background-color:  rgba($color: $color-gray-2, $alpha: .25);
+                        //     border:1px solid $color-gray-1;
+                        //     border-radius: 4px;
+                        //     position: relative;
+                        //     left: -2rem;
+                        //     cursor: pointer;
+                        //     transform: translate3d(0, 0, 0);
+                        //     transform: scale(1);
+                        //     transition: all 0.2s ease;
+                        //     box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
+
+                            
+                        //     svg.check-mark {
+                        //         position: absolute;
+                        //         width: 12px;
+                        //         height: 10px;
+                        //         top: 3px;
+                        //         left: 2px;
+                        //         fill: none;
+                        //         stroke: #fff;
+                        //         stroke-width: 2;
+                        //         stroke-linecap: round;
+                        //         stroke-linejoin: round;
+                        //         stroke-dasharray: 16px;
+                        //         stroke-dashoffset: 16px;
+                        //         transition: all 0.3s ease;
+                        //         transition-delay: 0.1s;
+                        //         transform: translate3d(0, 0, 0);
+                        //     }
+
+                        //     svg.inline-svg {
+                        //         position: absolute;
+                        //         width: 0;
+                        //         height: 0;
+                        //         pointer-events: none;
+                        //         user-select: none;
+                        //     }
+                        // }
 
                         div.captcha-block{
                             display: flex;
@@ -106,7 +163,7 @@ div.container-fluid {
                             div.captcha{
                                 width: 100px;
                                 height: 50px;
-                                background-color: $color-gray-2;
+                                background-color:rgba($color: $color-gray-2, $alpha: .5) ;
                                 // border:1px solid #000000 ;
                                 margin-bottom: 1rem;
                                 font-size: 90%;
@@ -115,9 +172,6 @@ div.container-fluid {
                                 justify-content: center;
                                 color: $color-white;
     
-                            }
-                            input{
-
                             }
 
                         }
@@ -132,8 +186,9 @@ div.container-fluid {
                         position: relative;
                         left: 16%;
     
-                        &:active {
-                            box-shadow: 1px 1px 0 0 $color-orange-1;
+                        &:focus {
+                            box-shadow: none;
+                            color: $color-white;
 
                         }
                     }

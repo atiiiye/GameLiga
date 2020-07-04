@@ -19,7 +19,7 @@ class Header2 extends Component {
                 <div className="container-fluid">
                     <Navbar expand="md">
                         <div className="nav-right">
-                            <p className="text-muted">user name</p>
+                            {/* <p className="text-muted">user name</p> */}
                             
                         </div>
                         <div className="nav-left">

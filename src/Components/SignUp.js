@@ -92,9 +92,20 @@ class SignUp extends Component {
 
                   <Form.Group className="row ml-1">
                     <Form.Check inline type="checkbox" className="col-1 form-control-plaintext" placeholder="">
-                    <span className="mycheckbox"></span>
+
                     </Form.Check>
-                    <Form.Label className="label-check-box col-10 col-form-label px-0">I confirm that I have read and accepted all the<NavLink to=""> rules and condition </NavLink></Form.Label>
+                    {/* <span className="mycheckbox">
+                      <svg className="check-mark">
+                          <use xlinkHref="#check"></use>
+                      </svg>
+                      <svg className="inline-svg">
+                          <symbol id="check" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </symbol>
+                      </svg>
+                    </span> */}
+                    <Form.Label className="label-check-box col-10 col-form-label px-0">I confirm that I have read and accepted 
+                                all the<NavLink to="">rules and condition</NavLink></Form.Label>
                   </Form.Group>
 
                   <Form.Group className="row ml-1">
