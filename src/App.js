@@ -9,6 +9,8 @@ import Header from "./Components/Header.js";
 import Slider from "./Components/Slider.jsx";
 import Header2 from "./Components/Header2";
 import SignUp from "./Components/SignUp";
+import Sidebar from "./Components/Sidebar";
+
 
 //import routes
 import { Route, BrowserRouter } from "react-router-dom";
@@ -25,6 +27,10 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignUp></SignUp>
+        </Route>
+        <Route path="/menu">
+          <Header2></Header2>
+          <Sidebar></Sidebar>
         </Route>
       </BrowserRouter>
     </div>
