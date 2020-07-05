@@ -14,17 +14,17 @@ class Sidebar extends Component {
         <div className="sidebar-menu">
           <ul className="list-menu">
             <li className="list-item"><NavLink className="nav-link" to="/">Home</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">My account</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">Console</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">Games</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">Liga</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">Tourney</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">TvLive</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/account">My account</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/console">Console</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/games">Games</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/liga">Liga</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/tourney">Tourney</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/tvlive">TvLive</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" to="/">Leader boards</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">Studi</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">News</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">Help center</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" to="/">Chat</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/studi">Studi</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/news">News</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/help">Help center</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/chat">Chat</NavLink></li>
           </ul>
         </div>
       </>

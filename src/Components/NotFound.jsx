@@ -1,0 +1,26 @@
+import React, { Component} from "react";
+
+//import css
+import './../css/NotFound.css'
+
+//import bootstrap
+import { Button, NavLink } from "react-bootstrap";
+
+
+class NotFound extends Component{
+    render(){
+        return(
+            <div className="container">
+                <span className="oops">404</span>
+                <h1 className="h1">
+                    Page Not Found
+                </h1>
+                <Button variant="outline-danger"><NavLink className="nav-link" to="/">Back to Home Page</NavLink></Button>
+            </div>
+        )
+
+        
+    }
+}
+
+export default NotFound;

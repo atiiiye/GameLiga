@@ -8,7 +8,7 @@ div.sidebar-menu {
   padding-right: 0;
   margin-right: 0;
   margin-left: 0;
-  width: 10%;
+  width: 12%;
   display: flex;
   flex-direction: column;
 }
@@ -17,16 +17,26 @@ div.sidebar-menu ul.list-menu {
   display: flex;
   flex-direction: column;
   height: 80%;
-  width: max-content;
+  width: 100%;
 }
 
 div.sidebar-menu ul.list-menu li.list-item {
+  width: 100%;
   border: 1px solid #ff9300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.sidebar-menu ul.list-menu li.list-item:active {
+  background-color: rgba(255, 147, 0, 0.12);
+  border-color: rgba(255, 147, 0, 0.12);
 }
 
 div.sidebar-menu ul.list-menu li.list-item a.nav-link {
   color: #fff;
-  line-height: 35px;
+  line-height: 30px;
+  font-size: 95%;
 }
 
 div.sidebar-menu ul.list-menu li.list-item a.nav-link::first-letter {

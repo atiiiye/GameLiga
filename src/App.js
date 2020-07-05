@@ -10,6 +10,8 @@ import Slider from "./Components/Slider.jsx";
 import Header2 from "./Components/Header2";
 import SignUp from "./Components/SignUp";
 import Sidebar from "./Components/Sidebar";
+import NotFound from "./Components/NotFound";
+
 
 
 //import routes
@@ -32,6 +34,7 @@ function App() {
           <Header2></Header2>
           <Sidebar></Sidebar>
         </Route>
+        <Route path="/404" component={NotFound} />
       </BrowserRouter>
     </div>
   );
