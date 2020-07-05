@@ -1,13 +1,14 @@
 @import 'base';
 
-div.container{
+div.container {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    span.oops{
+
+    span.oops {
         height: max-content;
         font-size: 3.5rem;
         font-weight: bold;
@@ -15,24 +16,29 @@ div.container{
         margin-bottom: 1rem;
 
     }
-    h1{
+
+    h1 {
         color: $color-white;
     }
-    button{
+
+    button {
         margin-top: 1rem;
         border-radius: 28px;
-        a.nav-link{
-            color: $color-danger;
-            
-        &:focus {
-            outline: none;
-            color: $color-white;
-        }
-        &:hover {
+
+        &:hover>a.nav-link {
             color: $color-white;
             background-color: $color-danger;
             border-color: $color-danger;
         }
+
+        a.nav-link {
+            color: $color-danger;
+
+            &:focus {
+                outline: none;
+                color: $color-white;
+            }
+
+        }
     }
-}
 }

@@ -4,7 +4,10 @@ import React, { Component} from "react";
 import './../css/NotFound.css'
 
 //import bootstrap
-import { Button, NavLink } from "react-bootstrap";
+import { Button} from "react-bootstrap";
+
+//import routes
+import { NavLink } from "react-router-dom";
 
 
 class NotFound extends Component{

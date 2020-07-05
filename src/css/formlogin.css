@@ -64,6 +64,7 @@ div.modal-content div.modal-body form.form-login div.form-fields {
   width: 80%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 div.modal-content div.modal-body form.form-login div.form-fields label {
@@ -96,7 +97,7 @@ div.modal-content div.modal-body form.form-login a.forgot {
   font-size: 85%;
   color: #ff9300;
   font-weight: bold;
-  width: 55%;
+  width: 75%;
   text-align: right;
 }
 

@@ -1,0 +1,181 @@
+@import 'base';
+
+section.main-slider {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    div.container-fluid {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        // max-width: 100%;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        div.row {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+
+            div.aaa {
+                padding-left: 0;
+                padding-right: 0;
+                // width: 100%;
+
+                div.sidebar.bbb {
+                    padding-right: 0;
+                    margin-right: 0;
+                    margin-left: 0;
+                    width: 10%;
+
+                    // height: 100vh;
+                    // div.card-group {
+
+                    div.card-columns {
+                        column-count: 1;
+                        column-gap: 0;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: flex-end;
+                        height: 100%;
+                        background-color: transparent;
+
+                        div.card {
+                            background-color: transparent;
+                            border-color: $color-gray-1;
+                            border-radius: 0;
+                            border-width: 2px;
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 0;
+                            width: 60px;
+                            height: 60px;
+                            margin-right: auto;
+
+                            div.card-body {}
+                        }
+
+                        // }
+                    }
+                }
+            }
+
+            div.card.ccc {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                border-left: 2px solid $color-orange-1;
+                border-top: 2px solid $color-orange-1;
+                border-bottom: 0;
+                border-right: 0;
+                border-radius: 0;
+                background: transparent;
+                position: relative;
+                left: 0;
+                // height: 100vh;
+                padding-left: 0;
+                padding-right: 0;
+                width: 90%;
+
+                div.card-body {
+                   
+                    padding: 0;
+                    margin-top: 0;
+                    // position: absolute;
+                    // left: inherit;
+                    height: 100%;
+                    width: 30%;
+                    // top: 5%;
+
+                   div.card-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    width: 70%;
+                    height: 80%;
+
+
+                    h1.Tournament {
+                        font-size: 2.8rem;
+                        color: $color-orange-1;
+                        font-weight: bold;
+                    }
+
+                    h1.title {
+                        color: $color-orange-1;
+                        font-weight: bold;
+                        font-size: 2.8rem;
+                        margin-top: .5rem;
+
+                        span.h1 {
+                            color: $color-white;
+                            font-weight: bold;
+                            font-size: 2.8rem;
+                        }
+                    }
+
+                    h1.garanti {
+                        font-size: 3rem;
+                        color: $color-white;
+                        font-weight: bold;
+                    }
+                   }
+                }
+
+                div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                    width: 55%;
+                    div.swiper-wrapper {
+                        width: 100%;
+                        margin-right: 0 !important;
+                        div.swiper-slide {
+                            width: 100%;
+                            height: 60vh;
+                            display: flex !important;
+                                div.slides {
+                                    // width: 100%;
+                                    img.card-img-top {
+                                    }
+                                }
+                        }
+                    }
+                    div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+                        display: flex;
+                        flex-direction: column;
+                        height: 130px;
+
+                        span.swiper-pagination-bullet{
+                            display: flex;
+                            justify-content: flex-end;
+                            width: 100%;
+                            height: 50px;
+                            padding-right: 1.5rem;
+                            color: #ffffff;
+                            font-size: 14px;
+                            background: transparent;
+                        }
+                        span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+                            font-size: 19px;
+                            // font-weight: bold;
+
+                        }
+
+                    }
+                }
+
+            }
+
+            div.row.images {
+                width: 90%;
+                height: max-content;
+                background-color: #000000;
+            }
+        }
+    }
+}

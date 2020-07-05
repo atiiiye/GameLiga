@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar } from 'react-bootstrap';
 
 
-class Header2 extends Component {
+class UserHeader extends Component {
     render() {
         return (
             <div>
@@ -39,4 +39,4 @@ class Header2 extends Component {
 
 }
 
-export default Header2;
+export default UserHeader;

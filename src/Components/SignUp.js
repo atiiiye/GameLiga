@@ -12,7 +12,7 @@ import { Card, Form , Button} from "react-bootstrap";
 //import routes
 // import { Route, BrowserRouter } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Header2 from "./Header2";
+import Header2 from "./UserHeader";
 
 class SignUp extends Component {
   render() {

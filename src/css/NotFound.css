@@ -30,6 +30,12 @@ div.container button {
   border-radius: 28px;
 }
 
+div.container button:hover > a.nav-link {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
 div.container button a.nav-link {
   color: #dc3545;
 }
@@ -37,11 +43,5 @@ div.container button a.nav-link {
 div.container button a.nav-link:focus {
   outline: none;
   color: #fff;
-}
-
-div.container button a.nav-link:hover {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
 }
 /*# sourceMappingURL=NotFound.css.map */

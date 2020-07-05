@@ -32,9 +32,9 @@ section.main-slider div.container-fluid div.row div.aaa {
 }
 
 section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb {
-  padding-right: 0 !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
   width: 10%;
 }
 
@@ -60,6 +60,7 @@ section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb div.card
   margin-bottom: 0;
   width: 60px;
   height: 60px;
+  margin-right: auto;
 }
 
 section.main-slider div.container-fluid div.row div.card.ccc {
