@@ -41,38 +41,35 @@ export default class Header extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const isValid = this.validate();
-    if (isValid) {
-      console.log(this.state);
 
-      this.setState(this.state);
-    } else {
+    if (isValid) {
+
     }
+    console.log(this.state);
+
+    
   };
   validate = () => {
     let userNameError = "";
     let passwordError = "";
     // let formIsValid = true;
 
-    if (!this.state.userNameError) {
+    if (!this.state.userName) {
       userNameError = "user name can not empty";
-      // formIsValid = false;
     }
 
-    if (typeof this.state.userName !== "undefined") {
+    if (this.state.userName) {
       if (!this.state.userName.match(/^[a-zA-Z]+$/)) {
-        // formIsValid = false;
         userNameError = "please enter only letters";
       }
     }
 
-    if (!this.state.passwordError) {
+    if (!this.state.password) {
       passwordError = "password can not empty";
-      // formIsValid = false;
     }
 
     if (userNameError || passwordError) {
       this.setState({ userNameError, passwordError });
-      // formIsValid = false;
       return false;
     }
 
@@ -179,6 +176,7 @@ export default class Header extends Component {
                 <div className="form-fields mb-4">
                   <Form.Label>User name :</Form.Label>
                   <Form.Control
+                    // required
                     type="text"
                     className="mb-2 mt-1"
                     id="username"
@@ -194,6 +192,7 @@ export default class Header extends Component {
                 <div className="form-fields">
                   <Form.Label>Password :</Form.Label>
                   <Form.Control
+                    // required
                     type="password"
                     className="mb-2 mt-1"
                     id="password"
@@ -216,7 +215,7 @@ export default class Header extends Component {
                     variant="none"
                     id="submit"
                     value="Submit"
-                    onClick={this.validate ?() => this.setState({ show: false }):() => this.setState({ show: true })}
+                    // onClick={this.validate ?() => this.setState({ show: false }):() => this.setState({ show: true })}
                     type="submit"
                   >
                     LOG IN

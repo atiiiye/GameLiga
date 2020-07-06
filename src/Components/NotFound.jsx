@@ -18,7 +18,7 @@ class NotFound extends Component{
                 <h1 className="h1">
                     Page Not Found
                 </h1>
-                <Button variant="outline-danger"><NavLink className="nav-link" to="/">Back to Home Page</NavLink></Button>
+                <Button variant="none"><NavLink className="nav-link" to="/">Back to Home Page</NavLink></Button>
             </div>
         )
 

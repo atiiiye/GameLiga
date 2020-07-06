@@ -23,16 +23,19 @@ div.container {
 
     button {
         margin-top: 1rem;
+        border: 1px solid $color-orange-1;
         border-radius: 28px;
+        &:hover{
+            background-color: $color-orange-1;
+            border-color: $color-orange-1; 
+        }
 
         &:hover>a.nav-link {
             color: $color-white;
-            background-color: $color-danger;
-            border-color: $color-danger;
         }
 
         a.nav-link {
-            color: $color-danger;
+            color: $color-orange-1;
 
             &:focus {
                 outline: none;

@@ -27,17 +27,21 @@ div.container h1 {
 
 div.container button {
   margin-top: 1rem;
+  border: 1px solid #ff9300;
   border-radius: 28px;
+}
+
+div.container button:hover {
+  background-color: #ff9300;
+  border-color: #ff9300;
 }
 
 div.container button:hover > a.nav-link {
   color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
 }
 
 div.container button a.nav-link {
-  color: #dc3545;
+  color: #ff9300;
 }
 
 div.container button a.nav-link:focus {
