@@ -47,17 +47,14 @@ export default class Header extends Component {
   validate = () => {
     let userNameError = "";
     let passwordError = "";
-    if (userNameError) {
-      this.setState(userNameError);
-      return false;
-    }
+
     if (!this.state.userNameError) {
       userNameError = "user name can not empty";
     }
 
     if (!this.state.passwordError) {
         passwordError = "password can not empty";
-      }
+    }
 
     if (userNameError || passwordError) {
       this.setState({ userNameError, passwordError });

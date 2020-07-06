@@ -93,6 +93,11 @@ div.modal-content div.modal-body form.form-login div.form-fields small a {
   font-weight: bold;
 }
 
+div.modal-content div.modal-body form.form-login div.form-fields div.form-validate {
+  color: red;
+  font-size: 90%;
+}
+
 div.modal-content div.modal-body form.form-login a.forgot {
   font-size: 85%;
   color: #ff9300;
