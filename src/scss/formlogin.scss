@@ -81,11 +81,11 @@ div.modal-content {
                 input {
                     direction: ltr;
                     border-color: $color-gray-1;
-                    background-color: rgba($color: $color-white, $alpha: .5);
-                    // padding-left: calc(1.5em + .70rem);
+                    background-color: rgba($color: $color-white, $alpha: .6);
                     border-radius: 7px;
                     &:focus {
-                        box-shadow: 0 0 1px .2rem  rgba($color: $color-gray-1, $alpha: .4);
+                        box-shadow: 0 0 1px .2rem  rgba($color: $color-white, $alpha: .2);
+                    background-color: rgba($color: $color-white, $alpha: .9);
 
                     }
                 }

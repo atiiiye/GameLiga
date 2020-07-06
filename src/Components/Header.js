@@ -25,6 +25,7 @@ export default class Header extends Component {
     password: "",
     userNameError: "",
     passwordError: "",
+    formValid: false,
   };
   constructor(props) {
     super(props);
@@ -35,19 +36,17 @@ export default class Header extends Component {
   //   }
 
   handleChange = (e) => {
-    this.setState({[e.target.name] : e.target.value});
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const isValid = this.validate();
+    let isValid = this.validate();
 
     if (isValid) {
-
+      this.setState({ formValid: true });
     }
     console.log(this.state);
-
-    
   };
   validate = () => {
     let userNameError = "";
@@ -73,10 +72,13 @@ export default class Header extends Component {
       return false;
     }
 
+    if (!userNameError || !passwordError) {
+      this.setState({ userNameError :"", passwordError:"" });
+      return true;
+    }
+
     return true;
   };
-
-
 
   render() {
     return (
@@ -215,7 +217,11 @@ export default class Header extends Component {
                     variant="none"
                     id="submit"
                     value="Submit"
-                    // onClick={this.validate ?() => this.setState({ show: false }):() => this.setState({ show: true })}
+                    onClick={
+                      this.state.formValid
+                        ? () => this.setState({ show: false })
+                        : () => this.setState({ show: true })
+                    }
                     type="submit"
                   >
                     LOG IN
