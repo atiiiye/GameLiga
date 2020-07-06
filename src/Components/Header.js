@@ -26,43 +26,60 @@ export default class Header extends Component {
     userNameError: "",
     passwordError: "",
   };
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.refrence = React.createRef();
   }
   //   addingRefButton() {
   //     this.refrence.current.focus();
   //   }
-  handleChange = e=> {this.setState(e.target.value)};
 
-  handleSubmit = e => {
+  handleChange = (e) => {
+    this.setState({[e.target.name] : e.target.value});
+  };
+
+  handleSubmit = (e) => {
     e.preventDefault();
     const isValid = this.validate();
     if (isValid) {
-        console.log(this.state);
-        
+      console.log(this.state);
+
       this.setState(this.state);
+    } else {
     }
   };
   validate = () => {
     let userNameError = "";
     let passwordError = "";
+    // let formIsValid = true;
 
     if (!this.state.userNameError) {
       userNameError = "user name can not empty";
+      // formIsValid = false;
+    }
+
+    if (typeof this.state.userName !== "undefined") {
+      if (!this.state.userName.match(/^[a-zA-Z]+$/)) {
+        // formIsValid = false;
+        userNameError = "please enter only letters";
+      }
     }
 
     if (!this.state.passwordError) {
-        passwordError = "password can not empty";
+      passwordError = "password can not empty";
+      // formIsValid = false;
     }
 
     if (userNameError || passwordError) {
       this.setState({ userNameError, passwordError });
+      // formIsValid = false;
       return false;
     }
 
     return true;
   };
+
+
 
   render() {
     return (
@@ -157,19 +174,18 @@ export default class Header extends Component {
               <Form
                 action="#"
                 className="form-login py-4"
-                onSubmit={this.handleSubmit}
+                onSubmit={this.handleSubmit.bind(this)}
               >
                 <div className="form-fields mb-4">
                   <Form.Label>User name :</Form.Label>
                   <Form.Control
-                    required
                     type="text"
                     className="mb-2 mt-1"
                     id="username"
-                    name="user-name"
-                    value={this.state.userName}
+                    name="userName"
                     placeholder="User"
-                    onChange={this.handleChange}
+                    value={this.state.userName}
+                    onChange={this.handleChange.bind(this)}
                   ></Form.Control>
                   <div className="form-validate">
                     {this.state.userNameError}
@@ -178,14 +194,13 @@ export default class Header extends Component {
                 <div className="form-fields">
                   <Form.Label>Password :</Form.Label>
                   <Form.Control
-                    required
                     type="password"
                     className="mb-2 mt-1"
                     id="password"
                     name="password"
-                    value={this.state.password}
                     placeholder="Password"
-                    onChange={this.handleChange}
+                    value={this.state.password}
+                    onChange={this.handleChange.bind(this)}
                   ></Form.Control>
                   <div className="form-validate">
                     {this.state.passwordError}
@@ -200,9 +215,9 @@ export default class Header extends Component {
                     className="btn-block"
                     variant="none"
                     id="submit"
-                    // onClick={() => this.setState({ show: false })}
+                    value="Submit"
+                    onClick={this.validate ?() => this.setState({ show: false }):() => this.setState({ show: true })}
                     type="submit"
-                    onSubmit={this.handleSubmit}
                   >
                     LOG IN
                   </Button>
