@@ -1,7 +1,7 @@
 @import 'base';
 
 div.modal-content {
-    background-color: rgba($color: $color-background-1, $alpha: .5);
+    background-color: rgba($color: $color-background-1, $alpha: .7);
     border-color: $color-orange-1;
     border-radius: 28px;
     margin-top: 14%;
@@ -84,6 +84,10 @@ div.modal-content {
                     background-color: rgba($color: $color-white, $alpha: .5);
                     // padding-left: calc(1.5em + .70rem);
                     border-radius: 7px;
+                    &:focus {
+                        box-shadow: 0 0 1px .2rem  rgba($color: $color-gray-1, $alpha: .4);
+
+                    }
                 }
 
                 small {
@@ -125,8 +129,8 @@ div.modal-content {
                     font-size: 95%;
                     color: $color-white;
 
-                    &:active {
-                        box-shadow: 1px 1px 0 0 $color-orange-1;
+                    &:focus {
+                        box-shadow: 0 0 1px .2rem  rgba($color: $color-orange-1, $alpha: .3);
 
                     }
                 }

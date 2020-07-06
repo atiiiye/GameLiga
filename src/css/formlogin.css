@@ -5,7 +5,7 @@ body {
 }
 
 div.modal-content {
-  background-color: rgba(28, 28, 34, 0.5);
+  background-color: rgba(28, 28, 34, 0.7);
   border-color: #ff9300;
   border-radius: 28px;
   margin-top: 14%;
@@ -88,6 +88,10 @@ div.modal-content div.modal-body form.form-login div.form-fields input {
   border-radius: 7px;
 }
 
+div.modal-content div.modal-body form.form-login div.form-fields input:focus {
+  box-shadow: 0 0 1px 0.2rem rgba(54, 54, 59, 0.4);
+}
+
 div.modal-content div.modal-body form.form-login div.form-fields small a {
   color: #ff9300;
   font-weight: bold;
@@ -126,7 +130,7 @@ div.modal-content div.modal-body form.form-login div.form-group button {
   color: #fff;
 }
 
-div.modal-content div.modal-body form.form-login div.form-group button:active {
-  box-shadow: 1px 1px 0 0 #ff9300;
+div.modal-content div.modal-body form.form-login div.form-group button:focus {
+  box-shadow: 0 0 1px 0.2rem rgba(255, 147, 0, 0.3);
 }
 /*# sourceMappingURL=formlogin.css.map */
