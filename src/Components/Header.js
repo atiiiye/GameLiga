@@ -46,12 +46,11 @@ export default class Header extends Component {
     if (isValid) {
       this.setState({ formValid: true });
     }
-    console.log(this.state);
+    // console.log(this.state);
   };
   validate = () => {
     let userNameError = "";
     let passwordError = "";
-    // let formIsValid = true;
 
     if (!this.state.userName) {
       userNameError = "user name can not empty";
@@ -73,8 +72,7 @@ export default class Header extends Component {
     }
 
     if (!userNameError || !passwordError) {
-      this.setState({ userNameError :"", passwordError:"" });
-      return true;
+      this.setState({ userNameError :"", passwordError:""});
     }
 
     return true;

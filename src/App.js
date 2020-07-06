@@ -5,7 +5,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //import components
-import Slider from "./Components/Slider.jsx";
+import Slider from "./Components/Slider";
 import UserHeader from "./Components/UserHeader";
 import SignUp from "./Components/SignUp";
 import Sidebar from "./Components/Sidebar";

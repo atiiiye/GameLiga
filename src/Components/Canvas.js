@@ -5,15 +5,26 @@ import './../css/canvas.css';
 
 class Canvas extends Component {
 
+    state = {
+        windowHeight: undefined,
+        windowWidth: undefined
+      }
+    
+      handleResize = () => this.setState({
+        windowHeight: window.innerHeight,
+        windowWidth: window.innerWidth
+      });
+
     constructor(props) {
         super(props);
         this.canvas = React.createRef();
-
-        this.canvas2 = React.createRef();
-
     }
 
     componentDidMount(props, state) {
+
+        this.handleResize();
+        window.addEventListener('resize', this.handleResize);
+
         let ctx = this.canvas.current.getContext("2d");
         ctx.beginPath();
         ctx.moveTo(55, 20);
@@ -45,21 +56,15 @@ class Canvas extends Component {
         ctx.strokeStyle = "rgb(54,54,59)";
         
         ctx.stroke();
-        // this.draw();
     }
-    // draw() {
-    //     let ctx = this.canvas.current.getContext("2d");
-    //     ctx.beginPath();
-    //     this.ctx.lineTo(this.canvas.width, this.canvas.height);
-    //   }
-
-
     render() {
         return (
             <div>
                 <canvas className="" id="mycanvas" ref={this.canvas}
-                // onResize={this.draw} 
-                ></canvas>
+                // onResize={} 
+                >
+                {this.state.windowWidth} x {this.state.windowHeight}
+                </canvas>
             </div>
         )
     }
