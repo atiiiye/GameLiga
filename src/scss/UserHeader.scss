@@ -8,7 +8,7 @@ div.container-fluid {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        div.nav-right {
+        div.navbar-right {
             display: flex;
             p.text-muted{
                 margin-right: 2rem;
@@ -17,10 +17,10 @@ div.container-fluid {
             }
 
         }
-        div.nav-left {
+        div.navbar-left {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             width: 45%;
 
             div.empty-content {

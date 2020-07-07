@@ -18,11 +18,11 @@ class UserHeader extends Component {
             <div>
                 <div className="container-fluid">
                     <Navbar expand="md">
-                        <div className="nav-right">
+                        <div className="navbar-right">
                             {/* <p className="text-muted">user name</p> */}
                             
                         </div>
-                        <div className="nav-left">
+                        <div className="navbar-left">
                             <input type="search" placeholder="search"></input>
                             <div className="empty-content"></div>
                             <h4 className="UFOGame">UFO<span>Game</span></h4>

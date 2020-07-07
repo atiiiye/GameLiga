@@ -9,8 +9,6 @@ class MainCard extends Component{
     render(){
         return(
             <div className="card">
-                <p>card body</p>
-
             </div>
         )
     }
