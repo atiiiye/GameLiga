@@ -61,6 +61,7 @@ section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb div.card
   width: 60px;
   height: 60px;
   margin-right: auto;
+  margin-top: 0;
 }
 
 section.main-slider div.container-fluid div.row div.card.ccc {
@@ -78,6 +79,7 @@ section.main-slider div.container-fluid div.row div.card.ccc {
   padding-left: 0;
   padding-right: 0;
   width: 90%;
+  margin-top: 0;
 }
 
 section.main-slider div.container-fluid div.row div.card.ccc div.card-body {

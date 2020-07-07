@@ -25,26 +25,29 @@ function App() {
     <div>
       <BrowserRouter>
         <Switch>
+
           <Route path="/" exact>
             <Header></Header>
             <Slider></Slider>
           </Route>
+
           <Route path="/signup">
-            <SignUp></SignUp>
+            <UserHeader></UserHeader>
+            <div style={{}}>
+            <MainCard></MainCard>
+            <SignUp />
+            </div>
           </Route>
-          <Route path="/menu">
+
+          <Route path="/account">
             <UserHeader></UserHeader>
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <MainCard></MainCard>
             </div>
           </Route>
+
           <Route path="/404" component={NotFound} />
-          {/* <Route path="card">
-            <MainCard>
-              <Sidebar></Sidebar>
-            </MainCard>
-          </Route> */}
         </Switch>
       </BrowserRouter>
     </div>

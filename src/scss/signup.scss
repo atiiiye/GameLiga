@@ -5,32 +5,42 @@ div.container-fluid {
         border: 2px solid rgba($color: $color-orange-1, $alpha: .5);
         border-radius: 9px;
         background-color: rgba($color: $color-gray-1, $alpha: .5);
-        margin-left: 3rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
         width: 45%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
 
-        h1.h1 {
-            color: rgba($color: $color-gray-1, $alpha: .7);
-            text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2);
-            font-weight: bold;
-            text-align: center;
-        }
+        div.title {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
 
-        p.text-muted {
-            font-weight: bold;
-            font-size: 75%;
-            margin-bottom: .3rem;
-            text-align: center;
-        }
+            h1.h1 {
+                color: rgba($color: $color-gray-1, $alpha: .7);
+                text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2);
+                font-weight: bold;
+                text-align: center;
+            }
 
-        a#goLogin {
-            color: red;
-            font-weight: bold;
-            font-size: 75%;
-            text-align: center;
-            text-decoration: underline red;
+            p.text-muted {
+                font-weight: bold;
+                font-size: 75%;
+                margin-bottom: .3rem;
+                text-align: center;
+            }
 
-            &:focus {
-                outline: none;
+            a#goLogin {
+                color: red;
+                font-weight: bold;
+                font-size: 75%;
+                text-align: center;
+                text-decoration: underline red;
+
+                &:focus {
+                    outline: none;
+                }
             }
         }
 
@@ -74,7 +84,6 @@ div.container-fluid {
                             outline: none;
                         }
                     }
-
                 }
 
                 label.label-check-box {
@@ -84,7 +93,6 @@ div.container-fluid {
                         color: $color-blue-1;
                         padding-left: 3px;
                     }
-
                 }
 
                 input {
@@ -194,9 +202,7 @@ div.container-fluid {
                         color: $color-white;
 
                     }
-
                 }
-
             }
 
             button.register {
@@ -215,6 +221,5 @@ div.container-fluid {
                 }
             }
         }
-
     }
 }
