@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 //import css
 import './../css/reset.css'
-import './../css/Header2.css';
+import './../css/UserHeader.css'
 
 //import image
 import logo2 from './../images/logo2.png';
