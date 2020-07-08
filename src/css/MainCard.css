@@ -6,18 +6,17 @@ body {
 
 div.card {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  background: transparent;
   border-left: 2px solid #ff9300;
   border-top: 2px solid #ff9300;
   border-bottom: 0;
   border-right: 0;
   border-radius: 0;
-  background: transparent;
   position: relative;
   left: 0;
+  height: max-content;
   padding-left: 0;
   padding-right: 0;
-  width: 90%;
+  width: 88%;
 }
 /*# sourceMappingURL=MainCard.css.map */

@@ -32,13 +32,13 @@ function App() {
           </Route>
 
           <Route path="/signup">
-            <UserHeader></UserHeader>
-            <MainCard />
+            <UserHeader />
             <SignUp />
+
           </Route>
 
           <Route path="/account">
-            <UserHeader></UserHeader>
+            <UserHeader />
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <MainCard></MainCard>

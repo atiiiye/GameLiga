@@ -1,13 +1,28 @@
 @import 'base';
 
-// div.container-fluid {
+div.card-body {
+    display: flex;
+    // flex-direction: row;
+    background: transparent;
+    // justify-content: flex-end;
+    border-left: 2px solid $color-orange-1;
+    border-top: 2px solid $color-orange-1;
+    border-bottom: 0;
+    border-right: 0;
+    border-radius: 0;
+    position: relative;
+    right: -12%;
+    height: max-content;
+    padding-left: 0;
+    padding-right: 0;
+    width: 88% ;
     div.cards {
         border: 2px solid rgba($color: $color-orange-1, $alpha: .5);
         border-radius: 9px;
         background-color: rgba($color: $color-gray-1, $alpha: .5);
         margin-left: 2rem;
         margin-top: 2rem;
-        width: 45%;
+        width: 50%;
         height: max-content;
         display: flex;
         flex-direction: column;
@@ -221,5 +236,5 @@
                 }
             }
         }
-    // }
+    }
 }

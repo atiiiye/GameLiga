@@ -13,13 +13,10 @@ import { Card, Form, Button } from "react-bootstrap";
 // import { Route, BrowserRouter } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-import MainCard from "./MainCard";
-
-
 class SignUp extends Component {
   render() {
     return (
-      <>
+      <div className="card-body">
         {/* <div className="container-fluid"> */}
           <div className="cards">
             <div className="title">
@@ -121,7 +118,7 @@ class SignUp extends Component {
             </Form>
           </div>
         {/* </div> */}
-      </>
+      </div>
     );
   }
 }
