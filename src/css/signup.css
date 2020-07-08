@@ -4,7 +4,7 @@ body {
   background-color: #1c1c22;
 }
 
-div.container-fluid div.card {
+div.cards {
   border: 2px solid rgba(255, 147, 0, 0.5);
   border-radius: 9px;
   background-color: rgba(54, 54, 59, 0.5);
@@ -16,27 +16,27 @@ div.container-fluid div.card {
   flex-direction: column;
 }
 
-div.container-fluid div.card div.title {
+div.cards div.title {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-div.container-fluid div.card div.title h1.h1 {
+div.cards div.title h1.h1 {
   color: rgba(54, 54, 59, 0.7);
   text-shadow: -3px -1px 0 rgba(255, 147, 0, 0.2);
   font-weight: bold;
   text-align: center;
 }
 
-div.container-fluid div.card div.title p.text-muted {
+div.cards div.title p.text-muted {
   font-weight: bold;
   font-size: 75%;
   margin-bottom: .3rem;
   text-align: center;
 }
 
-div.container-fluid div.card div.title a#goLogin {
+div.cards div.title a#goLogin {
   color: red;
   font-weight: bold;
   font-size: 75%;
@@ -44,11 +44,11 @@ div.container-fluid div.card div.title a#goLogin {
   text-decoration: underline red;
 }
 
-div.container-fluid div.card div.title a#goLogin:focus {
+div.cards div.title a#goLogin:focus {
   outline: none;
 }
 
-div.container-fluid div.card form {
+div.cards form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +56,7 @@ div.container-fluid div.card form {
   margin-top: 2rem;
 }
 
-div.container-fluid div.card form h3.h3 {
+div.cards form h3.h3 {
   display: flex;
   color: #fff;
   font-size: 95%;
@@ -66,14 +66,14 @@ div.container-fluid div.card form h3.h3 {
   margin-bottom: 1rem;
 }
 
-div.container-fluid div.card form div.form-group {
+div.cards form div.form-group {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0;
 }
 
-div.container-fluid div.card form div.form-group label {
+div.cards form div.form-group label {
   display: flex;
   justify-content: center;
   color: #959aa2;
@@ -81,26 +81,26 @@ div.container-fluid div.card form div.form-group label {
   font-size: 90%;
 }
 
-div.container-fluid div.card form div.form-group label a {
+div.cards form div.form-group label a {
   color: #0075ff;
   font-size: 100%;
   font-weight: bold;
 }
 
-div.container-fluid div.card form div.form-group label a:focus {
+div.cards form div.form-group label a:focus {
   outline: none;
 }
 
-div.container-fluid div.card form div.form-group label.label-check-box {
+div.cards form div.form-group label.label-check-box {
   font-size: 80%;
 }
 
-div.container-fluid div.card form div.form-group label.label-check-box a {
+div.cards form div.form-group label.label-check-box a {
   color: #0075ff;
   padding-left: 3px;
 }
 
-div.container-fluid div.card form div.form-group input {
+div.cards form div.form-group input {
   border: 1px solid #959aa2;
   border-radius: 9px;
   background-color: #000;
@@ -109,16 +109,16 @@ div.container-fluid div.card form div.form-group input {
   padding-left: .5rem;
 }
 
-div.container-fluid div.card form div.form-group input:focus {
+div.cards form div.form-group input:focus {
   box-shadow: 0 0 0 0.1rem rgba(255, 147, 0, 0.25);
 }
 
-div.container-fluid div.card form div.form-group div.form-check-inline {
+div.cards form div.form-group div.form-check-inline {
   margin-right: 0;
   align-items: center;
 }
 
-div.container-fluid div.card form div.form-group div.form-check-inline input[type="checkbox"] {
+div.cards form div.form-group div.form-check-inline input[type="checkbox"] {
   width: 25px;
   height: 25px;
   opacity: 1;
@@ -126,18 +126,18 @@ div.container-fluid div.card form div.form-group div.form-check-inline input[typ
   cursor: pointer;
 }
 
-div.container-fluid div.card form div.form-group div.form-check-inline input[type="checkbox"]:focus {
+div.cards form div.form-group div.form-check-inline input[type="checkbox"]:focus {
   box-shadow: 0 0 0 0.1rem rgba(0, 117, 255, 0.25);
 }
 
-div.container-fluid div.card form div.form-group div.captcha-block {
+div.cards form div.form-group div.captcha-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-div.container-fluid div.card form div.form-group div.captcha-block div.captcha {
+div.cards form div.form-group div.captcha-block div.captcha {
   width: 100px;
   height: 50px;
   background-color: rgba(149, 154, 162, 0.5);
@@ -149,7 +149,7 @@ div.container-fluid div.card form div.form-group div.captcha-block div.captcha {
   color: #fff;
 }
 
-div.container-fluid div.card form button.register {
+div.cards form button.register {
   background-color: #ff9300;
   border-color: #ff9300;
   border-radius: 28px;
@@ -159,7 +159,7 @@ div.container-fluid div.card form button.register {
   left: 16%;
 }
 
-div.container-fluid div.card form button.register:focus {
+div.cards form button.register:focus {
   box-shadow: none;
   color: #fff;
 }

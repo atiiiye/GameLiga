@@ -19,54 +19,46 @@ section.main-slider {
             width: 100%;
             height: auto;
             margin-left: 0;
+            display: flex;
+            padding-left: 0;
+            padding-right: 0;
+            // width: 100%;
 
-            div.aaa {
-                padding-left: 0;
+            div.sidebar{
                 padding-right: 0;
-                // width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+                width: 10%;
 
-                div.sidebar.bbb {
-                    padding-right: 0;
-                    margin-right: 0;
-                    margin-left: 0;
-                    width: 10%;
+                div.card-columns {
+                    column-count: 1;
+                    column-gap: 0;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: flex-end;
+                    height: 100%;
+                    background-color: transparent;
 
-                    // height: 100vh;
-                    // div.card-group {
-
-                    div.card-columns {
-                        column-count: 1;
-                        column-gap: 0;
+                    div.card#social {
+                        background-color: transparent;
+                        border: 2px solid $color-gray-1;
+                        border-radius: 0;
                         display: flex;
                         flex-direction: column;
-                        width: 100%;
-                        align-items: center;
-                        justify-content: flex-end;
-                        height: 100%;
-                        background-color: transparent;
+                        margin-bottom: 0;
+                        width: 60px;
+                        height: 60px;
+                        // margin-right: auto;
+                        margin-top: 0;
 
-                        div.card {
-                            background-color: transparent;
-                            border-color: $color-gray-1;
-                            border-radius: 0;
-                            border-width: 2px;
-                            display: flex;
-                            flex-direction: column;
-                            margin-bottom: 0;
-                            width: 60px;
-                            height: 60px;
-                            margin-right: auto;
-                            margin-top: 0;
-
-                            div.card-body {}
-                        }
-
-                        // }
+                        div.card-body {}
                     }
                 }
             }
 
-            div.card.ccc {
+            div#content {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
@@ -85,7 +77,6 @@ section.main-slider {
                 margin-top: 0;
 
                 div.card-body {
-                   
                     padding: 0;
                     margin-top: 0;
                     // position: absolute;
@@ -94,65 +85,69 @@ section.main-slider {
                     width: 30%;
                     // top: 5%;
 
-                   div.card-text {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    width: 70%;
-                    height: 80%;
+                    div.card-text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        width: 70%;
+                        height: 80%;
 
 
-                    h1.Tournament {
-                        font-size: 2.8rem;
-                        color: $color-orange-1;
-                        font-weight: bold;
-                    }
+                        h1.Tournament {
+                            font-size: 2.8rem;
+                            color: $color-orange-1;
+                            font-weight: bold;
+                        }
 
-                    h1.title {
-                        color: $color-orange-1;
-                        font-weight: bold;
-                        font-size: 2.8rem;
-                        margin-top: .5rem;
-
-                        span.h1 {
-                            color: $color-white;
+                        h1.title {
+                            color: $color-orange-1;
                             font-weight: bold;
                             font-size: 2.8rem;
+                            margin-top: .5rem;
+
+                            span.h1 {
+                                color: $color-white;
+                                font-weight: bold;
+                                font-size: 2.8rem;
+                            }
+                        }
+
+                        h1.garanti {
+                            font-size: 3rem;
+                            color: $color-white;
+                            font-weight: bold;
                         }
                     }
-
-                    h1.garanti {
-                        font-size: 3rem;
-                        color: $color-white;
-                        font-weight: bold;
-                    }
-                   }
                 }
 
                 div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
                     width: 55%;
+
                     div.swiper-wrapper {
                         width: 100%;
                         margin-right: 0 !important;
+
                         div.swiper-slide {
                             width: 100%;
                             height: 60vh;
                             display: flex !important;
-                                div.slides {
-                                    // width: 100%;
-                                    img.card-img-top {
-                                    }
-                                }
+
+                            div.slides {
+
+                                // width: 100%;
+                                img.card-img-top {}
+                            }
                         }
                     }
-                    div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+
+                    div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
                         display: flex;
                         flex-direction: column;
                         height: 130px;
 
-                        span.swiper-pagination-bullet{
+                        span.swiper-pagination-bullet {
                             display: flex;
                             justify-content: flex-end;
                             width: 100%;
@@ -162,7 +157,8 @@ section.main-slider {
                             font-size: 14px;
                             background: transparent;
                         }
-                        span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+
+                        span.swiper-pagination-bullet.swiper-pagination-bullet-active {
                             font-size: 19px;
                             // font-weight: bold;
 
@@ -172,6 +168,8 @@ section.main-slider {
                 }
 
             }
+
+
 
             div.row.images {
                 width: 90%;

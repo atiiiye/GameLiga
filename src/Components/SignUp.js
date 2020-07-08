@@ -13,12 +13,15 @@ import { Card, Form, Button } from "react-bootstrap";
 // import { Route, BrowserRouter } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
+import MainCard from "./MainCard";
+
+
 class SignUp extends Component {
   render() {
     return (
       <>
-        <div className="container-fluid">
-          <Card>
+        {/* <div className="container-fluid"> */}
+          <div className="cards">
             <div className="title">
               <h1 className="h1">Registration</h1>
               <p className="text-muted">
@@ -116,8 +119,8 @@ class SignUp extends Component {
               </Form.Group>
 
             </Form>
-          </Card>
-        </div>
+          </div>
+        {/* </div> */}
       </>
     );
   }

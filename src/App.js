@@ -33,10 +33,8 @@ function App() {
 
           <Route path="/signup">
             <UserHeader></UserHeader>
-            <div style={{}}>
-            <MainCard></MainCard>
+            <MainCard />
             <SignUp />
-            </div>
           </Route>
 
           <Route path="/account">

@@ -78,25 +78,24 @@ class Slider extends Component {
       <section className="main-slider">
         <div className="container-fluid">
           <div className="row">
-            <div className="row aaa">
-              <div className="sidebar bbb">
+              <div className="sidebar">
                 <Canvas />
                 <CardColumns>
-                  <Card>
+                  <Card id="social">
                     <Card.Body></Card.Body>
                   </Card>
-                  <Card>
+                  <Card id="social">
                     <Card.Body></Card.Body>
                   </Card>
-                  <Card>
+                  <Card id="social">
                     <Card.Body></Card.Body>
                   </Card>
-                  <Card>
+                  <Card id="social">
                     <Card.Body></Card.Body>
                   </Card>
                 </CardColumns>
               </div>
-              <div className="card row ccc">
+              <Card className="row" id="content">
                 <div className="card-body">
                   <div className="card-text">
                     <h1 className="h Tournament">Tournament</h1>
@@ -114,8 +113,7 @@ class Slider extends Component {
                   ))}
                 </Swiper>
                 <div className="row images"></div>
-              </div>
-            </div>
+              </Card>
           </div>
         </div>
       </section>

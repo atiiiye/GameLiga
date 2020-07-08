@@ -24,21 +24,19 @@ section.main-slider div.container-fluid div.row {
   width: 100%;
   height: auto;
   margin-left: 0;
-}
-
-section.main-slider div.container-fluid div.row div.aaa {
+  display: flex;
   padding-left: 0;
   padding-right: 0;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb {
+section.main-slider div.container-fluid div.row div.sidebar {
   padding-right: 0;
   margin-right: 0;
   margin-left: 0;
   width: 10%;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb div.card-columns {
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns {
   column-count: 1;
   column-gap: 0;
   display: flex;
@@ -50,21 +48,19 @@ section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb div.card
   background-color: transparent;
 }
 
-section.main-slider div.container-fluid div.row div.aaa div.sidebar.bbb div.card-columns div.card {
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social {
   background-color: transparent;
-  border-color: #36363b;
+  border: 2px solid #36363b;
   border-radius: 0;
-  border-width: 2px;
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
   width: 60px;
   height: 60px;
-  margin-right: auto;
   margin-top: 0;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc {
+section.main-slider div.container-fluid div.row div#content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -82,14 +78,14 @@ section.main-slider div.container-fluid div.row div.card.ccc {
   margin-top: 0;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.card-body {
+section.main-slider div.container-fluid div.row div#content div.card-body {
   padding: 0;
   margin-top: 0;
   height: 100%;
   width: 30%;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.card-body div.card-text {
+section.main-slider div.container-fluid div.row div#content div.card-body div.card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,53 +95,53 @@ section.main-slider div.container-fluid div.row div.card.ccc div.card-body div.c
   height: 80%;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.card-body div.card-text h1.Tournament {
+section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.Tournament {
   font-size: 2.8rem;
   color: #ff9300;
   font-weight: bold;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.card-body div.card-text h1.title {
+section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.title {
   color: #ff9300;
   font-weight: bold;
   font-size: 2.8rem;
   margin-top: .5rem;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.card-body div.card-text h1.title span.h1 {
+section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.title span.h1 {
   color: #fff;
   font-weight: bold;
   font-size: 2.8rem;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.card-body div.card-text h1.garanti {
+section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.garanti {
   font-size: 3rem;
   color: #fff;
   font-weight: bold;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
   width: 55%;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper {
+section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper {
   width: 100%;
   margin-right: 0 !important;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide {
+section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide {
   width: 100%;
   height: 60vh;
   display: flex !important;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
   display: flex;
   flex-direction: column;
   height: 130px;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
+section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -156,7 +152,7 @@ section.main-slider div.container-fluid div.row div.card.ccc div.swiper-containe
   background: transparent;
 }
 
-section.main-slider div.container-fluid div.row div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   font-size: 19px;
 }
 

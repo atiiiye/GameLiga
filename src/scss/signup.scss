@@ -1,7 +1,7 @@
 @import 'base';
 
-div.container-fluid {
-    div.card {
+// div.container-fluid {
+    div.cards {
         border: 2px solid rgba($color: $color-orange-1, $alpha: .5);
         border-radius: 9px;
         background-color: rgba($color: $color-gray-1, $alpha: .5);
@@ -221,5 +221,5 @@ div.container-fluid {
                 }
             }
         }
-    }
+    // }
 }

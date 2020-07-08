@@ -11,8 +11,9 @@ class Canvas extends Component {
       }
     
       handleResize = () => this.setState({
-        windowHeight: window.innerHeight,
-        windowWidth: window.innerWidth
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight
+
       });
 
     constructor(props) {
@@ -36,8 +37,8 @@ class Canvas extends Component {
 
         ctx.beginPath();
         ctx.strokeStyle = "rgb(255,147,0)";
-        ctx.moveTo(115, 10);
-        ctx.lineTo(150, 10);
+        ctx.moveTo(this.state.windowWidth+115, this.state.windowHeight+10);
+        ctx.lineTo(this.state.windowWidth+150, this.state.windowHeight+10);
         ctx.lineWidth = "2";
         ctx.stroke();
 

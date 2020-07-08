@@ -5,38 +5,38 @@ body {
 }
 
 @media (max-width: 991px) {
-  div.container-fluid div.card {
+  div.container-fluid div.cards {
     width: 65%;
   }
-  div.container-fluid div.card a#goLogin {
+  div.container-fluid div.cards div.title a#goLogin {
     font-size: 75%;
   }
-  div.container-fluid div.card form {
+  div.container-fluid div.cards form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
     margin-top: 2rem;
   }
-  div.container-fluid div.card form h3.h3 {
+  div.container-fluid div.cards form h3.h3 {
     display: flex;
     font-size: 95%;
     margin-top: .5rem;
     margin-bottom: 1rem;
   }
-  div.container-fluid div.card form div.form-group {
+  div.container-fluid div.cards form div.form-group {
     margin-left: 0;
   }
-  div.container-fluid div.card form div.form-group label {
+  div.container-fluid div.cards form div.form-group label {
     font-size: 85%;
   }
-  div.container-fluid div.card form div.form-group label a {
+  div.container-fluid div.cards form div.form-group label a {
     font-size: 100%;
   }
-  div.container-fluid div.card form div.form-group label.label-check-box {
+  div.container-fluid div.cards form div.form-group label.label-check-box {
     font-size: 80%;
   }
-  div.container-fluid div.card form div.form-group label.label-check-box a {
+  div.container-fluid div.cards form div.form-group label.label-check-box a {
     padding-left: 3px;
   }
 }
