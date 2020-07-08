@@ -6,11 +6,9 @@ body {
 
 canvas#mycanvas {
   padding-right: 0;
-  position: relative;
-  top: 3rem;
-  height: 50vh;
+  height: 80%;
   position: absolute;
   left: .5rem;
-  overflow: scroll;
+  top: 3rem;
 }
 /*# sourceMappingURL=canvas.css.map */

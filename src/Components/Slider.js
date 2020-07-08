@@ -60,10 +60,10 @@ class Slider extends Component {
       centeredSlides: true,
       mousewheel: true,
       loop: true,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3500,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -102,7 +102,7 @@ class Slider extends Component {
                     <h1 className="h1 title">
                       20<span className="h1">000kr</span>
                     </h1>
-                    <h1 className="h1 garanti">Garanti</h1>
+                    <h1 className="h1 garanti">Gauranteed</h1>
                   </div>
                 </div>
                 <Swiper {...params}>
