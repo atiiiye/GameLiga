@@ -60,6 +60,10 @@ section.main-slider div.container-fluid div.row div.sidebar div.card-columns div
   margin-top: 0;
 }
 
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social div.card-body {
+  border: 0;
+}
+
 section.main-slider div.container-fluid div.row div#content {
   display: flex;
   flex-direction: row;
