@@ -4,11 +4,59 @@ body {
   background-color: #1c1c22;
 }
 
-canvas#mycanvas {
+div.canvas-element {
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.canvas-element canvas#mycanvas {
   padding-right: 0;
-  height: 80%;
-  position: absolute;
-  left: .5rem;
-  top: 3rem;
+  position: relative;
+  left: 0;
+  position: relative;
+}
+
+div.canvas-element div.card-bodys {
+  padding: 0;
+  margin-top: 0;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+div.canvas-element div.card-bodys div.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: max-content;
+}
+
+div.canvas-element div.card-bodys div.card-text h1.Tournament {
+  font-size: 2.8rem;
+  color: #ff9300;
+  font-weight: bold;
+}
+
+div.canvas-element div.card-bodys div.card-text h1.title {
+  color: #ff9300;
+  font-weight: bold;
+  font-size: 2.8rem;
+  margin-top: .5rem;
+}
+
+div.canvas-element div.card-bodys div.card-text h1.title span.h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+
+div.canvas-element div.card-bodys div.card-text h1.garanti {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
 }
 /*# sourceMappingURL=canvas.css.map */

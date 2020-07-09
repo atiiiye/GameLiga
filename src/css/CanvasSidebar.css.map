@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACSA,AAAA,IAAI,CAAA;EACA,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,UAAU;EACvB,gBAAgB,EAXC,OAAa;CAYjC;;ADTG,AAAA,MAAM,AAAA,gBAAgB,CAAA;EAClB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,aAAa,EAAE,CAAC;EAChB,MAAM,EAAE,WAAW;EACnB,KAAK,EAAE,WAAW;CAIrB",
+    "sources": [
+        "../scss/CanvasSidebar.scss",
+        "../scss/_base.scss"
+    ],
+    "names": [],
+    "file": "CanvasSidebar.css"
+}

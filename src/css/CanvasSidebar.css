@@ -1,0 +1,15 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+canvas#mycanvasSidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+  height: max-content;
+  width: max-content;
+}
+/*# sourceMappingURL=CanvasSidebar.css.map */

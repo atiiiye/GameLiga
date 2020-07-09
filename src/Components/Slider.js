@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 //import components
 import Canvas from "./Canvas";
+import CanvasSidebar from "./CanvasSidebar";
 
 //import css
 import "./../css/reset.css";
@@ -80,7 +81,7 @@ class Slider extends Component {
         <div className="container-fluid">
           <div className="row">
               <div className="sidebar">
-                <Canvas />
+                <CanvasSidebar />
                 <CardColumns>
                   <Card id="social">
                     <Card.Body></Card.Body>
@@ -97,15 +98,8 @@ class Slider extends Component {
                 </CardColumns>
               </div>
               <Card className="row" id="content">
-                <div className="card-body">
-                  <div className="card-text">
-                    <h1 className="h Tournament">Tournament</h1>
-                    <h1 className="h1 title">
-                      20<span className="h1">000kr</span>
-                    </h1>
-                    <h1 className="h1 garanti">Gauranteed</h1>
-                  </div>
-                </div>
+                <Canvas />
+
                 <Swiper {...params}>
                   {this.state.data.map((img) => (
                     <div key={img.id} className="slides">

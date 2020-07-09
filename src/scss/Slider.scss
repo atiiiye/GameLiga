@@ -29,6 +29,10 @@ section.main-slider {
                 margin-right: 0;
                 margin-left: 0;
                 width: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
 
                 div.card-columns {
                     column-count: 1;
@@ -37,8 +41,8 @@ section.main-slider {
                     flex-direction: column;
                     width: 100%;
                     align-items: center;
-                    justify-content: flex-end;
-                    height: 100%;
+                    justify-content:flex-end;
+                    height: 80%;
                     background-color: transparent;
 
                     div.card#social {
@@ -72,19 +76,22 @@ section.main-slider {
                 background: transparent;
                 position: relative;
                 left: 0;
-                // height: 100vh;
+                height: max-content;
                 padding-left: 0;
                 padding-right: 0;
                 width: 90%;
                 margin-top: 0;
 
-                div.card-body {
+                div.card-bodys {
                     padding: 0;
                     margin-top: 0;
                     // position: absolute;
                     // left: inherit;
                     // height: 100%;
                     width: 30%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     // top: 5%;
                     border: 0;
 
@@ -94,8 +101,8 @@ section.main-slider {
                         justify-content: center;
                         align-items: center;
                         position: relative;
-                        width: 70%;
-                        height: 80%;
+                        width: max-content;
+                        // height: 80%;
 
 
                         h1.Tournament {
@@ -126,11 +133,11 @@ section.main-slider {
                 }
 
                 div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
-                    width: 55%;
-
+                    width: 60%;
+                    margin-right:0 ;
                     div.swiper-wrapper {
                         width: 100%;
-                        margin-right: 0 !important;
+                        margin-right: 0 ;
 
                         div.swiper-slide {
                             width: 100%;
@@ -177,13 +184,11 @@ section.main-slider {
             div.images {
                 width: 100%;
                 display: flex;
-                height: 40vh;
+                height: 45vh;
                 justify-content: center;
                 align-items: center;
                 background-color: #000000;
                 img.image-fluid{
-                    display: flex;
-               
                     width: 431px;
                     height: 234px;
                 }

@@ -34,6 +34,10 @@ section.main-slider div.container-fluid div.row div.sidebar {
   margin-right: 0;
   margin-left: 0;
   width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 section.main-slider div.container-fluid div.row div.sidebar div.card-columns {
@@ -44,7 +48,7 @@ section.main-slider div.container-fluid div.row div.sidebar div.card-columns {
   width: 100%;
   align-items: center;
   justify-content: flex-end;
-  height: 100%;
+  height: 80%;
   background-color: transparent;
 }
 
@@ -76,61 +80,65 @@ section.main-slider div.container-fluid div.row div#content {
   background: transparent;
   position: relative;
   left: 0;
+  height: max-content;
   padding-left: 0;
   padding-right: 0;
   width: 90%;
   margin-top: 0;
 }
 
-section.main-slider div.container-fluid div.row div#content div.card-body {
+section.main-slider div.container-fluid div.row div#content div.card-bodys {
   padding: 0;
   margin-top: 0;
   width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
 }
 
-section.main-slider div.container-fluid div.row div#content div.card-body div.card-text {
+section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 70%;
-  height: 80%;
+  width: max-content;
 }
 
-section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.Tournament {
+section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.Tournament {
   font-size: 2.8rem;
   color: #ff9300;
   font-weight: bold;
 }
 
-section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.title {
+section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.title {
   color: #ff9300;
   font-weight: bold;
   font-size: 2.8rem;
   margin-top: .5rem;
 }
 
-section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.title span.h1 {
+section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.title span.h1 {
   color: #fff;
   font-weight: bold;
   font-size: 2.8rem;
 }
 
-section.main-slider div.container-fluid div.row div#content div.card-body div.card-text h1.garanti {
+section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.garanti {
   font-size: 3rem;
   color: #fff;
   font-weight: bold;
 }
 
 section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
-  width: 55%;
+  width: 60%;
+  margin-right: 0;
 }
 
 section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper {
   width: 100%;
-  margin-right: 0 !important;
+  margin-right: 0;
 }
 
 section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide {
@@ -163,14 +171,13 @@ section.main-slider div.container-fluid div.row div#content div.swiper-container
 section.main-slider div.container-fluid div.row div.images {
   width: 100%;
   display: flex;
-  height: 40vh;
+  height: 45vh;
   justify-content: center;
   align-items: center;
   background-color: #000000;
 }
 
 section.main-slider div.container-fluid div.row div.images img.image-fluid {
-  display: flex;
   width: 431px;
   height: 234px;
 }
