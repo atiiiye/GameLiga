@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 //import components
 import Canvas from "./Canvas";
-import CanvasSidebar from "./CanvasSidebar";
 
 //import css
 import "./../css/reset.css";
@@ -81,8 +80,8 @@ class Slider extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="sidebar">
-              <CanvasSidebar />
               <CardColumns>
+                <div className="line"></div>
                 <Card id="social">
                   <Card.Body></Card.Body>
                 </Card>

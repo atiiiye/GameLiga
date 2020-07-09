@@ -44,6 +44,15 @@ section.main-slider {
                     justify-content:flex-end;
                     height: 80%;
                     background-color: transparent;
+                    div.line{
+                        width: 40px;
+                        height: 40px;
+                        border: 2px solid $color-gray-1;
+                        border-bottom: 0;
+                        border-right: 0;
+                        border-left: 0;
+
+                    }
 
                     div.card#social {
                         background-color: transparent;
@@ -102,7 +111,6 @@ section.main-slider {
                             height: 350px;
                             width: 100%;
                             top: 2rem;
-                     
                         }
                     }
                     div.card-bodys {
@@ -126,7 +134,6 @@ section.main-slider {
                             position: relative;
                             width: max-content;
                             // height: 80%;
-    
     
                             h1.Tournament {
                                 font-size: 2.8rem;
@@ -156,8 +163,6 @@ section.main-slider {
                     }
                 }
 
-
-
                 div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
                     width: 53%;
                     margin-right:0 ;
@@ -171,7 +176,6 @@ section.main-slider {
                             display: flex !important;
 
                             div.slides {
-
                                 // width: 100%;
                                 img.card-img-top {}
                             }
@@ -199,7 +203,6 @@ section.main-slider {
                             // font-weight: bold;
 
                         }
-
                     }
                 }
             }

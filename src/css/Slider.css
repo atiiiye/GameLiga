@@ -52,6 +52,15 @@ section.main-slider div.container-fluid div.row div.sidebar div.card-columns {
   background-color: transparent;
 }
 
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.line {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #36363b;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
 section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social {
   background-color: transparent;
   border: 2px solid #36363b;
