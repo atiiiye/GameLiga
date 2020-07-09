@@ -80,37 +80,47 @@ class Slider extends Component {
       <section className="main-slider">
         <div className="container-fluid">
           <div className="row">
-              <div className="sidebar">
-                <CanvasSidebar />
-                <CardColumns>
-                  <Card id="social">
-                    <Card.Body></Card.Body>
-                  </Card>
-                  <Card id="social">
-                    <Card.Body></Card.Body>
-                  </Card>
-                  <Card id="social">
-                    <Card.Body></Card.Body>
-                  </Card>
-                  <Card id="social">
-                    <Card.Body></Card.Body>
-                  </Card>
-                </CardColumns>
-              </div>
-              <Card className="row" id="content">
+            <div className="sidebar">
+              <CanvasSidebar />
+              <CardColumns>
+                <Card id="social">
+                  <Card.Body></Card.Body>
+                </Card>
+                <Card id="social">
+                  <Card.Body></Card.Body>
+                </Card>
+                <Card id="social">
+                  <Card.Body></Card.Body>
+                </Card>
+                <Card id="social">
+                  <Card.Body></Card.Body>
+                </Card>
+              </CardColumns>
+            </div>
+            <Card className="row" id="content">
+              <div className="xxxx">
                 <Canvas />
-
-                <Swiper {...params}>
-                  {this.state.data.map((img) => (
-                    <div key={img.id} className="slides">
-                      <img src={img.source} className="card-img-top" alt="" />
-                    </div>
-                  ))}
-                </Swiper>
-                <div className="images">
-                  <img src={background} className="image-fluid"></img>
+                <div className="card-bodys">
+                  <div className="card-text">
+                    <h1 className="h Tournament">Tournament</h1>
+                    <h1 className="h1 title">
+                      20<span className="h1">000kr</span>
+                    </h1>
+                    <h1 className="h1 garanti">Gauranteed</h1>
+                  </div>
                 </div>
-              </Card>
+              </div>
+              <Swiper {...params}>
+                {this.state.data.map((img) => (
+                  <div key={img.id} className="slides">
+                    <img src={img.source} className="card-img-top" alt="" />
+                  </div>
+                ))}
+              </Swiper>
+              <div className="images">
+                <img src={background} className="image-fluid"></img>
+              </div>
+            </Card>
           </div>
         </div>
       </section>

@@ -67,18 +67,7 @@ class Canvas extends Component {
                 <canvas className="" id="mycanvas" ref={this.canvas}
                 // onResize={this.handleResize} 
                 >
-              
                 </canvas>
-                <div className="card-bodys">
-                  <div className="card-text">
-                    <h1 className="h Tournament">Tournament</h1>
-                    <h1 className="h1 title">
-                      20<span className="h1">000kr</span>
-                    </h1>
-                    <h1 className="h1 garanti">Gauranteed</h1>
-                  </div>
-                </div>
-                
             </div>
         )
     }
