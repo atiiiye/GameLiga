@@ -15,6 +15,7 @@ import slide3 from "./../images/slide-3.1.png";
 import slide5 from "./../images/slide-5.1.png";
 import slide7 from "./../images/slide-7.png";
 import slide8 from "./../images/slide-8.png";
+import background from "./../images/Background.png";
 
 //import bootstrap
 import Card from "react-bootstrap/Card";
@@ -112,7 +113,9 @@ class Slider extends Component {
                     </div>
                   ))}
                 </Swiper>
-                <div className="row images"></div>
+                <div className="images">
+                  <img src={background} className="image-fluid"></img>
+                </div>
               </Card>
           </div>
         </div>

@@ -85,8 +85,8 @@ section.main-slider div.container-fluid div.row div#content {
 section.main-slider div.container-fluid div.row div#content div.card-body {
   padding: 0;
   margin-top: 0;
-  height: 100%;
   width: 30%;
+  border: 0;
 }
 
 section.main-slider div.container-fluid div.row div#content div.card-body div.card-text {
@@ -160,9 +160,18 @@ section.main-slider div.container-fluid div.row div#content div.swiper-container
   font-size: 19px;
 }
 
-section.main-slider div.container-fluid div.row div.row.images {
-  width: 90%;
-  height: max-content;
+section.main-slider div.container-fluid div.row div.images {
+  width: 100%;
+  display: flex;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
   background-color: #000000;
+}
+
+section.main-slider div.container-fluid div.row div.images img.image-fluid {
+  display: flex;
+  width: 431px;
+  height: 234px;
 }
 /*# sourceMappingURL=Slider.css.map */

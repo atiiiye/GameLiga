@@ -28,24 +28,24 @@ class Canvas extends Component {
 
         let ctx = this.canvas.current.getContext("2d");
         ctx.beginPath();
-        ctx.moveTo(((windowWidth)/50)+55, (windowHeigh/550)+20);
-        ctx.lineTo(((windowWidth)/50)+55,(windowHeigh/550)+0);
-        ctx.lineTo(((windowWidth)/50)+80, (windowHeigh/550)+0);
+        ctx.moveTo(((windowWidth)/55)+55, (windowHeigh/550)+20);
+        ctx.lineTo(((windowWidth)/55)+55,(windowHeigh/550)+0);
+        ctx.lineTo(((windowWidth)/55)+80, (windowHeigh/550)+0);
         ctx.lineWidth = "2";
         ctx.strokeStyle = 'rgb(54,54,59)';
         ctx.stroke();
 
         ctx.beginPath();
-        ctx.moveTo(((windowWidth)/50)+115, (windowHeigh/550)+5);
-        ctx.lineTo(((windowWidth)/50)+150, (windowHeigh/550)+5);
+        ctx.moveTo(((windowWidth)/55)+115, (windowHeigh/550)+5);
+        ctx.lineTo(((windowWidth)/55)+150, (windowHeigh/550)+5);
         ctx.lineWidth = "2";
         ctx.strokeStyle = "rgb(255,147,0)";
         ctx.stroke();
 
         ctx.beginPath();
-        ctx.moveTo(((windowWidth)/50)+55, (windowHeigh/550)+90);
-        ctx.lineTo(((windowWidth)/50)+55, (windowHeigh/550)+110);
-        ctx.lineTo(((windowWidth)/50)+80, (windowHeigh/550)+110);
+        ctx.moveTo(((windowWidth)/55)+55, (windowHeigh/550)+90);
+        ctx.lineTo(((windowWidth)/55)+55, (windowHeigh/550)+110);
+        ctx.lineTo(((windowWidth)/55)+80, (windowHeigh/550)+110);
         ctx.lineWidth = "2";
         ctx.strokeStyle = "rgb(54,54,59)";
         ctx.stroke();
