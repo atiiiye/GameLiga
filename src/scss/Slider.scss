@@ -92,26 +92,38 @@ section.main-slider {
                 margin-top: 0;
                 div.xxxx{
                     display: flex;
-                    width: max-content;
-                    div.canvas-element{
-                        display: flex;
-                        justify-content: flex-start;
-                        width: 30%;
-                        height: max-content;
-                        // position: relative;
-                        canvas#mycanvas{
-                            // width: 20%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-                            // flex-direction: column;
-                            padding-right: 0;
-                            position: relative;
-                            // left: -100%;
-                            height: 350px;
-                            width: 100%;
-                            top: 2rem;
-                        }
+                    flex-direction: column;
+                    // width: max-content;
+                    // div.canvas-element{
+                    //     display: flex;
+                    //     justify-content: flex-start;
+                    //     width: 30%;
+                    //     height: max-content;
+                    //     // position: relative;
+                    //     canvas#mycanvas{
+                    //         // width: 20%;
+                    //         display: flex;
+                    //         align-items: center;
+                    //         justify-content: flex-start;
+                    //         // flex-direction: column;
+                    //         padding-right: 0;
+                    //         position: relative;
+                    //         // left: -100%;
+                    //         height: 350px;
+                    //         width: 100%;
+                    //         top: 2rem;
+                    //     }
+                    // }
+                    div.top{
+                        width: 50px;
+                        height: 50px;
+                        border: 2px solid $color-gray-1;
+                        border-right: 0;
+                        border-bottom: 0;
+                        position: relative;
+                        top: 1.5rem;
+                        left: 2rem;
+
                     }
                     div.card-bodys {
                         padding: 0;
@@ -121,10 +133,20 @@ section.main-slider {
                         // height: 100%;
                         // width: 30%;
                         display: flex;
+                        flex-direction: column;
                         align-items: center;
                         justify-content: center;
                         // top: 5%;
                         border: 0;
+
+                        div.line-orange{
+                            width: 60px;
+                            height: 30px;
+                            border: 3px solid $color-orange-1;
+                            border-bottom: 0;
+                            border-left: 0;
+                            border-right: 0;
+                        }
     
                         div.card-text {
                             display: flex;
@@ -160,6 +182,15 @@ section.main-slider {
                                 font-weight: bold;
                             }
                         }
+                    }
+                    div.bottom{
+                        width: 50px;
+                        height: 50px;
+                        border: 2px solid $color-gray-1;
+                        border-right: 0;
+                        border-top: 0;
+                        position: relative;
+                        left: 2rem;
                     }
                 }
 

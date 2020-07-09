@@ -98,8 +98,10 @@ class Slider extends Component {
             </div>
             <Card className="row" id="content">
               <div className="xxxx">
-                <Canvas />
+                {/* <Canvas /> */}
+                <div className="top"></div>
                 <div className="card-bodys">
+                  <div className="line-orange"></div>
                   <div className="card-text">
                     <h1 className="h Tournament">Tournament</h1>
                     <h1 className="h1 title">
@@ -108,6 +110,7 @@ class Slider extends Component {
                     <h1 className="h1 garanti">Gauranteed</h1>
                   </div>
                 </div>
+                <div className="bottom"></div>
               </div>
               <Swiper {...params}>
                 {this.state.data.map((img) => (
