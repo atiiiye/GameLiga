@@ -97,7 +97,7 @@ class Slider extends Component {
               </CardColumns>
             </div>
             <Card className="row" id="content">
-              <div className="xxxx">
+              <div className="titles">
                 {/* <Canvas /> */}
                 <div className="top"></div>
                 <div className="card-bodys">
