@@ -7,19 +7,22 @@ body {
 div.canvas-element {
   display: flex;
   justify-content: flex-start;
+  width: 30%;
 }
 
 div.canvas-element canvas#mycanvas {
+  width: 20%;
   padding-right: 0;
   position: relative;
   left: 0;
-  position: relative;
+  height: 350px;
+  top: 2rem;
 }
 
 div.canvas-element div.card-bodys {
   padding: 0;
   margin-top: 0;
-  width: 30%;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -87,52 +87,8 @@ section.main-slider div.container-fluid div.row div#content {
   margin-top: 0;
 }
 
-section.main-slider div.container-fluid div.row div#content div.card-bodys {
-  padding: 0;
-  margin-top: 0;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-}
-
-section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: max-content;
-}
-
-section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.Tournament {
-  font-size: 2.8rem;
-  color: #ff9300;
-  font-weight: bold;
-}
-
-section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.title {
-  color: #ff9300;
-  font-weight: bold;
-  font-size: 2.8rem;
-  margin-top: .5rem;
-}
-
-section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.title span.h1 {
-  color: #fff;
-  font-weight: bold;
-  font-size: 2.8rem;
-}
-
-section.main-slider div.container-fluid div.row div#content div.card-bodys div.card-text h1.garanti {
-  font-size: 3rem;
-  color: #fff;
-  font-weight: bold;
-}
-
 section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
-  width: 60%;
+  width: 53%;
   margin-right: 0;
 }
 
@@ -178,7 +134,7 @@ section.main-slider div.container-fluid div.row div.images {
 }
 
 section.main-slider div.container-fluid div.row div.images img.image-fluid {
-  width: 431px;
+  width: 50%;
   height: 234px;
 }
 /*# sourceMappingURL=Slider.css.map */

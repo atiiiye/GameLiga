@@ -82,58 +82,58 @@ section.main-slider {
                 width: 90%;
                 margin-top: 0;
 
-                div.card-bodys {
-                    padding: 0;
-                    margin-top: 0;
-                    // position: absolute;
-                    // left: inherit;
-                    // height: 100%;
-                    width: 30%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    // top: 5%;
-                    border: 0;
+                // div.card-bodys {
+                //     padding: 0;
+                //     margin-top: 0;
+                //     // position: absolute;
+                //     // left: inherit;
+                //     // height: 100%;
+                //     width: 30%;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                //     // top: 5%;
+                //     border: 0;
 
-                    div.card-text {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        position: relative;
-                        width: max-content;
-                        // height: 80%;
+                //     div.card-text {
+                //         display: flex;
+                //         flex-direction: column;
+                //         justify-content: center;
+                //         align-items: center;
+                //         position: relative;
+                //         width: max-content;
+                //         // height: 80%;
 
 
-                        h1.Tournament {
-                            font-size: 2.8rem;
-                            color: $color-orange-1;
-                            font-weight: bold;
-                        }
+                //         h1.Tournament {
+                //             font-size: 2.8rem;
+                //             color: $color-orange-1;
+                //             font-weight: bold;
+                //         }
 
-                        h1.title {
-                            color: $color-orange-1;
-                            font-weight: bold;
-                            font-size: 2.8rem;
-                            margin-top: .5rem;
+                //         h1.title {
+                //             color: $color-orange-1;
+                //             font-weight: bold;
+                //             font-size: 2.8rem;
+                //             margin-top: .5rem;
 
-                            span.h1 {
-                                color: $color-white;
-                                font-weight: bold;
-                                font-size: 2.8rem;
-                            }
-                        }
+                //             span.h1 {
+                //                 color: $color-white;
+                //                 font-weight: bold;
+                //                 font-size: 2.8rem;
+                //             }
+                //         }
 
-                        h1.garanti {
-                            font-size: 3rem;
-                            color: $color-white;
-                            font-weight: bold;
-                        }
-                    }
-                }
+                //         h1.garanti {
+                //             font-size: 3rem;
+                //             color: $color-white;
+                //             font-weight: bold;
+                //         }
+                //     }
+                // }
 
                 div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
-                    width: 60%;
+                    width: 53%;
                     margin-right:0 ;
                     div.swiper-wrapper {
                         width: 100%;
@@ -173,13 +173,9 @@ section.main-slider {
                             // font-weight: bold;
 
                         }
-
                     }
                 }
-
             }
-
-
 
             div.images {
                 width: 100%;
@@ -189,7 +185,7 @@ section.main-slider {
                 align-items: center;
                 background-color: #000000;
                 img.image-fluid{
-                    width: 431px;
+                    width: 50%;
                     height: 234px;
                 }
             }

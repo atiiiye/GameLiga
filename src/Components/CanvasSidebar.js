@@ -23,7 +23,7 @@ class CanvasSidebar extends Component {
 
         ctx.beginPath();
         ctx.moveTo(((windowWidth)/50)+70, (windowHeigh/550)+120);
-        ctx.lineTo(((windowWidth)/50)+200, (windowHeigh/550)+120);
+        ctx.lineTo(((windowWidth)/50)+170, (windowHeigh/550)+120);
         ctx.lineWidth = "2";
         ctx.strokeStyle = "rgb(54,54,59)";
         ctx.stroke();
@@ -34,7 +34,6 @@ class CanvasSidebar extends Component {
     }
     render() {
         return (
-            <div className="canvas-element">
                 <canvas
                  className="" id="mycanvasSidebar" 
                 ref={this.canvas}
@@ -42,7 +41,6 @@ class CanvasSidebar extends Component {
                 >
                 </canvas>
                 
-            </div>
         )
     }
 }
