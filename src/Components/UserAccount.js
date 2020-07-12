@@ -52,7 +52,7 @@ class UserAccount extends Component{
         return(
             <div className="container">
               <MainCard>
-                 </MainCard>
+              </MainCard>
                 <div className="row games">
                     {this.state.posters.map(item=>(
                            <div className="game col-3" key={item.id}>
@@ -61,7 +61,6 @@ class UserAccount extends Component{
                     ))}
                  
                 </div>
-
             </div>
         )
     }

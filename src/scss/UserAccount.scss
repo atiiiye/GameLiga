@@ -1,14 +1,16 @@
 @import 'base';
 
-div.container{
-    div.row.games{
+div.container {
+    div.row.games {
         display: flex;
         align-items: center;
         justify-content: center;
-        div.game{
+
+        div.game {
             margin-right: auto;
-            img.game-image{
-                //  height: 75%;
+
+            img.game-image {
+                //  height: 50%;
 
             }
         }
