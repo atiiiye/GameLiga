@@ -3,6 +3,8 @@ import React ,{Component} from 'react';
 //import css
 import './../css/UserAccount.css';
 
+//import bootstrap
+import { Card } from "react-bootstrap";
 
 import MainCard from "./MainCard";
 
@@ -13,7 +15,6 @@ import Grid2 from './../images/Grid2.png';
 import Grid3 from './../images/Grid3.png';
 import Grid4 from './../images/Grid4.png';
 import Grid5 from './../images/Grid5.png';
-
 
 
 class UserAccount extends Component{
@@ -50,18 +51,18 @@ class UserAccount extends Component{
 
     render(){
         return(
-            <div className="container">
-              <MainCard>
-              </MainCard>
-                <div className="row games">
-                    {this.state.posters.map(item=>(
-                           <div className="game col-3" key={item.id}>
-                               <img src={item.source} alt={item.name} className="game-image"></img>
-                           </div>
-                    ))}
-                 
-                </div>
+            <div className="container-fluid">
+                <Card>
+                    <div className="row games">
+                        {this.state.posters.map(item=>(
+                            <div className="game" key={item.id}>
+                                <img src={item.source} alt={item.name} className="game-image"></img>
+                            </div>
+                        ))}
+                    </div>
+                </Card>
             </div>
+
         )
     }
 }

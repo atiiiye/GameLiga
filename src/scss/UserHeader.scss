@@ -1,13 +1,13 @@
 @import 'base';
 
-div.container-fluid {
-    padding: 0;
-    width: 100%;
+
     nav.navbar{
         direction: rtl;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0;
+        width: 100%;
         div.navbar-right {
             display: flex;
             p.text-muted{
@@ -64,4 +64,3 @@ div.container-fluid {
             }
         }
     }
-}

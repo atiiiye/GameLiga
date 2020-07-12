@@ -7,10 +7,7 @@ import "./../css/mediaHeader.css";
 import "./../css/formlogin.css";
 
 //import image
-import logo2 from "./../images/logo2.png";
 import logo5 from "./../images/logo5.png";
-
-
 
 //import boostrap
 import "bootstrap/dist/css/bootstrap.min.css";

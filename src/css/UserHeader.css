@@ -4,36 +4,33 @@ body {
   background-color: #1c1c22;
 }
 
-div.container-fluid {
-  padding: 0;
-  width: 100%;
-}
-
-div.container-fluid nav.navbar {
+nav.navbar {
   direction: rtl;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
+  width: 100%;
 }
 
-div.container-fluid nav.navbar div.navbar-right {
+nav.navbar div.navbar-right {
   display: flex;
 }
 
-div.container-fluid nav.navbar div.navbar-right p.text-muted {
+nav.navbar div.navbar-right p.text-muted {
   margin-right: 2rem;
   width: max-content;
   font-size: 95%;
 }
 
-div.container-fluid nav.navbar div.navbar-left {
+nav.navbar div.navbar-left {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 45%;
 }
 
-div.container-fluid nav.navbar div.navbar-left div.empty-content {
+nav.navbar div.navbar-left div.empty-content {
   display: flex;
   width: 90px !important;
   color: #36363b;
@@ -43,7 +40,7 @@ div.container-fluid nav.navbar div.navbar-left div.empty-content {
   left: -25px;
 }
 
-div.container-fluid nav.navbar div.navbar-left h4.UFOGame {
+nav.navbar div.navbar-left h4.UFOGame {
   color: #ff9300;
   font-weight: 600;
   z-index: 10;
@@ -51,17 +48,17 @@ div.container-fluid nav.navbar div.navbar-left h4.UFOGame {
   margin-bottom: 0;
 }
 
-div.container-fluid nav.navbar div.navbar-left h4.UFOGame span {
+nav.navbar div.navbar-left h4.UFOGame span {
   color: #fff;
 }
 
-div.container-fluid nav.navbar div.navbar-left img.logo {
+nav.navbar div.navbar-left img.logo {
   margin-right: 8px;
   width: 60px;
   height: 55px;
 }
 
-div.container-fluid nav.navbar div.navbar-left input[type="search"] {
+nav.navbar div.navbar-left input[type="search"] {
   direction: ltr;
   width: 150px;
   height: 2rem;

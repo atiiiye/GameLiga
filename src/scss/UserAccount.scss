@@ -1,18 +1,55 @@
 @import 'base';
 
-div.container {
-    div.row.games {
+div.container-fluid {
+    // background-image: url('./../images/Grid2.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color: rgba($color: #000000, $alpha: .4);
+
+
+    div.card {
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        div.game {
-            margin-right: auto;
-
-            img.game-image {
-                //  height: 50%;
-
+        // flex-direction: row;
+        background: transparent;
+        // justify-content: flex-end;
+        border-left: 2px solid $color-orange-1;
+        border-top: 2px solid $color-orange-1;
+        border-bottom: 0;
+        border-right: 0;
+        border-radius: 0;
+        position: relative;
+        left: 0;
+        height: max-content;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        div.row.games {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+    
+            div.game {
+                margin: auto;
+                padding: 0;
+                width: 23%;
+                margin-bottom: 1.5rem;
+                // height: 50px;
+    
+                img.game-image {
+                    //  height: 50%;
+                    &::after{
+                        content:"";
+                        background-image: inherit;
+                        width:inherit;
+                        height:100%;
+                        position: absolute;
+                        bottom:-100%;
+                        transform:scaleY(-1);
+                    }
+                }
             }
         }
     }
+ 
 }

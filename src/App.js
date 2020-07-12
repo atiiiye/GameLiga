@@ -35,16 +35,13 @@ function App() {
           <Route path="/signup">
             <UserHeader />
             <SignUp />
-
           </Route>
 
           <Route path="/account">
             <UserHeader />
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
-             
               <UserAccount />
-
             </div>
           </Route>
 
