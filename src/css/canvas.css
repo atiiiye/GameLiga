@@ -3,22 +3,4 @@ body {
   font-family: sans-serif;
   background-color: #1c1c22;
 }
-
-div.canvas-element {
-  display: flex;
-  justify-content: flex-start;
-  width: 30%;
-  height: max-content;
-}
-
-div.canvas-element canvas#mycanvas {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-right: 0;
-  position: relative;
-  height: 350px;
-  width: 100%;
-  top: 2rem;
-}
 /*# sourceMappingURL=canvas.css.map */

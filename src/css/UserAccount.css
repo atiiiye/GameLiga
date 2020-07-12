@@ -4,12 +4,13 @@ body {
   background-color: #1c1c22;
 }
 
-canvas#mycanvasSidebar {
+div.container div.row.games {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 0;
-  height: max-content;
-  width: max-content;
 }
-/*# sourceMappingURL=CanvasSidebar.css.map */
+
+div.container div.row.games div.game {
+  margin-right: auto;
+}
+/*# sourceMappingURL=UserAccount.css.map */

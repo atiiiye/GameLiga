@@ -15,15 +15,23 @@ import slide3 from "./../images/slide-3.1.png";
 import slide5 from "./../images/slide-5.1.png";
 import slide7 from "./../images/slide-7.png";
 import slide8 from "./../images/slide-8.png";
-import background from "./../images/Background.png";
+import sidan from "./../images/sidan.png";
+import background2 from "./../images/background2.png";
+import facebook from "./../images/Icon-facebook.png";
+import instagram from "./../images/Icon-instagram.png";
+import twitch from "./../images/Icon-twitch.png";
+import twitter from "./../images/Icon-twitter.png";
+
 
 //import bootstrap
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
+// import { navLink } from "react-bootstrap";
 
 // import packages
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
+import { NavLink } from "react-router-dom";
 
 class Slider extends Component {
   state = {
@@ -31,29 +39,51 @@ class Slider extends Component {
       {
         id: 1,
         name: "img1",
-        source: slide1,
+        source: sidan,
       },
       {
         id: 2,
         name: "img2",
-        source: slide3,
+        source: sidan,
       },
       {
         id: 3,
         name: "img3",
-        source: slide5,
+        source: sidan,
       },
       {
         id: 4,
         name: "img4",
-        source: slide7,
+        source: sidan,
       },
       {
         id: 5,
         name: "img5",
-        source: slide8,
+        source: sidan,
       },
     ],
+    icon:[
+     { 
+       id:1,
+       name: "facebook",
+       source: facebook,
+    },
+     {
+      id:2,
+      name:"instagram",
+      source: instagram,
+      },
+     {
+       id:3,
+       name:"twitch",
+       source: twitch,
+      },
+     {
+      id:4,
+      name:"twitter",
+      source: twitter,
+      }
+    ]
   };
   render() {
     const params = {
@@ -61,10 +91,10 @@ class Slider extends Component {
       centeredSlides: true,
       mousewheel: true,
       loop: true,
-      // autoplay: {
-      //   delay: 3500,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -82,18 +112,13 @@ class Slider extends Component {
             <div className="sidebar">
               <CardColumns>
                 <div className="line"></div>
-                <Card id="social">
-                  <Card.Body></Card.Body>
-                </Card>
-                <Card id="social">
-                  <Card.Body></Card.Body>
-                </Card>
-                <Card id="social">
-                  <Card.Body></Card.Body>
-                </Card>
-                <Card id="social">
-                  <Card.Body></Card.Body>
-                </Card>
+                {this.state.icon.map((item)=>(
+                  <Card id="social-medias">
+                    <Card.Body key={item.id} id="social-media">
+                      <NavLink className="icons" to="/"><img src={item.source} className="icon" alt=""></img></NavLink>
+                    </Card.Body>
+                  </Card>
+                ))}
               </CardColumns>
             </div>
             <Card className="row" id="content">
@@ -120,7 +145,7 @@ class Slider extends Component {
                 ))}
               </Swiper>
               <div className="images">
-                <img src={background} className="image-fluid"></img>
+                <img src={background2} className="image-fluid"></img>
               </div>
             </Card>
           </div>

@@ -8,7 +8,7 @@ import "./../css/formlogin.css";
 
 //import image
 import logo2 from "./../images/logo2.png";
-import logo3 from "./../images/logo3.png";
+import logo5 from "./../images/logo5.png";
 
 
 
@@ -147,7 +147,7 @@ export default class Header extends Component {
               <h4 className="UFOGame">
                 UFO<span>Game</span>
               </h4>
-              <img className="logo" src={logo3} alt="" />
+              <img className="logo" src={logo5} alt="" />
             </div>
           </Navbar>
 

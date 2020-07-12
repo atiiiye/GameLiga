@@ -61,7 +61,7 @@ section.main-slider div.container-fluid div.row div.sidebar div.card-columns div
   border-left: 0;
 }
 
-section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social {
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social-medias {
   background-color: transparent;
   border: 2px solid #36363b;
   border-radius: 0;
@@ -73,8 +73,24 @@ section.main-slider div.container-fluid div.row div.sidebar div.card-columns div
   margin-top: 0;
 }
 
-section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social div.card-body {
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social-medias div.card-body#social-media {
   border: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social-medias div.card-body#social-media a#icons {
+  width: 80%;
+}
+
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social-medias div.card-body#social-media a#icons:focus {
+  outline: none;
+}
+
+section.main-slider div.container-fluid div.row div.sidebar div.card-columns div.card#social-medias div.card-body#social-media a#icons img.icon:focus {
+  outline: none;
 }
 
 section.main-slider div.container-fluid div.row div#content {
