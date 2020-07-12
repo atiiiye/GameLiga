@@ -23,41 +23,46 @@ div.container-fluid {
         padding-left: 0;
         padding-right: 0;
         width: 100%;
+
         div.row.games {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 1rem 0;
-    
+
             div.game {
                 margin: auto;
                 padding: 0;
-                width: 23%;
+                width: 21%;
                 margin-bottom: 1.5rem;
-                // height: 50px;
-    
+                height: 70%;
+
                 img.game-image {
-                    //  height: 50%;
+                     height: 50%;
                     border-radius: 20px;
-                    &::after{
-                        content:"";
-                        width:inherit;
-                        height: 42%;
-                        position: relative;
+
+                    &:after {
+                        content: "";
+                        width: inherit;
+                        height: 100vh;
+                        position: absolute;
                         bottom: -42%;
-                        background: linear-gradient(to bottom, rgba(255,255,255,0.3),white);
+                        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), white);
                         z-index: 1;
+                        opacity: 0.5;
+                        box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.3),
+                        0px 10px 10px rgba(0, 0, 0, 0.1);
                     }
 
                     &:hover {
                         transform: scale(1.05);
-                        transition: all .5s ease;
+                        transition: all .3s ease-in;
                         box-shadow: 1px 1px 3px 0 $color-gray-2;
                     }
                 }
-            
+
             }
         }
     }
- 
+
 }
