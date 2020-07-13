@@ -1,6 +1,8 @@
 @import 'base';
 
+
 div.card-body#signup-form {
+
     display: flex;
     background: transparent;
     // justify-content: flex-end;
@@ -13,8 +15,14 @@ div.card-body#signup-form {
     right: -12%;
     height: max-content;
     padding: 0;
-    width: 88% ;
-    div.cards {
+    width: 88%;
+    background-image: url('./../images/screen-5.png'), url('./../images/background-signup.png');
+    background-size: 40% 35%, cover;
+    background-position: right bottom, -10px -5px;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+
+    div.card-form {
         border: 2px solid rgba($color: $color-orange-1, $alpha: .5);
         border-radius: 9px;
         background-color: rgba($color: $color-gray-1, $alpha: .5);

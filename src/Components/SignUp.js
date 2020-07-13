@@ -18,7 +18,7 @@ class SignUp extends Component {
     return (
       <div className="card-body" id="signup-form">
         {/* <div className="container-fluid"> */}
-          <div className="cards">
+          <div className="card-form">
             <div className="title">
               <h1 className="h1">Registration</h1>
               <p className="text-muted">
