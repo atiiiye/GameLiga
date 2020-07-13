@@ -61,6 +61,9 @@ class UserAccount extends Component {
                         {this.state.posters.map(item => (
                             <div className="game" key={item.id}>
                                 <img src={item.source} alt={item.name} className="game-image"></img>
+                                <div className="online">online</div>
+
+                                {/* <img src={item.source} alt={item.name} className="game-image-ref"></img> */}
                             </div>
                             // if(this.state.posters.lenght%4){
 

@@ -37,30 +37,38 @@ div.container-fluid div.card#content div.row.games {
 div.container-fluid div.card#content div.row.games div.game {
   margin: auto;
   padding: 0;
-  width: 15.5%;
+  width: 35.5%;
   margin-bottom: 1.5rem;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container-fluid div.card#content div.row.games div.game:hover {
+  transform: scale(1.05);
+  transition: all .3s ease-in;
 }
 
 div.container-fluid div.card#content div.row.games div.game img.game-image {
   height: 50%;
   border-radius: 20px;
-  margin-bottom: 1.5rem;
-  -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #0009);
+  margin-bottom: 2rem;
+  -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
 }
 
-div.container-fluid div.card#content div.row.games div.game img.game-image:before {
-  content: "";
-  background: -moz-linear-gradient(top, white, white 30%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.7)) 0px 0px;
-  transform: scaleY(-1);
-  position: relative;
-  height: 140px;
-  width: 360px;
-  top: 247px;
-  left: 0px;
-}
-
-div.container-fluid div.card#content div.row.games div.game img.game-image:hover {
-  transform: scale(1.05);
-  transition: all .3s ease-in;
+div.container-fluid div.card#content div.row.games div.game div.online {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: .5rem;
+  border: 1px solid #36363b;
+  border-radius: 28px;
+  background: black;
+  padding-top: .5rem;
+  color: #959aa2;
+  font-size: 90%;
+  padding-bottom: .5rem;
 }
 /*# sourceMappingURL=UserAccount.css.map */
