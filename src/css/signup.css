@@ -5,23 +5,23 @@ body {
 }
 
 div.card-body#signup-form {
+  background-image: url("./../images/screen-5.png"), url("./../images/background-signup.png");
+  background-position: right 96%, -10px -15px;
+  background-size: 40% 35%, cover;
+  background-clip: content-box;
+  background-repeat: no-repeat;
   display: flex;
-  background: transparent;
+  justify-content: flex-start;
   border-left: 2px solid #ff9300;
   border-top: 2px solid #ff9300;
+  height: max-content;
   border-bottom: 0;
   border-right: 0;
   border-radius: 0;
   position: relative;
   right: -12%;
-  height: max-content;
   padding: 0;
   width: 88%;
-  background-image: url("./../images/screen-5.png"), url("./../images/background-signup.png");
-  background-size: 40% 35%, cover;
-  background-position: right bottom, -10px -5px;
-  background-clip: padding-box;
-  background-repeat: no-repeat;
 }
 
 div.card-body#signup-form div.card-form {
@@ -71,8 +71,9 @@ div.card-body#signup-form div.card-form form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 div.card-body#signup-form div.card-form form h3.h3 {
@@ -90,6 +91,7 @@ div.card-body#signup-form div.card-form form div.form-group {
   justify-content: center;
   align-items: center;
   margin-left: 0;
+  margin-right: 0;
 }
 
 div.card-body#signup-form div.card-form form div.form-group label {

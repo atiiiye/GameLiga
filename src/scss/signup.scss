@@ -2,25 +2,25 @@
 
 
 div.card-body#signup-form {
-
+    background-image: url('./../images/screen-5.png'), url('./../images/background-signup.png');
+    background-position: right 96%, -10px -15px;
+    background-size: 40% 35%, cover ;
+    background-clip: content-box;
+    background-repeat: no-repeat;
     display: flex;
-    background: transparent;
-    // justify-content: flex-end;
+    justify-content: flex-start;
     border-left: 2px solid $color-orange-1;
     border-top: 2px solid $color-orange-1;
+    height: max-content;
     border-bottom: 0;
     border-right: 0;
     border-radius: 0;
     position: relative;
     right: -12%;
-    height: max-content;
     padding: 0;
     width: 88%;
-    background-image: url('./../images/screen-5.png'), url('./../images/background-signup.png');
-    background-size: 40% 35%, cover;
-    background-position: right bottom, -10px -5px;
-    background-clip: padding-box;
-    background-repeat: no-repeat;
+
+
 
     div.card-form {
         border: 2px solid rgba($color: $color-orange-1, $alpha: .5);
@@ -68,8 +68,9 @@ div.card-body#signup-form {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 90%;
+            width: 100%;
             margin-top: 2rem;
+            padding: 1rem;
 
             h3.h3 {
                 display: flex;
@@ -87,6 +88,7 @@ div.card-body#signup-form {
                 align-items: center;
                 // margin-top: 1rem;
                 margin-left: 0;
+                margin-right: 0;
 
                 label {
                     display: flex;
