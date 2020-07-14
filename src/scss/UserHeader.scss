@@ -1,24 +1,23 @@
 @import 'base';
 
+
 nav.navbar.user-header {
     direction: rtl;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: .5rem;
     width: 100%;
-    margin-bottom: .3rem;
 
     div.navbar-right {
         display: flex;
         align-items: center;
-        width: 55%;
+        width: 50%;
 
         p.text-muted {
             width: max-content;
             margin-right: 2rem;
             margin-left: 1rem;
-            width: max-content;
             font-size: 95%;
         }
 
@@ -30,18 +29,20 @@ nav.navbar.user-header {
             justify-content: center;
             margin-right: .5rem;
 
+            &:focus {
+                outline: none;
+            }
+
             img.image-icon {
                 width: 20px;
                 height: 22px;
-                &:focus{
-                    outline: none;
-                }
             }
         }
 
         a.nav-link-icon#user {
             width: 45px;
             height: 45px;
+
             img.image-icon#user {
                 width: 45px;
                 height: 45px;
@@ -51,6 +52,7 @@ nav.navbar.user-header {
         a.nav-link-icon#ticket {
             width: 35px;
             height: 35px;
+
             img.image-icon#ticket {
                 width: 30px;
                 height: 30px;
@@ -60,6 +62,7 @@ nav.navbar.user-header {
         a.nav-link-icon#bell {
             width: 30px;
             height: 30px;
+
             img.image-icon#bell {
                 width: 25px;
                 height: 25px;
@@ -69,6 +72,7 @@ nav.navbar.user-header {
         a.nav-link-icon#telegram {
             width: 25px;
             height: 25px;
+
             img.image-icon#telegram {
                 width: 20px;
                 height: 20px;
@@ -78,6 +82,7 @@ nav.navbar.user-header {
         a.nav-link-icon#wallet {
             width: 25px;
             height: 25px;
+
             img.image-icon#wallet {
                 width: 20px;
                 height: 20px;
@@ -90,11 +95,11 @@ nav.navbar.user-header {
         align-items: center;
         justify-content: flex-end;
         width: 45%;
-   
+
 
         div.empty-content {
             display: flex;
-            width: 90px !important;
+            width: 90px;
             color: $color-gray-1;
             height: 2rem;
             background-color: rgba($color: $color-gray-1, $alpha: 1.0);
