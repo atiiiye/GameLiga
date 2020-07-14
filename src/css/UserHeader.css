@@ -15,12 +15,80 @@ nav.navbar {
 
 nav.navbar div.navbar-right {
   display: flex;
+  align-items: center;
+  width: 55%;
 }
 
 nav.navbar div.navbar-right p.text-muted {
+  width: max-content;
   margin-right: 2rem;
+  margin-left: 1rem;
   width: max-content;
   font-size: 95%;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: .5rem;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon img.image-icon {
+  width: 20px;
+  height: 22px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#user {
+  width: 45px;
+  height: 45px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#user img.image-icon#user {
+  width: 45px;
+  height: 45px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#ticket {
+  width: 35px;
+  height: 35px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#ticket img.image-icon#ticket {
+  width: 30px;
+  height: 30px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#bell {
+  width: 30px;
+  height: 30px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#bell img.image-icon#bell {
+  width: 25px;
+  height: 25px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#telegram {
+  width: 25px;
+  height: 25px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#telegram img.image-icon#telegram {
+  width: 20px;
+  height: 20px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#wallet {
+  width: 25px;
+  height: 25px;
+}
+
+nav.navbar div.navbar-right a.nav-link-icon#wallet img.image-icon#wallet {
+  width: 20px;
+  height: 20px;
 }
 
 nav.navbar div.navbar-left {

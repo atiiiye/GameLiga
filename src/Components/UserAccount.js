@@ -51,7 +51,7 @@ class UserAccount extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid userAccount">
                 <Card id="content">
                     {
 
@@ -62,7 +62,6 @@ class UserAccount extends Component {
                             <div className="game" key={item.id}>
                                 <img src={item.source} alt={item.name} className="game-image"></img>
                                 <div className="online">online</div>
-
                                 {/* <img src={item.source} alt={item.name} className="game-image-ref"></img> */}
                             </div>
                             // if(this.state.posters.lenght%4){

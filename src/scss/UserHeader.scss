@@ -1,66 +1,131 @@
 @import 'base';
 
+nav.navbar {
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
 
-    nav.navbar{
-        direction: rtl;
+    div.navbar-right {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 0;
-        width: 100%;
-        div.navbar-right {
-            display: flex;
-            p.text-muted{
-                margin-right: 2rem;
-                width:max-content;
-                font-size: 95%;
-            }
+        width: 55%;
 
+        p.text-muted {
+            width: max-content;
+            margin-right: 2rem;
+            margin-left: 1rem;
+            width: max-content;
+            font-size: 95%;
         }
-        div.navbar-left {
+
+        a.nav-link-icon {
+            width: 45px;
+            height: 45px;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            width: 45%;
+            justify-content: center;
+            margin-right: .5rem;
 
-            div.empty-content {
-                display: flex;
-                width: 90px !important;
-                color: $color-gray-1;
-                height: 2rem;
-                background-color: rgba($color: $color-gray-1, $alpha: 1.0);
-                position: relative;
-                left: -25px
+            img.image-icon {
+                width: 20px;
+                height: 22px;
             }
+        }
 
-            h4.UFOGame {
-                color: $color-orange-1;
-                font-weight: 600;
-                z-index: 10;
-                width: auto;
-                margin-bottom: 0;
-
-                span {
-                    color: $color-white;
-                }
+        a.nav-link-icon#user {
+            width: 45px;
+            height: 45px;
+            img.image-icon#user {
+                width: 45px;
+                height: 45px;
             }
+        }
 
-            img.logo {
-                margin-right: 8px;
-                width: 60px;
-                height: 55px;
+        a.nav-link-icon#ticket {
+            width: 35px;
+            height: 35px;
+            img.image-icon#ticket {
+                width: 30px;
+                height: 30px;
             }
-            input[type="search"]{
-                direction: ltr;
-                width: 150px;
-                height: 2rem;
-                background-color: #000;
-                border: 1px solid $color-gray-1;
-                border-radius: 9px;
-                font-size: 85%;
-                color: $color-gray-2;
-                padding-left: 5px;
+        }
 
+        a.nav-link-icon#bell {
+            width: 30px;
+            height: 30px;
+            img.image-icon#bell {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        a.nav-link-icon#telegram {
+            width: 25px;
+            height: 25px;
+            img.image-icon#telegram {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        a.nav-link-icon#wallet {
+            width: 25px;
+            height: 25px;
+            img.image-icon#wallet {
+                width: 20px;
+                height: 20px;
             }
         }
     }
+
+    div.navbar-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 45%;
+
+        div.empty-content {
+            display: flex;
+            width: 90px !important;
+            color: $color-gray-1;
+            height: 2rem;
+            background-color: rgba($color: $color-gray-1, $alpha: 1.0);
+            position: relative;
+            left: -25px
+        }
+
+        h4.UFOGame {
+            color: $color-orange-1;
+            font-weight: 600;
+            z-index: 10;
+            width: auto;
+            margin-bottom: 0;
+
+            span {
+                color: $color-white;
+            }
+        }
+
+        img.logo {
+            margin-right: 8px;
+            width: 60px;
+            height: 55px;
+        }
+
+        input[type="search"] {
+            direction: ltr;
+            width: 150px;
+            height: 2rem;
+            background-color: #000;
+            border: 1px solid $color-gray-1;
+            border-radius: 9px;
+            font-size: 85%;
+            color: $color-gray-2;
+            padding-left: 5px;
+
+        }
+    }
+}

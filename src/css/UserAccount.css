@@ -4,13 +4,13 @@ body {
   background-color: #1c1c22;
 }
 
-div.container-fluid {
+div.container-fluid.userAccount {
   background-image: url("./../images/background-games.png");
   background-repeat: no-repeat;
   background-size: 70%;
 }
 
-div.container-fluid div.card#content {
+div.container-fluid.userAccount div.card#content {
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   border-left: 1px solid #ff9300;
@@ -27,17 +27,17 @@ div.container-fluid div.card#content {
   min-height: 100%;
 }
 
-div.container-fluid div.card#content div.row.games {
+div.container-fluid.userAccount div.card#content div.row.games {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 1rem 0;
 }
 
-div.container-fluid div.card#content div.row.games div.game {
+div.container-fluid.userAccount div.card#content div.row.games div.game {
   margin: auto;
   padding: 0;
-  width: 35.5%;
+  width: 16%;
   margin-bottom: 1.5rem;
   margin-right: auto;
   display: flex;
@@ -46,20 +46,20 @@ div.container-fluid div.card#content div.row.games div.game {
   align-items: center;
 }
 
-div.container-fluid div.card#content div.row.games div.game:hover {
+div.container-fluid.userAccount div.card#content div.row.games div.game:hover {
   transform: scale(1.05);
   transition: all .3s ease-in;
 }
 
-div.container-fluid div.card#content div.row.games div.game img.game-image {
+div.container-fluid.userAccount div.card#content div.row.games div.game img.game-image {
   height: 50%;
   border-radius: 20px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
 }
 
-div.container-fluid div.card#content div.row.games div.game div.online {
-  width: 30%;
+div.container-fluid.userAccount div.card#content div.row.games div.game div.online {
+  width: 75%;
   display: flex;
   justify-content: flex-start;
   padding-left: .5rem;
@@ -70,5 +70,6 @@ div.container-fluid div.card#content div.row.games div.game div.online {
   color: #959aa2;
   font-size: 90%;
   padding-bottom: .5rem;
+  z-index: 10;
 }
 /*# sourceMappingURL=UserAccount.css.map */

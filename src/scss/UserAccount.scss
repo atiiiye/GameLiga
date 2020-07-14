@@ -1,6 +1,6 @@
 @import 'base';
 
-div.container-fluid {
+div.container-fluid.userAccount {
 
     background-image: url('./../images/background-games.png');
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ div.container-fluid {
             div.game {
                 margin: auto;
                 padding: 0;
-                width: 35.5%;
+                width: 16%;
                 margin-bottom: 1.5rem;
                 margin-right: auto;
                 // min-height: 70% ;
@@ -42,6 +42,7 @@ div.container-fluid {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
                 &:hover {
                     transform: scale(1.05);
                     transition: all .3s ease-in;
@@ -50,7 +51,7 @@ div.container-fluid {
                 img.game-image {
                     height: 50%;
                     border-radius: 20px;
-                    margin-bottom: 2rem;
+                    margin-bottom: 1rem;
                     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                     // position: relative;
 
@@ -63,21 +64,20 @@ div.container-fluid {
                     //     bottom: -30%;
                     //     background: linear-gradient(to bottom, transparent 75%, #000f);
                     //     z-index: 1;
-                    //     // opacity: 0.5;
                     //     transform: scaleY(-1);
                     // }
+
                     // &::before {
                     //     content: "";
-                    //     background-image: inherit;
-                    //     background: linear-gradient(to top, white, white 30%, rgba(0, 0, 0, 0.9) 65%, rgba(255, 255, 255, 0.7)) 0px 0px;
+                    //     // background-image: inherit;
+                    //     background:  linear-gradient(to bottom, transparent 75%, #000f), -moz-element(img);
                     //     transform: scaleY(-1);
-                    //     position: relative;
-                    //     height: 140px;
+                    //     position: absolute;
+                    //     height: 50%;
                     //     width: 360px;
                     //     top: 247px;
                     //     left: 0px;
                     // }
-
                 }
                 // img.game-image-ref{
                 //     display: block;
@@ -86,7 +86,7 @@ div.container-fluid {
                 // }
 
                 div.online {
-                    width: 30%;
+                    width: 75%;
                     // height: 22%;
                     display: flex;
                     justify-content: flex-start;
@@ -98,6 +98,7 @@ div.container-fluid {
                     color: $color-gray-2;
                     font-size: 90%;
                     padding-bottom: .5rem;
+                    z-index: 10;
 
                 }
             }

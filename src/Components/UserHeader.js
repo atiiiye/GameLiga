@@ -6,7 +6,14 @@ import './../css/UserHeader.css'
 
 //import image
 import logo5 from "./../images/logo5.png";
+import UserIcon from "./../images/Icon-user.png";
+import TicketIcon from "./../images/Icon-ticket.png";
+import BellIcon from "./../images/Icon-bell.png";
+import TelegramIcon from "./../images/Icon-telegram.png";
+import WalletIcon from "./../images/Icon-wallet.png";
 
+//import route
+import { NavLink } from "react-router-dom";
 
 //import boostrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,7 +26,12 @@ class UserHeader extends Component {
             <div>
                 <Navbar expand="md">
                     <div className="navbar-right">
-                        {/* <p className="text-muted">user name</p> */}
+                        <p className="text-muted">user name</p>
+                        <NavLink to="/" className="nav-link-icon" id="user"><img className="image-icon" id="user" src={UserIcon} alt=""></img></NavLink>
+                        <NavLink to="/" className="nav-link-icon" id="ticket"><img className="image-icon" id="ticket" src={TicketIcon} alt=""></img></NavLink>
+                        <NavLink to="/" className="nav-link-icon" id="bell"><img className="image-icon" id="bell" src={BellIcon} alt=""></img></NavLink>
+                        <NavLink to="/" className="nav-link-icon" id="telegram"><img className="image-icon" id="telegram" src={TelegramIcon} alt=""></img></NavLink>
+                        <NavLink to="/" className="nav-link-icon" id="wallet"><img className="image-icon" id="wallet" src={WalletIcon} alt=""></img></NavLink>
                     </div>
                     <div className="navbar-left">
                         <input type="search" placeholder="search"></input>
