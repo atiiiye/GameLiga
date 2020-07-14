@@ -135,9 +135,6 @@ body {
   nav.navbar.user-header div.navbar-right {
     width: 50%;
   }
-  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse {
-    width: max-content;
-  }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse p.text-muted {
     width: max-content;
     margin-left: .6rem;
