@@ -207,7 +207,6 @@ section.main-slider div.container-fluid div.row div#content div.swiper-container
 
 section.main-slider div.container-fluid div.row div#content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide {
   width: 100%;
-  height: 60vh;
   display: flex !important;
 }
 
