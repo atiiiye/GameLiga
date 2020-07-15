@@ -157,12 +157,10 @@ body {
     border: 2px solid #ff9300;
     border-top: 0;
     border-right: 0;
-    border-radius: 8px;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
     padding-right: 1rem;
     width: 30%;
-    height: 50vh;
+    height: 60vh;
     justify-content: space-between;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show p.text-muted {
