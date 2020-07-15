@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 //import css
 import './../css/UserAccount.css';
+import './../css/mediaUserAccount.css'
 
 //import bootstrap
 import { Card } from "react-bootstrap";

@@ -16,7 +16,7 @@ nav.navbar.user-header {
 nav.navbar.user-header div.navbar-right {
   display: flex;
   align-items: center;
-  width: 22.5%;
+  width: 40%;
 }
 
 nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 {
@@ -69,55 +69,32 @@ nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-us
   height: 30px;
 }
 
-nav.navbar.user-header div.navbar-right div.row.part-2 {
-  display: flex;
-  width: max-content;
-}
-
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: .5rem;
-}
-
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon:focus {
-  outline: none;
-}
-
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon img.image-icon {
-  width: 20px;
-  height: 22px;
-}
-
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#bell {
+nav.navbar.user-header div.navbar-right a.nav-link-icon#bell {
   width: 30px;
   height: 30px;
 }
 
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#bell img.image-icon#bell {
+nav.navbar.user-header div.navbar-right a.nav-link-icon#bell img.image-icon#bell {
   width: 25px;
   height: 25px;
 }
 
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#telegram {
+nav.navbar.user-header div.navbar-right a.nav-link-icon#telegram {
   width: 25px;
   height: 25px;
 }
 
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#telegram img.image-icon#telegram {
+nav.navbar.user-header div.navbar-right a.nav-link-icon#telegram img.image-icon#telegram {
   width: 20px;
   height: 20px;
 }
 
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#wallet {
+nav.navbar.user-header div.navbar-right a.nav-link-icon#wallet {
   width: 25px;
   height: 25px;
 }
 
-nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#wallet img.image-icon#wallet {
+nav.navbar.user-header div.navbar-right a.nav-link-icon#wallet img.image-icon#wallet {
   width: 20px;
   height: 20px;
 }

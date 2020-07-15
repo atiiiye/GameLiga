@@ -98,7 +98,7 @@ body {
   }
 }
 
-@media (max-width: 798px) {
+@media (max-width: 767px) {
   nav.navbar.user-header {
     padding: .5rem;
     width: 100%;
@@ -136,7 +136,7 @@ body {
     transform-origin: left;
   }
   nav.navbar.user-header div.navbar-right {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,14 +144,33 @@ body {
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show {
     display: flex;
-    margin-bottom: 1rem;
-    transform: translate(0, 25%);
-    transition: transform .2s linear;
+    flex-direction: column;
+    background-color: rgba(54, 54, 59, 0.9);
+    transform: translate(-10%, 0);
+    transition: transform .1s linear;
+    position: absolute;
+    right: 0;
+    top: 105%;
+    z-index: 10;
+    align-items: flex-start;
+    padding: .5rem;
+    border: 2px solid #ff9300;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 8px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-right: 1rem;
+    width: 30%;
+    height: 50vh;
+    justify-content: space-between;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show p.text-muted {
     width: max-content;
-    margin-left: .6rem;
+    margin-right: .6rem;
+    margin-left: 0;
     font-size: 90%;
+    padding-bottom: .5rem;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon {
     width: 35px;
@@ -165,6 +184,7 @@ body {
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#user {
     width: 35px;
     height: 35px;
+    padding-bottom: .5rem;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#user img.image-icon#user {
     width: 35px;
@@ -173,44 +193,42 @@ body {
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#ticket {
     width: 30px;
     height: 30px;
+    padding-bottom: .5rem;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#ticket img.image-icon#ticket {
     width: 25px;
     height: 25px;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 {
-    display: flex;
-  }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon {
     width: 35px;
     height: 35px;
     margin-right: .4rem;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon img.image-icon {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon img.image-icon {
     width: 20px;
     height: 20px;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#bell {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#bell {
     width: 25px;
     height: 25px;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#bell img.image-icon#bell {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#bell img.image-icon#bell {
     width: 20px;
     height: 20px;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#telegram {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#telegram {
     width: 23px;
     height: 23px;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#telegram img.image-icon#telegram {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#telegram img.image-icon#telegram {
     width: 20px;
     height: 20px;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#wallet {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#wallet {
     width: 23px;
     height: 23px;
   }
-  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#wallet img.image-icon#wallet {
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#wallet img.image-icon#wallet {
     width: 20px;
     height: 20px;
   }
@@ -242,6 +260,12 @@ body {
     border-radius: 9px;
     font-size: 85%;
     padding-left: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  div.hamburger-menu {
+    display: none;
   }
 }
 /*# sourceMappingURL=mediaUserHeader.css.map */

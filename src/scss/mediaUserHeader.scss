@@ -116,7 +116,7 @@
 }
 
 
-@media(max-width:798px) {
+@media(max-width:767px) {
     nav.navbar.user-header {
         padding: .5rem;
         width: 100%;
@@ -129,6 +129,7 @@
             // top: 0;
             button.navbar-toggler {
                 border: 0;
+
                 &:focus {
                     border: none;
                     outline: 0;
@@ -164,7 +165,7 @@
         }
 
         div.navbar-right {
-            width: 50%;
+            width: 40%;
             // height: 2.5rem;
             display: flex;
             flex-direction: column;
@@ -177,23 +178,41 @@
 
             div.navbar-collapse.collapse.collapse-user.part-1.row.show {
                 display: flex;
-                // position: relative;
-                // right: 2.7rem;
-                margin-bottom: 1rem;
-                transform: translate(0, 25%);
-                transition: transform .2s linear;
+                flex-direction: column;
+                background-color: rgba($color: $color-gray-1, $alpha: .9);
+                // margin-bottom: 1rem;
+                transform: translate(-10%, 0);
+                transition: transform .1s linear;
+                position: absolute;
+                right: 0;
+                top: 105%;
+                z-index: 10;
+                align-items: flex-start;
+                padding: .5rem;
+                border: 2px solid $color-orange-1;
+                border-top: 0;
+                border-right: 0;
+                border-radius: 8px;
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                padding-right: 1rem;
+                width: 30%;
+                height: 50vh;
+                justify-content: space-between;
 
                 p.text-muted {
                     width: max-content;
-                    // margin-right: .6rem;
-                    margin-left: .6rem;
+                    margin-right: .6rem;
+                    margin-left: 0;
                     font-size: 90%;
+                    padding-bottom: .5rem;
                 }
 
                 a.nav-link-icon {
                     width: 35px;
                     height: 35px;
                     margin-right: .4rem;
+                    
 
                     img.image-icon {
                         width: 20px;
@@ -204,6 +223,7 @@
                 a.nav-link-icon#user {
                     width: 35px;
                     height: 35px;
+                    padding-bottom: .5rem;
 
                     img.image-icon#user {
                         width: 35px;
@@ -214,6 +234,7 @@
                 a.nav-link-icon#ticket {
                     width: 30px;
                     height: 30px;
+                    padding-bottom: .5rem;
 
                     img.image-icon#ticket {
                         width: 25px;
@@ -223,8 +244,10 @@
 
             }
 
-            div.row.part-2 {
-                display: flex;
+            // div.row.part-2 {
+                // display: flex;
+                // position: relative;
+                // right: -5.6rem;
 
                 a.nav-link-icon {
                     width: 35px;
@@ -266,7 +289,7 @@
                         height: 20px;
                     }
                 }
-            }
+            // }
 
         }
 
@@ -305,5 +328,11 @@
                 padding-left: 5px;
             }
         }
+    }
+}
+
+@media (min-width:768px) {
+    div.hamburger-menu {
+        display: none;
     }
 }
