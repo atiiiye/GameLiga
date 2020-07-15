@@ -12,82 +12,111 @@ nav.navbar.user-header {
     div.navbar-right {
         display: flex;
         align-items: center;
-        width: 50%;
-
-        p.text-muted {
+        width: 22.5%;
+        div.navbar-collapse.collapse.collapse-user.row.part-1 {
             width: max-content;
-            margin-right: 2rem;
-            margin-left: 1rem;
-            font-size: 95%;
-        }
-
-        a.nav-link-icon {
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: .5rem;
-
-            &:focus {
-                outline: none;
+            flex-basis: auto;
+            p.text-muted {
+                width: max-content;
+                margin-right: 2rem;
+                margin-left: 1rem;
+                font-size: 95%;
             }
-
-            img.image-icon {
-                width: 20px;
-                height: 22px;
-            }
-        }
-
-        a.nav-link-icon#user {
-            width: 45px;
-            height: 45px;
-
-            img.image-icon#user {
+    
+            a.nav-link-icon {
                 width: 45px;
                 height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: .5rem;
+    
+                &:focus {
+                    outline: none;
+                }
+    
+                img.image-icon {
+                    width: 20px;
+                    height: 22px;
+                }
+            }
+    
+            a.nav-link-icon#user {
+                width: 45px;
+                height: 45px;
+    
+                img.image-icon#user {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+    
+            a.nav-link-icon#ticket {
+                width: 35px;
+                height: 35px;
+    
+                img.image-icon#ticket {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
 
-        a.nav-link-icon#ticket {
-            width: 35px;
-            height: 35px;
+        div.row.part-2 {
+            display: flex;
+            width: max-content;
+            a.nav-link-icon {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: .5rem;
+    
+                &:focus {
+                    outline: none;
+                }
+    
+                img.image-icon {
+                    width: 20px;
+                    height: 22px;
+                }
+            }
 
-            img.image-icon#ticket {
+            a.nav-link-icon#bell {
                 width: 30px;
                 height: 30px;
+    
+                img.image-icon#bell {
+                    width: 25px;
+                    height: 25px;
+                }
             }
-        }
-
-        a.nav-link-icon#bell {
-            width: 30px;
-            height: 30px;
-
-            img.image-icon#bell {
+    
+            a.nav-link-icon#telegram {
                 width: 25px;
                 height: 25px;
+    
+                img.image-icon#telegram {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+    
+            a.nav-link-icon#wallet {
+                width: 25px;
+                height: 25px;
+    
+                img.image-icon#wallet {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
 
-        a.nav-link-icon#telegram {
-            width: 25px;
-            height: 25px;
 
-            img.image-icon#telegram {
-                width: 20px;
-                height: 20px;
-            }
-        }
 
-        a.nav-link-icon#wallet {
-            width: 25px;
-            height: 25px;
 
-            img.image-icon#wallet {
-                width: 20px;
-                height: 20px;
-            }
-        }
     }
 
     div.navbar-left {
