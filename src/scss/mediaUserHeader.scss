@@ -124,7 +124,7 @@
             
             position: absolute;
             right: 1rem;
-
+            top: 0;
             button.navbar-toggler {
 
                 &:focus {
@@ -162,10 +162,19 @@
         }
         div.navbar-right {
             width: 50%;
-
-            div.navbar-collapse.collapse{
+            height: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            div.navbar-collapse.collapse.collapse-user.row.part-1{
                 // width: max-content;
-              
+
+            }
+            div.navbar-collapse.collapse.collapse-user.part-1.row.show{
+                display: flex;
+                position: relative;
+                right: 2.7rem;
                 p.text-muted {
                     width: max-content;
                     // margin-right: .6rem;
@@ -191,12 +200,41 @@
                         height: 25px;
                     }
                 }
+
             }
-            div.navbar-collapse.collapse.show{
+
+            div.row.part-2{
                 display: flex;
+                a.nav-link-icon#bell {
+                    width: 25px;
+                    height: 25px;
+    
+                    img.image-icon#bell {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+    
+                a.nav-link-icon#telegram {
+                    width: 23px;
+                    height: 23px;
+    
+                    img.image-icon#telegram {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+    
+                a.nav-link-icon#wallet {
+                    width: 23px;
+                    height: 23px;
+    
+                    img.image-icon#wallet {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
             }
-
-
 
             a.nav-link-icon {
                 width: 35px;
@@ -211,35 +249,7 @@
 
 
 
-            a.nav-link-icon#bell {
-                width: 25px;
-                height: 25px;
 
-                img.image-icon#bell {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-
-            a.nav-link-icon#telegram {
-                width: 23px;
-                height: 23px;
-
-                img.image-icon#telegram {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-
-            a.nav-link-icon#wallet {
-                width: 23px;
-                height: 23px;
-
-                img.image-icon#wallet {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
         }
 
         div.navbar-left {

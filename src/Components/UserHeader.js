@@ -26,7 +26,7 @@ class UserHeader extends Component {
         return (
             <div>
                 <Navbar className="user-header" collapseOnSelect expand="md">
-                    <div className="hamburger-menu px-0" data-target="#coll-navbar">
+                    <div className="hamburger-menu px-0" data-target="#collapse-navbar">
                         <Navbar.Toggle aria-controls="collapse" className="px-0">
                             <span className="menu navbar-toggler-icon">
                                 <div className="menu-line menu-line-1"></div>
@@ -36,14 +36,17 @@ class UserHeader extends Component {
                         </Navbar.Toggle>
                     </div>
                     <div className="navbar-right">
-                        <Navbar.Collapse className="" id="coll-navbar">
+                        <Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
                             <p className="text-muted">user name</p>
                             <NavLink to="/account" className="nav-link-icon" id="user"><img className="image-icon" id="user" src={UserIcon} alt=""></img></NavLink>
                             <NavLink to="/ticket" className="nav-link-icon" id="ticket"><img className="image-icon" id="ticket" src={TicketIcon} alt=""></img></NavLink>
                         </Navbar.Collapse>
+                        <div className="row part-2">
                         <NavLink to="/bell" className="nav-link-icon" id="bell"><img className="image-icon" id="bell" src={BellIcon} alt=""></img></NavLink>
                         <NavLink to="/telegram" className="nav-link-icon" id="telegram"><img className="image-icon" id="telegram" src={TelegramIcon} alt=""></img></NavLink>
                         <NavLink to="/wallet" className="nav-link-icon" id="wallet"><img className="image-icon" id="wallet" src={WalletIcon} alt=""></img></NavLink>
+                        </div>
+
                     </div>
                     <div className="navbar-left">
                         <input type="search" placeholder="search"></input>

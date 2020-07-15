@@ -138,9 +138,13 @@ body {
 }
 
 @media (max-width: 767px) {
+  div.container-fluid nav.navbar {
+    position: relative;
+  }
   div.container-fluid nav.navbar div.hamburger-menu {
     position: absolute;
     right: 1rem;
+    top: 0;
   }
   div.container-fluid nav.navbar div.hamburger-menu button.navbar-toggler {
     display: table;
@@ -172,7 +176,7 @@ body {
     transform-origin: left;
   }
   div.container-fluid nav.navbar div.nav-right {
-    width: 35%;
+    width: 40%;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav {
     padding-right: 0;
