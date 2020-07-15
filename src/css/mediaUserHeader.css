@@ -106,7 +106,6 @@ body {
   nav.navbar.user-header div.hamburger-menu {
     position: absolute;
     right: 1rem;
-    top: 0;
   }
   nav.navbar.user-header div.hamburger-menu button.navbar-toggler:focus {
     border: none;
@@ -129,27 +128,36 @@ body {
     width: 100%;
     height: 3px;
     margin-bottom: 5px;
-    background-color: #fff;
+    background-color: #ff9300;
     transition: all .3s .3s;
     transform-origin: left;
   }
   nav.navbar.user-header div.navbar-right {
     width: 50%;
-    height: 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show {
     display: flex;
-    position: relative;
-    right: 2.7rem;
+    margin-bottom: 1rem;
+    transform: translate(0, 25%);
+    transition: transform .2s linear;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show p.text-muted {
     width: max-content;
     margin-left: .6rem;
     font-size: 90%;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: .4rem;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon img.image-icon {
+    width: 20px;
+    height: 20px;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#user {
     width: 35px;
@@ -169,6 +177,15 @@ body {
   }
   nav.navbar.user-header div.navbar-right div.row.part-2 {
     display: flex;
+  }
+  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: .4rem;
+  }
+  nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon img.image-icon {
+    width: 20px;
+    height: 20px;
   }
   nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#bell {
     width: 25px;
@@ -191,15 +208,6 @@ body {
     height: 23px;
   }
   nav.navbar.user-header div.navbar-right div.row.part-2 a.nav-link-icon#wallet img.image-icon#wallet {
-    width: 20px;
-    height: 20px;
-  }
-  nav.navbar.user-header div.navbar-right a.nav-link-icon {
-    width: 35px;
-    height: 35px;
-    margin-right: .4rem;
-  }
-  nav.navbar.user-header div.navbar-right a.nav-link-icon img.image-icon {
     width: 20px;
     height: 20px;
   }
