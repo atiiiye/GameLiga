@@ -109,6 +109,7 @@ class SignUp extends Component {
             </Form.Group>
 
             <Form.Group className="row ml-1">
+              {/* <div className="col-form-label"></div> */}
               <Button className="register col-6" variant="none" type="submit">
                 Register
                   </Button>
