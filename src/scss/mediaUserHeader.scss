@@ -184,16 +184,16 @@
                 position: absolute;
                 right: 0;
                 top: 105%;
+                right: -7px;
                 z-index: 10;
                 align-items: flex-start;
-                padding: .5rem;
+                padding: .5rem .8rem .5rem .5rem;
                 border: 2px solid $color-orange-1;
                 border-top: 0;
                 border-right: 0;
                 border-bottom-left-radius: 8px;
-                padding-right: 1rem;
                 width: 30%;
-                height: 60vh;
+                height: 260px;
                 justify-content: space-between;
 
                 p.text-muted {
@@ -284,9 +284,7 @@
                     height: 20px;
                 }
             }
-
             // }
-
         }
 
         div.navbar-left {

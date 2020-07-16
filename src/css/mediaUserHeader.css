@@ -149,16 +149,16 @@ body {
     position: absolute;
     right: 0;
     top: 105%;
+    right: -7px;
     z-index: 10;
     align-items: flex-start;
-    padding: .5rem;
+    padding: .5rem .8rem .5rem .5rem;
     border: 2px solid #ff9300;
     border-top: 0;
     border-right: 0;
     border-bottom-left-radius: 8px;
-    padding-right: 1rem;
     width: 30%;
-    height: 60vh;
+    height: 260px;
     justify-content: space-between;
   }
   nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show p.text-muted {

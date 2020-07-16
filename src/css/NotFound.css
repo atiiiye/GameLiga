@@ -4,7 +4,7 @@ body {
   background-color: #1c1c22;
 }
 
-div.container {
+div.container.not-found {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -13,7 +13,7 @@ div.container {
   align-items: center;
 }
 
-div.container span.oops {
+div.container.not-found span.oops {
   height: max-content;
   font-size: 3.5rem;
   font-weight: bold;
@@ -21,30 +21,30 @@ div.container span.oops {
   margin-bottom: 1rem;
 }
 
-div.container h1 {
+div.container.not-found h1 {
   color: #fff;
 }
 
-div.container button {
+div.container.not-found button {
   margin-top: 1rem;
   border: 1px solid #ff9300;
   border-radius: 28px;
 }
 
-div.container button:hover {
+div.container.not-found button:hover {
   background-color: #ff9300;
   border-color: #ff9300;
 }
 
-div.container button:hover > a.nav-link {
+div.container.not-found button:hover > a.nav-link {
   color: #fff;
 }
 
-div.container button a.nav-link {
+div.container.not-found button a.nav-link {
   color: #ff9300;
 }
 
-div.container button a.nav-link:focus {
+div.container.not-found button a.nav-link:focus {
   outline: none;
   color: #fff;
 }
