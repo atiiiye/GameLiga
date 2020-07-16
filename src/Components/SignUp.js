@@ -32,59 +32,59 @@ class SignUp extends Component {
           <Form action="#" className="form-signup">
             <h3 className="h3">Personal Information</h3>
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">User name :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">User name :</Form.Label>
               <Form.Control type="text" className="col-sm-7 form-control-plaintext" placeholder="User name" />
             </Form.Group>
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">Password :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">Password :</Form.Label>
               <Form.Control type="password" className="col-sm-7 form-control-plaintext" placeholder="Password" />
             </Form.Group>
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0"><NavLink to="/generate">Generate :</NavLink></Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0"><NavLink to="/generate">Generate :</NavLink></Form.Label>
               <Form.Control type="text" className="col-sm-7 form-control-plaintext" placeholder="Generate" />
             </Form.Group>
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">confirm password :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">confirm password :</Form.Label>
               <Form.Control password="password" className="col-sm-7 form-control-plaintext" placeholder="confirm password" />
             </Form.Group>
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">E-mail address :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">E-mail address :</Form.Label>
               <Form.Control type="email" className="col-sm-7 form-control-plaintext" placeholder="E-mail address" />
             </Form.Group>
             <h3 className="h3">Personal Information</h3>
 
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">Nick name :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">Nick name :</Form.Label>
               <Form.Control type="email" className="col-sm-7 form-control-plaintext" placeholder="Nick name" />
             </Form.Group>
 
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">First name :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">First name :</Form.Label>
               <Form.Control type="email" className="col-sm-7 form-control-plaintext" placeholder="First name" />
             </Form.Group>
 
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">Last name :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">Last name :</Form.Label>
               <Form.Control type="email" className="col-sm-7 form-control-plaintext" placeholder="Last name" />
             </Form.Group>
 
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">Phone number :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">Phone number :</Form.Label>
               <Form.Control type="email" className="col-sm-7 form-control-plaintext" placeholder="Phone number" />
             </Form.Group>
 
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">Promotional Code :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">Promotional Code :</Form.Label>
               <Form.Control type="text" className="col-sm-7 form-control-plaintext" placeholder="Promotional code" />
             </Form.Group>
 
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">Referred by :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">Referred by :</Form.Label>
               <Form.Control type="text" className="col-sm-7 form-control-plaintext" placeholder="Referred by" />
             </Form.Group>
 
             <Form.Group className="row ml-1">
-              <Form.Label className="col-md-4 col-form-label px-0">Captcha :</Form.Label>
+              <Form.Label className="col-sm-4 col-form-label px-0">Captcha :</Form.Label>
               <div className="captcha-block col-sm-7">
                 <div className="captcha">7A223</div>
                 <Form.Control type="" className="form-control-plaintext" placeholder="" />

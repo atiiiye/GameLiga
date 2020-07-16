@@ -38,6 +38,7 @@ div.card-body#card-form-signup div.card-form {
 div.card-body#card-form-signup div.card-form div.title {
   display: flex;
   flex-direction: column;
+  padding: .2rem;
   width: 100%;
 }
 

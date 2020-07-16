@@ -268,10 +268,11 @@
     }
 }
 
-@media(max-width:575px){
+@media(max-width:575px) {
     div.card-body#card-form-signup {
         background-position: right 96%, -10px -15px;
         background-size: 30% 33%, cover;
+        justify-content: center;
         position: relative;
         right: -15%;
         padding: 0;
@@ -380,10 +381,10 @@
                         padding: 0;
 
                         div.captcha {
-                            width: 100px;
-                            height: 50px;
-                            margin-bottom: 1rem;
-                            font-size: 85%;
+                            width: 95px;
+                            height: 45px;
+                            margin-bottom: .8rem;
+                            font-size: 83%;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -393,6 +394,269 @@
                     button.register {
                         outline: none;
                         font-size: 90%;
+                        position: relative;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:490px) {
+    div.card-body#card-form-signup {
+        background-position: right 96%, -10px -22px;
+        background-size: 28% 28%, cover;
+        justify-content: center;
+        position: relative;
+        right: 0;
+        padding: 0;
+        width: 100%;
+
+        div.card-form {
+            border-radius: 9px;
+            margin: 1rem;
+            width: 85%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+
+            div.title {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: .3rem;
+
+                h1.h1 {
+                    margin-top: .5rem;
+                    font-size: 1.5rem;
+                }
+
+                p.text-muted {
+                    font-size: 70%;
+                    margin-bottom: .3rem;
+                }
+
+                a#goLogin {
+                    font-size: 70%;
+                }
+            }
+
+            form.form-signup {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 95%;
+                margin-top: 1.5rem;
+                padding: .5rem;
+                padding-right: 0;
+
+                h3.h3 {
+                    display: flex;
+                    font-size: 88%;
+                    font-weight: bold;
+                    justify-content: center;
+                    margin-top: .5rem;
+                    margin-bottom: .8rem;
+                }
+
+                div.form-group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    label {
+                        display: flex;
+                        justify-content: center;
+                        justify-content: flex-start;
+                        font-size: 73%;
+
+                        a {
+                            font-size: 100%;
+                            font-weight: bold;
+                        }
+                    }
+
+                    label.label-check-box {
+                        font-size: 73%;
+                        flex-direction: column;
+                        width: 90%;
+
+                        a {
+                            padding-left: 3px;
+                        }
+                    }
+
+                    input {
+                        border-radius: 9px;
+                        font-size: 78%;
+                        padding-left: .5rem;
+                    }
+
+                    div.form-check-inline {
+                        width: 9%;
+                        // margin-right: .1rem;
+
+                        input[type="checkbox"] {
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 0;
+                        }
+                    }
+
+                    div.captcha-block {
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+
+                        div.captcha {
+                            width: 90px;
+                            height: 40px;
+                            margin-bottom: 1rem;
+                            font-size: 80%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    button.register {
+                        outline: none;
+                        font-size: 85%;
+                        position: relative;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:350px){
+    div.card-body#card-form-signup {
+        background-position: right 96%, -10px -22px;
+        background-size: 28% 28%, cover;
+        justify-content: center;
+        position: relative;
+        right: 0;
+        padding: 0;
+        width: 100%;
+
+        div.card-form {
+            border-radius: 9px;
+            margin: 1rem;
+            width: 85%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+
+            div.title {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: .3rem;
+
+                h1.h1 {
+                    margin-top: .5rem;
+                    font-size: 1.5rem;
+                }
+
+                p.text-muted {
+                    font-size: 70%;
+                    margin-bottom: .3rem;
+                }
+
+                a#goLogin {
+                    font-size: 70%;
+                }
+            }
+
+            form.form-signup {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 96.2%;
+                margin-top: 1.5rem;
+                padding: .4rem;
+                padding-right: 0;
+
+                h3.h3 {
+                    display: flex;
+                    font-size: 88%;
+                    font-weight: bold;
+                    justify-content: center;
+                    margin-top: .5rem;
+                    margin-bottom: .8rem;
+                }
+
+                div.form-group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    label {
+                        display: flex;
+                        justify-content: center;
+                        justify-content: flex-start;
+                        font-size: 73%;
+
+                        a {
+                            font-size: 100%;
+                            font-weight: bold;
+                        }
+                    }
+
+                    label.label-check-box {
+                        font-size: 70%;
+                        flex-direction: column;
+                        width: 91%;
+
+                        a {
+                            padding-left: 3px;
+                        }
+                    }
+
+                    input {
+                        border-radius: 9px;
+                        font-size: 78%;
+                        padding-left: .5rem;
+                    }
+
+                    div.form-check-inline {
+                        width: 8%;
+                        // margin-right: .1rem;
+                        // padding-bottom: 0;
+
+                        input[type="checkbox"] {
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 0;
+                        }
+                    }
+
+                    div.captcha-block {
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+
+                        div.captcha {
+                            width: 90px;
+                            height: 40px;
+                            margin-bottom: 1rem;
+                            font-size: 80%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    button.register {
+                        outline: none;
+                        font-size: 85%;
                         position: relative;
                         left: 0;
                     }
