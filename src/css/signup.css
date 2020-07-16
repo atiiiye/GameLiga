@@ -114,6 +114,7 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group lab
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group label.label-check-box {
   display: flex;
+  flex-direction: column;
   width: 90%;
   font-size: 80%;
 }
@@ -138,8 +139,9 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group inp
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.form-check-inline {
-  width: 30px;
+  width: 10%;
   margin-right: 0;
+  justify-content: center;
   align-items: center;
 }
 
