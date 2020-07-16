@@ -5,79 +5,158 @@ body {
 }
 
 @media (max-width: 991px) {
-  div.container-fluid div.cards {
-    width: 65%;
+  div.card-body#card-form-signup {
+    background-position: right 96%, -10px -15px;
+    background-size: 40% 35%, cover;
+    display: flex;
+    justify-content: flex-start;
+    height: max-content;
+    position: relative;
+    right: -15%;
+    padding: 0;
+    width: 85%;
   }
-  div.container-fluid div.cards div.title a#goLogin {
+  div.card-body#card-form-signup div.card-form {
+    border-radius: 9px;
+    margin: 2rem;
+    width: 70%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+  div.card-body#card-form-signup div.card-form div.title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  div.card-body#card-form-signup div.card-form div.title h1.h1 {
+    font-weight: bold;
+    text-align: center;
+  }
+  div.card-body#card-form-signup div.card-form div.title p.text-muted {
+    font-weight: bold;
     font-size: 75%;
+    margin-bottom: .3rem;
+    text-align: center;
   }
-  div.container-fluid div.cards form {
+  div.card-body#card-form-signup div.card-form div.title a#goLogin {
+    font-weight: bold;
+    font-size: 75%;
+    text-align: center;
+  }
+  div.card-body#card-form-signup div.card-form form.form-signup {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
     margin-top: 2rem;
+    padding: 1rem;
   }
-  div.container-fluid div.cards form h3.h3 {
+  div.card-body#card-form-signup div.card-form form.form-signup h3.h3 {
     display: flex;
     font-size: 95%;
+    font-weight: bold;
+    justify-content: center;
     margin-top: .5rem;
     margin-bottom: 1rem;
   }
-  div.container-fluid div.cards form div.form-group {
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-left: 0;
+    margin-right: 0;
   }
-  div.container-fluid div.cards form div.form-group label {
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group label {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
     font-size: 85%;
   }
-  div.container-fluid div.cards form div.form-group label a {
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group label a {
     font-size: 100%;
+    font-weight: bold;
   }
-  div.container-fluid div.cards form div.form-group label.label-check-box {
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group label.label-check-box {
     font-size: 80%;
   }
-  div.container-fluid div.cards form div.form-group label.label-check-box a {
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group label.label-check-box a {
     padding-left: 3px;
+  }
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group input {
+    border-radius: 9px;
+    font-size: 80%;
+    padding-left: .5rem;
+  }
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.form-check-inline {
+    margin-right: 0;
+  }
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.form-check-inline input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin-right: 0;
+  }
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block div.captcha {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 1rem;
+    font-size: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.card-body#card-form-signup div.card-form form.form-signup button.register {
+    border-radius: 28px;
+    outline: none;
+    font-size: 95%;
+    position: relative;
+    left: 16%;
   }
 }
 
-@media (max-width: 991px) and (max-width: 575px) {
-  div.container-fluid div.card {
+@media (max-width: 575px) {
+  div.card {
     width: 90%;
     margin-left: .5rem;
     margin-right: .5rem;
   }
-  div.container-fluid div.card p.text-muted {
+  div.card p.text-muted {
     font-size: 72%;
     margin-bottom: .3rem;
   }
-  div.container-fluid div.card a#goLogin {
+  div.card a#goLogin {
     font-size: 72%;
   }
-  div.container-fluid div.card form {
+  div.card form {
     width: 90%;
     margin-top: 2rem;
   }
-  div.container-fluid div.card form h3.h3 {
+  div.card form h3.h3 {
     font-size: 92%;
     margin-top: .5rem;
     margin-bottom: 1rem;
   }
-  div.container-fluid div.card form div.form-group {
+  div.card form div.form-group {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  div.container-fluid div.card form div.form-group label {
+  div.card form div.form-group label {
     font-size: 78%;
   }
-  div.container-fluid div.card form div.form-group label a {
+  div.card form div.form-group label a {
     font-size: 100%;
   }
-  div.container-fluid div.card form div.form-group label.label-check-box {
+  div.card form div.form-group label.label-check-box {
     font-size: 75%;
   }
-  div.container-fluid div.card form div.form-group label.label-check-box a {
+  div.card form div.form-group label.label-check-box a {
     padding-left: 3px;
   }
 }

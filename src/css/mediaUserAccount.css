@@ -68,6 +68,7 @@ body {
     z-index: 15;
   }
   div.container-fluid.userAccount div.card#content div.row.games div.game img.game-image {
+    width: 185px;
     margin-bottom: .8rem;
     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
   }

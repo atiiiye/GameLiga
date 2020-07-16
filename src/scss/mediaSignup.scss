@@ -2,110 +2,192 @@
 
 @media(max-width:991px) {
 
-    div.container-fluid {
-        div.cards {
-            width: 65%;
-
-            div.title{
-                a#goLogin {
-                    font-size: 75%;
+    div.card-body#card-form-signup {
+        background-position: right 96%, -10px -15px;
+        background-size: 40% 35%, cover  ;
+        display: flex;
+        justify-content: flex-start;
+        height: max-content;
+        position: relative;
+        right: -15%;
+        padding: 0;
+        width: 85%;
     
+    
+    
+        div.card-form {
+            border-radius: 9px;
+            margin: 2rem;
+            width: 70%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+    
+            div.title {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+    
+                h1.h1 {
+                    font-weight: bold;
+                    text-align: center;
+                }
+    
+                p.text-muted {
+                    font-weight: bold;
+                    font-size: 75%;
+                    margin-bottom: .3rem;
+                    text-align: center;
+                }
+    
+                a#goLogin {
+                    font-weight: bold;
+                    font-size: 75%;
+                    text-align: center;
                 }
             }
-
-            form {
+    
+            form.form-signup {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 width: 90%;
                 margin-top: 2rem;
-
+                padding: 1rem;
+    
                 h3.h3 {
                     display: flex;
                     font-size: 95%;
+                    font-weight: bold;
+                    justify-content: center;
                     margin-top: .5rem;
                     margin-bottom: 1rem;
                 }
-
+    
                 div.form-group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                     // margin-top: 1rem;
                     margin-left: 0;
-
+                    margin-right: 0;
+    
                     label {
+                        display: flex;
+                        justify-content: center;
+                        justify-content: flex-start;
                         font-size: 85%;
-
+    
                         a {
                             font-size: 100%;
+                            font-weight: bold;
                         }
-
                     }
-
+    
                     label.label-check-box {
                         font-size: 80%;
-
+    
                         a {
                             padding-left: 3px;
                         }
-
-
                     }
+    
+                    input {
+                        border-radius: 9px;
+                        font-size: 80%;
+                        padding-left: .5rem;
+                    }
+    
+                    div.form-check-inline {
+                        margin-right: 0;
+    
+                        input[type="checkbox"] {
+                            width: 25px;
+                            height: 25px;
+                            margin-right: 0;
+
+                        }
+                    }
+    
+                    div.captcha-block {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+    
+                        div.captcha {
+                            width: 100px;
+                            height: 50px;
+                            margin-bottom: 1rem;
+                            font-size: 90%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+    
+                button.register {
+                    border-radius: 28px;
+                    outline: none;
+                    font-size: 95%;
+                    position: relative;
+                    left: 16%;
                 }
             }
         }
     }
+}
 
-    @media(max-width:575px) {
+@media(max-width:575px) {
 
-        div.container-fluid {
-            div.card {
-                width: 90%;
-                margin-left: .5rem;
-                margin-right: .5rem;
+    div.card {
+        width: 90%;
+        margin-left: .5rem;
+        margin-right: .5rem;
 
-                p.text-muted {
-                    font-size: 72%;
-                    margin-bottom: .3rem;
-                }
+        p.text-muted {
+            font-size: 72%;
+            margin-bottom: .3rem;
+        }
 
-                a#goLogin {
-                    font-size: 72%;
-                }
+        a#goLogin {
+            font-size: 72%;
+        }
 
-                form {
-                    width: 90%;
-                    margin-top: 2rem;
+        form {
+            width: 90%;
+            margin-top: 2rem;
 
-                    h3.h3 {
-                        font-size: 92%;
-                        margin-top: .5rem;
-                        margin-bottom: 1rem;
+            h3.h3 {
+                font-size: 92%;
+                margin-top: .5rem;
+                margin-bottom: 1rem;
+            }
+
+            div.form-group {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                label {
+                    font-size: 78%;
+
+                    a {
+                        font-size: 100%;
                     }
+                }
 
-                    div.form-group {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                label.label-check-box {
+                    font-size: 75%;
 
-                        label {
-                            font-size: 78%;
-
-                            a {
-                                font-size: 100%;
-                            }
-                        }
-
-                        label.label-check-box {
-                            font-size: 75%;
-
-                            a {
-                                padding-left: 3px;
-                            }
-
-                        }
+                    a {
+                        padding-left: 3px;
                     }
 
                 }
             }
+
         }
     }
 }

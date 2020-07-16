@@ -1,7 +1,7 @@
 @import 'base';
 
 
-div.card-body#signup-form {
+div.card-body#card-form-signup {
     background-image: url('./../images/screen-5.png'), url('./../images/background-signup.png');
     background-position: right 96%, -10px -15px;
     background-size: 40% 35%, cover  ;
@@ -64,7 +64,7 @@ div.card-body#signup-form {
             }
         }
 
-        form {
+        form.form-signup {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -109,9 +109,12 @@ div.card-body#signup-form {
                 }
 
                 label.label-check-box {
+                    display: flex;
+                    width: 90%;
                     font-size: 80%;
 
                     a {
+                        width: 100%;
                         color: $color-blue-1;
                         padding-left: 3px;
                     }
@@ -131,6 +134,7 @@ div.card-body#signup-form {
                 }
 
                 div.form-check-inline {
+                    width: 30px;
                     margin-right: 0;
                     align-items: center;
 
@@ -234,12 +238,13 @@ div.card-body#signup-form {
                 outline: none;
                 font-size: 95%;
                 position: relative;
+                display: flex;
+                justify-content: center;
                 left: 16%;
 
                 &:focus {
                     box-shadow: none;
                     color: $color-white;
-
                 }
             }
         }
