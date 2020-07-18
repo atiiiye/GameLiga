@@ -1,93 +1,318 @@
 @import 'base';
 
+@media(max-width :1120px){
 
-@media(max-width :991px) {
     section.main-slider {
         div.container-fluid.box-slider {
             div.row.pratition-slider {
-                    div.sidebar-slider {
-                        div.card-columns.card-columns-slider {
-                            div.card {
-                                width: 50px;
-                                height: 50px;
-                            }
+                div.sidebar-slider {
+                    div.card-columns.card-columns-slider {
+                        div.line {}
 
-                            div.card-body {}
-                        }
-                    }
-                
-
-                div.card.ccc {
-                    div.card-body {
-                        div.card-text {
-                            width: 80%;
-
-                            h1.Tournament {
-                                font-size: 2.5rem;
-                            }
-
-                            h1.title {
-                                font-size: 2.5rem;
-
-                                span.h1 {
-                                    font-size: 2.5rem;
+                        div.card#social-medias {
+                            div.card-body#social-media {
+                                a.icon-media {
+                                    img.icon-image {}
                                 }
                             }
-
-                            h1.garanti {
-                                font-size: 2.6rem;
-                            }
-                        }
-                    }
-
-                    div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
-                        width: 55%;
-
-                        div.swiper-wrapper {
-                            width: 100%;
-                            margin-right: 0;
-
-                            div.swiper-slide {
-                                width: 100%;
-                                height: 60vh;
-                                display: flex;
-
-                                div.slides {
-
-                                    // width: 100%;
-                                    img.card-img-top {}
-                                }
-                            }
-                        }
-
-                        div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
-                            display: flex;
-                            flex-direction: column;
-                            height: 130px;
-
-                            span.swiper-pagination-bullet {
-                                display: flex;
-                                justify-content: flex-end;
-                                width: 100%;
-                                height: 50px;
-                                padding-right: 1.2rem;
-                                color: #ffffff;
-                                font-size: 14px;
-                                background: transparent;
-                            }
-
-                            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-                                font-size: 18px;
-                                // font-weight: bold;
-
-                            }
-
                         }
                     }
                 }
 
-                div.row.images {
-                    width: 90%;
+                div.content-slider#content {
+                    div.main-content {
+                        height: 60%;
+
+                        div.titles {
+                            div.top {}
+
+                            div.card-body-titles {
+                                position: relative;
+                                left: 17%;
+                                // height: 100%;
+
+                                div.line-orange {}
+
+                                div.card-text {
+                                    width: max-content;
+
+                                    h1.Tournament {
+                                        font-size: 2.45rem;
+                                    }
+
+                                    h1.title {
+                                        font-size: 2.45rem;
+                                        margin-top: .5rem;
+
+                                        span.h1 {
+                                            font-size: 2.45rem;
+                                        }
+                                    }
+
+                                    h1.garanti {
+                                        font-size: 2.45rem;
+                                    }
+                                }
+                            }
+
+                            div.bottom {}
+                        }
+
+                        div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                            width: 70%;
+
+                            div.swiper-wrapper {
+                                div.swiper-slide {
+                                    // height: 60vh;
+                                    div.slides {
+                                        img.card-img-top {}
+                                    }
+                                }
+                            }
+
+                            div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                                span.swiper-pagination-bullet {
+                                }
+
+                                span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.images-content.images {
+                    img.image-fluid {
+                        margin-top: 2rem;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width :1015px) {
+    section.main-slider {
+        div.container-fluid.box-slider {
+            div.row.pratition-slider {
+                div.sidebar-slider {
+                    div.card-columns.card-columns-slider {
+                        div.line {}
+
+                        div.card#social-medias {
+                            width: 55px;
+                            height: 55px;
+
+                            div.card-body#social-media {
+                                display: block;
+                                padding: .5rem;
+
+                                a.icon-media {
+                                    width: 35px;
+
+                                    img.icon-image {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.content-slider#content {
+                    div.main-content {
+                        height: 60%;
+
+                        div.titles {
+                            div.top {
+                                width: 45px;
+                                height: 45px;
+                                position: relative;
+                                top: 1.3rem;
+                                left: 1.7rem;
+                            }
+
+                            div.card-body-titles {
+                                position: relative;
+                                left: 15%;
+                                // height: 100%;
+
+                                div.line-orange {
+                                    width: 55px;
+                                    height: 27px;
+                                }
+
+                                div.card-text {
+                                    width: max-content;
+
+                                    h1.Tournament {
+                                        font-size: 2.3rem;
+                                    }
+
+                                    h1.title {
+                                        font-size: 2.3rem;
+                                        margin-top: .4rem;
+
+                                        span.h1 {
+                                            font-size: 2.3rem;
+                                        }
+                                    }
+
+                                    h1.garanti {
+                                        font-size: 2.5rem;
+                                    }
+                                }
+                            }
+
+                            div.bottom {
+                                width: 45px;
+                                height: 45px;
+                                position: relative;
+                                left: 1.7rem;
+                            }
+                        }
+
+                        div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                            width: 70%;
+
+                            div.swiper-wrapper {
+
+                                div.swiper-slide {
+                                    // height: 60vh;
+
+                                    div.slides {
+                                        img.card-img-top {}
+                                    }
+                                }
+                            }
+
+                            div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                                span.swiper-pagination-bullet {
+                                    height: 25px;
+                                    padding-right: 1.3rem;
+                                    font-size: 13px;
+                                }
+
+                                span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.images-content.images {
+                    width: 100%;
+                    height: 40%;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+
+                    img.image-fluid {
+                        margin-top: 2rem;
+                        width: 50%;
+                        // height: 234px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width :970px) {
+    section.main-slider {
+        div.container-fluid.box-slider {
+            div.row.pratition-slider {
+                div.sidebar-slider {
+                    div.card-columns.card-columns-slider {
+                        div.line {}
+                        div.card#social-medias {
+                            div.card-body#social-media {
+                                a.icon-media {
+                                    width: 30px;
+                                    img.icon-image {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.content-slider#content {
+                    div.main-content {
+                        div.titles {
+                            div.top {
+                                width: 43px;
+                                height: 43px;
+                                position: relative;
+                                top: 1.3rem;
+                                left: 1.6rem;
+                            }
+
+                            div.card-body-titles {
+                                position: relative;
+                                left: 14.5%;
+                                // height: 100%;
+
+                                div.line-orange {
+                                    width: 52px;
+                                    height: 27px;
+                                }
+
+                                div.card-text {
+                                    width: max-content;
+
+                                    h1.Tournament {
+                                        font-size: 2.27rem;
+                                    }
+
+                                    h1.title {
+                                        font-size: 2.27rem;
+                                        margin-top: .4rem;
+
+                                        span.h1 {
+                                            font-size: 2.27rem;
+                                        }
+                                    }
+
+                                    h1.garanti {
+                                        font-size: 2.3rem;
+                                    }
+                                }
+                            }
+
+                            div.bottom {
+                                width: 43px;
+                                height: 43px;
+                                position: relative;
+                                left: 1.6rem;
+                            }
+                        }
+
+                        div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                            div.swiper-wrapper {
+                                div.swiper-slide {
+                                    div.slides {
+                                        img.card-img-top {}
+                                    }
+                                }
+                            }
+
+                            div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                                span.swiper-pagination-bullet {
+                                    height: 23px;
+                                    padding-right: 1.25rem;
+                                    font-size: 13px;
+                                }
+
+                                span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.images-content.images {
+                    img.image-fluid {}
                 }
             }
         }
@@ -98,16 +323,16 @@
     section.main-slider {
         div.container-fluid.box-slider {
             div.row.pratition-slider {
-                    div.sidebar-slider {
-                        div.card-columns.card-columns-slider {
-                            div.card {
-                                width: 48px;
-                                height: 48px;
-                            }
-
-                            div.card-body {}
+                div.sidebar-slider {
+                    div.card-columns.card-columns-slider {
+                        div.card {
+                            width: 48px;
+                            height: 48px;
                         }
+
+                        div.card-body {}
                     }
+                }
 
                 div.card.ccc {
                     div.card-body {
@@ -184,21 +409,20 @@
     }
 }
 
-
 @media(max-width :767px) {
     section.main-slider {
         div.container-fluid.box-slider {
             div.row.pratition-slider {
-                    div.sidebar-slider {
-                        div.card-columns.card-columns-slider {
-                            div.card {
-                                width: 45px;
-                                height: 45px;
-                            }
-
-                            div.card-body {}
+                div.sidebar-slider {
+                    div.card-columns.card-columns-slider {
+                        div.card {
+                            width: 45px;
+                            height: 45px;
                         }
+
+                        div.card-body {}
                     }
+                }
 
                 div.card.ccc {
                     div.card-body {
@@ -220,6 +444,7 @@
                             }
                         }
                     }
+
                     div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
                         width: 55%;
 
@@ -279,20 +504,21 @@
     section.main-slider {
         div.container-fluid.box-slider {
             div.row.pratition-slider {
-                    div.sidebar-slider {
-                        div.card-columns.card-columns-slider {
-                            div.card {
-                                width: 45px;
-                                height: 45px;
-                            }
-
-                            div.card-body {}
+                div.sidebar-slider {
+                    div.card-columns.card-columns-slider {
+                        div.card {
+                            width: 45px;
+                            height: 45px;
                         }
+
+                        div.card-body {}
                     }
+                }
 
                 div.card.ccc {
                     div.card-body {
                         height: 85%;
+
                         div.card-text {
                             h1.Tournament {
                                 font-size: 1.8rem;
@@ -325,6 +551,7 @@
                                 display: flex;
 
                                 div.slides {
+
                                     // width: 100%;
                                     img.card-img-top {}
                                 }

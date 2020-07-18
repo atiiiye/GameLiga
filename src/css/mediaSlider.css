@@ -4,63 +4,168 @@ body {
   background-color: #1c1c22;
 }
 
-@media (max-width: 991px) {
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns div.card {
-    width: 50px;
-    height: 50px;
+@media (max-width: 1120px) {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
+    height: 60%;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.card-body div.card-text {
-    width: 80%;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles {
+    position: relative;
+    left: 17%;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.card-body div.card-text h1.Tournament {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text {
+    width: max-content;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.Tournament {
+    font-size: 2.45rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title {
+    font-size: 2.45rem;
+    margin-top: .5rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title span.h1 {
+    font-size: 2.45rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.garanti {
+    font-size: 2.45rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+    width: 70%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid {
+    margin-top: 2rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1015px) {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias {
+    width: 55px;
+    height: 55px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media {
+    display: block;
+    padding: .5rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
+    width: 35px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
+    height: 60%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.top {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    top: 1.3rem;
+    left: 1.7rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles {
+    position: relative;
+    left: 15%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.line-orange {
+    width: 55px;
+    height: 27px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text {
+    width: max-content;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.Tournament {
+    font-size: 2.3rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title {
+    font-size: 2.3rem;
+    margin-top: .4rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title span.h1 {
+    font-size: 2.3rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.garanti {
     font-size: 2.5rem;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.card-body div.card-text h1.title {
-    font-size: 2.5rem;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.bottom {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    left: 1.7rem;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.card-body div.card-text h1.title span.h1 {
-    font-size: 2.5rem;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+    width: 70%;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.card-body div.card-text h1.garanti {
-    font-size: 2.6rem;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
+    height: 25px;
+    padding-right: 1.3rem;
+    font-size: 13px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
-    width: 55%;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    font-size: 17px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images {
     width: 100%;
-    margin-right: 0;
-  }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide {
-    width: 100%;
-    height: 60vh;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
     display: flex;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
-    display: flex;
-    flex-direction: column;
-    height: 130px;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid {
+    margin-top: 2rem;
+    width: 50%;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 50px;
-    padding-right: 1.2rem;
-    color: #ffffff;
-    font-size: 14px;
-    background: transparent;
+}
+
+@media (max-width: 970px) {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
+    width: 30px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.card.ccc div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    font-size: 18px;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.top {
+    width: 43px;
+    height: 43px;
+    position: relative;
+    top: 1.3rem;
+    left: 1.6rem;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.row.images {
-    width: 90%;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles {
+    position: relative;
+    left: 14.5%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.line-orange {
+    width: 52px;
+    height: 27px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text {
+    width: max-content;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.Tournament {
+    font-size: 2.27rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title {
+    font-size: 2.27rem;
+    margin-top: .4rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title span.h1 {
+    font-size: 2.27rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.garanti {
+    font-size: 2.3rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.bottom {
+    width: 43px;
+    height: 43px;
+    position: relative;
+    left: 1.6rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
+    height: 23px;
+    padding-right: 1.25rem;
+    font-size: 13px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    font-size: 17px;
   }
 }
 
 @media (max-width: 820px) {
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns div.card {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card {
     width: 48px;
     height: 48px;
   }
@@ -112,7 +217,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns div.card {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card {
     width: 45px;
     height: 45px;
   }
@@ -164,7 +269,7 @@ body {
 }
 
 @media (max-width: 690px) {
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns div.card {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card {
     width: 45px;
     height: 45px;
   }

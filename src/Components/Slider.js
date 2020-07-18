@@ -122,7 +122,6 @@ class Slider extends Component {
             </div>
             <Card className="content-slider" id="content">
               <div className="main-content">
-                
                 <div className="titles">
                   {/* <Canvas /> */}
                   <div className="top"></div>
