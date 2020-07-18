@@ -114,7 +114,7 @@ class Slider extends Component {
                 {this.state.icon.map((item) => (
                   <Card id="social-medias">
                     <Card.Body key={item.id} id="social-media">
-                      <NavLink className="icon-media" to="/"><img src={item.source} className="icon-image" alt=""></img></NavLink>
+                      <NavLink className="icon-media" to="/"><img src={item.source} className={`icon-image ${item.name}`} alt={item.name}></img></NavLink>
                     </Card.Body>
                   </Card>
                 ))}
