@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 //import components
-import Canvas from "./Canvas";
 
 //import css
 import "./../css/reset.css";
@@ -62,26 +61,26 @@ class Slider extends Component {
         source: sidan,
       },
     ],
-    icon:[
-     { 
-       id:1,
-       name: "facebook",
-       source: facebook,
-    },
-     {
-      id:2,
-      name:"instagram",
-      source: instagram,
+    icon: [
+      {
+        id: 1,
+        name: "facebook",
+        source: facebook,
       },
-     {
-       id:3,
-       name:"twitch",
-       source: twitch,
+      {
+        id: 2,
+        name: "instagram",
+        source: instagram,
       },
-     {
-      id:4,
-      name:"twitter",
-      source: twitter,
+      {
+        id: 3,
+        name: "twitch",
+        source: twitch,
+      },
+      {
+        id: 4,
+        name: "twitter",
+        source: twitter,
       }
     ]
   };
@@ -91,10 +90,10 @@ class Slider extends Component {
       centeredSlides: true,
       mousewheel: true,
       loop: true,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3500,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -107,44 +106,48 @@ class Slider extends Component {
     };
     return (
       <section className="main-slider">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="sidebar">
-              <CardColumns>
+        <div className="container-fluid box-slider">
+          <div className="row pratition-slider">
+            <div className="sidebar-slider">
+              <CardColumns className="card-columns-slider">
                 <div className="line"></div>
-                {this.state.icon.map((item)=>(
+                {this.state.icon.map((item) => (
                   <Card id="social-medias">
                     <Card.Body key={item.id} id="social-media">
-                      <NavLink className="icons" to="/"><img src={item.source} className="icon" alt=""></img></NavLink>
+                      <NavLink className="icon-media" to="/"><img src={item.source} className="icon-image" alt=""></img></NavLink>
                     </Card.Body>
                   </Card>
                 ))}
               </CardColumns>
             </div>
-            <Card className="row" id="content">
-              <div className="titles">
-                {/* <Canvas /> */}
-                <div className="top"></div>
-                <div className="card-bodys">
-                  <div className="line-orange"></div>
-                  <div className="card-text">
-                    <h1 className="h Tournament">Tournament</h1>
-                    <h1 className="h1 title">
-                      20<span className="h1">000kr</span>
-                    </h1>
-                    <h1 className="h1 garanti">Gauranteed</h1>
+            <Card className="content-slider" id="content">
+              <div className="main-content">
+                
+                <div className="titles">
+                  {/* <Canvas /> */}
+                  <div className="top"></div>
+                  <div className="card-body-titles">
+                    <div className="line-orange"></div>
+                    <div className="card-text">
+                      <h1 className="h Tournament">Tournament</h1>
+                      <h1 className="h1 title">
+                        20<span className="h1">000kr</span>
+                      </h1>
+                      <h1 className="h1 garanti">Gauranteed</h1>
+                    </div>
                   </div>
+                  <div className="bottom"></div>
                 </div>
-                <div className="bottom"></div>
+                <Swiper {...params}>
+                  {this.state.data.map((img) => (
+                    <div key={img.id} className="slides">
+                      <img src={img.source} className="card-img-top" alt="" />
+                    </div>
+                  ))}
+                </Swiper>
               </div>
-              <Swiper {...params}>
-                {this.state.data.map((img) => (
-                  <div key={img.id} className="slides">
-                    <img src={img.source} className="card-img-top" alt="" />
-                  </div>
-                ))}
-              </Swiper>
-              <div className="images">
+
+              <div className="images-content images">
                 <img src={background2} className="image-fluid"></img>
               </div>
             </Card>

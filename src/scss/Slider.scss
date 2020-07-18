@@ -5,7 +5,7 @@ section.main-slider {
     justify-content: flex-end;
     width: 100%;
 
-    div.container-fluid {
+    div.container-fluid.box-slider {
         display: flex;
         justify-content: flex-start;
         width: 100%;
@@ -15,7 +15,7 @@ section.main-slider {
         margin: 0;
         position: relative;
 
-        div.row {
+        div.row.pratition-slider {
             width: 100%;
             height: auto;
             margin-left: 0;
@@ -24,7 +24,7 @@ section.main-slider {
             padding-right: 0;
             // width: 100%;
 
-            div.sidebar {
+            div.sidebar-slider {
                 padding-right: 0;
                 margin-right: 0;
                 margin-left: 0;
@@ -34,7 +34,7 @@ section.main-slider {
                 align-items: center;
                 justify-content: center;
 
-                div.card-columns {
+                div.card-columns.card-columns-slider {
                     column-count: 1;
                     column-gap: 0;
                     display: flex;
@@ -60,6 +60,8 @@ section.main-slider {
                         border-radius: 0;
                         display: flex;
                         flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
                         margin-bottom: 0;
                         width: 60px;
                         height: 60px;
@@ -68,19 +70,20 @@ section.main-slider {
 
                         div.card-body#social-media {
                             border: 0;
-                            width: 100%;
+                            // width: 100%;
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            padding: .8rem;
 
-                            a#icons {
-                                width: 80%;
+                            a.icon-media {
+                                width: 100%;
 
                                 &:focus {
                                     outline: none;
                                 }
 
-                                img.icon {
+                                img.icon-image {
                                     &:focus {
                                         outline: none;
                                     }
@@ -91,9 +94,10 @@ section.main-slider {
                 }
             }
 
-            div#content {
+
+            div.content-slider#content {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: flex-end;
                 border-left: 2px solid $color-orange-1;
                 border-top: 2px solid $color-orange-1;
@@ -109,157 +113,166 @@ section.main-slider {
                 width: 90%;
                 margin-top: 0;
 
-                div.titles {
+                div.main-content{
                     display: flex;
-                    flex-direction: column;
-                    width: 30%;
-
-                    // div.canvas-element{
-                    //     display: flex;
-                    //     justify-content: flex-start;
-                    //     width: 30%;
-                    //     height: max-content;
-                    //     // position: relative;
-                    //     canvas#mycanvas{
-                    //         // width: 20%;
-                    //         display: flex;
-                    //         align-items: center;
-                    //         justify-content: flex-start;
-                    //         // flex-direction: column;
-                    //         padding-right: 0;
-                    //         position: relative;
-                    //         // left: -100%;
-                    //         height: 350px;
-                    //         width: 100%;
-                    //         top: 2rem;
-                    //     }
-                    // }
-                    div.top {
-                        width: 50px;
-                        height: 50px;
-                        border: 2px solid $color-gray-1;
-                        border-right: 0;
-                        border-bottom: 0;
-                        position: relative;
-                        top: 1.5rem;
-                        left: 2rem;
-                    }
-
-                    div.card-bodys {
-                        padding: 0;
-                        margin-top: 0;
-                        position: relative;
-                        left: 20%;
-                        // height: 100%;
-                        width: max-content;
+                    height: 60%;
+    
+                    div.titles {
                         display: flex;
                         flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        border: 0;
-
-                        div.line-orange {
-                            width: 60px;
-                            height: 30px;
-                            border: 3px solid $color-orange-1;
-                            border-bottom: 0;
-                            border-left: 0;
+                        width: 30%;
+    
+                        // div.canvas-element{
+                        //     display: flex;
+                        //     justify-content: flex-start;
+                        //     width: 30%;
+                        //     height: max-content;
+                        //     // position: relative;
+                        //     canvas#mycanvas{
+                        //         // width: 20%;
+                        //         display: flex;
+                        //         align-items: center;
+                        //         justify-content: flex-start;
+                        //         // flex-direction: column;
+                        //         padding-right: 0;
+                        //         position: relative;
+                        //         // left: -100%;
+                        //         height: 350px;
+                        //         width: 100%;
+                        //         top: 2rem;
+                        //     }
+                        // }
+                        div.top {
+                            width: 50px;
+                            height: 50px;
+                            border: 2px solid $color-gray-1;
                             border-right: 0;
+                            border-bottom: 0;
+                            position: relative;
+                            top: 1.5rem;
+                            left: 2rem;
                         }
-
-                        div.card-text {
+    
+                        div.card-body-titles {
+                            padding: 0;
+                            margin-top: 0;
+                            position: relative;
+                            left: 20%;
+                            // height: 100%;
+                            width: max-content;
                             display: flex;
                             flex-direction: column;
-                            justify-content: center;
                             align-items: center;
-                            position: relative;
-                            width: max-content;
-
-                            h1.Tournament {
-                                font-size: 2.8rem;
-                                color: $color-orange-1;
-                                font-weight: bold;
+                            justify-content: center;
+                            border: 0;
+    
+                            div.line-orange {
+                                width: 60px;
+                                height: 30px;
+                                border: 3px solid $color-orange-1;
+                                border-bottom: 0;
+                                border-left: 0;
+                                border-right: 0;
                             }
-
-                            h1.title {
-                                color: $color-orange-1;
-                                font-weight: bold;
-                                font-size: 2.8rem;
-                                margin-top: .5rem;
-
-                                span.h1 {
-                                    color: $color-white;
+    
+                            div.card-text {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                width: max-content;
+    
+                                h1.Tournament {
+                                    font-size: 2.8rem;
+                                    color: $color-orange-1;
+                                    font-weight: bold;
+                                }
+    
+                                h1.title {
+                                    color: $color-orange-1;
                                     font-weight: bold;
                                     font-size: 2.8rem;
+                                    margin-top: .5rem;
+    
+                                    span.h1 {
+                                        color: $color-white;
+                                        font-weight: bold;
+                                        font-size: 2.8rem;
+                                    }
+                                }
+    
+                                h1.garanti {
+                                    font-size: 3rem;
+                                    color: $color-white;
+                                    font-weight: bold;
                                 }
                             }
-
-                            h1.garanti {
-                                font-size: 3rem;
-                                color: $color-white;
-                                font-weight: bold;
-                            }
                         }
-                    }
-
-                    div.bottom {
-                        width: 50px;
-                        height: 50px;
-                        border: 2px solid $color-gray-1;
-                        border-right: 0;
-                        border-top: 0;
-                        position: relative;
-                        left: 2rem;
-                    }
-                }
-
-                div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
-                    width: 53%;
-                    margin-right: 0;
-
-                    div.swiper-wrapper {
-                        width: 100%;
-                        margin-right: 0;
-
-                        div.swiper-slide {
-                            width: 100%;
-                            // height: 60vh;
-                            display: flex !important;
-
-                            div.slides {
-
-                                // width: 100%;
-                                img.card-img-top {}
-                            }
-                        }
-                    }
-
-                    div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
-                        display: flex;
-                        flex-direction: column;
-                        height: 130px;
-
-                        span.swiper-pagination-bullet {
-                            display: flex;
-                            justify-content: flex-end;
-                            width: 100%;
+    
+                        div.bottom {
+                            width: 50px;
                             height: 50px;
-                            padding-right: 1.5rem;
-                            color: #ffffff;
-                            font-size: 14px;
-                            background: transparent;
+                            border: 2px solid $color-gray-1;
+                            border-right: 0;
+                            border-top: 0;
+                            position: relative;
+                            left: 2rem;
                         }
-
-                        span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-                            font-size: 19px;
-                            // font-weight: bold;
-
+                    }
+    
+                    div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+                        width: 70%;
+                        margin-right: 0;
+    
+                        div.swiper-wrapper {
+                            width: 100%;
+                            margin-right: 0;
+    
+                            div.swiper-slide {
+                                width: 100%;
+                                // height: 60vh;
+                                display: flex !important;
+    
+                                div.slides {
+    
+                                    // width: 100%;
+                                    img.card-img-top {}
+                                }
+                            }
+                        }
+    
+                        div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+                            display: flex;
+                            flex-direction: column;
+                            height: 130px;
+    
+                            span.swiper-pagination-bullet {
+                                display: flex;
+                                justify-content: flex-end;
+                                width: 100%;
+                                height: 30px;
+                                padding-right: 1.5rem;
+                                color: #ffffff;
+                                font-size: 14px;
+                                background: transparent;
+                            }
+    
+                            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                                font-size: 19px;
+                                font-weight: bold;
+    
+                            }
                         }
                     }
                 }
+
+
+
+                
             }
 
-            div.images {
+            div.images-content.images {
                 width: 100%;
                 display: flex;
                 height: 45vh;
