@@ -67,6 +67,10 @@ section.main-slider {
                         height: 60px;
                         // margin-right: auto;
                         margin-top: 0;
+                        border-bottom:0;
+                        &:last-child{
+                            border-bottom: 2px solid $color-gray-1;
+                        }
 
                         div.card-body#social-media {
                             border: 0;

@@ -73,6 +73,11 @@ section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.
   width: 60px;
   height: 60px;
   margin-top: 0;
+  border-bottom: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias:last-child {
+  border-bottom: 2px solid #36363b;
 }
 
 section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media {

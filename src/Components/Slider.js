@@ -88,7 +88,7 @@ class Slider extends Component {
     const params = {
       spaceBetween: 30,
       centeredSlides: true,
-      mousewheel: true,
+      // mousewheel: true,
       loop: true,
       // autoplay: {
       //   delay: 3500,
