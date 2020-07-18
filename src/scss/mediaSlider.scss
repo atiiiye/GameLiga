@@ -690,6 +690,7 @@
 
                                 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
                                     font-size: 16px;
+                                    font-weight: 500;
                                 }
                             }
                         }
@@ -793,13 +794,13 @@
 
                             div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
                                 span.swiper-pagination-bullet {
-                                    height: 23px;
-                                    padding-right: 1.2rem;
-                                    font-size: 13px;
+                                    height: 20px;
+                                    padding-right: 1rem;
+                                    font-size: 12px;
                                 }
 
                                 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-                                    font-size: 16px;
+                                    font-size: 15px;
                                 }
                             }
                         }
@@ -816,4 +817,8 @@
             }
         }
     }
+}
+
+@media (max-width:455px){
+    
 }
