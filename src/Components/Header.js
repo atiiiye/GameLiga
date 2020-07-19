@@ -104,7 +104,7 @@ export default class Header extends Component {
                       to="/"
                       exact
                       onClick={() => {
-                        this.setState({ show: true });
+                        this.setState({ show: true })
                         // this.addingRefButton.bind(this)
                       }}
                     >

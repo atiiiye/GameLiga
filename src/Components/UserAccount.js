@@ -56,7 +56,7 @@ class UserAccount extends Component {
                 <Card id="content">
                     {
 
-                        console.log(this.state.posters.length)
+                        // console.log(this.state.posters.length)
                     }
                     <div className="row games">
                         {this.state.posters.map(item => (
