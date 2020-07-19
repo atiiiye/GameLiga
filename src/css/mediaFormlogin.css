@@ -1,0 +1,103 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+@media (max-width: 767px) {
+  div.modal-content {
+    margin-top: 11.2%;
+  }
+  div.modal-content div.modal-body {
+    width: 100%;
+  }
+  div.modal-content div.modal-body div.modal-title h2 {
+    font-size: 1.7rem;
+  }
+  div.modal-content div.modal-body div.modal-title p.text-white {
+    margin-top: .3rem;
+    font-size: 75%;
+  }
+  div.modal-content div.modal-body div.modal-title p.text-white a {
+    font-size: 70%;
+  }
+  div.modal-content div.modal-body form.form-login {
+    width: 100%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields {
+    margin-top: .5rem;
+    width: 80%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields label {
+    font-size: 75%;
+    width: 70%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields div.input-group span {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields input {
+    font-size: 85%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields div.form-validate {
+    font-size: 85%;
+  }
+  div.modal-content div.modal-body form.form-login a.forgot {
+    font-size: 80%;
+    width: 75%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-group button {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 455px) {
+  div.modal-content {
+    margin-top: 13%;
+  }
+  div.modal-content div.modal-body {
+    width: 100%;
+  }
+  div.modal-content div.modal-body div.modal-title h2 {
+    font-size: 1.4rem;
+  }
+  div.modal-content div.modal-body div.modal-title p.text-white {
+    margin-top: .2rem;
+    font-size: 70%;
+  }
+  div.modal-content div.modal-body div.modal-title p.text-white a {
+    font-size: 70%;
+  }
+  div.modal-content div.modal-body form.form-login {
+    width: 100%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields {
+    margin-top: .5rem;
+    width: 80%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields label {
+    font-size: 75%;
+    width: 70%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields div.input-group span {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields input {
+    font-size: 85%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-fields div.form-validate {
+    font-size: 80%;
+    margin-bottom: .25rem;
+  }
+  div.modal-content div.modal-body form.form-login a.forgot {
+    font-size: 72%;
+    width: 83%;
+  }
+  div.modal-content div.modal-body form.form-login div.form-group button {
+    font-size: 88%;
+  }
+}
+/*# sourceMappingURL=mediaFormlogin.css.map */

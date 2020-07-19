@@ -35,7 +35,7 @@ body {
   }
   div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link {
     font-size: 88%;
-    padding: .5rem .6rem;
+    padding: .5rem .7rem;
   }
   div.container-fluid div.navbar div.nav-left {
     width: 240px;
@@ -86,6 +86,10 @@ body {
     display: flex;
     padding-right: 5px;
     padding-top: 0;
+  }
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link {
+    font-size: 85%;
+    padding: .5rem .7rem;
   }
   div.container-fluid nav.navbar div.nav-left {
     width: 240px;

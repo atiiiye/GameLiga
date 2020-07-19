@@ -371,7 +371,6 @@ body {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
     display: flex;
     flex-direction: column;
-    height: 60%;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles {
     position: relative;
@@ -464,6 +463,60 @@ body {
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     font-size: 15px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid {
+    margin-top: 2.3rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 455px) {
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider {
+    width: 1%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider {
+    display: none;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content {
+    width: 99%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
+    height: 60%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.line-orange {
+    border: 2px solid #ff9300;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 49px;
+    height: 5px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.Tournament {
+    font-size: 1.9rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title {
+    font-size: 1.9rem;
+    margin-top: .3rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title span.h1 {
+    font-size: 1.9rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.garanti {
+    font-size: 1.9rem;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+    width: 100%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide {
+    width: 100%;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
+    height: 17px;
+    padding-right: .7rem;
+    font-size: 11px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    font-size: 14px;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid {
     margin-top: 2.3rem;

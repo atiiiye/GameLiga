@@ -249,6 +249,7 @@ section.main-slider {
                         div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
                             display: flex;
                             flex-direction: column;
+                            justify-content: flex-end;
                             height: 130px;
     
                             span.swiper-pagination-bullet {
