@@ -7,10 +7,9 @@ import './../css/mediaSignup.css'
 
 
 //import boostrap
-import { Card, Form, Button } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 //import routes
-// import { Route, BrowserRouter } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 class SignUp extends Component {

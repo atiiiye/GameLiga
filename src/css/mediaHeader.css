@@ -5,56 +5,37 @@ body {
 }
 
 @media (max-width: 991px) {
-  div.container-fluid div.navbar div.nav-right {
-    display: flex;
-    width: max-content;
+  div.container-fluid nav.navbar div.nav-right {
+    width: 70%;
   }
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav {
-    display: flex;
-    flex-direction: row;
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav {
     padding-right: 0;
   }
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons {
-    display: flex;
-  }
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item {
-    padding-right: 7px;
-  }
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signup,
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
-    font-size: 88%;
-    border: 1px solid #ff9300;
-    border-radius: 28px;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item {
-    display: flex;
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item {
     padding-right: 5px;
-    padding-top: 3px;
   }
-  div.container-fluid div.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link {
-    font-size: 88%;
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signup,
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav li.nav-item {
+    padding-right: 5px;
+  }
+  div.container-fluid nav.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link {
+    font-size: 85%;
     padding: .5rem .7rem;
   }
-  div.container-fluid div.navbar div.nav-left {
-    width: 240px;
+  div.container-fluid nav.navbar div.nav-left {
+    width: 27%;
   }
-  div.container-fluid div.navbar div.nav-left div.empty-content {
-    width: 90%;
-    height: 2rem;
-    position: relative;
-    left: -20px;
+  div.container-fluid nav.navbar div.nav-left div.empty-content {
+    height: 1.9rem;
   }
-  div.container-fluid div.navbar div.nav-left h4.UFOGame {
-    font-weight: 600;
-    width: auto;
-    margin-bottom: 0;
-  }
-  div.container-fluid div.navbar div.nav-left img.logo {
-    margin-right: 5px;
-    width: 50px;
-    height: 40px;
+  div.container-fluid nav.navbar div.nav-left img.logo {
+    margin-right: 7px;
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -72,18 +53,15 @@ body {
     display: flex;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item {
-    padding-right: 7px;
+    padding-right: 5px;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signup,
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
     font-size: 85%;
-    border: 1px solid #ff9300;
-    border-radius: 28px;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav li.nav-item {
-    display: flex;
     padding-right: 5px;
     padding-top: 0;
   }
@@ -96,18 +74,17 @@ body {
   }
   div.container-fluid nav.navbar div.nav-left div.empty-content {
     width: 90%;
-    height: 2rem;
+    height: 1.9rem;
     position: relative;
     left: -20px;
   }
   div.container-fluid nav.navbar div.nav-left h4.UFOGame {
-    font-weight: 600;
     width: auto;
     margin-bottom: 0;
   }
   div.container-fluid nav.navbar div.nav-left img.logo {
     margin-right: 5px;
-    width: 45px;
+    width: 40px;
     height: 40px;
   }
 }
@@ -163,7 +140,7 @@ body {
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav li.nav-item a.nav-link {
     padding-left: .5rem;
     padding-right: .5rem;
-    font-size: 85%;
+    font-size: 80%;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons {
     display: flex;
@@ -171,18 +148,17 @@ body {
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item {
     padding-right: 5px;
+    margin-bottom: .1rem;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#signup,
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.buttons li.nav-item a.nav-link#login {
-    font-size: 75%;
-    border: 1px solid #ff9300;
+    font-size: 70%;
     border-radius: 28px;
-    padding-left: .8rem;
-    padding-right: .8rem;
+    padding: .4rem .7rem;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.navbar-collapse.collapse.show {
     display: flex;
-    transform: translate(0, 25%);
+    transform: translate(0, 20%);
     transition: transform .2s linear;
   }
   div.container-fluid nav.navbar div.nav-right ul.navbar-nav div.navbar-collapse.collapsing {
@@ -192,8 +168,8 @@ body {
     width: 240px;
   }
   div.container-fluid nav.navbar div.nav-left div.empty-content {
-    width: 90%;
-    height: 2rem;
+    width: 85%;
+    height: 1.6rem;
     position: relative;
     left: -20px;
   }
@@ -201,6 +177,7 @@ body {
     font-weight: 600;
     width: auto;
     margin-bottom: 0;
+    font-size: 95%;
   }
   div.container-fluid nav.navbar div.nav-left img.logo {
     margin-right: 5px;

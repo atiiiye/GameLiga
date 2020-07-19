@@ -11,7 +11,7 @@ import SignUp from "./Components/SignUp";
 import Sidebar from "./Components/Sidebar";
 import NotFound from "./Components/NotFound";
 import Header from "./Components/Header.js";
-import MainCard from "./Components/MainCard";
+// import MainCard from "./Components/MainCard";
 import UserAccount from "./Components/UserAccount";
 
 

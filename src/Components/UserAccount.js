@@ -7,7 +7,7 @@ import './../css/mediaUserAccount.css'
 //import bootstrap
 import { Card } from "react-bootstrap";
 
-import MainCard from "./MainCard";
+// import MainCard from "./MainCard";
 
 
 //import images

@@ -3,72 +3,58 @@
 
 @media(max-width :991px) {
     div.container-fluid {
-        div.navbar {
-
+        nav.navbar {    
             div.nav-right {
-                display: flex;
-                width: max-content;
-
+                width: 70%;
+    
                 ul.navbar-nav {
-                    display: flex;
-                    flex-direction: row;
                     padding-right: 0;
-
-                    div.buttons {
-                        display: flex;
-
+    
+                    div.buttons {    
                         li.nav-item {
-                            padding-right: 7px;
-
+                            padding-right: 5px;
+    
                             a.nav-link#signup,
                             a.nav-link#login {
-                                font-size: 88%;
-                                border: 1px solid $color-orange-1;
-                                border-radius: 28px;
-                                padding-left: 1.5rem !important;
-                                padding-right: 1.5rem !important;
+                                padding-left: 1.5rem;
+                                padding-right: 1.5rem;
                             }
                         }
                     }
-
+    
                     li.nav-item {
-                        display: flex;
                         padding-right: 5px;
-                        padding-top: 3px;
-
+    
                         a.nav-link {
-                            font-size: 88%;
+                            font-size: 85%;
                             padding: .5rem .7rem;
                         }
+    
                     }
+    
                 }
+    
             }
-
+    
             div.nav-left {
-                width: 240px;
-
+                width: 27%;
+    
                 div.empty-content {
-                    width: 90%;
-                    height: 2rem;
-                    position: relative;
-                    left: -20px
+                    height: 1.9rem;
                 }
-
+    
                 h4.UFOGame {
-                    font-weight: 600;
-                    width: auto;
-                    margin-bottom: 0;
-
                     span {}
                 }
-
+    
                 img.logo {
-                    margin-right: 5px;
-                    width: 50px;
-                    height: 40px;
+                    margin-right: 7px;
+                    width: 45px;
+                    height: 45px;
                 }
-
+    
             }
+    
         }
     }
 }
@@ -88,13 +74,11 @@
                         display: flex;
 
                         li.nav-item {
-                            padding-right: 7px;
+                            padding-right: 5px;
 
                             a.nav-link#signup,
                             a.nav-link#login {
                                 font-size: 85%;
-                                border: 1px solid $color-orange-1;
-                                border-radius: 28px;
                                 padding-left: 1.2rem;
                                 padding-right: 1.2rem;
                             }
@@ -102,11 +86,9 @@
                     }
 
                     li.nav-item {
-                        display: flex;
                         padding-right: 5px;
                         padding-top: 0;
-                        // position: relative;
-                        // left: -3rem;
+                  
 
                         a.nav-link {
                             font-size: 85%;
@@ -121,13 +103,12 @@
 
                 div.empty-content {
                     width: 90%;
-                    height: 2rem;
+                    height: 1.9rem;
                     position: relative;
                     left: -20px
                 }
 
                 h4.UFOGame {
-                    font-weight: 600;
                     width: auto;
                     margin-bottom: 0;
 
@@ -136,7 +117,7 @@
 
                 img.logo {
                     margin-right: 5px;
-                    width: 45px;
+                    width: 40px;
                     height: 40px;
                 }
             }
@@ -156,8 +137,6 @@
                 top: 0;
 
                 button.navbar-toggler {
-
-                    // display: table;
 
                     &:focus {
                         border: none;
@@ -210,7 +189,7 @@
                         a.nav-link {
                             padding-left: .5rem;
                             padding-right: .5rem;
-                            font-size: 85%;
+                            font-size: 80%;
                         }
                     }
 
@@ -220,21 +199,20 @@
 
                         li.nav-item {
                             padding-right: 5px;
+                            margin-bottom: .1rem;
 
                             a.nav-link#signup,
                             a.nav-link#login {
-                                font-size: 75%;
-                                border: 1px solid $color-orange-1;
+                                font-size: 70%;
                                 border-radius: 28px;
-                                padding-left: .8rem;
-                                padding-right: .8rem;
+                                padding: .4rem .7rem;
                             }
                         }
                     }
 
                     div.navbar-collapse.collapse.show {
                         display: flex;
-                        transform: translate(0, 25%);
+                        transform: translate(0, 20%);
                         transition: transform .2s linear;
                     }
 
@@ -249,8 +227,8 @@
                 width: 240px;
 
                 div.empty-content {
-                    width: 90%;
-                    height: 2rem;
+                    width: 85%;
+                    height: 1.6rem;
                     position: relative;
                     left: -20px
                 }
@@ -259,6 +237,7 @@
                     font-weight: 600;
                     width: auto;
                     margin-bottom: 0;
+                    font-size: 95%;
 
                     span {}
                 }
@@ -280,3 +259,8 @@
         display: none;
     }
 }
+
+
+@media (min-width:550px){
+
+} 

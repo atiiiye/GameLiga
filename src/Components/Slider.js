@@ -9,11 +9,11 @@ import "./../css/mediaSlider.css";
 import "./../css/formlogin.css";
 
 //import image
-import slide1 from "./../images/slide-1.1.png";
-import slide3 from "./../images/slide-3.1.png";
-import slide5 from "./../images/slide-5.1.png";
-import slide7 from "./../images/slide-7.png";
-import slide8 from "./../images/slide-8.png";
+// import slide1 from "./../images/slide-1.1.png";
+// import slide3 from "./../images/slide-3.1.png";
+// import slide5 from "./../images/slide-5.1.png";
+// import slide7 from "./../images/slide-7.png";
+// import slide8 from "./../images/slide-8.png";
 import sidan from "./../images/sidan.png";
 import background2 from "./../images/background2.png";
 import facebook from "./../images/Icon-facebook.png";
@@ -112,8 +112,8 @@ class Slider extends Component {
               <CardColumns className="card-columns-slider">
                 <div className="line"></div>
                 {this.state.icon.map((item) => (
-                  <Card id="social-medias">
-                    <Card.Body key={item.id} id="social-media">
+                  <Card id="social-medias" key={item.id}>
+                    <Card.Body id="social-media">
                       <NavLink className="icon-media" to="/"><img src={item.source} className={`icon-image ${item.name}`} alt={item.name}></img></NavLink>
                     </Card.Body>
                   </Card>
@@ -147,7 +147,7 @@ class Slider extends Component {
               </div>
 
               <div className="images-content images">
-                <img src={background2} className="image-fluid"></img>
+                <img src={background2} className="image-fluid" alt=""></img>
               </div>
             </Card>
           </div>
