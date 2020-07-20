@@ -17,6 +17,10 @@ import Grid3 from './../images/Grid3.png';
 import Grid4 from './../images/Grid4.png';
 import Grid5 from './../images/Grid5.png';
 
+// import packages
+import Swiper from "react-id-swiper";
+import "swiper/css/swiper.css";
+
 
 class UserAccount extends Component {
 
@@ -51,24 +55,41 @@ class UserAccount extends Component {
     }
 
     render() {
+        const params = {
+            spaceBetween: 30,
+            centeredSlides: true,
+            // mousewheel: true,
+            loop: true,
+            autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+            },
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 50,
+        }
         return (
             <div className="container-fluid userAccount">
                 <Card id="content">
-                    {
-
-                        // console.log(this.state.posters.length)
-                    }
                     <div className="row games">
-                        {this.state.posters.map(item => (
-                            <div className="game" key={item.id}>
-                                <img src={item.source} alt={item.name} className="game-image"></img>
-                                <div className="online">online</div>
-                                {/* <img src={item.source} alt={item.name} className="game-image-ref"></img> */}
-                            </div>
-                            // if(this.state.posters.lenght%4){
+                    {this.state.posters.map(item => (
+                                <div className="game d-none d-md-flex" key={item.id}>
+                                    <img src={item.source} alt={item.name} className="game-image"></img>
+                                    <div className="online">online</div>
+                                    {/* <img src={item.source} alt={item.name} className="game-image-ref"></img> */}
+                                </div>
+                                // if(this.state.posters.lenght%4){}
+                            ))}
 
-                            // }
-                        ))}
+                        <Swiper {...params} className="swiper-account">
+                            {this.state.posters.map(item => (
+                                <div className="game d-block d-md-none" key={item.id}>
+                                    <img src={item.source} alt={item.name} className="game-image"></img>
+                                    <div className="online">online</div>
+                                </div>
+                            ))}
+                        </Swiper>
+
                     </div>
                     <div className="empty-square"></div>
                 </Card>
