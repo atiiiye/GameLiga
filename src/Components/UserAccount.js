@@ -60,13 +60,13 @@ class UserAccount extends Component {
             centeredSlides: true,
             // mousewheel: true,
             loop: true,
-            autoplay: {
-              delay: 4000,
-              disableOnInteraction: false,
-            },
+            // autoplay: {
+            //   delay: 3500,
+            //   disableOnInteraction: false,
+            // },
             slidesPerView: 'auto',
             centeredSlides: true,
-            spaceBetween: 50,
+            spaceBetween: 10,
         }
         return (
             <div className="container-fluid userAccount">
@@ -83,7 +83,7 @@ class UserAccount extends Component {
 
                         <Swiper {...params} className="swiper-account">
                             {this.state.posters.map(item => (
-                                <div className="game d-block d-md-none" key={item.id}>
+                                <div className="game d-flex d-md-none" key={item.id}>
                                     <img src={item.source} alt={item.name} className="game-image"></img>
                                     <div className="online">online</div>
                                 </div>
