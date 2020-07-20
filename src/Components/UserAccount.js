@@ -60,12 +60,12 @@ class UserAccount extends Component {
             centeredSlides: true,
             loop: true,
             autoplay: {
-              delay: 3500,
+              delay: 3000,
               disableOnInteraction: false,
             },
             slidesPerView: 'auto',
             centeredSlides: true,
-            spaceBetween: 10,
+            spaceBetween: 20,
         }
         return (
             <div className="container-fluid userAccount">
