@@ -6,7 +6,7 @@ body {
 
 @media (max-width: 1199px) {
   div.sidebar-menu {
-    width: 15%;
+    width: 16%;
   }
   div.sidebar-menu ul.list-menu {
     height: 80%;
@@ -20,7 +20,7 @@ body {
 
 @media (max-width: 991px) {
   div.sidebar-menu {
-    width: 16.3%;
+    width: 20%;
   }
   div.sidebar-menu ul.list-menu {
     height: 80%;
@@ -33,9 +33,6 @@ body {
 }
 
 @media (max-width: 891px) {
-  div.sidebar-menu {
-    width: 16.3%;
-  }
   div.sidebar-menu ul.list-menu {
     height: 80%;
     width: 100%;
@@ -43,6 +40,12 @@ body {
   div.sidebar-menu ul.list-menu li.list-item a.nav-link {
     line-height: 28px;
     font-size: 85%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.sidebar-menu {
+    width: 20%;
   }
 }
 /*# sourceMappingURL=mediaSidebar.css.map */

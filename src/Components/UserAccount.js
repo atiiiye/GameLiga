@@ -58,12 +58,11 @@ class UserAccount extends Component {
         const params = {
             spaceBetween: 30,
             centeredSlides: true,
-            // mousewheel: true,
             loop: true,
-            // autoplay: {
-            //   delay: 3500,
-            //   disableOnInteraction: false,
-            // },
+            autoplay: {
+              delay: 3500,
+              disableOnInteraction: false,
+            },
             slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 10,

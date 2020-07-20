@@ -1,11 +1,10 @@
 @import 'base';
 
-@media(max-width:1199px) {
+@media(max-width:1200px) {
     div.container-fluid.userAccount {
         background-size: 65% 100%, 100%;
 
         div.card#content {
-
             height: max-content;
             padding-left: 0;
             padding-right: 0;
@@ -17,14 +16,16 @@
 
                 div.game {
                     padding: 0;
-                    width: 25%;
+                    width: 21%;
                     margin-bottom: 1.5rem;
                     margin-right: auto;
+                    margin-left: 0;
                     z-index: 15;
 
                     img.game-image {
                         // height: 50%;
                         margin-bottom: .8rem;
+                        width: 160px;
                         -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                     }
 
@@ -58,7 +59,6 @@
         background-size: 65% 100%, 100%;
 
         div.card#content {
-
             height: max-content;
             padding-left: 0;
             padding-right: 0;
@@ -66,18 +66,18 @@
             min-height: 100%;
 
             div.row.games {
-                margin: .8rem 0;
+                margin: .8rem 0 .8rem 1rem;
 
                 div.game {
                     padding: 0;
-                    width: 33%;
+                    width: 21%;
                     margin-bottom: 1.5rem;
                     margin-right: auto;
                     z-index: 15;
 
                     img.game-image {
                         // height: 50%;
-                        width: 185px;
+                        width: 145px;
                         margin-bottom: .8rem;
                         -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                     }
@@ -106,53 +106,33 @@
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
     div.container-fluid.userAccount {
         background-size: 65% 100%, 100%;
+        width: 80%;
 
         div.card#content {
-
-            height: max-content;
+            // height: max-content;
             padding-left: 0;
             padding-right: 0;
             width: 100%;
             min-height: 100%;
 
             div.row.games {
-                margin: .8rem 0;
-
-                div.game {
-
-
-                    img.game-image {
-                        // height: 50%;
-                        width: 185px;
-                        margin-bottom: .8rem;
-                        -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
-                    }
-
-                    div.online {
-                        width: 50%;
-                        // height: 22%;
-                        padding-left: .5rem;
-                        border-radius: 28px;
-                        padding-top: .5rem;
-                        font-size: 85%;
-                        padding-bottom: .5rem;
-                    }
-                }
+                margin: .8rem .3rem;
 
                 div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
                     div.swiper-wrapper {
-                        div.swiper-slide.game.swiper-slide-duplicate {
+                        div.swiper-slide.game {
                             padding: 0;
-                            // width: max-content;
+                            width: 33%;
                             margin-bottom: 1rem;
+                            margin-right: 0;
                             // margin-right: auto;
                             z-index: 15;
 
                             img.game-image {
-                                // width: 150px;
+                                width: 150px;
                                 margin-bottom: .6rem;
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                             }
@@ -162,13 +142,13 @@
                                 color: $color-gray-2;
                                 width: 50%;
                                 border-radius: 28px;
-                                padding-top: .5rem;
-                                padding-left: .5rem;
-                                padding-bottom: .5rem;
+                                padding: .5rem;
                                 font-size: 80%;
                             }
                         }
                         div.swiper-slide.game.swiper-slide-active{
+                            margin-right: 10px;
+                            width: 40%;
                             img.game-image {
                                 // width: 150px;
                                 margin-bottom: .6rem;
@@ -178,17 +158,35 @@
                             }
                         }
                         div.swiper-slide.game.swiper-slide-prev{
+                            // margin-right: 0 !important;
+                            width: 30%;
                             img.game-image {
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(.85);
                                 opacity: .8;
                             }
+                            div.online {
+                                width: 60%;
+                                padding: .5rem;
+                                font-size: 80%;
+                                position: relative;
+                                bottom: 1rem;
+                            }
                         }
                         div.swiper-slide.game.swiper-slide-next{
+                            // margin-right: 0 !important;
+                            width: 30%;
                             img.game-image {
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(.85);
                                 opacity: .8;
+                            }
+                            div.online {
+                                width: 60%;
+                                padding: .5rem;
+                                font-size: 80%;
+                                position: relative;
+                                bottom: 1rem;
                             }
                         }
                     }

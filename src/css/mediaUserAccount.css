@@ -20,13 +20,15 @@ body {
   }
   div.container-fluid.userAccount div.card#content div.row.games div.game {
     padding: 0;
-    width: 25%;
+    width: 21%;
     margin-bottom: 1.5rem;
     margin-right: auto;
+    margin-left: 0;
     z-index: 15;
   }
   div.container-fluid.userAccount div.card#content div.row.games div.game img.game-image {
     margin-bottom: .8rem;
+    width: 160px;
     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
   }
   div.container-fluid.userAccount div.card#content div.row.games div.game div.online {
@@ -58,17 +60,17 @@ body {
     min-height: 100%;
   }
   div.container-fluid.userAccount div.card#content div.row.games {
-    margin: .8rem 0;
+    margin: .8rem 0 .8rem 1rem;
   }
   div.container-fluid.userAccount div.card#content div.row.games div.game {
     padding: 0;
-    width: 33%;
+    width: 21%;
     margin-bottom: 1.5rem;
     margin-right: auto;
     z-index: 15;
   }
   div.container-fluid.userAccount div.card#content div.row.games div.game img.game-image {
-    width: 185px;
+    width: 145px;
     margin-bottom: .8rem;
     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
   }
@@ -89,66 +91,78 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   div.container-fluid.userAccount {
     background-size: 65% 100%, 100%;
+    width: 80%;
   }
   div.container-fluid.userAccount div.card#content {
-    height: max-content;
     padding-left: 0;
     padding-right: 0;
     width: 100%;
     min-height: 100%;
   }
   div.container-fluid.userAccount div.card#content div.row.games {
-    margin: .8rem 0;
+    margin: .8rem .3rem;
   }
-  div.container-fluid.userAccount div.card#content div.row.games div.game img.game-image {
-    width: 185px;
-    margin-bottom: .8rem;
-    -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
-  }
-  div.container-fluid.userAccount div.card#content div.row.games div.game div.online {
-    width: 50%;
-    padding-left: .5rem;
-    border-radius: 28px;
-    padding-top: .5rem;
-    font-size: 85%;
-    padding-bottom: .5rem;
-  }
-  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-duplicate {
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game {
     padding: 0;
+    width: 33%;
     margin-bottom: 1rem;
+    margin-right: 0;
     z-index: 15;
   }
-  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-duplicate img.game-image {
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game img.game-image {
+    width: 150px;
     margin-bottom: .6rem;
     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
   }
-  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-duplicate div.online {
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game div.online {
     background: black;
     color: #959aa2;
     width: 50%;
     border-radius: 28px;
-    padding-top: .5rem;
-    padding-left: .5rem;
-    padding-bottom: .5rem;
+    padding: .5rem;
     font-size: 80%;
+  }
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-active {
+    margin-right: 10px;
+    width: 40%;
   }
   div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-active img.game-image {
     margin-bottom: .6rem;
     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
     transform: scale(1);
   }
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-prev {
+    width: 30%;
+  }
   div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-prev img.game-image {
     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
     transform: scale(0.85);
     opacity: .8;
   }
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-prev div.online {
+    width: 60%;
+    padding: .5rem;
+    font-size: 80%;
+    position: relative;
+    bottom: 1rem;
+  }
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-next {
+    width: 30%;
+  }
   div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-next img.game-image {
     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
     transform: scale(0.85);
     opacity: .8;
+  }
+  div.container-fluid.userAccount div.card#content div.row.games div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide.game.swiper-slide-next div.online {
+    width: 60%;
+    padding: .5rem;
+    font-size: 80%;
+    position: relative;
+    bottom: 1rem;
   }
   div.container-fluid.userAccount div.card#content div.empty-square {
     width: 14%;

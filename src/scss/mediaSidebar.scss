@@ -1,9 +1,9 @@
 @import 'base';
 
 
-@media(max-width:1199px) {
+@media(max-width:1200px) {
     div.sidebar-menu {
-        width: 15%;
+        width: 16%;
 
         ul.list-menu {
             height: 80%;
@@ -22,7 +22,7 @@
 
 @media(max-width:991px) {
     div.sidebar-menu {
-        width: 16.3%;
+        width: 20%;
 
         ul.list-menu {
             height: 80%;
@@ -41,7 +41,7 @@
 
 @media(max-width:891px) {
     div.sidebar-menu {
-        width: 16.3%;
+        // width: 16.3%;
 
         ul.list-menu {
             height: 80%;
@@ -55,5 +55,10 @@
             }
         }
 
+    }
+}
+@media(max-width:767px){
+    div.sidebar-menu {
+        width: 20%;
     }
 }
