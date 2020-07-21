@@ -34,7 +34,7 @@ div.container-fluid.FinalResult div.card#content div.parent-content {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: max-content;
+  height: 300px;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content h2.h2.result.section-1 {
@@ -47,7 +47,7 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 50%;
   height: max-content;
 }
 

@@ -143,5 +143,7 @@ nav.navbar.user-header div.navbar-left input[type="search"] {
   font-size: 85%;
   color: #959aa2;
   padding-left: 5px;
+  position: relative;
+  left: -10px;
 }
 /*# sourceMappingURL=UserHeader.css.map */
