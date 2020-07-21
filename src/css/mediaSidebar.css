@@ -4,7 +4,7 @@ body {
   background-color: #1c1c22;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   div.sidebar-menu {
     width: 16%;
   }
@@ -46,6 +46,25 @@ body {
 @media (max-width: 767px) {
   div.sidebar-menu {
     width: 20%;
+  }
+}
+
+@media (max-width: 690px) {
+  div.sidebar-menu ul.list-menu {
+    height: 80%;
+    width: 100%;
+  }
+  div.sidebar-menu ul.list-menu li.list-item a.nav-link {
+    line-height: 28px;
+    font-size: 80%;
+    padding: .4rem .8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  div.sidebar-menu {
+    display: none;
+    width: 0;
   }
 }
 /*# sourceMappingURL=mediaSidebar.css.map */

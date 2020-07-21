@@ -221,7 +221,7 @@
     }
 }
 
-@media(max-width:610px){
+@media(max-width:690px){
     div.container-fluid.userAccount {
         width: 80%;
 
@@ -242,7 +242,7 @@
                         div.swiper-slide.game.swiper-slide-next ,
                         div.swiper-slide.game.swiper-slide-duplicate,
                         div.swiper-slide.game {
-                            width: 25%;
+                            width: 23%;
 
                             img.game-image {
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
@@ -251,7 +251,7 @@
                             }
 
                             div.online {
-                                width: 70%;
+                                width: 75%;
                                 padding: .5rem;
                                 font-size: 78%;
                                 position: relative;
@@ -260,16 +260,16 @@
                         }
 
                         div.swiper-slide.game.swiper-slide-active {
-                            width: 45%;
+                            width: 40%;
 
                             img.game-image {
-                                // width: 150px;
+                                // width: 130px;
                                 margin-bottom: .6rem;
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(1);
                             }
                             div.online {
-                                width: 90%;
+                                width: 55%;
                                 padding: .5rem;
                                 font-size: 80%;
                                 position: relative;
@@ -290,6 +290,12 @@
             }
         }
 
+    }
+}
+
+@media(max-width:575px){
+    div.container-fluid.userAccount {
+        width: 100%;
     }
 }
 
