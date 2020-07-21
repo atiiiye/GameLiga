@@ -7,8 +7,6 @@ import './../css/mediaUserAccount.css'
 //import bootstrap
 import { Card } from "react-bootstrap";
 
-// import MainCard from "./MainCard";
-
 
 //import images
 import Grid1 from './../images/Grid1.png';

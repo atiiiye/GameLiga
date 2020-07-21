@@ -11,8 +11,9 @@ import SignUp from "./Components/SignUp";
 import Sidebar from "./Components/Sidebar";
 import NotFound from "./Components/NotFound";
 import Header from "./Components/Header.js";
-// import MainCard from "./Components/MainCard";
 import UserAccount from "./Components/UserAccount";
+import FinalResult from "./Components/FinalResult";
+
 
 
 //import routes
@@ -44,6 +45,14 @@ function App() {
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <UserAccount />
+            </div>
+          </Route>
+
+          <Route path="/result">
+            <UserHeader show={displayHandler} />
+            <div style={{ display: 'flex' }}>
+              <Sidebar></Sidebar>
+              <FinalResult />
             </div>
           </Route>
 

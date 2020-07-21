@@ -1,0 +1,107 @@
+@import 'base';
+
+div.container-fluid.FinalResult {
+
+    background-image: url('./../images/background-stadium.png'), linear-gradient(0, transparent, rgba(0, 0, 0, .7) 100%);
+    background-repeat: no-repeat;
+    background-size: cover, 100%;
+    // -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
+    width: 100%;
+
+    div.card#content {
+        background-color: rgba($color: #000000, $alpha: .4);
+        display: flex;
+        border-left: 1px solid $color-orange-1;
+        border-top: 2px solid $color-orange-1;
+        border-bottom: 0;
+        border-right: 0;
+        border-radius: 0;
+        position: relative;
+        left: 0;
+        height: max-content;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        min-height: 100%;
+        div.parent-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: max-content;
+
+           h2.h2.result.section-1{
+                font-size: 3rem;
+                font-weight: bold;
+                color: #ffffff;
+            }
+
+            div.section-2{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 60%;
+                height: max-content;
+                div.own-logo{
+                    width: 70px;
+                    height: 70px;
+                    background-color: $color-background-1;
+                    border: 1px solid $color-gray-2;
+                    border-radius: 50%;
+                }
+                div.football{
+                    width: 50%;
+                    height: 160px;
+                    background-color: $color-background-1;
+                    border: 1px solid #000000;
+                }
+                div.other-logo{
+                    width: 70px;
+                    height: 70px;
+                    background-color: $color-background-1;
+                    border-radius: 50%;
+                    border: 1px solid red;
+                }
+            }
+
+            div.section-3{
+
+            }
+            
+            div.live-content.section-4{
+                display: flex;
+                width: 45%;
+                position: relative;
+                div.live{
+                    border: 1px solid red;
+                    background-color: $color-background-1;
+                    width: 100%;
+                    height: 200px;
+                    position: absolute;
+                    left: -.3rem;
+                }
+                p.text-live{
+                    color: red;
+                    font-weight: bold;
+                    width: 50px;
+                    height: inherit;
+                    align-self: flex-end;
+                    font-size: 90%;
+                }
+            }
+        }
+
+        div.empty-square{
+            width: 14%;
+            height: 25%;
+            border: 1px solid red;
+            background-color: $color-background-1;
+            border-bottom: 0;
+            border-right: 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
