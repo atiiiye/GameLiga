@@ -22,10 +22,6 @@ body {
   div.sidebar-menu {
     width: 20%;
   }
-  div.sidebar-menu ul.list-menu {
-    height: 80%;
-    width: 100%;
-  }
   div.sidebar-menu ul.list-menu li.list-item a.nav-link {
     line-height: 28px;
     font-size: 88%;
@@ -33,10 +29,6 @@ body {
 }
 
 @media (max-width: 891px) {
-  div.sidebar-menu ul.list-menu {
-    height: 80%;
-    width: 100%;
-  }
   div.sidebar-menu ul.list-menu li.list-item a.nav-link {
     line-height: 28px;
     font-size: 85%;
@@ -47,13 +39,14 @@ body {
   div.sidebar-menu {
     width: 20%;
   }
+  div.sidebar-menu ul.list-menu li.list-item a.nav-link {
+    line-height: 27px;
+    font-size: 83%;
+    padding: .5rem .8rem;
+  }
 }
 
 @media (max-width: 690px) {
-  div.sidebar-menu ul.list-menu {
-    height: 80%;
-    width: 100%;
-  }
   div.sidebar-menu ul.list-menu li.list-item a.nav-link {
     line-height: 26px;
     font-size: 80%;

@@ -25,9 +25,6 @@
         width: 20%;
 
         ul.list-menu {
-            height: 80%;
-            width: 100%;
-
             li.list-item {
                 a.nav-link {
                     line-height: 28px;
@@ -42,9 +39,6 @@
 @media(max-width:891px) {
     div.sidebar-menu {
         ul.list-menu {
-            height: 80%;
-            width: 100%;
-
             li.list-item {
                 a.nav-link {
                     line-height: 28px;
@@ -58,15 +52,21 @@
 @media(max-width:767px){
     div.sidebar-menu {
         width: 20%;
+        ul.list-menu {
+            li.list-item {
+                a.nav-link {
+                    line-height: 27px;
+                    font-size: 83%;
+                    padding: .5rem .8rem;
+                }
+            }
+        }
     }
 }
 
 @media(max-width:690px){
     div.sidebar-menu {
         ul.list-menu {
-            height: 80%;
-            width: 100%;
-
             li.list-item {
                 a.nav-link {
                     line-height: 26px;

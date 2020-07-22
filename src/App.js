@@ -13,7 +13,7 @@ import NotFound from "./Components/NotFound";
 import Header from "./Components/Header.js";
 import UserAccount from "./Components/UserAccount";
 import FinalResult from "./Components/FinalResult";
-
+import LeaderBoards from "./Components/LeaderBoards";
 
 
 //import routes
@@ -53,6 +53,15 @@ function App() {
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <FinalResult />
+            </div>
+          </Route>
+
+          
+          <Route path="/Leader-boards">
+            <UserHeader show={displayHandler} />
+            <div style={{ display: 'flex' }}>
+              <Sidebar></Sidebar>
+              <LeaderBoards />
             </div>
           </Route>
 

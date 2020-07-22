@@ -24,7 +24,7 @@ class FinalResult extends Component {
                             <div className="own-logo">
                                 <img alt="" src={UserLogo} className="user-team-logo" />
                                 <div className="result-win">
-                                <span className="">Win</span>
+                                    <span className="">Win</span>
                                     <div className="color-box"></div>
                                 </div>
                             </div>
@@ -48,7 +48,6 @@ class FinalResult extends Component {
                             <div className="live"></div>
                         </div>
                     </div>
-
                     <div className="empty-square"></div>
                 </Card>
             </div>
