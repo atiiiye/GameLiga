@@ -111,6 +111,13 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   height: 100%;
 }
 
+div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control {
+  background: transparent;
+  color: #ffffff;
+  padding: .375rem .65rem;
+  border: none;
+}
+
 div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football {
   width: 50%;
   height: 100px;
@@ -127,10 +134,19 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   height: 50px;
   background-color: #1c1c22;
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo img.user-team-logo {
   width: 100%;
   height: 100%;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  padding: .375rem .65rem;
 }
 /*# sourceMappingURL=LeaderBoards.css.map */

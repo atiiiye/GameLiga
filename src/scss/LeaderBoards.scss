@@ -96,6 +96,16 @@ div.container-fluid.LeaderBoards {
                                     width: 100%;
                                     height: 100%;
                                 }
+                                div.difference{
+                                    input.difference-number.form-control{
+                                        background: transparent;
+                                        color:#ffffff;
+                                        padding: .375rem .65rem;
+                                        border: none;
+
+                                    }
+                                }
+
                             }
             
                             div.football {
@@ -114,10 +124,21 @@ div.container-fluid.LeaderBoards {
                                 height: 50px;
                                 background-color: $color-background-1;
                                 border-radius: 50%;
+                                display: flex;
+                                flex-direction: column;
+                                
             
                                 img.user-team-logo {
                                     width: 100%;
                                     height: 100%;
+                                }
+                                div.difference{
+                                    input.difference-number.form-control{
+                                        background: transparent;
+                                        color:#ffffff;
+                                        border: none;
+                                        padding: .375rem .65rem;
+                                    }
                                 }
                             }
                         }
