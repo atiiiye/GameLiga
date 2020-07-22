@@ -48,7 +48,7 @@ function App() {
             </div>
           </Route>
 
-          <Route path="/result">
+          <Route path="/games">
             <UserHeader show={displayHandler} />
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>

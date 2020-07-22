@@ -201,6 +201,168 @@ body {
   nav.navbar.user-header div.hamburger-menu button.navbar-toggler {
     border: 0;
   }
+  nav.navbar.user-header div.hamburger-menu button.navbar-toggler span.navbar-toggler-icon {
+    display: flex;
+    flex-direction: column;
+    width: 2em;
+    height: 2em;
+    padding-bottom: 0;
+    justify-content: center;
+  }
+  nav.navbar.user-header div.hamburger-menu button.navbar-toggler .menu {
+    border-radius: 4px;
+    padding: 4px;
+    transition: transform .3s;
+  }
+  nav.navbar.user-header div.hamburger-menu button.navbar-toggler .menu-line {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #ff9300;
+    transition: all .3s .3s;
+    transform-origin: left;
+  }
+  nav.navbar.user-header div.navbar-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(54, 54, 59, 0.9);
+    transform: translate(-10%, 0);
+    transition: transform .1s linear;
+    position: absolute;
+    right: 0;
+    top: 105%;
+    right: -7px;
+    z-index: 10;
+    align-items: flex-start;
+    padding: .5rem .8rem .5rem .5rem;
+    border: 2px solid #ff9300;
+    border-top: 0;
+    border-right: 0;
+    border-bottom-left-radius: 8px;
+    width: 30%;
+    height: 260px;
+    justify-content: space-between;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show p.text-muted {
+    width: max-content;
+    margin-right: .6rem;
+    margin-left: 0;
+    font-size: 90%;
+    padding-bottom: .5rem;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: .4rem;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon img.image-icon {
+    width: 20px;
+    height: 20px;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#user {
+    width: 35px;
+    height: 35px;
+    padding-bottom: .5rem;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#user img.image-icon#user {
+    width: 35px;
+    height: 35px;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#ticket {
+    width: 30px;
+    height: 30px;
+    padding-bottom: .5rem;
+  }
+  nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.part-1.row.show a.nav-link-icon#ticket img.image-icon#ticket {
+    width: 25px;
+    height: 25px;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: .4rem;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon img.image-icon {
+    width: 20px;
+    height: 20px;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#bell {
+    width: 25px;
+    height: 25px;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#bell img.image-icon#bell {
+    width: 20px;
+    height: 20px;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#telegram {
+    width: 23px;
+    height: 23px;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#telegram img.image-icon#telegram {
+    width: 20px;
+    height: 20px;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#wallet {
+    width: 23px;
+    height: 23px;
+  }
+  nav.navbar.user-header div.navbar-right a.nav-link-icon#wallet img.image-icon#wallet {
+    width: 20px;
+    height: 20px;
+  }
+  nav.navbar.user-header div.navbar-left {
+    width: 50%;
+  }
+  nav.navbar.user-header div.navbar-left div.empty-content {
+    width: 70px;
+    height: 1.85rem;
+    position: relative;
+    left: -25px;
+  }
+  nav.navbar.user-header div.navbar-left h4.UFOGame {
+    font-weight: 600;
+    font-size: 97%;
+  }
+  nav.navbar.user-header div.navbar-left img.logo {
+    margin-right: 3px;
+    width: 40px;
+    height: 40px;
+  }
+  nav.navbar.user-header div.navbar-left input[type="search"] {
+    width: 130px;
+    height: 1.85rem;
+    font-size: 83%;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    left: -17px;
+  }
+}
+
+@media (min-width: 768px) {
+  div.hamburger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  nav.navbar.user-header {
+    width: 100%;
+  }
+  nav.navbar.user-header div.hamburger-menu {
+    position: absolute;
+    right: 1rem;
+  }
+  nav.navbar.user-header div.hamburger-menu button.navbar-toggler {
+    border: 0;
+  }
   nav.navbar.user-header div.hamburger-menu button.navbar-toggler:focus {
     border: none;
     outline: 0;
@@ -325,16 +487,11 @@ body {
     width: 50%;
   }
   nav.navbar.user-header div.navbar-left div.empty-content {
-    width: 80px;
-    height: 1.85rem;
-    position: relative;
-    left: -25px;
+    display: none;
   }
   nav.navbar.user-header div.navbar-left h4.UFOGame {
     font-weight: 600;
     font-size: 97%;
-    z-index: 10;
-    width: auto;
     margin-bottom: 0;
   }
   nav.navbar.user-header div.navbar-left img.logo {
@@ -345,17 +502,11 @@ body {
   nav.navbar.user-header div.navbar-left input[type="search"] {
     width: 130px;
     height: 1.85rem;
-    font-size: 83%;
-    padding-left: 5px;
-    padding-right: 5px;
+    font-size: 80%;
+    padding-left: 3px;
+    padding-right: 3px;
     position: relative;
-    left: -18px;
-  }
-}
-
-@media (min-width: 768px) {
-  div.hamburger-menu {
-    display: none;
+    left: 0;
   }
 }
 /*# sourceMappingURL=mediaUserHeader.css.map */
