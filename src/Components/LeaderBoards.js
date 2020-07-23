@@ -5,13 +5,24 @@ import "./../css/reset.css";
 import "./../css/LeaderBoards.css";
 
 //import bootstrap
-import { Card ,Form } from "react-bootstrap";
+import { Card, Form } from "react-bootstrap";
 
 //import images
 import Football from './../images/football.png'
 import UserLogo from './../images/Icon-user.png'
 
 class LeaderBoards extends Component {
+
+
+    state = {
+        Ownvalue: "0",
+        Othervalue: "0",
+    }
+
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value })
+    };
+
     render() {
         return (
             <div className="container-fluid LeaderBoards">
@@ -29,7 +40,15 @@ class LeaderBoards extends Component {
                                         <div className="own-logo">
                                             <img alt="" src={UserLogo} className="user-team-logo" />
                                             <div className="difference">
-                                                <Form.Control type="number" className="difference-number" value="0"></Form.Control>
+                                                <Form.Control
+                                                    type="number"
+                                                    name="Ownvalue"
+                                                    className="difference-number"
+                                                    value={this.state.Ownvalue}
+                                                    onChange={this.handleChange.bind(this)}
+                                                    max={10}
+                                                    min={-10}
+                                                ></Form.Control>
                                             </div>
                                         </div>
                                         <div className="football">
@@ -38,12 +57,22 @@ class LeaderBoards extends Component {
                                         <div className="other-logo">
                                             <img alt="" src={UserLogo} className="user-team-logo" />
                                             <div className="difference">
-                                                <Form.Control type="number" className="difference-number" value="0"></Form.Control>
+                                                <Form.Control
+                                                    type="number"
+                                                    name="Othervalue"
+                                                    className="difference-number"
+                                                    value={this.state.Othervalue}
+                                                    onChange={this.handleChange.bind(this)}
+                                                    max={10}
+                                                    min={-10}
+                                                ></Form.Control>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="tab-content-right"></div>
+                                <div className="tab-content-right">
+
+                                </div>
                             </div>
                         </Card>
                     </div>
