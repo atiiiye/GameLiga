@@ -20,6 +20,13 @@ import LeaderBoards from "./Components/LeaderBoards";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 
 
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+library.add(faStroopwafel)
+// import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
 function App() {
   const [stateDisplay, setDisplayState] = useState(true)
 

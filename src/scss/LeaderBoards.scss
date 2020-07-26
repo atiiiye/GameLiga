@@ -96,7 +96,7 @@ div.container-fluid.LeaderBoards {
                             align-items: center;
                             justify-content: space-around;
                             width: 100%;
-                            height: max-content;
+                            height: 45%;
 
                             div.own-logo {
                                 width: 50px;
@@ -200,8 +200,10 @@ div.container-fluid.LeaderBoards {
 
                             img.join-button {
                                 display: flex;
-                                width: 80px;
-                                height: 80px;
+                                width: 85px;
+                                height: 85px;
+                                position: relative;
+                                top:-2rem
                             }
 
                             div.options {
@@ -260,7 +262,7 @@ div.container-fluid.LeaderBoards {
                                     justify-content: flex-end;
                                     align-items: center;
                                     position: relative;
-                                    bottom: 10px; 
+                                    bottom: 10px;
                                     right: -1rem;
                                 }
                             }
@@ -273,45 +275,77 @@ div.container-fluid.LeaderBoards {
             }
         }
 
-        div.priorities {
+        div.sidebar-right {
             display: flex;
-            width: max-content;
             flex-direction: column;
-            justify-content: flex-end;
-            height: 200px;
+            align-items: flex-start;
+            justify-content: space-between;
+            min-height: 90%;
+            // height: 100vh;
+            width: max-content;
 
-            div.Priority {
+            div.priorities {
                 display: flex;
-                justify-content: space-between;
                 width: max-content;
-                margin-top: 1rem;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 130px;
 
-                div.ascending {
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 2px;
+                div.Priority {
                     display: flex;
-                    background-color: $color-orange-1;
+                    justify-content: space-between;
+                    width: max-content;
+                    margin-top: .8rem;
+
+                    div.ascending {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 2px;
+                        display: flex;
+                        background-color: $color-orange-1;
 
 
-                }
+                    }
 
-                span {
-                    font-size: 88%;
-                    color: $color-gray-2;
-                    align-self: center;
-                    padding-left: .3rem;
-                }
+                    span {
+                        font-size: 85%;
+                        color: $color-gray-2;
+                        align-self: center;
+                        padding-left: .3rem;
+                    }
 
-                div.descending {
-                    width: 20px;
-                    border-radius: 2px;
-                    height: 20px;
-                    display: flex;
-                    background-color: #ffffff;
+                    div.descending {
+                        width: 20px;
+                        border-radius: 2px;
+                        height: 20px;
+                        display: flex;
+                        background-color: #ffffff;
+                    }
                 }
             }
+
+            div.create-game{
+                height: 100px;
+                display: flex;
+                width: max-content;
+                flex-direction: column;
+                justify-content: flex-start;
+                div.new-game {
+                    width: 60px;
+                    height: 60px;
+                    background-color: rgba($color: $color-orange-1, $alpha: .4);
+                    border-radius: 50%;
+
+
+                   
+                    
+                }
+            }
+
+         
         }
+
+
 
     }
 }

@@ -102,7 +102,7 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: max-content;
+  height: 45%;
 }
 
 div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo {
@@ -199,8 +199,10 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
 
 div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right img.join-button {
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
+  position: relative;
+  top: -2rem;
 }
 
 div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options {
@@ -264,22 +266,31 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   right: -1rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.priorities {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 90%;
+  width: max-content;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities {
   display: flex;
   width: max-content;
   flex-direction: column;
   justify-content: flex-end;
-  height: 200px;
+  height: 130px;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.priorities div.Priority {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority {
   display: flex;
   justify-content: space-between;
   width: max-content;
-  margin-top: 1rem;
+  margin-top: .8rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.priorities div.Priority div.ascending {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority div.ascending {
   width: 20px;
   height: 20px;
   border-radius: 2px;
@@ -287,18 +298,128 @@ div.container-fluid.LeaderBoards div.card#content div.priorities div.Priority di
   background-color: #ff9300;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.priorities div.Priority span {
-  font-size: 88%;
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority span {
+  font-size: 85%;
   color: #959aa2;
   align-self: center;
   padding-left: .3rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.priorities div.Priority div.descending {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority div.descending {
   width: 20px;
   border-radius: 2px;
   height: 20px;
   display: flex;
   background-color: #ffffff;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game {
+  height: 100px;
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 147, 0, 0.4);
+  border-radius: 50%;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus {
+  --secondary: #1E2235;
+  --primary: #FAFBFF;
+  --duration: .5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 240px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 300% 300%;
+  transition: transform .3s;
+  transform: scale(var(--scale, 1)) translateZ(0);
+  animation: var(--name, unchecked) var(--duration) ease forwards;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:before, div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: var(--height, 16px);
+  left: 26px;
+  top: 20px;
+  background: #ffffff;
+  animation: var(--name-icon-b, var(--name-icon, unchecked-icon)) var(--duration) ease forwards;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:before {
+  clip-path: polygon(0 6px, 6px 6px, 6px 0, 10px 0, 10px 6px, 16px 6px, 16px 10px, 10px 10px, 10px 16px, 6px 16px, 6px 10px, 0 10px);
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:after {
+  --height: 10px;
+  --top: 30px;
+  --background: var(--secondary);
+  --name-icon-b: var(--name-icon-a, checked-icon);
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:active {
+  --scale: .95;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:checked {
+  --name: checked;
+  --name-icon-b: checked-icon;
+  --name-icon-a: unchecked-icon;
+}
+
+@keyframes checked-icon {
+  from {
+    transform: translateZ(12px);
+  }
+  to {
+    transform: translateX(16px) rotateY(90deg) translateZ(12px);
+  }
+}
+
+@keyframes unchecked-icon {
+  from {
+    transform: translateX(-16px) rotateY(-90deg) translateZ(12px);
+  }
+  to {
+    transform: translateZ(12px);
+  }
+}
+
+@keyframes checked {
+  from {
+    background-image: radial-gradient(ellipse at center, var(--primary) 0%, var(--primary) 25%, var(--secondary) 25.1%, var(--secondary) 100%);
+    background-position: 100% 50%;
+  }
+  to {
+    background-image: radial-gradient(ellipse at center, var(--primary) 0%, var(--primary) 25%, var(--secondary) 25.1%, var(--secondary) 100%);
+    background-position: 50% 50%;
+  }
+}
+
+@keyframes unchecked {
+  from {
+    background-image: radial-gradient(ellipse at center, var(--secondary) 0%, var(--secondary) 25%, var(--primary) 25.1%, var(--primary) 100%);
+    background-position: 100% 50%;
+  }
+  to {
+    background-image: radial-gradient(ellipse at center, var(--secondary) 0%, var(--secondary) 25%, var(--primary) 25.1%, var(--primary) 100%);
+    background-position: 50% 50%;
+  }
 }
 /*# sourceMappingURL=LeaderBoards.css.map */
