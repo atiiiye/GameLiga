@@ -88,6 +88,7 @@ class LeaderBoards extends Component {
                                             <div className="option">
                                                 <span className="option-item">Time game :</span>
                                                 <FormControl
+<<<<<<< HEAD
                                                     className="time num-minute"
                                                     type="number"
                                                     name=""
@@ -105,11 +106,31 @@ class LeaderBoards extends Component {
                                                     className="time"
                                                     type="text"
                                                     name=""
+=======
+                                                className="time num-minute"
+                                                type="number"
+                                                name=""
+                                                max={59}
+                                                min={2}
+                                                ></FormControl>
+                                                <FormControl
+                                                className="time num-second"
+                                                type="number"
+                                                name=""
+                                                max={59}
+                                                min={0}
+                                                ></FormControl>
+                                                <FormControl
+                                                className="time"
+                                                type="text"
+                                                name=""
+>>>>>>> master
                                                 ></FormControl>
                                             </div>
                                             <div className="option">
                                                 <span className="option-item">Buy in :</span>
                                                 <FormControl
+<<<<<<< HEAD
                                                     className=""
                                                     type="text"
                                                     name="buy"
@@ -123,10 +144,26 @@ class LeaderBoards extends Component {
                                                     name="advantage"
                                                     max={10}
                                                     min={-10}
+=======
+                                                className=""
+                                                type="text"
+                                                name="buy"
+                                                ></FormControl>
+                                            </div>
+                                            <div className="option">
+                                                <span className="option-item">Advantage :</span>  
+                                                <FormControl
+                                                className="advantage"
+                                                type="number"
+                                                name="advantage"
+                                                max={10}
+                                                min={-10}
+>>>>>>> master
                                                 ></FormControl>
                                             </div>
                                             <span className="No">No.T0001</span>
                                         </div>
+                                      
 
 
                                     </div>

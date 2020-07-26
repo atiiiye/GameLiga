@@ -200,10 +200,15 @@ div.container-fluid.LeaderBoards {
 
                             img.join-button {
                                 display: flex;
+<<<<<<< HEAD
                                 width: 85px;
                                 height: 85px;
                                 position: relative;
                                 top:-2rem
+=======
+                                width: 80px;
+                                height: 80px;
+>>>>>>> master
                             }
 
                             div.options {
@@ -262,7 +267,11 @@ div.container-fluid.LeaderBoards {
                                     justify-content: flex-end;
                                     align-items: center;
                                     position: relative;
+<<<<<<< HEAD
                                     bottom: 10px;
+=======
+                                    bottom: 10px; 
+>>>>>>> master
                                     right: -1rem;
                                 }
                             }
@@ -275,7 +284,11 @@ div.container-fluid.LeaderBoards {
             }
         }
 
+<<<<<<< HEAD
         div.sidebar-right {
+=======
+        div.priorities {
+>>>>>>> master
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -283,10 +296,17 @@ div.container-fluid.LeaderBoards {
             min-height: 90%;
             // height: 100vh;
             width: max-content;
+<<<<<<< HEAD
+=======
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 200px;
+>>>>>>> master
 
             div.priorities {
                 display: flex;
                 width: max-content;
+<<<<<<< HEAD
                 flex-direction: column;
                 justify-content: flex-end;
                 height: 130px;
@@ -339,13 +359,43 @@ div.container-fluid.LeaderBoards {
 
                    
                     
+=======
+                margin-top: 1rem;
+
+                div.ascending {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 2px;
+                    display: flex;
+                    background-color: $color-orange-1;
+
+
+                }
+
+                span {
+                    font-size: 88%;
+                    color: $color-gray-2;
+                    align-self: center;
+                    padding-left: .3rem;
+                }
+
+                div.descending {
+                    width: 20px;
+                    border-radius: 2px;
+                    height: 20px;
+                    display: flex;
+                    background-color: #ffffff;
+>>>>>>> master
                 }
             }
 
          
         }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
     }
 }
