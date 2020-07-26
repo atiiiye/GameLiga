@@ -10,9 +10,10 @@ import { Card, Form } from "react-bootstrap";
 //import images
 import Football from './../images/football.png'
 import UserLogo from './../images/Icon-user.png'
+import JoinButton from './../images/green-button.png'
+
 
 class LeaderBoards extends Component {
-
 
     state = {
         Ownvalue: "0",
@@ -71,7 +72,21 @@ class LeaderBoards extends Component {
                                     </div>
                                 </div>
                                 <div className="tab-content-right">
+                                <div className="section-right">
+                                    <img src={JoinButton} className="join-button" />
+                                    <div className="options">
+                                    <div className="option">
+                                        <span className="option-item">Time game</span>
+                                    </div>
+                                    <div className="option">
+                                        <span className="option-item">Buy in</span>
+                                    </div>
+                                    <div className="option">
+                                        <span className="option-item">Advantage</span>
+                                    </div>
+                                    </div>
 
+                                </div>
                                 </div>
                             </div>
                         </Card>
