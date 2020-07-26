@@ -186,7 +186,6 @@ div.container-fluid.LeaderBoards {
 
                     div.tab-content-right {
                         display: flex;
-
                         width: 55%;
                         height: 100%;
                         align-items: center;
@@ -200,15 +199,10 @@ div.container-fluid.LeaderBoards {
 
                             img.join-button {
                                 display: flex;
-<<<<<<< HEAD
                                 width: 85px;
                                 height: 85px;
                                 position: relative;
-                                top:-2rem
-=======
-                                width: 80px;
-                                height: 80px;
->>>>>>> master
+                                top:-2rem;
                             }
 
                             div.options {
@@ -267,11 +261,7 @@ div.container-fluid.LeaderBoards {
                                     justify-content: flex-end;
                                     align-items: center;
                                     position: relative;
-<<<<<<< HEAD
                                     bottom: 10px;
-=======
-                                    bottom: 10px; 
->>>>>>> master
                                     right: -1rem;
                                 }
                             }
@@ -284,11 +274,7 @@ div.container-fluid.LeaderBoards {
             }
         }
 
-<<<<<<< HEAD
         div.sidebar-right {
-=======
-        div.priorities {
->>>>>>> master
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -296,17 +282,10 @@ div.container-fluid.LeaderBoards {
             min-height: 90%;
             // height: 100vh;
             width: max-content;
-<<<<<<< HEAD
-=======
-            flex-direction: column;
-            justify-content: flex-end;
-            height: 200px;
->>>>>>> master
 
             div.priorities {
                 display: flex;
                 width: max-content;
-<<<<<<< HEAD
                 flex-direction: column;
                 justify-content: flex-end;
                 height: 130px;
@@ -357,45 +336,105 @@ div.container-fluid.LeaderBoards {
                     border-radius: 50%;
 
 
-                   
+                    .plus-minus {
+                        --secondary: #1E2235;
+                        --primary: #FAFBFF;
+                        --duration: .5s;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -webkit-tap-highlight-color: transparent;
+                        -webkit-mask-image: -webkit-radial-gradient(white, black);
+                        outline: none;
+                        cursor: pointer;
+                        position: relative;
+                        overflow: hidden;
+                        transform-style: preserve-3d;
+                        perspective: 240px;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        // border: 4px solid var(--primary);
+                        background-size: 300% 300%;
+                        transition: transform .3s;
+                        transform: scale(var(--scale, 1)) translateZ(0);
+                        animation: var(--name, unchecked) var(--duration) ease forwards;
+                        &:before,
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 50px;
+                            height: var(--height, 16px);
+                            left: 26px;
+                            top: 20px;
+                            background: #ffffff;
+                            animation: var(--name-icon-b, var(--name-icon, unchecked-icon)) var(--duration) ease forwards;
+                        }
+                        &:before {
+                            clip-path: polygon(0 6px, 6px 6px, 6px 0, 10px 0, 10px 6px, 16px 6px, 16px 10px, 10px 10px, 10px 16px, 6px 16px, 6px 10px, 0 10px);
+                        }
+                        &:after {
+                            --height: 10px;
+                            --top: 30px;
+                            --background: var(--secondary);
+                            --name-icon-b: var(--name-icon-a, checked-icon);
+                        }
+                        &:active {
+                            --scale: .95;
+                        }
+                        &:checked {
+                            --name: checked;
+                            --name-icon-b: checked-icon;
+                            --name-icon-a: unchecked-icon;
+                        }
+                    }
                     
-=======
-                margin-top: 1rem;
-
-                div.ascending {
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 2px;
-                    display: flex;
-                    background-color: $color-orange-1;
-
-
-                }
-
-                span {
-                    font-size: 88%;
-                    color: $color-gray-2;
-                    align-self: center;
-                    padding-left: .3rem;
-                }
-
-                div.descending {
-                    width: 20px;
-                    border-radius: 2px;
-                    height: 20px;
-                    display: flex;
-                    background-color: #ffffff;
->>>>>>> master
+                    @keyframes checked-icon {
+                        from {
+                            transform: translateZ(12px);
+                        }
+                        to {
+                            transform: translateX(16px) rotateY(90deg) translateZ(12px);
+                        }
+                    }
+                    
+                    @keyframes unchecked-icon {
+                        from {
+                            transform: translateX(-16px) rotateY(-90deg) translateZ(12px);
+                        }
+                        to {
+                            transform: translateZ(12px);
+                        }
+                    }
+                    
+                    @keyframes checked {
+                        from {
+                            background-image: radial-gradient(ellipse at center, var(--primary) 0%, var(--primary) 25%, var(--secondary) 25.1%, var(--secondary) 100%);
+                            background-position: 100% 50%;
+                        }
+                        to {
+                            background-image: radial-gradient(ellipse at center, var(--primary) 0%, var(--primary) 25%, var(--secondary) 25.1%, var(--secondary) 100%);
+                            background-position: 50% 50%;
+                        }
+                    }
+                    
+                    @keyframes unchecked {
+                        from {
+                            background-image: radial-gradient(ellipse at center, var(--secondary) 0%, var(--secondary) 25%, var(--primary) 25.1%, var(--primary) 100%);
+                            background-position: 100% 50%;
+                        }
+                        to {
+                            background-image: radial-gradient(ellipse at center, var(--secondary) 0%, var(--secondary) 25%, var(--primary) 25.1%, var(--primary) 100%);
+                            background-position: 50% 50%;
+                        }
+                    }
+                    
                 }
             }
 
          
         }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> master
     }
 }
