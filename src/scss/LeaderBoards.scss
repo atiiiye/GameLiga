@@ -12,6 +12,7 @@ div.container-fluid.LeaderBoards {
     div.card#content {
         background-color: rgba($color: #000000, $alpha: .4);
         display: flex;
+        flex-direction: row;
         border-left: 1px solid $color-orange-1;
         border-top: 2px solid $color-orange-1;
         border-bottom: 0;
@@ -28,6 +29,8 @@ div.container-fluid.LeaderBoards {
         div.elements {
             width: 70%;
             height: 100%;
+            display: flex;
+            flex-direction: column;
 
             div.tabs {
                 display: flex;
@@ -69,7 +72,7 @@ div.container-fluid.LeaderBoards {
                 height: 250px;
                 border: 1px solid $color-orange-1;
                 border-radius: 9px;
-                background-color: rgba($color: #000000, $alpha: .4);
+                background-color: rgba($color: $color-background-1, $alpha: .5);
                 margin: 2rem;
                 margin-top: .5rem;
 
@@ -81,10 +84,11 @@ div.container-fluid.LeaderBoards {
                     div.tab-content-left {
                         display: flex;
                         align-items: center;
-                        // justify-content: center;
+                        flex-direction: column;
+                        justify-content: space-around;
                         // margin-top: 1rem;
                         width: 50%;
-                    height: 100%;
+                        height: 100%;
 
 
                         div.section-left {
@@ -167,10 +171,19 @@ div.container-fluid.LeaderBoards {
                                 }
                             }
                         }
+                        span.hosted{
+                            width: 100%;
+                            // height: 20px;
+                            color: $color-gray-2;
+                            padding-left: .5rem;
+                            font-size: 88%;
+                            position: relative;
+                            bottom: -16px;
+                        }
                     }
 
                     div.tab-content-right {
-                    display: flex;
+                        display: flex;
 
                         width: 50%;
                         height: 100%;
@@ -180,13 +193,13 @@ div.container-fluid.LeaderBoards {
                             width: 100%;
                             height: 100%;
                             display: flex;
-                            // align-items: flex-start;
-                            justify-content: center;
+                            align-items: center;
+                            justify-content: space-around;
 
                             img.join-button {
                                 display: flex;
-                                width: 80px;
-                                height: 80px;
+                                width: 90px;
+                                height: 90px;
                             }
 
                             div.options {
@@ -212,5 +225,45 @@ div.container-fluid.LeaderBoards {
 
             }
         }
+
+        div.priorities{
+            display: flex;
+            width: max-content;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 200px;
+
+            div.Priority {
+                display: flex;
+                justify-content: space-between;
+                width: max-content;
+                margin-top: 1rem;
+    
+                div.ascending {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 2px;
+                    display: flex;
+                    background-color: $color-orange-1;
+    
+                  
+                }
+                span {
+                    font-size: 88%;
+                    color: $color-gray-2;
+                    align-self: center;
+                    padding-left: .3rem;
+                }
+    
+                div.descending {
+                    width: 20px;
+                    border-radius: 2px;
+                    height: 20px;
+                    display: flex;
+                    background-color: #ffffff;
+                }
+            }
+        }
+       
     }
 }

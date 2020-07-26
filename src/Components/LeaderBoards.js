@@ -70,27 +70,39 @@ class LeaderBoards extends Component {
                                             </div>
                                         </div>
                                     </div>
+                                    <span className="hosted">Hosted by Alex52 / Div2</span>
                                 </div>
                                 <div className="tab-content-right">
-                                <div className="section-right">
-                                    <img src={JoinButton} className="join-button" />
-                                    <div className="options">
-                                    <div className="option">
-                                        <span className="option-item">Time game</span>
-                                    </div>
-                                    <div className="option">
-                                        <span className="option-item">Buy in</span>
-                                    </div>
-                                    <div className="option">
-                                        <span className="option-item">Advantage</span>
-                                    </div>
-                                    </div>
+                                    <div className="section-right">
+                                        <img src={JoinButton} className="join-button" />
+                                        <div className="options">
+                                            <div className="option">
+                                                <span className="option-item">Time game :</span>
+                                            </div>
+                                            <div className="option">
+                                                <span className="option-item">Buy in :</span>
+                                            </div>
+                                            <div className="option">
+                                                <span className="option-item">Advantage :</span>
+                                            </div>
+                                        </div>
 
-                                </div>
+                                    </div>
                                 </div>
                             </div>
                         </Card>
                     </div>
+                    <div className="priorities">
+                        <div className="Priority">
+                            <div className="ascending"></div>
+                            <span>Seats Ascending</span>
+                        </div>
+                        <div className="Priority">
+                            <div className="descending"></div>
+                            <span>Seats Descending</span>
+                        </div>
+                    </div>
+
                 </Card>
             </div>
         )
