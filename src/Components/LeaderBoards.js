@@ -5,7 +5,7 @@ import "./../css/reset.css";
 import "./../css/LeaderBoards.css";
 
 //import bootstrap
-import { Card, Form } from "react-bootstrap";
+import { Card, Form, FormControl } from "react-bootstrap";
 
 //import images
 import Football from './../images/football.png'
@@ -78,14 +78,47 @@ class LeaderBoards extends Component {
                                         <div className="options">
                                             <div className="option">
                                                 <span className="option-item">Time game :</span>
+                                                <FormControl
+                                                className="time num-minute"
+                                                type="number"
+                                                name=""
+                                                max={59}
+                                                min={2}
+                                                ></FormControl>
+                                                <FormControl
+                                                className="time num-second"
+                                                type="number"
+                                                name=""
+                                                max={59}
+                                                min={0}
+                                                ></FormControl>
+                                                <FormControl
+                                                className="time"
+                                                type="text"
+                                                name=""
+                                                ></FormControl>
                                             </div>
                                             <div className="option">
                                                 <span className="option-item">Buy in :</span>
+                                                <FormControl
+                                                className=""
+                                                type="text"
+                                                name="buy"
+                                                ></FormControl>
                                             </div>
                                             <div className="option">
-                                                <span className="option-item">Advantage :</span>
+                                                <span className="option-item">Advantage :</span>  
+                                                <FormControl
+                                                className="advantage"
+                                                type="number"
+                                                name="advantage"
+                                                max={10}
+                                                min={-10}
+                                                ></FormControl>
                                             </div>
+                                            <span className="No">No.T0001</span>
                                         </div>
+                                      
 
                                     </div>
                                 </div>
