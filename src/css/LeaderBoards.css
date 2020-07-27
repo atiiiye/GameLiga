@@ -238,6 +238,8 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
 div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage {
   display: flex;
   width: 50px;
+  padding-right: 3px;
+  padding-left: 8px;
   height: 45px;
   margin-right: .3rem;
   font-weight: 600;
