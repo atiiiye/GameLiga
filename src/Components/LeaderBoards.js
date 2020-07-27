@@ -13,25 +13,31 @@ import UserLogo from './../images/Icon-user.png'
 import JoinButton from './../images/green-button.png'
 
 //import packages
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-// import "font-awesome/css/font-awesome.min.css";
-// import FontAwesome from 'react-fontawesome'
-// import faStyles from 'font-awesome/css/font-awesome.css'
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 class LeaderBoards extends Component {
 
     state = {
-        Ownvalue: "0",
-        Othervalue: "0",
+        ownValue: "0",
+        otherValue: "0",
     }
 
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value })
-    };
+    }
+
+    createGame = () => {
+        let tabContent = document.querySelector('div.tab-content-parent')
+        let card = document.createElement('div')
+        // let newGame
+        card.classList.add('card')
+        card.setAttribute('id','tab-content')
+        card.appendChild(tabContent)
+        console.log(card);
+
+        // tabContent.after('div#tab-content')
+
+    }
 
     render() {
         return (
@@ -39,9 +45,9 @@ class LeaderBoards extends Component {
                 <Card id="content">
                     <div className="elements">
                         <div className="tabs">
-                            <div className="One-av-One tab">One av One</div>
-                            <div className="Tourny tab">Tourny</div>
-                            <div className="Liga tab">Liga</div>
+                            <div className="one-av-one tab" data-content="one-av-one">One av One</div>
+                            <div className="tourny tab" data-content="tourny">Tourny</div>
+                            <div className="liga tab" data-content="liga">Liga</div>
                         </div>
                         <Card id="tab-content">
                             <div className="tab-content-parent">
@@ -52,12 +58,13 @@ class LeaderBoards extends Component {
                                             <div className="difference">
                                                 <Form.Control
                                                     type="number"
-                                                    name="Ownvalue"
+                                                    name="ownValue"
                                                     className="difference-number"
-                                                    value={this.state.Ownvalue}
+                                                    value={this.state.ownValue}
                                                     onChange={this.handleChange.bind(this)}
                                                     max={10}
                                                     min={-10}
+                                                    maxLength="2"
                                                 ></Form.Control>
                                             </div>
                                         </div>
@@ -69,12 +76,13 @@ class LeaderBoards extends Component {
                                             <div className="difference">
                                                 <Form.Control
                                                     type="number"
-                                                    name="Othervalue"
+                                                    name="otherValue"
                                                     className="difference-number"
-                                                    value={this.state.Othervalue}
+                                                    value={this.state.otherValue}
                                                     onChange={this.handleChange.bind(this)}
                                                     max={10}
                                                     min={-10}
+                                                    maxLength="2"
                                                 ></Form.Control>
                                             </div>
                                         </div>
@@ -93,6 +101,7 @@ class LeaderBoards extends Component {
                                                     name=""
                                                     max={59}
                                                     min={2}
+                                                    maxLength="2"
                                                 ></FormControl>
                                                 <FormControl
                                                     className="time num-second"
@@ -100,16 +109,13 @@ class LeaderBoards extends Component {
                                                     name=""
                                                     max={59}
                                                     min={0}
+                                                    maxLength="2"
                                                 ></FormControl>
                                                 <FormControl
                                                     className="time"
                                                     type="text"
-                                                    name=""
-                                                className="time num-minute"
-                                                type="number"
-                                                name=""
-                                                max={59}
-                                                min={2}
+                                                    name="type"
+                                                    maxLength="3"
                                                 ></FormControl>
                                             </div>
                                             <div className="option">
@@ -121,24 +127,25 @@ class LeaderBoards extends Component {
                                                 ></FormControl>
                                             </div>
                                             <div className="option">
-                                                <span className="option-item">Advantage :</span>  
+                                                <span className="option-item">Advantage :</span>
                                                 <FormControl
-                                                className="advantage"
-                                                type="number"
-                                                name="advantage"
-                                                max={10}
-                                                min={-10}
+                                                    className="advantage"
+                                                    type="number"
+                                                    name="advantage"
+                                                    max={10}
+                                                    min={-10}
                                                 ></FormControl>
                                             </div>
                                             <span className="No">No.T0001</span>
                                         </div>
-                                      
+
 
 
                                     </div>
                                 </div>
                             </div>
                         </Card>
+
                     </div>
                     <div className="sidebar-right">
                         <div className="priorities">
@@ -152,10 +159,10 @@ class LeaderBoards extends Component {
                             </div>
                         </div>
                         <div className="create-game-section">
-                            <div className="new-game">
-                                <i className="fglyphicon glyphicon-plus"></i>
+                            <div className="create-game-button" onClick={this.createGame}>
+                                <i className="fas fa-plus"></i>
                             </div>
-                            <span className="create-game">Create Game</span>
+                            <span className="create-game-title">Create Game</span>
 
                         </div>
                     </div>
