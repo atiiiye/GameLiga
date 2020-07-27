@@ -151,11 +151,11 @@ class LeaderBoards extends Component {
                                 <span>Seats Descending</span>
                             </div>
                         </div>
-                        <div className="create-game">
+                        <div className="create-game-section">
                             <div className="new-game">
                                 <i className="fglyphicon glyphicon-plus"></i>
                             </div>
-                            <span className="">Create Game</span>
+                            <span className="create-game">Create Game</span>
 
                         </div>
                     </div>

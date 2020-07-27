@@ -323,17 +323,23 @@ div.container-fluid.LeaderBoards {
                 }
             }
 
-            div.create-game{
+            div.create-game-section{
                 height: 100px;
                 display: flex;
                 width: max-content;
                 flex-direction: column;
                 justify-content: flex-start;
+                align-items: center;
                 div.new-game {
-                    width: 60px;
-                    height: 60px;
+                    width: 50px;
+                    height: 50px;
                     background-color: rgba($color: $color-orange-1, $alpha: .4);
                     border-radius: 50%;
+
+                    &:active{
+                        background-color: rgba($color: $color-orange-1, $alpha: .6);
+                        border: 1px solid rgba($color: #ffffff, $alpha: .4);
+                    }
 
 
                     .plus-minus {
@@ -428,6 +434,13 @@ div.container-fluid.LeaderBoards {
                         }
                     }
                     
+                }
+
+                span.create-game{
+                    color: #ffffff;
+                    font-size: 90%;
+                    font-weight: 600;
+                    margin-top: 5px;
                 }
             }
 

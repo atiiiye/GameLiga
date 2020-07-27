@@ -313,22 +313,28 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.prioriti
   background-color: #ffffff;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section {
   height: 100px;
   display: flex;
   width: max-content;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game {
-  width: 60px;
-  height: 60px;
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game {
+  width: 50px;
+  height: 50px;
   background-color: rgba(255, 147, 0, 0.4);
   border-radius: 50%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game:active {
+  background-color: rgba(255, 147, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game .plus-minus {
   --secondary: #1E2235;
   --primary: #FAFBFF;
   --duration: .5s;
@@ -351,7 +357,7 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-g
   animation: var(--name, unchecked) var(--duration) ease forwards;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:before, div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:after {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game .plus-minus:before, div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game .plus-minus:after {
   content: '';
   position: absolute;
   width: 50px;
@@ -362,22 +368,22 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-g
   animation: var(--name-icon-b, var(--name-icon, unchecked-icon)) var(--duration) ease forwards;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:before {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game .plus-minus:before {
   clip-path: polygon(0 6px, 6px 6px, 6px 0, 10px 0, 10px 6px, 16px 6px, 16px 10px, 10px 10px, 10px 16px, 6px 16px, 6px 10px, 0 10px);
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:after {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game .plus-minus:after {
   --height: 10px;
   --top: 30px;
   --background: var(--secondary);
   --name-icon-b: var(--name-icon-a, checked-icon);
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:active {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game .plus-minus:active {
   --scale: .95;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game div.new-game .plus-minus:checked {
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.new-game .plus-minus:checked {
   --name: checked;
   --name-icon-b: checked-icon;
   --name-icon-a: unchecked-icon;
@@ -421,5 +427,12 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-g
     background-image: radial-gradient(ellipse at center, var(--secondary) 0%, var(--secondary) 25%, var(--primary) 25.1%, var(--primary) 100%);
     background-position: 50% 50%;
   }
+}
+
+div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section span.create-game {
+  color: #ffffff;
+  font-size: 90%;
+  font-weight: 600;
+  margin-top: 5px;
 }
 /*# sourceMappingURL=LeaderBoards.css.map */
