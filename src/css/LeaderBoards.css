@@ -7,7 +7,7 @@ body {
 div.container-fluid.LeaderBoards {
   background-image: url("./../images/fifa-world-cup-brazil-fifa.png"), url("./../images/fifa-club-world-cup-final.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%, 30% 70%;
+  background-size: 100% 100%, 30% 350px;
   background-position: 0 0, bottom right;
   -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
   width: 100%;

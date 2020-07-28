@@ -18,16 +18,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 class LeaderBoards extends Component {
 
     state = {
-        ownValue: "0",
-        otherValue: "0",
-        idCard: [
-            {
-                id:1
-            },
-            {
-                id:2
-            }
-        ]
+        ownValue: 0,
+        otherValue: 0,
+        box: [{
+            id:0
+        }],
+        // length:0
     }
 
     handleChange = (e) => {
@@ -35,17 +31,28 @@ class LeaderBoards extends Component {
     }
 
     createGame = () => {
-        let tabContent = document.querySelector('div.card#tab-content')
-        console.log(tabContent);
+        // let length = this.state.box.length
+        this.setState(prevState=>{
+        let new_array={id : length}
+            return{
 
-        let card = document.createElement('div')
-        card.classList.add('card')
-        card.setAttribute('id', 'tab-content')
-        console.log(card);
+                box : [...prevState.box , prevState.box.push(new_array)],
+                length : length+1
 
-        card.appendChild(tabContent)
+            }  
+        })
+
+        console.log(this.state.box);
+
+        // let tabContent = document.querySelector('div.card#tab-content')
+        // console.log(tabContent);
+        // let card = document.createElement('div')
+        // card.classList.add('card')
+        // card.setAttribute('id', 'tab-content')
+        // console.log(card);
+        // card.appendChild(tabContent)
         // tabContent.appendChild('')
-        tabContent.after('card')
+        // tabContent.after('card')
         // card.after(tabs)
         // console.log(card);
 
@@ -63,8 +70,8 @@ class LeaderBoards extends Component {
                             <div className="tourny tab" data-content="tourny">Tourny</div>
                             <div className="liga tab" data-content="liga">Liga</div>
                         </div>
-                        {this.state.idCard.map(item => (
-                            <Card id="tab-content" key={item.idCard}>
+                        {this.state.box.map(item => (
+                            <Card id="tab-content" key={item.id}>
                                 <div className="tab-content-parent">
                                     <div className="tab-content-left">
                                         <div className="section-left">
