@@ -39,7 +39,7 @@ div.container-fluid.LeaderBoards {
                 margin: 2rem;
                 margin-bottom: .5rem;
 
-                div.tab {
+                a.tab {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -58,12 +58,17 @@ div.container-fluid.LeaderBoards {
 
                     &:hover {
                         background-color: rgba($color: $color-orange-1, $alpha: .2);
+                        text-decoration: none;
                     }
 
-                    &:active {
-                        background-color: rgba($color: $color-orange-1, $alpha: .2);
-                        border-color: rgba($color: $color-orange-1, $alpha: .2);
+                    &:focus {
+                    outline: 0;
+                      
                     }
+                }
+                a.tab.selected{
+                    background-color: rgba($color: $color-orange-1, $alpha: .2);
+                    border-color: rgba($color: $color-orange-1, $alpha: .2);
                 }
             }
 

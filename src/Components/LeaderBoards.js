@@ -14,16 +14,14 @@ import JoinButton from './../images/green-button.png'
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { NavLink } from 'react-router-dom'
 
 class LeaderBoards extends Component {
 
     state = {
         ownValue: 0,
         otherValue: 0,
-        box: [{
-            id:0
-        }],
-        // length:0
+        box: [],
     }
 
     handleChange = (e) => {
@@ -31,32 +29,20 @@ class LeaderBoards extends Component {
     }
 
     createGame = () => {
-        // let length = this.state.box.length
-        this.setState(prevState=>{
-        let new_array={id : length}
-            return{
 
-                box : [...prevState.box , prevState.box.push(new_array)],
-                length : length+1
+        this.setState(prevState => {
+            let boxLength = this.state.box.length
+            // console.log(boxLength);
+            let new_array = { id: boxLength +1 }
+            // console.log(this.state.box);
+            console.log(new_array);
+            return {
+                // ...prevState,
+                box:[...prevState.box , prevState.box.push(new_array)]
+            }
 
-            }  
         })
-
         console.log(this.state.box);
-
-        // let tabContent = document.querySelector('div.card#tab-content')
-        // console.log(tabContent);
-        // let card = document.createElement('div')
-        // card.classList.add('card')
-        // card.setAttribute('id', 'tab-content')
-        // console.log(card);
-        // card.appendChild(tabContent)
-        // tabContent.appendChild('')
-        // tabContent.after('card')
-        // card.after(tabs)
-        // console.log(card);
-
-        // tabContent.after('div#tab-content')
 
     }
 
@@ -66,9 +52,9 @@ class LeaderBoards extends Component {
                 <Card id="content">
                     <div className="elements">
                         <div className="tabs">
-                            <div className="one-av-one tab" data-content="one-av-one">One av One</div>
-                            <div className="tourny tab" data-content="tourny">Tourny</div>
-                            <div className="liga tab" data-content="liga">Liga</div>
+                            <NavLink to="/Leader-boards" activeClassName="selected" exact className="one-av-one tab" data-content="one-av-one">One av One</NavLink>
+                            <NavLink to="/tourny" activeClassName="selected" className="tourny tab" data-content="tourny">Tourny</NavLink>
+                            <NavLink to="/liga" activeClassName="selected" className="liga tab" data-content="liga">Liga</NavLink>
                         </div>
                         {this.state.box.map(item => (
                             <Card id="tab-content" key={item.id}>
@@ -165,7 +151,6 @@ class LeaderBoards extends Component {
                                 </div>
                             </Card>
                         ))}
-
                     </div>
                     <div className="sidebar-right">
                         <div className="priorities">
@@ -186,8 +171,6 @@ class LeaderBoards extends Component {
 
                         </div>
                     </div>
-
-
                 </Card>
             </div>
         )

@@ -65,6 +65,23 @@ function App() {
             </div>
           </Route>
 
+
+          <Route path="/tourny">
+            <UserHeader show={displayHandler} />
+            <div style={{ display: 'flex' }}>
+              <Sidebar></Sidebar>
+              <LeaderBoards />
+            </div>
+          </Route>
+
+          <Route path="/liga">
+            <UserHeader show={displayHandler} />
+            <div style={{ display: 'flex' }}>
+              <Sidebar></Sidebar>
+              <LeaderBoards />
+            </div>
+          </Route>
+
           <Route path="/404" component={NotFound} />
         </Switch>
       </BrowserRouter>

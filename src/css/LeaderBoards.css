@@ -46,7 +46,7 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.tabs {
   margin-bottom: .5rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.tabs div.tab {
+div.container-fluid.LeaderBoards div.card#content div.elements div.tabs a.tab {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,15 +60,20 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.tabs div.tab 
   margin-right: .2rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.tabs div.tab:last-child {
+div.container-fluid.LeaderBoards div.card#content div.elements div.tabs a.tab:last-child {
   margin-right: 0;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.tabs div.tab:hover {
+div.container-fluid.LeaderBoards div.card#content div.elements div.tabs a.tab:hover {
   background-color: rgba(255, 147, 0, 0.2);
+  text-decoration: none;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.tabs div.tab:active {
+div.container-fluid.LeaderBoards div.card#content div.elements div.tabs a.tab:focus {
+  outline: 0;
+}
+
+div.container-fluid.LeaderBoards div.card#content div.elements div.tabs a.tab.selected {
   background-color: rgba(255, 147, 0, 0.2);
   border-color: rgba(255, 147, 0, 0.2);
 }
