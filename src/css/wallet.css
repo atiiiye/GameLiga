@@ -1,0 +1,112 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.modal.modal-wallet {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.modal.modal-wallet div.modal-content {
+  background-color: black;
+  border-color: #ff9300;
+  border-radius: 28px;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body {
+  padding: 0;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.modal-title {
+  background-color: #36363b;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  border-radius: 29px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.modal-title h2 {
+  margin-left: 1rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.modal-title h2::first-letter {
+  color: #ff9300;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.content-wallet {
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  height: 50px;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-right {
+  width: 50%;
+  border: 1px solid #ff9300;
+  border-left: 0;
+  border-top: 0;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-right span.content-right-span {
+  color: #959aa2;
+  font-size: 95%;
+  margin-left: 1rem;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-left {
+  width: 50%;
+  border: 1px solid #ff9300;
+  border-right: 0;
+  border-top: 0;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-left span.content-left-span {
+  color: #959aa2;
+  font-size: 95%;
+  margin-left: 1rem;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.wallet-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.deposit {
+  background-color: #ff9300;
+  border-color: #ff9300;
+  border-radius: 28px;
+  outline: none;
+  font-size: 95%;
+  color: #fff;
+  width: 45%;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.deposit:focus {
+  box-shadow: 0 0 1px 0.1rem rgba(255, 147, 0, 0.3);
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.withDraw {
+  background-color: #36363b;
+  border-color: #36363b;
+  border-radius: 28px;
+  outline: none;
+  font-size: 95%;
+  color: #fff;
+  width: 45%;
+}
+
+div.modal.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.withDraw:focus {
+  box-shadow: 0 0 1px 0.1rem rgba(54, 54, 59, 0.3);
+}
+/*# sourceMappingURL=wallet.css.map */

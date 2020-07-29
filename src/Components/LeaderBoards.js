@@ -32,17 +32,15 @@ class LeaderBoards extends Component {
 
         this.setState(prevState => {
             let boxLength = this.state.box.length
-            // console.log(boxLength);
-            let new_array = { id: boxLength +1 }
-            // console.log(this.state.box);
-            console.log(new_array);
+            let new_array = { id: boxLength + 1 }
+            prevState.box.push(new_array)
+            console.log(this.state.box);
             return {
-                // ...prevState,
-                box:[...prevState.box , prevState.box.push(new_array)]
+                ...prevState
+                //         box : [...prevState.box , prevState.box.push(new_array)] 
             }
 
         })
-        console.log(this.state.box);
 
     }
 

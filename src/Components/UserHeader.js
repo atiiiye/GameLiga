@@ -21,11 +21,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar } from 'react-bootstrap';
 
 
+//import components
+import Wallet from './../Components/Wallet'
+
 class UserHeader extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    // }
+    
+    state = {
+        show: false,
+    }
+
+    handleRouting=(e)=>{
+        e.preventDefault()
+        this.setState({ show: true })
+        
+    }
+
+    setShow =(status)=>{
+        this.setState(()=>{
+            return {
+                show : status
+            }
+        })
+    }
+
     render() {
         return (
             <div>
@@ -51,7 +70,10 @@ class UserHeader extends Component {
                                         {/* <div className="row part-2"> */}
                                         <NavLink to="/bell" className="nav-link-icon" id="bell"><img className="image-icon" id="bell" src={BellIcon} alt=""></img></NavLink>
                                         <NavLink to="/telegram" className="nav-link-icon" id="telegram"><img className="image-icon" id="telegram" src={TelegramIcon} alt=""></img></NavLink>
-                                        <NavLink to="/wallet" className="nav-link-icon" id="wallet"><img className="image-icon" id="wallet" src={WalletIcon} alt=""></img></NavLink>
+                                        <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
+                                            <img className="image-icon" id="wallet" src={WalletIcon} alt=""></img>
+                                            <Wallet show={this.state.show} setShow={this.setShow.bind(this)} />
+                                        </NavLink>
                                         {/* </div> */}
                                     </Navbar.Collapse>
                                 ) :

@@ -48,6 +48,10 @@ nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-us
   height: 22px;
 }
 
+nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 a.nav-link-icon img.image-icon.selected {
+  color: #ff9300;
+}
+
 nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 a.nav-link-icon#user {
   width: 45px;
   height: 45px;

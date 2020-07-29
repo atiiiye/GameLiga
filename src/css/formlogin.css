@@ -4,14 +4,14 @@ body {
   background-color: #1c1c22;
 }
 
-div.modal-content {
+div.login-modal div.modal-content {
   background-color: rgba(28, 28, 34, 0.7);
   border-color: #ff9300;
   border-radius: 28px;
   margin-top: 14%;
 }
 
-div.modal-content div.modal-body {
+div.login-modal div.modal-content div.modal-body {
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -24,32 +24,32 @@ div.modal-content div.modal-body {
   padding-right: 0;
 }
 
-div.modal-content div.modal-body div.modal-title h2 {
+div.login-modal div.modal-content div.modal-body div.modal-title.title-login h2 {
   color: #fff;
   font-weight: bold;
 }
 
-div.modal-content div.modal-body div.modal-title h2 span {
+div.login-modal div.modal-content div.modal-body div.modal-title.title-login h2 span {
   font-weight: bold;
   color: #ff9300;
 }
 
-div.modal-content div.modal-body div.modal-title p.text-white {
+div.login-modal div.modal-content div.modal-body div.modal-title.title-login p.text-white {
   margin-top: .5rem;
   font-size: 90%;
 }
 
-div.modal-content div.modal-body div.modal-title p.text-white a {
+div.login-modal div.modal-content div.modal-body div.modal-title.title-login p.text-white a {
   font-size: 80%;
   color: red;
   font-weight: bold;
 }
 
-div.modal-content div.modal-body div.modal-title p.text-white a:focus {
+div.login-modal div.modal-content div.modal-body div.modal-title.title-login p.text-white a:focus {
   outline: none;
 }
 
-div.modal-content div.modal-body form.form-login {
+div.login-modal div.modal-content div.modal-body form.form-login {
   padding-top: 0;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ div.modal-content div.modal-body form.form-login {
   width: 100%;
 }
 
-div.modal-content div.modal-body form.form-login div.form-fields {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-fields {
   padding: 0;
   margin-top: .5rem;
   width: 80%;
@@ -67,43 +67,43 @@ div.modal-content div.modal-body form.form-login div.form-fields {
   flex-direction: column;
 }
 
-div.modal-content div.modal-body form.form-login div.form-fields label {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-fields label {
   font-size: 80%;
   color: red;
   font-weight: bold;
   width: 70%;
 }
 
-div.modal-content div.modal-body form.form-login div.form-fields div.input-group span {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-fields div.input-group span {
   position: absolute;
   right: 10px;
   z-index: 10;
   top: 5px;
 }
 
-div.modal-content div.modal-body form.form-login div.form-fields input {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-fields input {
   direction: ltr;
   border-color: #36363b;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 7px;
 }
 
-div.modal-content div.modal-body form.form-login div.form-fields input:focus {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-fields input:focus {
   box-shadow: 0 0 1px 0.2rem rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-div.modal-content div.modal-body form.form-login div.form-fields small a {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-fields small a {
   color: #ff9300;
   font-weight: bold;
 }
 
-div.modal-content div.modal-body form.form-login div.form-fields div.form-validate {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-fields div.form-validate {
   color: red;
   font-size: 90%;
 }
 
-div.modal-content div.modal-body form.form-login a.forgot {
+div.login-modal div.modal-content div.modal-body form.form-login a.forgot {
   font-size: 85%;
   color: #ff9300;
   font-weight: bold;
@@ -111,18 +111,18 @@ div.modal-content div.modal-body form.form-login a.forgot {
   text-align: right;
 }
 
-div.modal-content div.modal-body form.form-login a.forgot:focus {
+div.login-modal div.modal-content div.modal-body form.form-login a.forgot:focus {
   outline: none;
 }
 
-div.modal-content div.modal-body form.form-login div.form-group {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-div.modal-content div.modal-body form.form-login div.form-group button {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-group button.login {
   background-color: #ff9300;
   border-color: #ff9300;
   border-radius: 28px;
@@ -131,7 +131,7 @@ div.modal-content div.modal-body form.form-login div.form-group button {
   color: #fff;
 }
 
-div.modal-content div.modal-body form.form-login div.form-group button:focus {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-group button.login:focus {
   box-shadow: 0 0 1px 0.2rem rgba(255, 147, 0, 0.3);
 }
 /*# sourceMappingURL=formlogin.css.map */

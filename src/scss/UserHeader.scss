@@ -40,6 +40,9 @@ nav.navbar.user-header {
                     width: 20px;
                     height: 22px;
                 }
+                img.image-icon.selected{
+                    color: $color-orange-1;
+                }
             }
     
             a.nav-link-icon#user {

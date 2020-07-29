@@ -151,12 +151,13 @@ export default class Header extends Component {
           </Navbar>
 
           <Modal
+            className="login-modal"
             show={this.state.show}
             ref={this.refrence}
             onHide={() => this.setState({ show: false })}
           >
             <Modal.Body>
-              <Modal.Title className="text-center mx-2">
+              <Modal.Title className="title-login text-center mx-2">
                 <h2>
                   Welcome <span>back</span>
                 </h2>
@@ -213,7 +214,7 @@ export default class Header extends Component {
 
                 <div className="mt-5 form-group w-75">
                   <Button
-                    className="btn-block"
+                    className="btn-block login"
                     variant="none"
                     id="submit"
                     value="Submit"

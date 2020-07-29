@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -20,73 +20,80 @@ import LeaderBoards from "./Components/LeaderBoards";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
  
 
-function App() {
-  const [stateDisplay, setDisplayState] = useState(true)
+class App extends Component {
+  // const [stateDisplay, setDisplayState] = useState(true)
 
-  let displayHandler = () => {setDisplayState(stateDisplay)}
+  state ={
+    stateDisplay:true
+  }
+
+  displayHandler = () => {this.setState(stateDisplay)}
   
-  return (
-    <div>
-      <BrowserRouter>
-        <Switch>
-
-          <Route path="/" exact>
-            <Header></Header>
-            <Slider></Slider>
-          </Route>
-
-          <Route path="/signup">
-            <UserHeader show={!displayHandler} />
-            <SignUp />
-          </Route>
-
-          <Route path="/account">
-            <UserHeader show={displayHandler} />
-            <div style={{ display: 'flex' }}>
-              <Sidebar></Sidebar>
-              <UserAccount />
-            </div>
-          </Route>
-
-          <Route path="/games">
-            <UserHeader show={displayHandler} />
-            <div style={{ display: 'flex' }}>
-              <Sidebar></Sidebar>
-              <FinalResult />
-            </div>
-          </Route>
-
-          
-          <Route path="/Leader-boards">
-            <UserHeader show={displayHandler} />
-            <div style={{ display: 'flex' }}>
-              <Sidebar></Sidebar>
-              <LeaderBoards />
-            </div>
-          </Route>
-
-
-          <Route path="/tourny">
-            <UserHeader show={displayHandler} />
-            <div style={{ display: 'flex' }}>
-              <Sidebar></Sidebar>
-              <LeaderBoards />
-            </div>
-          </Route>
-
-          <Route path="/liga">
-            <UserHeader show={displayHandler} />
-            <div style={{ display: 'flex' }}>
-              <Sidebar></Sidebar>
-              <LeaderBoards />
-            </div>
-          </Route>
-
-          <Route path="/404" component={NotFound} />
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
+  render(){
+    return (
+      <div>
+        <BrowserRouter>
+          <Switch>
+  
+            <Route path="/" exact>
+              <Header></Header>
+              <Slider></Slider>
+            </Route>
+  
+            <Route path="/signup">
+              <UserHeader show={!this.displayHandler.bind(this)} />
+              <SignUp />
+            </Route>
+  
+            <Route path="/account">
+              <UserHeader show={this.displayHandler.bind(this)} />
+              <div style={{ display: 'flex' }}>
+                <Sidebar></Sidebar>
+                <UserAccount />
+              </div>
+            </Route>
+  
+            <Route path="/games">
+              <UserHeader show={this.displayHandler.bind(this)} />
+              <div style={{ display: 'flex' }}>
+                <Sidebar></Sidebar>
+                <FinalResult />
+              </div>
+            </Route>
+  
+            
+            <Route path="/Leader-boards">
+              <UserHeader show={this.displayHandler.bind(this)} />
+              <div style={{ display: 'flex' }}>
+                <Sidebar></Sidebar>
+                <LeaderBoards />
+              </div>
+            </Route>
+  
+  
+            <Route path="/tourny">
+              <UserHeader show={this.displayHandler.bind(this)} />
+              <div style={{ display: 'flex' }}>
+                <Sidebar></Sidebar>
+                <LeaderBoards />
+              </div>
+            </Route>
+  
+            <Route path="/liga">
+              <UserHeader show={this.displayHandler.bind(this)} />
+              <div style={{ display: 'flex' }}>
+                <Sidebar></Sidebar>
+                <LeaderBoards />
+              </div>
+            </Route>
+  
+            <Route path="/404" component={NotFound} />
+          </Switch>
+        </BrowserRouter>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
