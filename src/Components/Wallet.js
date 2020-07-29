@@ -13,13 +13,13 @@ import { Button, Modal } from "react-bootstrap";
 class Wallet extends Component {
 
     render() {
-        let { show, setShow } = this.props;
+        let { show } = this.props;
         return (
             <>
                 <Modal
                     className="modal-wallet"
                     show={show}
-                    onHide={() => setShow({ show: false })}
+                    onHide={() => this.props.setShow({ show: false })}
                 >
                     {console.log(this.props)}
 
@@ -36,13 +36,13 @@ class Wallet extends Component {
                             </div>
                         </div>
 
-                        <div className="wallet-buttons w-75">
+                        <div className="wallet-buttons">
                             <Button
                                 className="btn-block deposit"
                                 variant="none"
                                 id="submit"
                                 value="Submit"
-                                onClick={() => setShow({ show: false })}
+                                onClick={() => this.props.setShow({ show: false })}
                                 type="submit"
                             >
                                 DEPOSIT
@@ -52,11 +52,14 @@ class Wallet extends Component {
                                 variant="none"
                                 id="submit"
                                 value="Submit"
-                                onClick={() => setShow({ show: false })}
+                                onClick={() => this.props.setShow({ show: false })}
                                 type="submit"
                             >
                                 WITHDRAW
                             </Button>
+                        </div>
+                        <div className="modal-wallet-footer">
+                            <span className="modal-wallet-footer-text">VIEW YOUR TRANSACTION</span>
                         </div>
                     </Modal.Body>
                 </Modal>

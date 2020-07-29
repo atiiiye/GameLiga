@@ -1,7 +1,7 @@
 @import 'base';
 
 div.modal.modal-wallet {
-    width: 30%;
+    // width: 30%;
     display: flex;
     justify-content: flex-start;
 
@@ -15,13 +15,13 @@ div.modal.modal-wallet {
             padding: 0;
 
             div.modal-title {
-                background-color: $color-gray-1;
+                background-color: $color-background-1;
                 width: 100%;
                 height: 40px;
                 display: flex;
-                border-radius: 29px;
-                border-bottom-left-radius:0 ;
-                border-bottom-right-radius:0 ;
+                border-radius: 28px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
                 align-items: center;
                 justify-content: flex-start;
 
@@ -40,18 +40,22 @@ div.modal.modal-wallet {
                 display: flex;
                 width: 100%;
                 background-color: transparent;
-                height: 50px;
+                height: 65px;
+                
 
                 div.content-right {
                     width: 50%;
                     border: 1px solid $color-orange-1;
                     border-left: 0;
-                    border-top: 0;
+                    border-top: 0; 
+                    display: flex;
+                    align-items: center;
 
                     span.content-right-span {
                         color: $color-gray-2;
                         font-size: 95%;
                         margin-left: 1rem;
+                     
 
 
                     }
@@ -61,7 +65,10 @@ div.modal.modal-wallet {
                     width: 50%;
                     border: 1px solid $color-orange-1;
                     border-right: 0;
-                    border-top: 0;
+                    border-top: 0;  
+                    display: flex;
+                    align-items: center;
+                    
 
                     span.content-left-span {
                         color: $color-gray-2;
@@ -79,7 +86,11 @@ div.modal.modal-wallet {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 100%;
+                width: 96%;
+                margin: .5rem;
+                height: 45px;
+                
+
 
                 button.deposit {
                     background-color: $color-orange-1;
@@ -88,7 +99,11 @@ div.modal.modal-wallet {
                     outline: none;
                     font-size: 95%;
                     color: $color-white;
-                    width: 45%;
+                    width: 40%;
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-self: center;
+                    // justify-content: center;
 
                     &:focus {
                         box-shadow: 0 0 1px .1rem rgba($color: $color-orange-1, $alpha: .3);
@@ -96,20 +111,41 @@ div.modal.modal-wallet {
                 }
 
                 button.withDraw {
-                    background-color: $color-gray-1;
-                    border-color: $color-gray-1;
+                    background-color: $color-background-1;
+                    border-color: $color-background-1;
                     border-radius: 28px;
                     outline: none;
                     font-size: 95%;
                     color: $color-white;
-                    width: 45%;
+                    width: 40%;
+                    margin-top: 0 !important;
 
                     &:focus {
                         box-shadow: 0 0 1px .1rem rgba($color: $color-gray-1, $alpha: .3);
                     }
                 }
 
+            }
 
+            div.modal-wallet-footer {
+                width: 100%;
+                height: 35px;
+                background-color: $color-background-1;
+                border-radius: 28px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+             
+                span.modal-wallet-footer-text {
+                    color: $color-gray-1;
+                    font-size: 90%;
+                    font-weight: 600;
+                    width: 100%;
+                    height: 27px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+
+                }
             }
         }
     }
