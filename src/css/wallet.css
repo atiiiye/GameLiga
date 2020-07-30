@@ -80,7 +80,7 @@ div.modal.modal-wallet div.modal-content div.modal-body div.content-wallet div.c
 
 div.modal.modal-wallet div.modal-content div.modal-body div.wallet-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 96%;
   margin: .5rem;

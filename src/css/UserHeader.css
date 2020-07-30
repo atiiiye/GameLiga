@@ -37,10 +37,13 @@ nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-us
   align-items: center;
   justify-content: center;
   margin-right: .5rem;
+  color: #b0b0b2;
+  text-decoration: none;
 }
 
 nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 a.nav-link-icon:focus {
   outline: none;
+  color: rgba(255, 147, 0, 0.5);
 }
 
 nav.navbar.user-header div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 a.nav-link-icon img.image-icon {

@@ -55,9 +55,6 @@ div.modal.modal-wallet {
                         color: $color-gray-2;
                         font-size: 95%;
                         margin-left: 1rem;
-                     
-
-
                     }
                 }
 
@@ -84,7 +81,7 @@ div.modal.modal-wallet {
 
             div.wallet-buttons {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
                 width: 96%;
                 margin: .5rem;

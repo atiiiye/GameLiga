@@ -14,6 +14,7 @@ import JoinButton from './../images/green-button.png'
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 import { NavLink } from 'react-router-dom'
 
 class LeaderBoards extends Component {
@@ -34,14 +35,18 @@ class LeaderBoards extends Component {
             let boxLength = this.state.box.length
             let new_array = { id: boxLength + 1 }
             prevState.box.push(new_array)
-            console.log(this.state.box);
+            console.log([ ...prevState.box ,prevState.box.push(new_array)] );
             return {
-                ...prevState
-                //         box : [...prevState.box , prevState.box.push(new_array)] 
+                
+                box:[prevState.box.push(new_array)] 
             }
 
         })
 
+    }
+
+    handlePrevent = (e) =>{
+        e.preventDefault();
     }
 
     render() {
@@ -51,11 +56,11 @@ class LeaderBoards extends Component {
                     <div className="elements">
                         <div className="tabs">
                             <NavLink to="/Leader-boards" activeClassName="selected" exact className="one-av-one tab" data-content="one-av-one">One av One</NavLink>
-                            <NavLink to="/tourny" activeClassName="selected" className="tourny tab" data-content="tourny">Tourny</NavLink>
-                            <NavLink to="/liga" activeClassName="selected" className="liga tab" data-content="liga">Liga</NavLink>
+                            <NavLink to="/tourny" onClick={this.handlePrevent.bind(this)} activeClassName="selected" className="tourny tab" data-content="tourny">Tourny</NavLink>
+                            <NavLink to="/liga" onClick={this.handlePrevent.bind(this)} activeClassName="selected" className="liga tab" data-content="liga">Liga</NavLink>
                         </div>
                         {this.state.box.map(item => (
-                            <Card id="tab-content" key={item.id}>
+                            <Card id="tab-content" key={item.id} {...item}>
                                 <div className="tab-content-parent">
                                     <div className="tab-content-left">
                                         <div className="section-left">

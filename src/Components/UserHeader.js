@@ -24,23 +24,27 @@ import { Navbar } from 'react-bootstrap';
 //import components
 import Wallet from './../Components/Wallet'
 
+//import packages
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 class UserHeader extends Component {
 
     
     state = {
-        show: false,
+        modalShow: false,
     }
 
     handleRouting=(e)=>{
         e.preventDefault()
-        this.setState({ show: true })
+        this.setState({ modalShow: true })
         
     }
 
     setShow =(status)=>{
+        console.log(status);
         this.setState(()=>{
             return {
-                show : status
+                modalShow : status
             }
         })
     }
@@ -70,9 +74,10 @@ class UserHeader extends Component {
                                         {/* <div className="row part-2"> */}
                                         <NavLink to="/bell" className="nav-link-icon" id="bell"><img className="image-icon" id="bell" src={BellIcon} alt=""></img></NavLink>
                                         <NavLink to="/telegram" className="nav-link-icon" id="telegram"><img className="image-icon" id="telegram" src={TelegramIcon} alt=""></img></NavLink>
-                                        <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
-                                            <img className="image-icon" id="wallet" src={WalletIcon} alt=""></img>
-                                            <Wallet show={this.state.show} setShow={this.setShow.bind(this)} />
+                                        <NavLink to="/wallet" activeClassName="selected" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
+                                        <i class='fas fa-wallet'></i>
+
+                                            <Wallet modalShow={this.state.modalShow} setShow={this.setShow.bind(this)} />
                                         </NavLink>
                                         {/* </div> */}
                                     </Navbar.Collapse>

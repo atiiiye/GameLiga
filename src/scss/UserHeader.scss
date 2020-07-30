@@ -31,9 +31,13 @@ nav.navbar.user-header {
                 align-items: center;
                 justify-content: center;
                 margin-right: .5rem;
+                color: $color-gray-3;
+                text-decoration: none;
     
                 &:focus {
                     outline: none;
+                    color: rgba($color: $color-orange-1 , $alpha: .5);
+
                 }
     
                 img.image-icon {

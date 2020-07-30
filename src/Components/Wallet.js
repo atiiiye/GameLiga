@@ -13,13 +13,13 @@ import { Button, Modal } from "react-bootstrap";
 class Wallet extends Component {
 
     render() {
-        let { show } = this.props;
+        let { modalShow } = this.props;
         return (
             <>
                 <Modal
                     className="modal-wallet"
-                    show={show}
-                    onHide={() => this.props.setShow({ show: false })}
+                    show={modalShow}
+                    onHide={() => this.props.setShow({ modalShow: false })}
                 >
                     {console.log(this.props)}
 
@@ -40,20 +40,20 @@ class Wallet extends Component {
                             <Button
                                 className="btn-block deposit"
                                 variant="none"
-                                id="submit"
-                                value="Submit"
-                                onClick={() => this.props.setShow({ show: false })}
-                                type="submit"
+                                id="deposit"
+                                // value="Submit"
+                                onClick={() => this.props.setShow({ modalShow: false })}
+                                // type="submit"
                             >
                                 DEPOSIT
                             </Button>
                             <Button
                                 className="btn-block withDraw"
                                 variant="none"
-                                id="submit"
-                                value="Submit"
-                                onClick={() => this.props.setShow({ show: false })}
-                                type="submit"
+                                id="withDraw"
+                                // value="Submit"
+                                onClick={() => this.props.setShow({ modalShow: false })}
+                                // type="submit"
                             >
                                 WITHDRAW
                             </Button>
