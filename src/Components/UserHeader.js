@@ -44,13 +44,9 @@ class UserHeader extends Component {
 
     }
 
-    setShow = (status) => {
-        // console.log(status ,this);
-        this.setState(() => {
-            return {
-                show: status
-            }
-        })
+    setShow(status) {
+        console.log(status ,this);
+        this.setState({ show: status})
     }
 
     render() {
@@ -86,6 +82,7 @@ class UserHeader extends Component {
                                             }}
                                             >
                                                 <Wallet />
+
                                             </modalContext.Provider>
                                         </NavLink>
                                         {/* </div> */}

@@ -13,18 +13,22 @@ import { Button, Modal } from "react-bootstrap";
 //import components
 import modalContext from './../Contexts'
 
+
 class Wallet extends Component {
     static contextType = modalContext;
 
     render() {
+        // let { modalShow ,setModalShow } = this.props;
         console.log(this.context);
         return (
             <>
                 <Modal
                     className="modal-wallet"
                     show={this.context.modalShow}
-                    onHide={() => this.context.setModalShow({ modalShow: false })}
+                    onHide={() => this.context.setModalShow(false)}
                 >
+                    {/* {console.log(this.props)} */}
+
                     <Modal.Body>
                         <Modal.Title className="text-center">
                             <h2>Wallet</h2>
@@ -43,7 +47,7 @@ class Wallet extends Component {
                                 variant="none"
                                 id="deposit"
                                 // value="Submit"
-                                onClick={() => this.context.setModalShow({ modalShow: false })}
+                                onClick={() => this.context.setModalShow(false)}
                                 // type="submit"
                             >
                                 DEPOSIT
@@ -53,7 +57,7 @@ class Wallet extends Component {
                                 variant="none"
                                 id="withDraw"
                                 // value="Submit"
-                                onClick={() => this.context.setModalShow({ modalShow: false })}
+                                onClick={() => this.context.setModalShow(false)}
                                 // type="submit"
                             >
                                 WITHDRAW

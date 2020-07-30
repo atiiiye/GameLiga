@@ -37,8 +37,8 @@ class LeaderBoards extends Component {
             prevState.box.push(new_array)
             console.log([ ...prevState.box ,prevState.box.push(new_array)] );
             return {
-                
-                box:[prevState.box.push(new_array)] 
+                ...prevState.box , 
+                box:[ prevState.box.push(new_array)] 
             }
 
         })
