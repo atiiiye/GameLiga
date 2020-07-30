@@ -10,19 +10,21 @@ import './../css/wallet.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Modal } from "react-bootstrap";
 
+//import components
+import modalContext from './../Contexts'
+
 class Wallet extends Component {
+    static contextType = modalContext;
 
     render() {
-        let { modalShow } = this.props;
+        console.log(this.context);
         return (
             <>
                 <Modal
                     className="modal-wallet"
-                    show={modalShow}
-                    onHide={() => this.props.setShow({ modalShow: false })}
+                    show={this.context.modalShow}
+                    onHide={() => this.context.setModalShow({ modalShow: false })}
                 >
-                    {console.log(this.props)}
-
                     <Modal.Body>
                         <Modal.Title className="text-center">
                             <h2>Wallet</h2>
@@ -35,14 +37,13 @@ class Wallet extends Component {
                                 <span className="content-left-span">Balance</span>
                             </div>
                         </div>
-
                         <div className="wallet-buttons">
                             <Button
                                 className="btn-block deposit"
                                 variant="none"
                                 id="deposit"
                                 // value="Submit"
-                                onClick={() => this.props.setShow({ modalShow: false })}
+                                onClick={() => this.context.setModalShow({ modalShow: false })}
                                 // type="submit"
                             >
                                 DEPOSIT
@@ -52,7 +53,7 @@ class Wallet extends Component {
                                 variant="none"
                                 id="withDraw"
                                 // value="Submit"
-                                onClick={() => this.props.setShow({ modalShow: false })}
+                                onClick={() => this.context.setModalShow({ modalShow: false })}
                                 // type="submit"
                             >
                                 WITHDRAW

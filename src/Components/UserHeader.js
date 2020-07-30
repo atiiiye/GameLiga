@@ -7,11 +7,11 @@ import './../css/mediaUserHeader.css';
 
 //import image
 import logo5 from "./../images/logo5.png";
-import UserIcon from "./../images/Icon-user.png";
-import TicketIcon from "./../images/Icon-ticket.png";
-import BellIcon from "./../images/Icon-bell.png";
-import TelegramIcon from "./../images/Icon-telegram.png";
-import WalletIcon from "./../images/Icon-wallet.png";
+// import UserIcon from "./../images/Icon-user.png";
+// import TicketIcon from "./../images/Icon-ticket.png";
+// import BellIcon from "./../images/Icon-bell.png";
+// import TelegramIcon from "./../images/Icon-telegram.png";
+// import WalletIcon from "./../images/Icon-wallet.png";
 
 //import route
 import { NavLink } from "react-router-dom";
@@ -22,29 +22,33 @@ import { Navbar } from 'react-bootstrap';
 
 
 //import components
-import Wallet from './../Components/Wallet'
+import Wallet from './../Components/Wallet';
+import modalContext from './../Contexts'
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import BellIcon from '@material-ui/icons/Notifications';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 
 class UserHeader extends Component {
 
-    
+
     state = {
-        modalShow: false,
+        show: false,
     }
 
-    handleRouting=(e)=>{
+    handleRouting = (e) => {
         e.preventDefault()
-        this.setState({ modalShow: true })
-        
+        this.setState({ show: true })
+
     }
 
-    setShow =(status)=>{
-        console.log(status);
-        this.setState(()=>{
+    setShow = (status) => {
+        // console.log(status ,this);
+        this.setState(() => {
             return {
-                modalShow : status
+                show: status
             }
         })
     }
@@ -69,15 +73,20 @@ class UserHeader extends Component {
                                 ? (
                                     < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
                                         <p className="text-muted">user name</p>
-                                        <NavLink to="/account" className="nav-link-icon" id="user"><img className="image-icon" id="user" src={UserIcon} alt=""></img></NavLink>
-                                        <NavLink to="/ticket" className="nav-link-icon" id="ticket"><img className="image-icon" id="ticket" src={TicketIcon} alt=""></img></NavLink>
+                                        <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
+                                        <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
                                         {/* <div className="row part-2"> */}
-                                        <NavLink to="/bell" className="nav-link-icon" id="bell"><img className="image-icon" id="bell" src={BellIcon} alt=""></img></NavLink>
-                                        <NavLink to="/telegram" className="nav-link-icon" id="telegram"><img className="image-icon" id="telegram" src={TelegramIcon} alt=""></img></NavLink>
-                                        <NavLink to="/wallet" activeClassName="selected" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
-                                        <i class='fas fa-wallet'></i>
-
-                                            <Wallet modalShow={this.state.modalShow} setShow={this.setShow.bind(this)} />
+                                        <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
+                                        <NavLink to="/telegram" className="nav-link-icon" id="telegram"><TelegramIcon className="image-icon " id="telegram"></TelegramIcon></NavLink>
+                                        <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
+                                            <WalletIcon className="image-icon" id="wallet" />
+                                            <modalContext.Provider value={{
+                                                modalShow: this.state.show,
+                                                setModalShow: this.setShow.bind(this)
+                                            }}
+                                            >
+                                                <Wallet />
+                                            </modalContext.Provider>
                                         </NavLink>
                                         {/* </div> */}
                                     </Navbar.Collapse>

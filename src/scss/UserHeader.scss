@@ -36,15 +36,18 @@ nav.navbar.user-header {
     
                 &:focus {
                     outline: none;
-                    color: rgba($color: $color-orange-1 , $alpha: .5);
 
                 }
+                &:active{
+                    color: rgba($color: $color-orange-1 , $alpha: .9);
+                }
     
-                img.image-icon {
+                i.image-icon {
+                    font-size: 20px;
                     width: 20px;
                     height: 22px;
                 }
-                img.image-icon.selected{
+                i.image-icon.selected{
                     color: $color-orange-1;
                 }
             }
@@ -53,17 +56,20 @@ nav.navbar.user-header {
                 width: 45px;
                 height: 45px;
     
-                img.image-icon#user {
+                i.image-icon#user {
+                    font-size: 45px;
                     width: 45px;
                     height: 45px;
                 }
+
             }
     
             a.nav-link-icon#ticket {
                 width: 35px;
                 height: 35px;
     
-                img.image-icon#ticket {
+                i.image-icon#ticket {
+                    font-size: 30px;
                     width: 30px;
                     height: 30px;
                 }
@@ -95,9 +101,10 @@ nav.navbar.user-header {
                 width: 30px;
                 height: 30px;
     
-                img.image-icon#bell {
-                    width: 25px;
-                    height: 25px;
+                svg.image-icon#bell {
+                    font-size: 1.9rem;
+                    // width: 25px;
+                    // height: 25px;
                 }
             }
     
@@ -105,9 +112,10 @@ nav.navbar.user-header {
                 width: 25px;
                 height: 25px;
     
-                img.image-icon#telegram {
-                    width: 20px;
-                    height: 20px;
+                svg.image-icon#telegram {
+                    font-size: 1.7rem;
+                    // width: 25px;
+                    // height: 25px;
                 }
             }
     
@@ -115,9 +123,10 @@ nav.navbar.user-header {
                 width: 25px;
                 height: 25px;
     
-                img.image-icon#wallet {
-                    width: 20px;
-                    height: 20px;
+                svg.image-icon#wallet {
+                    font-size: 1.35rem;
+                    // width: 20px;
+                    // height: 20px;
                 }
             }
         // }
