@@ -44,9 +44,9 @@ class UserHeader extends Component {
 
     }
 
-    setShow(status) {
-        console.log(status ,this);
-        this.setState({ show: status})
+    setShow =(status) => {
+        console.log(status, this);
+        this.setState({ show: status })
     }
 
     render() {
@@ -67,6 +67,7 @@ class UserHeader extends Component {
                         {
                             this.props.show
                                 ? (
+                                    <>
                                     < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
                                         <p className="text-muted">user name</p>
                                         <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
@@ -76,17 +77,18 @@ class UserHeader extends Component {
                                         <NavLink to="/telegram" className="nav-link-icon" id="telegram"><TelegramIcon className="image-icon " id="telegram"></TelegramIcon></NavLink>
                                         <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
                                             <WalletIcon className="image-icon" id="wallet" />
-                                            <modalContext.Provider value={{
-                                                modalShow: this.state.show,
-                                                setModalShow: this.setShow.bind(this)
-                                            }}
-                                            >
-                                                <Wallet />
 
-                                            </modalContext.Provider>
                                         </NavLink>
                                         {/* </div> */}
                                     </Navbar.Collapse>
+                                    <modalContext.Provider value={{
+                                        modalShow: this.state.show,
+                                        setModalShow: this.setShow.bind(this)
+                                    }}
+                                    >
+                                        <Wallet />
+                                    </modalContext.Provider>
+                                    </>
                                 ) :
                                 (
                                     <Navbar.Collapse className="collapse-user row part-1 d-none" id="collapse-navbar" />
