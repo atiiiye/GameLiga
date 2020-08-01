@@ -5,7 +5,6 @@ import './../css/reset.css'
 import './../css/signup.css';
 import './../css/mediaSignup.css'
 
-
 //import boostrap
 import { Form, Button } from "react-bootstrap";
 
@@ -13,6 +12,9 @@ import { Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 class SignUp extends Component {
+
+
+  
   render() {
     return (
       <div className="card-body" id="card-form-signup">

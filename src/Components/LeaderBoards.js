@@ -37,8 +37,8 @@ class LeaderBoards extends Component {
             prevState.box.push(new_array)
             console.log([ ...prevState.box ,prevState.box.push(new_array)] );
             return {
-                ...prevState.box , 
-                box:[ prevState.box.push(new_array)] 
+                 
+                box:[ ...prevState.box , prevState.box.push(new_array)] 
             }
 
         })
@@ -49,18 +49,22 @@ class LeaderBoards extends Component {
         e.preventDefault();
     }
 
+    componentDidUpdate(){
+        console.log('leader boards :componentDidUpdate');
+    }
+
     render() {
         return (
             <div className="container-fluid LeaderBoards">
                 <Card id="content">
                     <div className="elements">
                         <div className="tabs">
-                            <NavLink to="/Leader-boards" activeClassName="selected" exact className="one-av-one tab" data-content="one-av-one">One av One</NavLink>
+                            <NavLink to="/Leader-boards" activeClassName="selected"  className="one-av-one tab" data-content="one-av-one">One av One</NavLink>
                             <NavLink to="/tourny" onClick={this.handlePrevent.bind(this)} activeClassName="selected" className="tourny tab" data-content="tourny">Tourny</NavLink>
                             <NavLink to="/liga" onClick={this.handlePrevent.bind(this)} activeClassName="selected" className="liga tab" data-content="liga">Liga</NavLink>
                         </div>
                         {this.state.box.map(item => (
-                            <Card id="tab-content" key={item.id} {...item}>
+                            <Card id="tab-content" key={item.id} >
                                 <div className="tab-content-parent">
                                     <div className="tab-content-left">
                                         <div className="section-left">

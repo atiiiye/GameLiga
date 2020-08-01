@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Modal } from "react-bootstrap";
 
 //import components
-import modalContext from './../Contexts'
+import modalContext from './Contexts'
 
 
 class Wallet extends Component {
@@ -19,7 +19,7 @@ class Wallet extends Component {
 
     render() {
         // let { modalShow ,setModalShow } = this.props;
-        console.log(this.context);
+        // console.log(this.context);
         return (
             <>
                 <Modal

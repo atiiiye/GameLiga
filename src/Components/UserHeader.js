@@ -23,7 +23,7 @@ import { Navbar } from 'react-bootstrap';
 
 //import components
 import Wallet from './../Components/Wallet';
-import modalContext from './../Contexts'
+import modalContext from './Contexts'
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -45,7 +45,7 @@ class UserHeader extends Component {
     }
 
     setShow =(status) => {
-        console.log(status, this);
+        // console.log(status, this);
         this.setState({ show: status })
     }
 
