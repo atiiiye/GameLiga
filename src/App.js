@@ -28,9 +28,8 @@ class App extends Component {
   }
 
   displayHandler = () => {this.setState(stateDisplay)}
-  componentDidUpdate(){
-    console.log('App :componentDidUpdate');
-}
+
+
   render(){
     return (
       <div>

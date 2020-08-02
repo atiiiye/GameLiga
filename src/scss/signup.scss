@@ -123,18 +123,47 @@ div.card-body#card-form-signup {
                     }
                 }
 
-                input {
-                    border: 1px solid $color-gray-2;
-                    border-radius: 9px;
-                    background-color: #000;
-                    color: $color-gray-2;
-                    font-size: 80%;
-                    padding-left: .5rem;
-
-                    &:focus {
-                        box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
+                div.validation-box{
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        border: 1px solid $color-gray-2;
+                        border-radius: 9px;
+                        background-color: #000;
+                        color: $color-gray-2;
+                        font-size: 80%;
+                        padding-left: .5rem;
+    
+                        &:focus {
+                            box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
+                        }
+                      
                     }
+                    span.error {
+                        color:#ffffff;
+                        font-size: 75%;
+                        margin-top: .5rem;
+                        background-color: rgba($color:$color-red-1, $alpha: 1);
+                        padding: .5rem;
+                        border: 1px solid rgba($color:$color-red-1, $alpha: 1.0);
+                        border-radius: 5px;
+                        // position: relative;
+                      
                 }
+
+                input[type="range"]{
+                    background-color:transparent;
+                    border: none;
+                    user-select: none;
+                    &:focus {
+                        box-shadow:none;
+                    }
+
+                }
+
+              }
+
+              
 
                 div.form-check-inline {
                     width: 10%;
@@ -230,27 +259,44 @@ div.card-body#card-form-signup {
                         align-items: center;
                         justify-content: center;
                         color: $color-white;
+                        div.validation-box{
+
+                        }
 
                     }
                 }
             }
+            // a{
+            //     color: #ffffff;
+            //     text-decoration: none;
+                button.register {
+                    background-color: $color-orange-1;
+                    border-color: $color-orange-1;
+                    border-radius: 28px;
+                    outline: none;
+                    font-size: 95%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    left: 16%;
+    
+                    &:focus {
+                        box-shadow: none;
+                        color: $color-white;
+                    }
+                    a{
+                       
+                    }
+                }
 
-            button.register {
-                background-color: $color-orange-1;
-                border-color: $color-orange-1;
-                border-radius: 28px;
-                outline: none;
-                font-size: 95%;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                left: 16%;
-
-                &:focus {
-                    box-shadow: none;
+                button.register.disabled{
+                    background-color: $color-gray-1;
+                    border-color: $color-background-1;
                     color: $color-white;
                 }
-            }
+            // }
+
+           
         }
     }
 }

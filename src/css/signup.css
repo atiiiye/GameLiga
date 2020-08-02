@@ -127,7 +127,12 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group lab
   padding-left: 3px;
 }
 
-div.card-body#card-form-signup div.card-form form.form-signup div.form-group input {
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box {
+  display: flex;
+  flex-direction: column;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box input {
   border: 1px solid #959aa2;
   border-radius: 9px;
   background-color: #000;
@@ -136,8 +141,28 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group inp
   padding-left: .5rem;
 }
 
-div.card-body#card-form-signup div.card-form form.form-signup div.form-group input:focus {
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box input:focus {
   box-shadow: 0 0 0 0.1rem rgba(255, 147, 0, 0.25);
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box span.error {
+  color: #ffffff;
+  font-size: 75%;
+  margin-top: .5rem;
+  background-color: #dc3545;
+  padding: .5rem;
+  border: 1px solid #dc3545;
+  border-radius: 5px;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box input[type="range"] {
+  background-color: transparent;
+  border: none;
+  user-select: none;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box input[type="range"]:focus {
+  box-shadow: none;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.form-check-inline {
@@ -192,6 +217,12 @@ div.card-body#card-form-signup div.card-form form.form-signup button.register {
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register:focus {
   box-shadow: none;
+  color: #fff;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup button.register.disabled {
+  background-color: #36363b;
+  border-color: #1c1c22;
   color: #fff;
 }
 /*# sourceMappingURL=signup.css.map */
