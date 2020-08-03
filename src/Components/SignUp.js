@@ -6,11 +6,18 @@ import './../css/signup.css';
 import './../css/mediaSignup.css'
 
 //import boostrap
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, ProgressBar } from "react-bootstrap";
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 
 //import routes
 import { NavLink } from "react-router-dom";
 
+//import components
+
+//import packages
+import axios from 'axios'
+// import RangeSlider from 'react-bootstrap-range-slider';
+import RefreshIcon from '@material-ui/icons/Refresh';
 
 const validateForm = (errors) => {
   let valid = true;
@@ -38,6 +45,9 @@ class SignUp extends Component {
     promotional: '',
     referred: '',
     checkbox: false,
+    generate: 0,
+    captcha: '',
+    captchaInput: '',
     errors: {
       firstName: '',
       lastName: '',
@@ -49,11 +59,14 @@ class SignUp extends Component {
       phone: '',
       promotional: '',
       referred: '',
+      generate: 0,
+      captchaInput: '',
     }
   };
 
   handleChange = (event) => {
     event.preventDefault();
+
     const { name, value } = event.target;
     let errors = this.state.errors;
     const validEmailRegex = RegExp(/^([A-Za-z])(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
@@ -81,7 +94,7 @@ class SignUp extends Component {
       case 'password':
         errors.password =
           value.length < 8
-            ? 'Password must be 8 characters long!'
+            ? 'Password at least must be 8 characters long!'
             : '';
         break;
       case 'confirmPassword':
@@ -161,10 +174,38 @@ class SignUp extends Component {
           errors.referred = ''
         }
         break;
-      default:
+      case 'generate':
+        let lengthPassword = this.state.password.length + 1
+
+        console.log(lengthPassword);
+
+        if (lengthPassword <= 6) {
+          this.setState({ [this.state.generate]: 50 });
+          console.log(this.state.generate);
+          errors.generate = 'your password is weak!'
+
+        } else if (7 < lengthPassword < 11) {
+          errors.generate = ''
+
+        } else if (lengthPassword >= 11) {
+          errors.generate = ''
+        }
         break;
+      case 'captchaInput':
+        if (value.length != 6 || value != this.state.captcha) {
+          console.log(value.length);
+          errors.captchaInput = 'Code is incorrect!'
+
+        } else {
+          errors.captchaInput = ''
+        }
+
+        break;
+
+      default:
+        return this.state
     }
-    
+
     this.setState({ errors, [name]: value });
   }
 
@@ -177,491 +218,336 @@ class SignUp extends Component {
     }
   }
 
-  // state = {
-  //   // fields: {},
-  //   // errors: {}
-
-  //   step: 1,
-  //       service_category: [],
-  //       user : [
-  //           {
-  //             firstName: '',
-  //             lastName: '',
-  //             nickName: '',
-  //             username: '',
-  //             email: '',
-  //             password: '',
-  //             confirmPassword: '',
-  //             errors: '',
-  //             checkbox:'',
-  //           }
-  //       ],
-  //       hasError: false,
-
-  //   // user: [
-  //   //   {firstName: ''},
-  //   //   {lastName: ''},
-  //   //   {nickName: ''},
-  //   //   {username: ''},
-  //   //   {email: ''},
-  //   //   {password: ''},
-  //   //   {confirmPassword: ''},
-  //   //   {errors: ''},
-  //   //   {checkbox:''},
-  //   // ],
-  //   // step: 0
-  // }
-
-  // schema = Joi.object().keys({
-
-  //   firstName: Joi.string()
-  //     .required()
-  //     .min(1)
-  //     .label('firstName'),
-  //   lastName: Joi.string()
-  //     .required()
-  //     .min(1)
-  //     .label('lastName'),
-  //   nickName: Joi.string()
-  //     .required()
-  //     .min(1)
-  //     .label('nickName'),
-  //   username: Joi.string()
-  //     .required()
-  //     .min(1)
-  //     .label('username'),
-  //   email: Joi.string()
-  //     .email({
-  //       minDomainSegments: 2,
-  //       tlds: { allow: ['com', 'net'] }
-  //     })
-  //     .required()
-  //     .min(7)
-  //     .label('email'),
-  //   password: Joi.string()
-  //     .required()
-  //     .min(6)
-  //     .label('Password')
-  //     .error(
-  //       new Error('Passwords should match and have at least 6 characters.')
-  //     ),
-  //   confirmPassword: Joi.string()
-  //     // .eql(Joi.ref('password'))
-  //     // .valid(this.state.data.confirmPassword)
-  //     .required()
-  //     .label('confirmPassword')
-  //     .error(
-  //       new Error('confirm password should match and have at least 6 characters.')
-  //     ),
-  // })
-
-  // handleValidation() {
-  //   let fields = this.state.fields;
-  //   let errors = {};
-  //   let formIsValid = true;
-
-  //Name
-  // if (!fields["username"]) {
-  //   formIsValid = false;
-  //   errors["username"] = "Cannot be empty";
-  // }
-
-  // if (typeof fields["username"] !== "undefined") {
-  //   if (!fields["username"].match(/^[a-zA-Z]+$/)) {
-  //     formIsValid = false;
-  //     errors["username"] = "Only letters";
-  //   }
-  // }
-
-  //Password
-  // if (!fields["password"]) {
-  //   formIsValid = false;
-  //   errors["password"] = "Cannot be empty";
-  // }
-
-  //Email
-  // if (!fields["email"]) {
-  //   formIsValid = false;
-  //   errors["email"] = "Cannot be empty";
-  // }
-
-  // if (typeof fields["email"] !== "undefined") {
-  //   let lastAtPos = fields["email"].lastIndexOf('@');
-  //   let lastDotPos = fields["email"].lastIndexOf('.');
-
-  //   if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') == -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
-  //     formIsValid = false;
-  //     errors["email"] = "Email is not valid";
-  //   }
-  // }
-
-
-
-  //   this.setState({ errors: errors });
-  //   return formIsValid;
-  // }
-
-  // contactSubmit(e) {
-  //   e.preventDefault();
-
-  //   if (this.handleValidation()) {
-  //     console.log('form is valid');
-  //   } else {
-  //     console.log('form is invalid !');
-  //   }
-
-  // }
-
-  // handleChange(field, e) {
-  //   let fields = this.state.fields;
-  //   fields[field] = e.target.value;
-  //   this.setState({ fields });
-  // }
-
-
-  // validateProperty = (name={string}, value={ string}) => {
-  //   const property = { [name]: value };
-  //   const propSchema= Schema = { [name]: this.schema[name] };
-  //   const { error } = Joi.validate(property, propSchema);
-  //   return error ? error.details[0].message : null;
-  // };
-
-  // handleChange = (e) => {
-  //   const { name, value } = e.currentTarget;
-
-  //   const data = { ...this.state.data };
-  //   data[name] = value;
-
-  //   const errors = { ...this.state.errors };
-  //   const errorMessage = this.validateProperty(name, value);
-  //   if (errorMessage) errors[name] = errorMessage;
-  //   else delete errors[name];
-
-  //   this.setState({ data, errors });
-  // };
-
-
-  // componentDidUpdate() {
-  //   this.schema.confirmPassword = Joi.any()
-  //     .min(6)
-  //     // .valid(this.state.data.password)
-  //     .required()
-  //     .label('confirmPassword')
-  //     .error(
-  //       new Error('Passwords should match and have at least 6 characters.')
-  //     );
-  // }
-
-  // validatePropery = (name, value, schema) => {
-  //   const obj = {
-  //       [name]: value
-  //   };
-  //   const fieldSchema = {
-  //       [name]: schema[name]
-  //   };
-  //   const result = Joi.validate(obj, fieldSchema);
-  // }
-
-  // validate = (data, schema) => {
-  //   const options = {
-  //       abortEarly: false
-  //   };
-  //   const result = Joi.validate(data, schema, options);
-  // }
-
-  // validate = () => {
-  //   const result = this.schema.validate(this.state.user)
-  //   console.log(result)
-  // }
-
-  // // Proceed to next step
-  // nextStep = () => {
-  //   const { step } = this.state;
-  //   this.setState({
-  //     step: step + 1
-  //   });
-  // }
-
-  // // Proceed to prev step
-  // prevStep = () => {
-  //   const { step } = this.state;
-  //   this.setState({
-  //     step: step - 1
-  //   });
-  // }
-
-  // // handle select
-  // handleChange = (event) => {
-  //   this.setState(prevState => ({
-  //     ...prevState,
-  //     [event.target.name]: event.target.value,
-  //   }));
-  // }
-
-  // // handle input
-  // handleChangeInput = event => {
-  //   this.setState({ [event.target.name]: event.target.value });
-  // };
-
-  // handleSubmit = () => {
-  //   this.validate();
-  // }
-
   handleChangeBox = (e) => {
     this.setState({
       checkbox: e.target.checked
     })
   }
 
+  handleChangeRange = (e) => {
+    this.setState({});
+  }
 
-  // capchaUrl = "http://api.adpod.ir/public/common/captcha";
-  // date = new Date().getSeconds();
-  // returnCapcha = capchaUrl + '?_t=' + date;
-  // fetch(capchaUrl).then((response) => {
-  //   var sessionId = response.headers.get('session_id');
-  //   localStorage.setItem("session_Id", JSON.stringify(sessionId));
-  //   this.setState({ capchaSrc: returnCapcha });
-  // });
+  randomPassword = (length) => {
+    let chars = "abcdefghijklmnopqrstuvwxyz!@#$%&*ABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
+    let pass = ''
+    for (let x = 0; x < length; x++) {
+      let i = Math.floor(Math.random() * chars.length);
+      pass += chars.charAt(i);
+    }
 
-render() {
-  const { errors } = this.state;
-  return (
-    <div className="card-body" id="card-form-signup">
-      <div className="card-form">
-        <div className="title">
-          <h1 className="h1">Registration</h1>
-          <p className="text-muted">
-            If you already have an Account with Challenge Stars
+    this.setState({
+      password: pass
+    })
+  }
+
+  componentDidMount() {
+    this.randomCode(6)
+  }
+
+  randomCode = (length) => {
+    let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
+    let code = ''
+    for (let x = 0; x < length; x++) {
+      let i = Math.floor(Math.random() * chars.length);
+      code += chars.charAt(i);
+    }
+
+    this.setState({
+      captcha: code
+    })
+
+  }
+
+
+  render() {
+    const { errors } = this.state;
+    return (
+      <div className="card-body" id="card-form-signup">
+        <div className="card-form">
+          <div className="title">
+            <h1 className="h1">Registration</h1>
+            <p className="text-muted">
+              If you already have an Account with Challenge Stars
               </p>
-          <NavLink to="/" id="goLogin">
-            click here to login
+            <NavLink to="/" id="goLogin">
+              click here to login
               </NavLink>
-        </div>
+          </div>
 
-        <Form
-          action="#"
-          className="form-signup"
-          onSubmit={this.handleSubmit}
-        >
-          <h3 className="h3">Personal Information</h3>
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 username">User name :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="text"
-                className=" form-control-plaintext"
-                placeholder="User name"
-                name="username"
-                onChange={this.handleChange}
-                value={this.state.username}
-              />
-              {
-                errors.username.length > 0 &&
-                <span className='error'>{errors.username}</span>
-              }
-            </div>
-          </Form.Group>
+          <Form
+            action="#"
+            id="signupForm"
+            className="form-signup"
+            onSubmit={this.handleSubmit}
 
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 password">Password :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="password"
-                className="form-control-plaintext"
-                placeholder="Password"
-                onChange={this.handleChange}
-                value={this.state.password}
-                name="password"
-              />
-              {errors.password.length > 0 &&
-                <span className='error'>{errors.password}</span>}
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1" controlId="formBasicRangeCustom">
-            <Form.Label className="col-sm-4 col-form-label px-0"><NavLink to="/generate">Generate :</NavLink></Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control type="range" className="form-control-plaintext" start={[0, 100]} />
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 confirmPassword">confirm password :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="password"
-                className="form-control-plaintext"
-                placeholder="confirm password"
-                name="confirmPassword"
-                value={this.state.confirmPassword}
-                onChange={this.handleChange}
-              />
-              {
-                errors.confirmPassword.length > 0 &&
-                <span className='error'>{errors.confirmPassword}</span>
-              }
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 email">E-mail address :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="email"
-                className="form-control-plaintext"
-                placeholder="E-mail address"
-                name="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-                noValidate
-
-              />
-              {
-                errors.email.length > 0 &&
-                <span className='error'>{errors.email}</span>
-              }
-            </div>
-          </Form.Group>
-
-          <h3 className="h3">Personal Information</h3>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 nickName">Nick name :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="text"
-                className="form-control-plaintext"
-                placeholder="Nick name"
-                name="nickName"
-                onChange={this.handleChange}
-                value={this.state.nickName}
-                noValidate
-
-              />
-              {
-                errors.nickName.length > 0 &&
-                <span className='error'>{errors.nickName}</span>
-              }
-            </div>
-
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 fistName">First name :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="text"
-                className="form-control-plaintext"
-                placeholder="First name"
-                name="firstName"
-                onChange={this.handleChange}
-                value={this.state.firstName}
-              />
-              {
-                errors.firstName.length > 0 &&
-                <span className='error'>{errors.firstName}</span>
-              }
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 lastName">Last name :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="text"
-                className="form-control-plaintext"
-                placeholder="Last name"
-                name="lastName"
-                onChange={this.handleChange}
-                value={this.state.lastName}
-              />
-              {
-                errors.lastName.length > 0 &&
-                <span className='error'>{errors.lastName}</span>
-              }
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 phone">Phone number :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="text"
-                className="form-control-plaintext"
-                placeholder="Phone number"
-                name="phone"
-                onChange={this.handleChange}
-                value={this.state.phone}
-              />
-              {
-                errors.phone.length > 0 &&
-                <span className='error'>{errors.phone}</span>
-              }
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 promotional">Promotional Code :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="text"
-                className="form-control-plaintext"
-                placeholder="Promotional code"
-                name="promotional"
-                onChange={this.handleChange}
-                value={this.state.promotional}
-              />
-              {
-                errors.promotional.length > 0 &&
-                <span className='error'>{errors.promotional}</span>
-              }
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0 referred">Referred by :</Form.Label>
-            <div className="validation-box col-sm-7">
-              <Form.Control
-                type="text"
-                className="form-control-plaintext"
-                placeholder="Referred by"
-                name="referred"
-                onChange={this.handleChange}
-                value={this.state.referred}
-              />
-              {
-                errors.referred.length > 0 &&
-                <span className='error'>{errors.referred}</span>
-              }
-            </div>
-          </Form.Group>
-
-          <Form.Group className="row ml-1">
-            <Form.Label className="col-sm-4 col-form-label px-0">Captcha :</Form.Label>
-            <div className="captcha-block col-sm-7">
-              <div className="captcha">7A223</div>
-              <div className="validation-box ">
+          >
+            <h3 className="h3">Personal Information</h3>
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 username">User name :</Form.Label>
+              <div className="validation-box col-sm-7">
                 <Form.Control
-                  type=""
-                  className="form-control-plaintext"
-                  placeholder=""
+                  type="text"
+                  className=" form-control-plaintext"
+                  placeholder="User name"
+                  name="username"
+                  onChange={this.handleChange}
+                  value={this.state.username}
                 />
+                {
+                  errors.username.length > 0 &&
+                  <span className='error'>{errors.username}</span>
+                }
               </div>
-            </div>
-          </Form.Group>
+            </Form.Group>
 
-          <Form.Group className="row ml-1">
-            <Form.Check
-              inline
-              type="checkbox"
-              className="form-control-plaintext"
-              placeholder=""
-              name="checkbox"
-              onChange={this.handleChangeBox}
-              value={this.state.checkbox}
-            />
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 password">Password :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="text"
+                  id="randomPassword"
+                  className="form-control-plaintext"
+                  placeholder="Password"
+                  onChange={this.handleChange}
+                  value={this.state.password}
+                  name="password"
+                />
+                {errors.password.length > 0 &&
+                  <span className='error'>{errors.password}</span>}
+              </div>
+            </Form.Group>
 
-            {/* <span className="mycheckbox">
+            <Form.Group className="row ml-1" controlId="formBasicRangeCustom">
+              <Form.Label className="col-sm-4 col-form-label px-0"><NavLink to="/generate">Generate :</NavLink></Form.Label>
+              <div className="validation-box col-sm-7">
+                <ProgressBar 
+                  // type="range"
+                  className="form-control-plaintext"
+                  now={this.state.password.length * 10}
+                  onChange={e => this.handleChangeRange(e.target)}
+                  min={0}
+                  max={100}
+                  name="generate"
+                />
+
+                <Button
+                  className="generate-password mt-2"
+                  variant="warning"
+                  type="button"
+                  onClick={this.randomPassword.bind(this, 11)}
+                >Generate Password
+                </Button>
+
+                {
+                  errors.generate.length > 0 &&
+                  <span className='error'>{errors.generate}</span>
+                }
+
+                {/* <RangeSlider 
+                 value={this.state.generate}
+                 onChange={this.handleChange}
+                 min={0}
+                 max={100}
+                //  variant= "warning"
+                 /> */}
+
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 confirmPassword">confirm password :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="password"
+                  className="form-control-plaintext"
+                  placeholder="confirm password"
+                  name="confirmPassword"
+                  value={this.state.confirmPassword}
+                  onChange={this.handleChange}
+                />
+                {
+                  errors.confirmPassword.length > 0 &&
+                  <span className='error'>{errors.confirmPassword}</span>
+                }
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 email">E-mail address :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="email"
+                  className="form-control-plaintext"
+                  placeholder="E-mail address"
+                  name="email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  noValidate
+
+                />
+                {
+                  errors.email.length > 0 &&
+                  <span className='error'>{errors.email}</span>
+                }
+              </div>
+            </Form.Group>
+
+            <h3 className="h3">Personal Information</h3>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 nickName">Nick name :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="text"
+                  className="form-control-plaintext"
+                  placeholder="Nick name"
+                  name="nickName"
+                  onChange={this.handleChange}
+                  value={this.state.nickName}
+                  noValidate
+
+                />
+                {
+                  errors.nickName.length > 0 &&
+                  <span className='error'>{errors.nickName}</span>
+                }
+              </div>
+
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 fistName">First name :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="text"
+                  className="form-control-plaintext"
+                  placeholder="First name"
+                  name="firstName"
+                  onChange={this.handleChange}
+                  value={this.state.firstName}
+                />
+                {
+                  errors.firstName.length > 0 &&
+                  <span className='error'>{errors.firstName}</span>
+                }
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 lastName">Last name :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="text"
+                  className="form-control-plaintext"
+                  placeholder="Last name"
+                  name="lastName"
+                  onChange={this.handleChange}
+                  value={this.state.lastName}
+                />
+                {
+                  errors.lastName.length > 0 &&
+                  <span className='error'>{errors.lastName}</span>
+                }
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 phone">Phone number :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="text"
+                  className="form-control-plaintext"
+                  placeholder="Phone number"
+                  name="phone"
+                  onChange={this.handleChange}
+                  value={this.state.phone}
+                />
+                {
+                  errors.phone.length > 0 &&
+                  <span className='error'>{errors.phone}</span>
+                }
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 promotional">Promotional Code :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="text"
+                  className="form-control-plaintext"
+                  placeholder="Promotional code"
+                  name="promotional"
+                  onChange={this.handleChange}
+                  value={this.state.promotional}
+                />
+                {
+                  errors.promotional.length > 0 &&
+                  <span className='error'>{errors.promotional}</span>
+                }
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0 referred">Referred by :</Form.Label>
+              <div className="validation-box col-sm-7">
+                <Form.Control
+                  type="text"
+                  className="form-control-plaintext"
+                  placeholder="Referred by"
+                  name="referred"
+                  onChange={this.handleChange}
+                  value={this.state.referred}
+                />
+                {
+                  errors.referred.length > 0 &&
+                  <span className='error'>{errors.referred}</span>
+                }
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Label className="col-sm-4 col-form-label px-0">Captcha :</Form.Label>
+              <div className="captcha-block col-sm-7">
+                <div className="captcha-generate">
+                  <div className="captcha"
+                  >{this.state.captcha}</div>
+                  <RefreshIcon
+                    className="refresh-captcha"
+                    onClick={this.randomCode.bind(this, 6)}
+                  />
+                </div>
+
+                <div className="validation-box ">
+                  <Form.Control
+                    type="text"
+                    name="captchaInput"
+                    className="form-control-plaintext"
+                    onChange={this.handleChange}
+                    value={this.state.captchaInput}
+                    placeholder="please enter code"
+                  />
+
+                  {
+                    errors.captchaInput.length > 0 &&
+                    <span className='error'>{errors.captchaInput}</span>
+                  }
+                </div>
+              </div>
+            </Form.Group>
+
+            <Form.Group className="row ml-1">
+              <Form.Check
+                inline
+                type="checkbox"
+                className="form-control-plaintext"
+                placeholder=""
+                name="checkbox"
+                onChange={this.handleChangeBox}
+                value={this.state.checkbox}
+              />
+
+              {/* <span className="mycheckbox">
                       <svg className="check-mark">
                           <use xlinkHref="#check"></use>
                       </svg>
@@ -672,30 +558,30 @@ render() {
                       </svg>
                   </span> */}
 
-            <Form.Label className="label-check-box  col-form-label px-0">I confirm that I have read and accepted all the<NavLink to="/rules">rules and condition</NavLink></Form.Label>
-          </Form.Group>
+              <Form.Label className="label-check-box  col-form-label px-0">I confirm that I have read and accepted all the<NavLink to="/rules">rules and condition</NavLink></Form.Label>
+            </Form.Group>
 
-          <Form.Group className="row ml-1">
-            {/* <div className="col-form-label"></div> */}
-            {/* <NavLink to="/account" className="col"> */}
-            <Button
-              className={`register col-sm-7 ${this.state.checkbox ? '' : 'disabled'}`}
-              variant="none"
-              type="submit"
-            // onClick={this.state.formValid}
-            >
-              Register
+            <Form.Group className="row ml-1">
+              {/* <div className="col-form-label"></div> */}
+              {/* <NavLink to="/account" className="col"> */}
+              <Button
+                className={`register col-sm-7 ${this.state.checkbox ? '' : 'disabled'}`}
+                variant="none"
+                type="submit"
+                onClick={this.state.handleChange}
+              >
+                Register
 
               </Button>
-            {/* </NavLink> */}
+              {/* </NavLink> */}
 
-          </Form.Group>
+            </Form.Group>
 
-        </Form>
+          </Form>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 }
 
 export default SignUp;

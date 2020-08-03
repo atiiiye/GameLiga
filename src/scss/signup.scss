@@ -153,12 +153,22 @@ div.card-body#card-form-signup {
 
                 input[type="range"]{
                     background-color:transparent;
+                    // background: linear-gradient(to right, $color-red-1 0%, $color-yellow 50%, $color-green 100%);
+                    cursor: pointer;
                     border: none;
+                    overflow: hidden;
+                    padding-left: 0;
                     user-select: none;
                     &:focus {
                         box-shadow:none;
                     }
 
+                }
+
+                div.progress{
+                    padding: 0;
+                    height: .6rem;
+                    
                 }
 
               }
@@ -248,6 +258,9 @@ div.card-body#card-form-signup {
                     align-items: center;
                     justify-content: center;
 
+                   div.captcha-generate{
+                       display: flex;
+                       margin-bottom: .2rem;
                     div.captcha {
                         width: 100px;
                         height: 50px;
@@ -259,11 +272,22 @@ div.card-body#card-form-signup {
                         align-items: center;
                         justify-content: center;
                         color: $color-white;
+                        font-style: italic;
+                        user-select: none;
+                        cursor: pointer;
                         div.validation-box{
 
                         }
 
                     }
+                    svg.refresh-captcha{
+                        display: flex;
+                        height: 50px;
+                        align-self: flex-end;
+                        font-size: 20px;
+                        color: #ffffff;
+                    }
+                   }
                 }
             }
             // a{

@@ -157,12 +157,20 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box input[type="range"] {
   background-color: transparent;
+  cursor: pointer;
   border: none;
+  overflow: hidden;
+  padding-left: 0;
   user-select: none;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box input[type="range"]:focus {
   box-shadow: none;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box div.progress {
+  padding: 0;
+  height: .6rem;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.form-check-inline {
@@ -191,7 +199,12 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   justify-content: center;
 }
 
-div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block div.captcha {
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block div.captcha-generate {
+  display: flex;
+  margin-bottom: .2rem;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block div.captcha-generate div.captcha {
   width: 100px;
   height: 50px;
   background-color: rgba(149, 154, 162, 0.5);
@@ -201,6 +214,17 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   align-items: center;
   justify-content: center;
   color: #fff;
+  font-style: italic;
+  user-select: none;
+  cursor: pointer;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block div.captcha-generate svg.refresh-captcha {
+  display: flex;
+  height: 50px;
+  align-self: flex-end;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register {

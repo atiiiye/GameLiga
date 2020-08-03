@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "ACYA,AAAA,IAAI,CAAA;EACA,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,UAAU;EACvB,gBAAgB,EAdC,OAAa;CAejC",
+    "mappings": "ACaA,AAAA,IAAI,CAAA;EACA,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,UAAU;EACvB,gBAAgB,EAfC,OAAa;CAgBjC",
     "sources": [
         "../scss/canvas.scss",
         "../scss/_base.scss"
