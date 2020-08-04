@@ -72,6 +72,7 @@ class SignUp extends Component {
     const validEmailRegex = RegExp(/^([A-Za-z])(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
     switch (name) {
+
       case 'username':
         if (value.length < 6 && value.match(/[a-zA-Z0-9]+$/)) {
           errors.username = 'Username must be 6 characters long!'
@@ -81,7 +82,11 @@ class SignUp extends Component {
           errors.username = 'Username can not be only number'
         } else if ((!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) || (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)) {
           errors.username = 'please enter correct'
-        } else {
+        }
+        //  else if(value.length == 0 ){
+        //   errors.username = 'Username cann`t empty'
+        // }
+        else {
           errors.username = ''
         }
         break
@@ -174,26 +179,25 @@ class SignUp extends Component {
           errors.referred = ''
         }
         break;
-      case 'generate':
-        let lengthPassword = this.state.password.length + 1
+      // case 'generate':
+      //   let lengthPassword = this.state.password.length + 1
 
-        console.log(lengthPassword);
+      //   console.log(lengthPassword);
 
-        if (lengthPassword <= 6) {
-          this.setState({ [this.state.generate]: 50 });
-          console.log(this.state.generate);
-          errors.generate = 'your password is weak!'
+      //   if (lengthPassword <= 6) {
+      //     this.setState({ [this.state.generate]: 50 });
+      //     console.log(this.state.generate);
+      //     errors.generate = 'your password is weak!'
 
-        } else if (7 < lengthPassword < 11) {
-          errors.generate = ''
+      //   } else if (7 < lengthPassword < 11) {
+      //     errors.generate = ''
 
-        } else if (lengthPassword >= 11) {
-          errors.generate = ''
-        }
-        break;
+      //   } else if (lengthPassword >= 11) {
+      //     errors.generate = ''
+      //   }
+      //   break;
       case 'captchaInput':
         if (value.length != 6 || value != this.state.captcha) {
-          console.log(value.length);
           errors.captchaInput = 'Code is incorrect!'
 
         } else {
@@ -211,11 +215,24 @@ class SignUp extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (validateForm(this.state.errors) && this.state.checkbox) {
+    if (validateForm(this.state.errors) && this.state.checkbox && this.state.username && this.state.password && this.state.confirmPassword && this.state.email && this.state.nickName && this.state.phone && this.state.captchaInput) {
+
       console.info('Valid Form')
+
+      const url = "http://{{baseurl}}/api/Account/CreateAccount"
+      let formData = { data: this.state, done: false }
+      // console.log(formData);
+      axios.post( url , formData)
+        .then( response => response.json())
+        .then( data => {this.setState({ data })})
+        .catch( error => console.log(error))
+
     } else {
       console.error('Invalid Form')
     }
+
+
+  
   }
 
   handleChangeBox = (e) => {
@@ -241,8 +258,12 @@ class SignUp extends Component {
     })
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.randomCode(6)
+    // const url = "http://{{baseurl}}/api/Account/CreateAccount"
+    // const response = await fetch(url)
+    // const data = await response.json()
+    // console.log(data);
   }
 
   randomCode = (length) => {
@@ -280,6 +301,7 @@ class SignUp extends Component {
             id="signupForm"
             className="form-signup"
             onSubmit={this.handleSubmit}
+            method="post"
 
           >
             <h3 className="h3">Personal Information</h3>
@@ -321,10 +343,11 @@ class SignUp extends Component {
             <Form.Group className="row ml-1" controlId="formBasicRangeCustom">
               <Form.Label className="col-sm-4 col-form-label px-0"><NavLink to="/generate">Generate :</NavLink></Form.Label>
               <div className="validation-box col-sm-7">
-                <ProgressBar 
+                <ProgressBar
                   // type="range"
                   className="form-control-plaintext"
-                  now={this.state.password.length * 10}
+                  variant="none"
+                  now={(this.state.password.length * 10)}
                   onChange={e => this.handleChangeRange(e.target)}
                   min={0}
                   max={100}
@@ -332,7 +355,7 @@ class SignUp extends Component {
                 />
 
                 <Button
-                  className="generate-password mt-2"
+                  className="generate-password mt-3"
                   variant="warning"
                   type="button"
                   onClick={this.randomPassword.bind(this, 11)}

@@ -167,8 +167,25 @@ div.card-body#card-form-signup {
 
                 div.progress{
                     padding: 0;
-                    height: .6rem;
-                    
+                    height: .5rem;
+                    background-color: rgba($color: #ffffff, $alpha: .1);
+                }
+                button.generate-password{
+                    background-color: rgba($color: $color-orange-1, $alpha: .8);
+                    border: none;
+                    font-size: 80%;
+                    color: #ffffff;
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    &:focus {
+                        box-shadow:none;
+                        background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                    }
+                    &:hover {
+                        background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                    }
+
                 }
 
               }

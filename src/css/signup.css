@@ -170,7 +170,27 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box div.progress {
   padding: 0;
-  height: .6rem;
+  height: .5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box button.generate-password {
+  background-color: rgba(255, 147, 0, 0.8);
+  border: none;
+  font-size: 80%;
+  color: #ffffff;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box button.generate-password:focus {
+  box-shadow: none;
+  background-color: #ff9300;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box button.generate-password:hover {
+  background-color: #ff9300;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.form-check-inline {
