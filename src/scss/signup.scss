@@ -55,7 +55,7 @@ div.card-body#card-form-signup {
             a#goLogin {
                 color: red;
                 font-weight: bold;
-                font-size: 75%;
+                font-size: 77%;
                 text-align: center;
                 text-decoration: underline red;
 
@@ -171,19 +171,24 @@ div.card-body#card-form-signup {
                     background-color: rgba($color: #ffffff, $alpha: .1);
                 }
                 button.generate-password{
-                    background-color: rgba($color: $color-orange-1, $alpha: .8);
-                    border: none;
+                    background-color:transparent;
+                    border-color: $color-orange-1;
                     font-size: 80%;
-                    color: #ffffff;
+                    border-radius: 28px;
+                    color: $color-orange-1;
                     width: 50%;
                     display: flex;
                     justify-content: center;
                     &:focus {
                         box-shadow:none;
                         background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                    color: #ffffff;
+
                     }
                     &:hover {
                         background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                    color: #ffffff;
+
                     }
 
                 }
@@ -319,11 +324,11 @@ div.card-body#card-form-signup {
                     position: relative;
                     display: flex;
                     justify-content: center;
+                    color: $color-white;
                     left: 16%;
     
                     &:focus {
                         box-shadow: none;
-                        color: $color-white;
                     }
                     a{
                        

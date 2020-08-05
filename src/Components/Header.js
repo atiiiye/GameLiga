@@ -18,7 +18,8 @@ import { Button, Form, Navbar, Modal } from "react-bootstrap";
 //import routes
 import { NavLink } from "react-router-dom";
 
-//import components
+//import packages
+import axios from 'axios'
 
 export default class Header extends Component {
   state = {
@@ -47,9 +48,17 @@ export default class Header extends Component {
 
     if (isValid) {
       this.setState({ formValid: true });
+
+      const url = "http://2.186.229.181:7580/api/Account/Login"
+      let formData = { data: this.state , done: false }
+      axios.post( url, formData)
+        // .then(response => response.json())
+        .then(data => { this.setState({ data }) })
+        .catch(error => console.log(error))
     }
     // console.log(this.state);
   };
+
   validate = () => {
     let userNameError = "";
     let passwordError = "";

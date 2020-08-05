@@ -19,13 +19,7 @@ import axios from 'axios'
 // import RangeSlider from 'react-bootstrap-range-slider';
 import RefreshIcon from '@material-ui/icons/Refresh';
 
-const validateForm = (errors) => {
-  let valid = true;
-  Object.values(errors).forEach(
-    (val) => val.length > 0 && (valid = false)
-  );
-  return valid;
-}
+
 
 class SignUp extends Component {
 
@@ -34,6 +28,7 @@ class SignUp extends Component {
   }
 
   state = {
+    data:{},
     firstName: '',
     lastName: '',
     nickName: '',
@@ -82,11 +77,7 @@ class SignUp extends Component {
           errors.username = 'Username can not be only number'
         } else if ((!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) || (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)) {
           errors.username = 'please enter correct'
-        }
-        //  else if(value.length == 0 ){
-        //   errors.username = 'Username cann`t empty'
-        // }
-        else {
+        }else {
           errors.username = ''
         }
         break
@@ -179,23 +170,6 @@ class SignUp extends Component {
           errors.referred = ''
         }
         break;
-      // case 'generate':
-      //   let lengthPassword = this.state.password.length + 1
-
-      //   console.log(lengthPassword);
-
-      //   if (lengthPassword <= 6) {
-      //     this.setState({ [this.state.generate]: 50 });
-      //     console.log(this.state.generate);
-      //     errors.generate = 'your password is weak!'
-
-      //   } else if (7 < lengthPassword < 11) {
-      //     errors.generate = ''
-
-      //   } else if (lengthPassword >= 11) {
-      //     errors.generate = ''
-      //   }
-      //   break;
       case 'captchaInput':
         if (value.length != 6 || value != this.state.captcha) {
           errors.captchaInput = 'Code is incorrect!'
@@ -205,7 +179,6 @@ class SignUp extends Component {
         }
 
         break;
-
       default:
         return this.state
     }
@@ -215,24 +188,30 @@ class SignUp extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (validateForm(this.state.errors) && this.state.checkbox && this.state.username && this.state.password && this.state.confirmPassword && this.state.email && this.state.nickName && this.state.phone && this.state.captchaInput) {
+    if (this.validateForm(this.state.errors) && this.state.checkbox && this.state.username && this.state.password && this.state.confirmPassword && this.state.email && this.state.nickName && this.state.phone && this.state.captchaInput) {
 
       console.info('Valid Form')
 
-      const url = "http://{{baseurl}}/api/Account/CreateAccount"
-      let formData = { data: this.state, done: false }
-      // console.log(formData);
-      axios.post( url , formData)
-        .then( response => response.json())
-        .then( data => {this.setState({ data })})
-        .catch( error => console.log(error))
+
+      const url = "http://2.186.229.181:7580/api/Account/CreateAccount"
+      let formData = { data: this.state}
+      axios.post( url, this.state)
+        // .then(response => response.json())
+        .then(data => { this.setState({ data }) })
+        .catch(error => console.log(error))
 
     } else {
       console.error('Invalid Form')
     }
 
+  }
 
-  
+  validateForm = (errors) => {
+    let valid = true;
+    Object.values(errors).forEach(
+      (val) => val.length > 0 && (valid = false)
+    );
+    return valid;
   }
 
   handleChangeBox = (e) => {
@@ -258,7 +237,7 @@ class SignUp extends Component {
     })
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.randomCode(6)
     // const url = "http://{{baseurl}}/api/Account/CreateAccount"
     // const response = await fetch(url)
@@ -382,7 +361,7 @@ class SignUp extends Component {
               <Form.Label className="col-sm-4 col-form-label px-0 confirmPassword">confirm password :</Form.Label>
               <div className="validation-box col-sm-7">
                 <Form.Control
-                  type="password"
+                  type="text"
                   className="form-control-plaintext"
                   placeholder="confirm password"
                   name="confirmPassword"
