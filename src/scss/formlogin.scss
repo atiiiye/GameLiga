@@ -98,8 +98,13 @@ div.login-modal{
                         }
                     }
                     div.form-validate{
-                        color: red;
-                        font-size: 90%;
+                        font-size: 80%;
+                        color:#ffffff;
+                        background-color: rgba(red, $alpha: .7);
+                        padding: .5rem;
+                        border: 1px solid rgba(red, $alpha: .9);
+                        border-radius: 5px;
+                        margin-bottom: .2rem;
                     }
     
                 }

@@ -194,9 +194,9 @@ class SignUp extends Component {
 
 
       const url = "http://2.186.229.181:7580/api/Account/CreateAccount"
-      let formData = { data: this.state}
+      // let formData = { data : this.state}
       axios.post( url, this.state)
-        // .then(response => response.json())
+        .then(response => response.json())
         .then(data => { this.setState({ data }) })
         .catch(error => console.log(error))
 

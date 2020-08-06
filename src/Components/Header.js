@@ -64,7 +64,7 @@ export default class Header extends Component {
     let passwordError = "";
 
     if (!this.state.userName) {
-      userNameError = "user name can not empty";
+      userNameError = "user name can not be empty";
     }
 
     if (this.state.userName) {
@@ -74,7 +74,7 @@ export default class Header extends Component {
     }
 
     if (!this.state.password) {
-      passwordError = "password can not empty";
+      passwordError = "password can not be empty";
     }
 
     if (userNameError || passwordError) {
@@ -197,9 +197,12 @@ export default class Header extends Component {
                     value={this.state.userName}
                     onChange={this.handleChange.bind(this)}
                   ></Form.Control>
-                  <div className="form-validate">
-                    {this.state.userNameError}
-                  </div>
+                  {
+                    this.state.userNameError.length >0 
+                    ?<div className="form-validate">{this.state.userNameError}</div>
+                    :''
+                  }
+           
                 </div>
                 <div className="form-fields">
                   <Form.Label>Password :</Form.Label>
@@ -213,9 +216,12 @@ export default class Header extends Component {
                     value={this.state.password}
                     onChange={this.handleChange.bind(this)}
                   ></Form.Control>
-                  <div className="form-validate">
-                    {this.state.passwordError}
-                  </div>
+                  {
+                    this.state.passwordError.length >0 
+                    ? <div className="form-validate">{this.state.passwordError}</div>
+                    : ''
+                  }
+                  
                 </div>
                 <NavLink className="forgot mb-4" to="/" alt="">
                   Forget your password?
