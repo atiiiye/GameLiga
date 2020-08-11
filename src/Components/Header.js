@@ -7,7 +7,6 @@ import "./../css/mediaHeader.css";
 import "./../css/formlogin.css";
 import "./../css/mediaFormlogin.css";
 
-
 //import image
 import logo5 from "./../images/logo5.png";
 
@@ -18,77 +17,18 @@ import { Button, Form, Navbar, Modal } from "react-bootstrap";
 //import routes
 import { NavLink } from "react-router-dom";
 
-//import packages
-import axios from 'axios'
+//import components
+import modalContext from './Contexts'
+import Login from './Login'
 
 export default class Header extends Component {
   state = {
     show: false,
-    userName: "",
-    password: "",
-    userNameError: "",
-    passwordError: "",
-    formValid: false,
   };
-  constructor(props) {
-    super(props);
-    this.refrence = React.createRef();
+
+  setShow = (status) => {
+    this.setState({ show: status })
   }
-  //   addingRefButton() {
-  //     this.refrence.current.focus();
-  //   }
-
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    let isValid = this.validate();
-
-    if (isValid) {
-      this.setState({ formValid: true });
-
-      const url = "http://2.186.229.181:7580/api/Account/Login"
-      let formData = { data: this.state , done: false }
-      axios.post( url, formData)
-        // .then(response => response.json())
-        .then(data => { this.setState({ data }) })
-        .catch(error => console.log(error))
-    }
-    // console.log(this.state);
-  };
-
-  validate = () => {
-    let userNameError = "";
-    let passwordError = "";
-
-    if (!this.state.userName) {
-      userNameError = "user name can not be empty";
-    }
-
-    if (this.state.userName) {
-      if (!this.state.userName.match(/^[a-zA-Z]+$/)) {
-        userNameError = "please enter only letters";
-      }
-    }
-
-    if (!this.state.password) {
-      passwordError = "password can not be empty";
-    }
-
-    if (userNameError || passwordError) {
-      this.setState({ userNameError, passwordError });
-      return false;
-    }
-
-    if (!userNameError || !passwordError) {
-      this.setState({ userNameError :"", passwordError:""});
-    }
-
-    return true;
-  };
-
   render() {
     return (
       <>
@@ -159,93 +99,15 @@ export default class Header extends Component {
             </div>
           </Navbar>
 
-          <Modal
-            className="login-modal"
-            show={this.state.show}
-            ref={this.refrence}
-            onHide={() => this.setState({ show: false })}
+          <modalContext.Provider value={{
+            modalShow: this.state.show,
+            setModalShow: this.setShow.bind(this)
+          }}
           >
-            <Modal.Body>
-              <Modal.Title className="title-login text-center mx-2">
-                <h2>
-                  Welcome <span>back</span>
-                </h2>
-                <p className="text-white px-2">
-                  Do not have account ?{" "}
-                  <NavLink
-                    to="/signup"
-                    onClick={() => this.setState({ show: false })}
-                  >
-                    Sign up
-                  </NavLink>
-                </p>
-              </Modal.Title>
-              <Form
-                action="#"
-                className="form-login py-4"
-                onSubmit={this.handleSubmit.bind(this)}
-              >
-                <div className="form-fields mb-4">
-                  <Form.Label>User name :</Form.Label>
-                  <Form.Control
-                    // required
-                    type="text"
-                    className="mb-2 mt-1"
-                    id="username"
-                    name="userName"
-                    placeholder="User"
-                    value={this.state.userName}
-                    onChange={this.handleChange.bind(this)}
-                  ></Form.Control>
-                  {
-                    this.state.userNameError.length >0 
-                    ?<div className="form-validate">{this.state.userNameError}</div>
-                    :''
-                  }
-           
-                </div>
-                <div className="form-fields">
-                  <Form.Label>Password :</Form.Label>
-                  <Form.Control
-                    // required
-                    type="password"
-                    className="mb-2 mt-1"
-                    id="password"
-                    name="password"
-                    placeholder="Password"
-                    value={this.state.password}
-                    onChange={this.handleChange.bind(this)}
-                  ></Form.Control>
-                  {
-                    this.state.passwordError.length >0 
-                    ? <div className="form-validate">{this.state.passwordError}</div>
-                    : ''
-                  }
-                  
-                </div>
-                <NavLink className="forgot mb-4" to="/" alt="">
-                  Forget your password?
-                </NavLink>
+            <Login />
+          </modalContext.Provider>
 
-                <div className="mt-5 form-group w-75">
-                  <Button
-                    className="btn-block login"
-                    variant="none"
-                    id="submit"
-                    value="Submit"
-                    onClick={
-                      this.state.formValid
-                        ? () => this.setState({ show: false })
-                        : () => this.setState({ show: true })
-                    }
-                    type="submit"
-                  >
-                    LOG IN
-                  </Button>
-                </div>
-              </Form>
-            </Modal.Body>
-          </Modal>
+
         </div>
       </>
     );

@@ -183,6 +183,8 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   width: 50%;
   display: flex;
   justify-content: center;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box button.generate-password:focus {

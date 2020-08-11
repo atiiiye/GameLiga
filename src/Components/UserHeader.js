@@ -33,7 +33,6 @@ import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 
 class UserHeader extends Component {
 
-
     state = {
         show: false,
     }
@@ -44,7 +43,7 @@ class UserHeader extends Component {
 
     }
 
-    setShow =(status) => {
+    setShow = (status) => {
         // console.log(status, this);
         this.setState({ show: status })
     }
@@ -68,26 +67,25 @@ class UserHeader extends Component {
                             this.props.show
                                 ? (
                                     <>
-                                    < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
-                                        <p className="text-muted">user name</p>
-                                        <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
-                                        <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
-                                        {/* <div className="row part-2"> */}
-                                        <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
-                                        <NavLink to="/telegram" className="nav-link-icon" id="telegram"><TelegramIcon className="image-icon " id="telegram"></TelegramIcon></NavLink>
-                                        <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
-                                            <WalletIcon className="image-icon" id="wallet" />
-
-                                        </NavLink>
-                                        {/* </div> */}
-                                    </Navbar.Collapse>
-                                    <modalContext.Provider value={{
-                                        modalShow: this.state.show,
-                                        setModalShow: this.setShow.bind(this)
-                                    }}
-                                    >
-                                        <Wallet />
-                                    </modalContext.Provider>
+                                        < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
+                                            <p className="text-muted">{this.props.username}</p>
+                                            <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
+                                            <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
+                                            {/* <div className="row part-2"> */}
+                                            <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
+                                            <NavLink to="/telegram" className="nav-link-icon" id="telegram"><TelegramIcon className="image-icon " id="telegram"></TelegramIcon></NavLink>
+                                            <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
+                                                <WalletIcon className="image-icon" id="wallet" />
+                                            </NavLink>
+                                            {/* </div> */}
+                                        </Navbar.Collapse>
+                                        <modalContext.Provider value={{
+                                            modalShow: this.state.show,
+                                            setModalShow: this.setShow.bind(this)
+                                        }}
+                                        >
+                                            <Wallet />
+                                        </modalContext.Provider>
                                     </>
                                 ) :
                                 (

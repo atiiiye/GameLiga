@@ -11,24 +11,25 @@ import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 
 //import routes
 import { NavLink } from "react-router-dom";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 
 //import components
+import UserAccount from './UserAccount'
 
 //import packages
 import axios from 'axios'
 // import RangeSlider from 'react-bootstrap-range-slider';
 import RefreshIcon from '@material-ui/icons/Refresh';
+import SweetAlert from 'sweetalert-react';
+
 
 
 
 class SignUp extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   state = {
-    data:{},
+    // data:{},
+    show: false,
     firstName: '',
     lastName: '',
     nickName: '',
@@ -77,7 +78,7 @@ class SignUp extends Component {
           errors.username = 'Username can not be only number'
         } else if ((!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) || (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)) {
           errors.username = 'please enter correct'
-        }else {
+        } else {
           errors.username = ''
         }
         break
@@ -186,33 +187,68 @@ class SignUp extends Component {
     this.setState({ errors, [name]: value });
   }
 
+  onConfirm = () => { response => this.onRecieveInput(response) }
+
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.validateForm(this.state.errors) && this.state.checkbox && this.state.username && this.state.password && this.state.confirmPassword && this.state.email && this.state.nickName && this.state.phone && this.state.captchaInput) {
-
       console.info('Valid Form')
 
-
-      const url = "http://2.186.229.181:7580/api/Account/CreateAccount"
-      axios.post( url, {
-        Username: this.state.username,
-        Password :this.state.password,
-        Email :this.state.email,
-        NickName :this.state.nickName,
-        FirstName :this.state.firstName,
-        LastName :this.state.lastName ,
-        PhoneNumber : this.state.phone,
-        PromotionalCode :this.state.promotional,
-        Referred : this.state.referred,
-      })
-        // .then(response => response.json())
-        .then(response => console.log(response.data))
-        .catch(error => console.log(error))
-
+      this.postData();
     } else {
       console.error('Invalid Form')
     }
 
+  }
+
+  postData = async () => {
+
+    const { match, location, history } = this.props
+
+    const url = "http://2.186.229.181:7580/api/Account/CreateAccount";
+    const asyncResponse = await axios.post(url, {
+      Username: this.state.username,
+      Password: this.state.password,
+      Email: this.state.email,
+      NickName: this.state.nickName,
+      FirstName: this.state.firstName,
+      LastName: this.state.lastName,
+      PhoneNumber: this.state.phone,
+      PromotionalCode: this.state.promotional,
+      Referred: this.state.referred,
+    })
+      .then((res) => {
+        if (res.status == 200) {
+          console.log(res);
+          // { () => this.setState({ show: true }) }
+          // <SweetAlert
+          //   show={this.state.show}
+          //   title="Success"
+          //   text="You Signed up"
+          //   onConfirm={() => this.setState({ show: false })}
+          // />
+
+          this.goLogin()
+          // history.replace('/account')
+          history.push('/account')
+
+
+        }
+      })
+      .catch((error) => {
+        if (400 <= error.status < 500) {
+          // console.log(error.status);
+          // history.push('/404')
+        }
+      });
+  }
+
+  goLogin = async () => {
+    const url = "http://2.186.229.181:7580/api/Account/Login"
+    const asyncResponse = await axios.post(url, {
+      Username: this.state.username,
+      Password: this.state.password
+    })
   }
 
   validateForm = (errors) => {
@@ -247,11 +283,7 @@ class SignUp extends Component {
   }
 
   componentDidMount() {
-    this.randomCode(6)
-    // const url = "http://{{baseurl}}/api/Account/CreateAccount"
-    // const response = await fetch(url)
-    // const data = await response.json()
-    // console.log(data);
+    this.randomCode(6);
   }
 
   randomCode = (length) => {
@@ -297,6 +329,7 @@ class SignUp extends Component {
               <Form.Label className="col-sm-4 col-form-label px-0 username">User name :</Form.Label>
               <div className="validation-box col-sm-7">
                 <Form.Control
+                  autoFocus
                   type="text"
                   className=" form-control-plaintext"
                   placeholder="User name"

@@ -35,21 +35,21 @@ class LeaderBoards extends Component {
             let boxLength = this.state.box.length
             let new_array = { id: boxLength + 1 }
             prevState.box.push(new_array)
-            console.log([ ...prevState.box ,prevState.box.push(new_array)] );
+            console.log([...prevState.box, prevState.box.push(new_array)]);
             return {
-                 
-                box:[ ...prevState.box , prevState.box.push(new_array)] 
+
+                box: [...prevState.box, prevState.box.push(new_array)]
             }
 
         })
 
     }
 
-    handlePrevent = (e) =>{
+    handlePrevent = (e) => {
         e.preventDefault();
     }
 
-    componentDidUpdate(){
+    componentDidUpdate() {
         console.log('leader boards :componentDidUpdate');
     }
 
@@ -59,9 +59,9 @@ class LeaderBoards extends Component {
                 <Card id="content">
                     <div className="elements">
                         <div className="tabs">
-                            <NavLink to="/Leader-boards" activeClassName="selected"  className="one-av-one tab" data-content="one-av-one">One av One</NavLink>
-                            <NavLink to="/tourny" onClick={this.handlePrevent.bind(this)} activeClassName="selected" className="tourny tab" data-content="tourny">Tourny</NavLink>
-                            <NavLink to="/liga" onClick={this.handlePrevent.bind(this)} activeClassName="selected" className="liga tab" data-content="liga">Liga</NavLink>
+                            <NavLink to="/Leader-boards" activeClassName="selected" className="one-av-one tab" data-content="one-av-one">One av One</NavLink>
+                            <NavLink to="/tourny" activeClassName="selected" className="tourny tab" data-content="tourny">Tourny</NavLink>
+                            <NavLink to="/liga" activeClassName="selected" className="liga tab" data-content="liga">Liga</NavLink>
                         </div>
                         {this.state.box.map(item => (
                             <Card id="tab-content" key={item.id} >

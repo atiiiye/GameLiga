@@ -123,9 +123,11 @@ div.card-body#card-form-signup {
                     }
                 }
 
-                div.validation-box{
+                div.validation-box {
                     display: flex;
                     flex-direction: column;
+                    // align-items: flex-end;
+
                     input {
                         border: 1px solid $color-gray-2;
                         border-radius: 9px;
@@ -133,14 +135,15 @@ div.card-body#card-form-signup {
                         color: $color-gray-2;
                         font-size: 80%;
                         padding-left: .5rem;
-    
+
                         &:focus {
                             box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
                         }
-                      
+
                     }
+
                     span.error {
-                        color:#ffffff;
+                        color: #ffffff;
                         font-size: 75%;
                         margin-top: .5rem;
                         background-color: rgba($color:red, $alpha: .7);
@@ -148,54 +151,60 @@ div.card-body#card-form-signup {
                         border: 1px solid rgba($color:red, $alpha: .9);
                         border-radius: 5px;
                         // position: relative;
-                      
-                }
 
-                input[type="range"]{
-                    background-color:transparent;
-                    // background: linear-gradient(to right, $color-red-1 0%, $color-yellow 50%, $color-green 100%);
-                    cursor: pointer;
-                    border: none;
-                    overflow: hidden;
-                    padding-left: 0;
-                    user-select: none;
-                    &:focus {
-                        box-shadow:none;
+                    }
+
+                    input[type="range"] {
+                        background-color: transparent;
+                        // background: linear-gradient(to right, $color-red-1 0%, $color-yellow 50%, $color-green 100%);
+                        cursor: pointer;
+                        border: none;
+                        overflow: hidden;
+                        padding-left: 0;
+                        user-select: none;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+
+                    }
+
+                    div.progress {
+                        padding: 0;
+                        height: .5rem;
+                        background-color: rgba($color: #ffffff, $alpha: .1);
+                    }
+
+                    button.generate-password {
+                        background-color: transparent;
+                        border-color: $color-orange-1;
+                        font-size: 80%;
+                        border-radius: 28px;
+                        color: $color-orange-1;
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        padding-left: .5rem;
+                        padding-right: .5rem;
+
+                        &:focus {
+                            box-shadow: none;
+                            background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                            color: #ffffff;
+
+                        }
+
+                        &:hover {
+                            background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                            color: #ffffff;
+
+                        }
+
                     }
 
                 }
 
-                div.progress{
-                    padding: 0;
-                    height: .5rem;
-                    background-color: rgba($color: #ffffff, $alpha: .1);
-                }
-                button.generate-password{
-                    background-color:transparent;
-                    border-color: $color-orange-1;
-                    font-size: 80%;
-                    border-radius: 28px;
-                    color: $color-orange-1;
-                    width: 50%;
-                    display: flex;
-                    justify-content: center;
-                    &:focus {
-                        box-shadow:none;
-                        background-color: rgba($color: $color-orange-1, $alpha: 1.0);
-                    color: #ffffff;
 
-                    }
-                    &:hover {
-                        background-color: rgba($color: $color-orange-1, $alpha: 1.0);
-                    color: #ffffff;
-
-                    }
-
-                }
-
-              }
-
-              
 
                 div.form-check-inline {
                     width: 10%;
@@ -280,70 +289,72 @@ div.card-body#card-form-signup {
                     align-items: center;
                     justify-content: center;
 
-                   div.captcha-generate{
-                       display: flex;
-                       margin-bottom: .2rem;
-                    div.captcha {
-                        width: 100px;
-                        height: 50px;
-                        background-color: rgba($color: $color-gray-2, $alpha: .5);
-                        // border:1px solid #000000 ;
-                        margin-bottom: 1rem;
-                        font-size: 90%;
-                        font-family:'Times New Roman', Times, serif;
+                    div.captcha-generate {
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: $color-white;
-                        font-style: italic;
-                        user-select: none;
-                        cursor: pointer;
-                        div.validation-box{
+                        margin-bottom: .2rem;
+
+                        div.captcha {
+                            width: 100px;
+                            height: 50px;
+                            background-color: rgba($color: $color-gray-2, $alpha: .5);
+                            // border:1px solid #000000 ;
+                            margin-bottom: 1rem;
+                            font-size: 90%;
+                            font-family: 'Times New Roman', Times, serif;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $color-white;
+                            font-style: italic;
+                            user-select: none;
+                            cursor: pointer;
+
+                            div.validation-box {}
 
                         }
 
+                        svg.refresh-captcha {
+                            display: flex;
+                            height: 50px;
+                            align-self: flex-end;
+                            font-size: 20px;
+                            color: #ffffff;
+                        }
                     }
-                    svg.refresh-captcha{
-                        display: flex;
-                        height: 50px;
-                        align-self: flex-end;
-                        font-size: 20px;
-                        color: #ffffff;
-                    }
-                   }
                 }
             }
+
             // a{
             //     color: #ffffff;
             //     text-decoration: none;
-                button.register {
-                    background-color: $color-orange-1;
-                    border-color: $color-orange-1;
-                    border-radius: 28px;
-                    outline: none;
-                    font-size: 95%;
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    color: $color-white;
-                    left: 16%;
-    
-                    &:focus {
-                        box-shadow: none;
-                    }
-                    a{
-                       
-                    }
+            button.register {
+                background-color: $color-orange-1;
+                border-color: $color-orange-1;
+                border-radius: 28px;
+                outline: none;
+                font-size: 95%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                color: $color-white;
+                left: 16%;
+
+                &:focus {
+                    box-shadow: none;
                 }
 
-                button.register.disabled{
-                    background-color: $color-gray-1;
-                    border-color: $color-background-1;
-                    color: $color-white;
-                }
+                a {}
+            }
+
+            button.register.disabled {
+                background-color: $color-gray-1;
+                border-color: $color-background-1;
+                color: $color-white;
+            }
+
             // }
 
-           
+
         }
     }
 }
