@@ -20,9 +20,11 @@ import UserAccount from './UserAccount'
 import axios from 'axios'
 // import RangeSlider from 'react-bootstrap-range-slider';
 import RefreshIcon from '@material-ui/icons/Refresh';
-import SweetAlert from 'sweetalert-react';
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
+import config from './../config.json'
+import transitions from "@material-ui/core/styles/transitions";
 
 
 class SignUp extends Component {
@@ -205,8 +207,7 @@ class SignUp extends Component {
 
     const { match, location, history } = this.props
 
-    const url = "http://2.186.229.181:7580/api/Account/CreateAccount";
-    const asyncResponse = await axios.post(url, {
+    const asyncResponse = await axios.post(config.signupApi, {
       Username: this.state.username,
       Password: this.state.password,
       Email: this.state.email,
@@ -220,13 +221,17 @@ class SignUp extends Component {
       .then((res) => {
         if (res.status == 200) {
           console.log(res);
-          // { () => this.setState({ show: true }) }
-          // <SweetAlert
-          //   show={this.state.show}
-          //   title="Success"
-          //   text="You Signed up"
-          //   onConfirm={() => this.setState({ show: false })}
+
+          // <ToastContainer
+          //   autoClose={3500}
+          //   closeOnClick
+          //   transition={Flip}
           // />
+          toast.success("now you have an account", {
+            transition: Flip,
+            autoClose: 3500,
+            closeOnClick: true,
+          });
 
           this.goLogin()
           // history.replace('/account')
@@ -244,8 +249,8 @@ class SignUp extends Component {
   }
 
   goLogin = async () => {
-    const url = "http://2.186.229.181:7580/api/Account/Login"
-    const asyncResponse = await axios.post(url, {
+
+    const asyncResponse = await axios.post(config.loginApi, {
       Username: this.state.username,
       Password: this.state.password
     })

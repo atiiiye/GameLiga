@@ -23,7 +23,8 @@ import { Navbar } from 'react-bootstrap';
 
 //import components
 import Wallet from './../Components/Wallet';
-import modalContext from './Contexts'
+import modalContext from './Contexts';
+import SearchBox from './SearchBox';
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -35,17 +36,20 @@ class UserHeader extends Component {
 
     state = {
         show: false,
+        searchQuery: '',
     }
 
     handleRouting = (e) => {
         e.preventDefault()
         this.setState({ show: true })
-
     }
 
     setShow = (status) => {
-        // console.log(status, this);
         this.setState({ show: status })
+    }
+
+    handleSearch = query => {
+        this.setState({ searchQuery: query })
     }
 
     render() {
@@ -95,7 +99,7 @@ class UserHeader extends Component {
                     </div>
 
                     <div className="navbar-left">
-                        <input type="search" placeholder="search"></input>
+                        <SearchBox value={this.state.searchQuery} onChange={this.handleSearch} />
                         <div className="empty-content"></div>
                         <h4 className="UFOGame">UFO<span>Game</span></h4>
                         <img className="logo" src={logo5} alt="" />

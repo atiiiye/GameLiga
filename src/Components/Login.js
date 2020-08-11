@@ -18,6 +18,10 @@ import axios from 'axios';
 //import components
 import modalContext from './Contexts'
 
+import config from './../config.json'
+
+
+
 class Login extends Component {
     state = {
         username: "",
@@ -73,26 +77,35 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         event.preventDefault();
+        let { history } = this.props
 
         if (this.validateForm(this.state.errors) && this.state.username && this.state.password) {
             console.info('Valid Form')
 
-            const url = "http://2.186.229.181:7580/api/Account/Login"
-            axios.post(url, {
-                Username: this.state.username,
-                Password: this.state.password
-            })
-                .then(res => {
-                    if (res.status == 200) {
-                        console.log(res)
-
-                    }
-                })
-                .catch(error => console.log(error))
+            this.goAccount();
         } else {
             console.error('Invalid Form')
         }
     };
+
+    goAccount = async () => {
+        const account = await axios.post(config.loginApi, {
+            Username: this.state.username,
+            Password: this.state.password
+        }).then(res => {
+            if (res.status == 200) {
+                console.log(res)
+                history.push('/account')
+            } else if (res.status == 404) {
+                history.push('/404')
+            } else {
+                console.log('login error');
+            }
+        })
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
 
     render() {
