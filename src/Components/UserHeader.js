@@ -25,6 +25,7 @@ import { Navbar } from 'react-bootstrap';
 import Wallet from './../Components/Wallet';
 import modalContext from './Contexts';
 import SearchBox from './SearchBox';
+import usernameContext from './Contexts/username';
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -37,6 +38,7 @@ class UserHeader extends Component {
     state = {
         show: false,
         searchQuery: '',
+
     }
 
     handleRouting = (e) => {
@@ -48,11 +50,15 @@ class UserHeader extends Component {
         this.setState({ show: status })
     }
 
-    handleSearch = query => {
+    handleSearch = (query) => {
         this.setState({ searchQuery: query })
     }
 
+    // static contextType = usernameContext;
+
     render() {
+        console.log(this.props)
+
         return (
             <div>
                 <Navbar className="user-header" expand="md">

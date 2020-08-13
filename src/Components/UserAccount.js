@@ -19,6 +19,9 @@ import Grid5 from './../images/Grid5.png';
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 
+//import components
+import UserHeader from './UserHeader'
+
 
 class UserAccount extends Component {
 
@@ -49,7 +52,7 @@ class UserAccount extends Component {
                 name: Grid5,
                 source: Grid5
             },
-        ]
+        ],
     }
 
     render() {
@@ -58,18 +61,19 @@ class UserAccount extends Component {
             centeredSlides: true,
             loop: true,
             autoplay: {
-              delay: 3000,
-              disableOnInteraction: false,
+                delay: 3000,
+                disableOnInteraction: false,
             },
             slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 20,
         }
         return (
-            <div className="container-fluid userAccount">
-                <Card id="content">
-                    <div className="row games">
-                    {this.state.posters.map(item => (
+            <React.Fragment>
+                <div className="container-fluid userAccount">
+                    <Card id="content">
+                        <div className="row games">
+                            {this.state.posters.map(item => (
                                 <div className="game d-none d-md-flex" key={item.id}>
                                     <img src={item.source} alt={item.name} className="game-image"></img>
                                     <div className="online">online</div>
@@ -78,19 +82,21 @@ class UserAccount extends Component {
                                 // if(this.state.posters.lenght%4){}
                             ))}
 
-                        <Swiper {...params} className="swiper-account">
-                            {this.state.posters.map(item => (
-                                <div className="game d-flex d-md-none" key={item.id}>
-                                    <img src={item.source} alt={item.name} className="game-image"></img>
-                                    <div className="online">online</div>
-                                </div>
-                            ))}
-                        </Swiper>
+                            <Swiper {...params} className="swiper-account">
+                                {this.state.posters.map(item => (
+                                    <div className="game d-flex d-md-none" key={item.id}>
+                                        <img src={item.source} alt={item.name} className="game-image"></img>
+                                        <div className="online">online</div>
+                                    </div>
+                                ))}
+                            </Swiper>
 
-                    </div>
-                    <div className="empty-square"></div>
-                </Card>
-            </div>
+                        </div>
+                        <div className="empty-square"></div>
+                    </Card>
+                </div>
+            </React.Fragment>
+
 
         )
     }

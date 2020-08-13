@@ -12,7 +12,7 @@ import logo5 from "./../images/logo5.png";
 
 //import boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Form, Navbar, Modal } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 //import routes
 import { NavLink } from "react-router-dom";
@@ -66,6 +66,32 @@ export default class Header extends Component {
                     </NavLink>
                   </li>
                 </div>
+                {
+                  this.props.username &&
+                  <React.Fragment>
+                    <div className="buttons">
+                      <li className="nav-item">
+                        <NavLink
+                          className="nav-link"
+                          id="login"
+                          to="/"
+                          exact
+                          onClick={() => {
+                            this.setState({ show: true })
+                            // this.addingRefButton.bind(this)
+                          }}
+                        >
+                          LOG OUT
+                    </NavLink>
+                      </li>
+                      <li className="nav-item">
+                        <NavLink className="nav-link" id="signup" to="/signup">
+                          SIGN UP
+                    </NavLink>
+                      </li>
+                    </div>
+                  </React.Fragment>
+                }
                 <Navbar.Collapse className="" id="coll-navbar">
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/more">

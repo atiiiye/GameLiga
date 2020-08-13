@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 //import components
+import Header from "./Header";
+
 
 //import css
 import "./../css/reset.css";
@@ -105,54 +107,58 @@ class Slider extends Component {
       },
     };
     return (
-      <section className="main-slider">
-        <div className="container-fluid box-slider">
-          <div className="row pratition-slider">
-            <div className="sidebar-slider">
-              <CardColumns className="card-columns-slider">
-                <div className="line"></div>
-                {this.state.icon.map((item) => (
-                  <Card id="social-medias" key={item.id}>
-                    <Card.Body id="social-media">
-                      <NavLink className="icon-media" to="/"><img src={item.source} className={`icon-image ${item.name}`} alt={item.name}></img></NavLink>
-                    </Card.Body>
-                  </Card>
-                ))}
-              </CardColumns>
-            </div>
-            <Card className="content-slider" id="content">
-              <div className="main-content">
-                <div className="titles">
-                  {/* <Canvas /> */}
-                  <div className="top"></div>
-                  <div className="card-body-titles">
-                    <div className="line-orange"></div>
-                    <div className="card-text">
-                      <h1 className="h Tournament">Tournament</h1>
-                      <h1 className="h1 title">
-                        20<span className="h1">000kr</span>
-                      </h1>
-                      <h1 className="h1 garanti">Gauranteed</h1>
-                    </div>
-                  </div>
-                  <div className="bottom"></div>
-                </div>
-                <Swiper {...params}>
-                  {this.state.data.map((img) => (
-                    <div key={img.id} className="slides">
-                      <img src={img.source} className="card-img-top" alt="" />
-                    </div>
+      <React.Fragment>
+        <Header />
+        <section className="main-slider">
+          <div className="container-fluid box-slider">
+            <div className="row pratition-slider">
+              <div className="sidebar-slider">
+                <CardColumns className="card-columns-slider">
+                  <div className="line"></div>
+                  {this.state.icon.map((item) => (
+                    <Card id="social-medias" key={item.id}>
+                      <Card.Body id="social-media">
+                        <NavLink className="icon-media" to="/"><img src={item.source} className={`icon-image ${item.name}`} alt={item.name}></img></NavLink>
+                      </Card.Body>
+                    </Card>
                   ))}
-                </Swiper>
+                </CardColumns>
               </div>
+              <Card className="content-slider" id="content">
+                <div className="main-content">
+                  <div className="titles">
+                    {/* <Canvas /> */}
+                    <div className="top"></div>
+                    <div className="card-body-titles">
+                      <div className="line-orange"></div>
+                      <div className="card-text">
+                        <h1 className="h Tournament">Tournament</h1>
+                        <h1 className="h1 title">
+                          20<span className="h1">000kr</span>
+                        </h1>
+                        <h1 className="h1 garanti">Gauranteed</h1>
+                      </div>
+                    </div>
+                    <div className="bottom"></div>
+                  </div>
+                  <Swiper {...params}>
+                    {this.state.data.map((img) => (
+                      <div key={img.id} className="slides">
+                        <img src={img.source} className="card-img-top" alt="" />
+                      </div>
+                    ))}
+                  </Swiper>
+                </div>
 
-              <div className="images-content images">
-                <img src={background2} className="image-fluid" alt=""></img>
-              </div>
-            </Card>
+                <div className="images-content images">
+                  <img src={background2} className="image-fluid" alt=""></img>
+                </div>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </React.Fragment>
+
     );
   }
 }

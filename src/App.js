@@ -17,7 +17,7 @@ import LeaderBoards from "./Components/LeaderBoards";
 
 
 //import routes
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 
 class App extends Component {
@@ -36,26 +36,42 @@ class App extends Component {
       <div>
         <Switch>
 
-          <Route path="/" exact>
-            <Header></Header>
-            <Slider></Slider>
+          <Route path="/" exact component={Slider} />
+          {/* <Route
+            path="/:id"
+            render={props => {
+              if (!this.state.user) <Redirect to="/" />
+              return <Slider {...props} />
+
+            }}
+          /> */}
+
+          <Route path="/signup" component={SignUp} />
+
+          <Route path="/account" render={props =>
+            <React.Fragment>
+              <UserHeader show={this.displayHandler.bind(this)} {...props.location.state} />
+              <div style={{ display: 'flex' }}>
+                <Sidebar />
+                <UserAccount />
+              </div>
+            </React.Fragment>
+
+          }>
+
+
           </Route>
 
-          <Route path="/signup">
-            <UserHeader show={!this.displayHandler.bind(this)} />
-            <SignUp />
-          </Route>
-
-          <Route path="/account">
+          {/* <Route path="/signup/account">
             <UserHeader show={this.displayHandler.bind(this)} username={this.state.username} />
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <UserAccount />
             </div>
-          </Route>
+          </Route> */}
 
           <Route path="/games">
-            <UserHeader show={this.displayHandler.bind(this)} username={this.state.username} />
+            <UserHeader show={this.displayHandler.bind(this)} />
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <FinalResult />
@@ -64,7 +80,7 @@ class App extends Component {
 
 
           <Route path="/Leader-boards">
-            <UserHeader show={this.displayHandler.bind(this)} username={this.state.username} />
+            <UserHeader show={this.displayHandler.bind(this)} />
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <LeaderBoards />
@@ -73,7 +89,7 @@ class App extends Component {
 
 
           <Route path="/tourny">
-            <UserHeader show={this.displayHandler.bind(this)} username={this.state.username} />
+            <UserHeader show={this.displayHandler.bind(this)} />
             <div style={{ display: 'flex' }}>
               <Sidebar></Sidebar>
               <LeaderBoards />
@@ -90,6 +106,14 @@ class App extends Component {
 
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />
+
+          {/* <Route path="/account/:id">
+            <UserHeader show={this.displayHandler.bind(this)} username={this.state.username} />
+            <div style={{ display: 'flex' }}>
+              <Sidebar></Sidebar>
+              <UserAccount />
+            </div>
+          </Route> */}
 
         </Switch>
       </div>

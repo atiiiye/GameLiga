@@ -20,6 +20,7 @@ import modalContext from './Contexts'
 
 import config from './../config.json'
 
+import { login } from './../Services/userService'
 
 
 class Login extends Component {
@@ -42,7 +43,7 @@ class Login extends Component {
         return valid;
     }
 
-    handleChange = (e) => {
+    handleChange = (event) => {
         event.preventDefault();
 
         const { name, value } = event.target;
@@ -77,36 +78,31 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         event.preventDefault();
-        let { history } = this.props
 
         if (this.validateForm(this.state.errors) && this.state.username && this.state.password) {
             console.info('Valid Form')
-
             this.goAccount();
+
         } else {
             console.error('Invalid Form')
         }
     };
 
     goAccount = async () => {
-        const account = await axios.post(config.loginApi, {
-            Username: this.state.username,
-            Password: this.state.password
-        }).then(res => {
-            if (res.status == 200) {
-                console.log(res)
-                history.push('/account')
-            } else if (res.status == 404) {
-                history.push('/404')
-            } else {
-                console.log('login error');
-            }
-        })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+        try {
+            await login(this.state)
+            console.log(response.status)
+            window.location = "/account"
 
+        } catch (err) {
+            if (err.response && err.response.status === 400) {
+                const errors = { ...this.state.errors }
+                errors.username = 'Username or Password is invalid ';
+                this.setState({ errors })
+            }
+        }
+
+    }
 
     render() {
         const { errors } = this.state;
@@ -156,7 +152,6 @@ class Login extends Component {
                         <div className="form-fields">
                             <Form.Label>Password :</Form.Label>
                             <Form.Control
-                                // required
                                 type="password"
                                 className="mb-1 mt-1"
                                 id="password"
