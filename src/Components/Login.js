@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import "./../css/reset.css";
 import "./../css/Login.css";
 import "./../css/mediaLogin.css";
+import "./../css/toastify.css";
 
 //import boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,7 +14,6 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 //import packages
-import axios from 'axios';
 import { ToastContainer, toast, Flip, Slide } from 'react-toastify';
 
 //import components
@@ -91,8 +91,11 @@ class Login extends Component {
     goAccount = async () => {
         try {
             await login(this.state)
-            console.log(response.status)
-            window.location = "/account"
+            // window.location = "/account"
+            this.props.history.push({
+                pathname: '/account',
+                state: { username: this.state.username }
+            })
 
         } catch (err) {
             if (err.response && err.response.status === 400) {
@@ -106,13 +109,13 @@ class Login extends Component {
     }
 
     notifyError = () => {
-        toast.error("some data is incorrect", {
+        toast.error("Username or Password is invalid", {
             className: 'toast-container-error',
             transition: Slide,
             autoClose: 3500,
             draggable: true,
-            // position: "relative",
             closeOnClick: true,
+            // position: "relative",
         })
     };
 

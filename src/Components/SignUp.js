@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import './../css/reset.css'
 import './../css/signup.css';
 import './../css/mediaSignup.css'
+import "./../css/toastify.css";
 
 //import boostrap
 import { Form, Button, ProgressBar } from "react-bootstrap";
