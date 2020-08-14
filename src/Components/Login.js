@@ -14,11 +14,11 @@ import { NavLink } from "react-router-dom";
 
 //import packages
 import axios from 'axios';
+import { ToastContainer, toast, Flip } from 'react-toastify';
 
 //import components
 import modalContext from './Contexts'
 
-import config from './../config.json'
 
 import { login } from './../Services/userService'
 
@@ -96,13 +96,32 @@ class Login extends Component {
 
         } catch (err) {
             if (err.response && err.response.status === 400) {
-                const errors = { ...this.state.errors }
-                errors.username = 'Username or Password is invalid ';
-                this.setState({ errors })
+                // const errors = { ...this.state.errors }
+                // errors.username = ('Username or Password is invalid ');
+                // this.setState({ errors })
+                this.notifyError()
             }
         }
 
     }
+
+    notifySuccess = () => {
+        toast.success("Now you have an account", {
+            transition: Flip,
+            autoClose: 3500,
+            closeOnClick: true,
+
+        });
+    }
+
+    notifyError = () => {
+        toast.error("some data is invalid", {
+            transition: Flip,
+            autoClose: 3500,
+            position: "top-center",
+            closeOnClick: true,
+        })
+    };
 
     render() {
         const { errors } = this.state;
@@ -118,13 +137,17 @@ class Login extends Component {
                         <h2>Welcome <span>back</span></h2>
                         <p className="text-white px-2">
                             Do not have account ?{" "}
+                            <ToastContainer />
+
                             <NavLink
                                 to="/signup"
                                 onClick={() => this.context.setModalShow(false)}
                             >
                                 Sign up
-                  </NavLink>
+                            </NavLink>
+
                         </p>
+
                     </Modal.Title>
                     <Form
                         action="#"

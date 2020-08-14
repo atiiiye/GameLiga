@@ -21,7 +21,7 @@ import usernameContext from './Contexts/username';
 import axios from 'axios'
 import RangeSlider from 'react-bootstrap-range-slider';
 import RefreshIcon from '@material-ui/icons/Refresh';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Flip } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import config from './../config.json'
@@ -222,6 +222,7 @@ class SignUp extends Component {
         pathname: '/account',
         state: { username: this.state.username }
       })
+
       // }
 
     } catch (err) {
@@ -240,7 +241,7 @@ class SignUp extends Component {
 
   notifySuccess = () => {
     toast.success("Now you have an account", {
-      transition: Slide,
+      transition: Flip,
       autoClose: 3500,
       closeOnClick: true,
     });
@@ -248,7 +249,7 @@ class SignUp extends Component {
 
   notifyError = () => {
     toast.error("some data is invalid", {
-      transition: Slide,
+      transition: Flip,
       autoClose: 3500,
       closeOnClick: true,
     })

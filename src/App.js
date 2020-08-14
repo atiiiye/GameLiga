@@ -48,27 +48,15 @@ class App extends Component {
 
           <Route path="/signup" component={SignUp} />
 
-          <Route path="/account" render={props =>
-            <React.Fragment>
-              <UserHeader show={this.displayHandler.bind(this)} {...props.location.state} />
-              <div style={{ display: 'flex' }}>
-                <Sidebar />
+          <Route path="/account" render={props => {
+            if (props.location.state == 'undefined') return <Redirect to="/" />
+            return (
+              <React.Fragment>
+                <UserHeader show={this.displayHandler.bind(this)} {...props.location.state} />
                 <UserAccount />
-              </div>
-            </React.Fragment>
-
-          }>
-
-
-          </Route>
-
-          {/* <Route path="/signup/account">
-            <UserHeader show={this.displayHandler.bind(this)} username={this.state.username} />
-            <div style={{ display: 'flex' }}>
-              <Sidebar></Sidebar>
-              <UserAccount />
-            </div>
-          </Route> */}
+              </React.Fragment>
+            )
+          }} />
 
           <Route path="/games">
             <UserHeader show={this.displayHandler.bind(this)} />

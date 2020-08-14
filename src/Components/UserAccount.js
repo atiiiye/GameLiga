@@ -21,6 +21,7 @@ import "swiper/css/swiper.css";
 
 //import components
 import UserHeader from './UserHeader'
+import Sidebar from "./Sidebar";
 
 
 class UserAccount extends Component {
@@ -70,31 +71,35 @@ class UserAccount extends Component {
         }
         return (
             <React.Fragment>
-                <div className="container-fluid userAccount">
-                    <Card id="content">
-                        <div className="row games">
-                            {this.state.posters.map(item => (
-                                <div className="game d-none d-md-flex" key={item.id}>
-                                    <img src={item.source} alt={item.name} className="game-image"></img>
-                                    <div className="online">online</div>
-                                    {/* <img src={item.source} alt={item.name} className="game-image-ref"></img> */}
-                                </div>
-                                // if(this.state.posters.lenght%4){}
-                            ))}
-
-                            <Swiper {...params} className="swiper-account">
+                <div className="connect-components" style={{ display: 'flex' }}>
+                    <Sidebar />
+                    <div className="container-fluid userAccount">
+                        <Card id="content">
+                            <div className="row games">
                                 {this.state.posters.map(item => (
-                                    <div className="game d-flex d-md-none" key={item.id}>
+                                    <div className="game d-none d-md-flex" key={item.id}>
                                         <img src={item.source} alt={item.name} className="game-image"></img>
                                         <div className="online">online</div>
+                                        {/* <img src={item.source} alt={item.name} className="game-image-ref"></img> */}
                                     </div>
+                                    // if(this.state.posters.lenght%4){}
                                 ))}
-                            </Swiper>
 
-                        </div>
-                        <div className="empty-square"></div>
-                    </Card>
+                                <Swiper {...params} className="swiper-account">
+                                    {this.state.posters.map(item => (
+                                        <div className="game d-flex d-md-none" key={item.id}>
+                                            <img src={item.source} alt={item.name} className="game-image"></img>
+                                            <div className="online">online</div>
+                                        </div>
+                                    ))}
+                                </Swiper>
+
+                            </div>
+                            <div className="empty-square"></div>
+                        </Card>
+                    </div>
                 </div>
+
             </React.Fragment>
 
 

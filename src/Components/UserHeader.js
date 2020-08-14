@@ -14,7 +14,7 @@ import logo5 from "./../images/logo5.png";
 // import WalletIcon from "./../images/Icon-wallet.png";
 
 //import route
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 
 //import boostrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -57,8 +57,7 @@ class UserHeader extends Component {
     // static contextType = usernameContext;
 
     render() {
-        console.log(this.props)
-
+        // console.log(this.props)
         return (
             <div>
                 <Navbar className="user-header" expand="md">
