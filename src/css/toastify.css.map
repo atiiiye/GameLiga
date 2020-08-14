@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/toastify.scss"
+    ],
+    "names": [],
+    "file": "toastify.css"
+}

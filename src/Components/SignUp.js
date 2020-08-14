@@ -21,12 +21,9 @@ import usernameContext from './Contexts/username';
 import axios from 'axios'
 import RangeSlider from 'react-bootstrap-range-slider';
 import RefreshIcon from '@material-ui/icons/Refresh';
-import { ToastContainer, toast, Flip } from 'react-toastify';
+import { ToastContainer, toast, Flip, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import config from './../config.json'
-import transitions from "@material-ui/core/styles/transitions";
-import { Slide } from "@material-ui/core";
 
 import { signup } from './../Services/userService'
 
@@ -227,9 +224,10 @@ class SignUp extends Component {
 
     } catch (err) {
       if (err.response && err.response.status === 400) {
-        const errors = { ...this.state.errors }
-        errors.username = 'Username or E-mail is invalid ';
-        this.setState({ errors })
+        // const errors = { ...this.state.errors }
+        // errors.username = 'Username or E-mail is invalid ';
+        // this.setState({ errors })
+        this.notifyError()
       }
       // else if (err.response && err.response.status === 409) {
       //   const errors = { ...this.state.errors }
@@ -241,7 +239,8 @@ class SignUp extends Component {
 
   notifySuccess = () => {
     toast.success("Now you have an account", {
-      transition: Flip,
+      className: 'toast-container-success',
+      transition: Slide,
       autoClose: 3500,
       closeOnClick: true,
     });
@@ -249,7 +248,8 @@ class SignUp extends Component {
 
   notifyError = () => {
     toast.error("some data is invalid", {
-      transition: Flip,
+      className: 'toast-container-error',
+      transition: Slide,
       autoClose: 3500,
       closeOnClick: true,
     })
@@ -333,6 +333,8 @@ class SignUp extends Component {
               method="post"
 
             >
+              <ToastContainer limit={1} />
+
               <h3 className="h3">Personal Information</h3>
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 username">User name :</Form.Label>

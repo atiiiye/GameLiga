@@ -4,6 +4,16 @@ body {
   background-color: #1c1c22;
 }
 
+div.toast-container-error {
+  background-color: rgba(255, 0, 0, 0.7);
+  font-size: 90%;
+}
+
+div.toast-container-success {
+  background-color: rgba(0, 128, 0, 0.7);
+  font-size: 90%;
+}
+
 div.login-modal div.modal-content {
   background-color: rgba(28, 28, 34, 0.7);
   border-color: #ff9300;
@@ -143,5 +153,10 @@ div.login-modal div.modal-content div.modal-body form.form-login div.form-group 
 
 div.login-modal div.modal-content div.modal-body form.form-login div.form-group a.login-link button.login:focus {
   box-shadow: 0 0 1px 0.2rem rgba(255, 147, 0, 0.3);
+}
+
+div.login-modal div.modal-content div.modal-body div.toast-container-error {
+  background-color: rgba(255, 0, 0, 0.7);
+  font-size: 90%;
 }
 /*# sourceMappingURL=Login.css.map */

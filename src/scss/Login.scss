@@ -1,4 +1,5 @@
 @import 'base';
+@import 'toastify';
 
 div.login-modal {
     div.modal-content {
@@ -18,6 +19,7 @@ div.login-modal {
             width: 100%;
             padding-left: 0;
             padding-right: 0;
+
 
             div.modal-title.title-login {
                 h2 {
@@ -150,6 +152,12 @@ div.login-modal {
 
                 }
             }
+
+            div.toast-container-error {
+                background-color: rgba(red, $alpha: .7);
+                font-size: 90%;
+            }
+
         }
     }
 }

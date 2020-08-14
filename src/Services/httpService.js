@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 //import packages
-import { toast } from 'react-toastify'
+import { toast, Flip, Slide } from 'react-toastify'
 
 axios.interceptors.response.use(null, error => {
     const expectedError =
@@ -11,7 +11,14 @@ axios.interceptors.response.use(null, error => {
 
     if (!expectedError) {
         console.log('Logging the error', error);
-        toast.error('An unexpected error occurred ')
+        toast.error('An unexpected error occurred ', {
+            className: 'toast-container-error',
+            draggable: true,
+            position: "top-right",
+            transition: Slide,
+            autoClose: 3500,
+
+        })
     }
 
     return Promise.reject(error)

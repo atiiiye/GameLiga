@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 
 //import packages
 import axios from 'axios';
-import { ToastContainer, toast, Flip } from 'react-toastify';
+import { ToastContainer, toast, Flip, Slide } from 'react-toastify';
 
 //import components
 import modalContext from './Contexts'
@@ -105,20 +105,13 @@ class Login extends Component {
 
     }
 
-    notifySuccess = () => {
-        toast.success("Now you have an account", {
-            transition: Flip,
-            autoClose: 3500,
-            closeOnClick: true,
-
-        });
-    }
-
     notifyError = () => {
-        toast.error("some data is invalid", {
-            transition: Flip,
+        toast.error("some data is incorrect", {
+            className: 'toast-container-error',
+            transition: Slide,
             autoClose: 3500,
-            position: "top-center",
+            draggable: true,
+            // position: "relative",
             closeOnClick: true,
         })
     };
@@ -137,7 +130,7 @@ class Login extends Component {
                         <h2>Welcome <span>back</span></h2>
                         <p className="text-white px-2">
                             Do not have account ?{" "}
-                            <ToastContainer />
+                            <ToastContainer limit={1} />
 
                             <NavLink
                                 to="/signup"

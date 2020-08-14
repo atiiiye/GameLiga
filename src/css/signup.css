@@ -4,6 +4,16 @@ body {
   background-color: #1c1c22;
 }
 
+div.toast-container-error {
+  background-color: rgba(255, 0, 0, 0.7);
+  font-size: 90%;
+}
+
+div.toast-container-success {
+  background-color: rgba(0, 128, 0, 0.7);
+  font-size: 90%;
+}
+
 div.card-body#card-form-signup {
   background-image: url("./../images/screen-5.png"), url("./../images/background-signup.png");
   background-position: right 96%, -10px -15px;
