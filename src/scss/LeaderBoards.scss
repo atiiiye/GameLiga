@@ -62,11 +62,12 @@ div.container-fluid.LeaderBoards {
                     }
 
                     &:focus {
-                    outline: 0;
-                      
+                        outline: 0;
+
                     }
                 }
-                a.tab.selected{
+
+                a.tab.selected {
                     background-color: rgba($color: $color-orange-1, $alpha: .2);
                     border-color: rgba($color: $color-orange-1, $alpha: .2);
                 }
@@ -207,7 +208,7 @@ div.container-fluid.LeaderBoards {
                                 width: 85px;
                                 height: 85px;
                                 position: relative;
-                                top:-2rem;
+                                top: -2rem;
                             }
 
                             div.options {
@@ -330,25 +331,26 @@ div.container-fluid.LeaderBoards {
                 }
             }
 
-            div.create-game-section{
+            div.create-game-section {
                 height: 100px;
                 display: flex;
                 width: max-content;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
+
                 div.create-game-button {
                     width: 45px;
                     height: 45px;
                     background-color: rgba($color: $color-orange-1, $alpha: .5);
                     border-radius: 50%;
 
-                    &:active{
+                    &:active {
                         background-color: rgba($color: $color-orange-1, $alpha: .6);
                         border: 1px solid rgba($color: #ffffff, $alpha: .5);
                     }
 
-                    i.fas.fa-plus{
+                    i.fas.fa-plus {
                         height: inherit;
                         font-size: 28px;
                         display: flex;
@@ -360,10 +362,10 @@ div.container-fluid.LeaderBoards {
                         color: rgba($color: $color-background-1, $alpha: 1.0);
                     }
 
-                 
+
                 }
 
-                span.create-game-title{
+                span.create-game-title {
                     color: #ffffff;
                     font-size: 90%;
                     font-weight: 600;
@@ -371,7 +373,7 @@ div.container-fluid.LeaderBoards {
                 }
             }
 
-         
+
         }
 
 

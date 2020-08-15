@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=toastify.css.map */
+div.toast-container-error {
+  background-color: rgba(255, 0, 0, 0.7);
+  font-size: 90%;
+}
+
+div.toast-container-success {
+  background-color: rgba(0, 128, 0, 0.7);
+  font-size: 90%;
+}
+/*# sourceMappingURL=toastify.css.map */

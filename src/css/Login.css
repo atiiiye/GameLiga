@@ -6,7 +6,7 @@ body {
 
 div.toast-container-error {
   background-color: rgba(255, 0, 0, 0.7);
-  font-size: 70%;
+  font-size: 90%;
 }
 
 div.toast-container-success {

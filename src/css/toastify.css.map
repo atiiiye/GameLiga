@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,GAAG,AAAA,sBAAsB,CAAC;EACtB,gBAAgB,EAAO,oBAAG;EAC1B,SAAS,EAAE,GAAG;CACjB;;AAED,AAAA,GAAG,AAAA,wBAAwB,CAAC;EACxB,gBAAgB,EAAO,oBAAK;EAC5B,SAAS,EAAE,GAAG;CACjB",
     "sources": [
         "../scss/toastify.scss"
     ],
