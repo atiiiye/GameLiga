@@ -17,6 +17,7 @@ import LeaderBoards from "./Components/LeaderBoards";
 
 //import routes
 import { Route, Switch, Redirect } from "react-router-dom";
+import Login from "./Components/Login";
 
 class App extends Component {
   // const [stateDisplay, setDisplayState] = useState(true)
@@ -33,7 +34,14 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/" exact component={Slider} />
+          <Route
+            path="/"
+            exact
+            component={Slider}
+          // render={(props) => {
+          //   <Login {...props} />
+          // }}
+          />
 
           <Route path="/signup" component={SignUp} />
 

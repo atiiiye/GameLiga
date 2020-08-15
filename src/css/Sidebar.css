@@ -33,6 +33,11 @@ div.sidebar-menu ul.list-menu li.list-item:active {
   border-color: rgba(255, 147, 0, 0.12);
 }
 
+div.sidebar-menu ul.list-menu li.list-item:hover {
+  background-color: rgba(255, 147, 0, 0.12);
+  border-color: rgba(255, 147, 0, 0.12);
+}
+
 div.sidebar-menu ul.list-menu li.list-item a.nav-link {
   color: #fff;
   line-height: 30px;

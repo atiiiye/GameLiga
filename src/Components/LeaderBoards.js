@@ -34,14 +34,11 @@ class LeaderBoards extends Component {
 
   createGame = () => {
     this.setState((prevState) => {
-      let box_length = this.state.box.length;
-      const old_state = prevState.box;
-      let new_array = { id: box_length };
-      console.log(old_state);
-      // prevState.box.push(new_array);
+      let box_length = prevState.box.length;
+      const new_game = { ownValue: 0, otherValue: 0, id: box_length };
       // console.log([...prevState.box, prevState.box.push(new_array)]);
       return {
-        box: [...this.state.box, new_array],
+        box: [...prevState.box, new_game],
       };
     });
   };

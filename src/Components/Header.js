@@ -31,7 +31,9 @@ export default class Header extends Component {
   }
   render() {
     return (
+
       <>
+        {console.log("header props is : " + this.props)}
         <div className="container-fluid">
           <Navbar className="" collapseOnSelect expand="md" bg="none">
             <div className="hamburger-menu px-0" data-target="#coll-navbar">

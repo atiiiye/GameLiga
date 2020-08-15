@@ -17,12 +17,12 @@ import logo5 from "./../images/logo5.png";
 import { NavLink, Redirect } from "react-router-dom";
 
 //import boostrap
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar } from 'react-bootstrap';
 
 
 //import components
-import Wallet from './../Components/Wallet';
+import Wallet from './Wallet';
+import Telegram from './Telegram';
 import modalContext from './Contexts';
 import SearchBox from './SearchBox';
 import usernameContext from './Contexts/username';
@@ -82,12 +82,16 @@ class UserHeader extends Component {
                                             <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
                                             {/* <div className="row part-2"> */}
                                             <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
-                                            <NavLink to="/telegram" className="nav-link-icon" id="telegram"><TelegramIcon className="image-icon " id="telegram"></TelegramIcon></NavLink>
+                                            <NavLink to="/telegram" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="telegram">
+                                                <TelegramIcon className="image-icon " id="telegram"></TelegramIcon>
+                                                <Telegram />
+                                            </NavLink>
                                             <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
                                                 <WalletIcon className="image-icon" id="wallet" />
                                             </NavLink>
                                             {/* </div> */}
                                         </Navbar.Collapse>
+
                                         <modalContext.Provider value={{
                                             modalShow: this.state.show,
                                             setModalShow: this.setShow.bind(this)

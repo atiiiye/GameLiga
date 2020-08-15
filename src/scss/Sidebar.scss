@@ -27,6 +27,11 @@ div.sidebar-menu {
                 border-color: rgba($color: $color-orange-1, $alpha: .12);
             }
 
+            &:hover {
+                background-color: rgba($color: $color-orange-1, $alpha: .12);
+                border-color: rgba($color: $color-orange-1, $alpha: .12);
+            }
+
             a.nav-link {
                 color: $color-white;
                 line-height: 30px;
