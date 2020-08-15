@@ -23,6 +23,7 @@ class LeaderBoards extends Component {
       {
         ownValue: 0,
         otherValue: 0,
+        id: 0,
       },
     ],
   };
@@ -34,13 +35,13 @@ class LeaderBoards extends Component {
   createGame = () => {
     this.setState((prevState) => {
       let box_length = this.state.box.length;
-      let new_array = { id: box_length - 1 };
-      const old_state = this.state.box;
-      const new_state = { id: box_length };
+      const old_state = prevState.box;
+      let new_array = { id: box_length };
+      console.log(old_state);
       // prevState.box.push(new_array);
       // console.log([...prevState.box, prevState.box.push(new_array)]);
       return {
-        box: [...this.state.box, old_state],
+        box: [...this.state.box, new_array],
       };
     });
   };
@@ -48,10 +49,6 @@ class LeaderBoards extends Component {
   handlePrevent = (e) => {
     e.preventDefault();
   };
-
-  componentDidUpdate() {
-    console.log("leader boards :componentDidUpdate");
-  }
 
   render() {
     return (
