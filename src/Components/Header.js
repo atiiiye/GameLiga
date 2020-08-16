@@ -19,7 +19,11 @@ import { NavLink } from "react-router-dom";
 
 //import components
 import modalContext from './Contexts'
-import Login from './Login'
+import Login from './Login';
+
+//import packages
+import { createBrowserHistory } from 'history';
+
 
 export default class Header extends Component {
   state = {
@@ -132,7 +136,7 @@ export default class Header extends Component {
             setModalShow: this.setShow.bind(this)
           }}
           >
-            <Login history={this.props} />
+            <Login history={createBrowserHistory()} />
           </modalContext.Provider>
         </div>
       </React.Fragment>

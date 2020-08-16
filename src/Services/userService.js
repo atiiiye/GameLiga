@@ -1,6 +1,5 @@
 import http from './httpService'
 import config from './../config.json'
-import axios from 'axios';
 
 export function login(user) {
 

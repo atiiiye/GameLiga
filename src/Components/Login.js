@@ -11,13 +11,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form, Modal } from "react-bootstrap";
 
 //import routes
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 
 //import packages
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
+import { connect } from 'react-redux';
+
 
 //import components
 import modalContext from "./Contexts";
+
+
 
 import { login } from "./../Services/userService";
 
@@ -32,6 +36,7 @@ class Login extends Component {
     };
 
     static contextType = modalContext;
+
 
     validateForm = (errors) => {
         let valid = true;
@@ -84,7 +89,6 @@ class Login extends Component {
             this.state.password
         ) {
             console.info("Valid Form");
-            console.log(this.props)
             this.goAccount();
         } else {
             console.error("Invalid Form");
@@ -94,11 +98,13 @@ class Login extends Component {
     goAccount = async () => {
         try {
             await login(this.state);
-            // window.location = "/account"
-            this.props.history.history.history.push({
-                pathname: "/account",
-                state: { username: this.state.username },
-            });
+            window.location = "/account"
+            // window.location.state = { username: this.state.username }
+
+
+            // this.props.history.location.pathname = "/account"
+            this.props.history.location.state = { username: this.state.username }
+
         } catch (err) {
             if (err.response && err.response.status === 400) {
                 this.notifyError();
@@ -119,8 +125,7 @@ class Login extends Component {
 
     render() {
         const { errors } = this.state;
-        console.log(this.props)
-
+        console.log(this.props.history.location.pathname)
 
         return (
 
@@ -169,7 +174,7 @@ class Login extends Component {
                         <div className="form-fields">
                             <Form.Label>Password :</Form.Label>
                             <Form.Control
-                                type="password"
+                                type="text"
                                 className="mb-1 mt-1"
                                 id="password"
                                 name="password"
@@ -186,18 +191,6 @@ class Login extends Component {
                         </NavLink>
 
                         <div className="mt-5 form-group w-75">
-                            {/* <NavLink
-                                to="#"
-                                username={this.state.username}
-                                className={`login-link ${!this.state.errors.username && !this.state.errors.password && this.state.username && this.state.password
-                                    ? ''
-                                    : 'disabled'}`
-                                }
-                                onClick={!this.state.errors.username && !this.state.errors.password && this.state.username && this.state.password
-                                    ? () => this.context.setModalShow(false)
-                                    : () => this.context.setModalShow(true)
-                                }
-                            > */}
                             <Button
                                 className={`btn-block login ${
                                     !this.state.errors.username &&
@@ -213,8 +206,7 @@ class Login extends Component {
                                 type="submit"
                             >
                                 LOG IN
-              </Button>
-                            {/* </NavLink> */}
+                            </Button>
                         </div>
                     </Form>
                 </Modal.Body>
@@ -222,5 +214,6 @@ class Login extends Component {
         );
     }
 }
+
 
 export default Login;

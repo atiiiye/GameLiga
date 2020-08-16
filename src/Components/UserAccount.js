@@ -54,7 +54,11 @@ class UserAccount extends Component {
                 source: Grid5
             },
         ],
+        stateDisplay: true,
     }
+    displayHandler = () => {
+        this.setState(stateDisplay);
+    };
 
     render() {
         const params = {
@@ -69,6 +73,7 @@ class UserAccount extends Component {
             centeredSlides: true,
             spaceBetween: 20,
         }
+
         return (
             <React.Fragment>
                 <div className="connect-components" style={{ display: 'flex' }}>

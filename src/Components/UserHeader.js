@@ -57,7 +57,7 @@ class UserHeader extends Component {
     // static contextType = usernameContext;
 
     render() {
-        // console.log(this.props)
+        console.log(this.props)
         return (
             <div>
                 <Navbar className="user-header" expand="md">

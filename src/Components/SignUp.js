@@ -242,11 +242,6 @@ class SignUp extends Component {
         // this.setState({ errors })
         this.notifyError();
       }
-      // else if (err.response && err.response.status === 409) {
-      //   const errors = { ...this.state.errors }
-      //   errors.phone = 'Phone number is exist ';
-      //   this.setState({ errors })
-      // }
     }
   };
 
@@ -321,7 +316,7 @@ class SignUp extends Component {
 
   render() {
     const { errors } = this.state;
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <React.Fragment>
         <UserHeader show={!this.displayHandler.bind(this)} />
