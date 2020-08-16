@@ -373,7 +373,7 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
-                    type="text"
+                    type="password"
                     id="randomPassword"
                     className="form-control-plaintext"
                     placeholder="Password"
@@ -432,7 +432,7 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
-                    type="text"
+                    type="password"
                     className="form-control-plaintext"
                     placeholder="confirm password"
                     name="confirmPassword"
@@ -646,7 +646,7 @@ class SignUp extends Component {
                 <Button
                   className={`register col-sm-7 ${
                     this.state.checkbox ? "" : "disabled"
-                  }`}
+                    }`}
                   variant="none"
                   type="submit"
                   onClick={this.state.handleChange}

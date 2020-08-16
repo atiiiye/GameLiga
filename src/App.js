@@ -34,10 +34,8 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route
-            path="/"
-            exact
-            component={Slider}
+          <Route path="/" exact component={Slider}
+
           // render={(props) => {
           //   <Login {...props} />
           // }}

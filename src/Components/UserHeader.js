@@ -82,9 +82,9 @@ class UserHeader extends Component {
                                             <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
                                             {/* <div className="row part-2"> */}
                                             <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
-                                            <NavLink to="/telegram" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="telegram">
+                                            <NavLink to="/telegram" /*onClick={this.handleRouting.bind(this)}*/ className="nav-link-icon" id="telegram">
                                                 <TelegramIcon className="image-icon " id="telegram"></TelegramIcon>
-                                                <Telegram />
+                                                {/* <Telegram /> */}
                                             </NavLink>
                                             <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
                                                 <WalletIcon className="image-icon" id="wallet" />

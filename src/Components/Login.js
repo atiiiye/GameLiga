@@ -95,15 +95,12 @@ class Login extends Component {
         try {
             await login(this.state);
             // window.location = "/account"
-            this.props.history.push({
+            this.props.historyProps.history.loction.push({
                 pathname: "/account",
                 state: { username: this.state.username },
             });
         } catch (err) {
             if (err.response && err.response.status === 400) {
-                // const errors = { ...this.state.errors }
-                // errors.username = ('Username or Password is invalid ');
-                // this.setState({ errors })
                 this.notifyError();
             }
         }
@@ -123,6 +120,7 @@ class Login extends Component {
     render() {
         const { errors } = this.state;
         console.log(this.props)
+        console.log(this.props.historyProps)
 
 
         return (
@@ -172,7 +170,7 @@ class Login extends Component {
                         <div className="form-fields">
                             <Form.Label>Password :</Form.Label>
                             <Form.Control
-                                type="password"
+                                type="text"
                                 className="mb-1 mt-1"
                                 id="password"
                                 name="password"
