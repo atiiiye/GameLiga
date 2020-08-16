@@ -170,7 +170,7 @@ class Login extends Component {
                         <div className="form-fields">
                             <Form.Label>Password :</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="password"
                                 className="mb-1 mt-1"
                                 id="password"
                                 name="password"
@@ -184,7 +184,7 @@ class Login extends Component {
                         </div>
                         <NavLink className="forgot mb-4" to="/" alt="">
                             Forget your password?
-            </NavLink>
+                        </NavLink>
 
                         <div className="mt-5 form-group w-75">
                             {/* <NavLink
