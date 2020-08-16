@@ -35,9 +35,11 @@ class App extends Component {
       <div>
         <Switch>
           <Route path="/" exact component={Slider}
-
           // render={(props) => {
-          //   <Login {...props} />
+          //   <React.Fragment>
+          //     <Header {...props} />
+          //     <Slider />
+          //   </React.Fragment>
           // }}
           />
 
