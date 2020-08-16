@@ -23,7 +23,7 @@ div.container-fluid.userAccount div.card#content {
   border-radius: 0;
   position: relative;
   left: 0;
-  height: max-content;
+  height: 85vh;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
