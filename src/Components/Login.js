@@ -125,7 +125,7 @@ class Login extends Component {
 
     render() {
         const { errors } = this.state;
-        console.log(this.props.history.location.pathname)
+        console.log(this.props.history.location)
 
         return (
 

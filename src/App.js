@@ -55,7 +55,7 @@ class App extends Component {
                 <React.Fragment>
                   <UserHeader
                     show={this.displayHandler.bind(this)}
-                    {...props.history.state}
+                    {...props}
                   />
                   <UserAccount />
                 </React.Fragment>
