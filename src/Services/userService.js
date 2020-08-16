@@ -3,7 +3,6 @@ import config from './../config.json'
 import axios from 'axios';
 
 export function login(user) {
-    console.log(user)
 
     return http.post(config.loginApi, {
         Username: user.username,

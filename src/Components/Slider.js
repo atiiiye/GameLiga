@@ -110,7 +110,7 @@ class Slider extends Component {
 
     return (
       <React.Fragment>
-        <Header history={this.props.history} />
+        <Header history={this.props} />
         <section className="main-slider">
           <div className="container-fluid box-slider">
             <div className="row pratition-slider">

@@ -321,7 +321,7 @@ class SignUp extends Component {
 
   render() {
     const { errors } = this.state;
-    // console.log(this.state)
+    console.log(this.props)
     return (
       <React.Fragment>
         <UserHeader show={!this.displayHandler.bind(this)} />

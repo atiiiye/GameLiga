@@ -95,7 +95,7 @@ class Login extends Component {
         try {
             await login(this.state);
             // window.location = "/account"
-            this.props.historyProps.history.loction.push({
+            this.props.history.history.history.push({
                 pathname: "/account",
                 state: { username: this.state.username },
             });
@@ -119,8 +119,7 @@ class Login extends Component {
 
     render() {
         const { errors } = this.state;
-        // console.log(this.props)
-        // console.log(this.props.historyProps)
+        console.log(this.props)
 
 
         return (

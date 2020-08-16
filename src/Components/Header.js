@@ -33,8 +33,7 @@ export default class Header extends Component {
     // console.log(this.props)
     return (
 
-      <>
-        {/* {console.log("header props is : " + this.props)} */}
+      <React.Fragment>
         <div className="container-fluid">
           <Navbar className="" collapseOnSelect expand="md" bg="none">
             <div className="hamburger-menu px-0" data-target="#coll-navbar">
@@ -133,12 +132,10 @@ export default class Header extends Component {
             setModalShow: this.setShow.bind(this)
           }}
           >
-            <Login historyProps={this.props} />
+            <Login history={this.props} />
           </modalContext.Provider>
-
-
         </div>
-      </>
+      </React.Fragment>
     );
   }
 }
