@@ -23,8 +23,11 @@ import { Navbar } from 'react-bootstrap';
 //import components
 import Wallet from './Wallet';
 import Telegram from './Telegram';
-import modalContext from './Contexts';
 import SearchBox from './SearchBox';
+
+//import contexts
+import { modalContext } from './Contexts';
+import { TelegramContext } from './Contexts';
 import usernameContext from './Contexts/username';
 
 //import packages
@@ -38,12 +41,16 @@ class UserHeader extends Component {
     state = {
         show: false,
         searchQuery: '',
-
     }
 
-    handleRouting = (e) => {
+    handlePrevntDefault = (e) => {
         e.preventDefault()
-        this.setState({ show: true })
+        this.setShow({ show: true })
+    }
+
+    handleRoutingWallet = (e) => {
+        e.preventDefault()
+        this.setShow({ show: true })
     }
 
     setShow = (status) => {
@@ -57,7 +64,7 @@ class UserHeader extends Component {
     // static contextType = usernameContext;
 
     render() {
-        // console.log(this.props.history.location.state.username)
+        console.log(this.props.history)
         return (
             <div>
                 <Navbar className="user-header" expand="md">
@@ -77,20 +84,38 @@ class UserHeader extends Component {
                                 ? (
                                     <>
                                         < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
-                                            <p className="text-muted">{this.props.history.location.state.username}</p>
+                                            <p className="text-muted">{this.props.history.state.username}</p>
                                             <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
                                             <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
                                             {/* <div className="row part-2"> */}
                                             <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
-                                            <NavLink to="/telegram" /*onClick={this.handleRouting.bind(this)}*/ className="nav-link-icon" id="telegram">
+
+                                            <NavLink to="/telegram"
+                                                onClick={this.handlePrevntDefault.bind(this)}
+                                                className="nav-link-icon"
+                                                id="telegram"
+                                            >
                                                 <TelegramIcon className="image-icon " id="telegram"></TelegramIcon>
-                                                {/* <Telegram /> */}
+
                                             </NavLink>
-                                            <NavLink to="/wallet" onClick={this.handleRouting.bind(this)} className="nav-link-icon" id="wallet">
+
+                                            <NavLink to="/wallet"
+                                                onClick={this.handleRoutingWallet.bind(this)}
+                                                className="nav-link-icon"
+                                                id="wallet"
+                                            >
                                                 <WalletIcon className="image-icon" id="wallet" />
                                             </NavLink>
                                             {/* </div> */}
                                         </Navbar.Collapse>
+
+                                        <TelegramContext.Provider value={{
+                                            dropDownShow: this.state.show,
+                                            setDropDownShow: this.setShow.bind(this)
+                                        }}
+                                        >
+                                            <Telegram />
+                                        </TelegramContext.Provider>
 
                                         <modalContext.Provider value={{
                                             modalShow: this.state.show,

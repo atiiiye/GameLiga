@@ -10,8 +10,8 @@ import './../css/wallet.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Modal } from "react-bootstrap";
 
-//import components
-import modalContext from './Contexts'
+//import contexts
+import { modalContext } from './Contexts'
 
 
 class Wallet extends Component {
@@ -48,7 +48,7 @@ class Wallet extends Component {
                                 id="deposit"
                                 // value="Submit"
                                 onClick={() => this.context.setModalShow(false)}
-                                // type="submit"
+                            // type="submit"
                             >
                                 DEPOSIT
                             </Button>
@@ -58,7 +58,7 @@ class Wallet extends Component {
                                 id="withDraw"
                                 // value="Submit"
                                 onClick={() => this.context.setModalShow(false)}
-                                // type="submit"
+                            // type="submit"
                             >
                                 WITHDRAW
                             </Button>

@@ -1,8 +1,12 @@
-import React  from 'react'
+import React from 'react'
 
-const modalContext= React.createContext({
-    show:[],
-    setShow :()=>{}
+export const modalContext = React.createContext({
+    show: [],
+    setShow: () => { }
 })
 
-export default modalContext;
+export const TelegramContext = React.createContext({
+    show: [],
+    setShow: () => { }
+})
+

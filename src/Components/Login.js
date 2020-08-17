@@ -16,10 +16,11 @@ import { NavLink, Redirect } from "react-router-dom";
 //import packages
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
 import { connect } from 'react-redux';
+import { createBrowserHistory } from 'history';
 
 
 //import components
-import modalContext from "./Contexts";
+import { modalContext } from "./Contexts";
 
 
 
@@ -95,17 +96,27 @@ class Login extends Component {
         }
     };
 
+    // history = createBrowserHistory()
+
     goAccount = async () => {
         try {
             await login(this.state);
-            window.location = "/account"
+
+            // window.location = "/account"
             // window.location.state = { username: this.state.username }
 
-
             // this.props.history.location.pathname = "/account"
-            this.props.history.location.state = { username: this.state.username }
+            // this.props.history.location.pathname.push("/account")
+
+            // pathname: "/account",
+            // state: { username: this.state.username }
+
+            this.props.dispatch({
+                type: 'HistorySlider'
+            })
 
         } catch (err) {
+
             if (err.response && err.response.status === 400) {
                 this.notifyError();
             }
@@ -125,7 +136,7 @@ class Login extends Component {
 
     render() {
         const { errors } = this.state;
-        console.log(this.props.history.location)
+        console.log(this.props)
 
         return (
 
@@ -215,5 +226,11 @@ class Login extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        history: state.history
+    }
+}
 
-export default Login;
+
+export default connect(mapStateToProps)(Login);

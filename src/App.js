@@ -14,16 +14,12 @@ import Header from "./Components/Header.js";
 import UserAccount from "./Components/UserAccount";
 import FinalResult from "./Components/FinalResult";
 import LeaderBoards from "./Components/LeaderBoards";
-import reducer from './Components/Reducers/reducer';
-// import { createBrowserHistory } from 'history';
 
 
 //import routes
 import { Route, Switch, Redirect } from "react-router-dom";
 
 //import packages
-import { Provider } from 'react-redux';
-import { createStore } from 'redux'
 
 class App extends Component {
 
@@ -36,12 +32,14 @@ class App extends Component {
     this.setState(stateDisplay);
   };
 
+
+
+
   render() {
     return (
       <div>
 
         <Switch>
-
           <Route path="/" exact component={Slider} />
 
           <Route path="/signup" component={SignUp} />
