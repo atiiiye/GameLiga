@@ -3,6 +3,7 @@ import React, { Component } from "react";
 //import css
 import "./../css/reset.css";
 import "./../css/LeaderBoards.css";
+import "./../css/navigation.css"
 
 //import bootstrap
 import { Card, Form, FormControl } from "react-bootstrap";
@@ -14,11 +15,11 @@ import JoinButton from "./../images/green-button.png";
 
 //import components
 import Sidebar from "./Sidebar";
+import Navigation from "./Navigation";
 
 //import packages
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import { NavLink } from "react-router-dom";
 
 class LeaderBoards extends Component {
   state = {
@@ -58,32 +59,7 @@ class LeaderBoards extends Component {
 
           <Card id="content">
             <div className="elements">
-              <div className="tabs">
-                <NavLink
-                  to="/Leader-boards"
-                  activeClassName="selected"
-                  className="one-av-one tab"
-                  data-content="one-av-one"
-                >
-                  One av One
-              </NavLink>
-                <NavLink
-                  to="/tourny"
-                  activeClassName="selected"
-                  className="tourny tab"
-                  data-content="tourny"
-                >
-                  Tourny
-              </NavLink>
-                <NavLink
-                  to="/liga"
-                  activeClassName="selected"
-                  className="liga tab"
-                  data-content="liga"
-                >
-                  Liga
-              </NavLink>
-              </div>
+              <Navigation />
               {this.state.box.map((item) => (
                 <Card id="tab-content" key={item.id}>
                   <div className="tab-content-parent">

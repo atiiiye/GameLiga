@@ -14,6 +14,7 @@ import Header from "./Components/Header.js";
 import UserAccount from "./Components/UserAccount";
 import FinalResult from "./Components/FinalResult";
 import LeaderBoards from "./Components/LeaderBoards";
+import Tourny from "./Components/Tourny";
 
 
 //import routes
@@ -76,7 +77,7 @@ class App extends Component {
 
           <Route path="/tourny">
             <UserHeader show={this.displayHandler.bind(this)} />
-            <LeaderBoards />
+            <Tourny />
           </Route>
 
           <Route path="/liga">

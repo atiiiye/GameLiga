@@ -38,7 +38,6 @@ class Login extends Component {
 
     static contextType = modalContext;
 
-
     validateForm = (errors) => {
         let valid = true;
         Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
@@ -103,10 +102,6 @@ class Login extends Component {
             await login(this.state);
 
             // window.location = "/account"
-            // window.location.state = { username: this.state.username }
-
-            // this.props.history.location.pathname = "/account"
-            // this.props.history.location.pathname.push("/account")
 
             // pathname: "/account",
             // state: { username: this.state.username }
