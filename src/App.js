@@ -32,7 +32,7 @@ class App extends Component {
 
 
   displayHandler = () => {
-    this.setState(stateDisplay);
+    this.setState({ stateDisplay: true });
   };
 
 
