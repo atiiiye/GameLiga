@@ -13,9 +13,11 @@ import NotFound from "./Components/NotFound";
 import Header from "./Components/Header.js";
 import UserAccount from "./Components/UserAccount";
 import FinalResult from "./Components/FinalResult";
-import LeaderBoards from "./Components/LeaderBoards";
+import Games from "./Components/Games";
 import Tourny from "./Components/Tourny";
 import Liga from "./Components/Liga";
+import LeaderBoards from "./Components/LeaderBoards";
+
 
 
 
@@ -66,9 +68,11 @@ class App extends Component {
 
           <Route path="/tvlive" component={FinalResult} />
 
-          <Route path="/Leader-boards" component={LeaderBoards} />
+          <Route path="/games" component={Games} />
 
           <Route path="/tourny" component={Tourny} />
+
+          <Route path="/Leader-boards" component={LeaderBoards} />
 
           <Route path="/liga" component={Liga} />
 

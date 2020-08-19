@@ -1,18 +1,20 @@
 @import 'base';
 
-div.container-fluid.LeaderBoards {
 
-    background-image: url('./../images/fifa-world-cup-brazil-fifa.png'), url('./../images/salah.png'), ;
+div.container-fluid.leader-boards {
+
+    background-image: url('./../images/Soldier.png'), url('./../images/background-leader-boards.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%, 25% 350px;
-    background-position: 0 0, bottom right;
-    // -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
+    background-size: 30% 330px, 100% 100%;
+    background-position: right 100%, -10px -15px;
+    -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
     width: 100%;
 
     div.card#content {
         background-color: rgba($color: #000000, $alpha: .4);
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
+        // justify-content: flex-end;
         border-left: 1px solid $color-orange-1;
         border-top: 2px solid $color-orange-1;
         border-bottom: 0;
@@ -20,325 +22,44 @@ div.container-fluid.LeaderBoards {
         border-radius: 0;
         position: relative;
         left: 0;
-        height: 100%;
+        height: 85vh;
         padding-left: 0;
         padding-right: 0;
         width: 100%;
         min-height: 100%;
 
-
-        div.elements {
-            width: 70%;
-            height: 100%;
+        div.buttons-top {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 15%;
 
-
-
-            div.card#tab-content {
-                // width: 100%;
-                height: 250px;
-                border: 1px solid $color-orange-1;
-                border-radius: 9px;
-                background-color: rgba($color: $color-background-1, $alpha: .5);
-                margin: 2rem;
-                margin-top: 0;
-
-                div.tab-content-parent {
-                    display: flex;
-                    width: 100%;
-                    height: 100%;
-
-                    div.tab-content-left {
-                        display: flex;
-                        align-items: center;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        // margin-top: 1rem;
-                        width: 45%;
-                        height: 100%;
-
-
-                        div.section-left {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-                            width: 100%;
-                            height: 45%;
-
-                            div.own-logo {
-                                width: 50px;
-                                height: 50px;
-                                background-color: $color-background-1;
-                                border-radius: 50%;
-
-                                img.user-team-logo {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-
-                                div.difference {
-                                    input.difference-number.form-control {
-                                        background: transparent;
-                                        color: #ffffff;
-                                        padding: .37rem .65rem;
-                                        border: none;
-                                        width: 60px;
-                                        height: 1.7rem;
-                                        position: relative;
-                                        left: 9px;
-
-                                        &:focus {
-                                            box-shadow: 0 0 0 0;
-                                        }
-                                    }
-                                }
-
-                            }
-
-                            div.football {
-                                width: 50%;
-                                height: 100px;
-                                background-color: $color-background-1;
-
-                                img.football-field {
-                                    width: 100%;
-                                    height: inherit;
-                                }
-                            }
-
-                            div.other-logo {
-                                width: 50px;
-                                height: 50px;
-                                background-color: $color-background-1;
-                                border-radius: 50%;
-                                display: flex;
-                                flex-direction: column;
-
-
-                                img.user-team-logo {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-
-                                div.difference {
-                                    input.difference-number.form-control {
-                                        background: transparent;
-                                        color: #ffffff;
-                                        border: none;
-                                        padding: .37rem .65rem;
-                                        width: 60px;
-                                        height: 1.7rem;
-                                        position: relative;
-                                        left: 9px;
-
-                                        &:focus {
-                                            box-shadow: 0 0 0 0;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        span.hosted {
-                            width: 100%;
-                            // height: 20px;
-                            color: $color-gray-2;
-                            padding-left: .5rem;
-                            font-weight: 600;
-                            font-size: 88%;
-                            position: relative;
-                            bottom: -1.6rem;
-                        }
-                    }
-
-                    div.tab-content-right {
-                        display: flex;
-                        width: 55%;
-                        height: 100%;
-                        align-items: center;
-
-                        div.section-right {
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-
-                            img.join-button {
-                                display: flex;
-                                width: 85px;
-                                height: 85px;
-                                position: relative;
-                                top: -2rem;
-                            }
-
-                            div.options {
-                                display: flex;
-                                flex-direction: column;
-
-                                div.option {
-                                    width: 100%;
-                                    height: 80px;
-                                    display: flex;
-                                    padding-top: 1rem;
-                                    justify-content: flex-start;
-
-                                    span.option-item {
-                                        color: #ffffff;
-                                        font-weight: bold;
-                                        font-size: 95%;
-                                        width: 35%;
-                                        height: 45px;
-                                        display: flex;
-                                        align-items: center;
-                                    }
-
-                                    input.form-control {
-                                        border-radius: 10px;
-                                        border: unset;
-                                        width: 69%;
-                                    }
-
-                                    input.time,
-                                    input.advantage {
-                                        display: flex;
-                                        width: 50px;
-                                        padding-right: 3px;
-                                        padding-left: 8px;
-                                        height: 45px;
-                                        margin-right: .3rem;
-                                        font-weight: 600;
-
-                                        &:last-child:not([name="advantage"]) {
-                                            width: 55px;
-                                            height: 45px;
-                                            margin-right: 0;
-                                            background-color: rgba($color: $color-orange-1, $alpha: .8);
-                                            color: #ffffff;
-                                        }
-
-                                    }
-                                }
-
-                                span.No {
-                                    width: 100%;
-                                    height: 20px;
-                                    color: $color-gray-2;
-                                    font-size: 88%;
-                                    font-weight: 600;
-                                    display: flex;
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    position: relative;
-                                    bottom: 10px;
-                                    right: -.6rem;
-                                }
-                            }
-
-                        }
-
-                    }
-                }
-
-            }
-        }
-
-        div.sidebar-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-            min-height: 90%;
-            // height: 100vh;
-            width: max-content;
-
-            div.priorities {
+            div.all-button {
                 display: flex;
-                width: max-content;
-                flex-direction: column;
-                justify-content: flex-end;
-                height: 130px;
-
-                div.Priority {
-                    display: flex;
-                    justify-content: space-between;
-                    width: max-content;
-                    margin-top: .8rem;
-
-                    div.ascending {
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 2px;
-                        display: flex;
-                        background-color: $color-orange-1;
-
-
-                    }
-
-                    span {
-                        font-size: 85%;
-                        color: $color-gray-2;
-                        align-self: center;
-                        padding-left: .3rem;
-                    }
-
-                    div.descending {
-                        width: 20px;
-                        border-radius: 2px;
-                        height: 20px;
-                        display: flex;
-                        background-color: #ffffff;
-                    }
-                }
-            }
-
-            div.create-game-section {
-                height: 100px;
-                display: flex;
-                width: max-content;
-                flex-direction: column;
-                justify-content: flex-start;
                 align-items: center;
+                justify-content: flex-start;
+                padding-left: .8rem;
+                border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
+                border-radius: 7px;
+                background: transparent;
+                color: #ffffff;
+                width: 30%;
+                height: 30px;
+                font-size: 90%;
+                margin-left: .4rem;
 
-                div.create-game-button {
-                    width: 45px;
-                    height: 45px;
-                    background-color: rgba($color: $color-orange-1, $alpha: .5);
-                    border-radius: 50%;
-
-                    &:active {
-                        background-color: rgba($color: $color-orange-1, $alpha: .6);
-                        border: 1px solid rgba($color: #ffffff, $alpha: .5);
-                    }
-
-                    i.fas.fa-plus {
-                        height: inherit;
-                        font-size: 28px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        // position: relative;
-                        // left: 5px;
-                        // top: 8px;
-                        color: rgba($color: $color-background-1, $alpha: 1.0);
-                    }
-
-
+                &:first-child {
+                    margin-left: 0;
                 }
 
-                span.create-game-title {
-                    color: #ffffff;
-                    font-size: 90%;
-                    font-weight: 600;
-                    margin-top: 5px;
+                &:hover,
+                &:focus {
+                    background-color: rgba($color: $color-pink-2, $alpha: .7);
                 }
             }
 
-
         }
-
-
-
     }
 }

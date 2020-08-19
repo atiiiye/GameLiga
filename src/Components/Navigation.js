@@ -11,7 +11,7 @@ class Navigation extends Component {
         return (
             <div className="tabs">
                 <NavLink
-                    to="/Leader-boards"
+                    to="/games"
                     activeClassName="selected"
                     className="one-av-one tab"
                     data-content="one-av-one"
