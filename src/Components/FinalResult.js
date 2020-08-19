@@ -31,7 +31,7 @@ class FinalResult extends Component {
     render() {
         return (
             <React.Fragment>
-                <UserHeader show={!this.displayHandler.bind(this)} />
+                <UserHeader />
                 <div style={{ display: "flex" }}>
                     <Sidebar />
                     <div className="container-fluid FinalResult">

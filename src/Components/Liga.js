@@ -20,7 +20,7 @@ class Liga extends Component {
     render() {
         return (
             <React.Fragment>
-                <UserHeader show={!this.displayHandler.bind(this)} />
+                <UserHeader />
                 <div className="display" style={{ display: "flex" }} >
                     <Sidebar />
                     <div className="container-fluid Tourny">

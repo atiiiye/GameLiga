@@ -66,11 +66,9 @@ class App extends Component {
 
           <Route path="/tvlive" component={FinalResult} />
 
-
           <Route path="/Leader-boards" component={LeaderBoards} />
 
           <Route path="/tourny" component={Tourny} />
-
 
           <Route path="/liga" component={Liga} />
 

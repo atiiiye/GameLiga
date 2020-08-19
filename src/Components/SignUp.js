@@ -26,6 +26,7 @@ import { ToastContainer, toast, Flip, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { signup } from "./../Services/userService";
+import UserHeaderLeft from "./UserHeaderLeft";
 
 class SignUp extends Component {
   state = {
@@ -310,16 +311,16 @@ class SignUp extends Component {
     });
   };
 
-  displayHandler = () => {
-    this.setState({ stateDisplay: true });
-  };
+  // displayHandler = () => {
+  //   this.setState({ stateDisplay: true });
+  // };
 
   render() {
     const { errors } = this.state;
     // console.log(this.props)
     return (
       <React.Fragment>
-        <UserHeader show={!this.displayHandler.bind(this)} />
+        <UserHeaderLeft />
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
