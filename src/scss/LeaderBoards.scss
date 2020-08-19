@@ -28,38 +28,121 @@ div.container-fluid.leader-boards {
         width: 100%;
         min-height: 100%;
 
-        div.buttons-top {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40%;
-            height: 15%;
+        div.all-view-component {
+            width: 90%;
+            height: 100%;
 
-            div.all-button {
+            div.buttons-top {
                 display: flex;
-                align-items: center;
                 justify-content: flex-start;
-                padding-left: .8rem;
-                border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
-                box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
-                border-radius: 7px;
-                background: transparent;
-                color: #ffffff;
-                width: 30%;
-                height: 30px;
-                font-size: 90%;
-                margin-left: .4rem;
+                align-items: center;
+                width: 80%;
+                height: 15%;
+                margin-left: 3rem;
 
-                &:first-child {
-                    margin-left: 0;
+
+                div.all-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: .8rem;
+                    border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                    background-color: rgba($color: #000000, $alpha: .15);
+                    box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
+                    border-radius: 7px;
+                    color: #ffffff;
+                    width: 20%;
+                    height: 30px;
+                    font-size: 90%;
+                    margin-left: .4rem;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        background-color: rgba($color: $color-pink-2, $alpha: .7);
+                    }
                 }
 
-                &:hover,
-                &:focus {
-                    background-color: rgba($color: $color-pink-2, $alpha: .7);
-                }
             }
 
+            div.all-view-table {
+                width: 80%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+
+                div.title-table {
+                    border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                    box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
+                    background-color: rgba($color: #000000, $alpha: .15);
+
+                    width: 90%;
+                    height: max-content;
+                    padding: .2rem 0;
+                    margin: .5rem;
+                    display: flex;
+                    // align-items: flex-start;
+
+
+                    div.section-1.user-info {
+                        padding: 0 1rem;
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        i.image-icon.fas.fa-user-circle {
+                            font-size: 45px;
+                            width: 45px;
+                            height: 45px;
+                            color: rgba($color: #ffffff, $alpha: .7);
+                        }
+
+                        p.user-name {
+                            display: flex;
+                            color: rgba($color: #ffffff, $alpha: .7);
+                            font-size: 90%;
+                            align-items: center;
+                            height: 100%;
+                        }
+                    }
+
+                    div.section-2 {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0;
+
+                        span.section-2-1,
+                        span.section-2-2,
+                        span.section-2-3 {
+                            color: rgba($color: #ffffff, $alpha: .7);
+
+                            display: flex;
+                        }
+
+                    }
+
+                    div.section-3 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0;
+
+                        span.section-3-1 {
+                            color: rgba($color: #ffffff, $alpha: .7);
+                        }
+                    }
+                }
+            }
         }
+
+
     }
 }

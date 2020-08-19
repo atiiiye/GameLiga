@@ -30,35 +30,109 @@ div.container-fluid.leader-boards div.card#content {
   min-height: 100%;
 }
 
-div.container-fluid.leader-boards div.card#content div.buttons-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-  height: 15%;
+div.container-fluid.leader-boards div.card#content div.all-view-component {
+  width: 90%;
+  height: 100%;
 }
 
-div.container-fluid.leader-boards div.card#content div.buttons-top div.all-button {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.buttons-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: 15%;
+  margin-left: 3rem;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.buttons-top div.all-button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: .8rem;
   border: 1px solid rgba(206, 123, 119, 0.7);
+  background-color: rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 0 0.05rem rgba(206, 123, 119, 0.35);
   border-radius: 7px;
-  background: transparent;
   color: #ffffff;
-  width: 30%;
+  width: 20%;
   height: 30px;
   font-size: 90%;
   margin-left: .4rem;
 }
 
-div.container-fluid.leader-boards div.card#content div.buttons-top div.all-button:first-child {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.buttons-top div.all-button:first-child {
   margin-left: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.buttons-top div.all-button:hover, div.container-fluid.leader-boards div.card#content div.buttons-top div.all-button:focus {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.buttons-top div.all-button:hover, div.container-fluid.leader-boards div.card#content div.all-view-component div.buttons-top div.all-button:focus {
   background-color: rgba(69, 9, 27, 0.7);
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table {
+  border: 1px solid rgba(206, 123, 119, 0.7);
+  box-shadow: 0 0 0 0.05rem rgba(206, 123, 119, 0.35);
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 90%;
+  height: max-content;
+  padding: .2rem 0;
+  margin: .5rem;
+  display: flex;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-1.user-info {
+  padding: 0 1rem;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-1.user-info i.image-icon.fas.fa-user-circle {
+  font-size: 45px;
+  width: 45px;
+  height: 45px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-1.user-info p.user-name {
+  display: flex;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 90%;
+  align-items: center;
+  height: 100%;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 span.section-2-1,
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 span.section-2-2,
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 span.section-2-3 {
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-3 span.section-3-1 {
+  color: rgba(255, 255, 255, 0.7);
 }
 /*# sourceMappingURL=LeaderBoards.css.map */

@@ -54,11 +54,8 @@ class UserAccount extends Component {
                 source: Grid5
             },
         ],
-        stateDisplay: true,
     }
-    displayHandler = () => {
-        this.setState(stateDisplay);
-    };
+
 
     render() {
         const params = {

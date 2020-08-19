@@ -77,6 +77,7 @@ class App extends Component {
           <Route path="/liga" component={Liga} />
 
           <Route path="/404" component={NotFound} />
+
           <Route component={NotFound} />
 
         </Switch>
