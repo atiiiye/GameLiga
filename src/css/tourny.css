@@ -77,22 +77,191 @@ div.container-fluid.Tourny div.card#content div.elements div.card#tab-content di
   font-size: 88%;
 }
 
-div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 i.icon-trophy {
-  outline-color: red;
-  color: #cfb371;
-  font-size: 28px;
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 svg.icon-trophy {
+  width: 50px;
+  height: 50px;
 }
 
 div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 span.score {
   color: #959aa2;
   font-weight: 600;
   font-size: 88%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 div.join-button {
-  width: 85px;
-  height: 85px;
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 div.section1 {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 div.section1 div.join-button {
+  width: 42%;
+  height: 82%;
   background-image: url("./../images/green-button.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 div.section1 div.join-button span.join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 span.time-game {
+  color: rgba(149, 154, 162, 0.6);
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -1rem;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing input.form-control {
+  border-radius: 10px;
+  border: unset;
+  width: 50%;
+  margin-right: .5rem;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing input.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing input.time {
+  display: flex;
+  width: 50px;
+  padding-right: 3px;
+  padding-left: 8px;
+  height: 45px;
+  margin-right: .3rem;
+  font-weight: 600;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing input.time:last-child:not([name="advantage"]) {
+  width: 55px;
+  height: 45px;
+  margin-right: 0;
+  background-color: rgba(255, 147, 0, 0.8);
+  color: #ffffff;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing input.time:last-child:not([name="advantage"]):focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 147, 0, 0.25);
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 span.waiting-title {
+  color: rgba(149, 154, 162, 0.6);
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 1rem;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.waiting-input {
+  display: flex;
+  justify-content: center;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.waiting-input input.form-control.wait {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  border: unset;
+  width: 50px;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.waiting-input input.form-control.wait:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date span.Datom {
+  width: 100%;
+  height: 20px;
+  font-weight: 600;
+  color: #959aa2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date div.date-box {
+  display: flex;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date div.date-box span.year,
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date div.date-box span.month {
+  color: #ffffff;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date div.date-box span.day {
+  color: #ff9300;
+}
+
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 span.No {
+  width: 100%;
+  height: 20px;
+  color: #959aa2;
+  font-size: 88%;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  bottom: 10px;
+  right: .6rem;
 }
 /*# sourceMappingURL=tourny.css.map */

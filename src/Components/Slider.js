@@ -106,11 +106,12 @@ class Slider extends Component {
         },
       },
     };
-    // console.log(this.props.history);
+    console.log(this.props.history);
+
 
     return (
       <React.Fragment>
-        <Header />
+        <Header history={this.props} />
         <section className="main-slider">
           <div className="container-fluid box-slider">
             <div className="row pratition-slider">

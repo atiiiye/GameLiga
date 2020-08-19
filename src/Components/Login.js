@@ -106,9 +106,14 @@ class Login extends Component {
             // pathname: "/account",
             // state: { username: this.state.username }
 
-            this.props.dispatch({
-                type: 'HistorySlider'
-            })
+            // this.props.dispatch({
+            //     type: 'HistorySlider'
+            // })
+
+            this.props.history.history.history.push({
+                pathname: "/account",
+                state: { username: this.state.username },
+            });
 
         } catch (err) {
 
@@ -221,11 +226,11 @@ class Login extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        history: state.history
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         history: state.history
+//     }
+// }
 
 
-export default connect(mapStateToProps)(Login);
+export default Login;

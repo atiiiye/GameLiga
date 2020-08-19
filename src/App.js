@@ -15,6 +15,8 @@ import UserAccount from "./Components/UserAccount";
 import FinalResult from "./Components/FinalResult";
 import LeaderBoards from "./Components/LeaderBoards";
 import Tourny from "./Components/Tourny";
+import Liga from "./Components/Liga";
+
 
 
 //import routes
@@ -62,28 +64,15 @@ class App extends Component {
             }}
           />
 
-          <Route path="/games">
-            <UserHeader show={this.displayHandler.bind(this)} />
-            <div style={{ display: "flex" }}>
-              <Sidebar />
-              <FinalResult />
-            </div>
-          </Route>
+          <Route path="/tvlive" component={FinalResult} />
 
-          <Route path="/Leader-boards">
-            <UserHeader show={this.displayHandler.bind(this)} />
-            <LeaderBoards />
-          </Route>
 
-          <Route path="/tourny">
-            <UserHeader show={this.displayHandler.bind(this)} />
-            <Tourny />
-          </Route>
+          <Route path="/Leader-boards" component={LeaderBoards} />
 
-          <Route path="/liga">
-            <UserHeader show={this.displayHandler.bind(this)} />
-            <LeaderBoards />
-          </Route>
+          <Route path="/tourny" component={Tourny} />
+
+
+          <Route path="/liga" component={Liga} />
 
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />

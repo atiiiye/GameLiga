@@ -195,9 +195,9 @@ class SignUp extends Component {
     this.setState({ errors, [name]: value });
   };
 
-  onConfirm = () => {
-    (response) => this.onRecieveInput(response);
-  };
+  // onConfirm = () => {
+  //   (response) => this.onRecieveInput(response);
+  // };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -311,7 +311,7 @@ class SignUp extends Component {
   };
 
   displayHandler = () => {
-    this.setState(stateDisplay);
+    this.setState({ stateDisplay: true });
   };
 
   render() {
