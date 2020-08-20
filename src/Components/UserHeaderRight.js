@@ -21,7 +21,7 @@ import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 //import contexts
 import { modalContext } from './Contexts';
 import { TelegramContext } from './Contexts';
-import usernameContext from './Contexts/username';
+import { SignupContext } from './Contexts'
 
 //import route
 import { NavLink, Redirect } from "react-router-dom";
@@ -45,7 +45,7 @@ class UserHeaderRight extends Component {
         this.setState({ show: status })
     }
 
-    // static contextType = usernameContext;
+    static contextType = SignupContext;
 
     render() {
         return (
@@ -68,6 +68,7 @@ class UserHeaderRight extends Component {
                     < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
                         <p className="text-muted">
                             {/* {this.props.history.location.state.username} */}
+                            {this.context.username}
                         </p>
                         <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
                         <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>

@@ -17,9 +17,8 @@ import Games from "./Components/Games";
 import Tourny from "./Components/Tourny";
 import Liga from "./Components/Liga";
 import LeaderBoards from "./Components/LeaderBoards";
-
-
-
+import PrivateRoute from './Components/PrivateRoute ';
+import PublicRoute from './Components/PublicRoute';
 
 //import routes
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -45,15 +44,15 @@ class App extends Component {
       <div>
 
         <Switch>
-          <Route path="/" exact component={Slider} />
+          <PublicRoute restricted={false} path="/" exact component={Slider} />
 
-          <Route path="/signup" component={SignUp} />
+          <PublicRoute restricted={true} path="/signup" exact component={SignUp} />
 
-          <Route
+          <PrivateRoute exact
             path="/account"
             render={(props) => {
-              if (props.history.state == "undefined")
-                return <Redirect to="/" />
+              // if (props.history.state == "undefined")
+              //   return <Redirect to="/" />
               return (
                 <React.Fragment>
                   <UserHeader
@@ -66,15 +65,15 @@ class App extends Component {
             }}
           />
 
-          <Route path="/tvlive" component={FinalResult} />
+          <PrivateRoute exact path="/tvlive" component={FinalResult} />
 
-          <Route path="/games" component={Games} />
+          <PrivateRoute exact path="/games" component={Games} />
 
-          <Route path="/tourny" component={Tourny} />
+          <PrivateRoute exact path="/tourny" component={Tourny} />
 
-          <Route path="/Leader-boards" component={LeaderBoards} />
+          <PrivateRoute exact path="/Leader-boards" component={LeaderBoards} />
 
-          <Route path="/liga" component={Liga} />
+          <PrivateRoute exact path="/liga" component={Liga} />
 
           <Route path="/404" component={NotFound} />
 

@@ -10,3 +10,9 @@ export const TelegramContext = React.createContext({
     setShow: () => { }
 })
 
+export const SignupContext = React.createContext({
+    username: [],
+})
+
+
+

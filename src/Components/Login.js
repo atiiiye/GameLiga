@@ -22,6 +22,8 @@ import { createBrowserHistory } from 'history';
 //import components
 import { modalContext } from "./Contexts";
 
+import { logout, isLogin } from '../utils';
+
 
 
 import { login } from "./../Services/userService";
