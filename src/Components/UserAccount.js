@@ -73,6 +73,7 @@ class UserAccount extends Component {
 
         return (
             <React.Fragment>
+                <UserHeader />
                 <div className="connect-components" style={{ display: 'flex' }}>
                     <Sidebar />
                     <div className="container-fluid userAccount">

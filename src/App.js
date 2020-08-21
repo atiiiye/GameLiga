@@ -27,43 +27,19 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 class App extends Component {
 
-  state = {
-    stateDisplay: true,
-  };
-
-
-  displayHandler = () => {
-    this.setState({ stateDisplay: true });
-  };
-
-
-
+  state = {};
 
   render() {
     return (
       <div>
 
         <Switch>
-          <PublicRoute restricted={false} path="/" exact component={Slider} />
 
-          <PublicRoute restricted={true} path="/signup" exact component={SignUp} />
+          <PublicRoute exact restricted={false} path="/" component={Slider} />
 
-          <PrivateRoute exact
-            path="/account"
-            render={(props) => {
-              // if (props.history.state == "undefined")
-              //   return <Redirect to="/" />
-              return (
-                <React.Fragment>
-                  <UserHeader
-                    show={this.displayHandler.bind(this)}
-                    {...props}
-                  />
-                  <UserAccount />
-                </React.Fragment>
-              );
-            }}
-          />
+          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
+
+          <PrivateRoute exact path="/account" component={UserAccount} />
 
           <PrivateRoute exact path="/tvlive" component={FinalResult} />
 
@@ -71,7 +47,7 @@ class App extends Component {
 
           <PrivateRoute exact path="/tourny" component={Tourny} />
 
-          <PrivateRoute exact path="/Leader-boards" component={LeaderBoards} />
+          <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
 
           <PrivateRoute exact path="/liga" component={Liga} />
 

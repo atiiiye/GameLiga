@@ -19,8 +19,10 @@ import { connect } from 'react-redux';
 import { createBrowserHistory } from 'history';
 
 
-//import components
+//import contexts
 import { modalContext } from "./Contexts";
+import { LoginContext } from './Contexts'
+
 
 import { logout, isLogin } from '../utils';
 
@@ -39,6 +41,8 @@ class Login extends Component {
     };
 
     static contextType = modalContext;
+    // static contextType = LoginContext;
+
 
     validateForm = (errors) => {
         let valid = true;
@@ -103,7 +107,6 @@ class Login extends Component {
         try {
             await login(this.state);
 
-            // window.location = "/account"
 
             // pathname: "/account",
             // state: { username: this.state.username }
@@ -112,13 +115,21 @@ class Login extends Component {
             //     type: 'HistorySlider'
             // })
 
-            this.props.history.history.history.push({
+
+            // window.location = "/account"
+
+            this.props.history.push({
                 pathname: "/account",
                 state: { username: this.state.username },
             });
 
-        } catch (err) {
 
+            // this.props.history.history.history.push({
+            //     pathname: "/account",
+            //     state: { username: this.state.username },
+            // });
+
+        } catch (err) {
             if (err.response && err.response.status === 400) {
                 this.notifyError();
             }
@@ -136,94 +147,109 @@ class Login extends Component {
         });
     };
 
+
     render() {
         const { errors } = this.state;
-        console.log(this.props)
+        // console.log(this.props)
 
         return (
+            <React.Fragment>
+                <Modal
+                    className="login-modal"
+                    show={this.context.modalShow}
+                    onHide={() => this.context.setModalShow(false)}
+                >
+                    <Modal.Body>
+                        <ToastContainer limit={1} />
+                        <Modal.Title className="title-login text-center mx-2">
+                            <h2>
+                                Welcome <span>back</span>
+                            </h2>
+                            <p className="text-white px-2">
+                                Do not have account ?{" "}
+                                <NavLink
+                                    to="/signup"
+                                    onClick={() => this.context.setModalShow(false)}
+                                >
+                                    Sign up
+                                </NavLink>
+                            </p>
+                        </Modal.Title>
 
-            <Modal
-                className="login-modal"
-                show={this.context.modalShow}
-                onHide={() => this.context.setModalShow(false)}
-            >
-                <Modal.Body>
-                    <ToastContainer limit={1} />
-                    <Modal.Title className="title-login text-center mx-2">
-                        <h2>
-                            Welcome <span>back</span>
-                        </h2>
-                        <p className="text-white px-2">
-                            Do not have account ?{" "}
-                            <NavLink
-                                to="/signup"
-                                onClick={() => this.context.setModalShow(false)}
-                            >
-                                Sign up
-              </NavLink>
-                        </p>
-                    </Modal.Title>
-                    <Form
-                        action="#"
-                        className="form-login py-4"
-                        onSubmit={this.handleSubmit.bind(this)}
-                    >
-                        <div className="form-fields mb-4">
-                            <Form.Label>Username :</Form.Label>
-                            <Form.Control
-                                autoFocus
-                                type="text"
-                                className="mb-1 mt-1"
-                                id="username"
-                                name="username"
-                                placeholder="User"
-                                value={this.state.username}
-                                onChange={this.handleChange.bind(this)}
-                            ></Form.Control>
-                            {errors.username.length > 0 && (
-                                <span className="form-validate">{errors.username}</span>
-                            )}
-                        </div>
-                        <div className="form-fields">
-                            <Form.Label>Password :</Form.Label>
-                            <Form.Control
-                                type="text"
-                                className="mb-1 mt-1"
-                                id="password"
-                                name="password"
-                                placeholder="Password"
-                                value={this.state.password}
-                                onChange={this.handleChange.bind(this)}
-                            ></Form.Control>
-                            {errors.password.length > 0 && (
-                                <span className="form-validate">{errors.password}</span>
-                            )}
-                        </div>
-                        <NavLink className="forgot mb-4" to="/" alt="">
-                            Forget your password?
-                        </NavLink>
+                        {/* <LoginContext.Consumer>
+                            {
+                                context => ( */}
+                        <Form
+                            action="#"
+                            className="form-login py-4"
+                            onSubmit={this.handleSubmit.bind(this)}
+                        >
+                            <div className="form-fields mb-4">
+                                <Form.Label>Username :</Form.Label>
+                                <Form.Control
+                                    autoFocus
+                                    type="text"
+                                    className="mb-1 mt-1"
+                                    id="username"
+                                    name="username"
+                                    placeholder="User"
+                                    value={this.state.username}
+                                    onChange={this.handleChange.bind(this)}
+                                ></Form.Control>
+                                {errors.username.length > 0 && (
+                                    <span className="form-validate">{errors.username}</span>
+                                )}
+                            </div>
+                            <div className="form-fields">
+                                <Form.Label>Password :</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    className="mb-1 mt-1"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={this.state.password}
+                                    onChange={this.handleChange.bind(this)}
+                                ></Form.Control>
+                                {errors.password.length > 0 && (
+                                    <span className="form-validate">{errors.password}</span>
+                                )}
+                            </div>
+                            <NavLink className="forgot mb-4" to="/" alt="">
+                                Forget your password?
+                                        </NavLink>
 
-                        <div className="mt-5 form-group w-75">
-                            <Button
-                                className={`btn-block login ${
-                                    !this.state.errors.username &&
-                                        !this.state.errors.password &&
-                                        this.state.username &&
-                                        this.state.password
-                                        ? ""
-                                        : "disabled"
-                                    }`}
-                                variant="none"
-                                id="submit"
-                                value="Submit"
-                                type="submit"
-                            >
-                                LOG IN
-                            </Button>
-                        </div>
-                    </Form>
-                </Modal.Body>
-            </Modal>
+                            <div className="mt-5 form-group w-75">
+                                <Button
+                                    className={`btn-block login ${
+                                        !this.state.errors.username &&
+                                            !this.state.errors.password &&
+                                            this.state.username &&
+                                            this.state.password
+                                            ? ""
+                                            : "disabled"
+                                        }`}
+                                    variant="none"
+                                    id="submit"
+                                    value="Submit"
+                                    type="submit"
+                                >
+                                    LOG IN
+                                            </Button>
+                            </div>
+                        </Form>
+
+                        {/* )}
+                        </LoginContext.Consumer> */}
+
+
+                    </Modal.Body>
+                </Modal>
+
+
+
+            </React.Fragment>
+
         );
     }
 }

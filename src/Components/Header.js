@@ -33,7 +33,7 @@ export default class Header extends Component {
     this.setState({ show: status })
   }
   render() {
-    console.log(this.props.history)
+    // console.log(this.props.history)
     return (
 
       <React.Fragment>

@@ -24,7 +24,7 @@ import { TelegramContext } from './Contexts';
 import { SignupContext } from './Contexts'
 
 //import route
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class UserHeaderRight extends Component {
     state = {
@@ -48,6 +48,7 @@ class UserHeaderRight extends Component {
     static contextType = SignupContext;
 
     render() {
+        console.log(this.props)
         return (
             <Navbar className="user-header-right">
                 <div className="hamburger-menu px-0" data-target="#collapse-navbar">
@@ -61,10 +62,6 @@ class UserHeaderRight extends Component {
                 </div>
 
                 <div className="navbar-right" collapseonselect="true">
-                    {/* {
-                        this.props.show
-                            ? (
-                                <> */}
                     < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
                         <p className="text-muted">
                             {/* {this.props.history.location.state.username} */}
@@ -109,12 +106,7 @@ class UserHeaderRight extends Component {
                     >
                         <Wallet />
                     </modalContext.Provider>
-                    {/* </>
-                            ) :
-                            ( */}
                     <Navbar.Collapse className="collapse-user row part-1 d-none" id="collapse-navbar" />
-                    {/* ) */}
-                    {/* } */}
                 </div>
             </Navbar>
         );
