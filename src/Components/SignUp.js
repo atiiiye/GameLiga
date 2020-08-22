@@ -30,6 +30,8 @@ import { login } from '../utils';
 
 //import contexts
 import { SignupContext } from './Contexts'
+import { usernameContext } from './Contexts'
+
 
 
 
@@ -67,6 +69,9 @@ class SignUp extends Component {
       captchaInput: "",
     },
   };
+
+  static contextType = usernameContext;
+
 
   handleChange = (event) => {
     event.preventDefault();
@@ -226,17 +231,25 @@ class SignUp extends Component {
     try {
       await signup(this.state);
 
-      // <usernameContext.Provider value={{ username: this.state.username }}>
-      //   <UserHeader show={this.displayHandler.bind(this)} />
-      // { window.location = "/account" }
-      // </usernameContext.Provider >
+      <usernameContext.Provider value={{ username: this.state.username }}>
+        {/* {this.props.history.push({
+          pathname: "/account",
+          // state: { username: this.state.username },
+        })} */}
+
+        {window.location = "/account"}
+
+        <UserHeaderRight />
+
+      </usernameContext.Provider >
       // {
+
       login();
 
-      this.props.history.push({
-        pathname: "/account",
-        state: { username: this.state.username },
-      });
+      // this.props.history.push({
+      //   pathname: "/account",
+      //   state: { username: this.state.username },
+      // });
 
       // }
     } catch (err) {
@@ -315,7 +328,6 @@ class SignUp extends Component {
   };
 
 
-  static contextType = SignupContext;
 
   render() {
     const { errors } = this.state;
@@ -378,7 +390,7 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
-                    type="password"
+                    type="text"
                     id="randomPassword"
                     className="form-control-plaintext"
                     placeholder="Password"
@@ -437,7 +449,7 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
-                    type="password"
+                    type="text"
                     className="form-control-plaintext"
                     placeholder="confirm password"
                     name="confirmPassword"

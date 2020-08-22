@@ -1,0 +1,95 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-fluid.Console {
+  background-image: url("./../images/background-console.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
+  width: 100%;
+}
+
+div.container-fluid.Console div.card#content {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #ff9300;
+  border-top: 2px solid #ff9300;
+  border-bottom: 0;
+  border-right: 0;
+  border-radius: 0;
+  position: relative;
+  left: 0;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+div.container-fluid.Console div.card#content div.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+div.container-fluid.Console div.card#content div.main-section i.image-icon.fas.fa-user-circle {
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 1rem;
+}
+
+div.container-fluid.Console div.card#content div.main-section p.username {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+div.container-fluid.Console div.card#content div.main-section span.status-activation {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.inputs {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group div.validation-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group div.validation-box input {
+  border: 1px solid #ff9300;
+  border-radius: 9px;
+  background-color: #000;
+  color: #959aa2;
+  padding-left: .5rem;
+  width: 100%;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group div.validation-box input:focus {
+  box-shadow: 0 0 0 0.1rem rgba(255, 147, 0, 0.25);
+}
+/*# sourceMappingURL=console.css.map */

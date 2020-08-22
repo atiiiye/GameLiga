@@ -21,7 +21,7 @@ import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 //import contexts
 import { modalContext } from './Contexts';
 import { TelegramContext } from './Contexts';
-import { SignupContext } from './Contexts'
+import { usernameContext } from './Contexts'
 
 //import route
 import { NavLink } from "react-router-dom";
@@ -45,10 +45,10 @@ class UserHeaderRight extends Component {
         this.setState({ show: status })
     }
 
-    static contextType = SignupContext;
+    static contextType = usernameContext;
 
     render() {
-        console.log(this.props)
+        console.log(this.context.username)
         return (
             <Navbar className="user-header-right">
                 <div className="hamburger-menu px-0" data-target="#collapse-navbar">

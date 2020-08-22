@@ -16,6 +16,7 @@ import FinalResult from "./Components/FinalResult";
 import Games from "./Components/Games";
 import Tourny from "./Components/Tourny";
 import Liga from "./Components/Liga";
+import Console from "./Components/Console";
 import LeaderBoards from "./Components/LeaderBoards";
 import PrivateRoute from './Components/PrivateRoute ';
 import PublicRoute from './Components/PublicRoute';
@@ -37,7 +38,7 @@ class App extends Component {
 
           <PublicRoute exact restricted={false} path="/" component={Slider} />
 
-          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
+          <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
 
           <PrivateRoute exact path="/account" component={UserAccount} />
 
@@ -48,6 +49,9 @@ class App extends Component {
           <PrivateRoute exact path="/tourny" component={Tourny} />
 
           <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
+
+          <PrivateRoute exact path="/console" component={Console} />
+
 
           <PrivateRoute exact path="/liga" component={Liga} />
 

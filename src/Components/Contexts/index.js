@@ -18,6 +18,10 @@ export const LoginContext = React.createContext({
     username: [],
 })
 
+export const usernameContext = React.createContext({
+    username: [],
+})
+
 
 export const AuthContext = React.createContext({
     username: [],

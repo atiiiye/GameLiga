@@ -116,18 +116,18 @@ class Login extends Component {
             // })
 
 
-            // window.location = "/account"
 
-            this.props.history.push({
-                pathname: "/account",
-                state: { username: this.state.username },
-            });
-
-
-            // this.props.history.history.history.push({
+            // this.props.history.push({
             //     pathname: "/account",
             //     state: { username: this.state.username },
             // });
+
+
+            this.props.history.history.history.push({
+                // pathname: "/account",
+                state: { username: this.state.username },
+            });
+            { window.location = "/account" }
 
         } catch (err) {
             if (err.response && err.response.status === 400) {

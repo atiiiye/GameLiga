@@ -9,13 +9,7 @@ import UserHeader from "./UserHeader";
 import { Card, Form, FormControl } from "react-bootstrap";
 
 class Liga extends Component {
-    state = {
-        stateDisplay: true,
-
-    }
-    displayHandler = () => {
-        this.setState({ stateDisplay: true });
-    };
+    state = {}
 
     render() {
         return (
