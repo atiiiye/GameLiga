@@ -231,20 +231,26 @@ class SignUp extends Component {
     try {
       await signup(this.state);
 
-      <usernameContext.Provider value={{ username: this.state.username }}>
-        {/* {this.props.history.push({
+      // <usernameContext.Provider value={{ username: this.state.username }}>
+      {/* {this.props.history.push({
           pathname: "/account",
           // state: { username: this.state.username },
         })} */}
 
-        {window.location = "/account"}
 
-        <UserHeaderRight />
+      // <UserHeaderRight />
 
-      </usernameContext.Provider >
+      // </usernameContext.Provider >
       // {
 
-      login();
+      { login(); }
+
+
+      <usernameContext.Provider value={{ username: this.state.username }}>
+        <UserHeaderRight />
+        {window.location = "/account"}
+      </usernameContext.Provider >
+
 
       // this.props.history.push({
       //   pathname: "/account",
@@ -263,7 +269,7 @@ class SignUp extends Component {
   };
 
   notifySuccess = () => {
-    toast.success("Now you have an account", {
+    toast.success("Success create account , Please wait", {
       className: "toast-container-success",
       transition: Slide,
       autoClose: 3500,
@@ -336,10 +342,7 @@ class SignUp extends Component {
     return (
       <React.Fragment>
         <UserHeaderLeft />
-        {/* <SignupContext.Provider value={{
-          username: this.state.username
-        }}
-        > */}
+
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
@@ -352,8 +355,11 @@ class SignUp extends Component {
               </NavLink>
             </div>
 
-            <Form
+            {/* <SignupContext.Consumer>
+              {
+                context => ( */}
 
+            <Form
               action="#"
               id="signupForm"
               className="form-signup"
@@ -367,7 +373,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 username">
                   User name :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     autoFocus
@@ -387,7 +393,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 password">
                   Password :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -427,26 +433,26 @@ class SignUp extends Component {
                     onClick={this.randomPassword.bind(this, 11)}
                   >
                     Generate Password
-                  </Button>
+                      </Button>
 
                   {errors.generate.length > 0 && (
                     <span className="error">{errors.generate}</span>
                   )}
 
                   {/* <RangeSlider 
-                 value={this.state.generate}
-                 onChange={this.handleChange}
-                 min={0}
-                 max={100}
-                //  variant= "warning"
-                 /> */}
+                     value={this.state.generate}
+                     onChange={this.handleChange}
+                     min={0}
+                     max={100}
+                    //  variant= "warning"
+                     /> */}
                 </div>
               </Form.Group>
 
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 confirmPassword">
                   confirm password :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -465,7 +471,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 email">
                   E-mail address :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="email"
@@ -487,7 +493,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 nickName">
                   Nick name :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -507,7 +513,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 fistName">
                   First name :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -526,7 +532,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 lastName">
                   Last name :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -545,7 +551,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 phone">
                   Phone number :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -564,7 +570,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 promotional">
                   Promotional Code :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -583,7 +589,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 referred">
                   Referred by :
-                </Form.Label>
+                    </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -602,7 +608,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0">
                   Captcha :
-                </Form.Label>
+                    </Form.Label>
                 <div className="captcha-block col-sm-7">
                   <div className="captcha-generate">
                     <div className="captcha">{this.state.captcha}</div>
@@ -641,19 +647,19 @@ class SignUp extends Component {
                 />
 
                 {/* <span className="mycheckbox">
-                      <svg className="check-mark">
-                          <use xlinkHref="#check"></use>
-                      </svg>
-                      <svg className="inline-svg">
-                          <symbol id="check" viewBox="0 0 12 10">
-                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                          </symbol>
-                      </svg>
-                  </span> */}
+                          <svg className="check-mark">
+                              <use xlinkHref="#check"></use>
+                          </svg>
+                          <svg className="inline-svg">
+                              <symbol id="check" viewBox="0 0 12 10">
+                                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                              </symbol>
+                          </svg>
+                      </span> */}
 
                 <Form.Label className="label-check-box  col-form-label px-0">
                   I confirm that I have read and accepted all the
-                  <NavLink to="/rules">rules and condition</NavLink>
+                      <NavLink to="/rules">rules and condition</NavLink>
                 </Form.Label>
               </Form.Group>
 
@@ -669,16 +675,22 @@ class SignUp extends Component {
                   onClick={this.state.handleChange}
                 >
                   Register
-                </Button>
+                    </Button>
                 {/* </NavLink> */}
               </Form.Group>
             </Form>
+
+            {/* )
+              }
+
+            </SignupContext.Consumer> */}
+
           </div>
         </div>
 
 
 
-        {/* </SignupContext.Provider> */}
+
       </React.Fragment>
     );
   }

@@ -10,6 +10,9 @@ import "./../css/toastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form, Modal } from "react-bootstrap";
 
+//import components 
+import UserHeaderRight from "./UserHeaderRight";
+
 //import routes
 import { NavLink, Redirect } from "react-router-dom";
 
@@ -21,7 +24,8 @@ import { createBrowserHistory } from 'history';
 
 //import contexts
 import { modalContext } from "./Contexts";
-import { LoginContext } from './Contexts'
+import { LoginContext } from './Contexts';
+import { usernameContext } from './Contexts';
 
 
 import { logout, isLogin } from '../utils';
@@ -103,10 +107,9 @@ class Login extends Component {
 
     // history = createBrowserHistory()
 
-    goAccount = async () => {
+    goAccount = async (context) => {
         try {
             await login(this.state);
-
 
             // pathname: "/account",
             // state: { username: this.state.username }
@@ -116,18 +119,23 @@ class Login extends Component {
             // })
 
 
-
             // this.props.history.push({
             //     pathname: "/account",
             //     state: { username: this.state.username },
             // });
 
 
-            this.props.history.history.history.push({
-                // pathname: "/account",
-                state: { username: this.state.username },
-            });
-            { window.location = "/account" }
+            // this.props.history.history.history.push({
+            //     // pathname: "/account",
+            //     state: { username: this.state.username },
+            // });
+
+            <usernameContext.Provider value={{ username: this.state.username }}>
+                <UserHeaderRight />
+                {window.location = "/account"}
+            </usernameContext.Provider >
+
+            console.log('aaaaa')
 
         } catch (err) {
             if (err.response && err.response.status === 400) {
@@ -176,9 +184,12 @@ class Login extends Component {
                             </p>
                         </Modal.Title>
 
-                        {/* <LoginContext.Consumer>
-                            {
+                        {/* <usernameContext.Consumer> */}
+                        {/* {console.log(context)} */}
+                        {/* {
                                 context => ( */}
+                        {/* <usernameContext.Provider value={{ username: this.state.username }}> */}
+
                         <Form
                             action="#"
                             className="form-login py-4"
@@ -238,13 +249,18 @@ class Login extends Component {
                                             </Button>
                             </div>
                         </Form>
+                        {/* </usernameContext.Provider > */}
 
-                        {/* )}
-                        </LoginContext.Consumer> */}
+
+                        {/* )} */}
+
+                        {/* </usernameContext.Consumer> */}
 
 
                     </Modal.Body>
                 </Modal>
+
+
 
 
 

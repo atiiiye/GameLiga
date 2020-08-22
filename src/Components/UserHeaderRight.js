@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 //import css
 import './../css/reset.css';
 import './../css/UserHeaderRight.css'
+import './../css/mediaUserHeaderRight.css'
 
 
 //import boostrap
@@ -45,10 +46,10 @@ class UserHeaderRight extends Component {
         this.setState({ show: status })
     }
 
-    static contextType = usernameContext;
+    // static contextType = usernameContext;
 
     render() {
-        console.log(this.context.username)
+        // console.log(this.context)
         return (
             <Navbar className="user-header-right">
                 <div className="hamburger-menu px-0" data-target="#collapse-navbar">
@@ -63,10 +64,20 @@ class UserHeaderRight extends Component {
 
                 <div className="navbar-right" collapseonselect="true">
                     < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
-                        <p className="text-muted">
-                            {/* {this.props.history.location.state.username} */}
-                            {this.context.username}
-                        </p>
+                        <usernameContext.Consumer>
+                            {
+                                context => (
+                                    <p className="text-muted">
+                                        {/* {this.props.history.location.state.username} */}
+                                        {console.log(context)}
+                                        {context.username}
+
+                                        {console.log('bbbbb')}
+                                    </p>
+                                )
+                            }
+
+                        </usernameContext.Consumer>
                         <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
                         <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
                         {/* <div className="row part-2"> */}
