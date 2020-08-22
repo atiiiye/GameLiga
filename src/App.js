@@ -18,10 +18,10 @@ import Tourny from "./Components/Tourny";
 import Liga from "./Components/Liga";
 import Console from "./Components/Console";
 import LeaderBoards from "./Components/LeaderBoards";
-import PrivateRoute from './Components/PrivateRoute ';
-import PublicRoute from './Components/PublicRoute';
 
-//import routes
+//import Routes
+import PrivateRoute from './Components/Routes/PrivateRoute ';
+import PublicRoute from './Components/Routes/PublicRoute';
 import { Route, Switch, Redirect } from "react-router-dom";
 
 //import packages
@@ -51,7 +51,6 @@ class App extends Component {
           <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
 
           <PrivateRoute exact path="/console" component={Console} />
-
 
           <PrivateRoute exact path="/liga" component={Liga} />
 

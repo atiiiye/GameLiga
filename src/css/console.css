@@ -87,10 +87,17 @@ div.container-fluid.Console div.card#content div.main-section div.inputs div.val
 
 div.container-fluid.Console div.card#content div.main-section div.nav-tabs {
   margin-top: 2rem;
-  width: 55%;
+  width: 50%;
   display: flex;
   justify-content: center;
   border-bottom: 2px solid #36363b;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
@@ -99,9 +106,8 @@ div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.n
   background-color: transparent;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link:focus {
+div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link:focus, div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link:active {
   outline: none;
   border-bottom: 2px solid #ff9300;
-  background-color: transparent;
 }
 /*# sourceMappingURL=console.css.map */

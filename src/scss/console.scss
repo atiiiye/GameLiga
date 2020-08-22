@@ -105,24 +105,28 @@ div.container-fluid.Console {
 
             div.nav-tabs {
                 margin-top: 2rem;
-                width: 55%;
+                width: 50%;
                 display: flex;
                 justify-content: center;
                 border-bottom: 2px solid $color-gray-1;
 
                 div.nav-list.nav.card-header-undefined {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
                     div.nav-item {
                         a.nav-item.nav-link {
                             border: none;
                             color: rgba($color: #ffffff, $alpha: 1.0);
                             background-color: transparent;
 
-
-
-                            &:focus {
+                            &:focus,
+                            &:active {
                                 outline: none;
                                 border-bottom: 2px solid $color-orange-1;
-                                background-color: transparent;
+                                // background-color: transparent;
 
                             }
 
