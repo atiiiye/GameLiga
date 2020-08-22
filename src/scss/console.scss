@@ -33,7 +33,7 @@ div.container-fluid.Console {
             justify-content: center;
             flex-direction: column;
             width: 100%;
-            height: 100%;
+            height: 70%;
 
             i.image-icon.fas.fa-user-circle {
                 font-size: 70px;
@@ -101,6 +101,34 @@ div.container-fluid.Console {
 
                 // }
 
+            }
+
+            div.nav-tabs {
+                margin-top: 2rem;
+                width: 55%;
+                display: flex;
+                justify-content: center;
+                border-bottom: 2px solid $color-gray-1;
+
+                div.nav-list.nav.card-header-undefined {
+                    div.nav-item {
+                        a.nav-item.nav-link {
+                            border: none;
+                            color: rgba($color: #ffffff, $alpha: 1.0);
+                            background-color: transparent;
+
+
+
+                            &:focus {
+                                outline: none;
+                                border-bottom: 2px solid $color-orange-1;
+                                background-color: transparent;
+
+                            }
+
+                        }
+                    }
+                }
             }
         }
     }

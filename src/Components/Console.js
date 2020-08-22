@@ -10,7 +10,7 @@ import UserHeader from "./UserHeader";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 //import bootstrap
-import { Card, Form, FormControl } from "react-bootstrap";
+import { Card, Form, FormControl, Nav } from "react-bootstrap";
 
 class Console extends Component {
     state = {}
@@ -75,6 +75,35 @@ class Console extends Component {
                                         />
                                     </div>
                                     {/* </Form.Group> */}
+                                </div>
+
+                                <div className="nav-tabs">
+                                    <Nav className="nav-list">
+                                        <Nav.Item className="">
+                                            <Nav.Link href="#" className="nav-item">Friends</Nav.Link>
+                                        </Nav.Item>
+
+                                        <Nav.Item className="">
+                                            <Nav.Link href="#" className="nav-item">Tournaments</Nav.Link>
+                                        </Nav.Item>
+
+                                        <Nav.Item className="">
+                                            <Nav.Link href="#" className="nav-item">Transfer</Nav.Link>
+                                        </Nav.Item>
+
+                                        <Nav.Item className="">
+                                            <Nav.Link href="#" className="nav-item">Balance</Nav.Link>
+                                        </Nav.Item>
+
+                                        <Nav.Item className="">
+                                            <Nav.Link href="#" className="nav-item">Deposit</Nav.Link>
+                                        </Nav.Item>
+
+                                        <Nav.Item className="">
+                                            <Nav.Link href="#" className="nav-item">Referrals</Nav.Link>
+                                        </Nav.Item>
+
+                                    </Nav>
                                 </div>
 
                             </div>
