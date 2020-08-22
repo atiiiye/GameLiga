@@ -61,47 +61,45 @@ div.container-fluid.Console {
 
             div.inputs {
                 display: flex;
-                width: 100%;
+                width: max-content;
                 // height: 10%;
                 margin-top: 2rem;
                 align-items: center;
                 justify-content: center;
 
-                div.form-group {
+                // div.form-group {
+                //     display: flex;
+                //     justify-content: center;
+                //     align-items: center;
+                //     width: max-content;
+                //     // margin-top: 1rem;
+                //     margin-left: 0;
+                //     margin-right: 0;
+
+                div.validation-box {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: max-content;
-                    // margin-top: 1rem;
-                    margin-left: 0;
-                    margin-right: 0;
+                    flex-direction: column;
+                    padding: 0;
+                    width: 100%;
+                    // align-items: flex-end;
 
-                    div.validation-box {
-                        display: flex;
-                        flex-direction: column;
-                        padding: 0;
-                        // align-items: flex-end;
+                    input {
+                        border: 1px solid $color-orange-1;
+                        border-radius: 9px;
+                        background-color: #000;
+                        color: $color-gray-2;
+                        // font-size: 80%;
+                        padding-left: .5rem;
+                        width: 90%;
 
-                        input {
-                            border: 1px solid $color-orange-1;
-                            border-radius: 9px;
-                            background-color: #000;
-                            color: $color-gray-2;
-                            // font-size: 80%;
-                            padding-left: .5rem;
-                            width: 100%;
-
-                            &:focus {
-                                box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
-                            }
-
+                        &:focus {
+                            box-shadow: 0 0 0 0.1rem rgba($color: $color-orange-1, $alpha: .25);
                         }
-
-
                     }
-
-
                 }
+
+
+                // }
 
             }
         }

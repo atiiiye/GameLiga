@@ -59,37 +59,29 @@ div.container-fluid.Console div.card#content div.main-section span.status-activa
 
 div.container-fluid.Console div.card#content div.main-section div.inputs {
   display: flex;
-  width: 100%;
+  width: max-content;
   margin-top: 2rem;
   align-items: center;
   justify-content: center;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: max-content;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group div.validation-box {
+div.container-fluid.Console div.card#content div.main-section div.inputs div.validation-box {
   display: flex;
   flex-direction: column;
   padding: 0;
+  width: 100%;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group div.validation-box input {
+div.container-fluid.Console div.card#content div.main-section div.inputs div.validation-box input {
   border: 1px solid #ff9300;
   border-radius: 9px;
   background-color: #000;
   color: #959aa2;
   padding-left: .5rem;
-  width: 100%;
+  width: 90%;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.inputs div.form-group div.validation-box input:focus {
+div.container-fluid.Console div.card#content div.main-section div.inputs div.validation-box input:focus {
   box-shadow: 0 0 0 0.1rem rgba(255, 147, 0, 0.25);
 }
 /*# sourceMappingURL=console.css.map */

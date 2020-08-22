@@ -27,54 +27,54 @@ class Console extends Component {
                                 <p className="username">User name</p>
                                 <span className="status-activation">Active now .Sined uo 2 months age</span>
                                 <div className="inputs">
-                                    <Form.Group className="">
-                                        <div className="validation-box col-sm-7">
-                                            <Form.Control
-                                                type="text"
-                                                className="form-control-plaintext"
-                                                placeholder=""
-                                                name=""
-                                            // onChange={this.handleChange}
-                                            // value={this.state.promotional}
-                                            />
-                                        </div>
-                                    </Form.Group>
-                                    <Form.Group className="">
-                                        <div className="validation-box col-sm-7">
-                                            <Form.Control
-                                                type="text"
-                                                className="form-control-plaintext"
-                                                placeholder=""
-                                                name=""
-                                            // onChange={this.handleChange}
-                                            // value={this.state.promotional}
-                                            />
-                                        </div>
-                                    </Form.Group>
-                                    <Form.Group className="">
-                                        <div className="validation-box col-sm-7">
-                                            <Form.Control
-                                                type="text"
-                                                className="form-control-plaintext"
-                                                placeholder=""
-                                                name=""
-                                            // onChange={this.handleChange}
-                                            // value={this.state.promotional}
-                                            />
-                                        </div>
-                                    </Form.Group>
-                                    <Form.Group className="">
-                                        <div className="validation-box col-sm-7">
-                                            <Form.Control
-                                                type="text"
-                                                className="form-control-plaintext"
-                                                placeholder=""
-                                                name=""
-                                            // onChange={this.handleChange}
-                                            // value={this.state.promotional}
-                                            />
-                                        </div>
-                                    </Form.Group>
+                                    {/* <Form.Group className=""> */}
+                                    <div className="validation-box">
+                                        <Form.Control
+                                            type="text"
+                                            className="form-control-plaintext"
+                                            placeholder=""
+                                            name=""
+                                        // onChange={this.handleChange}
+                                        // value={this.state.promotional}
+                                        />
+                                    </div>
+                                    {/* </Form.Group> */}
+                                    {/* <Form.Group className=""> */}
+                                    <div className="validation-box">
+                                        <Form.Control
+                                            type="text"
+                                            className="form-control-plaintext"
+                                            placeholder=""
+                                            name=""
+                                        // onChange={this.handleChange}
+                                        // value={this.state.promotional}
+                                        />
+                                    </div>
+                                    {/* </Form.Group> */}
+                                    {/* <Form.Group className=""> */}
+                                    <div className="validation-box">
+                                        <Form.Control
+                                            type="text"
+                                            className="form-control-plaintext"
+                                            placeholder=""
+                                            name=""
+                                        // onChange={this.handleChange}
+                                        // value={this.state.promotional}
+                                        />
+                                    </div>
+                                    {/* </Form.Group> */}
+                                    {/* <Form.Group className=""> */}
+                                    <div className="validation-box">
+                                        <Form.Control
+                                            type="text"
+                                            className="form-control-plaintext"
+                                            placeholder=""
+                                            name=""
+                                        // onChange={this.handleChange}
+                                        // value={this.state.promotional}
+                                        />
+                                    </div>
+                                    {/* </Form.Group> */}
                                 </div>
 
                             </div>
