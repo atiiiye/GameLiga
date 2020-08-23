@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducer from './Components/Reducers';
+// import { Provider } from 'react-redux';
+// import { createStore, applyMiddleware } from 'redux';
+// import reducer from './Components/Reducers';
 
 
-const store = createStore(reducer)
-const createStoreWithMiddleware = applyMiddleware()(store);
+// const store = createStore(reducer)
+// const createStoreWithMiddleware = applyMiddleware()(store);
 
 ReactDOM.render(
   // <React.StrictMode>

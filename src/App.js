@@ -24,7 +24,8 @@ import PrivateRoute from './Components/Routes/PrivateRoute ';
 import PublicRoute from './Components/Routes/PublicRoute';
 import { Route, Switch, Redirect } from "react-router-dom";
 
-//import packages
+//import contexts
+import { usernameContext } from './Components/Contexts';
 
 class App extends Component {
 
@@ -35,6 +36,8 @@ class App extends Component {
       <div>
 
         <Switch>
+
+          {/* <usernameContext.Provider value={this.state.username}> */}
 
           <PublicRoute exact restricted={false} path="/" component={Slider} />
 
@@ -54,9 +57,12 @@ class App extends Component {
 
           <PrivateRoute exact path="/liga" component={Liga} />
 
+          {/* </usernameContext.Provider> */}
+
           <Route path="/404" component={NotFound} />
 
-          <Route component={NotFound} />
+          <Route path="" component={NotFound} />
+
 
         </Switch>
 

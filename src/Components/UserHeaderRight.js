@@ -47,9 +47,10 @@ class UserHeaderRight extends Component {
     }
 
     // static contextType = usernameContext;
+    /* {this.props.history.location.state.username} */
 
     render() {
-        // console.log(this.context)
+        // console.log(this)
         return (
             <Navbar className="user-header-right">
                 <div className="hamburger-menu px-0" data-target="#collapse-navbar">
@@ -68,11 +69,8 @@ class UserHeaderRight extends Component {
                             {
                                 context => (
                                     <p className="text-muted">
-                                        {/* {this.props.history.location.state.username} */}
-                                        {console.log(context)}
+                                        {console.log(context.username)}
                                         {context.username}
-
-                                        {console.log('bbbbb')}
                                     </p>
                                 )
                             }
@@ -89,7 +87,6 @@ class UserHeaderRight extends Component {
                             id="telegram"
                         >
                             <TelegramIcon className="image-icon " id="telegram"></TelegramIcon>
-
                         </NavLink>
 
                         <NavLink to="/wallet"

@@ -25,7 +25,7 @@ import { createBrowserHistory } from 'history';
 //import contexts
 import { modalContext } from "./Contexts";
 import { LoginContext } from './Contexts';
-import { usernameContext } from './Contexts';
+// import { usernameContext } from './Contexts';
 
 
 import { logout, isLogin } from '../utils';
@@ -42,6 +42,7 @@ class Login extends Component {
             username: "",
             password: "",
         },
+        redirect: false,
     };
 
     static contextType = modalContext;
@@ -105,14 +106,11 @@ class Login extends Component {
         }
     };
 
-    // history = createBrowserHistory()
+    history = createBrowserHistory()
 
-    goAccount = async (context) => {
+    goAccount = async () => {
         try {
             await login(this.state);
-
-            // pathname: "/account",
-            // state: { username: this.state.username }
 
             // this.props.dispatch({
             //     type: 'HistorySlider'
@@ -130,10 +128,13 @@ class Login extends Component {
             //     state: { username: this.state.username },
             // });
 
-            <usernameContext.Provider value={{ username: this.state.username }}>
-                <UserHeaderRight />
-                {window.location = "/account"}
-            </usernameContext.Provider >
+            // <usernameContext.Provider value={{ username: this.state.username }}>
+
+            // <UserHeaderRight />
+
+            this.setState({ redirect: true })
+
+            {/* </usernameContext.Provider > */ }
 
             console.log('aaaaa')
 
@@ -157,9 +158,16 @@ class Login extends Component {
 
 
     render() {
-        const { errors } = this.state;
+        const { errors, redirect } = this.state;
         // console.log(this.props)
 
+        if (redirect) {
+            return
+            <Redirect to={{
+                pathname: '/account',
+                // state: { username: this.state.username }
+            }} />
+        }
         return (
             <React.Fragment>
                 <Modal
@@ -188,69 +196,68 @@ class Login extends Component {
                         {/* {console.log(context)} */}
                         {/* {
                                 context => ( */}
-                        {/* <usernameContext.Provider value={{ username: this.state.username }}> */}
+                        <usernameContext.Provider value={{ username: this.state.username }}>
 
-                        <Form
-                            action="#"
-                            className="form-login py-4"
-                            onSubmit={this.handleSubmit.bind(this)}
-                        >
-                            <div className="form-fields mb-4">
-                                <Form.Label>Username :</Form.Label>
-                                <Form.Control
-                                    autoFocus
-                                    type="text"
-                                    className="mb-1 mt-1"
-                                    id="username"
-                                    name="username"
-                                    placeholder="User"
-                                    value={this.state.username}
-                                    onChange={this.handleChange.bind(this)}
-                                ></Form.Control>
-                                {errors.username.length > 0 && (
-                                    <span className="form-validate">{errors.username}</span>
-                                )}
-                            </div>
-                            <div className="form-fields">
-                                <Form.Label>Password :</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    className="mb-1 mt-1"
-                                    id="password"
-                                    name="password"
-                                    placeholder="Password"
-                                    value={this.state.password}
-                                    onChange={this.handleChange.bind(this)}
-                                ></Form.Control>
-                                {errors.password.length > 0 && (
-                                    <span className="form-validate">{errors.password}</span>
-                                )}
-                            </div>
-                            <NavLink className="forgot mb-4" to="/" alt="">
-                                Forget your password?
+                            <Form
+                                action="#"
+                                className="form-login py-4"
+                                onSubmit={this.handleSubmit.bind(this)}
+                            >
+                                <div className="form-fields mb-4">
+                                    <Form.Label>Username :</Form.Label>
+                                    <Form.Control
+                                        autoFocus
+                                        type="text"
+                                        className="mb-1 mt-1"
+                                        id="username"
+                                        name="username"
+                                        placeholder="User"
+                                        value={this.state.username}
+                                        onChange={this.handleChange.bind(this)}
+                                    ></Form.Control>
+                                    {errors.username.length > 0 && (
+                                        <span className="form-validate">{errors.username}</span>
+                                    )}
+                                </div>
+                                <div className="form-fields">
+                                    <Form.Label>Password :</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        className="mb-1 mt-1"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        value={this.state.password}
+                                        onChange={this.handleChange.bind(this)}
+                                    ></Form.Control>
+                                    {errors.password.length > 0 && (
+                                        <span className="form-validate">{errors.password}</span>
+                                    )}
+                                </div>
+                                <NavLink className="forgot mb-4" to="/" alt="">
+                                    Forget your password?
                                         </NavLink>
 
-                            <div className="mt-5 form-group w-75">
-                                <Button
-                                    className={`btn-block login ${
-                                        !this.state.errors.username &&
-                                            !this.state.errors.password &&
-                                            this.state.username &&
-                                            this.state.password
-                                            ? ""
-                                            : "disabled"
-                                        }`}
-                                    variant="none"
-                                    id="submit"
-                                    value="Submit"
-                                    type="submit"
-                                >
-                                    LOG IN
+                                <div className="mt-5 form-group w-75">
+                                    <Button
+                                        className={`btn-block login ${
+                                            !this.state.errors.username &&
+                                                !this.state.errors.password &&
+                                                this.state.username &&
+                                                this.state.password
+                                                ? ""
+                                                : "disabled"
+                                            }`}
+                                        variant="none"
+                                        id="submit"
+                                        value="Submit"
+                                        type="submit"
+                                    >
+                                        LOG IN
                                             </Button>
-                            </div>
-                        </Form>
-                        {/* </usernameContext.Provider > */}
-
+                                </div>
+                            </Form>
+                        </usernameContext.Provider >
 
                         {/* )} */}
 
@@ -266,7 +273,10 @@ class Login extends Component {
 
             </React.Fragment>
 
+
+
         );
+
     }
 }
 
