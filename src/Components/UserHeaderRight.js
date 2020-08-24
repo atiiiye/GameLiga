@@ -22,7 +22,9 @@ import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 //import contexts
 import { modalContext } from './Contexts';
 import { TelegramContext } from './Contexts';
-import { usernameContext } from './Contexts'
+import { usernameContext } from './Contexts';
+import { LoginContext } from './Contexts';
+
 
 //import route
 import { NavLink } from "react-router-dom";
@@ -39,7 +41,7 @@ class UserHeaderRight extends Component {
 
     handleRoutingWallet = (e) => {
         e.preventDefault()
-        this.setShow({ show: true })
+        this.setState({ show: true })
     }
 
     setShow = (status) => {
@@ -50,8 +52,10 @@ class UserHeaderRight extends Component {
     /* {this.props.history.location.state.username} */
 
     render() {
-        // console.log(this)
+        // console.log(this.context)
         return (
+
+
             <Navbar className="user-header-right">
                 <div className="hamburger-menu px-0" data-target="#collapse-navbar">
                     <Navbar.Toggle aria-controls="collapse" className="px-0">
@@ -69,27 +73,28 @@ class UserHeaderRight extends Component {
                             {
                                 context => (
                                     <p className="text-muted">
-                                        {console.log(context.username)}
-                                        {context.username}
+                                        {/* {() => { if (context.loginUsername == 'undefined') { context.loginUsername === 'true' } }} */}
+                                        {console.log(context.signinUsername, context.loginUsername)}
+
+                                        {context.loginUsername || context.signinUsername}
                                     </p>
                                 )
                             }
 
                         </usernameContext.Consumer>
+
                         <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
                         <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
                         {/* <div className="row part-2"> */}
                         <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
-
-                        <NavLink to="/telegram"
+                        <NavLink ref="Telegram" to="/telegram"
                             onClick={this.handlePrevntDefault.bind(this)}
                             className="nav-link-icon"
                             id="telegram"
                         >
                             <TelegramIcon className="image-icon " id="telegram"></TelegramIcon>
                         </NavLink>
-
-                        <NavLink to="/wallet"
+                        <NavLink ref="Wallet" to="/wallet"
                             onClick={this.handleRoutingWallet.bind(this)}
                             className="nav-link-icon"
                             id="wallet"
@@ -117,6 +122,7 @@ class UserHeaderRight extends Component {
                     <Navbar.Collapse className="collapse-user row part-1 d-none" id="collapse-navbar" />
                 </div>
             </Navbar>
+
         );
     }
 }

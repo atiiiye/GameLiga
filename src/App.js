@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "./Components/Slider";
 import UserHeader from "./Components/UserHeader";
 import SignUp from "./Components/SignUp";
-import Sidebar from "./Components/Sidebar";
 import NotFound from "./Components/NotFound";
 import Header from "./Components/Header.js";
 import UserAccount from "./Components/UserAccount";
@@ -18,6 +17,8 @@ import Tourny from "./Components/Tourny";
 import Liga from "./Components/Liga";
 import Console from "./Components/Console";
 import LeaderBoards from "./Components/LeaderBoards";
+import Chat from "./Components/Chat";
+
 
 //import Routes
 import PrivateRoute from './Components/Routes/PrivateRoute ';
@@ -56,6 +57,9 @@ class App extends Component {
           <PrivateRoute exact path="/console" component={Console} />
 
           <PrivateRoute exact path="/liga" component={Liga} />
+
+          <PrivateRoute exact path="/chat" component={Chat} />
+
 
           {/* </usernameContext.Provider> */}
 
