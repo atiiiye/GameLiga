@@ -160,15 +160,18 @@ class Login extends Component {
         if (redirect) {
             // { () => { if (context.username == 'undefined') { context.username === true } } }
             return (
-                <usernameContext.Provider value={{ loginUsername: this.state.username }}>
+                <React.Fragment>
 
+                    <usernameContext.Provider value={{ loginUsername: this.state.username }}>
+                        <UserHeaderRight />
+                        {this.props.children}
+                    </usernameContext.Provider >
                     <Redirect to={{
                         pathname: '/account',
                         // state: { username: this.state.username }
                     }} />
-                    <UserHeaderRight />
+                </React.Fragment>
 
-                </usernameContext.Provider >
             )
 
 

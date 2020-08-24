@@ -7,17 +7,17 @@ import './../css/mediaUserHeaderRight.css'
 
 
 //import boostrap
-import { Navbar } from 'react-bootstrap';
+import { Navbar, NavLink, NavItem } from 'react-bootstrap';
 
 //import components
 import Wallet from './Wallet';
 import Telegram from './Telegram';
 
 //import packages
+import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import BellIcon from '@material-ui/icons/Notifications';
 import TelegramIcon from '@material-ui/icons/Telegram';
-import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 
 //import contexts
 import { modalContext } from './Contexts';
@@ -27,26 +27,41 @@ import { LoginContext } from './Contexts';
 
 
 //import route
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 class UserHeaderRight extends Component {
     state = {
-        show: false,
+        // walletShow: false,
+        // telegramShow: false,
+        exampleModal: false
+
     }
 
     handlePrevntDefault = (e) => {
-        e.preventDefault()
-        this.setShow({ show: true })
+        // e.preventDefault()
+        // this.toggleModal()
+        // this.setShow({
+        //     telegramShow: true,
+        //     walletShow: true
+        // })
     }
 
-    handleRoutingWallet = (e) => {
-        e.preventDefault()
-        this.setState({ show: true })
-    }
+    // handleRoutingWallet = (e) => {
+    //     e.preventDefault()
+    //     // this.setState({ show: true })
+    // }
 
-    setShow = (status) => {
-        this.setState({ show: status })
-    }
+    toggleModal = (state) => {
+        // e.preventDefault()
+
+        this.setState({
+            [state]: !this.state[state]
+        });
+    };
+
+    // setShow = (status) => {
+    //     this.setState({ telegramShow: status })
+    // }
 
     // static contextType = usernameContext;
     /* {this.props.history.location.state.username} */
@@ -71,54 +86,75 @@ class UserHeaderRight extends Component {
                     < Navbar.Collapse className="collapse-user row part-1" id="collapse-navbar">
                         <usernameContext.Consumer>
                             {
-                                context => (
+                                value => (
                                     <p className="text-muted">
                                         {/* {() => { if (context.loginUsername == 'undefined') { context.loginUsername === 'true' } }} */}
-                                        {console.log(context.signinUsername, context.loginUsername)}
 
-                                        {context.loginUsername || context.signinUsername}
+                                        {console.log(value.loginUsername)}
+                                        {value.loginUsername || value.signinUsername}
                                     </p>
                                 )
                             }
-
                         </usernameContext.Consumer>
 
-                        <NavLink to="/account" className="nav-link-icon" id="user"><i className="image-icon fas fa-user-circle" id="user"></i></NavLink>
-                        <NavLink to="/ticket" className="nav-link-icon" id="ticket"><i className="image-icon fas fa-ticket-alt" id="ticket"></i></NavLink>
+                        <NavItem className="nav-item-icon" >
+                            <NavLink to="/account" onClick={this.handlePrevntDefault.bind(this)} id="user">
+                                <i className="image-icon fas fa-user-circle" id="user"></i>
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="nav-item-icon" >
+                            <NavLink to="/ticket" onClick={this.handlePrevntDefault.bind(this)} id="ticket">
+                                <i className="image-icon fas fa-ticket-alt" id="ticket"></i>
+                            </NavLink>
+                        </NavItem>
+
                         {/* <div className="row part-2"> */}
-                        <NavLink to="/bell" className="nav-link-icon" id="bell"><BellIcon className="image-icon" id="bell"></BellIcon></NavLink>
-                        <NavLink ref="Telegram" to="/telegram"
-                            onClick={this.handlePrevntDefault.bind(this)}
-                            className="nav-link-icon"
-                            id="telegram"
-                        >
-                            <TelegramIcon className="image-icon " id="telegram"></TelegramIcon>
-                        </NavLink>
-                        <NavLink ref="Wallet" to="/wallet"
-                            onClick={this.handleRoutingWallet.bind(this)}
-                            className="nav-link-icon"
-                            id="wallet"
-                        >
-                            <WalletIcon className="image-icon" id="wallet" />
-                        </NavLink>
+                        <NavItem className="nav-item-icon" >
+                            <NavLink to="/bell" onClick={this.handlePrevntDefault.bind(this)} id="bell">
+                                <BellIcon className="image-icon" id="bell" />
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="nav-link-icon" >
+                            <NavLink to="/telegram" onClick={this.handlePrevntDefault.bind(this)} id="telegram">
+                                <TelegramIcon className="image-icon " id="telegram" />
+                            </NavLink>
+                            <Telegram />
+                        </NavItem>
+
+                        <NavItem className="nav-item-icon" >
+                            <NavLink to="/wallet" onClick={this.handlePrevntDefault.bind(this)} id="wallet">
+                                <WalletIcon className="image-icon" id="wallet" />
+                                <Wallet />
+
+                            </NavLink>
+                        </NavItem>
+
                         {/* </div> */}
                     </Navbar.Collapse>
 
+                    {/* <modalContext.Provider value={{
+                        modalShow: this.state.exampleModal,
+                        // setModalShow: () => this.setShow(),
+                        toggleModal: () => this.toggleModal(this.state.exampleModal)
+                    }}
+                    >
+                    </modalContext.Provider> */}
+
+
+
+                    {/* 
                     <TelegramContext.Provider value={{
-                        dropDownShow: this.state.show,
+                        dropDownShow: this.state.telegramShow,
                         setDropDownShow: this.setShow.bind(this)
                     }}
                     >
                         <Telegram />
-                    </TelegramContext.Provider>
+                    </TelegramContext.Provider> */}
 
-                    <modalContext.Provider value={{
-                        modalShow: this.state.show,
-                        setModalShow: this.setShow.bind(this)
-                    }}
-                    >
-                        <Wallet />
-                    </modalContext.Provider>
+
+
                     <Navbar.Collapse className="collapse-user row part-1 d-none" id="collapse-navbar" />
                 </div>
             </Navbar>

@@ -4,29 +4,36 @@ body {
   background-color: #1c1c22;
 }
 
-div.modal.modal-wallet {
+a.nav-link-icon#wallet {
+  width: 25px;
+  height: 25px;
+}
+
+a.nav-link-icon#wallet svg.image-icon#wallet {
+  font-size: 1.35rem;
+}
+
+div.modal-dialog.modal-wallet {
   display: flex;
   justify-content: flex-start;
 }
 
-div.modal.modal-wallet div.modal-dialog {
-  width: 25%;
+div.modal-dialog.modal-wallet div.modal-content {
+  width: 70%;
   position: relative;
   top: 5rem;
   left: 35%;
+  border-radius: 30px;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body {
   background-color: black;
   border-color: #ff9300;
   border-radius: 28px;
-}
-
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body {
   padding: 0;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.modal-title {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.modal-header {
   background-color: #1c1c22;
   width: 100%;
   height: 40px;
@@ -36,26 +43,28 @@ div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.mod
   border-bottom-right-radius: 0;
   align-items: center;
   justify-content: flex-start;
+  padding: 0;
+  border-bottom: 0;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.modal-title h2 {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.modal-header h2 {
   margin-left: 1.2rem;
   color: #ffffff;
   font-size: 1.4rem;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.modal-title h2::first-letter {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.modal-header h2::first-letter {
   color: #ff9300;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.content-wallet {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.content-wallet {
   display: flex;
   width: 100%;
   background-color: transparent;
   height: 65px;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.content-wallet div.content-right {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-right {
   width: 50%;
   border: 1px solid #ff9300;
   border-left: 0;
@@ -64,13 +73,13 @@ div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.con
   align-items: center;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.content-wallet div.content-right span.content-right-span {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-right span.content-right-span {
   color: #959aa2;
   font-size: 95%;
   margin-left: 1rem;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.content-wallet div.content-left {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-left {
   width: 50%;
   border: 1px solid #ff9300;
   border-right: 0;
@@ -79,13 +88,13 @@ div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.con
   align-items: center;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.content-wallet div.content-left span.content-left-span {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.content-wallet div.content-left span.content-left-span {
   color: #959aa2;
   font-size: 95%;
   margin-left: 1rem;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wallet-buttons {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.wallet-buttons {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -94,7 +103,7 @@ div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wal
   height: 45px;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wallet-buttons button.deposit {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.deposit {
   background-color: #ff9300;
   border-color: #ff9300;
   border-radius: 28px;
@@ -104,11 +113,11 @@ div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wal
   width: 40%;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wallet-buttons button.deposit:focus {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.deposit:focus {
   box-shadow: 0 0 1px 0.1rem rgba(255, 147, 0, 0.3);
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wallet-buttons button.withDraw {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.withDraw {
   background-color: #1c1c22;
   border-color: #1c1c22;
   border-radius: 28px;
@@ -119,11 +128,11 @@ div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wal
   margin-top: 0 !important;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.wallet-buttons button.withDraw:focus {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.wallet-buttons button.withDraw:focus {
   box-shadow: 0 0 1px 0.1rem rgba(54, 54, 59, 0.3);
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.modal-wallet-footer {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.modal-wallet-footer {
   width: 100%;
   height: 35px;
   background-color: #1c1c22;
@@ -132,7 +141,7 @@ div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.mod
   border-top-right-radius: 0;
 }
 
-div.modal.modal-wallet div.modal-dialog div.modal-content div.modal-body div.modal-wallet-footer span.modal-wallet-footer-text {
+div.modal-dialog.modal-wallet div.modal-content div.modal-body div.modal-wallet-footer span.modal-wallet-footer-text {
   color: #36363b;
   font-size: 90%;
   font-weight: 600;
