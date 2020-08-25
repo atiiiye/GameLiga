@@ -1,0 +1,150 @@
+@import 'base';
+
+
+li.nav-item-icon.nav-item {
+    a.nav-link {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .5rem;
+        color: $color-gray-3;
+        text-decoration: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        svg.MuiSvgIcon-root.image-icon {}
+    }
+}
+
+div.dropdown-messages.dropdown {
+    width: max-content;
+
+
+    button.dropdown-button {
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+
+        &:focus,
+        &:active {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+
+        svg#telegram {
+            color: $color-gray-3;
+
+
+        }
+    }
+
+    div.all-massage.dropdown-menu {
+        background-color: $color-background-1;
+        border-bottom: 2px solid $color-orange-1;
+        position: fixed;
+        right: 5%;
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .2rem;
+
+        button.massage.dropdown-item {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 60px;
+            background-color: rgba($color: $color-gray-2, $alpha: .7);
+
+            color: rgba($color: #ffffff, $alpha: .7);
+
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: .25rem .5rem;
+            border-radius: 9px;
+            border: none;
+
+            &:hover {
+                background-color: rgba($color: #ffffff, $alpha: .7);
+                color: rgba($color:#000000, $alpha: .5);
+
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            i.image-icon.fas.fa-user-circle {
+                font-size: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            p.user-name {
+                font-size: 85%;
+            }
+        }
+
+        div.telegram-icon.form-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse;
+            width: 100%;
+            height: 3rem;
+
+            input.massage-send-box.form-control {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba($color: #ffffff, $alpha: 1.0);
+                width: 90%;
+                height: 2.5rem;
+                border-radius: 28px;
+                border: none;
+                padding: .25rem 1rem;
+                // padding-left: 2rem;
+                // direction: ltr;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 1px .2rem rgba($color: $color-white, $alpha: .4);
+                }
+            }
+
+            button.send {
+
+                background-color: transparent;
+                border: none;
+                position: relative;
+                left: 2rem;
+                padding: 0;
+                width: max-content;
+                height: 100%;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                svg {
+                    color: rgba($color: $color-orange-1, $alpha: .7);
+                    font-size: 28px;
+
+                }
+            }
+
+
+        }
+    }
+}

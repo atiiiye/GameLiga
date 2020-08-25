@@ -23,88 +23,73 @@ class Wallet extends Component {
 
     state = {
         modal: false,
-        show: false,
     }
 
-    constructor(props) {
-        super(props);
-
-
-        this.toggle = this.toggle.bind(this)
-    }
-
-    toggle() {
+    toggle = () => {
         this.setState({
-            modal: this.state.modal
+            modal: !this.state.modal
         })
     }
 
     render() {
 
-        // let { modalShow ,setModalShow } = this.props;
-        // console.log(this.context);
-
         return (
             <React.Fragment>
-                <NavLink className="nav-link-modal">
 
-                    <Modal
-                        className="modal-wallet"
+                <NavItem className="nav-item-icon" >
+                    <NavLink to="/wallet" id="wallet" onClick={this.toggle.bind(this)}>
+                        <WalletIcon className="image-icon" id="wallet" />
+                    </NavLink>
+                </NavItem>
 
-                        show={this.state.modal}
-                        onHide={() => this.setState(false)}
-                    // onHide={this.toggle}
-                    // isOpen={this.state.modal}
-                    // toggle={() => this.toggleModal("exampleModal")}
-                    >
-                        {/* {console.log(this.props)} */}
-
-                        <ModalBody>
-
-                            <ModalHeader className="text-center">
-                                <h2>Wallet</h2>
-                            </ModalHeader>
-
-                            <div className="content-wallet">
-                                <div className="content-right">
-                                    <span className="content-right-span">Available</span>
-                                </div>
-                                <div className="content-left">
-                                    <span className="content-left-span">Balance</span>
-                                </div>
+                <Modal
+                    className="modal-wallet"
+                    isOpen={this.state.modal}
+                    toggle={this.toggle.bind(this)}
+                >
+                    <ModalBody>
+                        <ModalHeader className="text-center">
+                            <h2>Wallet</h2>
+                        </ModalHeader>
+                        <div className="content-wallet">
+                            <div className="content-right">
+                                <span className="content-right-span">Available</span>
                             </div>
-                            <div className="wallet-buttons">
-                                <Button
-                                    className="btn-block deposit"
-                                    variant="none"
-                                    id="deposit"
-                                    // value="Submit"
-                                    // onClick={() => this.context.setModalShow(false)}
-                                    onClick={() => this.setState(false)}
-                                    type="button"
-                                    data-dismiss="modal"
-                                >
-                                    DEPOSIT
+                            <div className="content-left">
+                                <span className="content-left-span">Balance</span>
+                            </div>
+                        </div>
+                        <div className="wallet-buttons">
+                            <Button
+                                className="btn-block deposit"
+                                variant="none"
+                                id="deposit"
+                                // value="Submit"
+                                // onClick={() => this.context.setModalShow(false)}
+                                onClick={this.toggle.bind(this)}
+                                type="button"
+                                data-dismiss="modal"
+                            >
+                                DEPOSIT
                             </Button>
-                                <Button
-                                    className="btn-block withDraw"
-                                    variant="none"
-                                    id="withDraw"
-                                    // value="Submit"
-                                    // onClick={() => this.context.setModalShow(false)}
-                                    onClick={() => this.setState(false)}
-                                    data-dismiss="modal"
-                                    type="button"
-                                >
-                                    WITHDRAW
+                            <Button
+                                className="btn-block withDraw"
+                                variant="none"
+                                id="withDraw"
+                                // value="Submit"
+                                // onClick={() => this.context.setModalShow(false)}
+                                onClick={this.toggle.bind(this)}
+                                data-dismiss="modal"
+                                type="button"
+                            >
+                                WITHDRAW
                             </Button>
-                            </div>
-                            <div className="modal-wallet-footer">
-                                <span className="modal-wallet-footer-text">VIEW YOUR TRANSACTION</span>
-                            </div>
-                        </ModalBody>
-                    </Modal>
-                </NavLink>
+                        </div>
+                        <div className="modal-wallet-footer">
+                            <span className="modal-wallet-footer-text">VIEW YOUR TRANSACTION</span>
+                        </div>
+                    </ModalBody>
+                </Modal>
 
             </React.Fragment>
         )

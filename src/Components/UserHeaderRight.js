@@ -116,20 +116,9 @@ class UserHeaderRight extends Component {
                             </NavLink>
                         </NavItem>
 
-                        <NavItem className="nav-link-icon" >
-                            <NavLink to="/telegram" onClick={this.handlePrevntDefault.bind(this)} id="telegram">
-                                <TelegramIcon className="image-icon " id="telegram" />
-                            </NavLink>
-                            <Telegram />
-                        </NavItem>
+                        <Telegram />
 
-                        <NavItem className="nav-item-icon" >
-                            <NavLink to="/wallet" onClick={this.handlePrevntDefault.bind(this)} id="wallet">
-                                <WalletIcon className="image-icon" id="wallet" />
-                                <Wallet />
-
-                            </NavLink>
-                        </NavItem>
+                        <Wallet />
 
                         {/* </div> */}
                     </Navbar.Collapse>
@@ -152,8 +141,6 @@ class UserHeaderRight extends Component {
                     >
                         <Telegram />
                     </TelegramContext.Provider> */}
-
-
 
                     <Navbar.Collapse className="collapse-user row part-1 d-none" id="collapse-navbar" />
                 </div>

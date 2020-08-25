@@ -2,9 +2,11 @@ import React, { Component } from "react";
 
 //import css
 import "./../css/reset.css";
+import "./../css/telegram.css"
 
 //import bootstrap
-import { Dropdown, Modal } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Modal, ModalHeader, ModalBody, NavItem, NavLink, Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Input, FormGroup } from 'reactstrap';
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -14,25 +16,57 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import { TelegramContext } from './Contexts'
 
 class Telegram extends Component {
-    static contextType = TelegramContext;
+
+    state = {
+        dropdown: false,
+    }
+
+    toggle = () => {
+        this.setState({
+            dropdown: !this.state.dropdown
+        })
+    }
 
     render() {
         return (
             <React.Fragment>
-                <Modal
-                    className="main-content-box"
-                    show={this.context.dropDownShow}
-                    onHide={() => this.context.setDropDownShow(false)}
+                <NavItem className="nav-item-icon" >
+                    <NavLink to="/telegram" onClick={this.toggle.bind(this)} id="telegram">
+                    </NavLink>
+                </NavItem>
+                <Dropdown
+                    className="dropdown-messages"
+                    isOpen={this.state.dropdown}
+                    toggle={this.toggle.bind(this)}
                 >
-                    <Dropdown className="dropDown-messages">
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="">
-                                <i className="image-icon fas fa-user-circle" id="user"></i>
+                    <DropdownToggle className="dropdown-button">
+                        <TelegramIcon className="image-icon" id="telegram" />
+                    </DropdownToggle>
+
+                    <DropdownMenu className="all-massage">
+                        <DropdownItem className="massage my-1">
+                            <i className="image-icon fas fa-user-circle" id="user"></i>
+                            <p className="user-name">user name</p>
+                        </DropdownItem>
+                        <DropdownItem className="massage my-1">
+                            <i className="image-icon fas fa-user-circle" id="user"></i>
+                            <p className="user-name">user name</p>
+                        </DropdownItem>
+                        <DropdownItem className="massage my-1">
+                            <i className="image-icon fas fa-user-circle" id="user"></i>
+                            <p className="user-name">user name</p>
+                        </DropdownItem>
+                        <FormGroup className="telegram-icon">
+                            <Button className="send" type="submit">
                                 <TelegramIcon />
-                            </Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                </Modal>
+                            </Button>
+                            <Input className="massage-send-box mt-2 mb-1" type="text" name="massage" />
+
+                        </FormGroup>
+
+                    </DropdownMenu>
+
+                </Dropdown>
 
             </React.Fragment>
         )
