@@ -8,7 +8,6 @@ import './../css/wallet.css'
 
 //import boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { Button } from "react-bootstrap";
 import { Button, Modal, ModalHeader, ModalBody, NavItem, NavLink, } from 'reactstrap';
 
 //import contexts
@@ -35,8 +34,7 @@ class Wallet extends Component {
 
         return (
             <React.Fragment>
-
-                <NavItem className="nav-item-icon" >
+                <NavItem className="nav-item-icon" id="wallet">
                     <NavLink to="/wallet" id="wallet" onClick={this.toggle.bind(this)}>
                         <WalletIcon className="image-icon" id="wallet" />
                     </NavLink>
@@ -64,8 +62,6 @@ class Wallet extends Component {
                                 className="btn-block deposit"
                                 variant="none"
                                 id="deposit"
-                                // value="Submit"
-                                // onClick={() => this.context.setModalShow(false)}
                                 onClick={this.toggle.bind(this)}
                                 type="button"
                                 data-dismiss="modal"
@@ -76,8 +72,6 @@ class Wallet extends Component {
                                 className="btn-block withDraw"
                                 variant="none"
                                 id="withDraw"
-                                // value="Submit"
-                                // onClick={() => this.context.setModalShow(false)}
                                 onClick={this.toggle.bind(this)}
                                 data-dismiss="modal"
                                 type="button"

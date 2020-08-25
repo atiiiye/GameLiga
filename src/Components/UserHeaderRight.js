@@ -12,6 +12,10 @@ import { Navbar, NavLink, NavItem } from 'react-bootstrap';
 //import components
 import Wallet from './Wallet';
 import Telegram from './Telegram';
+import Bell from './Bell';
+import Ticket from './Ticket';
+import Profile from './Profile';
+
 
 //import packages
 import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
@@ -31,10 +35,7 @@ import { LoginContext } from './Contexts';
 
 class UserHeaderRight extends Component {
     state = {
-        // walletShow: false,
-        // telegramShow: false,
         exampleModal: false
-
     }
 
     handlePrevntDefault = (e) => {
@@ -89,7 +90,6 @@ class UserHeaderRight extends Component {
                                 value => (
                                     <p className="text-muted">
                                         {/* {() => { if (context.loginUsername == 'undefined') { context.loginUsername === 'true' } }} */}
-
                                         {console.log(value.loginUsername)}
                                         {value.loginUsername || value.signinUsername}
                                     </p>
@@ -97,29 +97,12 @@ class UserHeaderRight extends Component {
                             }
                         </usernameContext.Consumer>
 
-                        <NavItem className="nav-item-icon" >
-                            <NavLink to="/account" onClick={this.handlePrevntDefault.bind(this)} id="user">
-                                <i className="image-icon fas fa-user-circle" id="user"></i>
-                            </NavLink>
-                        </NavItem>
-
-                        <NavItem className="nav-item-icon" >
-                            <NavLink to="/ticket" onClick={this.handlePrevntDefault.bind(this)} id="ticket">
-                                <i className="image-icon fas fa-ticket-alt" id="ticket"></i>
-                            </NavLink>
-                        </NavItem>
-
+                        <Profile />
+                        <Ticket />
                         {/* <div className="row part-2"> */}
-                        <NavItem className="nav-item-icon" >
-                            <NavLink to="/bell" onClick={this.handlePrevntDefault.bind(this)} id="bell">
-                                <BellIcon className="image-icon" id="bell" />
-                            </NavLink>
-                        </NavItem>
-
+                        <Bell />
                         <Telegram />
-
                         <Wallet />
-
                         {/* </div> */}
                     </Navbar.Collapse>
 
@@ -130,8 +113,6 @@ class UserHeaderRight extends Component {
                     }}
                     >
                     </modalContext.Provider> */}
-
-
 
                     {/* 
                     <TelegramContext.Provider value={{

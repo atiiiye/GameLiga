@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //import components
-import Slider from "./Components/Slider";
+import Home from "./Components/Home";
 import UserHeader from "./Components/UserHeader";
 import SignUp from "./Components/SignUp";
 import NotFound from "./Components/NotFound";
@@ -40,7 +40,7 @@ class App extends Component {
 
           {/* <usernameContext.Provider value={this.state.username}> */}
 
-          <PublicRoute exact restricted={false} path="/" component={Slider} />
+          <PublicRoute exact restricted={false} path="/" component={Home} />
 
           <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
 

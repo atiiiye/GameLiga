@@ -1,0 +1,263 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+section.main-slider {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+section.main-slider div.container-fluid.box-slider {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider {
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider {
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider {
+  column-count: 1;
+  column-gap: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  height: 80%;
+  background-color: transparent;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.line {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #36363b;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias {
+  background-color: transparent;
+  border: 2px solid #36363b;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  width: 60px;
+  height: 60px;
+  margin-top: 0;
+  border-bottom: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias:last-child {
+  border-bottom: 2px solid #36363b;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .8rem;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
+  width: 100%;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media:focus {
+  outline: none;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image:focus {
+  outline: none;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-left: 2px solid #ff9300;
+  border-top: 2px solid #ff9300;
+  border-bottom: 0;
+  border-right: 0;
+  border-radius: 0;
+  background: transparent;
+  position: relative;
+  left: 0;
+  height: max-content;
+  padding-left: 0;
+  padding-right: 0;
+  width: 90%;
+  margin-top: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
+  display: flex;
+  height: 60%;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.top {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #36363b;
+  border-right: 0;
+  border-bottom: 0;
+  position: relative;
+  top: 1.5rem;
+  left: 2rem;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles {
+  padding: 0;
+  margin-top: 0;
+  position: relative;
+  left: 17%;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.line-orange {
+  width: 60px;
+  height: 30px;
+  border: 3px solid #ff9300;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: max-content;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.Tournament {
+  font-size: 2.7rem;
+  color: #ff9300;
+  font-weight: bold;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title {
+  color: #ff9300;
+  font-weight: bold;
+  font-size: 2.7rem;
+  margin-top: .5rem;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.title span.h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.7rem;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.card-text h1.garanti {
+  font-size: 2.7rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.bottom {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #36363b;
+  border-right: 0;
+  border-top: 0;
+  position: relative;
+  left: 2rem;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
+  width: 70%;
+  margin-right: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper {
+  width: 100%;
+  margin-right: 0;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-wrapper div.swiper-slide {
+  width: 100%;
+  display: flex !important;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 130px;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 28px;
+  padding-right: 1.5rem;
+  color: #ffffff;
+  font-size: 15px;
+  background: transparent;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images {
+  width: 100%;
+  display: flex;
+  height: 45%;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid {
+  margin-top: 2.5rem;
+  width: 50%;
+  height: auto;
+}
+/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,30 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+li.nav-item-icon.nav-item#user {
+  width: 50px;
+  height: 50px;
+}
+
+li.nav-item-icon.nav-item#user a.nav-link {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: .5rem;
+  color: #b0b0b2;
+  text-decoration: none;
+}
+
+li.nav-item-icon.nav-item#user a.nav-link:focus {
+  outline: none;
+}
+
+li.nav-item-icon.nav-item#user a.nav-link i.image-icon.fas.fa-user-circle {
+  font-size: 40px;
+}
+/*# sourceMappingURL=Profile.css.map */

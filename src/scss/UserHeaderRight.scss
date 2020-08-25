@@ -5,12 +5,13 @@ nav.navbar.user-header-right {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 60%;
+    width: 50%;
 
     div.navbar-right {
         display: flex;
         align-items: center;
-        width: 40%;
+        width: 100%;
+        height: 20px;
 
         div.navbar-collapse.collapse.collapse-user.row.part-1 {
             width: max-content;
