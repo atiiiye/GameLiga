@@ -6,7 +6,8 @@ import "./../css/reset.css";
 import "./../css/LeaderBoards.css"
 
 //import bootstrap
-import { Card, Table } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { Table } from 'reactstrap';
 
 //import components
 import Sidebar from "./Sidebar";
@@ -37,6 +38,7 @@ class LeaderBoards extends Component {
                                     <div className="all-button console">CONSOLE</div>
                                     <div className="all-button fifa20">FIFA20</div>
                                 </div>
+
                                 <div className="all-view-table">
                                     <div className="title-table">
                                         <div className="section-1 user-info col-md-5">
@@ -56,9 +58,10 @@ class LeaderBoards extends Component {
 
                                     </div>
                                     <div className="table-content">
-                                        <Table className="all-table" responsive striped >
+                                        <div className="scroll-bar"></div>
+                                        <Table className="all-table" responsive hover striped >
                                             <thead className="headers-table">
-                                                <tr className="header-table">
+                                                <tr className="header-table line-1">
                                                     <div className="header-table-part-1">
                                                         <th className="header-table-title">All Times</th>
                                                         <th className="header-table-title">Last 30 Days</th>
@@ -69,7 +72,7 @@ class LeaderBoards extends Component {
                                                     </div>
 
                                                 </tr>
-                                                <tr className="header-table">
+                                                <tr className="header-table line-2">
                                                     <div className="header-table-part-1">
                                                         <th className="header-table-title">Rank</th>
                                                         <th className="header-table-title">XP</th>
@@ -82,14 +85,14 @@ class LeaderBoards extends Component {
                                             </thead>
                                             <tbody className="bodys-table">
                                                 <tr className="body-table">
-                                                    <td className="body-table-content"></td>
-                                                    <td className="body-table-content"></td>
-                                                    <td className="body-table-content"></td>
-                                                    <td className="body-table-content"></td>
-                                                    <td className="body-table-content"></td>
-                                                    <td className="body-table-content"></td>
-                                                    <td className="body-table-content"></td>
-                                                    <td className="body-table-content"></td>
+                                                    <td className="body-table-content"><i class='fas fa-medal'></i></td>
+                                                    <td className="body-table-content">1</td>
+                                                    <td className="body-table-content"><i className="image-icon fas fa-user-circle" id="user"></i></td>
+                                                    <td className="body-table-content">user name</td>
+                                                    <td className="body-table-content">600</td>
+                                                    <td className="body-table-content">100p</td>
+                                                    <td className="body-table-content">0</td>
+                                                    <td className="body-table-content">0</td>
                                                 </tr>
                                             </tbody>
                                         </Table>

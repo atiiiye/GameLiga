@@ -38,6 +38,7 @@ div.container-fluid.leader-boards {
                 // justify-content: flex-start;
                 align-items: flex-start;
                 padding: 1.2rem;
+                margin-left: 1.8rem;
                 width: 80%;
 
                 h1.h1 {
@@ -176,19 +177,110 @@ div.container-fluid.leader-boards {
                     margin: .5rem;
                     display: flex;
 
+                    div.scroll-bar {
+                        border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                        width: 10px;
+                        height: 100%;
+                    }
+
                     div.table-responsive {
                         width: 100%;
 
-                        table.table.all-table {
+                        table.all-table.table.table-striped {
                             width: 100%;
+                            margin-bottom: 0;
 
                             thead.headers-table {
                                 width: 100%;
 
-                                tr.header-table {
+                                tr.header-table.line-1 {
                                     display: flex;
                                     justify-content: space-between;
-                                    width: 100% !important;
+                                    width: 100%;
+                                    border-bottom: 1px solid rgba($color: $color-gray-2, $alpha: 1.0);
+
+
+
+                                    div.header-table-part-1 {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        width: 65%;
+                                        padding: 0;
+
+                                        th.header-table-title {
+                                            border: 0;
+                                            font-size: 80%;
+                                            font-weight: 600;
+                                            color: rgba($color: #ffffff, $alpha: .7);
+                                            width: 33%;
+
+                                            tr.header-table {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                width: 100%;
+
+
+                                                div.header-table-part-1 {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    width: 65%;
+                                                    padding: 0;
+
+                                                    th.header-table-title {
+                                                        border: 0;
+                                                        font-size: 80%;
+                                                        font-weight: 600;
+                                                        color: rgba($color: #ffffff, $alpha: .7);
+                                                        width: 30%;
+                                                        display: flex;
+                                                        align-self: center;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                                }
+
+                                                div.header-table-part-2 {
+                                                    display: flex;
+                                                    justify-content: flex-end;
+                                                    padding: 0;
+                                                    width: 35%;
+
+                                                    th {
+                                                        border: 0;
+                                                        font-size: 80%;
+                                                        font-weight: 600;
+                                                        color: rgba($color: #ffffff, $alpha: .7);
+                                                        width: 100%;
+
+
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+
+                                    div.header-table-part-2 {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        padding: 0;
+                                        width: max-content;
+
+                                        th {
+                                            border: 0;
+                                            font-size: 80%;
+                                            font-weight: 600;
+                                            color: rgba($color: #ffffff, $alpha: .7);
+
+                                        }
+                                    }
+
+                                }
+
+                                tr.header-table.line-2 {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: max-content;
 
 
                                     div.header-table-part-1 {
@@ -221,6 +313,26 @@ div.container-fluid.leader-boards {
                                         }
                                     }
 
+                                }
+                            }
+
+                            tbody.bodys-table {
+                                width: 100%;
+
+                                tr.body-table {
+                                    width: 100%;
+
+                                    td.body-table-content {
+                                        color: rgba($color: #ffffff, $alpha: .7);
+                                        font-size: 90%;
+                                        font-weight: 600;
+                                        width: max-content;
+
+                                        i.fas.fa-medal {
+                                            font-size: 28px;
+                                            color: $color-gold-2;
+                                        }
+                                    }
                                 }
                             }
                         }

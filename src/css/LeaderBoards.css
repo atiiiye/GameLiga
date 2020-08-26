@@ -39,6 +39,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.ti
   flex-direction: column;
   align-items: flex-start;
   padding: 1.2rem;
+  margin-left: 1.8rem;
   width: 80%;
 }
 
@@ -170,49 +171,152 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   display: flex;
 }
 
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.scroll-bar {
+  border: 1px solid rgba(206, 123, 119, 0.7);
+  width: 10px;
+  height: 100%;
+}
+
 div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive {
   width: 100%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.table.all-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table {
   width: 100%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.table.all-table thead.headers-table {
-  width: 100%;
-}
-
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.table.all-table thead.headers-table tr.header-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 {
   display: flex;
   justify-content: space-between;
-  width: 100% !important;
+  width: 100%;
+  border-bottom: 1px solid #959aa2;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.table.all-table thead.headers-table tr.header-table div.header-table-part-1 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 {
   display: flex;
   justify-content: space-between;
   width: 65%;
   padding: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.table.all-table thead.headers-table tr.header-table div.header-table-part-1 th {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title {
   border: 0;
   font-size: 80%;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
+  width: 33%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.table.all-table thead.headers-table tr.header-table div.header-table-part-2 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title tr.header-table {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title tr.header-table div.header-table-part-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  padding: 0;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title tr.header-table div.header-table-part-1 th.header-table-title {
+  border: 0;
+  font-size: 80%;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  width: 30%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title tr.header-table div.header-table-part-2 {
   display: flex;
   justify-content: flex-end;
   padding: 0;
   width: 35%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.table.all-table thead.headers-table tr.header-table div.header-table-part-2 th {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title tr.header-table div.header-table-part-2 th {
   border: 0;
   font-size: 80%;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  width: max-content;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 th {
+  border: 0;
+  font-size: 80%;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 {
+  display: flex;
+  justify-content: space-between;
+  width: max-content;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  padding: 0;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-1 th {
+  border: 0;
+  font-size: 80%;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-2 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  width: 35%;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-2 th {
+  border: 0;
+  font-size: 80%;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table {
+  width: 100%;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table {
+  width: 100%;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 90%;
+  font-weight: 600;
+  width: max-content;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content i.fas.fa-medal {
+  font-size: 28px;
+  color: #feb72b;
 }
 /*# sourceMappingURL=LeaderBoards.css.map */

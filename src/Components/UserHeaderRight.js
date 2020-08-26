@@ -32,17 +32,21 @@ class UserHeaderRight extends Component {
 
     toggle = () => this.setState(!isOpen);
 
-    // setShow = (status) => {
-    //     this.setState({ telegramShow: status })
-    // }
-
-    // static contextType = usernameContext;
     /* {this.props.history.location.state.username} */
+
+    componentDidUpdate() {
+        // return (
+        //     <usernameContext.Consumer>
+        //         {
+        //             value => (value.loginUsername)
+        //         }
+        //     </usernameContext.Consumer>
+        // )
+    }
 
     render() {
         // console.log(this.context)
         return (
-
 
             <Navbar className="user-header-right" expand="md">
                 <div className="hamburger-menu px-0" data-target="#collapse-navbar">
@@ -61,7 +65,6 @@ class UserHeaderRight extends Component {
                             {
                                 value => (
                                     <p className="text-muted">
-                                        {/* {() => { if (context.loginUsername == 'undefined') { context.loginUsername === 'true' } }} */}
                                         {console.log(value.loginUsername)}
                                         {value.loginUsername || value.signinUsername}
                                     </p>
@@ -77,14 +80,6 @@ class UserHeaderRight extends Component {
                         <Wallet />
                         {/* </div> */}
                     </Collapse >
-
-                    {/* <modalContext.Provider value={{
-                        modalShow: this.state.exampleModal,
-                        // setModalShow: () => this.setShow(),
-                        toggleModal: () => this.toggleModal(this.state.exampleModal)
-                    }}
-                    >
-                    </modalContext.Provider> */}
 
                 </div>
             </Navbar>

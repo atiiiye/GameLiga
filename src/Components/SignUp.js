@@ -228,33 +228,29 @@ class SignUp extends Component {
     }
   };
 
+  handleLogin = () => {
+    login();
+    this.setState({ redirect: true })
+    console.log('sasas')
+
+  }
+
   postData = async () => {
     try {
       await signup(this.state);
 
-      // <usernameContext.Provider value={{ username: this.state.username }}>
-      {/* {this.props.history.push({
-          pathname: "/account",
-          // state: { username: this.state.username },
-        })} */}
-
-
-      // <UserHeaderRight />
-
-      // </usernameContext.Provider >
       // {
 
-      { login(); }
-
+      // { login(); }
 
       // <usernameContext.Provider value={{ username: this.state.username }}>
       {/* <UserHeaderRight /> */ }
       // { window.location = "/account" }
       // <Redirect to={{ pathname: '/account' }} />
+
       this.setState({ redirect: true })
 
       {/* </usernameContext.Provider > */ }
-
 
       // this.props.history.push({
       //   pathname: "/account",
@@ -342,11 +338,8 @@ class SignUp extends Component {
   render() {
     const { errors, redirect } = this.state;
     // console.log(this.props)
-    // if (this.state.username === '') {
-    //   return 'undefined'
-    // }
+
     if (redirect) {
-      // { () => { if (context.username == 'undefined') { context.username === true } } }
       return (
         <usernameContext.Provider value={{ signinUsername: this.state.username }}>
 
@@ -683,18 +676,19 @@ class SignUp extends Component {
 
               <Form.Group className="row ml-1">
                 {/* <div className="col-form-label"></div> */}
-                {/* <NavLink to="/account" className="col"> */}
                 <Button
                   className={`register col-sm-7 ${
                     this.state.checkbox ? "" : "disabled"
                     }`}
                   variant="none"
                   type="submit"
-                  onClick={this.state.handleChange}
+                  onClick={
+                    this.state.handleChange
+                    // () => this.handleLogin()
+                  }
                 >
                   Register
                     </Button>
-                {/* </NavLink> */}
               </Form.Group>
             </Form>
             {/* </usernameContext.Provider> */}

@@ -43,10 +43,11 @@ class Login extends Component {
             password: "",
         },
         redirect: false,
+        isLogin: isLogin(),
     };
+    // history = createBrowserHistory()
 
     static contextType = modalContext;
-
 
     validateForm = (errors) => {
         let valid = true;
@@ -105,8 +106,6 @@ class Login extends Component {
         }
     };
 
-    history = createBrowserHistory()
-
     goAccount = async () => {
         try {
             await login(this.state);
@@ -152,29 +151,30 @@ class Login extends Component {
         });
     };
 
+    handleLogout = () => {
+        logout();
+        this.setState({ isLogin: false })
+    }
+
 
     render() {
         const { errors, redirect } = this.state;
         // console.log(this.props)
 
         if (redirect) {
-            // { () => { if (context.username == 'undefined') { context.username === true } } }
             return (
-                <React.Fragment>
 
+                <React.Fragment>
+                    {this.state.isLogin}
                     <usernameContext.Provider value={{ loginUsername: this.state.username }}>
                         <UserHeaderRight />
-                        {this.props.children}
                     </usernameContext.Provider >
                     <Redirect to={{
                         pathname: '/account',
                         // state: { username: this.state.username }
                     }} />
                 </React.Fragment>
-
             )
-
-
         }
         return (
             <React.Fragment>

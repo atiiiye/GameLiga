@@ -68,7 +68,6 @@ class Telegram extends Component {
                                             type="text"
                                             name="massage"
                                             autoFocus />
-
                                     </FormGroup>
                                 </DropdownItem>
 

@@ -27,11 +27,11 @@ li.nav-item-icon.nav-item#ticket a.nav-link:focus {
   outline: none;
 }
 
-li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt {
+li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt#ticket {
   font-size: 28px;
 }
 
-li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt:focus, li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt:active, li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt:hover {
+li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt#ticket:focus, li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt#ticket:active, li.nav-item-icon.nav-item#ticket a.nav-link i.image-icon.fas.fa-ticket-alt#ticket:hover {
   color: #ff9300;
 }
 /*# sourceMappingURL=Ticket.css.map */
