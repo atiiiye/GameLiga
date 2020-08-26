@@ -63,9 +63,9 @@ class LeaderBoards extends Component {
                                             <thead className="headers-table">
                                                 <tr className="header-table line-1">
                                                     <div className="header-table-part-1">
-                                                        <th className="header-table-title">All Times</th>
-                                                        <th className="header-table-title">Last 30 Days</th>
-                                                        <th className="header-table-title">Last 7 Days</th>
+                                                        <th className="header-table-title px-0">All Times</th>
+                                                        <th className="header-table-title px-0">Last 30 Days</th>
+                                                        <th className="header-table-title px-0">Last 7 Days</th>
                                                     </div>
                                                     <div className="header-table-part-2">
                                                         <th className="header-table-title">Showing Top100</th>
@@ -73,7 +73,7 @@ class LeaderBoards extends Component {
 
                                                 </tr>
                                                 <tr className="header-table line-2">
-                                                    <div className="header-table-part-1">
+                                                    <div className="header-table-part-all">
                                                         <th className="header-table-title">Rank</th>
                                                         <th className="header-table-title">XP</th>
                                                         <th className="header-table-title">Earnings</th>
@@ -86,7 +86,27 @@ class LeaderBoards extends Component {
                                             <tbody className="bodys-table">
                                                 <tr className="body-table">
                                                     <td className="body-table-content"><i class='fas fa-medal'></i></td>
-                                                    <td className="body-table-content">1</td>
+                                                    <td className="body-table-content">#</td>
+                                                    <td className="body-table-content"><i className="image-icon fas fa-user-circle" id="user"></i></td>
+                                                    <td className="body-table-content">user name</td>
+                                                    <td className="body-table-content">600</td>
+                                                    <td className="body-table-content">100p</td>
+                                                    <td className="body-table-content">0</td>
+                                                    <td className="body-table-content">0</td>
+                                                </tr>
+                                                <tr className="body-table">
+                                                    <td className="body-table-content"><i class='fas fa-medal'></i></td>
+                                                    <td className="body-table-content">#</td>
+                                                    <td className="body-table-content"><i className="image-icon fas fa-user-circle" id="user"></i></td>
+                                                    <td className="body-table-content">user name</td>
+                                                    <td className="body-table-content">600</td>
+                                                    <td className="body-table-content">100p</td>
+                                                    <td className="body-table-content">0</td>
+                                                    <td className="body-table-content">0</td>
+                                                </tr>
+                                                <tr className="body-table">
+                                                    <td className="body-table-content"><i class='fas fa-medal'></i></td>
+                                                    <td className="body-table-content">#</td>
                                                     <td className="body-table-content"><i className="image-icon fas fa-user-circle" id="user"></i></td>
                                                     <td className="body-table-content">user name</td>
                                                     <td className="body-table-content">600</td>

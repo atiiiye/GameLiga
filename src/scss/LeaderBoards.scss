@@ -176,10 +176,12 @@ div.container-fluid.leader-boards {
                     height: max-content;
                     margin: .5rem;
                     display: flex;
+                    align-items: center;
+                    justify-content: space-around;
 
                     div.scroll-bar {
                         border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
-                        width: 10px;
+                        width: 2%;
                         height: 100%;
                     }
 
@@ -213,87 +215,9 @@ div.container-fluid.leader-boards {
                                             font-weight: 600;
                                             color: rgba($color: #ffffff, $alpha: .7);
                                             width: 33%;
-
-                                            tr.header-table {
-                                                display: flex;
-                                                justify-content: space-between;
-                                                width: 100%;
-
-
-                                                div.header-table-part-1 {
-                                                    display: flex;
-                                                    justify-content: space-between;
-                                                    width: 65%;
-                                                    padding: 0;
-
-                                                    th.header-table-title {
-                                                        border: 0;
-                                                        font-size: 80%;
-                                                        font-weight: 600;
-                                                        color: rgba($color: #ffffff, $alpha: .7);
-                                                        width: 30%;
-                                                        display: flex;
-                                                        align-self: center;
-                                                        align-items: center;
-                                                        justify-content: center;
-                                                    }
-                                                }
-
-                                                div.header-table-part-2 {
-                                                    display: flex;
-                                                    justify-content: flex-end;
-                                                    padding: 0;
-                                                    width: 35%;
-
-                                                    th {
-                                                        border: 0;
-                                                        font-size: 80%;
-                                                        font-weight: 600;
-                                                        color: rgba($color: #ffffff, $alpha: .7);
-                                                        width: 100%;
-
-
-                                                    }
-                                                }
-
-                                            }
-                                        }
-                                    }
-
-                                    div.header-table-part-2 {
-                                        display: flex;
-                                        justify-content: flex-end;
-                                        padding: 0;
-                                        width: max-content;
-
-                                        th {
-                                            border: 0;
-                                            font-size: 80%;
-                                            font-weight: 600;
-                                            color: rgba($color: #ffffff, $alpha: .7);
-
-                                        }
-                                    }
-
-                                }
-
-                                tr.header-table.line-2 {
-                                    display: flex;
-                                    justify-content: space-between;
-                                    width: max-content;
-
-
-                                    div.header-table-part-1 {
-                                        display: flex;
-                                        justify-content: space-between;
-                                        width: 65%;
-                                        padding: 0;
-
-                                        th {
-                                            border: 0;
-                                            font-size: 80%;
-                                            font-weight: 600;
-                                            color: rgba($color: #ffffff, $alpha: .7);
+                                            display: flex;
+                                            align-self: center;
+                                            justify-content: center;
 
                                         }
                                     }
@@ -304,11 +228,41 @@ div.container-fluid.leader-boards {
                                         padding: 0;
                                         width: 35%;
 
-                                        th {
+                                        th.header-table-title {
                                             border: 0;
                                             font-size: 80%;
                                             font-weight: 600;
                                             color: rgba($color: #ffffff, $alpha: .7);
+                                            width: 100%;
+                                            display: flex;
+                                            align-self: center;
+                                            justify-content: center;
+
+                                        }
+                                    }
+
+                                }
+
+                                tr.header-table.line-2 {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 100%;
+
+
+                                    div.header-table-part-all {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        width: 100%;
+                                        padding: 0;
+
+                                        th.header-table-title {
+                                            border: 0;
+                                            font-size: 80%;
+                                            font-weight: 600;
+                                            color: rgba($color: #ffffff, $alpha: .7);
+                                            display: flex;
+                                            align-self: center;
+                                            justify-content: center;
 
                                         }
                                     }
@@ -318,15 +272,20 @@ div.container-fluid.leader-boards {
 
                             tbody.bodys-table {
                                 width: 100%;
+                                overflow: scroll;
 
                                 tr.body-table {
                                     width: 100%;
+                                    display: flex;
+                                    align-self: center;
+                                    justify-content: flex-start;
 
                                     td.body-table-content {
                                         color: rgba($color: #ffffff, $alpha: .7);
                                         font-size: 90%;
                                         font-weight: 600;
-                                        width: max-content;
+                                        width: 100%;
+
 
                                         i.fas.fa-medal {
                                             font-size: 28px;
