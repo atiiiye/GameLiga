@@ -10,6 +10,7 @@ nav.navbar.user-header-right {
   justify-content: flex-start;
   align-items: center;
   width: 50%;
+  padding: 0;
 }
 
 nav.navbar.user-header-right div.navbar-right {

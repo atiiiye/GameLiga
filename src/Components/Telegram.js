@@ -41,7 +41,10 @@ class Telegram extends Component {
                                 <TelegramIcon className="image-icon" id="telegram" />
                             </DropdownToggle>
 
-                            <DropdownMenu className="all-massage">
+                            <DropdownMenu
+                                className="all-massage"
+                            // onClick={!this.toggle.bind(this)}
+                            >
                                 <DropdownItem className="massage my-1">
                                     <i className="image-icon fas fa-user-circle" id="user"></i>
                                     <p className="user-name">user name</p>
@@ -60,7 +63,11 @@ class Telegram extends Component {
                                         <Button className="send" type="submit">
                                             <TelegramIcon />
                                         </Button>
-                                        <Input className="massage-input mt-2 mb-1" type="text" name="massage" autoFocus />
+                                        <Input
+                                            className="massage-input mt-2 mb-1"
+                                            type="text"
+                                            name="massage"
+                                            autoFocus />
 
                                     </FormGroup>
                                 </DropdownItem>

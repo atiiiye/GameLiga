@@ -36,16 +36,16 @@ li.nav-item-icon.nav-item#wallet {
 }
 
 div.modal-dialog.modal-wallet {
-    // width: 30%;
+    width: 40%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
 
     // align-items: ;
     div.modal-content {
         width: 70%;
         position: relative;
         top: 5rem;
-        left: 35%;
+        left: 85%;
         border-radius: 30px;
 
 

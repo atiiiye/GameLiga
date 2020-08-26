@@ -86,14 +86,6 @@ class UserHeaderRight extends Component {
                     >
                     </modalContext.Provider> */}
 
-                    {/* 
-                    <TelegramContext.Provider value={{
-                        dropDownShow: this.state.telegramShow,
-                        setDropDownShow: this.setShow.bind(this)
-                    }}
-                    >
-                        <Telegram />
-                    </TelegramContext.Provider> */}
                 </div>
             </Navbar>
 

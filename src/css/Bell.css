@@ -27,12 +27,12 @@ li.nav-item-icon.nav-item#bell a.nav-link:focus {
   outline: none;
 }
 
-li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon {
+li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon#bell {
   height: 33px;
   width: 33px;
 }
 
-li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon:focus, li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon:active, li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon:hover {
+li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon#bell:focus, li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon#bell:active, li.nav-item-icon.nav-item#bell a.nav-link svg.MuiSvgIcon-root.image-icon#bell:hover {
   color: #ff9300;
 }
 /*# sourceMappingURL=Bell.css.map */
