@@ -164,7 +164,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
 div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content {
   border: 1px solid rgba(206, 123, 119, 0.7);
   box-shadow: 0 0 0 0.05rem rgba(206, 123, 119, 0.35);
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.25);
   width: 90%;
   height: max-content;
   margin: .5rem;
@@ -268,6 +268,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   display: flex;
   align-self: center;
   justify-content: flex-start;
+  border: 1px solid rgba(149, 154, 162, 0.15);
 }
 
 div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content {
