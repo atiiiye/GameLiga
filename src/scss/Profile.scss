@@ -2,12 +2,15 @@
 
 
 li.nav-item-icon.nav-item#user {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
 
     a.nav-link {
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -21,6 +24,13 @@ li.nav-item-icon.nav-item#user {
 
         i.image-icon.fas.fa-user-circle {
             font-size: 40px;
+
+
+            &:focus,
+            &:active,
+            &:hover {
+                color: rgba($color: $color-orange-1, $alpha: 1.0);
+            }
         }
     }
 }

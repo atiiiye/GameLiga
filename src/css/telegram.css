@@ -5,7 +5,11 @@ body {
 }
 
 li.nav-item.nav-item-icon#telegram {
-  height: max-content;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
 li.nav-item.nav-item-icon#telegram a.nav-link {
@@ -17,22 +21,18 @@ li.nav-item.nav-item-icon#telegram a.nav-link {
   margin-right: .5rem;
   color: #b0b0b2;
   text-decoration: none;
+  padding: 0;
 }
 
 li.nav-item.nav-item-icon#telegram a.nav-link:focus {
   outline: none;
 }
 
-li.nav-item.nav-item-icon#telegram a.nav-link svg.MuiSvgIcon-root.image-icon {
-  height: 28px;
-  width: 28px;
-}
-
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown {
   width: max-content;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown button.dropdown-button {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown button.dropdown-button {
   background-color: transparent;
   border-color: transparent;
   padding: 0;
@@ -40,17 +40,23 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown button.dropdow
   height: 45px;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown button.dropdown-button:focus, li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown button.dropdown-button:active {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown button.dropdown-button:focus, li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown button.dropdown-button:active {
   outline: none;
   border: 0;
   box-shadow: none;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown button.dropdown-button svg#telegram {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown button.dropdown-button svg#telegram {
   color: #b0b0b2;
+  height: 28px;
+  width: 28px;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown button.dropdown-button svg#telegram:focus, li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown button.dropdown-button svg#telegram:active, li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown button.dropdown-button svg#telegram:hover {
+  color: #ff9300;
+}
+
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu {
   background-color: #1c1c22;
   border-bottom: 2px solid #ff9300;
   position: fixed;
@@ -65,7 +71,7 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massag
   margin-top: 1rem;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -79,16 +85,16 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massag
   border: none;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item:hover {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item:hover {
   background-color: rgba(255, 255, 255, 0.7);
   color: rgba(0, 0, 0, 0.5);
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item:focus {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item:focus {
   outline: none;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item i.image-icon.fas.fa-user-circle {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item i.image-icon.fas.fa-user-circle {
   font-size: 35px;
   margin-bottom: .5rem;
   display: flex;
@@ -96,11 +102,11 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massag
   justify-content: center;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item p.user-name {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage.dropdown-item p.user-name {
   font-size: 85%;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item {
   padding: 0;
   width: 100%;
   height: 50px;
@@ -110,15 +116,15 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massag
   justify-content: flex-start;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item:hover {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item:hover {
   background-color: transparent;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item:active {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item:active {
   background-color: transparent;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,11 +135,11 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massag
   background: transparent;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group:focus {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group:focus {
   border: none;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group input.massage-input.form-control {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group input.massage-input.form-control {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,12 +150,12 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massag
   padding: .25rem 1rem;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group input.massage-input.form-control:focus {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group input.massage-input.form-control:focus {
   outline: none;
   box-shadow: 0 0 1px 0.1rem rgba(255, 255, 255, 0.4);
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send {
   background-color: transparent;
   border: none;
   position: relative;
@@ -159,12 +165,12 @@ li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massag
   height: 100%;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send:focus {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send:focus {
   outline: none;
   box-shadow: none;
 }
 
-li.nav-item.nav-item-icon#telegram div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send svg {
+li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send svg {
   color: rgba(255, 147, 0, 0.7);
   font-size: 28px;
 }

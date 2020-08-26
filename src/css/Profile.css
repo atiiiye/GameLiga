@@ -5,13 +5,16 @@ body {
 }
 
 li.nav-item-icon.nav-item#user {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
 }
 
 li.nav-item-icon.nav-item#user a.nav-link {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,5 +29,9 @@ li.nav-item-icon.nav-item#user a.nav-link:focus {
 
 li.nav-item-icon.nav-item#user a.nav-link i.image-icon.fas.fa-user-circle {
   font-size: 40px;
+}
+
+li.nav-item-icon.nav-item#user a.nav-link i.image-icon.fas.fa-user-circle:focus, li.nav-item-icon.nav-item#user a.nav-link i.image-icon.fas.fa-user-circle:active, li.nav-item-icon.nav-item#user a.nav-link i.image-icon.fas.fa-user-circle:hover {
+  color: #ff9300;
 }
 /*# sourceMappingURL=Profile.css.map */

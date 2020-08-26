@@ -10,8 +10,9 @@ nav.navbar.user-header-right {
     div.navbar-right {
         display: flex;
         align-items: center;
+        align-self: baseline;
         width: 100%;
-        height: 20px;
+        height: max-content;
 
         div.navbar-collapse.collapse.collapse-user.row.part-1 {
             width: max-content;
