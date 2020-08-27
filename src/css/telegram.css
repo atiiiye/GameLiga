@@ -182,9 +182,4 @@ li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div
 li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send svg:focus, li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu button.massage-send-box.dropdown-item div.telegram-icon.form-group button.send svg:active {
   color: #ff9300;
 }
-
-li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div.all-massage.dropdown-menu.show {
-  transform: translate(-20%, -50%);
-  transition: transform .5s linear;
-}
 /*# sourceMappingURL=telegram.css.map */

@@ -57,65 +57,95 @@ class LeaderBoards extends Component {
                                         </div>
 
                                     </div>
-                                    <div className="table-content">
+                                    <div className="scroll-table" >
                                         <div className="scroll-bar"></div>
-                                        <Table className="all-table" responsive hover striped >
-                                            <thead className="headers-table">
-                                                <tr className="header-table line-1">
-                                                    <div className="header-table-part-1">
-                                                        <th className="header-table-title px-0">All Times</th>
-                                                        <th className="header-table-title px-0">Last 30 Days</th>
-                                                        <th className="header-table-title px-0">Last 7 Days</th>
-                                                    </div>
-                                                    <div className="header-table-part-2">
-                                                        <th className="header-table-title">Showing Top100</th>
-                                                    </div>
+                                        <div className="table-content">
+                                            <Table className="all-table" responsive hover striped borderless >
+                                                <thead className="headers-table">
+                                                    <tr className="header-table line-1">
+                                                        <div className="header-table-part-1">
+                                                            <th className="header-table-title">All Times</th>
+                                                            <th className="header-table-title px-0">Last 30 Days</th>
+                                                            <th className="header-table-title px-0">Last 7 Days</th>
+                                                        </div>
+                                                        <div className="header-table-part-2">
+                                                            <th className="header-table-title">Showing Top100</th>
+                                                        </div>
 
-                                                </tr>
-                                                <tr className="header-table line-2">
-                                                    <div className="header-table-part-all">
-                                                        <th className="header-table-title">Rank</th>
-                                                        <th className="header-table-title">XP</th>
-                                                        <th className="header-table-title">Earnings</th>
-                                                        <th className="header-table-title">Earnings</th>
-                                                        <th className="header-table-title">Gold Trophies</th>
-                                                    </div>
+                                                    </tr>
+                                                    <tr className="header-table line-2">
+                                                        <div className="header-table-part-all">
+                                                            <th className="header-table-title pr-5" colspan="5">Rank</th>
+                                                            {/* <th className="header-table-title"></th> */}
+                                                            <th className="header-table-title pl-5">XP</th>
+                                                            <th className="header-table-title pl-5">Earnings</th>
+                                                            <th className="header-table-title pl-5">Earnings</th>
+                                                            <th className="header-table-title pl-5">Gold Trophies</th>
+                                                        </div>
 
-                                                </tr>
-                                            </thead>
-                                            <tbody className="bodys-table">
-                                                <tr className="body-table">
-                                                    <td className="body-table-content"><i class='fas fa-medal'></i></td>
-                                                    <td className="body-table-content">#</td>
-                                                    <td className="body-table-content"><i className="image-icon fas fa-user-circle" id="user"></i></td>
-                                                    <td className="body-table-content">user name</td>
-                                                    <td className="body-table-content">600</td>
-                                                    <td className="body-table-content">100p</td>
-                                                    <td className="body-table-content">0</td>
-                                                    <td className="body-table-content">0</td>
-                                                </tr>
-                                                <tr className="body-table">
-                                                    <td className="body-table-content"><i class='fas fa-medal'></i></td>
-                                                    <td className="body-table-content">#</td>
-                                                    <td className="body-table-content"><i className="image-icon fas fa-user-circle" id="user"></i></td>
-                                                    <td className="body-table-content">user name</td>
-                                                    <td className="body-table-content">600</td>
-                                                    <td className="body-table-content">100p</td>
-                                                    <td className="body-table-content">0</td>
-                                                    <td className="body-table-content">0</td>
-                                                </tr>
-                                                <tr className="body-table">
-                                                    <td className="body-table-content"><i class='fas fa-medal'></i></td>
-                                                    <td className="body-table-content">#</td>
-                                                    <td className="body-table-content"><i className="image-icon fas fa-user-circle" id="user"></i></td>
-                                                    <td className="body-table-content">user name</td>
-                                                    <td className="body-table-content">600</td>
-                                                    <td className="body-table-content">100p</td>
-                                                    <td className="body-table-content">0</td>
-                                                    <td className="body-table-content">0</td>
-                                                </tr>
-                                            </tbody>
-                                        </Table>
+                                                    </tr>
+                                                </thead>
+                                                <tbody className="bodys-table">
+                                                    <tr className="body-table">
+                                                        <td className="body-table-content" colspan="4">
+                                                            <div className="table-data">
+                                                                <i class='fas fa-medal' />
+                                                                <div className="number">100</div>
+                                                                <i className="image-icon fas fa-user-circle" id="user" />
+                                                                <div className="user-name">user name</div>
+                                                            </div>
+                                                        </td>
+                                                        <td className="body-table-content">600</td>
+                                                        <td className="body-table-content">100p</td>
+                                                        <td className="body-table-content">0</td>
+                                                        <td className="body-table-content">0</td>
+                                                    </tr>
+                                                    <tr className="body-table">
+                                                        <td className="body-table-content" colspan="4">
+                                                            <div className="table-data">
+                                                                <i class='fas fa-medal' />
+                                                                <div className="number">200</div>
+                                                                <i className="image-icon fas fa-user-circle" id="user" />
+                                                                <div className="user-name">user name</div>
+                                                            </div>
+                                                        </td>
+                                                        <td className="body-table-content">600</td>
+                                                        <td className="body-table-content">100p</td>
+                                                        <td className="body-table-content">0</td>
+                                                        <td className="body-table-content">0</td>
+                                                    </tr>
+                                                    <tr className="body-table">
+                                                        <td className="body-table-content" colspan="4">
+                                                            <div className="table-data">
+                                                                <i class='fas fa-medal' />
+                                                                <div className="number">200</div>
+                                                                <i className="image-icon fas fa-user-circle" id="user" />
+                                                                <div className="user-name">user name</div>
+                                                            </div>
+                                                        </td>
+                                                        <td className="body-table-content">600</td>
+                                                        <td className="body-table-content">100p</td>
+                                                        <td className="body-table-content">0</td>
+                                                        <td className="body-table-content">0</td>
+                                                    </tr>
+                                                    <tr className="body-table">
+                                                        <td className="body-table-content" colspan="4">
+                                                            <div className="table-data">
+                                                                <i class='fas fa-medal' />
+                                                                <div className="number">200</div>
+                                                                <i className="image-icon fas fa-user-circle" id="user" />
+                                                                <div className="user-name">user name</div>
+                                                            </div>
+                                                        </td>
+                                                        <td className="body-table-content">600</td>
+                                                        <td className="body-table-content">100p</td>
+                                                        <td className="body-table-content">0</td>
+                                                        <td className="body-table-content">0</td>
+                                                    </tr>
+                                                </tbody>
+                                            </Table>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
