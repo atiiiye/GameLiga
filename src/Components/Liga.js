@@ -10,7 +10,7 @@ import './../css/Liga.css'
 
 
 //import bootstrap
-import { Card, Form, FormControl } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 class Liga extends Component {
     state = {}

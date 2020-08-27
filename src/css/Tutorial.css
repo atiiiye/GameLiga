@@ -1,0 +1,76 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-fluid.Tutorial {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
+  width: 100%;
+}
+
+div.container-fluid.Tutorial div.card#content {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #ff9300;
+  border-top: 2px solid #ff9300;
+  border-bottom: 0;
+  border-right: 0;
+  border-radius: 0;
+  position: relative;
+  left: 0;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1.2rem;
+  margin-left: 1.8rem;
+  width: 50%;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.title h1.h1 {
+  color: rgba(54, 54, 59, 0.7);
+  font-weight: bold;
+  text-align: left;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(149, 154, 162, 0.5);
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box {
+  width: 40%;
+  height: 30%;
+  background-color: rgba(149, 154, 162, 0.9);
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/*# sourceMappingURL=Tutorial.css.map */

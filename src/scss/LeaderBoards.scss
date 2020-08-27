@@ -47,7 +47,7 @@ div.container-fluid.leader-boards {
 
                 h1.h1 {
                     color: rgba($color: $color-gray-1, $alpha: .7);
-                    text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2);
+                    // text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2);
                     font-weight: bold;
                     text-align: left;
                 }
@@ -58,7 +58,6 @@ div.container-fluid.leader-boards {
                     margin-bottom: .3rem;
                     text-align: left;
                 }
-
             }
 
             div.buttons-top {
@@ -68,7 +67,6 @@ div.container-fluid.leader-boards {
                 width: 80%;
                 height: 15%;
                 margin-left: 3rem;
-
 
                 div.all-button {
                     display: flex;
@@ -94,7 +92,6 @@ div.container-fluid.leader-boards {
                         background-color: rgba($color: $color-pink-2, $alpha: .7);
                     }
                 }
-
             }
 
             div.all-view-table {
@@ -105,19 +102,16 @@ div.container-fluid.leader-boards {
                 align-items: center;
                 justify-content: flex-start;
 
-
                 div.title-table {
                     border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
                     box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
                     background-color: rgba($color: #000000, $alpha: .15);
-
                     width: 90%;
                     height: max-content;
                     padding: .2rem 0;
                     margin: .5rem;
                     display: flex;
                     // align-items: flex-start;
-
 
                     div.section-1.user-info {
                         padding: 0 1rem;
@@ -156,7 +150,6 @@ div.container-fluid.leader-boards {
                             color: rgba($color: #ffffff, $alpha: .7);
                             display: flex;
                         }
-
                     }
 
                     div.section-3 {
@@ -184,13 +177,15 @@ div.container-fluid.leader-boards {
                         justify-content: center;
                         border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
                         width: 1%;
-                        height: 95%;
+                        margin: .5rem;
+                        margin-right: .1rem;
+                        height: 98%;
                     }
 
                     div.table-content {
                         border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
                         box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
-                        background-color: rgba($color: #000000, $alpha: .25);
+                        background-color: rgba($color: #000000, $alpha: .15);
                         width: 90%;
                         height: max-content;
                         margin: .5rem;
@@ -199,13 +194,16 @@ div.container-fluid.leader-boards {
                         justify-content: space-around;
 
 
-
                         div.table-responsive {
                             width: 100%;
+                            // height: 250px;
+                            // overflow-y: scroll;
 
                             table.all-table.table.table-striped {
                                 width: 100%;
+                                height: 70%;
                                 margin-bottom: 0;
+
 
                                 thead.headers-table {
                                     width: 100%;
@@ -214,27 +212,25 @@ div.container-fluid.leader-boards {
                                         display: flex;
                                         justify-content: space-between;
                                         width: 100%;
-                                        border-bottom: 1px solid rgba($color: $color-gray-2, $alpha: 1.0);
-
-
+                                        border-bottom: 1px solid rgba($color: $color-gray-1, $alpha: .7);
 
                                         div.header-table-part-1 {
                                             display: flex;
                                             justify-content: space-between;
-                                            width: 50%;
+                                            width: 45%;
                                             padding: 0;
 
                                             th.header-table-title {
                                                 border: 0;
                                                 font-size: 80%;
                                                 font-weight: 600;
-                                                color: rgba($color: #ffffff, $alpha: .7);
+                                                color: rgba($color: #ffffff, $alpha: 1.0);
                                                 width: max-content;
                                                 display: flex;
                                                 align-self: center;
                                                 justify-content: center;
-
-
+                                                position: sticky;
+                                                top: 0;
                                             }
                                         }
 
@@ -253,19 +249,18 @@ div.container-fluid.leader-boards {
                                                 display: flex;
                                                 align-self: center;
                                                 justify-content: center;
-
+                                                position: sticky;
+                                                top: 0;
                                             }
                                         }
-
                                     }
 
                                     tr.header-table.line-2 {
                                         display: flex;
                                         justify-content: space-between;
                                         width: 100%;
-                                        border-bottom: 1px solid rgba($color: $color-gray-2, $alpha: 1.0);
-
-
+                                        border-bottom: 1px solid rgba($color: #000000, $alpha: 1.0);
+                                        box-shadow: 0 0 0 0.05rem rgba($color: #000000, $alpha: .7);
 
                                         div.header-table-part-all {
                                             display: flex;
@@ -277,21 +272,42 @@ div.container-fluid.leader-boards {
                                                 border: 0;
                                                 font-size: 80%;
                                                 font-weight: 600;
-                                                color: rgba($color: #ffffff, $alpha: .7);
+                                                color: rgba($color: #ffffff, $alpha: 1.0);
                                                 display: flex;
                                                 align-self: center;
                                                 justify-content: center;
                                                 width: max-content;
+                                                position: sticky;
+                                                top: 0;
+                                            }
 
+                                            th:nth-child(1) {
+                                                width: 35%;
+                                                justify-content: flex-start;
+                                            }
+
+                                            th:nth-child(2) {
+                                                width: 20%;
+                                            }
+
+                                            th:nth-child(3) {
+                                                width: 20%;
+                                            }
+
+                                            th:nth-child(4) {
+                                                width: 20%;
+                                            }
+
+                                            th:nth-child(5) {
+                                                width: 20%;
                                             }
                                         }
-
                                     }
                                 }
 
                                 tbody.bodys-table {
                                     width: 100%;
-                                    overflow: scroll;
+
 
                                     tr.body-table {
                                         width: 100%;
@@ -306,13 +322,15 @@ div.container-fluid.leader-boards {
                                         }
 
                                         td.body-table-content {
-                                            color: rgba($color: #ffffff, $alpha: .7);
+                                            color: rgba($color: #ffffff, $alpha: 1.0);
                                             font-size: 90%;
                                             font-weight: 600;
                                             width: 100%;
                                             display: flex;
                                             justify-content: center;
                                             align-items: center;
+                                            // padding-left: 0;
+                                            padding-right: 0;
 
                                             div.table-data {
                                                 display: flex;
@@ -320,13 +338,17 @@ div.container-fluid.leader-boards {
                                                 align-items: center;
 
                                                 i.fas.fa-medal {
+                                                    display: flex;
+                                                    justify-content: center;
                                                     min-width: 10%;
                                                     font-size: 28px;
                                                     color: $color-gold-2;
                                                 }
 
                                                 div.number {
-                                                    // width: 5%;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    width: 30px;
                                                     margin-right: .5rem;
                                                     margin-left: .5rem;
                                                 }
@@ -339,17 +361,13 @@ div.container-fluid.leader-boards {
                                                 }
 
                                                 div.user-name {
-                                                    width: max-content;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    width: 100px;
                                                 }
                                             }
-
-
-
                                         }
-
-
                                     }
-
 
                                     tr.body-table:nth-child(2n) {
                                         border-bottom: 1px solid rgba($color: #000000, $alpha: .5);
@@ -361,11 +379,7 @@ div.container-fluid.leader-boards {
                         }
                     }
                 }
-
-
             }
         }
-
-
     }
 }

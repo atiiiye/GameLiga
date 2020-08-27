@@ -18,6 +18,7 @@ import Liga from "./Components/Liga";
 import Console from "./Components/Console";
 import LeaderBoards from "./Components/LeaderBoards";
 import Chat from "./Components/Chat";
+import Tutorial from "./Components/Tutorial";
 
 //import Routes
 import PrivateRoute from './Components/Routes/PrivateRoute ';
@@ -45,6 +46,8 @@ class App extends Component {
           <PrivateRoute exact path="/games" component={Games} />
 
           <PrivateRoute exact path="/tourny" component={Tourny} />
+
+          <PrivateRoute exact path="/tutorial" component={Tutorial} />
 
           <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
 
