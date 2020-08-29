@@ -5,7 +5,6 @@ import "./../css/reset.css";
 import "./../css/telegram.css"
 
 //import bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, NavItem, NavLink, Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Input, FormGroup } from 'reactstrap';
 
 //import packages

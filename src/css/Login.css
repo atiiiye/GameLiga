@@ -130,19 +130,16 @@ div.login-modal div.modal-content div.modal-body form.form-login a.forgot:focus 
   outline: none;
 }
 
-div.login-modal div.modal-content div.modal-body form.form-login div.form-group {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-div.login-modal div.modal-content div.modal-body form.form-login div.form-group a.login-link {
   text-decoration: none;
   width: 100%;
 }
 
-div.login-modal div.modal-content div.modal-body form.form-login div.form-group a.login-link button.login {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-button button.login {
   background-color: #ff9300;
   border-color: #ff9300;
   border-radius: 28px;
@@ -151,7 +148,7 @@ div.login-modal div.modal-content div.modal-body form.form-login div.form-group 
   color: #fff;
 }
 
-div.login-modal div.modal-content div.modal-body form.form-login div.form-group a.login-link button.login:focus {
+div.login-modal div.modal-content div.modal-body form.form-login div.form-button button.login:focus {
   box-shadow: 0 0 1px 0.2rem rgba(255, 147, 0, 0.3);
 }
 

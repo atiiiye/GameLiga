@@ -126,30 +126,26 @@ div.login-modal {
                     }
                 }
 
-                div.form-group {
+                div.form-button {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    text-decoration: none;
+                    width: 100%;
 
-                    a.login-link {
-                        text-decoration: none;
-                        width: 100%;
+                    button.login {
+                        background-color: $color-orange-1;
+                        border-color: $color-orange-1;
+                        border-radius: 28px;
+                        outline: none;
+                        font-size: 95%;
+                        color: $color-white;
 
-                        button.login {
-                            background-color: $color-orange-1;
-                            border-color: $color-orange-1;
-                            border-radius: 28px;
-                            outline: none;
-                            font-size: 95%;
-                            color: $color-white;
-
-                            &:focus {
-                                box-shadow: 0 0 1px .2rem rgba($color: $color-orange-1, $alpha: .3);
-                            }
+                        &:focus {
+                            box-shadow: 0 0 1px .2rem rgba($color: $color-orange-1, $alpha: .3);
                         }
                     }
-
                 }
             }
 

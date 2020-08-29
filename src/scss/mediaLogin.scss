@@ -1,41 +1,41 @@
 @import 'base';
 
-@media(max-width:767px){
+@media(max-width:767px) {
     div.modal-content {
         margin-top: 11.2%;
-    
+
         div.modal-body {
             width: 100%;
-    
+
             div.modal-title {
                 h2 {
                     font-size: 1.7rem;
-                    span {
-                    }
+
+                    span {}
                 }
-    
+
                 p.text-white {
                     margin-top: .3rem;
                     font-size: 75%;
-    
+
                     a {
                         font-size: 70%;
                     }
                 }
             }
-    
+
             form.form-login {
                 width: 100%;
-    
+
                 div.form-fields {
                     margin-top: .5rem;
                     width: 80%;
-    
+
                     label {
                         font-size: 75%;
                         width: 70%;
                     }
-    
+
                     div.input-group {
                         span {
                             position: absolute;
@@ -43,28 +43,28 @@
                             top: 5px;
                         }
                     }
-    
+
                     input {
                         font-size: 85%;
                     }
-    
+
                     small {
-                        a {
-                        }
+                        a {}
                     }
-                    div.form-validate{
+
+                    div.form-validate {
                         font-size: 85%;
                     }
-    
+
                 }
-    
-    
+
+
                 a.forgot {
                     font-size: 80%;
                     width: 75%;
                 }
-    
-                div.form-group {
+
+                div.form-button {
                     button {
                         font-size: 90%;
                     }
@@ -74,42 +74,42 @@
     }
 }
 
-@media(max-width:455px){
+@media(max-width:455px) {
     div.modal-content {
         margin-top: 13%;
-    
+
         div.modal-body {
             width: 100%;
-    
+
             div.modal-title {
                 h2 {
                     font-size: 1.4rem;
-                    span {
-                    }
+
+                    span {}
                 }
-    
+
                 p.text-white {
                     margin-top: .2rem;
                     font-size: 70%;
-    
+
                     a {
                         font-size: 70%;
                     }
                 }
             }
-    
+
             form.form-login {
                 width: 100%;
-    
+
                 div.form-fields {
                     margin-top: .5rem;
                     width: 80%;
-    
+
                     label {
                         font-size: 75%;
                         width: 70%;
                     }
-    
+
                     div.input-group {
                         span {
                             position: absolute;
@@ -117,29 +117,29 @@
                             top: 5px;
                         }
                     }
-    
+
                     input {
                         font-size: 85%;
                     }
-    
+
                     small {
-                        a {
-                        }
+                        a {}
                     }
-                    div.form-validate{
+
+                    div.form-validate {
                         font-size: 80%;
                         margin-bottom: .25rem;
                     }
-    
+
                 }
-    
-    
+
+
                 a.forgot {
                     font-size: 72%;
                     width: 83%;
                 }
-    
-                div.form-group {
+
+                div.form-button{
                     button {
                         font-size: 88%;
                     }

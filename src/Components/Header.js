@@ -11,7 +11,6 @@ import "./../css/mediaFormlogin.css";
 import logo5 from "./../images/logo5.png";
 
 //import boostrap
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
 
 //import routes

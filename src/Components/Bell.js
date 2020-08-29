@@ -5,7 +5,6 @@ import './../css/reset.css';
 import './../css/Bell.css'
 
 //import boostrap
-import "bootstrap/dist/css/bootstrap.min.css";
 import { NavItem, NavLink, } from 'reactstrap';
 
 //import packages

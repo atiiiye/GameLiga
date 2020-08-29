@@ -47,7 +47,7 @@ body {
     font-size: 80%;
     width: 75%;
   }
-  div.modal-content div.modal-body form.form-login div.form-group button {
+  div.modal-content div.modal-body form.form-login div.form-button button {
     font-size: 90%;
   }
 }
@@ -96,7 +96,7 @@ body {
     font-size: 72%;
     width: 83%;
   }
-  div.modal-content div.modal-body form.form-login div.form-group button {
+  div.modal-content div.modal-body form.form-login div.form-button button {
     font-size: 88%;
   }
 }

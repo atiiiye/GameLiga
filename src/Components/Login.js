@@ -7,7 +7,6 @@ import "./../css/mediaLogin.css";
 import "./../css/toastify.css";
 
 //import boostrap
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form, Modal } from "react-bootstrap";
 
 //import components 
@@ -243,7 +242,7 @@ class Login extends Component {
                                 Forget your password?
                                         </NavLink>
 
-                            <div className="mt-5 form-group w-75">
+                            <div className="mt-5 form-button w-75">
                                 <Button
                                     className={`btn-block login ${
                                         !this.state.errors.username &&

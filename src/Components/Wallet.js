@@ -7,7 +7,6 @@ import './../css/wallet.css'
 
 
 //import boostrap
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Modal, ModalHeader, ModalBody, NavItem, NavLink, } from 'reactstrap';
 
 //import contexts
