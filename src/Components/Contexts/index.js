@@ -19,7 +19,7 @@ export const LoginContext = React.createContext({
 })
 
 export const usernameContext = React.createContext({
-    username: [],
+    username: {},
 })
 
 

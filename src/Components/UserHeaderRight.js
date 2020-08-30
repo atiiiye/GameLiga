@@ -33,16 +33,6 @@ class UserHeaderRight extends Component {
 
     /* {this.props.history.location.state.username} */
 
-    componentDidUpdate() {
-        // return (
-        //     <usernameContext.Consumer>
-        //         {
-        //             value => (value.loginUsername)
-        //         }
-        //     </usernameContext.Consumer>
-        // )
-    }
-
     render() {
         // console.log(this.context)
         return (
@@ -64,8 +54,9 @@ class UserHeaderRight extends Component {
                             {
                                 value => (
                                     <p className="text-muted">
-                                        {console.log(value.loginUsername)}
-                                        {value.loginUsername || value.signinUsername}
+                                        {console.log(value.username)}
+                                        {/* {value.username || value.username} */}
+                                        {/* {value.username} */}
                                     </p>
                                 )
                             }

@@ -32,8 +32,6 @@ import { SignupContext } from './Contexts'
 import { usernameContext } from './Contexts'
 
 
-
-
 class SignUp extends Component {
   state = {
     stateDisplay: true,
@@ -342,7 +340,7 @@ class SignUp extends Component {
 
     if (redirect) {
       return (
-        <usernameContext.Provider value={{ signinUsername: this.state.username }}>
+        <usernameContext.Provider value={{ username: this.state.username }}>
 
           <Redirect to={{
             pathname: '/account'

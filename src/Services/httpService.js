@@ -3,6 +3,8 @@ import axios from 'axios'
 //import packages
 import { toast, Flip, Slide } from 'react-toastify'
 
+axios.defaults.baseURL = "http://2.186.229.181:7580/api"
+
 axios.interceptors.response.use(null, error => {
     const expectedError =
         error.response &&

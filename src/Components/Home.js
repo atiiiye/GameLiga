@@ -3,12 +3,10 @@ import React, { Component } from "react";
 //import components
 import Header from "./Header";
 
-
 //import css
 import "./../css/Home.css";
 import "./../css/mediaHome.css";
 import "./../css/formlogin.css";
-
 
 //import image
 import sidan from "./../images/sidan.png";
@@ -17,7 +15,6 @@ import facebook from "./../images/Icon-facebook.png";
 import instagram from "./../images/Icon-instagram.png";
 import twitch from "./../images/Icon-twitch.png";
 import twitter from "./../images/Icon-twitter.png";
-
 
 //import bootstrap
 import Card from "react-bootstrap/Card";
@@ -81,6 +78,7 @@ class Slider extends Component {
       }
     ]
   };
+
   render() {
     const params = {
       spaceBetween: 30,
@@ -103,10 +101,10 @@ class Slider extends Component {
     };
     // console.log(this.props.history);
 
-
     return (
       <React.Fragment>
-        <Header history={this.props} />
+        {/* <usernameContext.Provider value={{ loginUsername: this.state.username }}> */}
+        <Header /*history={this.props}*/ />
         <section className="main-slider">
           <div className="container-fluid box-slider">
             <div className="row pratition-slider">
@@ -155,6 +153,7 @@ class Slider extends Component {
             </div>
           </div>
         </section>
+        {/* </usernameContext.Provider> */}
       </React.Fragment>
 
     );

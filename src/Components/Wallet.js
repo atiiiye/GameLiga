@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 
-
 //import css
 import './../css/wallet.css'
-
 
 //import boostrap
 import { Button, Modal, ModalHeader, ModalBody, NavItem, NavLink, } from 'reactstrap';

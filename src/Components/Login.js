@@ -164,7 +164,7 @@ class Login extends Component {
 
                 <React.Fragment>
                     {this.state.isLogin}
-                    <usernameContext.Provider value={{ loginUsername: this.state.username }}>
+                    <usernameContext.Provider value={{ username: this.state.username }}>
                         <UserHeaderRight />
                     </usernameContext.Provider >
                     <Redirect to={{
