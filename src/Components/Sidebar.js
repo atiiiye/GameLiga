@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 //import css
-import "./../css/reset.css";
 import "./../css/Sidebar.css";
 import "./../css/mediaSidebar.css"
 

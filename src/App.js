@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import logo from './logo.svg';
 // import './App.css';
 
 
@@ -36,7 +35,7 @@ class App extends Component {
 
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
+          <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
 
           <PrivateRoute exact path="/account" component={UserAccount} />
 

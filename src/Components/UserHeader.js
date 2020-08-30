@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 //import css
-import './../css/reset.css';
 import './../css/UserHeader.css';
 import './../css/mediaUserHeader.css';
 

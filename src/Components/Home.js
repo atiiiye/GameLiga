@@ -5,7 +5,6 @@ import Header from "./Header";
 
 
 //import css
-import "./../css/reset.css";
 import "./../css/Home.css";
 import "./../css/mediaHome.css";
 import "./../css/formlogin.css";

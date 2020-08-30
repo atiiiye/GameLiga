@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 //import css
-import "./../css/reset.css";
 import "./../css/signup.css";
 import "./../css/mediaSignup.css";
 import "./../css/toastify.css";
@@ -247,7 +246,6 @@ class SignUp extends Component {
       {/* <UserHeaderRight /> */ }
       // { window.location = "/account" }
       // <Redirect to={{ pathname: '/account' }} />
-
       this.setState({ redirect: true })
 
       {/* </usernameContext.Provider > */ }
@@ -298,10 +296,6 @@ class SignUp extends Component {
     });
   };
 
-  handleChangeRange = (e) => {
-    this.setState({});
-  };
-
   randomPassword = (length) => {
     let chars =
       "abcdefghijklmnopqrstuvwxyz!@#$%&*ABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
@@ -336,8 +330,15 @@ class SignUp extends Component {
 
 
   render() {
-    const { errors, redirect } = this.state;
+    const { errors, redirect, password } = this.state;
     // console.log(this.props)
+
+    let progressStyle = '';
+
+    if (password.length < 6) progressStyle = "danger";
+    if (password.length >= 6) progressStyle = "warning";
+    if (password.length >= 10) progressStyle = "success";
+
 
     if (redirect) {
       return (
@@ -429,9 +430,8 @@ class SignUp extends Component {
                   <ProgressBar
                     // type="range"
                     className="form-control-plaintext"
-                    variant="none"
+                    variant={progressStyle}
                     now={this.state.password.length * 10}
-                    onChange={(e) => this.handleChangeRange(e.target)}
                     min={0}
                     max={100}
                     name="generate"
