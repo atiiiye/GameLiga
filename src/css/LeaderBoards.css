@@ -46,10 +46,11 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.ti
   width: 80%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.title h1.h1 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.title h2.h1 {
   color: rgba(54, 54, 59, 0.7);
   font-weight: bold;
   text-align: left;
+  font-size: 3rem;
 }
 
 div.container-fluid.leader-boards div.card#content div.all-view-component div.title p.text-muted {
@@ -92,7 +93,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.bu
   background-color: rgba(69, 9, 27, 0.7);
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table {
   width: 80%;
   height: 100%;
   display: flex;
@@ -101,7 +102,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   justify-content: flex-start;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table {
   border: 1px solid rgba(206, 123, 119, 0.7);
   box-shadow: 0 0 0 0.05rem rgba(206, 123, 119, 0.35);
   background-color: rgba(0, 0, 0, 0.15);
@@ -112,7 +113,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   display: flex;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-1.user-info {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-1.user-info {
   padding: 0 1rem;
   display: flex;
   height: 100%;
@@ -120,7 +121,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   justify-content: flex-start;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-1.user-info i.image-icon.fas.fa-user-circle {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-1.user-info i.image-icon.fas.fa-user-circle {
   font-size: 45px;
   width: 45px;
   height: 45px;
@@ -128,7 +129,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   margin: .2rem 1rem .2rem 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-1.user-info p.user-name {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-1.user-info p.user-name {
   display: flex;
   color: rgba(255, 255, 255, 0.7);
   font-size: 90%;
@@ -137,21 +138,21 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   font-weight: 600;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 span.section-2-1,
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 span.section-2-2,
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-2 span.section-2-3 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-2 span.section-2-1,
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-2 span.section-2-2,
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-2 span.section-2-3 {
   color: rgba(255, 255, 255, 0.7);
   display: flex;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-3 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,18 +160,18 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   margin-left: 1rem;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.title-table div.section-3 span.section-3-1 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-3 span.section-3-1 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 98%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.scroll-bar {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.scroll-bar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,11 +182,11 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   height: 98%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content {
   border: 1px solid rgba(206, 123, 119, 0.7);
   box-shadow: 0 0 0 0.05rem rgba(206, 123, 119, 0.35);
   background-color: rgba(0, 0, 0, 0.15);
-  width: 90%;
+  width: 92%;
   height: max-content;
   margin: .5rem;
   display: flex;
@@ -193,35 +194,35 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   justify-content: space-around;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive {
   width: 100%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped {
   width: 100%;
   height: 70%;
   margin-bottom: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table {
   width: 100%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 {
   display: flex;
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid rgba(54, 54, 59, 0.7);
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 {
   display: flex;
   justify-content: space-between;
   width: 45%;
   padding: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title {
   border: 0;
   font-size: 80%;
   font-weight: 600;
@@ -234,13 +235,13 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   top: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 {
   display: flex;
   justify-content: flex-end;
   padding: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 th.header-table-title {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 th.header-table-title {
   border: 0;
   font-size: 80%;
   font-weight: 600;
@@ -253,7 +254,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   top: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -261,14 +262,14 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   box-shadow: 0 0 0 0.05rem rgba(0, 0, 0, 0.7);
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th.header-table-title {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th.header-table-title {
   border: 0;
   font-size: 80%;
   font-weight: 600;
@@ -281,32 +282,32 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   top: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(1) {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(1) {
   width: 35%;
   justify-content: flex-start;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(2) {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(2) {
   width: 20%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(3) {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(3) {
   width: 20%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(4) {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(4) {
   width: 20%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(5) {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-2 div.header-table-part-all th:nth-child(5) {
   width: 20%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table {
   width: 100%;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table {
   width: 100%;
   display: flex;
   align-self: center;
@@ -315,11 +316,11 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   border-bottom: 1px solid rgba(149, 154, 162, 0.5);
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table:hover {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content {
   color: white;
   font-size: 90%;
   font-weight: 600;
@@ -330,13 +331,13 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   padding-right: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data i.fas.fa-medal {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data i.fas.fa-medal {
   display: flex;
   justify-content: center;
   min-width: 10%;
@@ -344,7 +345,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   color: #feb72b;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data div.number {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data div.number {
   display: flex;
   justify-content: center;
   width: 30px;
@@ -352,21 +353,44 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.al
   margin-left: .5rem;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data i.image-icon.fas.fa-user-circle {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data i.image-icon.fas.fa-user-circle {
   min-width: 10%;
   font-size: 30px;
   margin-right: .3rem;
   margin-left: .3rem;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data div.user-name {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table td.body-table-content div.table-data div.user-name {
   display: flex;
   justify-content: center;
   width: 100px;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table:nth-child(2n) {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped tbody.bodys-table tr.body-table:nth-child(2n) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0 0.05rem rgba(0, 0, 0, 0.7);
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollbar-container.vertical {
+  width: 22px;
+  background-color: transparent;
+  border: 1px solid rgba(206, 123, 119, 0.7);
+  position: absolute;
+  left: 1.5%;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollbar-container.vertical div.scrollbar {
+  width: 21px;
+  color: rgba(206, 123, 119, 0.7);
+  background-color: rgba(206, 123, 119, 0.7);
+  border-radius: 28px;
+  position: absolute;
+  right: -1px;
+}
+
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea .scrollbar-container.active,
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area .scrollarea .scrollbar-container:hover {
+  background: gray;
+  opacity: .9 !important;
 }
 /*# sourceMappingURL=LeaderBoards.css.map */

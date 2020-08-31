@@ -226,10 +226,8 @@ class SignUp extends Component {
   };
 
   handleLogin = () => {
-    login();
+    // login();
     this.setState({ redirect: true })
-    console.log('sasas')
-
   }
 
   postData = async () => {
@@ -694,10 +692,6 @@ class SignUp extends Component {
 
           </div>
         </div>
-
-
-
-
       </React.Fragment>
     );
   }

@@ -48,29 +48,74 @@ div.container-fluid.Tutorial div.card#content div.all-view-component div.title {
   width: 50%;
 }
 
-div.container-fluid.Tutorial div.card#content div.all-view-component div.title h1.h1 {
+div.container-fluid.Tutorial div.card#content div.all-view-component div.title h2.h1 {
   color: rgba(54, 54, 59, 0.7);
   font-weight: bold;
   text-align: left;
+  font-size: 3rem;
 }
 
 div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid rgba(149, 154, 162, 0.5);
 }
 
-div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box {
-  width: 40%;
-  height: 30%;
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffffff;
+  border-top: 0;
+  border-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card:nth-child(2n) {
+  border-right: 0;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card:nth-last-child(2n) {
+  border-bottom: 0;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card:nth-last-child(2n-1) {
+  border-bottom: 0;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card:nth-last-child(n-1) {
+  border-bottom: 1px solid #ffffff;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card div.box {
   background-color: rgba(149, 154, 162, 0.9);
   border: 1px solid red;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  width: 85%;
+  height: 85%;
+  background-color: rgba(149, 154, 162, 0.7);
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card div.box div.refresh-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.box-card div.box div.refresh-box svg.refresh-icon {
+  font-size: 50px;
+  color: #959aa2;
+  background-color: rgba(28, 28, 34, 0.7);
+  border-radius: 50%;
 }
 /*# sourceMappingURL=Tutorial.css.map */

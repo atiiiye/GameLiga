@@ -245,7 +245,7 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   background-color: rgba(149, 154, 162, 0.5);
   margin-bottom: 1rem;
   font-size: 90%;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Cambria', 'Cochin', 'Times New Roman', serif, Times, serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,6 +261,11 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   align-self: flex-end;
   font-size: 20px;
   color: #ffffff;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block div.captcha-generate svg.refresh-captcha:active {
+  transform: rotate(270deg);
+  transition: all .1s ease;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register {

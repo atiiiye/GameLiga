@@ -45,11 +45,12 @@ div.container-fluid.leader-boards {
                 margin-left: 1.8rem;
                 width: 80%;
 
-                h1.h1 {
+                h2.h1 {
                     color: rgba($color: $color-gray-1, $alpha: .7);
                     // text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2);
                     font-weight: bold;
                     text-align: left;
+                    font-size: 3rem;
                 }
 
                 p.text-muted {
@@ -94,291 +95,321 @@ div.container-fluid.leader-boards {
                 }
             }
 
-            div.all-view-table {
-                width: 80%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-
-                div.title-table {
-                    border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
-                    box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
-                    background-color: rgba($color: #000000, $alpha: .15);
-                    width: 90%;
-                    height: max-content;
-                    padding: .2rem 0;
-                    margin: .5rem;
-                    display: flex;
-                    // align-items: flex-start;
-
-                    div.section-1.user-info {
-                        padding: 0 1rem;
-                        display: flex;
+            div.scrollarea.area {
+                div.scrollarea-content.content {
+                    div.all-view-table {
+                        width: 80%;
                         height: 100%;
+                        display: flex;
+                        flex-direction: column;
                         align-items: center;
                         justify-content: flex-start;
 
-                        i.image-icon.fas.fa-user-circle {
-                            font-size: 45px;
-                            width: 45px;
-                            height: 45px;
-                            color: rgba($color: #ffffff, $alpha: .7);
-                            margin: .2rem 1rem .2rem 0;
+                        div.title-table {
+                            border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                            box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
+                            background-color: rgba($color: #000000, $alpha: .15);
+                            width: 90%;
+                            height: max-content;
+                            padding: .2rem 0;
+                            margin: .5rem;
+                            display: flex;
+                            // align-items: flex-start;
+
+                            div.section-1.user-info {
+                                padding: 0 1rem;
+                                display: flex;
+                                height: 100%;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                i.image-icon.fas.fa-user-circle {
+                                    font-size: 45px;
+                                    width: 45px;
+                                    height: 45px;
+                                    color: rgba($color: #ffffff, $alpha: .7);
+                                    margin: .2rem 1rem .2rem 0;
+                                }
+
+                                p.user-name {
+                                    display: flex;
+                                    color: rgba($color: #ffffff, $alpha: .7);
+                                    font-size: 90%;
+                                    align-items: center;
+                                    height: 100%;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            div.section-2 {
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                padding: 0;
+
+                                span.section-2-1,
+                                span.section-2-2,
+                                span.section-2-3 {
+                                    color: rgba($color: #ffffff, $alpha: .7);
+                                    display: flex;
+                                }
+                            }
+
+                            div.section-3 {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 0;
+                                margin-left: 1rem;
+
+                                span.section-3-1 {
+                                    color: rgba($color: #ffffff, $alpha: .7);
+                                }
+                            }
                         }
 
-                        p.user-name {
+                        div.scroll-table {
                             display: flex;
-                            color: rgba($color: #ffffff, $alpha: .7);
-                            font-size: 90%;
+                            justify-content: center;
                             align-items: center;
-                            height: 100%;
-                            font-weight: 600;
-                        }
-                    }
+                            width: 98%;
 
-                    div.section-2 {
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        padding: 0;
+                            div.scroll-bar {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                                width: 1%;
+                                margin: .5rem;
+                                margin-right: .1rem;
+                                height: 98%;
+                            }
 
-                        span.section-2-1,
-                        span.section-2-2,
-                        span.section-2-3 {
-                            color: rgba($color: #ffffff, $alpha: .7);
-                            display: flex;
-                        }
-                    }
-
-                    div.section-3 {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 0;
-                        margin-left: 1rem;
-
-                        span.section-3-1 {
-                            color: rgba($color: #ffffff, $alpha: .7);
-                        }
-                    }
-                }
-
-                div.scroll-table {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 98%;
-
-                    div.scroll-bar {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
-                        width: 1%;
-                        margin: .5rem;
-                        margin-right: .1rem;
-                        height: 98%;
-                    }
-
-                    div.table-content {
-                        border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
-                        box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
-                        background-color: rgba($color: #000000, $alpha: .15);
-                        width: 90%;
-                        height: max-content;
-                        margin: .5rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around;
+                            div.table-content {
+                                border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                                box-shadow: 0 0 0 0.05rem rgba($color: $color-pink-3, $alpha: .35);
+                                background-color: rgba($color: #000000, $alpha: .15);
+                                width: 92%;
+                                height: max-content;
+                                margin: .5rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
 
 
-                        div.table-responsive {
-                            width: 100%;
-                            // height: 250px;
-                            // overflow-y: scroll;
-
-                            table.all-table.table.table-striped {
-                                width: 100%;
-                                height: 70%;
-                                margin-bottom: 0;
-
-
-                                thead.headers-table {
+                                div.table-responsive {
                                     width: 100%;
+                                    // height: 250px;
+                                    // overflow-y: scroll;
 
-                                    tr.header-table.line-1 {
-                                        display: flex;
-                                        justify-content: space-between;
+                                    table.all-table.table.table-striped {
                                         width: 100%;
-                                        border-bottom: 1px solid rgba($color: $color-gray-1, $alpha: .7);
+                                        height: 70%;
+                                        margin-bottom: 0;
 
-                                        div.header-table-part-1 {
-                                            display: flex;
-                                            justify-content: space-between;
-                                            width: 45%;
-                                            padding: 0;
 
-                                            th.header-table-title {
-                                                border: 0;
-                                                font-size: 80%;
-                                                font-weight: 600;
-                                                color: rgba($color: #ffffff, $alpha: 1.0);
-                                                width: max-content;
+                                        thead.headers-table {
+                                            width: 100%;
+
+                                            tr.header-table.line-1 {
                                                 display: flex;
-                                                align-self: center;
-                                                justify-content: center;
-                                                position: sticky;
-                                                top: 0;
+                                                justify-content: space-between;
+                                                width: 100%;
+                                                border-bottom: 1px solid rgba($color: $color-gray-1, $alpha: .7);
+
+                                                div.header-table-part-1 {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    width: 45%;
+                                                    padding: 0;
+
+                                                    th.header-table-title {
+                                                        border: 0;
+                                                        font-size: 80%;
+                                                        font-weight: 600;
+                                                        color: rgba($color: #ffffff, $alpha: 1.0);
+                                                        width: max-content;
+                                                        display: flex;
+                                                        align-self: center;
+                                                        justify-content: center;
+                                                        position: sticky;
+                                                        top: 0;
+                                                    }
+                                                }
+
+                                                div.header-table-part-2 {
+                                                    display: flex;
+                                                    justify-content: flex-end;
+                                                    padding: 0;
+                                                    // width: 35%;
+
+                                                    th.header-table-title {
+                                                        border: 0;
+                                                        font-size: 80%;
+                                                        font-weight: 600;
+                                                        color: rgba($color: $color-gray-2, $alpha: .7);
+                                                        width: 100%;
+                                                        display: flex;
+                                                        align-self: center;
+                                                        justify-content: center;
+                                                        position: sticky;
+                                                        top: 0;
+                                                    }
+                                                }
+                                            }
+
+                                            tr.header-table.line-2 {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                width: 100%;
+                                                border-bottom: 1px solid rgba($color: #000000, $alpha: 1.0);
+                                                box-shadow: 0 0 0 0.05rem rgba($color: #000000, $alpha: .7);
+
+                                                div.header-table-part-all {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    width: 100%;
+                                                    padding: 0;
+
+                                                    th.header-table-title {
+                                                        border: 0;
+                                                        font-size: 80%;
+                                                        font-weight: 600;
+                                                        color: rgba($color: #ffffff, $alpha: 1.0);
+                                                        display: flex;
+                                                        align-self: center;
+                                                        justify-content: center;
+                                                        width: max-content;
+                                                        position: sticky;
+                                                        top: 0;
+                                                    }
+
+                                                    th:nth-child(1) {
+                                                        width: 35%;
+                                                        justify-content: flex-start;
+                                                    }
+
+                                                    th:nth-child(2) {
+                                                        width: 20%;
+                                                    }
+
+                                                    th:nth-child(3) {
+                                                        width: 20%;
+                                                    }
+
+                                                    th:nth-child(4) {
+                                                        width: 20%;
+                                                    }
+
+                                                    th:nth-child(5) {
+                                                        width: 20%;
+                                                    }
+                                                }
                                             }
                                         }
 
-                                        div.header-table-part-2 {
-                                            display: flex;
-                                            justify-content: flex-end;
-                                            padding: 0;
-                                            // width: 35%;
+                                        tbody.bodys-table {
+                                            width: 100%;
 
-                                            th.header-table-title {
-                                                border: 0;
-                                                font-size: 80%;
-                                                font-weight: 600;
-                                                color: rgba($color: $color-gray-2, $alpha: .7);
+
+                                            tr.body-table {
                                                 width: 100%;
                                                 display: flex;
                                                 align-self: center;
-                                                justify-content: center;
-                                                position: sticky;
-                                                top: 0;
-                                            }
-                                        }
-                                    }
-
-                                    tr.header-table.line-2 {
-                                        display: flex;
-                                        justify-content: space-between;
-                                        width: 100%;
-                                        border-bottom: 1px solid rgba($color: #000000, $alpha: 1.0);
-                                        box-shadow: 0 0 0 0.05rem rgba($color: #000000, $alpha: .7);
-
-                                        div.header-table-part-all {
-                                            display: flex;
-                                            justify-content: space-between;
-                                            width: 100%;
-                                            padding: 0;
-
-                                            th.header-table-title {
-                                                border: 0;
-                                                font-size: 80%;
-                                                font-weight: 600;
-                                                color: rgba($color: #ffffff, $alpha: 1.0);
-                                                display: flex;
-                                                align-self: center;
-                                                justify-content: center;
-                                                width: max-content;
-                                                position: sticky;
-                                                top: 0;
-                                            }
-
-                                            th:nth-child(1) {
-                                                width: 35%;
                                                 justify-content: flex-start;
-                                            }
+                                                border: 0;
+                                                border-bottom: 1px solid rgba($color: $color-gray-2, $alpha: .5);
 
-                                            th:nth-child(2) {
-                                                width: 20%;
-                                            }
+                                                &:hover {
+                                                    background-color: rgba($color: #ffffff, $alpha: .1);
+                                                }
 
-                                            th:nth-child(3) {
-                                                width: 20%;
-                                            }
-
-                                            th:nth-child(4) {
-                                                width: 20%;
-                                            }
-
-                                            th:nth-child(5) {
-                                                width: 20%;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                tbody.bodys-table {
-                                    width: 100%;
-
-
-                                    tr.body-table {
-                                        width: 100%;
-                                        display: flex;
-                                        align-self: center;
-                                        justify-content: flex-start;
-                                        border: 0;
-                                        border-bottom: 1px solid rgba($color: $color-gray-2, $alpha: .5);
-
-                                        &:hover {
-                                            background-color: rgba($color: #ffffff, $alpha: .1);
-                                        }
-
-                                        td.body-table-content {
-                                            color: rgba($color: #ffffff, $alpha: 1.0);
-                                            font-size: 90%;
-                                            font-weight: 600;
-                                            width: 100%;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            // padding-left: 0;
-                                            padding-right: 0;
-
-                                            div.table-data {
-                                                display: flex;
-                                                justify-content: space-between;
-                                                align-items: center;
-
-                                                i.fas.fa-medal {
+                                                td.body-table-content {
+                                                    color: rgba($color: #ffffff, $alpha: 1.0);
+                                                    font-size: 90%;
+                                                    font-weight: 600;
+                                                    width: 100%;
                                                     display: flex;
                                                     justify-content: center;
-                                                    min-width: 10%;
-                                                    font-size: 28px;
-                                                    color: $color-gold-2;
-                                                }
+                                                    align-items: center;
+                                                    // padding-left: 0;
+                                                    padding-right: 0;
 
-                                                div.number {
-                                                    display: flex;
-                                                    justify-content: center;
-                                                    width: 30px;
-                                                    margin-right: .5rem;
-                                                    margin-left: .5rem;
-                                                }
+                                                    div.table-data {
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        align-items: center;
 
-                                                i.image-icon.fas.fa-user-circle {
-                                                    min-width: 10%;
-                                                    font-size: 30px;
-                                                    margin-right: .3rem;
-                                                    margin-left: .3rem;
-                                                }
+                                                        i.fas.fa-medal {
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            min-width: 10%;
+                                                            font-size: 28px;
+                                                            color: $color-gold-2;
+                                                        }
 
-                                                div.user-name {
-                                                    display: flex;
-                                                    justify-content: center;
-                                                    width: 100px;
+                                                        div.number {
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            width: 30px;
+                                                            margin-right: .5rem;
+                                                            margin-left: .5rem;
+                                                        }
+
+                                                        i.image-icon.fas.fa-user-circle {
+                                                            min-width: 10%;
+                                                            font-size: 30px;
+                                                            margin-right: .3rem;
+                                                            margin-left: .3rem;
+                                                        }
+
+                                                        div.user-name {
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            width: 100px;
+                                                        }
+                                                    }
                                                 }
                                             }
+
+                                            tr.body-table:nth-child(2n) {
+                                                border-bottom: 1px solid rgba($color: #000000, $alpha: .5);
+                                                box-shadow: 0 0 0 0.05rem rgba($color: #000000, $alpha: .7);
+
+                                            }
                                         }
-                                    }
-
-                                    tr.body-table:nth-child(2n) {
-                                        border-bottom: 1px solid rgba($color: #000000, $alpha: .5);
-                                        box-shadow: 0 0 0 0.05rem rgba($color: #000000, $alpha: .7);
-
                                     }
                                 }
                             }
                         }
                     }
                 }
+
+                div.scrollbar-container.vertical {
+                    width: 22px;
+                    background-color: transparent;
+                    border: 1px solid rgba($color: $color-pink-3, $alpha: .7);
+                    position: absolute;
+                    left: 1.5%;
+
+                    div.scrollbar {
+                        width: 21px;
+                        color: rgba($color: $color-pink-3, $alpha: .7);
+                        background-color: rgba($color: $color-pink-3, $alpha: .7);
+                        border-radius: 28px;
+                        position: absolute;
+                        right: -1px;
+
+                    }
+                }
+
+                div.scrollarea .scrollbar-container.active,
+                .scrollarea .scrollbar-container:hover {
+                    background: gray;
+                    opacity: .9 !important;
+                }
+
+
             }
         }
     }

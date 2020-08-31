@@ -56,18 +56,18 @@ class Telegram extends Component {
                                     <p className="user-name">user name</p>
                                 </DropdownItem>
 
-                                <DropdownItem className="massage-send-box mb-1 mt-2">
-                                    <FormGroup className="telegram-icon">
-                                        <Button className="send" type="submit">
-                                            <TelegramIcon />
-                                        </Button>
-                                        <Input
-                                            className="massage-input mt-2 mb-1"
-                                            type="text"
-                                            name="massage"
-                                            autoFocus />
-                                    </FormGroup>
-                                </DropdownItem>
+                                {/* <DropdownItem className="massage-send-box mb-1 mt-2"> */}
+                                <FormGroup className="telegram-icon">
+                                    <button className="send" type="submit">
+                                        <TelegramIcon />
+                                    </button>
+                                    <Input
+                                        className="massage-input mt-2 mb-1"
+                                        type="text"
+                                        name="massage"
+                                        autoFocus />
+                                </FormGroup>
+                                {/* </DropdownItem> */}
 
                             </DropdownMenu>
 

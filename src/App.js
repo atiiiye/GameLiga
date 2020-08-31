@@ -2,10 +2,8 @@ import React, { Component } from "react";
 
 //import components
 import Home from "./Components/Home";
-import UserHeader from "./Components/UserHeader";
 import SignUp from "./Components/SignUp";
 import NotFound from "./Components/NotFound";
-import Header from "./Components/Header.js";
 import UserAccount from "./Components/UserAccount";
 import FinalResult from "./Components/FinalResult";
 import Games from "./Components/Games";
@@ -15,6 +13,7 @@ import Console from "./Components/Console";
 import LeaderBoards from "./Components/LeaderBoards";
 import Chat from "./Components/Chat";
 import Tutorial from "./Components/Tutorial";
+import Shop from "./Components/Shop";
 
 //import Routes
 import PrivateRoute from './Components/Routes/PrivateRoute ';
@@ -33,7 +32,7 @@ class App extends Component {
 
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
+          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
 
           <PrivateRoute exact path="/account" component={UserAccount} />
 
@@ -53,9 +52,11 @@ class App extends Component {
 
           <PrivateRoute exact path="/chat" component={Chat} />
 
-          <Route path="/404" component={NotFound} />
+          <PrivateRoute exact path="/shop" component={Shop} />
 
-          <Route path="" component={NotFound} />
+          <PrivateRoute exact path="/404" component={NotFound} />
+
+          <PrivateRoute exact path="" component={NotFound} />
 
         </Switch>
 

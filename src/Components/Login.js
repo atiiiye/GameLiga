@@ -41,7 +41,7 @@ class Login extends Component {
             password: "",
         },
         redirect: false,
-        isLogin: isLogin(),
+        // isLogin: isLogin(),
     };
     // history = createBrowserHistory()
 
@@ -149,10 +149,10 @@ class Login extends Component {
         });
     };
 
-    handleLogout = () => {
-        logout();
-        this.setState({ isLogin: false })
-    }
+    // handleLogout = () => {
+    //     logout();
+    //     this.setState({ isLogin: false })
+    // }
 
 
     render() {

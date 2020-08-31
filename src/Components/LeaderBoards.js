@@ -25,6 +25,8 @@ class LeaderBoards extends Component {
             width: 400,
             height: 400,
         };
+
+
         return (
             <React.Fragment>
                 <UserHeader />
@@ -34,7 +36,7 @@ class LeaderBoards extends Component {
                         <Card id="content">
                             <div className="all-view-component">
                                 <div className="title">
-                                    <h1 className="h1">Leader boards</h1>
+                                    <h2 className="h1">Leader boards</h2>
                                     <p className="text-muted">
                                         View the weekly, monthly and all-time ranking for XP, earning and trophies
                                     </p>
@@ -47,8 +49,8 @@ class LeaderBoards extends Component {
                                 <ScrollArea
                                     speed={0.9}
                                     className="area"
-                                    // contentClassName="content"
-                                    horizontal={false}
+                                    contentClassName="content"
+                                    // horizontal={false}
                                     vertical={true}
                                 >
                                     <div className="all-view-table">

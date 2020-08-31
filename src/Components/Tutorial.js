@@ -11,6 +11,10 @@ import './../css/Tutorial.css'
 //import bootstrap
 import { Card } from "react-bootstrap";
 
+//import packages
+import RefreshIcon from "@material-ui/icons/Refresh";
+
+
 class Tutorial extends Component {
     state = {}
     render() {
@@ -23,14 +27,40 @@ class Tutorial extends Component {
                         <Card id="content">
                             <div className="all-view-component">
                                 <div className="title">
-                                    <h1 className="h1">Tutorial</h1>
+                                    <h2 className="h1">Tutorial</h2>
                                 </div>
 
                                 <div className="all-box">
-                                    <div className="box"></div>
-                                    <div className="box"></div>
-                                    <div className="box"></div>
-                                    <div className="box"></div>
+                                    <div className="box-card">
+                                        <div className="box">
+                                            <div className="refresh-box">
+                                                <RefreshIcon className="refresh-icon" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="box-card">
+                                        <div className="box">
+                                            <div className="refresh-box">
+                                                <RefreshIcon className="refresh-icon" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="box-card">
+                                        <div className="box">
+                                            <div className="refresh-box">
+                                                <RefreshIcon className="refresh-icon" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="box-card">
+                                        <div className="box">
+                                            <div className="refresh-box">
+                                                <RefreshIcon className="refresh-icon" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
 

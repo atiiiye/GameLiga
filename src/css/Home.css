@@ -113,7 +113,7 @@ section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.
   background: transparent;
   position: relative;
   left: 0;
-  height: max-content;
+  height: 100vh;
   padding-left: 0;
   padding-right: 0;
   width: 90%;
