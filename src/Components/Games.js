@@ -9,7 +9,6 @@ import { Card, Form, FormControl } from "react-bootstrap";
 
 //import images
 import Football from "./../images/football.png";
-import UserLogo from "./../images/Icon-user.png";
 import JoinButton from "./../images/green-button.png";
 
 //import components
@@ -73,7 +72,7 @@ class Games extends Component {
                       <div className="tab-content-left">
                         <div className="section-left">
                           <div className="own-logo">
-                            <img alt="" src={UserLogo} className="user-team-logo" />
+                            <i className="user-team-logo fas fa-user-circle" />
                             <div className="difference">
                               <Form.Control
                                 type="number"
@@ -91,7 +90,7 @@ class Games extends Component {
                             <img alt="" src={Football} className="football-field" />
                           </div>
                           <div className="other-logo">
-                            <img alt="" src={UserLogo} className="user-team-logo" />
+                            <i className="user-team-logo fas fa-user-circle" />
                             <div className="difference">
                               <Form.Control
                                 type="number"

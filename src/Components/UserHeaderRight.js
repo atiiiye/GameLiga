@@ -14,9 +14,6 @@ import Bell from './Bell';
 import Ticket from './Ticket';
 import Profile from './Profile';
 
-//import packages
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
 //import contexts
 import { modalContext } from './Contexts';
 import { TelegramContext } from './Contexts';

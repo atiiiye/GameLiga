@@ -60,9 +60,11 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
   border-radius: 50%;
 }
 
-div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo img.user-team-logo {
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo i.user-team-logo {
   width: 100%;
   height: 100%;
+  font-size: 70px;
+  color: rgba(149, 154, 162, 0.7);
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo div.result-win {
@@ -105,9 +107,11 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
   border: 1px solid red;
 }
 
-div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo img.user-team-logo {
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo i.user-team-logo {
   width: 100%;
   height: 100%;
+  font-size: 70px;
+  color: rgba(149, 154, 162, 0.7);
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo div.result-lose {

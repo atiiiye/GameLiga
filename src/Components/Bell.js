@@ -7,7 +7,6 @@ import './../css/Bell.css'
 import { NavItem, NavLink, } from 'reactstrap';
 
 //import packages
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import BellIcon from '@material-ui/icons/Notifications';
 
 class Bell extends Component {

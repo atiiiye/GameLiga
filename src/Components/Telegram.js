@@ -4,10 +4,9 @@ import React, { Component } from "react";
 import "./../css/telegram.css"
 
 //import bootstrap
-import { Button, NavItem, NavLink, Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Input, FormGroup } from 'reactstrap';
+import { NavItem, NavLink, Dropdown, DropdownMenu, DropdownToggle, DropdownItem, Input, FormGroup } from 'reactstrap';
 
 //import packages
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import TelegramIcon from '@material-ui/icons/Telegram';
 
 //import contexts

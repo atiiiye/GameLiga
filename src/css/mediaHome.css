@@ -117,11 +117,8 @@ body {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
     width: 30px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image {
-    height: 30px;
-  }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image.twitter {
-    height: 28px;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image {
+    font-size: 30px;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.top {
     width: 41px;
@@ -183,11 +180,8 @@ body {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
     width: 30px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image {
-    height: 28px;
-  }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image.twitter {
-    height: 25px;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image {
+    font-size: 28px;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
     height: 60%;
@@ -273,11 +267,8 @@ body {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
     width: 28px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image {
-    height: 25px;
-  }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image.twitter {
-    height: 21px;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image {
+    font-size: 25px;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
     display: flex;
@@ -362,11 +353,8 @@ body {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
     width: 26px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image {
-    height: 24px;
-  }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image.twitter {
-    height: 20px;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image {
+    font-size: 24px;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
     display: flex;
@@ -423,11 +411,8 @@ body {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
     width: 26px;
   }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image {
-    height: 23px;
-  }
-  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image.twitter {
-    height: 19px;
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image {
+    font-size: 23px;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
     height: 60%;

@@ -11,10 +11,6 @@ import "./../css/formlogin.css";
 //import image
 import sidan from "./../images/sidan.png";
 import background2 from "./../images/background2.png";
-import facebook from "./../images/Icon-facebook.png";
-import instagram from "./../images/Icon-instagram.png";
-import twitch from "./../images/Icon-twitch.png";
-import twitter from "./../images/Icon-twitter.png";
 
 //import bootstrap
 import Card from "react-bootstrap/Card";
@@ -59,22 +55,22 @@ class Slider extends Component {
       {
         id: 1,
         name: "facebook",
-        source: facebook,
+        class: 'fab fa-facebook-f',
       },
       {
         id: 2,
         name: "instagram",
-        source: instagram,
+        class: 'fab fa-instagram',
       },
       {
         id: 3,
         name: "twitch",
-        source: twitch,
+        class: 'fab fa-twitch',
       },
       {
         id: 4,
         name: "twitter",
-        source: twitter,
+        class: 'fab fa-twitter',
       }
     ]
   };
@@ -99,6 +95,7 @@ class Slider extends Component {
         },
       },
     };
+
     // console.log(this.props.history);
 
     return (
@@ -109,16 +106,20 @@ class Slider extends Component {
           <div className="container-fluid box-slider">
             <div className="row pratition-slider">
               <div className="sidebar-slider">
+
                 <CardColumns className="card-columns-slider">
                   <div className="line"></div>
                   {this.state.icon.map((item) => (
                     <Card id="social-medias" key={item.id}>
                       <Card.Body id="social-media">
-                        <NavLink className="icon-media" to="/"><img src={item.source} className={`icon-image ${item.name}`} alt={item.name}></img></NavLink>
+                        <NavLink className="icon-media" to="/">
+                          <i className={`icon-image ${item.name} ${item.class}`} />
+                        </NavLink>
                       </Card.Body>
                     </Card>
                   ))}
                 </CardColumns>
+
               </div>
               <Card className="content-slider" id="content">
                 <div className="main-content">

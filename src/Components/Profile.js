@@ -6,9 +6,6 @@ import './../css/Profile.css'
 //import boostrap
 import { NavItem, NavLink, } from 'reactstrap';
 
-//import packages
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
 
 class Profile extends Component {
     state = {

@@ -20,6 +20,9 @@ import PrivateRoute from './Components/Routes/PrivateRoute ';
 import PublicRoute from './Components/Routes/PublicRoute';
 import { Route, Switch, Redirect } from "react-router-dom";
 
+// import packages
+import '@fortawesome/fontawesome-free/css/all.min.css'
+
 class App extends Component {
 
   state = {};

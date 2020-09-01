@@ -97,7 +97,12 @@ section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.
   outline: none;
 }
 
-section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media img.icon-image:focus {
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image {
+  color: rgba(149, 154, 162, 0.6);
+  font-size: 35px;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image:focus {
   outline: none;
 }
 

@@ -89,7 +89,10 @@ section.main-slider {
                                     outline: none;
                                 }
 
-                                img.icon-image {
+                                i.icon-image {
+                                    color: rgba($color: $color-gray-2, $alpha: .6);
+                                    font-size: 35px;
+
                                     &:focus {
                                         outline: none;
                                     }

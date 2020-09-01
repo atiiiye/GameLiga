@@ -12,7 +12,7 @@
                         div.card#social-medias {
                             div.card-body#social-media {
                                 a.icon-media {
-                                    img.icon-image {}
+                                    i.icon-image {}
                                 }
                             }
                         }
@@ -110,7 +110,7 @@
                                 a.icon-media {
                                     width: 35px;
 
-                                    img.icon-image {}
+                                    i.icon-image {}
                                 }
                             }
                         }
@@ -230,12 +230,8 @@
                                 a.icon-media {
                                     width: 30px;
 
-                                    img.icon-image {
-                                        height: 30px;
-                                    }
-
-                                    img.icon-image.twitter {
-                                        height: 28px;
+                                    i.icon-image {
+                                        font-size: 30px;
                                     }
                                 }
                             }
@@ -346,12 +342,8 @@
                                 a.icon-media {
                                     width: 30px;
 
-                                    img.icon-image {
-                                        height: 28px;
-                                    }
-
-                                    img.icon-image.twitter {
-                                        height: 25px;
+                                    i.icon-image {
+                                        font-size: 28px;
                                     }
                                 }
                             }
@@ -484,13 +476,10 @@
                                 a.icon-media {
                                     width: 28px;
 
-                                    img.icon-image {
-                                        height: 25px;
+                                    i.icon-image {
+                                        font-size: 25px;
                                     }
 
-                                    img.icon-image.twitter {
-                                        height: 21px;
-                                    }
                                 }
                             }
                         }
@@ -621,12 +610,8 @@
                                 a.icon-media {
                                     width: 26px;
 
-                                    img.icon-image {
-                                        height: 24px;
-                                    }
-
-                                    img.icon-image.twitter {
-                                        height: 20px;
+                                    i.icon-image {
+                                        font-size: 24px;
                                     }
                                 }
                             }
@@ -734,12 +719,8 @@
                                 a.icon-media {
                                     width: 26px;
 
-                                    img.icon-image {
-                                        height: 23px;
-                                    }
-
-                                    img.icon-image.twitter {
-                                        height: 19px;
+                                    i.icon-image {
+                                        font-size: 23px;
                                     }
                                 }
                             }
@@ -840,9 +821,8 @@
                         div.card#social-medias {
                             div.card-body#social-media {
                                 a.icon-media {
-                                    img.icon-image {}
+                                    i.icon-image {}
 
-                                    img.icon-image.twitter {}
                                 }
                             }
                         }
