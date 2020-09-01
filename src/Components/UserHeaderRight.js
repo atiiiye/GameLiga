@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 //import css
 import './../css/UserHeaderRight.css'
@@ -21,7 +21,7 @@ import { usernameContext } from './Contexts';
 import { LoginContext } from './Contexts';
 
 
-class UserHeaderRight extends Component {
+class UserHeaderRight extends PureComponent {
     state = {
         isOpen: false
     }

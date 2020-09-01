@@ -20,6 +20,8 @@
                 }
 
                 div.content-slider#content {
+                    // height: 100%;
+
                     div.main-content {
                         height: 60%;
 
@@ -118,6 +120,8 @@
                 }
 
                 div.content-slider#content {
+                    height: max-content;
+
                     div.main-content {
                         height: 60%;
 
@@ -240,6 +244,9 @@
                 }
 
                 div.content-slider#content {
+                    height: max-content;
+
+
                     div.main-content {
                         div.titles {
                             div.top {

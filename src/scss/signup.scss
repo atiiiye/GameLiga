@@ -76,7 +76,7 @@ div.card-body#card-form-signup {
             h3.h3 {
                 display: flex;
                 color: $color-white;
-                font-size: 95%;
+                font-size: 100%;
                 font-weight: bold;
                 justify-content: center;
                 margin-top: .5rem;
@@ -142,6 +142,26 @@ div.card-body#card-form-signup {
 
                     }
 
+                    div.password-block {
+                        display: flex;
+
+                        i.far.fa-eye {
+                            color: $color-gray-3;
+                            font-size: 18px;
+                            position: relative;
+                            right: 1.7rem;
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            z-index: 100;
+                        }
+
+                        input[name="password"] {}
+
+
+                    }
+
+
                     span.error {
                         color: #ffffff;
                         font-size: 75%;
@@ -168,6 +188,7 @@ div.card-body#card-form-signup {
                         }
 
                     }
+
 
                     div.progress {
                         padding: 0;
@@ -211,77 +232,18 @@ div.card-body#card-form-signup {
                     margin-right: 0;
                     justify-content: center;
                     align-items: center;
+// input[type="checkbox"] {
+//     width: 25px;
+//     height: 25px;
+//     opacity: 1;
+//     margin-right: 0;
+//     cursor: pointer;
 
-                    input[type="checkbox"] {
-                        width: 25px;
-                        height: 25px;
-                        opacity: 1;
-                        margin-right: 0;
-                        cursor: pointer;
-
-                        &:focus {
-                            box-shadow: 0 0 0 0.1rem rgba($color: $color-blue-1, $alpha: .25);
-                        }
-                    }
-
-                    // input[type ="checkbox"]:checked span.my-checkbox {
-                    //     background: $color-orange-1;
-                    //     border-color: $color-orange-1;
-                    //     animation: wave 0.4s ease;
-                    // }
-
-                    // input[type ="checkbox"]:checked span:first-child svg {
-                    //     stroke-dashoffset: 0;
-                    // }
-
-                    // @keyframes wave {
-                    //     50% {
-                    //         transform: scale(0.9);
-                    //     }
-                    // }
+//     &:focus {
+//         box-shadow: 0 0 0 0.1rem rgba($color: $color-blue-1, $alpha: .25);
+//     }
+// }
                 }
-
-                // span.mycheckbox{
-                //     width: 25px;
-                //     height: 25px;
-                //     background-color:  rgba($color: $color-gray-2, $alpha: .25);
-                //     border:1px solid $color-gray-1;
-                //     border-radius: 4px;
-                //     position: relative;
-                //     left: -2rem;
-                //     cursor: pointer;
-                //     transform: translate3d(0, 0, 0);
-                //     transform: scale(1);
-                //     transition: all 0.2s ease;
-                //     box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
-
-
-                //     svg.check-mark {
-                //         position: absolute;
-                //         width: 12px;
-                //         height: 10px;
-                //         top: 3px;
-                //         left: 2px;
-                //         fill: none;
-                //         stroke: #fff;
-                //         stroke-width: 2;
-                //         stroke-linecap: round;
-                //         stroke-linejoin: round;
-                //         stroke-dasharray: 16px;
-                //         stroke-dashoffset: 16px;
-                //         transition: all 0.3s ease;
-                //         transition-delay: 0.1s;
-                //         transform: translate3d(0, 0, 0);
-                //     }
-
-                //     svg.inline-svg {
-                //         position: absolute;
-                //         width: 0;
-                //         height: 0;
-                //         pointer-events: none;
-                //         user-select: none;
-                //     }
-                // }
 
                 div.captcha-block {
                     display: flex;

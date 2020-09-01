@@ -25,7 +25,9 @@ class Sidebar extends Component {
             <li className="list-item"><NavLink className="nav-link" to="/studi">Studi</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" to="/news">News</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" to="/help">Help center</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" to="/shop">Shop</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" to="/chat">Chat</NavLink></li>
+
           </ul>
         </div>
       </>

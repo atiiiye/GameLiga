@@ -22,7 +22,9 @@ import RangeSlider from "react-bootstrap-range-slider";
 import RefreshIcon from "@material-ui/icons/Refresh";
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Checkbox from '@material-ui/core/Checkbox';
 
+//import services
 import { signup } from "./../Services/userService";
 
 import { login } from '../utils';
@@ -236,8 +238,6 @@ class SignUp extends Component {
 
       // {
 
-      // { login(); }
-
       // <usernameContext.Provider value={{ username: this.state.username }}>
       {/* <UserHeaderRight /> */ }
       // { window.location = "/account" }
@@ -323,6 +323,10 @@ class SignUp extends Component {
     });
   };
 
+  handleChange = (event) => {
+    this.setState(event.target.checkbox);
+  };
+
 
 
   render() {
@@ -376,7 +380,7 @@ class SignUp extends Component {
             >
               <ToastContainer limit={1} />
 
-              <h3 className="h3">Personal Information</h3>
+              <h3 className="h3">Login Information</h3>
 
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 username">
@@ -403,15 +407,20 @@ class SignUp extends Component {
                   Password :
                     </Form.Label>
                 <div className="validation-box col-sm-7">
-                  <Form.Control
-                    type="text"
-                    id="randomPassword"
-                    className="form-control-plaintext"
-                    placeholder="Password"
-                    onChange={this.handleChange}
-                    value={this.state.password}
-                    name="password"
-                  />
+                  <i className='far fa-eye' />
+
+                  <div className="password-block">
+                    <Form.Control
+                      type="text"
+                      id="randomPassword"
+                      className="form-control-plaintext "
+                      placeholder="Password"
+                      onChange={this.handleChange}
+                      value={this.state.password}
+                      name="password"
+                    />
+
+                  </div>
                   {errors.password.length > 0 && (
                     <span className="error">{errors.password}</span>
                   )}
@@ -643,7 +652,7 @@ class SignUp extends Component {
               </Form.Group>
 
               <Form.Group className="row ml-1">
-                <Form.Check
+                {/* <Form.Check
                   inline
                   type="checkbox"
                   className="form-control-plaintext"
@@ -651,18 +660,14 @@ class SignUp extends Component {
                   name="checkbox"
                   onChange={this.handleChangeBox}
                   value={this.state.checkbox}
-                />
+                /> */}
 
-                {/* <span className="mycheckbox">
-                          <svg className="check-mark">
-                              <use xlinkHref="#check"></use>
-                          </svg>
-                          <svg className="inline-svg">
-                              <symbol id="check" viewBox="0 0 12 10">
-                                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                              </symbol>
-                          </svg>
-                      </span> */}
+                <Checkbox
+                  checked={this.state.checkbox}
+                  onChange={this.handleChangeBox}
+                  style={{ color: "rgba(255, 255, 255 , .88)" }}
+                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                />
 
                 <Form.Label className="label-check-box  col-form-label px-0">
                   I confirm that I have read and accepted all the

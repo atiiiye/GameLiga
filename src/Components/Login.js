@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 //import css
 import "./../css/Login.css";
@@ -32,7 +32,7 @@ import { logout, isLogin } from '../utils';
 
 import { login } from "./../Services/userService";
 
-class Login extends Component {
+class Login extends PureComponent {
     state = {
         username: "",
         password: "",

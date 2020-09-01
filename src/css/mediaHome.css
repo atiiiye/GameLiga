@@ -49,6 +49,9 @@ body {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media {
     width: 35px;
   }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content {
+    height: max-content;
+  }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
     height: 60%;
   }
@@ -119,6 +122,9 @@ body {
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image {
     font-size: 30px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content {
+    height: max-content;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.top {
     width: 41px;

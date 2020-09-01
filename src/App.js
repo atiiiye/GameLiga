@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import Home from "./Components/Home";
 import SignUp from "./Components/SignUp";
 import NotFound from "./Components/NotFound";
-import UserAccount from "./Components/UserAccount";
+import Account from "./Components/Account";
 import FinalResult from "./Components/FinalResult";
 import Games from "./Components/Games";
 import Tourny from "./Components/Tourny";
@@ -18,7 +18,7 @@ import Shop from "./Components/Shop";
 //import Routes
 import PrivateRoute from './Components/Routes/PrivateRoute ';
 import PublicRoute from './Components/Routes/PublicRoute';
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 // import packages
 import '@fortawesome/fontawesome-free/css/all.min.css'
@@ -37,7 +37,7 @@ class App extends Component {
 
           <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
 
-          <PrivateRoute exact path="/account" component={UserAccount} />
+          <PrivateRoute exact path="/account" component={Account} />
 
           <PrivateRoute exact path="/tvlive" component={FinalResult} />
 
