@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 
 //import css
 import "./../css/Login.css";
@@ -25,14 +25,13 @@ import { modalContext } from "./Contexts";
 import { LoginContext } from './Contexts';
 import { usernameContext } from './Contexts';
 
-
+//import services
+import { login } from "./../Services/userService";
 
 import { logout, isLogin } from '../utils';
 
 
-import { login } from "./../Services/userService";
-
-class Login extends PureComponent {
+class Login extends Component {
     state = {
         username: "",
         password: "",
@@ -154,16 +153,38 @@ class Login extends PureComponent {
     //     this.setState({ isLogin: false })
     // }
 
+    static getDerivedStateFromProps(props, state) {
+        console.log('Login : getDerivedStateFromProps')
+        return state
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('Login : shouldComponentUpdate')
+        return true
+
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        if (prevProps.redirect) return false
+
+        console.log('Login : getSnapshotBeforeUpdate')
+        return null
+
+    }
+
+    componentDidUpdate() {
+        console.log('Login : componentDidUpdate')
+    }
 
     render() {
         const { errors, redirect } = this.state;
         // console.log(this.props)
+        console.log('Login : renderred')
 
         if (redirect) {
             return (
 
                 <React.Fragment>
-                    {this.state.isLogin}
                     <usernameContext.Provider value={{ username: this.state.username }}>
                         <UserHeaderRight />
                     </usernameContext.Provider >

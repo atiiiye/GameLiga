@@ -15,10 +15,8 @@ import { NavLink, Redirect } from "react-router-dom";
 //import components
 import UserHeaderLeft from "./UserHeaderLeft";
 import UserHeaderRight from "./UserHeaderRight";
-import Login from "./Login";
 
 //import packages
-import RangeSlider from "react-bootstrap-range-slider";
 import RefreshIcon from "@material-ui/icons/Refresh";
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -71,7 +69,6 @@ class SignUp extends Component {
   };
 
   // static contextType = usernameContext;
-
 
   handleChange = (event) => {
     event.preventDefault();
@@ -228,9 +225,8 @@ class SignUp extends Component {
   };
 
   handleLogin = () => {
-    // login();
     this.setState({ redirect: true })
-  }
+  };
 
   postData = async () => {
     try {
@@ -308,7 +304,7 @@ class SignUp extends Component {
 
   componentDidMount() {
     this.randomCode(6);
-  }
+  };
 
   randomCode = (length) => {
     let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
@@ -327,11 +323,29 @@ class SignUp extends Component {
     this.setState(event.target.checkbox);
   };
 
+  static getDerivedStateFromProps(props, state) {
+    console.log('SignUp : getDerivedStateFromProps')
+    return state
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('SignUp : shouldComponentUpdate')
+    return true
+  }
 
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('SignUp : getSnapshotBeforeUpdate')
+    return null
+  }
+
+  componentDidUpdate() {
+    console.log('SignUp : componentDidUpdate')
+  }
 
   render() {
     const { errors, redirect, password } = this.state;
     // console.log(this.props)
+    console.log('SignUp : renderred')
+
 
     let progressStyle = '';
 
@@ -442,6 +456,7 @@ class SignUp extends Component {
                     name="generate"
                   />
 
+
                   <Button
                     className="generate-password mt-3"
                     variant="warning"
@@ -455,13 +470,6 @@ class SignUp extends Component {
                     <span className="error">{errors.generate}</span>
                   )}
 
-                  {/* <RangeSlider 
-                     value={this.state.generate}
-                     onChange={this.handleChange}
-                     min={0}
-                     max={100}
-                    //  variant= "warning"
-                     /> */}
                 </div>
               </Form.Group>
 

@@ -21,7 +21,7 @@ import PublicRoute from './Components/Routes/PublicRoute';
 import { Route, Switch } from "react-router-dom";
 
 // import packages
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 class App extends Component {
 

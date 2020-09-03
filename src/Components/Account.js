@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
 //import css
 import './../css/UserAccount.css';
@@ -24,7 +24,7 @@ import UserHeader from './UserHeader'
 import Sidebar from "./Sidebar";
 
 
-class Account extends PureComponent {
+class Account extends Component {
 
     state = {
         posters: [
@@ -57,6 +57,26 @@ class Account extends PureComponent {
     }
 
 
+    static getDerivedStateFromProps(props, state) {
+        console.log('Account : getDerivedStateFromProps')
+        return state
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('Account : shouldComponentUpdate')
+        return true
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('Account : getSnapshotBeforeUpdate')
+        return null
+
+
+    }
+
+    componentDidUpdate() {
+        console.log('Account : componentDidUpdate')
+    }
 
 
     render() {
@@ -72,6 +92,7 @@ class Account extends PureComponent {
             centeredSlides: true,
             spaceBetween: 20,
         }
+        console.log('Account : renderred')
 
         return (
             <React.Fragment>

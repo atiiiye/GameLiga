@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
 //import css
 import './../css/UserHeaderRight.css'
@@ -21,7 +21,7 @@ import { usernameContext } from './Contexts';
 import { LoginContext } from './Contexts';
 
 
-class UserHeaderRight extends PureComponent {
+class UserHeaderRight extends Component {
     state = {
         isOpen: false
     }
@@ -30,8 +30,34 @@ class UserHeaderRight extends PureComponent {
 
     /* {this.props.history.location.state.username} */
 
+    componentDidMount(context) {
+        // console.log(this.context.username)
+        // if (this.context.username == "undefined") return false
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        console.log('UserHeaderRight : getDerivedStateFromProps')
+        return state
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('UserHeaderRight : shouldComponentUpdate')
+        return true
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('UserHeaderRight : getSnapshotBeforeUpdate')
+        return null
+
+    }
+
+    componentDidUpdate() {
+        console.log('UserHeaderRight : componentDidUpdate')
+    }
     render() {
         // console.log(this.context)
+        console.log('UserHeaderRight : renderred')
+
         return (
 
             <Navbar className="user-header-right" expand="md">
@@ -49,11 +75,11 @@ class UserHeaderRight extends PureComponent {
                     < Collapse isOpen={this.state.isOpen} navbar className="collapse-user row part-1" id="collapse-navbar">
                         <usernameContext.Consumer>
                             {
-                                value => (
+                                context => (
                                     <p className="text-muted">
-                                        {console.log(value.username)}
-                                        {/* {value.username || value.username} */}
-                                        {/* {value.username} */}
+                                        {console.log(context.username)}
+                                        {/* {context.username || context.username} */}
+                                        {/* {context.username} */}
                                     </p>
                                 )
                             }

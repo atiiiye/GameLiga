@@ -40,7 +40,6 @@ class Games extends Component {
     this.setState((prevState) => {
       let box_length = prevState.box.length;
       const new_game = { ownValue: 0, otherValue: 0, id: box_length };
-      // console.log([...prevState.box, prevState.box.push(new_array)]);
       return {
         box: [...prevState.box, new_game],
       };
