@@ -20,17 +20,16 @@ import UserHeaderRight from "./UserHeaderRight";
 import RefreshIcon from "@material-ui/icons/Refresh";
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox from "@material-ui/core/Checkbox";
 
 //import services
 import { signup } from "./../Services/userService";
 
-import { login } from '../utils';
+import { login } from "../utils";
 
 //import contexts
-import { SignupContext } from './Contexts'
-import { usernameContext } from './Contexts'
-
+import { SignupContext } from "./Contexts";
+import { usernameContext } from "./Contexts";
 
 class SignUp extends Component {
   state = {
@@ -225,7 +224,7 @@ class SignUp extends Component {
   };
 
   handleLogin = () => {
-    this.setState({ redirect: true })
+    this.setState({ redirect: true });
   };
 
   postData = async () => {
@@ -235,12 +234,16 @@ class SignUp extends Component {
       // {
 
       // <usernameContext.Provider value={{ username: this.state.username }}>
-      {/* <UserHeaderRight /> */ }
+      {
+        /* <UserHeaderRight /> */
+      }
       // { window.location = "/account" }
       // <Redirect to={{ pathname: '/account' }} />
-      this.setState({ redirect: true })
+      this.setState({ redirect: true });
 
-      {/* </usernameContext.Provider > */ }
+      {
+        /* </usernameContext.Provider > */
+      }
 
       // this.props.history.push({
       //   pathname: "/account",
@@ -304,7 +307,7 @@ class SignUp extends Component {
 
   componentDidMount() {
     this.randomCode(6);
-  };
+  }
 
   randomCode = (length) => {
     let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
@@ -319,58 +322,50 @@ class SignUp extends Component {
     });
   };
 
-  handleChange = (event) => {
-    this.setState(event.target.checkbox);
-  };
-
   static getDerivedStateFromProps(props, state) {
-    console.log('SignUp : getDerivedStateFromProps')
-    return state
+    console.log("SignUp : getDerivedStateFromProps");
+    return state;
   }
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('SignUp : shouldComponentUpdate')
-    return true
+    console.log("SignUp : shouldComponentUpdate");
+    return true;
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log('SignUp : getSnapshotBeforeUpdate')
-    return null
+    console.log("SignUp : getSnapshotBeforeUpdate");
+    return null;
   }
 
   componentDidUpdate() {
-    console.log('SignUp : componentDidUpdate')
+    console.log("SignUp : componentDidUpdate");
   }
 
   render() {
     const { errors, redirect, password } = this.state;
-    // console.log(this.props)
-    console.log('SignUp : renderred')
+    // console.log(this.props);
+    console.log("SignUp : renderred");
 
-
-    let progressStyle = '';
+    let progressStyle = "";
 
     if (password.length < 6) progressStyle = "danger";
     if (password.length >= 6) progressStyle = "warning";
     if (password.length >= 10) progressStyle = "success";
 
-
     if (redirect) {
       return (
         <usernameContext.Provider value={{ username: this.state.username }}>
-
-          <Redirect to={{
-            pathname: '/account'
-          }} />
+          <Redirect
+            to={{
+              pathname: "/account",
+            }}
+          />
           <UserHeaderRight />
-
-        </usernameContext.Provider >
-      )
-
+        </usernameContext.Provider>
+      );
     }
     return (
       <React.Fragment>
         <UserHeaderLeft />
-
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
@@ -384,7 +379,6 @@ class SignUp extends Component {
             </div>
 
             {/* <usernameContext.Provider value={this.state.username}> */}
-
             <Form
               action="#"
               id="signupForm"
@@ -399,7 +393,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 username">
                   User name :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     autoFocus
@@ -419,9 +413,9 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 password">
                   Password :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
-                  <i className='far fa-eye' />
+                  <i className="far fa-eye" />
 
                   <div className="password-block">
                     <Form.Control
@@ -433,7 +427,6 @@ class SignUp extends Component {
                       value={this.state.password}
                       name="password"
                     />
-
                   </div>
                   {errors.password.length > 0 && (
                     <span className="error">{errors.password}</span>
@@ -456,7 +449,6 @@ class SignUp extends Component {
                     name="generate"
                   />
 
-
                   <Button
                     className="generate-password mt-3"
                     variant="warning"
@@ -464,19 +456,18 @@ class SignUp extends Component {
                     onClick={this.randomPassword.bind(this, 11)}
                   >
                     Generate Password
-                      </Button>
+                  </Button>
 
                   {errors.generate.length > 0 && (
                     <span className="error">{errors.generate}</span>
                   )}
-
                 </div>
               </Form.Group>
 
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 confirmPassword">
                   confirm password :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -495,7 +486,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 email">
                   E-mail address :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="email"
@@ -517,7 +508,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 nickName">
                   Nick name :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -537,7 +528,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 fistName">
                   First name :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -556,7 +547,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 lastName">
                   Last name :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -575,7 +566,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 phone">
                   Phone number :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -594,7 +585,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 promotional">
                   Promotional Code :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -613,7 +604,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0 referred">
                   Referred by :
-                    </Form.Label>
+                </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     type="text"
@@ -632,7 +623,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Form.Label className="col-sm-4 col-form-label px-0">
                   Captcha :
-                    </Form.Label>
+                </Form.Label>
                 <div className="captcha-block col-sm-7">
                   <div className="captcha-generate">
                     <div className="captcha">{this.state.captcha}</div>
@@ -674,12 +665,12 @@ class SignUp extends Component {
                   checked={this.state.checkbox}
                   onChange={this.handleChangeBox}
                   style={{ color: "rgba(255, 255, 255 , .88)" }}
-                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                  inputProps={{ "aria-label": "secondary checkbox" }}
                 />
 
                 <Form.Label className="label-check-box  col-form-label px-0">
                   I confirm that I have read and accepted all the
-                      <NavLink to="/rules">rules and condition</NavLink>
+                  <NavLink to="/rules">rules and condition</NavLink>
                 </Form.Label>
               </Form.Group>
 
@@ -688,7 +679,7 @@ class SignUp extends Component {
                 <Button
                   className={`register col-sm-7 ${
                     this.state.checkbox ? "" : "disabled"
-                    }`}
+                  }`}
                   variant="none"
                   type="submit"
                   onClick={
@@ -697,12 +688,11 @@ class SignUp extends Component {
                   }
                 >
                   Register
-                    </Button>
+                </Button>
               </Form.Group>
             </Form>
+
             {/* </usernameContext.Provider> */}
-
-
           </div>
         </div>
       </React.Fragment>

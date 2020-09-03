@@ -16,26 +16,28 @@ import Tutorial from "./Components/Tutorial";
 import Shop from "./Components/Shop";
 
 //import Routes
-import PrivateRoute from './Components/Routes/PrivateRoute ';
-import PublicRoute from './Components/Routes/PublicRoute';
+import PrivateRoute from "./Components/Routes/PrivateRoute ";
+import PublicRoute from "./Components/Routes/PublicRoute";
 import { Route, Switch } from "react-router-dom";
 
 // import packages
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 class App extends Component {
-
   state = {};
 
   render() {
     return (
       <div>
-
         <Switch>
-
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
+          <PublicRoute
+            exact
+            restricted={false}
+            path="/signup"
+            component={SignUp}
+          />
 
           <PrivateRoute exact path="/account" component={Account} />
 
@@ -60,9 +62,7 @@ class App extends Component {
           <PrivateRoute exact path="/404" component={NotFound} />
 
           <PrivateRoute exact path="" component={NotFound} />
-
         </Switch>
-
       </div>
     );
   }
