@@ -220,6 +220,7 @@ class SignUp extends Component {
       this.postData();
     } else {
       console.error("Invalid Form");
+      // this.notifyError();
     }
   };
 
@@ -271,7 +272,7 @@ class SignUp extends Component {
   };
 
   notifyError = () => {
-    toast.error("some data is invalid", {
+    toast.error("ُ Information is invalid", {
       className: "toast-container-error",
       transition: Slide,
       autoClose: 3500,
@@ -328,6 +329,9 @@ class SignUp extends Component {
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log("SignUp : shouldComponentUpdate");
+    if (this.state.captcha === nextState.captcha) {
+      this.randomCode(6);
+    }
     return true;
   }
 

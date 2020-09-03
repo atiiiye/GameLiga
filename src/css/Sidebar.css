@@ -30,8 +30,7 @@ div.sidebar-menu ul.list-menu li.list-item {
 }
 
 div.sidebar-menu ul.list-menu li.list-item:active, div.sidebar-menu ul.list-menu li.list-item:focus, div.sidebar-menu ul.list-menu li.list-item:hover {
-  background-color: rgba(255, 147, 0, 0.12);
-  border-right-color: rgba(255, 147, 0, 0.12);
+  background-color: rgba(255, 147, 0, 0.2);
   border-left-color: rgba(255, 147, 0, 0.12);
 }
 
@@ -39,6 +38,9 @@ div.sidebar-menu ul.list-menu li.list-item a.nav-link {
   color: #fff;
   line-height: 30px;
   font-size: 95%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 div.sidebar-menu ul.list-menu li.list-item a.nav-link::first-letter {
@@ -47,5 +49,9 @@ div.sidebar-menu ul.list-menu li.list-item a.nav-link::first-letter {
 
 div.sidebar-menu ul.list-menu li.list-item a.nav-link:focus {
   outline: none;
+}
+
+div.sidebar-menu ul.list-menu li.list-item a.selected {
+  background-color: rgba(255, 147, 0, 0.2);
 }
 /*# sourceMappingURL=Sidebar.css.map */

@@ -34,7 +34,7 @@ class App extends Component {
 
           <PublicRoute
             exact
-            restricted={false}
+            restricted={true}
             path="/signup"
             component={SignUp}
           />
