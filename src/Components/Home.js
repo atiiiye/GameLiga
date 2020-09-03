@@ -55,31 +55,31 @@ class Slider extends Component {
       {
         id: 1,
         name: "facebook",
-        class: 'fab fa-facebook-f',
+        class: "fab fa-facebook-f",
       },
       {
         id: 2,
         name: "instagram",
-        class: 'fab fa-instagram',
+        class: "fab fa-instagram",
       },
       {
         id: 3,
         name: "twitch",
-        class: 'fab fa-twitch',
+        class: "fab fa-twitch",
       },
       {
         id: 4,
         name: "twitter",
-        class: 'fab fa-twitter',
-      }
-    ]
+        class: "fab fa-twitter",
+      },
+    ],
   };
 
   render() {
     const params = {
       spaceBetween: 30,
       centeredSlides: true,
-      mousewheel: true,
+      // mousewheel: true,
       loop: true,
       autoplay: {
         delay: 3500,
@@ -106,20 +106,20 @@ class Slider extends Component {
           <div className="container-fluid box-slider">
             <div className="row pratition-slider">
               <div className="sidebar-slider">
-
                 <CardColumns className="card-columns-slider">
                   <div className="line"></div>
                   {this.state.icon.map((item) => (
                     <Card id="social-medias" key={item.id}>
                       <Card.Body id="social-media">
                         <NavLink className="icon-media" to="/">
-                          <i className={`icon-image ${item.name} ${item.class}`} />
+                          <i
+                            className={`icon-image ${item.name} ${item.class}`}
+                          />
                         </NavLink>
                       </Card.Body>
                     </Card>
                   ))}
                 </CardColumns>
-
               </div>
               <Card className="content-slider" id="content">
                 <div className="main-content">
@@ -156,7 +156,6 @@ class Slider extends Component {
         </section>
         {/* </usernameContext.Provider> */}
       </React.Fragment>
-
     );
   }
 }
