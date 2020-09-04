@@ -103,7 +103,7 @@ class Login extends Component {
 
   goAccount = async () => {
     try {
-      await login(this.state);
+      const { data } = await login(this.state);
 
       // this.props.dispatch({
       //     type: 'HistorySlider'
@@ -121,14 +121,11 @@ class Login extends Component {
 
       // <usernameContext.Provider value={{ username: this.state.username }}>
       // <UserHeaderRight />
-
+      /* </usernameContext.Provider > */
+      localStorage.setItem("token", data.token)
       this.setState({ redirect: true });
+      this.resetInputs();
 
-      {
-        /* </usernameContext.Provider > */
-      }
-
-      // console.log('aaaaa')
     } catch (err) {
       if (err.response && err.response.status === 400) {
         this.notifyError();
@@ -147,6 +144,13 @@ class Login extends Component {
     });
   };
 
+  resetInputs = () => {
+    this.setState({
+      username: "",
+      password: "",
+    })
+  }
+
   // handleLogout = () => {
   //     logout();
   //     this.setState({ isLogin: false })
@@ -163,8 +167,6 @@ class Login extends Component {
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    // if (prevProps.redirect) return false;
-
     console.log("Login : getSnapshotBeforeUpdate");
     return null;
   }
@@ -261,12 +263,12 @@ class Login extends Component {
                 <Button
                   className={`btn-block login ${
                     !this.state.errors.username &&
-                    !this.state.errors.password &&
-                    this.state.username &&
-                    this.state.password
+                      !this.state.errors.password &&
+                      this.state.username &&
+                      this.state.password
                       ? ""
                       : "disabled"
-                  }`}
+                    }`}
                   variant="none"
                   id="submit"
                   value="Submit"

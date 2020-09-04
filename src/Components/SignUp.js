@@ -329,9 +329,6 @@ class SignUp extends Component {
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log("SignUp : shouldComponentUpdate");
-    if (this.state.captcha === nextState.captcha) {
-      this.randomCode(6);
-    }
     return true;
   }
 
@@ -683,7 +680,7 @@ class SignUp extends Component {
                 <Button
                   className={`register col-sm-7 ${
                     this.state.checkbox ? "" : "disabled"
-                  }`}
+                    }`}
                   variant="none"
                   type="submit"
                   onClick={
