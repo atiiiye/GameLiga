@@ -16,13 +16,14 @@ import { NavLink, Redirect } from "react-router-dom";
 
 //import packages
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
+import { Circle } from "react-preloaders";
 import { connect } from "react-redux";
 import { createBrowserHistory } from "history";
 
 //import contexts
 import { modalContext } from "./Contexts";
-import { LoginContext } from "./Contexts";
 import { usernameContext } from "./Contexts";
+import { LoginContext } from "./Contexts";
 
 //import services
 import { login } from "./../Services/userService";
@@ -38,6 +39,7 @@ class Login extends Component {
       password: "",
     },
     redirect: false,
+    loading: false,
     // isLogin: isLogin(),
   };
   // history = createBrowserHistory()
@@ -104,6 +106,7 @@ class Login extends Component {
   goAccount = async () => {
     try {
       const { data } = await login(this.state);
+      this.setState({ loading: true });
 
       // this.props.dispatch({
       //     type: 'HistorySlider'
@@ -119,16 +122,14 @@ class Login extends Component {
       //     state: { username: this.state.username },
       // });
 
-      // <usernameContext.Provider value={{ username: this.state.username }}>
-      // <UserHeaderRight />
-      /* </usernameContext.Provider > */
-      localStorage.setItem("token", data.token)
+      localStorage.setItem("token", data.token);
       this.setState({ redirect: true });
+      this.setState({ loading: false });
       this.resetInputs();
-
     } catch (err) {
       if (err.response && err.response.status === 400) {
         this.notifyError();
+        this.setState({ loading: false });
       }
     }
   };
@@ -148,13 +149,8 @@ class Login extends Component {
     this.setState({
       username: "",
       password: "",
-    })
-  }
-
-  // handleLogout = () => {
-  //     logout();
-  //     this.setState({ isLogin: false })
-  // }
+    });
+  };
 
   static getDerivedStateFromProps(props, state) {
     console.log("Login : getDerivedStateFromProps");
@@ -176,7 +172,7 @@ class Login extends Component {
   }
 
   render() {
-    const { errors, redirect } = this.state;
+    const { errors, redirect, loading } = this.state;
     // console.log(this.props)
     console.log("Login : renderred");
 
@@ -202,6 +198,14 @@ class Login extends Component {
           show={this.context.modalShow}
           onHide={() => this.context.setModalShow(false)}
         >
+          {loading ? (
+            <Circle
+              time={0}
+              color="#ff9300"
+              background="blur"
+              customLoading={loading}
+            />
+          ) : null}
           <Modal.Body>
             <ToastContainer limit={1} />
             <Modal.Title className="title-login text-center mx-2">
@@ -263,12 +267,12 @@ class Login extends Component {
                 <Button
                   className={`btn-block login ${
                     !this.state.errors.username &&
-                      !this.state.errors.password &&
-                      this.state.username &&
-                      this.state.password
+                    !this.state.errors.password &&
+                    this.state.username &&
+                    this.state.password
                       ? ""
                       : "disabled"
-                    }`}
+                  }`}
                   variant="none"
                   id="submit"
                   value="Submit"

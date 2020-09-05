@@ -15,12 +15,15 @@ import { NavLink, Redirect } from "react-router-dom";
 //import components
 import UserHeaderLeft from "./UserHeaderLeft";
 import UserHeaderRight from "./UserHeaderRight";
+import Progressbar from './Progressbar'
 
 //import packages
 import RefreshIcon from "@material-ui/icons/Refresh";
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Checkbox from "@material-ui/core/Checkbox";
+import { Circle } from "react-preloaders";
+
 
 //import services
 import { signup } from "./../Services/userService";
@@ -65,6 +68,9 @@ class SignUp extends Component {
       captchaInput: "",
     },
     redirect: false,
+    completed: 50,
+    bgColor: "#ffffff",
+    loading:false,
   };
 
   // static contextType = usernameContext;
@@ -231,33 +237,18 @@ class SignUp extends Component {
   postData = async () => {
     try {
       await signup(this.state);
-
-      // {
-
-      // <usernameContext.Provider value={{ username: this.state.username }}>
-      {
-        /* <UserHeaderRight /> */
-      }
-      // { window.location = "/account" }
-      // <Redirect to={{ pathname: '/account' }} />
+      this.notifySuccess();
+      this.setState({ loading: true });
       this.setState({ redirect: true });
+      this.setState({ loading: false });
 
-      {
-        /* </usernameContext.Provider > */
-      }
-
-      // this.props.history.push({
-      //   pathname: "/account",
-      //   state: { username: this.state.username },
-      // });
-
-      // }
     } catch (err) {
       if (err.response && err.response.status === 400) {
+        this.notifyError();
+        this.setState({ loading: false });
         // const errors = { ...this.state.errors }
         // errors.username = 'Username or E-mail is invalid ';
         // this.setState({ errors })
-        this.notifyError();
       }
     }
   };
@@ -342,7 +333,7 @@ class SignUp extends Component {
   }
 
   render() {
-    const { errors, redirect, password } = this.state;
+    const { errors, redirect, password, loading } = this.state;
     // console.log(this.props);
     console.log("SignUp : renderred");
 
@@ -356,9 +347,7 @@ class SignUp extends Component {
       return (
         <usernameContext.Provider value={{ username: this.state.username }}>
           <Redirect
-            to={{
-              pathname: "/account",
-            }}
+            to={{ pathname: "/account" }}
           />
           <UserHeaderRight />
         </usernameContext.Provider>
@@ -367,6 +356,14 @@ class SignUp extends Component {
     return (
       <React.Fragment>
         <UserHeaderLeft />
+        {loading ? (
+          <Circle
+            time={0}
+            color="#ff9300"
+            background="blur"
+            customLoading={loading}
+          />
+        ) : null}
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
@@ -441,14 +438,19 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <ProgressBar
-                    // type="range"
                     className="form-control-plaintext"
                     variant={progressStyle}
                     now={this.state.password.length * 10}
                     min={0}
                     max={100}
-                    name="generate"
+                    name="progressbar"
                   />
+                  {/* 
+                  <Progressbar
+                    className="form-control-plaintext"
+                    bgcolor={this.state.bgColor}
+                    completed={this.state.completed}
+                  /> */}
 
                   <Button
                     className="generate-password mt-3"
@@ -679,8 +681,18 @@ class SignUp extends Component {
                 {/* <div className="col-form-label"></div> */}
                 <Button
                   className={`register col-sm-7 ${
-                    this.state.checkbox ? "" : "disabled"
-                    }`}
+                    this.validateForm(this.state.errors) &&
+                    this.state.checkbox &&
+                    this.state.username &&
+                    this.state.password &&
+                    this.state.confirmPassword &&
+                    this.state.email &&
+                    this.state.nickName &&
+                    this.state.phone &&
+                    this.state.captchaInput
+                      ? ""
+                      : "disabled"
+                  }`}
                   variant="none"
                   type="submit"
                   onClick={

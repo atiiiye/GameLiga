@@ -26,17 +26,17 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 class App extends Component {
   state = {};
 
+  componentDidMount() {
+    document.title="Game Liga"
+  }
+
   render() {
     return (
       <div>
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute
-            exact
-            restricted={true}
-            path="/signup"
-            component={SignUp}
+          <PublicRoute exact restricted={false} path="/signup" component={SignUp}
           />
 
           <PrivateRoute exact path="/account" component={Account} />
