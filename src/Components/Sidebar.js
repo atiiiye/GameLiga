@@ -16,8 +16,8 @@ class Sidebar extends Component {
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/account">My account</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/console">Console</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/games">Games</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/liga">Liga</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/tourny">Tourny</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/liga">Liga</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/tvlive">TvLive</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/tutorial">Tutorial</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/Leader-boards">Leader boards</NavLink></li>

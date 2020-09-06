@@ -22,7 +22,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 class Games extends Component {
   state = {
-    stateDisplay: true,
     box: [
       {
         ownValue: 0,
@@ -46,13 +45,6 @@ class Games extends Component {
     });
   };
 
-  handlePrevent = (e) => {
-    e.preventDefault();
-  };
-
-  displayHandler = () => {
-    this.setState({ stateDisplay: true });
-  };
 
   render() {
     return (

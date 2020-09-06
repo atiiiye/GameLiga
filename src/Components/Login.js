@@ -27,8 +27,8 @@ import { LoginContext } from "./Contexts";
 
 //import services
 import { login } from "./../Services/userService";
-
 import { logout, isLogin } from "../utils";
+
 
 class Login extends Component {
   state = {
@@ -107,6 +107,14 @@ class Login extends Component {
     try {
       const { data } = await login(this.state);
       this.setState({ loading: true });
+      // console.log("loading", this.state.loading);
+      localStorage.setItem("token", data.token);
+      this.setState({ loading: false });
+      this.setState({ redirect: true });
+      // this.notifySuccess();
+      this.resetInputs();
+
+      // console.log("loading", this.state.loading);
 
       // this.props.dispatch({
       //     type: 'HistorySlider'
@@ -121,11 +129,6 @@ class Login extends Component {
       //     // pathname: "/account",
       //     state: { username: this.state.username },
       // });
-
-      localStorage.setItem("token", data.token);
-      this.setState({ redirect: true });
-      this.setState({ loading: false });
-      this.resetInputs();
     } catch (err) {
       if (err.response && err.response.status === 400) {
         this.notifyError();
@@ -142,6 +145,15 @@ class Login extends Component {
       draggable: true,
       closeOnClick: true,
       // position: "relative",
+    });
+  };
+
+  notifySuccess = () => {
+    toast.success("Success create account , Please wait", {
+      className: "toast-container-success",
+      transition: Slide,
+      autoClose: 3500,
+      closeOnClick: true,
     });
   };
 
@@ -180,14 +192,14 @@ class Login extends Component {
       return (
         <React.Fragment>
           <usernameContext.Provider value={{ username: this.state.username }}>
+            <Redirect
+              to={{
+                pathname: "/account",
+                // state: { username: this.state.username }
+              }}
+            />
             <UserHeaderRight />
           </usernameContext.Provider>
-          <Redirect
-            to={{
-              pathname: "/account",
-              // state: { username: this.state.username }
-            }}
-          />
         </React.Fragment>
       );
     }
@@ -291,8 +303,8 @@ class Login extends Component {
 
 // const mapStateToProps = (state) => {
 //     return {
-//         history: state.history
-//     }
+//       username: state.username,
+//     };
 // }
 
 export default Login;

@@ -15,10 +15,10 @@ import Ticket from "./Ticket";
 import Profile from "./Profile";
 
 //import contexts
-import { modalContext } from "./Contexts";
-import { TelegramContext } from "./Contexts";
 import { usernameContext } from "./Contexts";
-import { LoginContext } from "./Contexts";
+// import { modalContext } from "./Contexts";
+// import { TelegramContext } from "./Contexts";
+// import { LoginContext } from "./Contexts";
 
 class UserHeaderRight extends Component {
   state = {
@@ -75,8 +75,7 @@ class UserHeaderRight extends Component {
             <usernameContext.Consumer>
               {(context) => (
                 <p className="text-muted">
-                  {console.log(context.username)}
-                  {/* {context.username || context.username} */}
+                  {console.log("username :", context.username)}
                   {/* {context.username} */}
                 </p>
               )}
@@ -93,5 +92,11 @@ class UserHeaderRight extends Component {
     );
   }
 }
+
+// const mapStateToProps = (state) => {
+//     return {
+//       username: state.username,
+//     };
+// }
 
 export default UserHeaderRight;

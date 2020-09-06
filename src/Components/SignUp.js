@@ -15,7 +15,7 @@ import { NavLink, Redirect } from "react-router-dom";
 //import components
 import UserHeaderLeft from "./UserHeaderLeft";
 import UserHeaderRight from "./UserHeaderRight";
-import Progressbar from './Progressbar'
+import Progressbar from "./Progressbar";
 
 //import packages
 import RefreshIcon from "@material-ui/icons/Refresh";
@@ -23,7 +23,6 @@ import { ToastContainer, toast, Flip, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Circle } from "react-preloaders";
-
 
 //import services
 import { signup } from "./../Services/userService";
@@ -70,7 +69,8 @@ class SignUp extends Component {
     redirect: false,
     completed: 50,
     bgColor: "#ffffff",
-    loading:false,
+    loading: false,
+    type: "text",
   };
 
   // static contextType = usernameContext;
@@ -237,11 +237,10 @@ class SignUp extends Component {
   postData = async () => {
     try {
       await signup(this.state);
-      this.notifySuccess();
       this.setState({ loading: true });
-      this.setState({ redirect: true });
+      this.notifySuccess();
       this.setState({ loading: false });
-
+      this.setState({ redirect: true });
     } catch (err) {
       if (err.response && err.response.status === 400) {
         this.notifyError();
@@ -263,7 +262,7 @@ class SignUp extends Component {
   };
 
   notifyError = () => {
-    toast.error("ُ Information is invalid", {
+    toast.error("Your Information is invalid", {
       className: "toast-container-error",
       transition: Slide,
       autoClose: 3500,
@@ -314,6 +313,12 @@ class SignUp extends Component {
     });
   };
 
+  handleVisiblePassword = () => {
+    this.setState(({ type }) => ({
+      type: type === "text" ? "password" : "text",
+    }))
+  };
+
   static getDerivedStateFromProps(props, state) {
     console.log("SignUp : getDerivedStateFromProps");
     return state;
@@ -346,9 +351,7 @@ class SignUp extends Component {
     if (redirect) {
       return (
         <usernameContext.Provider value={{ username: this.state.username }}>
-          <Redirect
-            to={{ pathname: "/account" }}
-          />
+          <Redirect to={{ pathname: "/account" }} />
           <UserHeaderRight />
         </usernameContext.Provider>
       );
@@ -413,11 +416,10 @@ class SignUp extends Component {
                   Password :
                 </Form.Label>
                 <div className="validation-box col-sm-7">
-                  <i className="far fa-eye" />
 
                   <div className="password-block">
                     <Form.Control
-                      type="text"
+                      type={this.state.type}
                       id="randomPassword"
                       className="form-control-plaintext "
                       placeholder="Password"
@@ -425,6 +427,10 @@ class SignUp extends Component {
                       value={this.state.password}
                       name="password"
                     />
+                  <i
+                    className="far fa-eye"
+                    onClick={this.handleVisiblePassword}
+                  />
                   </div>
                   {errors.password.length > 0 && (
                     <span className="error">{errors.password}</span>
