@@ -425,10 +425,10 @@ class SignUp extends Component {
                       value={this.state.password}
                       name="password"
                     />
-                  <i
-                    className="far fa-eye"
-                    onClick={this.handleVisiblePassword}
-                  />
+                    <i
+                      className="far fa-eye"
+                      onClick={this.handleVisiblePassword}
+                    />
                   </div>
                   {errors.password.length > 0 && (
                     <span className="error">{errors.password}</span>
@@ -476,14 +476,21 @@ class SignUp extends Component {
                   confirm password :
                 </Form.Label>
                 <div className="validation-box col-sm-7">
-                  <Form.Control
-                    type="text"
-                    className="form-control-plaintext"
-                    placeholder="confirm password"
-                    name="confirmPassword"
-                    value={this.state.confirmPassword}
-                    onChange={this.handleChange}
-                  />
+                  <div className="password-block">
+
+                    <Form.Control
+                      type="text"
+                      className="form-control-plaintext"
+                      placeholder="confirm password"
+                      name="confirmPassword"
+                      value={this.state.confirmPassword}
+                      onChange={this.handleChange}
+                    />
+                    <i
+                      className="far fa-eye"
+                      onClick={this.handleVisiblePassword}
+                    />
+                  </div>
                   {errors.confirmPassword.length > 0 && (
                     <span className="error">{errors.confirmPassword}</span>
                   )}
@@ -686,17 +693,17 @@ class SignUp extends Component {
                 <Button
                   className={`register col-sm-7 ${
                     this.validateForm(this.state.errors) &&
-                    this.state.checkbox &&
-                    this.state.username &&
-                    this.state.password &&
-                    this.state.confirmPassword &&
-                    this.state.email &&
-                    this.state.nickName &&
-                    this.state.phone &&
-                    this.state.captchaInput
+                      this.state.checkbox &&
+                      this.state.username &&
+                      this.state.password &&
+                      this.state.confirmPassword &&
+                      this.state.email &&
+                      this.state.nickName &&
+                      this.state.phone &&
+                      this.state.captchaInput
                       ? ""
                       : "disabled"
-                  }`}
+                    }`}
                   variant="none"
                   type="submit"
                   onClick={
