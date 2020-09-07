@@ -357,14 +357,12 @@ class SignUp extends Component {
     return (
       <React.Fragment>
         <UserHeaderLeft />
-        {loading ? (
           <Circle
             time={0}
             color="#ff9300"
             background="blur"
             customLoading={loading}
           />
-        ) : null}
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
@@ -476,8 +474,6 @@ class SignUp extends Component {
                   confirm password :
                 </Form.Label>
                 <div className="validation-box col-sm-7">
-                  <div className="password-block">
-
                     <Form.Control
                       type="text"
                       className="form-control-plaintext"
@@ -486,11 +482,6 @@ class SignUp extends Component {
                       value={this.state.confirmPassword}
                       onChange={this.handleChange}
                     />
-                    <i
-                      className="far fa-eye"
-                      onClick={this.handleVisiblePassword}
-                    />
-                  </div>
                   {errors.confirmPassword.length > 0 && (
                     <span className="error">{errors.confirmPassword}</span>
                   )}

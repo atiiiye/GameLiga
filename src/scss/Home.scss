@@ -94,7 +94,11 @@ section.main-slider {
                                     font-size: 35px;
 
                                     &:focus {
-                                        outline: none;
+                                        outline: none;  
+                                    }
+                                    
+                                    &:hover{
+                                        color: rgba($color: #ffffff, $alpha: .75);
                                     }
                                 }
                             }

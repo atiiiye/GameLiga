@@ -10,6 +10,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 
 //import components
 import UserHeaderRight from "./UserHeaderRight";
+import Loader from './Loader'
 
 //import routes
 import { NavLink, Redirect } from "react-router-dom";
@@ -29,7 +30,6 @@ import { LoginContext } from "./Contexts";
 import { login } from "./../Services/userService";
 import { logout, isLogin } from "../utils";
 
-
 class Login extends Component {
   state = {
     username: "",
@@ -39,7 +39,7 @@ class Login extends Component {
       password: "",
     },
     redirect: false,
-    loading: false,
+    loading: true,
     // isLogin: isLogin(),
   };
   // history = createBrowserHistory()
@@ -90,7 +90,6 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     event.preventDefault();
-
     if (
       this.validateForm(this.state.errors) &&
       this.state.username &&
@@ -108,13 +107,13 @@ class Login extends Component {
       const { data } = await login(this.state);
       this.setState({ loading: true });
       localStorage.setItem("token", data.token);
-      this.setState({ loading: false });
-      this.notifySuccess();
+      // this.notifySuccess();
       this.setState({ redirect: true });
       this.resetInputs();
+      this.setState({ loading: false });
 
       // this.props.dispatch({
-      //     type: 'HistorySlider'
+      //     type: 'LOGIN'
       // })
 
       // this.props.history.push({
@@ -141,7 +140,7 @@ class Login extends Component {
       autoClose: 3500,
       draggable: true,
       closeOnClick: true,
-      // position: "relative",
+      // position: "top-right",
     });
   };
 
@@ -151,6 +150,7 @@ class Login extends Component {
       transition: Slide,
       autoClose: 3500,
       closeOnClick: true,
+      draggable: true,
     });
   };
 
@@ -185,10 +185,9 @@ class Login extends Component {
     // console.log(this.props)
     console.log("Login : renderred");
 
-    if (redirect) {
+    if (this.state.redirect) {
       return (
         <React.Fragment>
-
           <usernameContext.Provider value={{ username: this.state.username }}>
             <Redirect
               to={{
@@ -203,21 +202,14 @@ class Login extends Component {
     }
     return (
       <React.Fragment>
+        <ToastContainer limit={1} />
         <Modal
           className="login-modal"
           show={this.context.modalShow}
           onHide={() => this.context.setModalShow(false)}
         >
-          {loading ? (
-            <Circle
-              time={0}
-              color="#ff9300"
-              background="blur"
-              customLoading={loading}
-            />
-          ) : null}
           <Modal.Body>
-            <ToastContainer limit={1} />
+            <Loader />
             <Modal.Title className="title-login text-center mx-2">
               <h2>
                 Welcome <span>back</span>
@@ -232,6 +224,13 @@ class Login extends Component {
                 </NavLink>
               </p>
             </Modal.Title>
+            <Circle
+          time={0}
+          color="#ff9300"
+          background="blur"
+          customLoading={loading}
+          // animation="slide-down"
+        />
 
             <Form
               action="#"

@@ -106,6 +106,10 @@ section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.
   outline: none;
 }
 
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider div.card#social-medias div.card-body#social-media a.icon-media i.icon-image:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content {
   display: flex;
   flex-direction: column;

@@ -29,10 +29,6 @@ class UserHeaderRight extends Component {
 
   /* {this.props.history.location.state.username} */
 
-  //   componentDidMount(context) {
-  // console.log(this.context.username)
-  // if (this.context.username == "undefined") return false
-  //   }
 
   static getDerivedStateFromProps(props, state) {
     console.log("UserHeaderRight : getDerivedStateFromProps");
@@ -77,7 +73,7 @@ class UserHeaderRight extends Component {
             <usernameContext.Consumer>
               {(context) => (
                 <p className="text-muted">
-                  {/* {console.log("username :", context.username)} */}
+                  {console.log("username :", context.username)}
                   {/* {context.username} */}
                 </p>
               )}
@@ -87,7 +83,8 @@ class UserHeaderRight extends Component {
             {/* <div className="row part-2"> */}
             <Bell />
             <Telegram />
-            <Wallet /> {/* </div> */}
+            <Wallet />
+            {/* </div> */}
           </Collapse>
         </div>
       </Navbar>
