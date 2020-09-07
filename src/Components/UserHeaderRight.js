@@ -54,6 +54,8 @@ class UserHeaderRight extends Component {
 
   render() {
     console.log("UserHeaderRight : renderred");
+    // console.log(this.state)
+
     return (
       <Navbar className="user-header-right" expand="md">
         <div className="hamburger-menu px-0" data-target="#collapse-navbar">
@@ -75,7 +77,7 @@ class UserHeaderRight extends Component {
             <usernameContext.Consumer>
               {(context) => (
                 <p className="text-muted">
-                  {console.log("username :", context.username)}
+                  {/* {console.log("username :", context.username)} */}
                   {/* {context.username} */}
                 </p>
               )}

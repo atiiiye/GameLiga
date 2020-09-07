@@ -107,14 +107,11 @@ class Login extends Component {
     try {
       const { data } = await login(this.state);
       this.setState({ loading: true });
-      // console.log("loading", this.state.loading);
       localStorage.setItem("token", data.token);
       this.setState({ loading: false });
+      this.notifySuccess();
       this.setState({ redirect: true });
-      // this.notifySuccess();
       this.resetInputs();
-
-      // console.log("loading", this.state.loading);
 
       // this.props.dispatch({
       //     type: 'HistorySlider'
@@ -191,6 +188,7 @@ class Login extends Component {
     if (redirect) {
       return (
         <React.Fragment>
+
           <usernameContext.Provider value={{ username: this.state.username }}>
             <Redirect
               to={{
