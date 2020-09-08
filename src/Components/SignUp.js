@@ -16,6 +16,7 @@ import { NavLink, Redirect } from "react-router-dom";
 import UserHeaderLeft from "./UserHeaderLeft";
 import UserHeaderRight from "./UserHeaderRight";
 import Progressbar from "./Progressbar";
+import Loader from "./Loader";
 
 //import packages
 import RefreshIcon from "@material-ui/icons/Refresh";
@@ -30,7 +31,6 @@ import { signup } from "./../Services/userService";
 import { login } from "../utils";
 
 //import contexts
-import { SignupContext } from "./Contexts";
 import { usernameContext } from "./Contexts";
 
 class SignUp extends Component {
@@ -233,16 +233,16 @@ class SignUp extends Component {
   };
 
   postData = async () => {
+    this.setState({ loading: true });
     try {
       await signup(this.state);
-      this.setState({ loading: true });
       this.notifySuccess();
-      this.setState({ loading: false });
       this.setState({ redirect: true });
+      this.setState({ loading: false });
     } catch (err) {
       if (err.response && err.response.status === 400) {
-        this.notifyError();
         this.setState({ loading: false });
+        this.notifyError();
         // const errors = { ...this.state.errors }
         // errors.username = 'Username or E-mail is invalid ';
         // this.setState({ errors })
@@ -325,12 +325,10 @@ class SignUp extends Component {
     console.log("SignUp : shouldComponentUpdate");
     return true;
   }
-
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log("SignUp : getSnapshotBeforeUpdate");
     return null;
   }
-
   componentDidUpdate() {
     console.log("SignUp : componentDidUpdate");
   }
@@ -357,12 +355,7 @@ class SignUp extends Component {
     return (
       <React.Fragment>
         <UserHeaderLeft />
-          <Circle
-            time={0}
-            color="#ff9300"
-            background="blur"
-            customLoading={loading}
-          />
+        
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
@@ -382,7 +375,7 @@ class SignUp extends Component {
               className="form-signup"
               onSubmit={this.handleSubmit}
               method="post"
-            >
+              >
               <ToastContainer limit={1} />
 
               <h3 className="h3">Login Information</h3>
@@ -400,10 +393,10 @@ class SignUp extends Component {
                     name="username"
                     onChange={this.handleChange}
                     value={this.state.username}
-                  />
+                    />
                   {errors.username.length > 0 && (
                     <span className="error">{errors.username}</span>
-                  )}
+                    )}
                 </div>
               </Form.Group>
 
@@ -412,7 +405,6 @@ class SignUp extends Component {
                   Password :
                 </Form.Label>
                 <div className="validation-box col-sm-7">
-
                   <div className="password-block">
                     <Form.Control
                       type={this.state.type}
@@ -422,15 +414,15 @@ class SignUp extends Component {
                       onChange={this.handleChange}
                       value={this.state.password}
                       name="password"
-                    />
+                      />
                     <i
                       className="far fa-eye"
                       onClick={this.handleVisiblePassword}
-                    />
+                      />
                   </div>
                   {errors.password.length > 0 && (
                     <span className="error">{errors.password}</span>
-                  )}
+                    )}
                 </div>
               </Form.Group>
 
@@ -446,7 +438,7 @@ class SignUp extends Component {
                     min={0}
                     max={100}
                     name="progressbar"
-                  />
+                    />
                   {/* 
                   <Progressbar
                     className="form-control-plaintext"
@@ -459,13 +451,13 @@ class SignUp extends Component {
                     variant="warning"
                     type="button"
                     onClick={this.randomPassword.bind(this, 11)}
-                  >
+                    >
                     Generate Password
                   </Button>
 
                   {errors.generate.length > 0 && (
                     <span className="error">{errors.generate}</span>
-                  )}
+                    )}
                 </div>
               </Form.Group>
 
@@ -474,17 +466,17 @@ class SignUp extends Component {
                   confirm password :
                 </Form.Label>
                 <div className="validation-box col-sm-7">
-                    <Form.Control
-                      type="text"
-                      className="form-control-plaintext"
-                      placeholder="confirm password"
-                      name="confirmPassword"
-                      value={this.state.confirmPassword}
-                      onChange={this.handleChange}
+                  <Form.Control
+                    type="text"
+                    className="form-control-plaintext"
+                    placeholder="confirm password"
+                    name="confirmPassword"
+                    value={this.state.confirmPassword}
+                    onChange={this.handleChange}
                     />
                   {errors.confirmPassword.length > 0 && (
                     <span className="error">{errors.confirmPassword}</span>
-                  )}
+                    )}
                 </div>
               </Form.Group>
 
@@ -501,12 +493,20 @@ class SignUp extends Component {
                     value={this.state.email}
                     onChange={this.handleChange}
                     noValidate
-                  />
+                    />
                   {errors.email.length > 0 && (
                     <span className="error">{errors.email}</span>
-                  )}
+                    )}
                 </div>
               </Form.Group>
+                    {loading && <Loader />}
+            
+                    {/* <Circle
+                        time={0}
+                        color="#ff9300"
+                        background="blur"
+                        customLoading={loading}
+                      /> */}
 
               <h3 className="h3">Personal Information</h3>
 
@@ -684,17 +684,17 @@ class SignUp extends Component {
                 <Button
                   className={`register col-sm-7 ${
                     this.validateForm(this.state.errors) &&
-                      this.state.checkbox &&
-                      this.state.username &&
-                      this.state.password &&
-                      this.state.confirmPassword &&
-                      this.state.email &&
-                      this.state.nickName &&
-                      this.state.phone &&
-                      this.state.captchaInput
+                    this.state.checkbox &&
+                    this.state.username &&
+                    this.state.password &&
+                    this.state.confirmPassword &&
+                    this.state.email &&
+                    this.state.nickName &&
+                    this.state.phone &&
+                    this.state.captchaInput
                       ? ""
                       : "disabled"
-                    }`}
+                  }`}
                   variant="none"
                   type="submit"
                   onClick={

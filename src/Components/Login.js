@@ -39,7 +39,7 @@ class Login extends Component {
       password: "",
     },
     redirect: false,
-    loading: true,
+    loading: false,
     // isLogin: isLogin(),
   };
   // history = createBrowserHistory()
@@ -103,14 +103,15 @@ class Login extends Component {
   };
 
   goAccount = async () => {
+    this.setState({ loading: true });
     try {
       const { data } = await login(this.state);
-      this.setState({ loading: true });
       localStorage.setItem("token", data.token);
-      // this.notifySuccess();
+      this.notifySuccess();
       this.setState({ redirect: true });
       this.resetInputs();
       this.setState({ loading: false });
+        console.log("try", this.state.loading);
 
       // this.props.dispatch({
       //     type: 'LOGIN'
@@ -127,8 +128,8 @@ class Login extends Component {
       // });
     } catch (err) {
       if (err.response && err.response.status === 400) {
-        this.notifyError();
         this.setState({ loading: false });
+        this.notifyError();
       }
     }
   };
@@ -209,7 +210,7 @@ class Login extends Component {
           onHide={() => this.context.setModalShow(false)}
         >
           <Modal.Body>
-            <Loader />
+
             <Modal.Title className="title-login text-center mx-2">
               <h2>
                 Welcome <span>back</span>
@@ -219,18 +220,19 @@ class Login extends Component {
                 <NavLink
                   to="/signup"
                   onClick={() => this.context.setModalShow(false)}
-                >
+                  >
                   Sign up
                 </NavLink>
               </p>
             </Modal.Title>
-            <Circle
-          time={0}
-          color="#ff9300"
-          background="blur"
-          customLoading={loading}
-          // animation="slide-down"
-        />
+                  {loading && <Loader />}
+            {/* <Circle
+              time={0}
+              color="#ff9300"
+              background="blur"
+              customLoading={loading}
+              animation="slide-down"
+            /> */}
 
             <Form
               action="#"

@@ -1,6 +1,6 @@
 const initialState = { username: "" };
 
-function reducer(state = initialState, action) {
+function userReducer(state = initialState, action) {
   // console.log(state, action)
 
 //   switch (action.type) {
@@ -12,4 +12,4 @@ function reducer(state = initialState, action) {
 //   }
 }
 
-export default reducer ;
+export default userReducer;
