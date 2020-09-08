@@ -1,2 +1,7 @@
-export const usernameLogin = () => ({ type: 'LOGIN' })
-export const usernameSignup = () => ({ type: "SIGNUP" });
+export const userLogin = () => ({ type: 'LOGIN' })
+
+export const userSignup = () => ({ type: "SIGNUP" });
+
+export const userLogout = () => ({ type: "CLEAR_USER" });
+
+

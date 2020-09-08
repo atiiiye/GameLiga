@@ -3,23 +3,17 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
-// import { Provider } from 'react-redux';
-// import store from './Components/stores'
-// import { createStore, applyMiddleware } from 'redux';
-// import reducer from './Components/Reducers';
-
-
-// const store = createStore(reducer)
-// const createStoreWithMiddleware = applyMiddleware()(store);
+import { Provider } from "react-redux";
+import { store } from "./Components/stores";
 
 ReactDOM.render(
   // <React.StrictMode>
 
-  // <Provider store={store}>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  // </Provider>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
 
   // </React.StrictMode>,
   document.getElementById("root")

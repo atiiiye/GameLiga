@@ -22,6 +22,8 @@ import { Route, Switch } from "react-router-dom";
 
 // import packages
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { connect } from "react-redux";
+
 
 class App extends Component {
   state = {};
@@ -36,8 +38,7 @@ class App extends Component {
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute exact restricted={false} path="/signup" component={SignUp}
-          />
+          <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
 
           <PrivateRoute exact path="/account" component={Account} />
 
@@ -67,5 +68,11 @@ class App extends Component {
     );
   }
 }
+
+// const mapStateToProps = (state) => {
+//     return {
+//       username: state.username,
+//     };
+// }
 
 export default App;

@@ -103,15 +103,15 @@ class Login extends Component {
   };
 
   goAccount = async () => {
+
     this.setState({ loading: true });
     try {
       const { data } = await login(this.state);
+      // await dispatch({type:"LOGIN" , payload : data.state})
       localStorage.setItem("token", data.token);
-      this.notifySuccess();
       this.setState({ redirect: true });
       this.resetInputs();
       this.setState({ loading: false });
-        console.log("try", this.state.loading);
 
       // this.props.dispatch({
       //     type: 'LOGIN'
