@@ -24,12 +24,13 @@ import { Route, Switch } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { connect } from "react-redux";
 
+//import utils
 
 class App extends Component {
   state = {};
 
   componentDidMount() {
-    document.title="Game Liga"
+    document.title = "Game Liga";
   }
 
   render() {
@@ -38,7 +39,12 @@ class App extends Component {
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
+          <PublicRoute
+            exact
+            restricted={false}
+            path="/signup"
+            component={SignUp}
+          />
 
           <PrivateRoute exact path="/account" component={Account} />
 
@@ -63,16 +69,17 @@ class App extends Component {
           <PrivateRoute exact path="/404" component={NotFound} />
 
           <PrivateRoute exact path="" component={NotFound} />
+          
         </Switch>
       </div>
     );
   }
 }
 
-// const mapStateToProps = (state) => {
-//     return {
-//       username: state.username,
-//     };
-// }
+const mapStateToProps = (state) => {
+  return {
+    username: state.username,
+  };
+};
 
-export default App;
+export default connect(mapStateToProps)(App);

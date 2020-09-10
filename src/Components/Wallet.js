@@ -6,15 +6,12 @@ import './../css/wallet.css'
 //import boostrap
 import { Button, Modal, ModalHeader, ModalBody, NavItem, NavLink, } from 'reactstrap';
 
-//import contexts
-import { modalContext } from './Contexts'
 
 //import packages
 import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
 
 class Wallet extends Component {
 
-    static contextType = modalContext;
 
     state = {
         modal: false,

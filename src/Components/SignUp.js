@@ -31,7 +31,7 @@ import { signup } from "./../Services/userService";
 import { login } from "../utils";
 
 //import contexts
-import { usernameContext } from "./Contexts";
+import { Context } from "./Contexts";
 
 class SignUp extends Component {
   state = {
@@ -49,7 +49,6 @@ class SignUp extends Component {
       generate: 0,
       captchaInput: "",
     },
-    show: false,
     firstName: "",
     lastName: "",
     nickName: "",
@@ -206,7 +205,7 @@ class SignUp extends Component {
     this.setState({ errors, [name]: value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmitSignup = (event) => {
     event.preventDefault();
     if (
       this.validateForm(this.state.errors) &&
@@ -228,15 +227,12 @@ class SignUp extends Component {
     }
   };
 
-  handleLogin = () => {
-    this.setState({ redirect: true });
-  };
-
   postData = async () => {
     this.setState({ loading: true });
     try {
-      await signup(this.state);
-      this.notifySuccess();
+      const { data, status } = await signup(this.state);
+      if (status === 201) this.notifySuccess();
+      localStorage.setItem("token", data);
       this.setState({ redirect: true });
       this.setState({ loading: false });
     } catch (err) {
@@ -251,10 +247,10 @@ class SignUp extends Component {
   };
 
   notifySuccess = () => {
-    toast.success("Success create account , Please wait", {
+    toast.success("Create account successfully , Please wait", {
       className: "toast-container-success",
       transition: Slide,
-      autoClose: 3500,
+      autoClose: 1500,
       closeOnClick: true,
     });
   };
@@ -346,16 +342,16 @@ class SignUp extends Component {
 
     if (redirect) {
       return (
-        <usernameContext.Provider value={{ username: this.state.username }}>
+        <Context.Provider value={{ username: this.state.username }}>
           <Redirect to={{ pathname: "/account" }} />
           <UserHeaderRight />
-        </usernameContext.Provider>
+        </Context.Provider>
       );
     }
     return (
       <React.Fragment>
         <UserHeaderLeft />
-        
+
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
@@ -368,14 +364,14 @@ class SignUp extends Component {
               </NavLink>
             </div>
 
-            {/* <usernameContext.Provider value={this.state.username}> */}
+            {/* <Context.Provider value={this.state.username}> */}
             <Form
               action="#"
               id="signupForm"
               className="form-signup"
-              onSubmit={this.handleSubmit}
+              onSubmit={this.handleSubmitSignup}
               method="post"
-              >
+            >
               <ToastContainer limit={1} />
 
               <h3 className="h3">Login Information</h3>
@@ -393,10 +389,10 @@ class SignUp extends Component {
                     name="username"
                     onChange={this.handleChange}
                     value={this.state.username}
-                    />
+                  />
                   {errors.username.length > 0 && (
                     <span className="error">{errors.username}</span>
-                    )}
+                  )}
                 </div>
               </Form.Group>
 
@@ -414,15 +410,15 @@ class SignUp extends Component {
                       onChange={this.handleChange}
                       value={this.state.password}
                       name="password"
-                      />
+                    />
                     <i
                       className="far fa-eye"
                       onClick={this.handleVisiblePassword}
-                      />
+                    />
                   </div>
                   {errors.password.length > 0 && (
                     <span className="error">{errors.password}</span>
-                    )}
+                  )}
                 </div>
               </Form.Group>
 
@@ -438,7 +434,7 @@ class SignUp extends Component {
                     min={0}
                     max={100}
                     name="progressbar"
-                    />
+                  />
                   {/* 
                   <Progressbar
                     className="form-control-plaintext"
@@ -451,13 +447,13 @@ class SignUp extends Component {
                     variant="warning"
                     type="button"
                     onClick={this.randomPassword.bind(this, 11)}
-                    >
+                  >
                     Generate Password
                   </Button>
 
                   {errors.generate.length > 0 && (
                     <span className="error">{errors.generate}</span>
-                    )}
+                  )}
                 </div>
               </Form.Group>
 
@@ -473,10 +469,10 @@ class SignUp extends Component {
                     name="confirmPassword"
                     value={this.state.confirmPassword}
                     onChange={this.handleChange}
-                    />
+                  />
                   {errors.confirmPassword.length > 0 && (
                     <span className="error">{errors.confirmPassword}</span>
-                    )}
+                  )}
                 </div>
               </Form.Group>
 
@@ -493,15 +489,15 @@ class SignUp extends Component {
                     value={this.state.email}
                     onChange={this.handleChange}
                     noValidate
-                    />
+                  />
                   {errors.email.length > 0 && (
                     <span className="error">{errors.email}</span>
-                    )}
+                  )}
                 </div>
               </Form.Group>
-                    {loading && <Loader />}
-            
-                    {/* <Circle
+              {loading && <Loader />}
+
+              {/* <Circle
                         time={0}
                         color="#ff9300"
                         background="blur"
@@ -699,7 +695,6 @@ class SignUp extends Component {
                   type="submit"
                   onClick={
                     this.state.handleChange
-                    // () => this.handleLogin()
                   }
                 >
                   Register
@@ -707,7 +702,7 @@ class SignUp extends Component {
               </Form.Group>
             </Form>
 
-            {/* </usernameContext.Provider> */}
+            {/* </Context.Provider> */}
           </div>
         </div>
       </React.Fragment>

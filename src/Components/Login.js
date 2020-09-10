@@ -6,14 +6,15 @@ import "./../css/mediaLogin.css";
 import "./../css/toastify.css";
 
 //import boostrap
-import { Button, Form, Modal } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import { Button, Modal, ModalHeader, ModalBody,  } from "reactstrap";
 
 //import components
 import UserHeaderRight from "./UserHeaderRight";
-import Loader from './Loader'
+import Loader from "./Loader";
 
 //import routes
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink,Redirect } from "react-router-dom";
 
 //import packages
 import { ToastContainer, toast, Flip, Slide } from "react-toastify";
@@ -22,9 +23,7 @@ import { connect } from "react-redux";
 import { createBrowserHistory } from "history";
 
 //import contexts
-import { modalContext } from "./Contexts";
-import { usernameContext } from "./Contexts";
-import { LoginContext } from "./Contexts";
+import { Context } from "./Contexts";
 
 //import services
 import { login } from "./../Services/userService";
@@ -40,11 +39,17 @@ class Login extends Component {
     },
     redirect: false,
     loading: false,
+    modal: false,
     // isLogin: isLogin(),
   };
   // history = createBrowserHistory()
 
-  static contextType = modalContext;
+  toggle = () => {
+    this.setState({
+      modal: !this.state.modal,
+    });
+  };
+
 
   validateForm = (errors) => {
     let valid = true;
@@ -52,7 +57,7 @@ class Login extends Component {
     return valid;
   };
 
-  handleChange = (event) => {
+  handleChangeLogin = (event) => {
     event.preventDefault();
 
     const { name, value } = event.target;
@@ -88,7 +93,7 @@ class Login extends Component {
     this.setState({ errors, [name]: value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmitLogin = (e) => {
     event.preventDefault();
     if (
       this.validateForm(this.state.errors) &&
@@ -103,19 +108,18 @@ class Login extends Component {
   };
 
   goAccount = async () => {
-
     this.setState({ loading: true });
     try {
-      const { data } = await login(this.state);
-      // await dispatch({type:"LOGIN" , payload : data.state})
-      localStorage.setItem("token", data.token);
+      const { data, status } = await login(this.state);
+      if (status === 200) {
+        this.notifySuccess();
+      }
+
+      localStorage.setItem("token", data);
+      // this.props.dispatch({type:"LOGIN" , payload : data.Username})
       this.setState({ redirect: true });
       this.resetInputs();
       this.setState({ loading: false });
-
-      // this.props.dispatch({
-      //     type: 'LOGIN'
-      // })
 
       // this.props.history.push({
       //     pathname: "/account",
@@ -146,10 +150,10 @@ class Login extends Component {
   };
 
   notifySuccess = () => {
-    toast.success("Success create account , Please wait", {
+    toast.success("You have logged in successfully", {
       className: "toast-container-success",
       transition: Slide,
-      autoClose: 3500,
+      autoClose: 1500,
       closeOnClick: true,
       draggable: true,
     });
@@ -161,6 +165,8 @@ class Login extends Component {
       password: "",
     });
   };
+
+
 
   static getDerivedStateFromProps(props, state) {
     console.log("Login : getDerivedStateFromProps");
@@ -186,10 +192,10 @@ class Login extends Component {
     // console.log(this.props)
     console.log("Login : renderred");
 
-    if (this.state.redirect) {
+    if (redirect) {
       return (
         <React.Fragment>
-          <usernameContext.Provider value={{ username: this.state.username }}>
+          <Context.Provider value={{ username: this.state.username }}>
             <Redirect
               to={{
                 pathname: "/account",
@@ -197,35 +203,39 @@ class Login extends Component {
               }}
             />
             <UserHeaderRight />
-          </usernameContext.Provider>
+          </Context.Provider>
         </React.Fragment>
       );
     }
     return (
       <React.Fragment>
         <ToastContainer limit={1} />
+        <li className="nav-item">
+          <NavLink
+            className="nav-link"
+            id="login"
+            to="/"
+            exact
+            onClick={this.toggle.bind(this)}
+          >
+            LOG IN
+          </NavLink>
+        </li>
         <Modal
           className="login-modal"
-          show={this.context.modalShow}
-          onHide={() => this.context.setModalShow(false)}
+          isOpen={this.state.modal}
+          toggle={this.toggle.bind(this)}
         >
-          <Modal.Body>
-
-            <Modal.Title className="title-login text-center mx-2">
+          <ModalBody>
+            <ModalHeader className="title-login text-center mx-2">
               <h2>
                 Welcome <span>back</span>
               </h2>
               <p className="text-white px-2">
-                Do not have account ?{" "}
-                <NavLink
-                  to="/signup"
-                  onClick={() => this.context.setModalShow(false)}
-                  >
-                  Sign up
-                </NavLink>
+                Do not have account ? <NavLink to="/signup">Sign up</NavLink>
               </p>
-            </Modal.Title>
-                  {loading && <Loader />}
+            </ModalHeader>
+            {loading && <Loader />}
             {/* <Circle
               time={0}
               color="#ff9300"
@@ -237,7 +247,7 @@ class Login extends Component {
             <Form
               action="#"
               className="form-login py-4"
-              onSubmit={this.handleSubmit.bind(this)}
+              onSubmit={this.handleSubmitLogin.bind(this)}
             >
               <div className="form-fields mb-4">
                 <Form.Label>Username :</Form.Label>
@@ -249,7 +259,7 @@ class Login extends Component {
                   name="username"
                   placeholder="User"
                   value={this.state.username}
-                  onChange={this.handleChange.bind(this)}
+                  onChange={this.handleChangeLogin.bind(this)}
                 ></Form.Control>
                 {errors.username.length > 0 && (
                   <span className="form-validate">{errors.username}</span>
@@ -264,7 +274,7 @@ class Login extends Component {
                   name="password"
                   placeholder="Password"
                   value={this.state.password}
-                  onChange={this.handleChange.bind(this)}
+                  onChange={this.handleChangeLogin.bind(this)}
                 ></Form.Control>
                 {errors.password.length > 0 && (
                   <span className="form-validate">{errors.password}</span>
@@ -293,7 +303,7 @@ class Login extends Component {
                 </Button>
               </div>
             </Form>
-          </Modal.Body>
+          </ModalBody>
         </Modal>
       </React.Fragment>
     );

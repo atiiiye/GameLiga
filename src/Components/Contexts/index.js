@@ -1,24 +1,32 @@
-import React from 'react'
+import React from "react";
 
-export const modalContext = React.createContext({
-    show: [],
-    setShow: () => { }
-})
-
-export const TelegramContext = React.createContext({
-    show: [],
-    setShow: () => { }
-})
-
-export const SignupContext = React.createContext({
-    username: [],
-})
-
-export const LoginContext = React.createContext({
-    username: [],
-})
-
-export const usernameContext = React.createContext({
-    username: {},
-})
-
+export const Context = React.createContext({
+  username: {},
+  firstName: {},
+  lastName: {},
+  nickName: {},
+  username: {},
+  email: {},
+  password: {},
+  confirmPassword: {},
+  phone: {},
+  promotional: {},
+  referred: {},
+  checkbox: {},
+  captcha: {},
+  captchaInput: {},
+  redirect: {},
+  loading: {},
+  handleChangeLogin: () => {},
+  handleSubmitLogin: () => {},
+  goAccount: () => {},
+  resetInputs: () => {},
+  handleChangeSignup: () => {},
+  handleSubmitSignup: () => {},
+  postData: () => {},
+  validateForm: () => {},
+  handleChangeBox: () => {},
+  randomPassword: () => {},
+  randomCode: () => {},
+  handleVisiblePassword: () => {},
+});

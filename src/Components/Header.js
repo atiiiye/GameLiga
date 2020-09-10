@@ -16,8 +16,9 @@ import { Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 //import components
-import { modalContext } from './Contexts'
-import Login from './Login';
+import { modalContext } from "./Contexts";
+import Login from "./Login";
+import { login } from "../Services/userService";
 
 //import packages
 
@@ -26,13 +27,12 @@ export default class Header extends Component {
     show: false,
   };
 
-  setShow = (status) => {
-    this.setState({ show: status })
-  }
+  // setShow = (status) => {
+  //   this.setState({ show: status });
+  // };
   render() {
     // console.log(this.props.history)
     return (
-
       <React.Fragment>
         <div className="container-fluid">
           <Navbar className="" collapseOnSelect expand="md" bg="none">
@@ -48,28 +48,14 @@ export default class Header extends Component {
             <div className="nav-right">
               <ul className="navbar-nav">
                 <div className="buttons">
-                  <li className="nav-item">
-                    <NavLink
-                      className="nav-link"
-                      id="login"
-                      to="/"
-                      exact
-                      onClick={() => {
-                        this.setState({ show: true })
-                        // this.addingRefButton.bind(this)
-                      }}
-                    >
-                      LOG IN
-                    </NavLink>
-                  </li>
+                  <Login />
                   <li className="nav-item">
                     <NavLink className="nav-link" id="signup" to="/signup">
                       SIGN UP
                     </NavLink>
                   </li>
                 </div>
-                {
-                  this.props.username &&
+                {/* {this.props.username && (
                   <React.Fragment>
                     <div className="buttons">
                       <li className="nav-item">
@@ -79,21 +65,21 @@ export default class Header extends Component {
                           to="/"
                           exact
                           onClick={() => {
-                            this.setState({ show: true })
+                            this.setState({ show: true });
                             // this.addingRefButton.bind(this)
                           }}
                         >
                           LOG OUT
-                    </NavLink>
+                        </NavLink>
                       </li>
                       <li className="nav-item">
                         <NavLink className="nav-link" id="signup" to="/signup">
                           SIGN UP
-                    </NavLink>
+                        </NavLink>
                       </li>
                     </div>
                   </React.Fragment>
-                }
+                )} */}
                 <Navbar.Collapse className="" id="coll-navbar">
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/more">
@@ -127,13 +113,14 @@ export default class Header extends Component {
             </div>
           </Navbar>
 
-          <modalContext.Provider value={{
-            modalShow: this.state.show,
-            setModalShow: this.setShow.bind(this)
-          }}
+          {/* <modalContext.Provider
+            value={{
+              modalShow: this.state.show,
+              setModalShow: this.setShow.bind(this),
+            }}
           >
             <Login history={this.props} />
-          </modalContext.Provider>
+          </modalContext.Provider> */}
         </div>
       </React.Fragment>
     );

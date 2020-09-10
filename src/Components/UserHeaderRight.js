@@ -15,10 +15,9 @@ import Ticket from "./Ticket";
 import Profile from "./Profile";
 
 //import contexts
-import { usernameContext } from "./Contexts";
+import { Context } from "./Contexts";
 // import { modalContext } from "./Contexts";
-// import { TelegramContext } from "./Contexts";
-// import { LoginContext } from "./Contexts";
+
 
 class UserHeaderRight extends Component {
   state = {
@@ -53,6 +52,8 @@ class UserHeaderRight extends Component {
     // console.log(this.state)
 
     return (
+          <Context.Consumer>
+            {(context) => (
       <Navbar className="user-header-right" expand="md">
         <div className="hamburger-menu px-0" data-target="#collapse-navbar">
           <NavbarToggler onClick={this.toggle.bind(this)} className="px-0">
@@ -70,14 +71,10 @@ class UserHeaderRight extends Component {
             className="collapse-user row part-1"
             id="collapse-navbar"
           >
-            <usernameContext.Consumer>
-              {(context) => (
                 <p className="text-muted">
                   {console.log("username :", context.username)}
                   {/* {context.username} */}
                 </p>
-              )}
-            </usernameContext.Consumer>
             <Profile />
             <Ticket />
             {/* <div className="row part-2"> */}
@@ -88,6 +85,8 @@ class UserHeaderRight extends Component {
           </Collapse>
         </div>
       </Navbar>
+              )}
+            </Context.Consumer>
     );
   }
 }
