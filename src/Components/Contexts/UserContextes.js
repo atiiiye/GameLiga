@@ -1,26 +1,48 @@
 import React, { Component } from "react";
 
-import { Context } from "./Contexts";
+//import context
+import { Context } from "./index";
+
+//import services
+import { login ,signup } from "../../Services/userService";
+
 
 //import utils
-import { errorMessage ,successMessage } from './../../utils/messages'
+import { errorMessage, successMessage } from "../../utils/messages";
 
-export class userContext extends Component {
+class UserContextes extends Component {
+  
   state = {
-    firstName,
-    lastName,
-    nickName,
-    username,
+    errors: {
+      firstName:"",
+      lastName:"",
+      nickName:"",
+      username:"",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      phone: "",
+      promotional: "",
+      generate: "",
+      referred: "",
+      captchaInput: "",
+    },
+    firstName:"",
+    lastName:"",
+    nickName:"",
+    username:"",
     email: "",
     password: "",
     confirmPassword: "",
     phone: "",
     promotional: "",
     referred: "",
+    generate: "",
     checkbox: false,
     captcha: "",
     captchaInput: "",
     redirect: false,
+    type: "text",
   };
 
   validateForm = (errors) => {
@@ -276,7 +298,8 @@ export class userContext extends Component {
     this.setState({ loading: true });
     try {
       const { data, status } = await signup(this.state);
-      if (status === 201) successMessage("Create account successfully , Please wait");
+      if (status === 201)
+        successMessage("Create account successfully , Please wait");
       localStorage.setItem("token", data);
       this.setState({ redirect: true });
       this.setState({ loading: false });
@@ -328,39 +351,40 @@ export class userContext extends Component {
     this.setState(({ type }) => ({
       type: type === "text" ? "password" : "text",
     }));
-    };
-    
+  };
 
   render() {
+    console.log('UserContext :',this.props)
     return (
       <Context.provider
         value={{
-          firstName,
-          lastName,
-          nickName,
-          username,
-          email,
-          password,
-          confirmPassword,
-          phone,
-          promotional,
-          referred,
-          checkbox,
-          captcha,
-          captchaInput,
-          redirect,
-          handleChangeLogin: () => {this.handleChangeLogin},
-          handleSubmitLogin: () => {this.handleSubmitLogin},
-          goAccount: () => {this.goAccount},
-          resetInputs: () => {this.resetInputs},
-          handleChangeSignup: () => {this.handleChangeSignup},
-          handleSubmitSignup: () => {this.handleSubmitSignup;},
-          postData: () => {this.postData},
-          validateForm: () => {this.validateForm},
-          handleChangeBox: () => {this.handleChangeBox},
-          randomPassword: () => {this.randomPassword},
-          randomCode: () => {this.randomCode},
-          handleVisiblePassword: () => {this.handleVisiblePassword},
+          firstName:this.state.firstName,
+          lastName:this.state.lastName,
+          nickName:this.state.nickName,
+          username:this.state.username,
+          email:this.state.email,
+          password:this.state.password,
+          confirmPassword:this.state.confirmPassword,
+          phone:this.state.phone,
+          promotional:this.state.promotional,
+          referred:this.state.referred,
+          checkbox:this.state.checkbox,
+          captcha:this.state.captcha,
+          captchaInput:this.state.captchaInput,
+          redirect:this.state.redirect,
+
+          handleChangeLogin: this.handleChangeLogin.bind(this),
+          handleSubmitLogin: this.handleSubmitLogin.bind(this),
+          goAccount: this.goAccount.bind(this),
+          resetInputs: this.resetInputs.bind(this),
+          handleSubmitSignup: this.handleSubmitSignup.bind(this),
+          handleChange: this.handleChange.bind(this),
+          postData: this.postData.bind(this),
+          validateForm: this.validateForm.bind(this),
+          handleChangeBox: this.handleChangeBox.bind(this),
+          randomPassword: this.randomPassword.bind(this),
+          randomCode: this.randomCode.bind(this),
+          handleVisiblePassword: this.handleVisiblePassword.bind(this),
         }}
       >
         {this.props.children}
@@ -369,4 +393,4 @@ export class userContext extends Component {
   }
 }
 
-export default userContext;
+export default UserContextes;

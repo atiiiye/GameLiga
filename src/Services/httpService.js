@@ -24,7 +24,6 @@ axios.interceptors.response.use(null, error => {
             position: "top-right",
             transition: Slide,
             autoClose: 3500,
-
         })
     }
 

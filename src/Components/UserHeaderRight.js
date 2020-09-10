@@ -16,8 +16,6 @@ import Profile from "./Profile";
 
 //import contexts
 import { Context } from "./Contexts";
-// import { modalContext } from "./Contexts";
-
 
 class UserHeaderRight extends Component {
   state = {
@@ -27,7 +25,6 @@ class UserHeaderRight extends Component {
   toggle = () => this.setState(!isOpen);
 
   /* {this.props.history.location.state.username} */
-
 
   static getDerivedStateFromProps(props, state) {
     console.log("UserHeaderRight : getDerivedStateFromProps");
@@ -52,41 +49,41 @@ class UserHeaderRight extends Component {
     // console.log(this.state)
 
     return (
-          <Context.Consumer>
-            {(context) => (
-      <Navbar className="user-header-right" expand="md">
-        <div className="hamburger-menu px-0" data-target="#collapse-navbar">
-          <NavbarToggler onClick={this.toggle.bind(this)} className="px-0">
-            <span className="menu navbar-toggler-icon">
-              <div className="menu-line menu-line-1"></div>
-              <div className="menu-line menu-line-2"></div>
-              <div className="menu-line menu-line-3"></div>
-            </span>
-          </NavbarToggler>
-        </div>
-        <div className="navbar-right" collapseonselect="true">
-          <Collapse
-            isOpen={this.state.isOpen}
-            navbar
-            className="collapse-user row part-1"
-            id="collapse-navbar"
-          >
+      <Context.Consumer>
+        {(context) => (
+          <Navbar className="user-header-right" expand="md">
+            <div className="hamburger-menu px-0" data-target="#collapse-navbar">
+              <NavbarToggler onClick={this.toggle.bind(this)} className="px-0">
+                <span className="menu navbar-toggler-icon">
+                  <div className="menu-line menu-line-1"></div>
+                  <div className="menu-line menu-line-2"></div>
+                  <div className="menu-line menu-line-3"></div>
+                </span>
+              </NavbarToggler>
+            </div>
+            <div className="navbar-right" collapseonselect="true">
+              <Collapse
+                isOpen={this.state.isOpen}
+                navbar
+                className="collapse-user row part-1"
+                id="collapse-navbar"
+              >
                 <p className="text-muted">
                   {console.log("username :", context.username)}
                   {/* {context.username} */}
                 </p>
-            <Profile />
-            <Ticket />
-            {/* <div className="row part-2"> */}
-            <Bell />
-            <Telegram />
-            <Wallet />
-            {/* </div> */}
-          </Collapse>
-        </div>
-      </Navbar>
-              )}
-            </Context.Consumer>
+                <Profile />
+                <Ticket />
+                {/* <div className="row part-2"> */}
+                <Bell />
+                <Telegram />
+                <Wallet />
+                {/* </div> */}
+              </Collapse>
+            </div>
+          </Navbar>
+        )}
+      </Context.Consumer>
     );
   }
 }

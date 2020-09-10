@@ -1,5 +1,7 @@
 import { toast, Flip, Slide } from "react-toastify";
 
+import './../css/toastify.css';
+
 export const successMessage = (message) => {
   toast.success(message, {
     className: "toast-container-success",
