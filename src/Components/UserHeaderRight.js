@@ -26,26 +26,26 @@ class UserHeaderRight extends Component {
 
   /* {this.props.history.location.state.username} */
 
-  static getDerivedStateFromProps(props, state) {
-    console.log("UserHeaderRight : getDerivedStateFromProps");
-    return state;
-  }
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log("UserHeaderRight : getDerivedStateFromProps");
+  //   return state;
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("UserHeaderRight : shouldComponentUpdate");
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log("UserHeaderRight : shouldComponentUpdate");
+  // }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("UserHeaderRight : getSnapshotBeforeUpdate");
-    return null;
-  }
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   console.log("UserHeaderRight : getSnapshotBeforeUpdate");
+  //   return null;
+  // }
 
-  componentDidUpdate() {
-    console.log("UserHeaderRight : componentDidUpdate");
-  }
+  // componentDidUpdate() {
+  //   console.log("UserHeaderRight : componentDidUpdate");
+  // }
 
   render() {
-    console.log("UserHeaderRight : renderred");
+    // console.log("UserHeaderRight : renderred");
     // console.log(this.state)
 
     return (
@@ -68,9 +68,9 @@ class UserHeaderRight extends Component {
                 className="collapse-user row part-1"
                 id="collapse-navbar"
               >
-                <p className="text-muted">
-                  {console.log("username :", context.username)}
-                  {/* {context.username} */}
+                <p className="text-center">
+                  {console.log("username HeaderRight:", context.username)}
+                  {context.username}
                 </p>
                 <Profile />
                 <Ticket />

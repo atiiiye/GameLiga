@@ -53,24 +53,24 @@ class Account extends Component {
     ],
   };
 
-  static getDerivedStateFromProps(props, state) {
-    console.log("Account : getDerivedStateFromProps");
-    return state;
-  }
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log("Account : getDerivedStateFromProps");
+  //   return state;
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("Account : shouldComponentUpdate");
-    return true;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log("Account : shouldComponentUpdate");
+  //   return true;
+  // }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("Account : getSnapshotBeforeUpdate");
-    return null;
-  }
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   console.log("Account : getSnapshotBeforeUpdate");
+  //   return null;
+  // }
 
-  componentDidUpdate() {
-    console.log("Account : componentDidUpdate");
-  }
+  // componentDidUpdate() {
+  //   console.log("Account : componentDidUpdate");
+  // }
 
   render() {
     const params = {
@@ -86,7 +86,7 @@ class Account extends Component {
       spaceBetween: 20,
     };
 
-    console.log("Account : renderred");
+    // console.log("Account : renderred");
 
     return (
       <React.Fragment>

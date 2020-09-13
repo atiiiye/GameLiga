@@ -29,28 +29,31 @@ import UserContextes from "./Contexts/UserContextes";
 import { login } from "./../Services/userService";
 import { logout, isLogin } from "../utils";
 
+//import utils
+import { errorMessage, successMessage } from "../utils/messages";
+
 class Login extends Component {
   state = {
-    // username: "",
-    // password: "",
-    // errors: {
-    //   username: "",
-    //   password: "",
-    // },
+    username: "",
+    password: "",
+    errors: {
+      username: "",
+      password: "",
+    },
     // redirect: false,
     loading: false,
     modal: false,
-    // isLogin: isLogin(),
   };
+
   // history = createBrowserHistory()
+
+  constructor(props) {
+    super(props)
+  }
 
   static contextType = Context;
 
-  toggle = () => {
-    this.setState({
-      modal: !this.state.modal,
-    });
-  };
+  toggle = () => {this.setState({ modal: !this.state.modal }) };
 
   // validateForm = (errors) => {
   //   let valid = true;
@@ -113,7 +116,7 @@ class Login extends Component {
   //   try {
   //     const { data, status } = await login(this.state);
   //     if (status === 200) {
-  //       this.notifySuccess();
+  //       successMessage("You have logged in successfully");
   //     }
 
   //     localStorage.setItem("token", data);
@@ -134,30 +137,9 @@ class Login extends Component {
   //   } catch (err) {
   //     if (err.response && err.response.status === 400) {
   //       this.setState({ loading: false });
-  //       this.notifyError();
+  //       errorMessage("Username or Password is invalid");
   //     }
   //   }
-  // };
-
-  // notifyError = () => {
-  //   toast.error("Username or Password is invalid", {
-  //     className: "toast-container-error",
-  //     transition: Slide,
-  //     autoClose: 3500,
-  //     draggable: true,
-  //     closeOnClick: true,
-  //     // position: "top-right",
-  //   });
-  // };
-
-  // notifySuccess = () => {
-  //   toast.success("You have logged in successfully", {
-  //     className: "toast-container-success",
-  //     transition: Slide,
-  //     autoClose: 1500,
-  //     closeOnClick: true,
-  //     draggable: true,
-  //   });
   // };
 
   // resetInputs = () => {
@@ -167,30 +149,32 @@ class Login extends Component {
   //   });
   // };
 
-  static getDerivedStateFromProps(props, state) {
-    console.log("Login : getDerivedStateFromProps");
-    return state;
-  }
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log("Login : getDerivedStateFromProps");
+  //   return state;
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("Login : shouldComponentUpdate");
-    return true;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log("Login : shouldComponentUpdate");
+  //   return true;
+  // }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("Login : getSnapshotBeforeUpdate");
-    return null;
-  }
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   console.log("Login : getSnapshotBeforeUpdate");
+  //   return null;
+  // }
 
-  componentDidUpdate() {
-    console.log("Login : componentDidUpdate");
-  }
+  // componentDidUpdate() {
+  //   console.log("Login : componentDidUpdate");
+  // }
 
   render() {
     const { loading } = this.state;
-    const { errors, redirect } = this.context;
-    console.log(this.props);
-    console.log("Login : renderred");
+    const { errors ,redirect } = this.context;
+    console.log("Login props",this.props);
+    console.log("Login context",this.context);
+    console.log("Login state",this.state);
+    // console.log("Login : renderred");
 
     if (redirect) {
       return (
@@ -208,7 +192,6 @@ class Login extends Component {
       );
     }
     return (
-      // <UserContextes>
         <React.Fragment>
           <ToastContainer limit={1} />
           <li className="nav-item">
@@ -293,14 +276,13 @@ class Login extends Component {
                     value="Submit"
                     type="submit"
                   >
-                    LOG IN
+                  LOG IN
                   </Button>
                 </div>
               </Form>
             </ModalBody>
           </Modal>
         </React.Fragment>
-      // </UserContextes>
     );
   }
 }

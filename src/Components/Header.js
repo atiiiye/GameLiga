@@ -16,20 +16,12 @@ import { Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 //import components
-import { modalContext } from "./Contexts";
 import Login from "./Login";
 import { login } from "../Services/userService";
 
 //import packages
 
 export default class Header extends Component {
-  state = {
-    show: false,
-  };
-
-  // setShow = (status) => {
-  //   this.setState({ show: status });
-  // };
   render() {
     // console.log(this.props.history)
     return (
@@ -48,7 +40,7 @@ export default class Header extends Component {
             <div className="nav-right">
               <ul className="navbar-nav">
                 <div className="buttons">
-                  <Login />
+                  <Login/>
                   <li className="nav-item">
                     <NavLink className="nav-link" id="signup" to="/signup">
                       SIGN UP
@@ -112,15 +104,6 @@ export default class Header extends Component {
               <img className="logo" src={logo5} alt="" />
             </div>
           </Navbar>
-
-          {/* <modalContext.Provider
-            value={{
-              modalShow: this.state.show,
-              setModalShow: this.setShow.bind(this),
-            }}
-          >
-            <Login history={this.props} />
-          </modalContext.Provider> */}
         </div>
       </React.Fragment>
     );

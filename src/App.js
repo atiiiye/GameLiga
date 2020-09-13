@@ -24,10 +24,40 @@ import { Route, Switch } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { connect } from "react-redux";
 
+import UserContextes from "./Components/Contexts/UserContextes";
 //import utils
 
 class App extends Component {
-  state = {};
+  state = {
+    errors: {
+      firstName: "",
+      lastName: "",
+      nickName: "",
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      phone: "",
+      promotional: "",
+      generate: "",
+      referred: "",
+    },
+    firstName: "",
+    lastName: "",
+    nickName: "",
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phone: "",
+    promotional: "",
+    referred: "",
+    generate: "",
+  };
+
+  constructor(props) {
+    super(props);
+  }
 
   componentDidMount() {
     document.title = "Game Liga";
@@ -35,7 +65,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <UserContextes
+        // username={this.state.username}
+        // password={this.state.password}
+        // firstName={this.state.firstName}
+        // lastName={this.state.lastName}
+        // nickName={this.state.nickName}
+        // email={this.state.email}
+        // confirmPassword={this.state.confirmPassword}
+        // phone={this.state.phone}
+        // promotional={this.state.promotional}
+        // referred={this.state.referred}
+        // generate={this.state.generate}
+        // errors={this.state.errors}
+      >
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
@@ -69,17 +112,16 @@ class App extends Component {
           <PrivateRoute exact path="/404" component={NotFound} />
 
           <PrivateRoute exact path="" component={NotFound} />
-          
         </Switch>
-      </div>
+      </UserContextes>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    username: state.username,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     username: state.username,
+//   };
+// };
 
-export default connect(mapStateToProps)(App);
+export default App;

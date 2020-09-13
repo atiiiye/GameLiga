@@ -4,20 +4,18 @@ import React, { Component } from "react";
 import { Context } from "./index";
 
 //import services
-import { login ,signup } from "../../Services/userService";
-
+import { login, signup } from "../../Services/userService";
 
 //import utils
 import { errorMessage, successMessage } from "../../utils/messages";
 
 class UserContextes extends Component {
-  
   state = {
     errors: {
-      firstName:"",
-      lastName:"",
-      nickName:"",
-      username:"",
+      firstName: "",
+      lastName: "",
+      nickName: "",
+      username: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -27,10 +25,10 @@ class UserContextes extends Component {
       referred: "",
       captchaInput: "",
     },
-    firstName:"",
-    lastName:"",
-    nickName:"",
-    username:"",
+    firstName: "",
+    lastName: "",
+    nickName: "",
+    username: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -42,7 +40,7 @@ class UserContextes extends Component {
     captcha: "",
     captchaInput: "",
     redirect: false,
-    type: "text",
+    // type: "text",
   };
 
   validateForm = (errors) => {
@@ -87,7 +85,7 @@ class UserContextes extends Component {
     this.setState({ errors, [name]: value });
   };
 
-  handleSubmitLogin = (e) => {
+  handleSubmitLogin = (event) => {
     event.preventDefault();
     if (
       this.validateForm(this.state.errors) &&
@@ -130,13 +128,6 @@ class UserContextes extends Component {
         errorMessage("Username or Password is invalid");
       }
     }
-  };
-
-  resetInputs = () => {
-    this.setState({
-      username: "",
-      password: "",
-    });
   };
 
   handleChange = (event) => {
@@ -329,9 +320,7 @@ class UserContextes extends Component {
       pass += chars.charAt(i);
     }
 
-    this.setState({
-      password: pass,
-    });
+    this.setState({ password: pass });
   };
 
   randomCode = (length) => {
@@ -342,55 +331,59 @@ class UserContextes extends Component {
       code += chars.charAt(i);
     }
 
-    this.setState({
-      captcha: code,
-    });
+    this.setState({ captcha: code });
   };
 
-  handleVisiblePassword = () => {
-    this.setState(({ type }) => ({
-      type: type === "text" ? "password" : "text",
-    }));
-  };
+  // resetInputs = () => {
+  //   this.setState({
+  //     username: "",
+  //     password: "",
+  //   });
+  // };
+
+  // handleVisiblePassword = () => {
+  //   this.setState(({ type }) => ({
+  //     type: type === "text" ? "password" : "text",
+  //   }));
+  // };
 
   render() {
-    console.log('UserContext :',this.props)
     return (
-      <Context.provider
+      <Context.Provider
         value={{
-          firstName:this.state.firstName,
-          lastName:this.state.lastName,
-          nickName:this.state.nickName,
-          username:this.state.username,
-          email:this.state.email,
-          password:this.state.password,
-          confirmPassword:this.state.confirmPassword,
-          phone:this.state.phone,
-          promotional:this.state.promotional,
-          referred:this.state.referred,
-          checkbox:this.state.checkbox,
-          captcha:this.state.captcha,
-          captchaInput:this.state.captchaInput,
-          redirect:this.state.redirect,
-
+          username: this.state.username,
+          password: this.state.password,
+          confirmPassword: this.state.confirmPassword,
+          email: this.state.email,
+          nickName: this.state.nickName,
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          phone: this.state.phone,
+          promotional: this.state.promotional,
+          referred: this.state.referred,
+          captcha: this.state.captcha,
+          captchaInput: this.state.captchaInput,
+          errors: this.state.errors,
+          // checkbox: this.state.checkbox,
+          // type: this.state.type,
+          redirect: this.state.redirect,
           handleChangeLogin: this.handleChangeLogin.bind(this),
           handleSubmitLogin: this.handleSubmitLogin.bind(this),
           goAccount: this.goAccount.bind(this),
-          resetInputs: this.resetInputs.bind(this),
           handleSubmitSignup: this.handleSubmitSignup.bind(this),
           handleChange: this.handleChange.bind(this),
           postData: this.postData.bind(this),
           validateForm: this.validateForm.bind(this),
-          handleChangeBox: this.handleChangeBox.bind(this),
           randomPassword: this.randomPassword.bind(this),
           randomCode: this.randomCode.bind(this),
-          handleVisiblePassword: this.handleVisiblePassword.bind(this),
+          // resetInputs: this.resetInputs.bind(this),
+          // handleChangeBox: this.handleChangeBox.bind(this),
+          // handleVisiblePassword: this.handleVisiblePassword.bind(this),
         }}
       >
         {this.props.children}
-      </Context.provider>
+      </Context.Provider>
     );
   }
 }
-
 export default UserContextes;

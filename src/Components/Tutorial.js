@@ -59,13 +59,6 @@ class Tutorial extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="box-card">
-                        <div className="box">
-                          <div className="refresh-box">
-                            <RefreshIcon className="refresh-icon" />
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </Card>
