@@ -20,25 +20,19 @@ import Loader from "./Loader";
 
 //import packages
 import RefreshIcon from "@material-ui/icons/Refresh";
-import { ToastContainer, toast, Flip, Slide } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Checkbox from "@material-ui/core/Checkbox";
 
 //import services
 import { signup } from "./../Services/userService";
 
-import { login } from "../utils";
-
 //import contexts
 import { Context } from "./Contexts/index";
-import UserContextes from "./Contexts/UserContextes";
-
-//import utils
-import { errorMessage, successMessage } from "../utils/messages";
 
 class SignUp extends Component {
   state = {
-    error: {
+    // errors: {
       //   firstName: "",
       //   lastName: "",
       //   nickName: "",
@@ -51,7 +45,7 @@ class SignUp extends Component {
       //   referred: "",
       //   generate: 0,
       // captchaInput: "",
-    },
+    // },
     // firstName: "",
     // lastName: "",
     // nickName: "",
@@ -65,9 +59,10 @@ class SignUp extends Component {
     // generate: 0,
     // captcha: "",
     // captchaInput: "",
-    checkbox: false,
     // redirect: false,
-    loading: false,
+    // checkbox: false,
+    // loading: false,
+    
     type: "text",
   };
 
@@ -267,18 +262,6 @@ class SignUp extends Component {
   //   });
   // };
 
-  handleChangeBox = (e) => {
-    this.setState({
-      checkbox: e.target.checked,
-    });
-  };
-
-  handleVisiblePassword = () => {
-    this.setState(({ type }) => ({
-      type: type === "text" ? "password" : "text",
-    }));
-  };
-
   // randomCode = (length) => {
   //   let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
   //   let code = "";
@@ -291,6 +274,18 @@ class SignUp extends Component {
   //     captcha: code,
   //   });
   // };
+
+  // handleChangeBox = (e) => {
+  //   this.setState({
+  //     checkbox: e.target.checked,
+  //   });
+  // };
+
+  handleVisiblePassword = () => {
+    this.setState(({ type }) => ({
+      type: type === "text" ? "password" : "text",
+    }));
+  };
 
   componentDidMount() {
     this.context.randomCode(6);
@@ -314,7 +309,7 @@ class SignUp extends Component {
 
   render() {
     // console.log("SignUp : renderred");
-    
+
     const { loading } = this.state;
     const { errors, password, redirect } = this.context;
     console.log("SignUp Context", this.context);
@@ -336,7 +331,6 @@ class SignUp extends Component {
     return (
       <React.Fragment>
         <UserHeaderLeft />
-
         <div className="card-body" id="card-form-signup">
           <div className="card-form">
             <div className="title">
@@ -350,11 +344,9 @@ class SignUp extends Component {
             </div>
 
             <Form
-              action="#"
               id="signupForm"
               className="form-signup"
               onSubmit={(e) => this.context.handleSubmitSignup(e)}
-              method="post"
             >
               <ToastContainer limit={1} />
 
@@ -434,10 +426,6 @@ class SignUp extends Component {
                   >
                     Generate Password
                   </Button>
-
-                  {errors.generate.length > 0 && (
-                    <span className="error">{errors.generate}</span>
-                  )}
                 </div>
               </Form.Group>
 
@@ -479,6 +467,7 @@ class SignUp extends Component {
                   )}
                 </div>
               </Form.Group>
+             
               {loading && <Loader />}
 
               <h3 className="h3">Personal Information</h3>
@@ -589,7 +578,7 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="Referred by"
                     name="referred"
-                    onChange={this.context.handleChange}
+                    onChange={(e)=>this.context.handleChange(e)}
                     value={this.context.referred}
                   />
                   {errors.referred.length > 0 && (
@@ -616,11 +605,10 @@ class SignUp extends Component {
                       type="text"
                       name="captchaInput"
                       className="form-control-plaintext"
-                      onChange={this.context.handleChange}
+                      onChange={(e)=>this.context.handleChange(e)}
                       value={this.context.captchaInput}
                       placeholder="please enter code"
                     />
-
                     {errors.captchaInput.length > 0 && (
                       <span className="error">{errors.captchaInput}</span>
                     )}
@@ -640,8 +628,8 @@ class SignUp extends Component {
                 /> */}
 
                 <Checkbox
-                  checked={this.state.checkbox}
-                  onChange={this.handleChangeBox.bind(this)}
+                  checked={this.context.checkbox}
+                  onChange={(e)=>this.context.handleChangeBox(e)}
                   style={{ color: "rgba(255, 255, 255 , .88)" }}
                   inputProps={{ "aria-label": "secondary checkbox" }}
                 />
@@ -653,11 +641,10 @@ class SignUp extends Component {
               </Form.Group>
 
               <Form.Group className="row ml-1">
-                {/* <div className="col-form-label"></div> */}
                 <Button
                   className={`register col-sm-7 ${
-                    this.context.validateForm(this.context.errors) &&
-                    this.state.checkbox &&
+                    // this.context.validateForm(errors) &&
+                    this.context.checkbox &&
                     this.context.username &&
                     this.context.password &&
                     this.context.confirmPassword &&
@@ -670,7 +657,7 @@ class SignUp extends Component {
                   }`}
                   variant="none"
                   type="submit"
-                  onClick={this.context.handleChange}
+                  onClick={(e)=>this.context.handleChange(e)}
                 >
                   Register
                 </Button>

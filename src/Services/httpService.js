@@ -3,6 +3,9 @@ import axios from 'axios'
 //import packages
 import { toast, Flip, Slide } from 'react-toastify'
 
+//import utils
+import { errorMessage, successMessage } from "../utils/messages";
+
 axios.defaults.baseURL = "http://2.186.229.181:7580/api";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
@@ -18,13 +21,7 @@ axios.interceptors.response.use(null, error => {
 
     if (!expectedError) {
         console.log('Logging the error', error);
-        toast.error('An unexpected error occurred ', {
-            className: 'toast-container-error',
-            draggable: true,
-            position: "top-right",
-            transition: Slide,
-            autoClose: 3500,
-        })
+        errorMessage("An unexpected error occurred, Try again");
     }
 
     return Promise.reject(error)

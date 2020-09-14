@@ -64,55 +64,58 @@ div.container-fluid.Tutorial {
                 justify-content: center;
                 border-bottom: 1px solid rgba($color: $color-gray-2, $alpha: .5);
 
-                div.box-card {
+                div.group-box {
+                    display: flex;
+                    flex-direction: column;
                     width: 100%;
                     height: 100%;
                     border: 1px solid #ffffff;
-                    border-top: 0;
+                    border-bottom: 0;
                     border-left: 0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    border-top: 0;
 
-                    &:nth-child(2n) {
+                    &:nth-child(even) {
                         border-right: 0;
                     }
 
-                    &:nth-last-child(2n) {
-                        border-bottom: 0
-                    }
-
-                    &:nth-last-child(2n-1) {
+                    &:nth-last-child(1) > div.box-card {
                         border-bottom: 0;
                     }
 
-                    &:nth-last-child(n-1) {
-                        border-bottom: 1px solid #ffffff;
-                    }
-
-
-                    div.box {
-                        background-color: rgba($color: $color-gray-2, $alpha: .9);
-                        border: 1px solid red;
+                    & div.box-card {
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid #ffffff;
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 85%;
-                        height: 85%;
-                        background-color: rgba($color: $color-gray-2, $alpha: .7);
 
-                        div.refresh-box {
-                            width: 100%;
-                            height: 100%;
+                        div.box {
+                            background-color: rgba($color: $color-gray-2, $alpha: .9);
+                            border: 1px solid red;
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            width: 85%;
+                            height: 85%;
+                            background-color: rgba($color: $color-gray-2, $alpha: .7);
 
-                            svg.refresh-icon {
-                                font-size: 50px;
-                                color: rgba($color: $color-gray-2, $alpha: 1.0);
-                                background-color: rgba($color: $color-background-1, $alpha: .7);
-                                border-radius: 50%;
+                            div.refresh-box {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                svg.refresh-icon {
+                                    font-size: 50px;
+                                    color: rgba($color: $color-gray-2, $alpha: 1.0);
+                                    background-color: rgba($color: $color-background-1, $alpha: .7);
+                                    border-radius: 50%;
+                                }
                             }
                         }
                     }

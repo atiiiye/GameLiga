@@ -21,7 +21,7 @@ class UserContextes extends Component {
       confirmPassword: "",
       phone: "",
       promotional: "",
-      generate: "",
+      // generate: "",
       referred: "",
       captchaInput: "",
     },
@@ -35,11 +35,12 @@ class UserContextes extends Component {
     phone: "",
     promotional: "",
     referred: "",
-    generate: "",
+    // generate: "",
     checkbox: false,
     captcha: "",
     captchaInput: "",
     redirect: false,
+    loading: false,
     // type: "text",
   };
 
@@ -112,16 +113,6 @@ class UserContextes extends Component {
       this.setState({ redirect: true });
       this.resetInputs();
       this.setState({ loading: false });
-
-      // this.props.history.push({
-      //     pathname: "/account",
-      //     state: { username: this.state.username },
-      // });
-
-      // this.props.history.history.history.push({
-      //     // pathname: "/account",
-      //     state: { username: this.state.username },
-      // });
     } catch (err) {
       if (err.response && err.response.status === 400) {
         this.setState({ loading: false });
@@ -281,7 +272,6 @@ class UserContextes extends Component {
       this.postData();
     } else {
       console.error("Invalid Form");
-      // this.notifyError();
     }
   };
 
@@ -306,9 +296,7 @@ class UserContextes extends Component {
   };
 
   handleChangeBox = (e) => {
-    this.setState({
-      checkbox: e.target.checked,
-    });
+    this.setState({ checkbox: e.target.checked });
   };
 
   randomPassword = (length) => {
@@ -364,7 +352,8 @@ class UserContextes extends Component {
           captcha: this.state.captcha,
           captchaInput: this.state.captchaInput,
           errors: this.state.errors,
-          // checkbox: this.state.checkbox,
+          loading: this.state.loading,
+          checkbox: this.state.checkbox,
           // type: this.state.type,
           redirect: this.state.redirect,
           handleChangeLogin: this.handleChangeLogin.bind(this),
@@ -376,8 +365,8 @@ class UserContextes extends Component {
           validateForm: this.validateForm.bind(this),
           randomPassword: this.randomPassword.bind(this),
           randomCode: this.randomCode.bind(this),
+          handleChangeBox: this.handleChangeBox.bind(this),
           // resetInputs: this.resetInputs.bind(this),
-          // handleChangeBox: this.handleChangeBox.bind(this),
           // handleVisiblePassword: this.handleVisiblePassword.bind(this),
         }}
       >

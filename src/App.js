@@ -53,10 +53,6 @@ class App extends Component {
     promotional: "",
     referred: "",
     generate: "",
-  };
-
-  constructor(props) {
-    super(props);
   }
 
   componentDidMount() {
@@ -65,20 +61,7 @@ class App extends Component {
 
   render() {
     return (
-      <UserContextes
-        // username={this.state.username}
-        // password={this.state.password}
-        // firstName={this.state.firstName}
-        // lastName={this.state.lastName}
-        // nickName={this.state.nickName}
-        // email={this.state.email}
-        // confirmPassword={this.state.confirmPassword}
-        // phone={this.state.phone}
-        // promotional={this.state.promotional}
-        // referred={this.state.referred}
-        // generate={this.state.generate}
-        // errors={this.state.errors}
-      >
+      <UserContextes>
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
@@ -117,11 +100,5 @@ class App extends Component {
     );
   }
 }
-
-// const mapStateToProps = (state) => {
-//   return {
-//     username: state.username,
-//   };
-// };
 
 export default App;
