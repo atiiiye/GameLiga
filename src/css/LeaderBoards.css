@@ -136,6 +136,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.sc
   align-items: center;
   height: 100%;
   font-weight: 600;
+  margin-bottom: 0;
 }
 
 div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-2 {
@@ -157,7 +158,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.sc
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
+  padding-left: 1rem;
 }
 
 div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.title-table div.section-3 span.section-3-1 {

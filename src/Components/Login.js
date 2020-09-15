@@ -23,9 +23,6 @@ import { createBrowserHistory } from "history";
 //import contexts
 import { Context } from "./Contexts";
 
-//import services
-import { login } from "./../Services/userService";
-
 class Login extends Component {
   state = {
     modal: false,
@@ -36,100 +33,6 @@ class Login extends Component {
   toggle = () => {
     this.setState({ modal: !this.state.modal });
   };
-
-  // validateForm = (errors) => {
-  //   let valid = true;
-  //   Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
-  //   return valid;
-  // };
-
-  // handleChangeLogin = (event) => {
-  //   event.preventDefault();
-
-  //   const { name, value } = event.target;
-  //   let errors = this.state.errors;
-
-  //   switch (name) {
-  //     case "username":
-  //       if (value.length < 6 && value.match(/[a-zA-Z0-9]+$/)) {
-  //         errors.username = "Username must be 6 characters long!";
-  //       } else if (value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)) {
-  //         errors.username = "";
-  //       } else if (!value.match(/[a-zA-Z]+/) && value.length >= 6) {
-  //         errors.username = "Username can not be only number";
-  //       } else if (
-  //         (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
-  //         (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
-  //       ) {
-  //         errors.username = "please enter correct";
-  //       } else {
-  //         errors.username = "";
-  //       }
-  //       break;
-  //     case "password":
-  //       errors.password =
-  //         value.length < 8
-  //           ? "Password at least must be 8 characters long!"
-  //           : "";
-  //       break;
-  //     default:
-  //       return this.state;
-  //   }
-
-  //   this.setState({ errors, [name]: value });
-  // };
-
-  // handleSubmitLogin = (e) => {
-  //   event.preventDefault();
-  //   if (
-  //     this.validateForm(this.state.errors) &&
-  //     this.state.username &&
-  //     this.state.password
-  //   ) {
-  //     console.info("Valid Form");
-  //     this.goAccount();
-  //   } else {
-  //     console.error("Invalid Form");
-  //   }
-  // };
-
-  // goAccount = async () => {
-  //   this.setState({ loading: true });
-  //   try {
-  //     const { data, status } = await login(this.state);
-  //     if (status === 200) {
-  //       successMessage("You have logged in successfully");
-  //     }
-
-  //     localStorage.setItem("token", data);
-  //     // this.props.dispatch({type:"LOGIN" , payload : data.Username})
-  //     this.setState({ redirect: true });
-  //     this.resetInputs();
-  //     this.setState({ loading: false });
-
-  //     // this.props.history.push({
-  //     //     pathname: "/account",
-  //     //     state: { username: this.state.username },
-  //     // });
-
-  //     // this.props.history.history.history.push({
-  //     //     // pathname: "/account",
-  //     //     state: { username: this.state.username },
-  //     // });
-  //   } catch (err) {
-  //     if (err.response && err.response.status === 400) {
-  //       this.setState({ loading: false });
-  //       errorMessage("Username or Password is invalid");
-  //     }
-  //   }
-  // };
-
-  // resetInputs = () => {
-  //   this.setState({
-  //     username: "",
-  //     password: "",
-  //   });
-  // };
 
   // static getDerivedStateFromProps(props, state) {
   //   console.log("Login : getDerivedStateFromProps");
@@ -153,7 +56,6 @@ class Login extends Component {
   render() {
     const { errors, redirect, loading } = this.context;
     console.log("Login context", this.context);
-    // console.log("Login : renderred");
 
     if (redirect) {
       return <Redirect to={{ pathname: "/account" }} />;
@@ -186,6 +88,7 @@ class Login extends Component {
                 Do not have account ? <NavLink to="/signup">Sign up</NavLink>
               </p>
             </ModalHeader>
+
             {loading && <Loader />}
 
             <Form

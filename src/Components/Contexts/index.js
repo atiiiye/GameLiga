@@ -11,7 +11,6 @@ export const Context = React.createContext({
     confirmPassword: "",
     phone: "",
     promotional: "",
-    // generate: "",
     referred: "",
     captchaInput: "",
   },
@@ -26,7 +25,6 @@ export const Context = React.createContext({
   phone: "",
   promotional: "",
   referred: "",
-  // generate: "",
   checkbox: "",
   captcha: "",
   captchaInput: "",
@@ -43,6 +41,6 @@ export const Context = React.createContext({
   randomPassword: () => {},
   handleChangeBox: () => {},
   randomCode: () => {},
-  // resetInputs: () => {},
+  resetInputs: () => {},
   // handleVisiblePassword: () => {},
 });

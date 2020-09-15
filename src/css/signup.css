@@ -279,7 +279,7 @@ div.card-body#card-form-signup div.card-form form.form-signup button.register {
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register:focus {
-  box-shadow: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 147, 0, 0.25);
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register.disabled {

@@ -138,6 +138,7 @@ div.container-fluid.leader-boards {
                                     align-items: center;
                                     height: 100%;
                                     font-weight: 600;
+                                    margin-bottom: 0;
                                 }
                             }
 
@@ -160,7 +161,7 @@ div.container-fluid.leader-boards {
                                 justify-content: center;
                                 align-items: center;
                                 padding: 0;
-                                margin-left: 1rem;
+                                padding-left: 1rem;
 
                                 span.section-3-1 {
                                     color: rgba($color: #ffffff, $alpha: .7);

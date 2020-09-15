@@ -307,7 +307,7 @@ div.card-body#card-form-signup {
                     left: 16%;
 
                     &:focus {
-                        box-shadow: none;
+                        box-shadow: 0 0 0 .2rem rgba($color: $color-orange-1, $alpha: .25);
                     }
 
                     a {}

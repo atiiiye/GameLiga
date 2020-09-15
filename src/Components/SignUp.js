@@ -6,7 +6,8 @@ import "./../css/mediaSignup.css";
 import "./../css/toastify.css";
 
 //import boostrap
-import { Form, Button, ProgressBar } from "react-bootstrap";
+import { Form, ProgressBar } from "react-bootstrap";
+import { Button } from "reactstrap";
 import "react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css";
 
 //import routes
@@ -33,18 +34,18 @@ import { Context } from "./Contexts/index";
 class SignUp extends Component {
   state = {
     // errors: {
-      //   firstName: "",
-      //   lastName: "",
-      //   nickName: "",
-      //   username: "",
-      //   email: "",
-      //   password: "",
-      //   confirmPassword: "",
-      //   phone: "",
-      //   promotional: "",
-      //   referred: "",
-      //   generate: 0,
-      // captchaInput: "",
+    //   firstName: "",
+    //   lastName: "",
+    //   nickName: "",
+    //   username: "",
+    //   email: "",
+    //   password: "",
+    //   confirmPassword: "",
+    //   phone: "",
+    //   promotional: "",
+    //   referred: "",
+    //   generate: 0,
+    // captchaInput: "",
     // },
     // firstName: "",
     // lastName: "",
@@ -62,144 +63,21 @@ class SignUp extends Component {
     // redirect: false,
     // checkbox: false,
     // loading: false,
-    
+
     type: "text",
   };
 
   static contextType = Context;
 
-  // handleChange = (event) => {
-  //   event.preventDefault();
+  handleVisiblePassword = () => {
+    this.setState(({ type }) => ({
+      type: type === "text" ? "password" : "text",
+    }));
+  };
 
-  //   const { name, value } = event.target;
-  //   let errors = this.context.errors;
-  //   const validEmailRegex = RegExp(
-  //     /^([A-Za-z])(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-  //   );
-
-  //   switch (name) {
-  //     //     case "username":
-  //     //       if (value.length < 6 && value.match(/[a-zA-Z0-9]+$/)) {
-  //     //         errors.username = "Username must be 6 characters long!";
-  //     //       } else if (value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)) {
-  //     //         errors.username = "";
-  //     //       } else if (!value.match(/[a-zA-Z]+/) && value.length >= 6) {
-  //     //         errors.username = "Username can not be only number";
-  //     //       } else if (
-  //     //         (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
-  //     //         (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
-  //     //       ) {
-  //     //         errors.username = "please enter correct";
-  //     //       } else {
-  //     //         errors.username = "";
-  //     //       }
-  //     //       break;
-  //     //     case "email":
-  //     //       errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
-  //     //       break;
-  //     //     case "password":
-  //     //       errors.password =
-  //     //         value.length < 8
-  //     //           ? "Password at least must be 8 characters long!"
-  //     //           : "";
-  //     //       break;
-  //     //     case "confirmPassword":
-  //     //       errors.confirmPassword =
-  //     //         value != this.state.password ? "Password not match!" : "";
-  //     //       break;
-  //     //     case "firstName":
-  //     //       if (value.length < 6 && value.match(/^[a-zA-Z]+$/)) {
-  //     //         errors.firstName = "First Name must be 6 characters long!";
-  //     //       } else if (value.match(/^[a-zA-Z]+$/ && value.length > 6)) {
-  //     //         errors.firstName = "";
-  //     //       } else if (!value.match(/^[a-zA-Z]+$/) && value.length >= 6) {
-  //     //         errors.firstName = "please enter only letters";
-  //     //       } else if (!value.match(/^[a-zA-Z]+$/) && 1 < value.length < 6) {
-  //     //         errors.firstName = "please enter correct";
-  //     //       } else {
-  //     //         errors.firstName = "";
-  //     //       }
-  //     //       break;
-  //     //     case "lastName":
-  //     //       if (value.length < 6 && value.match(/^[a-zA-Z]+$/)) {
-  //     //         errors.lastName = "Last Name must be 6 characters long!";
-  //     //       } else if (value.match(/^[a-zA-Z]+$/ && value.length > 6)) {
-  //     //         errors.lastName = "";
-  //     //       } else if (!value.match(/^[a-zA-Z]+$/) && value.length >= 6) {
-  //     //         errors.lastName = "please enter only letters";
-  //     //       } else if (!value.match(/^[a-zA-Z]+$/) && 1 < value.length < 6) {
-  //     //         errors.lastName = "please enter correct";
-  //     //       } else {
-  //     //         errors.lastName = "";
-  //     //       }
-  //     //       break;
-  //     //     case "nickName":
-  //     //       if (value.length < 6 && value.match(/[a-zA-Z0-9]+$/)) {
-  //     //         errors.nickName = "Nick name must be 6 characters long!";
-  //     //       } else if (value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)) {
-  //     //         errors.nickName = "";
-  //     //       } else if (!value.match(/[a-zA-Z]+/) && value.length >= 6) {
-  //     //         errors.nickName = "Nick name can not be only number";
-  //     //       } else if (
-  //     //         (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
-  //     //         (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
-  //     //       ) {
-  //     //         errors.nickName = "please enter correct";
-  //     //       } else {
-  //     //         errors.nickName = "";
-  //     //       }
-  //     //       break;
-  //     //     case "phone":
-  //     //       if (value.length < 11 && value.match(/[0-9]+/)) {
-  //     //         errors.phone = "Phone must be 11 characters long!";
-  //     //       } else if (
-  //     //         (value.match(/[a-zA-Z]+/) && value.length <= 11) ||
-  //     //         (value.match(/[a-zA-Z]+/) && value.length > 11)
-  //     //       ) {
-  //     //         errors.phone = "please enter only number";
-  //     //       } else {
-  //     //         errors.phone = "";
-  //     //       }
-  //     //       break;
-  //     //     case "promotional":
-  //     //       if (value.length < 6 && value.match(/[a-zA-Z0-9]+/)) {
-  //     //         errors.promotional = "Code at least must be 6 characters!";
-  //     //       } else if (
-  //     //         (value.match(/[^a-zA-Z0-9]+/) && value.length >= 6) ||
-  //     //         (value.match(/[^a-zA-Z0-9]+/) && value.length < 6)
-  //     //       ) {
-  //     //         errors.promotional = "Code is invalid";
-  //     //       } else {
-  //     //         errors.promotional = "";
-  //     //       }
-  //     //       break;
-  //     //     case "referred":
-  //     //       if (value.length < 6 && value.match(/^[a-zA-Z]+$/)) {
-  //     //         errors.referred = "Code must be 6 characters long!";
-  //     //       } else if (value.match(/^[a-zA-Z]+$/ && value.length > 6)) {
-  //     //         errors.referred = "";
-  //     //       } else if (!value.match(/^[a-zA-Z]+$/) && value.length >= 6) {
-  //     //         errors.referred = "please enter only letters";
-  //     //       } else if (!value.match(/^[a-zA-Z]+$/) && value.length < 6) {
-  //     //         errors.referred = "Referred is not valid";
-  //     //       } else {
-  //     //         errors.referred = "";
-  //     //       }
-  //     //       break;
-  //     case "captchaInput":
-  //       if (value.length != 6 || value != this.state.captcha) {
-  //         errors.captchaInput = "Code is incorrect!";
-  //       } else {
-  //         errors.captchaInput = "";
-  //       }
-
-  //       break;
-  //     default:
-  //       return this.state;
-  //   }
-
-  //   this.setState({ errors, [name]: value });
-  // };
+  componentDidMount() {
+    this.context.randomCode(6);
+  }
 
   // handleSubmitSignup = (event) => {
   //   event.preventDefault();
@@ -242,73 +120,8 @@ class SignUp extends Component {
   //   }
   // };
 
-  // validateForm = (errors) => {
-  //   let valid = true;
-  //   Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
-  //   return valid;
-  // };
-
-  // randomPassword = (length) => {
-  //   let chars =
-  //     "abcdefghijklmnopqrstuvwxyz!@#$%&*ABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
-  //   let pass = "";
-  //   for (let x = 0; x < length; x++) {
-  //     let i = Math.floor(Math.random() * chars.length);
-  //     pass += chars.charAt(i);
-  //   }
-
-  //   this.setState({
-  //     password: pass,
-  //   });
-  // };
-
-  // randomCode = (length) => {
-  //   let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
-  //   let code = "";
-  //   for (let x = 0; x < length; x++) {
-  //     let i = Math.floor(Math.random() * chars.length);
-  //     code += chars.charAt(i);
-  //   }
-
-  //   this.setState({
-  //     captcha: code,
-  //   });
-  // };
-
-  // handleChangeBox = (e) => {
-  //   this.setState({
-  //     checkbox: e.target.checked,
-  //   });
-  // };
-
-  handleVisiblePassword = () => {
-    this.setState(({ type }) => ({
-      type: type === "text" ? "password" : "text",
-    }));
-  };
-
-  componentDidMount() {
-    this.context.randomCode(6);
-  }
-
-  // static getDerivedStateFromProps(props, state) {
-  //   console.log("SignUp : getDerivedStateFromProps");
-  //   return state;
-  // }
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   console.log("SignUp : shouldComponentUpdate");
-  //   return true;
-  // }
-  // getSnapshotBeforeUpdate(prevProps, prevState) {
-  //   console.log("SignUp : getSnapshotBeforeUpdate");
-  //   return null;
-  // }
-  // componentDidUpdate() {
-  //   console.log("SignUp : componentDidUpdate");
-  // }
 
   render() {
-    // console.log("SignUp : renderred");
 
     const { loading } = this.state;
     const { errors, password, redirect } = this.context;
@@ -321,12 +134,7 @@ class SignUp extends Component {
     if (password.length >= 10) progressStyle = "success";
 
     if (redirect) {
-      return (
-        // <Context.Provider value={{ username: this.state.username }}>
-        <Redirect to={{ pathname: "/account" }} />
-        // {/* <UserHeaderRight /> */}
-        // {/* </Context.Provider> */}
-      );
+      return <Redirect to={{ pathname: "/account" }} />;
     }
     return (
       <React.Fragment>
@@ -467,7 +275,7 @@ class SignUp extends Component {
                   )}
                 </div>
               </Form.Group>
-             
+
               {loading && <Loader />}
 
               <h3 className="h3">Personal Information</h3>
@@ -578,7 +386,7 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="Referred by"
                     name="referred"
-                    onChange={(e)=>this.context.handleChange(e)}
+                    onChange={(e) => this.context.handleChange(e)}
                     value={this.context.referred}
                   />
                   {errors.referred.length > 0 && (
@@ -605,7 +413,7 @@ class SignUp extends Component {
                       type="text"
                       name="captchaInput"
                       className="form-control-plaintext"
-                      onChange={(e)=>this.context.handleChange(e)}
+                      onChange={(e) => this.context.handleChange(e)}
                       value={this.context.captchaInput}
                       placeholder="please enter code"
                     />
@@ -629,7 +437,7 @@ class SignUp extends Component {
 
                 <Checkbox
                   checked={this.context.checkbox}
-                  onChange={(e)=>this.context.handleChangeBox(e)}
+                  onChange={(e) => this.context.handleChangeBox(e)}
                   style={{ color: "rgba(255, 255, 255 , .88)" }}
                   inputProps={{ "aria-label": "secondary checkbox" }}
                 />
@@ -643,7 +451,7 @@ class SignUp extends Component {
               <Form.Group className="row ml-1">
                 <Button
                   className={`register col-sm-7 ${
-                    // this.context.validateForm(errors) &&
+                    this.context.validateForm(errors) &&
                     this.context.checkbox &&
                     this.context.username &&
                     this.context.password &&
@@ -657,7 +465,6 @@ class SignUp extends Component {
                   }`}
                   variant="none"
                   type="submit"
-                  onClick={(e)=>this.context.handleChange(e)}
                 >
                   Register
                 </Button>

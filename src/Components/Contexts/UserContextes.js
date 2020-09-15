@@ -50,6 +50,46 @@ class UserContextes extends Component {
     return valid;
   };
 
+  handleSubmitSignup = (event) => {
+    event.preventDefault();
+    console.log("handleSubmitSignup");
+    if (
+      this.validateForm(this.state.errors) &&
+      this.state.checkbox &&
+      this.state.username &&
+      this.state.password &&
+      this.state.confirmPassword &&
+      this.state.email &&
+      this.state.nickName &&
+      this.state.phone &&
+      this.state.captchaInput
+    ) {
+      console.info("Valid Form");
+
+      this.postData();
+    } else {
+      console.error("Invalid Form");
+    }
+  };
+
+  postData = async () => {
+    this.setState({ loading: true });
+    try {
+      const { data, status } = await signup(this.state);
+      if (status === 201) {
+        successMessage("Create account successfully , Please wait");
+      }
+      localStorage.setItem("token", data);
+      this.setState({ redirect: true });
+      this.setState({ loading: false });
+    } catch (err) {
+      if (err.response && err.response.status === 400) {
+        this.setState({ loading: false });
+        errorMessage("Your Information is invalid");
+      }
+    }
+  };
+
   handleChangeLogin = (event) => {
     event.preventDefault();
 
@@ -109,9 +149,11 @@ class UserContextes extends Component {
       }
 
       localStorage.setItem("token", data);
-      // this.props.dispatch({type:"LOGIN" , payload : data.Username})
+      // localStorage.setItem(Username, this.state.username);
+      console.log(data);
+      // this.props.dispatch({type:"LOGIN" , payload : data})
       this.setState({ redirect: true });
-      this.resetInputs();
+      // this.resetInputs();
       this.setState({ loading: false });
     } catch (err) {
       if (err.response && err.response.status === 400) {
@@ -254,49 +296,8 @@ class UserContextes extends Component {
     this.setState({ errors, [name]: value });
   };
 
-  handleSubmitSignup = (event) => {
-    event.preventDefault();
-    if (
-      this.validateForm(this.state.errors) &&
-      this.state.checkbox &&
-      this.state.username &&
-      this.state.password &&
-      this.state.confirmPassword &&
-      this.state.email &&
-      this.state.nickName &&
-      this.state.phone &&
-      this.state.captchaInput
-    ) {
-      console.info("Valid Form");
-
-      this.postData();
-    } else {
-      console.error("Invalid Form");
-    }
-  };
-
-  postData = async () => {
-    this.setState({ loading: true });
-    try {
-      const { data, status } = await signup(this.state);
-      if (status === 201)
-        successMessage("Create account successfully , Please wait");
-      localStorage.setItem("token", data);
-      this.setState({ redirect: true });
-      this.setState({ loading: false });
-    } catch (err) {
-      if (err.response && err.response.status === 400) {
-        this.setState({ loading: false });
-        errorMessage("Your Information is invalid");
-        // const errors = { ...this.state.errors }
-        // errors.username = 'Username or E-mail is invalid ';
-        // this.setState({ errors })
-      }
-    }
-  };
-
-  handleChangeBox = (e) => {
-    this.setState({ checkbox: e.target.checked });
+  handleChangeBox = (event) => {
+    this.setState({ checkbox: event.target.checked });
   };
 
   randomPassword = (length) => {

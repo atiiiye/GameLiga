@@ -34,7 +34,7 @@ nav.navbar.user-header-right div.navbar-right div.navbar-collapse.collapse.colla
   margin-right: 2rem;
   margin-bottom: 0;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 nav.navbar.user-header-right div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 a.nav-link-icon {
