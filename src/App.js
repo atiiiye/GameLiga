@@ -14,6 +14,7 @@ import LeaderBoards from "./Components/LeaderBoards";
 import Chat from "./Components/Chat";
 import Tutorial from "./Components/Tutorial";
 import Shop from "./Components/Shop";
+import News from "./Components/News";
 
 //import Routes
 import PrivateRoute from "./Components/Routes/PrivateRoute ";
@@ -24,36 +25,13 @@ import { Route, Switch } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { connect } from "react-redux";
 
+//import contexts
 import UserContextes from "./Components/Contexts/UserContextes";
+
+
 //import utils
 
 class App extends Component {
-  state = {
-    errors: {
-      firstName: "",
-      lastName: "",
-      nickName: "",
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      phone: "",
-      promotional: "",
-      generate: "",
-      referred: "",
-    },
-    firstName: "",
-    lastName: "",
-    nickName: "",
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-    phone: "",
-    promotional: "",
-    referred: "",
-    generate: "",
-  }
 
   componentDidMount() {
     document.title = "Game Liga";
@@ -65,12 +43,7 @@ class App extends Component {
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute
-            exact
-            restricted={false}
-            path="/signup"
-            component={SignUp}
-          />
+          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
 
           <PrivateRoute exact path="/account" component={Account} />
 
@@ -91,6 +64,8 @@ class App extends Component {
           <PrivateRoute exact path="/chat" component={Chat} />
 
           <PrivateRoute exact path="/shop" component={Shop} />
+
+          <PrivateRoute exact path="/news" component={News} />
 
           <PrivateRoute exact path="/404" component={NotFound} />
 

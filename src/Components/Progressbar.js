@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class Progressbar extends Component {
+class Progressbar extends Component {
   state = {
       percent: 0,
       style:''

@@ -10,7 +10,7 @@ import { Card } from "react-bootstrap";
 //import css
 import './../css/Layout.css'
 
-export class Layout extends Component {
+class Layout extends Component {
     render() {
         return (
             <React.Fragment>

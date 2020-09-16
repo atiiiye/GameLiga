@@ -79,28 +79,6 @@ class SignUp extends Component {
     this.context.randomCode(6);
   }
 
-  // handleSubmitSignup = (event) => {
-  //   event.preventDefault();
-  //   if (
-  //     this.validateForm(this.state.errors) &&
-  //     this.state.checkbox &&
-  //     this.state.username &&
-  //     this.state.password &&
-  //     this.state.confirmPassword &&
-  //     this.state.email &&
-  //     this.state.nickName &&
-  //     this.state.phone &&
-  //     this.state.captchaInput
-  //   ) {
-  //     console.info("Valid Form");
-
-  //     this.postData();
-  //   } else {
-  //     console.error("Invalid Form");
-  // errorMessage("Your Information is invalid")
-  //   }
-  // };
-
   // postData = async () => {
   //   this.setState({ loading: true });
   //   try {
@@ -125,7 +103,7 @@ class SignUp extends Component {
 
     const { loading } = this.state;
     const { errors, password, redirect } = this.context;
-    console.log("SignUp Context", this.context);
+    // console.log("SignUp Context", this.context);
 
     let progressStyle = "";
 

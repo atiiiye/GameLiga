@@ -264,9 +264,17 @@ section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.
   background-color: #000000;
 }
 
-section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid {
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid.background {
   margin-top: 2.5rem;
   width: 50%;
   height: auto;
+}
+
+section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-counterstrike.image-fluid {
+  width: 30%;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+  bottom: 5%;
 }
 /*# sourceMappingURL=Home.css.map */

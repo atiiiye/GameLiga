@@ -21,7 +21,6 @@ class UserContextes extends Component {
       confirmPassword: "",
       phone: "",
       promotional: "",
-      // generate: "",
       referred: "",
       captchaInput: "",
     },
@@ -35,13 +34,11 @@ class UserContextes extends Component {
     phone: "",
     promotional: "",
     referred: "",
-    // generate: "",
     checkbox: false,
     captcha: "",
     captchaInput: "",
     redirect: false,
     loading: false,
-    // type: "text",
   };
 
   validateForm = (errors) => {
@@ -330,12 +327,6 @@ class UserContextes extends Component {
   //   });
   // };
 
-  // handleVisiblePassword = () => {
-  //   this.setState(({ type }) => ({
-  //     type: type === "text" ? "password" : "text",
-  //   }));
-  // };
-
   render() {
     return (
       <Context.Provider
@@ -355,7 +346,6 @@ class UserContextes extends Component {
           errors: this.state.errors,
           loading: this.state.loading,
           checkbox: this.state.checkbox,
-          // type: this.state.type,
           redirect: this.state.redirect,
           handleChangeLogin: this.handleChangeLogin.bind(this),
           handleSubmitLogin: this.handleSubmitLogin.bind(this),
@@ -368,7 +358,6 @@ class UserContextes extends Component {
           randomCode: this.randomCode.bind(this),
           handleChangeBox: this.handleChangeBox.bind(this),
           // resetInputs: this.resetInputs.bind(this),
-          // handleVisiblePassword: this.handleVisiblePassword.bind(this),
         }}
       >
         {this.props.children}

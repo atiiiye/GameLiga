@@ -1,8 +1,5 @@
 import axios from 'axios'
 
-//import packages
-import { toast, Flip, Slide } from 'react-toastify'
-
 //import utils
 import { errorMessage, successMessage } from "../utils/messages";
 

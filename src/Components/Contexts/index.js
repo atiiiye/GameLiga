@@ -30,7 +30,6 @@ export const Context = React.createContext({
   captchaInput: "",
   redirect: "",
   loading:"",
-  // type: "",
   handleChangeLogin: () => {},
   handleSubmitLogin: () => {},
   goAccount: () => {},
@@ -42,5 +41,4 @@ export const Context = React.createContext({
   handleChangeBox: () => {},
   randomCode: () => {},
   resetInputs: () => {},
-  // handleVisiblePassword: () => {},
 });

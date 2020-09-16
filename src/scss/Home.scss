@@ -94,10 +94,10 @@ section.main-slider {
                                     font-size: 35px;
 
                                     &:focus {
-                                        outline: none;  
+                                        outline: none;
                                     }
-                                    
-                                    &:hover{
+
+                                    &:hover {
                                         color: rgba($color: #ffffff, $alpha: .75);
                                     }
                                 }
@@ -281,9 +281,6 @@ section.main-slider {
                     }
                 }
 
-
-
-
             }
 
             div.images-content.images {
@@ -294,10 +291,19 @@ section.main-slider {
                 align-items: center;
                 background-color: #000000;
 
-                img.image-fluid {
+                img.image-fluid.background {
                     margin-top: 2.5rem;
                     width: 50%;
                     height: auto;
+                }
+
+                img.image-counterstrike.image-fluid {
+                    width: 30%;
+                    height: 100%;
+                    background-color: transparent;
+                    position: relative;
+                    bottom: 5%;
+
                 }
             }
         }

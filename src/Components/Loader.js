@@ -3,7 +3,7 @@ import React, { Component } from "react";
 //import css
 import "./../css/Loader.css";
 
-export class Loader extends Component {
+class Loader extends Component {
   render() {
     return (
       <React.Fragment>

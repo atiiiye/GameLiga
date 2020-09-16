@@ -1,7 +1,9 @@
-import http from './httpService'
-import config from './../config.json'
-export function login(user) {
+import http from './httpService';
+import config from './../config.json';
 
+
+
+export function login(user) {
 
     return http.post(config.loginApi, JSON.stringify({
         Username: user.username,

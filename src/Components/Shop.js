@@ -11,7 +11,7 @@ import './../css/Shop.css';
 //import bootstrap
 import { Card } from "react-bootstrap";
 
-export class Shop extends Component {
+class Shop extends Component {
     render() {
         return (
             <React.Fragment>

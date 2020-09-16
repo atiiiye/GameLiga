@@ -55,7 +55,7 @@ class Login extends Component {
 
   render() {
     const { errors, redirect, loading } = this.context;
-    console.log("Login context", this.context);
+    // console.log("Login context", this.context);
 
     if (redirect) {
       return <Redirect to={{ pathname: "/account" }} />;
@@ -140,9 +140,8 @@ class Login extends Component {
                       ? ""
                       : "disabled"
                   }`}
-                  variant="none"
                   id="submit"
-                  value="Submit"
+                  variant="none"
                   type="submit"
                 >
                   LOG IN

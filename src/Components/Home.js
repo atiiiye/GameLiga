@@ -11,6 +11,8 @@ import "./../css/formlogin.css";
 //import image
 import sidan from "./../images/sidan.png";
 import background2 from "./../images/background2.png";
+import CounterStrike from "./../images/CounterStrike.png";
+
 
 //import bootstrap
 import Card from "react-bootstrap/Card";
@@ -100,8 +102,7 @@ class Slider extends Component {
 
     return (
       <React.Fragment>
-        {/* <usernameContext.Provider value={{ loginUsername: this.state.username }}> */}
-        <Header /*history={this.props}*/ />
+        <Header />
         <section className="main-slider">
           <div className="container-fluid box-slider">
             <div className="row pratition-slider">
@@ -148,13 +149,13 @@ class Slider extends Component {
                 </div>
 
                 <div className="images-content images">
-                  <img src={background2} className="image-fluid" alt=""></img>
+                  {/* <img src={CounterStrike} className="image-counterstrike image-fluid" /> */}
+                  <img src={background2} className="image-fluid background" />
                 </div>
               </Card>
             </div>
           </div>
         </section>
-        {/* </usernameContext.Provider> */}
       </React.Fragment>
     );
   }
