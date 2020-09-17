@@ -1,10 +1,15 @@
+import jwt from "jsonwebtoken";
+
+
 const TOKEN_KEY = "jwt";
 
-export const login = () => {
-  localStorage.setItem(TOKEN_KEY, "USER_LOGIN");
+export const LoginUtil = (data) => {
+
+
+  localStorage.setItem(TOKEN_KEY, data);
 };
 
-export const logout = () => {
+export const Logout = () => {
   localStorage.removeItem(TOKEN_KEY);
 };
 

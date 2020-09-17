@@ -9,6 +9,9 @@ import { login, signup } from "../../Services/userService";
 //import utils
 import { errorMessage, successMessage } from "../../utils/messages";
 
+import jwt from "jsonwebtoken";
+import { LoginUtil } from './../../utils/index'
+
 class UserContextes extends Component {
   state = {
     errors: {
@@ -143,11 +146,14 @@ class UserContextes extends Component {
       const { data, status } = await login(this.state);
       if (status === 200) {
         successMessage("You have logged in successfully");
+        // localStorage.setItem("token", data);
+        // let decode = jwt.decode(data);
+        // console.log(decode.Username);
+        // console.log(data);
+        LoginUtil(data);
+
       }
 
-      localStorage.setItem("token", data);
-      // localStorage.setItem(Username, this.state.username);
-      console.log(data);
       // this.props.dispatch({type:"LOGIN" , payload : data})
       this.setState({ redirect: true });
       // this.resetInputs();
@@ -306,7 +312,7 @@ class UserContextes extends Component {
       pass += chars.charAt(i);
     }
 
-    this.setState({ password: pass });
+    this.setState({ password: pass, confirmPassword :pass });
   };
 
   randomCode = (length) => {

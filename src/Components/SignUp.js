@@ -15,9 +15,8 @@ import { NavLink, Redirect } from "react-router-dom";
 
 //import components
 import UserHeaderLeft from "./UserHeaderLeft";
-import UserHeaderRight from "./UserHeaderRight";
-import Progressbar from "./Progressbar";
 import Loader from "./Loader";
+import Progressbar from "./Progressbar";
 
 //import packages
 import RefreshIcon from "@material-ui/icons/Refresh";
@@ -77,6 +76,11 @@ class SignUp extends Component {
 
   componentDidMount() {
     this.context.randomCode(6);
+  }
+
+  componentDidUpdate() {
+
+      (e)=>this.context.handleChange(e);
   }
 
   // postData = async () => {
