@@ -149,6 +149,10 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   height: 33px !important;
 }
 
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box div.password-block input[name="password"] {
+  padding-right: 2rem;
+}
+
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box div.password-block i.far.fa-eye {
   display: flex;
   flex-direction: row-reverse;

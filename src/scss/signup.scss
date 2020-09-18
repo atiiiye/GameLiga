@@ -143,7 +143,10 @@ div.card-body#card-form-signup {
                     div.password-block {
                         height: 33px !important;
 
-                        input[name="password"] {}
+                        input[name="password"] {
+                            padding-right: 2rem;
+
+                        }
 
                         i.far.fa-eye {
                             display: flex;
@@ -162,167 +165,167 @@ div.card-body#card-form-signup {
 
                     }
 
-                        span.error {
-                            color: #ffffff;
-                            font-size: 75%;
-                            margin-top: .5rem;
-                            background-color: rgba($color:red, $alpha: .7);
-                            padding: .5rem;
-                            border: 1px solid rgba($color:red, $alpha: .9);
-                            border-radius: 5px;
-                            // position: relative;
+                    span.error {
+                        color: #ffffff;
+                        font-size: 75%;
+                        margin-top: .5rem;
+                        background-color: rgba($color:red, $alpha: .7);
+                        padding: .5rem;
+                        border: 1px solid rgba($color:red, $alpha: .9);
+                        border-radius: 5px;
+                        // position: relative;
 
-                        }
+                    }
 
-                        input[type="range"] {
-                            background-color: transparent;
-                            // background: linear-gradient(to right, $color-red-1 0%, $color-yellow 50%, $color-green 100%);
-                            cursor: pointer;
-                            border: none;
-                            overflow: hidden;
-                            padding-left: 0;
-                            user-select: none;
+                    input[type="range"] {
+                        background-color: transparent;
+                        // background: linear-gradient(to right, $color-red-1 0%, $color-yellow 50%, $color-green 100%);
+                        cursor: pointer;
+                        border: none;
+                        overflow: hidden;
+                        padding-left: 0;
+                        user-select: none;
 
-                            &:focus {
-                                box-shadow: none;
-                            }
-
-                        }
-
-
-                        div.progress {
-                            padding: 0;
-                            height: .5rem;
-                            background-color: rgba($color: #ffffff, $alpha: .1);
-                        }
-
-                        button.generate-password {
-                            background-color: transparent;
-                            border-color: $color-orange-1;
-                            font-size: 80%;
-                            border-radius: 28px;
-                            color: $color-orange-1;
-                            width: 50%;
-                            display: flex;
-                            justify-content: center;
-                            padding-left: .5rem;
-                            padding-right: .5rem;
-
-                            &:focus {
-                                box-shadow: none;
-                                background-color: rgba($color: $color-orange-1, $alpha: 1.0);
-                                color: #ffffff;
-
-                            }
-
-                            &:hover {
-                                background-color: rgba($color: $color-orange-1, $alpha: 1.0);
-                                color: #ffffff;
-
-                            }
-
+                        &:focus {
+                            box-shadow: none;
                         }
 
                     }
 
 
-
-                    div.form-check-inline {
-                        width: 10%;
-                        margin-right: 0;
-                        justify-content: center;
-                        align-items: center;
-                        // input[type="checkbox"] {
-                        //     width: 25px;
-                        //     height: 25px;
-                        //     opacity: 1;
-                        //     margin-right: 0;
-                        //     cursor: pointer;
-
-                        //     &:focus {
-                        //         box-shadow: 0 0 0 0.1rem rgba($color: $color-blue-1, $alpha: .25);
-                        //     }
-                        // }
+                    div.progress {
+                        padding: 0;
+                        height: .5rem;
+                        background-color: rgba($color: #ffffff, $alpha: .1);
                     }
 
-                    div.captcha-block {
+                    button.generate-password {
+                        background-color: transparent;
+                        border-color: $color-orange-1;
+                        font-size: 80%;
+                        border-radius: 28px;
+                        color: $color-orange-1;
+                        width: 50%;
                         display: flex;
-                        flex-direction: column;
-                        align-items: center;
                         justify-content: center;
+                        padding-left: .5rem;
+                        padding-right: .5rem;
 
-                        div.captcha-generate {
+                        &:focus {
+                            box-shadow: none;
+                            background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                            color: #ffffff;
+
+                        }
+
+                        &:hover {
+                            background-color: rgba($color: $color-orange-1, $alpha: 1.0);
+                            color: #ffffff;
+
+                        }
+
+                    }
+
+                }
+
+
+
+                div.form-check-inline {
+                    width: 10%;
+                    margin-right: 0;
+                    justify-content: center;
+                    align-items: center;
+                    // input[type="checkbox"] {
+                    //     width: 25px;
+                    //     height: 25px;
+                    //     opacity: 1;
+                    //     margin-right: 0;
+                    //     cursor: pointer;
+
+                    //     &:focus {
+                    //         box-shadow: 0 0 0 0.1rem rgba($color: $color-blue-1, $alpha: .25);
+                    //     }
+                    // }
+                }
+
+                div.captcha-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    div.captcha-generate {
+                        display: flex;
+                        margin-bottom: .2rem;
+
+                        div.captcha {
+                            width: 100px;
+                            height: 50px;
+                            background-color: rgba($color: $color-gray-2, $alpha: .5);
+                            // border:1px solid #000000 ;
+                            margin-bottom: 1rem;
+                            font-size: 90%;
+                            font-family: 'Cambria', 'Cochin', 'Times New Roman', serif, Times, serif;
                             display: flex;
-                            margin-bottom: .2rem;
+                            align-items: center;
+                            justify-content: center;
+                            color: $color-white;
+                            font-style: italic;
+                            user-select: none;
+                            cursor: pointer;
 
-                            div.captcha {
-                                width: 100px;
-                                height: 50px;
-                                background-color: rgba($color: $color-gray-2, $alpha: .5);
-                                // border:1px solid #000000 ;
-                                margin-bottom: 1rem;
-                                font-size: 90%;
-                                font-family: 'Cambria', 'Cochin', 'Times New Roman', serif, Times, serif;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: $color-white;
-                                font-style: italic;
-                                user-select: none;
-                                cursor: pointer;
+                            div.validation-box {}
 
-                                div.validation-box {}
+                        }
 
-                            }
+                        svg.refresh-captcha {
+                            display: flex;
+                            height: 50px;
+                            align-self: flex-end;
+                            font-size: 20px;
+                            color: #ffffff;
 
-                            svg.refresh-captcha {
-                                display: flex;
-                                height: 50px;
-                                align-self: flex-end;
-                                font-size: 20px;
-                                color: #ffffff;
-
-                                &:active {
-                                    transform: rotate(270deg);
-                                    transition: all .1s ease;
-                                }
+                            &:active {
+                                transform: rotate(270deg);
+                                transition: all .1s ease;
                             }
                         }
                     }
                 }
-
-                // a{
-                //     color: #ffffff;
-                //     text-decoration: none;
-                button.register {
-                    background-color: $color-orange-1;
-                    border-color: $color-orange-1;
-                    border-radius: 28px;
-                    outline: none;
-                    font-size: 95%;
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    color: $color-white;
-                    left: 16%;
-
-                    &:focus {
-                        box-shadow: 0 0 0 .2rem rgba($color: $color-orange-1, $alpha: .25);
-                    }
-
-                    a {}
-                }
-
-                button.register.disabled {
-                    background-color: $color-gray-1;
-                    border-color: $color-background-1;
-                    color: $color-white;
-                }
-
-                // }
-
-
             }
 
+            // a{
+            //     color: #ffffff;
+            //     text-decoration: none;
+            button.register {
+                background-color: $color-orange-1;
+                border-color: $color-orange-1;
+                border-radius: 28px;
+                outline: none;
+                font-size: 95%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                color: $color-white;
+                left: 16%;
+
+                &:focus {
+                    box-shadow: 0 0 0 .2rem rgba($color: $color-orange-1, $alpha: .25);
+                }
+
+                a {}
+            }
+
+            button.register.disabled {
+                background-color: $color-gray-1;
+                border-color: $color-background-1;
+                color: $color-white;
+            }
+
+            // }
+
+
         }
+
     }
+}

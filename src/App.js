@@ -69,6 +69,7 @@ class App extends Component {
           <PrivateRoute exact path="/404" component={NotFound} />
 
           <PrivateRoute exact path="" component={NotFound} />
+          
         </Switch>
       </UserContextes>
     );

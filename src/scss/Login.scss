@@ -102,6 +102,31 @@ div.modal-dialog.login-modal {
                         }
                     }
 
+
+                    div.password-block {
+                        height: 45.5px ;
+
+                        input[name="password"] {
+                            padding-right: 2rem;
+                        }
+
+                        i.far.fa-eye {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            color: $color-gray-2;
+                            width: max-content;
+                            font-size: 17px;
+                            position: relative;
+                            bottom: 2.3rem;
+                            right: -92.5%;
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            z-index: 100;
+                        }
+
+                    }
+
                     small {
                         a {
                             color: $color-orange-1;

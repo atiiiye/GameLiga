@@ -26,6 +26,7 @@ class Sidebar extends Component {
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/help">Help center</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/shop">Shop</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/chat">Chat</NavLink></li>
+            {/* <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/">Logout</NavLink></li> */}
 
           </ul>
         </div>

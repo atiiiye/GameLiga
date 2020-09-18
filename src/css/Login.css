@@ -104,6 +104,29 @@ div.modal-dialog.login-modal div.modal-content div.modal-body form.form-login di
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+div.modal-dialog.login-modal div.modal-content div.modal-body form.form-login div.form-fields div.password-block {
+  height: 45.5px;
+}
+
+div.modal-dialog.login-modal div.modal-content div.modal-body form.form-login div.form-fields div.password-block input[name="password"] {
+  padding-right: 2rem;
+}
+
+div.modal-dialog.login-modal div.modal-content div.modal-body form.form-login div.form-fields div.password-block i.far.fa-eye {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #959aa2;
+  width: max-content;
+  font-size: 17px;
+  position: relative;
+  bottom: 2.3rem;
+  right: -92.5%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
 div.modal-dialog.login-modal div.modal-content div.modal-body form.form-login div.form-fields small a {
   color: #ff9300;
   font-weight: bold;

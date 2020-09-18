@@ -13,14 +13,13 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 //import bootstrap
 import { Card, Form, Nav } from "react-bootstrap";
 
+//import utils
+import { isLogin } from '../utils';
 
-//import contexts
-import { Context } from "./Contexts";
 
 class Console extends Component {
   state = {};
 
-  static contextType = Context;
 
   render() {
     return (
@@ -32,7 +31,7 @@ class Console extends Component {
             <Card id="content">
               <div className="main-section">
                 <i className="image-icon fas fa-user-circle" id="user"></i>
-                <p className="username">{this.context.username}</p>
+                <p className="username"> {isLogin().Username}</p>
                 <span className="status-activation">
                   Active now .Sined uo 2 months age
                 </span>

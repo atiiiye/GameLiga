@@ -8,9 +8,8 @@ import { login, signup } from "../../Services/userService";
 
 //import utils
 import { errorMessage, successMessage } from "../../utils/messages";
-
-import jwt from "jsonwebtoken";
-import { LoginUtil } from './../../utils/index'
+import { LoginUtil } from "./../../utils";
+import { LogoutUtil } from "./../../utils";
 
 class UserContextes extends Component {
   state = {
@@ -78,8 +77,8 @@ class UserContextes extends Component {
       const { data, status } = await signup(this.state);
       if (status === 201) {
         successMessage("Create account successfully , Please wait");
+        // LoginUtil(data);
       }
-      localStorage.setItem("token", data);
       this.setState({ redirect: true });
       this.setState({ loading: false });
     } catch (err) {
@@ -146,17 +145,11 @@ class UserContextes extends Component {
       const { data, status } = await login(this.state);
       if (status === 200) {
         successMessage("You have logged in successfully");
-        // localStorage.setItem("token", data);
-        // let decode = jwt.decode(data);
-        // console.log(decode.Username);
-        // console.log(data);
         LoginUtil(data);
-
       }
-
       // this.props.dispatch({type:"LOGIN" , payload : data})
       this.setState({ redirect: true });
-      // this.resetInputs();
+      this.resetInputs();
       this.setState({ loading: false });
     } catch (err) {
       if (err.response && err.response.status === 400) {
@@ -312,7 +305,7 @@ class UserContextes extends Component {
       pass += chars.charAt(i);
     }
 
-    this.setState({ password: pass, confirmPassword :pass });
+    this.setState({ password: pass, confirmPassword: pass });
   };
 
   randomCode = (length) => {
@@ -326,12 +319,12 @@ class UserContextes extends Component {
     this.setState({ captcha: code });
   };
 
-  // resetInputs = () => {
-  //   this.setState({
-  //     username: "",
-  //     password: "",
-  //   });
-  // };
+  resetInputs = () => {
+    this.setState({
+      username: "",
+      password: "",
+    });
+  };
 
   render() {
     return (
@@ -363,7 +356,7 @@ class UserContextes extends Component {
           randomPassword: this.randomPassword.bind(this),
           randomCode: this.randomCode.bind(this),
           handleChangeBox: this.handleChangeBox.bind(this),
-          // resetInputs: this.resetInputs.bind(this),
+          resetInputs: this.resetInputs.bind(this),
         }}
       >
         {this.props.children}

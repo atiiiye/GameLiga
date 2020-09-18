@@ -20,44 +20,27 @@ import { ToastContainer } from "react-toastify";
 import { connect } from "react-redux";
 import { createBrowserHistory } from "history";
 
-
 //import contexts
 import { Context } from "./Contexts";
-
 
 class Login extends Component {
   state = {
     modal: false,
+    type: "text",
   };
 
   static contextType = Context;
 
-  toggle = () => {
-    this.setState({ modal: !this.state.modal });
+  toggle = () => this.setState({ modal: !this.state.modal });
+
+  VisiblePassword = () => {
+    this.setState(({ type }) => ({
+      type: type === "text" ? "password" : "text",
+    }));
   };
-
-  // static getDerivedStateFromProps(props, state) {
-  //   console.log("Login : getDerivedStateFromProps");
-  //   return state;
-  // }
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   console.log("Login : shouldComponentUpdate");
-  //   return true;
-  // }
-
-  // getSnapshotBeforeUpdate(prevProps, prevState) {
-  //   console.log("Login : getSnapshotBeforeUpdate");
-  //   return null;
-  // }
-
-  // componentDidUpdate() {
-  //   console.log("Login : componentDidUpdate");
-  // }
 
   render() {
     const { errors, redirect, loading } = this.context;
-    // console.log("Login context", this.context);
 
     if (redirect) {
       return <Redirect to={{ pathname: "/account" }} />;
@@ -108,22 +91,28 @@ class Login extends Component {
                   placeholder="User name"
                   value={this.context.username}
                   onChange={(e) => this.context.handleChangeLogin(e)}
-                ></Form.Control>
+                />
                 {errors.username.length > 0 && (
                   <span className="form-validate">{errors.username}</span>
                 )}
               </div>
               <div className="form-fields">
                 <Form.Label>Password :</Form.Label>
-                <Form.Control
-                  type="text"
-                  className="mb-1 mt-1"
-                  id="password"
-                  name="password"
-                  placeholder="Password"
-                  value={this.context.password}
-                  onChange={(e) => this.context.handleChangeLogin(e)}
-                ></Form.Control>
+                <div className="password-block">
+                  <Form.Control
+                    type={this.state.type}
+                    className="mb-1 mt-1"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    value={this.context.password}
+                    onChange={(e) => this.context.handleChangeLogin(e)}
+                  />
+                  <i
+                    className="far fa-eye"
+                    onClick={this.VisiblePassword.bind(this)}
+                  />
+                </div>
                 {errors.password.length > 0 && (
                   <span className="form-validate">{errors.password}</span>
                 )}

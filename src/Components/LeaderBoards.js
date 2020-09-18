@@ -17,13 +17,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import ScrollArea from 'react-scrollbar';
 // import ReactScrollbar from 'react-scrollbar-js';
 
-//import contexts
-import { Context } from "./Contexts";
+//import utils
+import { isLogin } from '../utils';
 
 class LeaderBoards extends Component {
   state = {};
 
-  static contextType = Context;
 
   render() {;
 
@@ -61,7 +60,7 @@ class LeaderBoards extends Component {
                           className="image-icon fas fa-user-circle"
                           id="user"
                         ></i>
-                        <p className="user-name">{this.context.username}</p>
+                        <p className="user-name">{isLogin().Username}</p>
                       </div>
                       <div className="section-2 col-md-5">
                         <span className="section-2-1">0</span>
@@ -127,7 +126,7 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">{this.context.username}</div>
+                                  <div className="user-name">{isLogin().Username}</div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>

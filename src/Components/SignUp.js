@@ -24,9 +24,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Checkbox from "@material-ui/core/Checkbox";
 
-//import services
-import { signup } from "./../Services/userService";
-
 //import contexts
 import { Context } from "./Contexts/index";
 
@@ -78,10 +75,10 @@ class SignUp extends Component {
     this.context.randomCode(6);
   }
 
-  componentDidUpdate() {
+  // componentDidUpdate() {
 
-      (e)=>this.context.handleChange(e);
-  }
+  //     (e)=>this.context.handleChange(e);
+  // }
 
   // postData = async () => {
   //   this.setState({ loading: true });
@@ -225,7 +222,7 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
-                    type="text"
+                    type="password"
                     className="form-control-plaintext"
                     placeholder="confirm password"
                     name="confirmPassword"

@@ -149,6 +149,7 @@ li.nav-item.nav-item-icon#telegram a.nav-link div.dropdown-messages.dropdown div
   border-radius: 28px;
   border: none;
   padding: .25rem 1rem;
+  padding-left: 2rem;
   position: relative;
   left: .5rem;
 }

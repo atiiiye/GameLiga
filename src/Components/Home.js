@@ -13,16 +13,17 @@ import sidan from "./../images/sidan.png";
 import background2 from "./../images/background2.png";
 import CounterStrike from "./../images/CounterStrike.png";
 
-
 //import bootstrap
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
-// import { navLink } from "react-bootstrap";
 
 // import packages
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import { NavLink } from "react-router-dom";
+
+//import utils
+import { LogoutUtil } from "../utils";
 
 class Slider extends Component {
   state = {
@@ -77,6 +78,10 @@ class Slider extends Component {
     ],
   };
 
+  componentDidMount() {
+    LogoutUtil();
+  }
+
   render() {
     const params = {
       spaceBetween: 30,
@@ -97,8 +102,6 @@ class Slider extends Component {
         },
       },
     };
-
-    // console.log(this.props);
 
     return (
       <React.Fragment>
