@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 //import css
-import "./../css/console.css"
+import "./../css/console.css";
+import "./../css/mediaConsole.css";
 
 //import components
 import Sidebar from "./Sidebar";

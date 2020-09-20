@@ -1,0 +1,246 @@
+@import './../base';
+
+@media(max-width:1199px) {
+    div.container-fluid.Console {
+        div.card#content {
+            div.main-section {
+                i.image-icon.fas.fa-user-circle {}
+
+                p.username {}
+
+                span.status-activation {}
+
+                div.inputs {
+                    width: 85%;
+
+                    div.validation-box {
+                        input {}
+                    }
+                }
+
+                div.nav-tabs {
+                    width: 70%;
+
+                    div.nav-list.nav.card-header-undefined {
+                        div.nav-item {
+                            a.nav-item.nav-link {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    div.container-fluid.Console {
+        div.card#content {
+            div.main-section {
+                i.image-icon.fas.fa-user-circle {}
+
+                p.username {}
+
+                span.status-activation {
+                    margin-top: .8rem;
+                }
+
+                div.inputs {
+                    width: 82%;
+
+                    div.validation-box {
+                        width: 95%;
+
+                        input {
+                            padding-left: .4rem;
+                            width: 90%;
+                        }
+                    }
+                }
+
+                div.nav-tabs {
+                    width: 78%;
+
+                    div.nav-list.nav.card-header-undefined {
+
+                        div.nav-item {
+                            a.nav-item.nav-link {
+                                font-size: 95%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:867px) {
+    div.container-fluid.Console {
+        div.card#content {
+            div.main-section {
+                i.image-icon.fas.fa-user-circle {
+                    font-size: 70px;
+                }
+
+                p.username {
+                    margin-top: 1rem;
+                    font-weight: 600;
+                }
+
+                span.status-activation {
+                    margin-top: .8rem;
+                    font-weight: 600;
+                }
+
+                div.inputs {
+                    width: 82%;
+                    margin-top: 2rem;
+
+                    div.validation-box {
+                        padding: 0;
+                        width: 95%;
+
+                        input {
+                            padding-left: .4rem;
+                            width: 90%;
+                        }
+                    }
+                }
+
+                div.nav-tabs {
+                    margin-top: 2.2rem;
+                    width: 85%;
+
+                    div.nav-list.nav.card-header-undefined {
+                        width: 100%;
+
+                        div.nav-item {
+                            a.nav-item.nav-link {
+                                font-size: 92%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    div.container-fluid.Console {
+        div.card#content {
+            div.main-section {
+                height: 70%;
+
+                i.image-icon.fas.fa-user-circle {
+                    font-size: 65px;
+                }
+
+                p.username {
+                    margin-top: 1rem;
+                    font-weight: 600;
+                    font-size: 95%;
+
+                }
+
+                span.status-activation {
+                    margin-top: .8rem;
+                    font-weight: 600;
+                    font-size: 95%;
+                }
+
+                div.inputs {
+                    width: 80%;
+                    margin-top: 2rem;
+
+                    div.validation-box {
+                        padding: 0;
+                        width: 95%;
+
+                        input {
+                            padding-left: .4rem;
+                            width: 90%;
+                            height: 35px;
+                            font-size: 95%;
+                        }
+                    }
+                }
+
+                div.nav-tabs {
+                    margin-top: 2.2rem;
+                    width: 92%;
+
+                    div.nav-list.nav.card-header-undefined {
+                        width: 100%;
+
+                        div.nav-item {
+                            a.nav-item.nav-link {
+                                font-size: 85%;
+                                padding: .5rem .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:625px) {
+    div.container-fluid.Console {
+        div.card#content {
+            div.main-section {
+                height: 70%;
+
+                i.image-icon.fas.fa-user-circle {
+                    font-size: 60px;
+                }
+
+                p.username {
+                    margin-top: .7rem;
+                    font-weight: 600;
+                    font-size: 90%;
+
+                }
+
+                span.status-activation {
+                    margin-top: .5rem;
+                    font-weight: 600;
+                    font-size: 90%;
+                }
+
+                div.inputs {
+                    width: 78%;
+                    margin-top: 2rem;
+
+                    div.validation-box {
+                        width: 95%;
+
+                        input {
+                            padding-left: .35rem;
+                            width: 90%;
+                            height: 33px;
+                            font-size: 90%;
+                        }
+                    }
+                }
+
+                div.nav-tabs {
+                    margin-top: 2.2rem;
+                    width: 92%;
+
+                    div.nav-list.nav.card-header-undefined {
+                        width: 100%;
+
+                        div.nav-item {
+                            a.nav-item.nav-link {
+                                font-size: 85%;
+                                padding: .5rem .75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

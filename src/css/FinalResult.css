@@ -21,7 +21,7 @@ div.container-fluid.FinalResult div.card#content {
   border-radius: 0;
   position: relative;
   left: 0;
-  height: 90vh;
+  height: 100%;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
@@ -45,25 +45,23 @@ div.container-fluid.FinalResult div.card#content div.parent-content h2.h2.result
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-end;
+  justify-content: space-between;
   width: 50%;
   height: max-content;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo {
   width: 70px;
-  height: 70px;
-  background-color: #1c1c22;
-  border: 1px solid #959aa2;
-  border-radius: 50%;
+  height: max-content;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo i.user-team-logo {
-  width: 100%;
-  height: 100%;
   font-size: 70px;
   color: rgba(149, 154, 162, 0.7);
+  background-color: #1c1c22;
+  border: 1px solid #959aa2;
+  border-radius: 50%;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo div.result-win {
@@ -88,7 +86,7 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.football {
   width: 50%;
-  height: 160px;
+  height: 155px;
   background-color: #1c1c22;
   border: 1px solid #000000;
 }
@@ -100,14 +98,14 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo {
   width: 70px;
-  height: 70px;
-  background-color: #1c1c22;
-  border-radius: 50%;
-  border: 1px solid red;
+  height: max-content;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo i.user-team-logo {
   width: 100%;
+  background-color: #1c1c22;
+  border-radius: 50%;
+  border: 1px solid red;
   height: 100%;
   font-size: 70px;
   color: rgba(149, 154, 162, 0.7);

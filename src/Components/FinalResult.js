@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 //import css
 import "./../css/FinalResult.css";
+import "./../css/mediaFinalResult.css";
+
 
 //import bootstrap
 import { Card } from "react-bootstrap";

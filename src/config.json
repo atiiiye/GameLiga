@@ -1,6 +1,6 @@
 {
     "loginApi": "http://2.186.229.181:7580/api/Account/Login",
     "signupApi": "http://2.186.229.181:7580/api/Account/CreateAccount",
-    "newsApi": "http://2.186.229.181:7580/api"
+    "newsApi": "http://2.186.229.181:7580/api/News/"
     
 }
