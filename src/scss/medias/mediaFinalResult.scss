@@ -166,6 +166,7 @@
 
 @media (max-width: 768px) {
     div.container-fluid.FinalResult {
+        width: 80%;
         div.card#content {
             div.parent-content {
                 h2.h2.result.section-1 {
@@ -374,6 +375,7 @@
 
 @media (max-width: 575px) {
     div.container-fluid.FinalResult {
+        width: 100%;
         div.card#content {
             div.parent-content {
                 h2.h2.result.section-1 {

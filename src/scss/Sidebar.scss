@@ -42,6 +42,7 @@ div.sidebar-menu {
 
                 &::first-letter {
                     color: $color-orange-1;
+                    font-weight: 600;
                 }
 
                 &:focus {
@@ -50,7 +51,7 @@ div.sidebar-menu {
             }
 
             a.selected {
-                background-color: rgba($color: $color-orange-1, $alpha: .2);
+                background-color: rgba($color: $color-orange-1, $alpha: .37);
             }
         }
     }

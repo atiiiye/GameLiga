@@ -72,6 +72,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  div.container-fluid.Console {
+    width: 80%;
+  }
   div.container-fluid.Console div.card#content div.main-section {
     height: 70%;
   }
@@ -116,6 +119,9 @@ body {
 }
 
 @media (max-width: 625px) {
+  div.container-fluid.Console {
+    width: 80%;
+  }
   div.container-fluid.Console div.card#content div.main-section {
     height: 70%;
   }
@@ -155,6 +161,12 @@ body {
   div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
     font-size: 85%;
     padding: .5rem .75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  div.container-fluid.Console {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=mediaConsole.css.map */

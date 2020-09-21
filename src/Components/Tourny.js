@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 //import css
 import "./../css/tourny.css";
-import "./../css/navigation.css"
 
 //import bootstrap
 import { Card, Form, FormControl } from "react-bootstrap";

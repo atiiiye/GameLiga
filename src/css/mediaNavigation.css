@@ -1,0 +1,34 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+@media (max-width: 768px) {
+  div.tabs {
+    margin: 1.5rem;
+    margin-bottom: .4rem;
+  }
+  div.tabs a.tab {
+    width: 95%;
+    height: 1.8rem;
+    padding: .4rem;
+    margin-right: .2rem;
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 575px) {
+  div.tabs {
+    margin: 1rem;
+    margin-bottom: .2rem;
+  }
+  div.tabs a.tab {
+    width: 100%;
+    height: 1.75rem;
+    padding: .4rem;
+    margin-right: .2rem;
+    font-size: 85%;
+  }
+}
+/*# sourceMappingURL=mediaNavigation.css.map */

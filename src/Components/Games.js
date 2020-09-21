@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 //import css
 import "./../css/Games.css";
-import "./../css/navigation.css"
+import "./../css/mediaGames.css";
 
 //import bootstrap
 import { Card, Form, FormControl } from "react-bootstrap";
@@ -18,7 +18,8 @@ import UserHeader from "./UserHeader";
 
 //import packages
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import Swiper from "react-id-swiper";
+import "swiper/css/swiper.css";
 
 class Games extends Component {
   state = {
@@ -45,16 +46,28 @@ class Games extends Component {
     });
   };
 
-
   render() {
+    const params = {
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      // slidesPerView: "auto",
+      centeredSlides: true,
+      // spaceBetween: 20,
+    };
+
     return (
       <React.Fragment>
         <UserHeader />
-        <div className="display" style={{ display: "flex" }} >
+        <div className="display" style={{ display: "flex" }}>
           <Sidebar />
-          <div className="container-fluid LeaderBoards">
-
+          <div className="container-fluid games">
             <Card id="content">
+              {/* <Swiper {...params} className="swiper-tabs"> */}
+
               <div className="elements">
                 <Navigation />
                 {this.state.box.map((item) => (
@@ -78,7 +91,11 @@ class Games extends Component {
                             </div>
                           </div>
                           <div className="football">
-                            <img alt="" src={Football} className="football-field" />
+                            <img
+                              alt=""
+                              src={Football}
+                              className="football-field"
+                            />
                           </div>
                           <div className="other-logo">
                             <i className="user-team-logo fas fa-user-circle" />
@@ -109,7 +126,7 @@ class Games extends Component {
                                 type="number"
                                 name=""
                                 max={59}
-                                min={2}
+                                min={4}
                                 maxLength="2"
                               ></FormControl>
                               <FormControl
@@ -153,6 +170,7 @@ class Games extends Component {
                   </Card>
                 ))}
               </div>
+              {/* </Swiper> */}
               <div className="sidebar-right">
                 <div className="priorities">
                   <div className="Priority">

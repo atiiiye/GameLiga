@@ -6,6 +6,7 @@ import UserHeader from "./UserHeader";
 
 //import css
 import "./../css/Tutorial.css";
+import "./../css/mediaTutorial.css";
 
 //import bootstrap
 import { Card } from "react-bootstrap";

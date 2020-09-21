@@ -1,4 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+//import css
+import "./../css/navigation.css";
+import "./../css/mediaNavigation.css";
 
 //import packages
 import { NavLink } from "react-router-dom";

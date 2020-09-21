@@ -96,6 +96,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  div.container-fluid.FinalResult {
+    width: 80%;
+  }
   div.container-fluid.FinalResult div.card#content div.parent-content h2.h2.result.section-1 {
     font-size: 2.8rem;
   }
@@ -248,6 +251,9 @@ body {
 }
 
 @media (max-width: 575px) {
+  div.container-fluid.FinalResult {
+    width: 100%;
+  }
   div.container-fluid.FinalResult div.card#content div.parent-content h2.h2.result.section-1 {
     font-size: 2.6rem;
     margin-top: .9rem;

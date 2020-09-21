@@ -7,6 +7,7 @@ import UserHeader from "./UserHeader";
 
 //import css
 import './../css/Shop.css';
+import './../css/mediaShop.css';
 
 //import bootstrap
 import { Card } from "react-bootstrap";

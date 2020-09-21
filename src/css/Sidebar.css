@@ -45,6 +45,7 @@ div.sidebar-menu ul.list-menu li.list-item a.nav-link {
 
 div.sidebar-menu ul.list-menu li.list-item a.nav-link::first-letter {
   color: #ff9300;
+  font-weight: 600;
 }
 
 div.sidebar-menu ul.list-menu li.list-item a.nav-link:focus {
@@ -52,6 +53,6 @@ div.sidebar-menu ul.list-menu li.list-item a.nav-link:focus {
 }
 
 div.sidebar-menu ul.list-menu li.list-item a.selected {
-  background-color: rgba(255, 147, 0, 0.2);
+  background-color: rgba(255, 147, 0, 0.37);
 }
 /*# sourceMappingURL=Sidebar.css.map */

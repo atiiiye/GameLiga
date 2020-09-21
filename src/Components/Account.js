@@ -73,8 +73,8 @@ class Account extends Component {
   // }
 
   render() {
+
     const params = {
-      spaceBetween: 30,
       centeredSlides: true,
       loop: true,
       autoplay: {
@@ -85,8 +85,6 @@ class Account extends Component {
       centeredSlides: true,
       spaceBetween: 20,
     };
-
-    // console.log("Account : renderred");
 
     return (
       <React.Fragment>

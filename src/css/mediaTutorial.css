@@ -1,0 +1,80 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+@media (max-width: 768px) {
+  div.container-fluid.Tutorial {
+    width: 80%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.title {
+    padding: 1rem;
+    margin-left: 1.5rem;
+    width: 50%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.title h2.h1 {
+    font-size: 2.8rem;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.group-box {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.group-box div.box-card {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.group-box div.box-card div.box {
+    width: 85%;
+    height: 85%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.group-box div.box-card div.box div.refresh-box {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.group-box div.box-card div.box div.refresh-box svg.refresh-icon {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 575px) {
+  div.container-fluid.Tutorial {
+    width: 100%;
+    height: 100vh;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.title {
+    padding: 1rem;
+    margin-left: 0;
+    width: 50%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.title h2.h1 {
+    font-size: 2.3rem;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 48% 48%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.group-box div.box-card div.box {
+    width: 85%;
+    height: 85%;
+  }
+  div.container-fluid.Tutorial div.card#content div.all-view-component div.all-box div.group-box div.box-card div.box div.refresh-box svg.refresh-icon {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=mediaTutorial.css.map */

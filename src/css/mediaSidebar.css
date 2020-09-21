@@ -36,9 +36,6 @@ body {
 }
 
 @media (max-width: 767px) {
-  div.sidebar-menu {
-    width: 20%;
-  }
   div.sidebar-menu ul.list-menu li.list-item a.nav-link {
     line-height: 27px;
     font-size: 83%;

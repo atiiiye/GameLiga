@@ -128,6 +128,8 @@
 
 @media(max-width:768px) {
     div.container-fluid.Console {
+        width: 80%;
+
         div.card#content {
             div.main-section {
                 height: 70%;
@@ -188,6 +190,8 @@
 
 @media(max-width:625px) {
     div.container-fluid.Console {
+        width: 80%;
+
         div.card#content {
             div.main-section {
                 height: 70%;
@@ -242,5 +246,11 @@
                 }
             }
         }
+    }
+}
+
+@media(max-width:575px) {
+    div.container-fluid.Console{
+        width: 100%;
     }
 }

@@ -1,6 +1,6 @@
 @import 'base';
 
-div.container-fluid.LeaderBoards {
+div.container-fluid.games {
 
     background-image: url('./../images/fifa-world-cup-brazil-fifa.png'), url('./../images/salah.png'), ;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ div.container-fluid.LeaderBoards {
 
 
         div.elements {
-            width: 70%;
+            width: 75%;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -204,6 +204,8 @@ div.container-fluid.LeaderBoards {
                                         border-radius: 10px;
                                         border: unset;
                                         width: 69%;
+                                        font-size: 95%;
+
                                     }
 
                                     input.time,
@@ -215,6 +217,8 @@ div.container-fluid.LeaderBoards {
                                         height: 45px;
                                         margin-right: .3rem;
                                         font-weight: 600;
+                                        font-size: 95%;
+
 
                                         &:last-child:not([name="advantage"]) {
                                             width: 55px;
@@ -222,6 +226,8 @@ div.container-fluid.LeaderBoards {
                                             margin-right: 0;
                                             background-color: rgba($color: $color-orange-1, $alpha: .8);
                                             color: #ffffff;
+                                            font-size: 95%;
+
                                         }
 
                                     }
@@ -238,7 +244,7 @@ div.container-fluid.LeaderBoards {
                                     align-items: center;
                                     position: relative;
                                     bottom: 10px;
-                                    right: -.6rem;
+                                    right: -.4rem;
                                 }
                             }
 
@@ -257,7 +263,7 @@ div.container-fluid.LeaderBoards {
             justify-content: space-between;
             min-height: 90%;
             // height: 100vh;
-            width: max-content;
+            width: 25%;
 
             div.priorities {
                 display: flex;
@@ -310,11 +316,11 @@ div.container-fluid.LeaderBoards {
                 div.create-game-button {
                     width: 45px;
                     height: 45px;
-                    background-color: rgba($color: $color-orange-1, $alpha: .5);
+                    background-color: rgba($color: $color-orange-2, $alpha: .7);
                     border-radius: 50%;
 
                     &:active {
-                        background-color: rgba($color: $color-orange-1, $alpha: .6);
+                        background-color: rgba($color: $color-orange-2, $alpha: .7);
                         border: 1px solid rgba($color: #ffffff, $alpha: .5);
                     }
 

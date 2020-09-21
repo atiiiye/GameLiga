@@ -1,0 +1,432 @@
+@import './../base';
+
+
+@media(max-width:1199px) {
+    div.container-fluid.games {
+        // -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
+        width: 100%;
+
+        div.card#content {
+            div.elements {
+                width: 75%;
+                height: 100%;
+
+                div.card#tab-content {
+                    // width: 100%;
+                    height: 250px;
+                    margin: 2rem;
+                    margin-top: 0;
+
+                    div.tab-content-parent {
+                        width: 100%;
+                        height: 100%;
+
+                        div.tab-content-left {
+                            // margin-top: 1rem;
+                            width: 45%;
+                            height: 100%;
+
+                            div.section-left {
+                                height: 45%;
+
+                                div.own-logo {
+                                    width: 50px;
+                                    height: 50px;
+
+                                    i.user-team-logo {
+                                        font-size: 48px;
+                                    }
+
+                                    div.difference {
+                                        input.difference-number.form-control {
+                                            padding: .37rem .65rem;
+                                            width: 60px;
+                                            height: 1.7rem;
+                                            position: relative;
+                                            left: 9px;
+                                        }
+                                    }
+                                }
+
+                                div.football {
+                                    width: 50%;
+                                    height: 100px;
+
+                                    img.football-field {
+                                        width: 100%;
+                                        height: inherit;
+                                    }
+                                }
+
+                                div.other-logo {
+                                    width: 50px;
+                                    height: 50px;
+
+                                    i.user-team-logo {
+                                        font-size: 48px;
+                                    }
+
+                                    div.difference {
+                                        input.difference-number.form-control {
+                                            padding: .37rem .65rem;
+                                            width: 60px;
+                                            height: 1.7rem;
+                                            position: relative;
+                                            left: 9px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            span.hosted {
+                                width: 100%;
+                                // height: 20px;
+                                padding-left: .5rem;
+                                font-size: 85%;
+                                position: relative;
+                                bottom: -1.6rem;
+                            }
+                        }
+
+                        div.tab-content-right {
+                            width: 55%;
+                            height: 100%;
+
+                            div.section-right {
+                                width: 100%;
+                                height: 100%;
+
+                                img.join-button {
+                                    width: 78px;
+                                    height: 78px;
+                                    position: relative;
+                                    top: -2rem;
+                                }
+
+                                div.options {
+                                    div.option {
+                                        width: 100%;
+                                        height: 80px;
+                                        padding-top: 1rem;
+
+                                        span.option-item {
+                                            font-size: 90%;
+                                            width: 35%;
+                                            height: 45px;
+                                        }
+
+                                        input.form-control {
+                                            width: 69%;
+                                            height: 40px;
+
+                                        }
+
+                                        input.time,
+                                        input.advantage {
+                                            width: 50px;
+                                            padding-right: 3px;
+                                            padding-left: 8px;
+                                            height: 40px;
+                                            margin-right: .3rem;
+                                            font-weight: 600;
+
+
+                                            &:last-child:not([name="advantage"]) {
+                                                width: 55px;
+                                                height: 40px;
+                                                margin-right: 0;
+                                            }
+                                        }
+                                    }
+
+                                    span.No {
+                                        width: 100%;
+                                        height: 20px;
+                                        font-size: 85%;
+                                        font-weight: 600;
+                                        bottom: 9px;
+                                        right: -.1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.sidebar-right {
+                min-height: 90%;
+                // height: 100vh;
+                width: 25%;
+
+                div.priorities {
+                    height: 130px;
+
+                    div.Priority {
+                        width: max-content;
+                        margin-top: .8rem;
+
+                        div.ascending {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        span {
+                            font-size: 85%;
+                            padding-left: .3rem;
+                        }
+
+                        div.descending {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+
+                div.create-game-section {
+                    height: 100px;
+                    width: max-content;
+
+                    div.create-game-button {
+                        width: 45px;
+                        height: 45px;
+
+                        i.fas.fa-plus {
+                            height: inherit;
+                            font-size: 28px;
+                            // position: relative;
+                            // left: 5px;
+                            // top: 8px;
+                        }
+                    }
+
+                    span.create-game-title {
+                        font-size: 90%;
+                        font-weight: 600;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {}
+
+
+@media(max-width:768px) {
+    div.container-fluid.games {
+        width: 80%;
+
+        div.card#content {
+            div.elements {
+                width: 75%;
+                height: 100%;
+
+                div.card#tab-content {
+                    // width: 100%;
+                    height: 100%;
+                    margin: 2rem;
+                    margin-top: 0;
+
+                    div.tab-content-parent {
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100%;
+
+                        div.tab-content-left {
+                            // margin-top: 1rem;
+                            width: 100%;
+                            height: 100%;
+
+                            div.section-left {
+                                height: 45%;
+
+                                div.own-logo {
+                                    width: 50px;
+                                    height: 50px;
+
+                                    i.user-team-logo {
+                                        font-size: 50px;
+                                    }
+
+                                    div.difference {
+                                        input.difference-number.form-control {
+                                            padding: .37rem .65rem;
+                                            width: 60px;
+                                            height: 1.7rem;
+                                            position: relative;
+                                            left: 9px;
+                                        }
+                                    }
+                                }
+
+                                div.football {
+                                    width: 55%;
+                                    height: 120%;
+
+                                    img.football-field {
+                                        width: 100%;
+                                        height: inherit;
+                                    }
+                                }
+
+                                div.other-logo {
+                                    width: 50px;
+                                    height: 50px;
+
+                                    i.user-team-logo {
+                                        width: 100%;
+                                        height: 100%;
+                                        font-size: 50px;
+                                    }
+
+                                    div.difference {
+                                        input.difference-number.form-control {
+                                            padding: .37rem .65rem;
+                                            width: 60px;
+                                            height: 1.7rem;
+                                            position: relative;
+                                            left: 9px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            span.hosted {
+                                width: 100%;
+                                // height: 20px;
+                                padding-left: .5rem;
+                                font-size: 88%;
+                                position: relative;
+                                bottom: -1.6rem;
+                            }
+                        }
+
+                        div.tab-content-right {
+                            width: 100%;
+                            height: 100%;
+
+                            div.section-right {
+                                flex-direction: column;
+                                width: 100%;
+                                height: 100%;
+
+                                img.join-button {
+                                    width: 75px;
+                                    height: 75px;
+                                    position: relative;
+                                    top: -2rem;
+                                    order: 4;
+                                }
+
+                                div.options {
+                                    div.option {
+                                        width: 100%;
+                                        height: 80px;
+                                        padding-top: 1rem;
+
+                                        span.option-item {
+                                            font-size: 90%;
+                                            width: 35%;
+                                            height: 45px;
+                                        }
+
+                                        input.form-control {
+                                            height: 40px;
+                                            width: 65%;
+                                            font-size: 90%;
+
+                                        }
+
+                                        input.time,
+                                        input.advantage {
+                                            width: 45px;
+                                            padding-right: 3px;
+                                            padding-left: 8px;
+                                            height: 40px;
+                                            margin-right: .3rem;
+                                            font-weight: 600;
+                                            font-size: 90%;
+
+                                            &:last-child:not([name="advantage"]) {
+                                                width: 50px;
+                                                height: 40px;
+                                                margin-right: 0;
+                                                font-size: 90%;
+
+                                            }
+                                        }
+                                    }
+
+                                    span.No {
+                                        width: 100%;
+                                        height: 20px;
+                                        font-size: 88%;
+                                        font-weight: 600;
+                                        bottom: 10px;
+                                        right: -.6rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.sidebar-right {
+                min-height: 90%;
+                // height: 100vh;
+                width: 25%;
+
+                div.priorities {
+                    height: 130px;
+
+                    div.Priority {
+                        width: max-content;
+                        margin-top: .8rem;
+
+                        div.ascending {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        span {
+                            font-size: 80%;
+                            padding-left: .3rem;
+                        }
+
+                        div.descending {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+
+                div.create-game-section {
+                    height: 100px;
+                    width: max-content;
+
+                    div.create-game-button {
+                        width: 45px;
+                        height: 45px;
+
+                        i.fas.fa-plus {
+                            height: inherit;
+                            font-size: 28px;
+                            // position: relative;
+                            // left: 5px;
+                            // top: 8px;
+                        }
+                    }
+
+                    span.create-game-title {
+                        font-size: 90%;
+                        font-weight: 600;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

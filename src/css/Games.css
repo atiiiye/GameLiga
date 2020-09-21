@@ -4,7 +4,7 @@ body {
   background-color: #1c1c22;
 }
 
-div.container-fluid.LeaderBoards {
+div.container-fluid.games {
   background-image: url("./../images/fifa-world-cup-brazil-fifa.png"), url("./../images/salah.png");
   background-repeat: no-repeat;
   background-size: 100% 100%, 25% 350px;
@@ -12,7 +12,7 @@ div.container-fluid.LeaderBoards {
   width: 100%;
 }
 
-div.container-fluid.LeaderBoards div.card#content {
+div.container-fluid.games div.card#content {
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: row;
@@ -30,14 +30,14 @@ div.container-fluid.LeaderBoards div.card#content {
   min-height: 100%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements {
-  width: 70%;
+div.container-fluid.games div.card#content div.elements {
+  width: 75%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content {
+div.container-fluid.games div.card#content div.elements div.card#tab-content {
   height: 250px;
   border: 1px solid #ff9300;
   border-radius: 9px;
@@ -46,13 +46,13 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   margin-top: 0;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -61,7 +61,7 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   height: 100%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -69,21 +69,21 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   height: 45%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo {
   width: 50px;
   height: 50px;
   background-color: #1c1c22;
   border-radius: 50%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo i.user-team-logo {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo i.user-team-logo {
   width: 100%;
   height: 100%;
   font-size: 50px;
   color: rgba(149, 154, 162, 0.8);
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control {
   background: transparent;
   color: #ffffff;
   padding: .37rem .65rem;
@@ -94,22 +94,22 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   left: 9px;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control:focus {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control:focus {
   box-shadow: 0 0 0 0;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football {
   width: 50%;
   height: 100px;
   background-color: #1c1c22;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football img.football-field {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football img.football-field {
   width: 100%;
   height: inherit;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo {
   width: 50px;
   height: 50px;
   background-color: #1c1c22;
@@ -118,14 +118,14 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   flex-direction: column;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo i.user-team-logo {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo i.user-team-logo {
   width: 100%;
   height: 100%;
   font-size: 50px;
   color: rgba(149, 154, 162, 0.8);
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control {
   background: transparent;
   color: #ffffff;
   border: none;
@@ -136,11 +136,11 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   left: 9px;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control:focus {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control:focus {
   box-shadow: 0 0 0 0;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left span.hosted {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left span.hosted {
   width: 100%;
   color: #959aa2;
   padding-left: .5rem;
@@ -150,14 +150,14 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   bottom: -1.6rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right {
   display: flex;
   width: 55%;
   height: 100%;
   align-items: center;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right {
   width: 100%;
   height: 100%;
   display: flex;
@@ -165,7 +165,7 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   justify-content: space-around;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right img.join-button {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right img.join-button {
   display: flex;
   width: 85px;
   height: 85px;
@@ -173,12 +173,12 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   top: -2rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options {
   display: flex;
   flex-direction: column;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option {
   width: 100%;
   height: 80px;
   display: flex;
@@ -186,7 +186,7 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   justify-content: flex-start;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option span.option-item {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option span.option-item {
   color: #ffffff;
   font-weight: bold;
   font-size: 95%;
@@ -196,14 +196,15 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   align-items: center;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.form-control {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.form-control {
   border-radius: 10px;
   border: unset;
   width: 69%;
+  font-size: 95%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time,
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time,
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage {
   display: flex;
   width: 50px;
   padding-right: 3px;
@@ -211,18 +212,20 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   height: 45px;
   margin-right: .3rem;
   font-weight: 600;
+  font-size: 95%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time:last-child:not([name="advantage"]),
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage:last-child:not([name="advantage"]) {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time:last-child:not([name="advantage"]),
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage:last-child:not([name="advantage"]) {
   width: 55px;
   height: 45px;
   margin-right: 0;
   background-color: rgba(255, 147, 0, 0.8);
   color: #ffffff;
+  font-size: 95%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options span.No {
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options span.No {
   width: 100%;
   height: 20px;
   color: #959aa2;
@@ -233,19 +236,19 @@ div.container-fluid.LeaderBoards div.card#content div.elements div.card#tab-cont
   align-items: center;
   position: relative;
   bottom: 10px;
-  right: -.6rem;
+  right: -.4rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right {
+div.container-fluid.games div.card#content div.sidebar-right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   min-height: 90%;
-  width: max-content;
+  width: 25%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities {
+div.container-fluid.games div.card#content div.sidebar-right div.priorities {
   display: flex;
   width: max-content;
   flex-direction: column;
@@ -253,14 +256,14 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.prioriti
   height: 130px;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority {
+div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority {
   display: flex;
   justify-content: space-between;
   width: max-content;
   margin-top: .8rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority div.ascending {
+div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority div.ascending {
   width: 20px;
   height: 20px;
   border-radius: 2px;
@@ -268,14 +271,14 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.prioriti
   background-color: #ff9300;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority span {
+div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority span {
   font-size: 85%;
   color: #959aa2;
   align-self: center;
   padding-left: .3rem;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.priorities div.Priority div.descending {
+div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority div.descending {
   width: 20px;
   border-radius: 2px;
   height: 20px;
@@ -283,7 +286,7 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.prioriti
   background-color: #ffffff;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section {
+div.container-fluid.games div.card#content div.sidebar-right div.create-game-section {
   height: 100px;
   display: flex;
   width: max-content;
@@ -292,19 +295,19 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-g
   align-items: center;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.create-game-button {
+div.container-fluid.games div.card#content div.sidebar-right div.create-game-section div.create-game-button {
   width: 45px;
   height: 45px;
-  background-color: rgba(255, 147, 0, 0.5);
+  background-color: rgba(252, 137, 40, 0.7);
   border-radius: 50%;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.create-game-button:active {
-  background-color: rgba(255, 147, 0, 0.6);
+div.container-fluid.games div.card#content div.sidebar-right div.create-game-section div.create-game-button:active {
+  background-color: rgba(252, 137, 40, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section div.create-game-button i.fas.fa-plus {
+div.container-fluid.games div.card#content div.sidebar-right div.create-game-section div.create-game-button i.fas.fa-plus {
   height: inherit;
   font-size: 28px;
   display: flex;
@@ -313,7 +316,7 @@ div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-g
   color: #1c1c22;
 }
 
-div.container-fluid.LeaderBoards div.card#content div.sidebar-right div.create-game-section span.create-game-title {
+div.container-fluid.games div.card#content div.sidebar-right div.create-game-section span.create-game-title {
   color: #ffffff;
   font-size: 90%;
   font-weight: 600;

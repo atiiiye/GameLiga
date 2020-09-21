@@ -16,7 +16,7 @@ div.tabs {
         padding: .5rem;
         background-color: $color-background-1;
         color: #ffffff;
-        border: 1px solid $color-orange-1;
+        border: 1px solid $color-orange-2;
         border-radius: 9px;
         margin-right: .2rem;
 
@@ -25,7 +25,7 @@ div.tabs {
         }
 
         &:hover {
-            background-color: rgba($color: $color-orange-1, $alpha: .2);
+            background-color: rgba($color: $color-orange-2, $alpha: .7);
             text-decoration: none;
         }
 
@@ -36,7 +36,7 @@ div.tabs {
     }
 
     a.tab.selected {
-        background-color: rgba($color: $color-orange-1, $alpha: .2);
-        border-color: rgba($color: $color-orange-1, $alpha: .2);
+        background-color: rgba($color: $color-orange-2, $alpha: .7);
+        border-color: rgba($color: $color-orange-2, $alpha: .7);
     }
 }

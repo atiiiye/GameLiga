@@ -1,0 +1,334 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+@media (max-width: 1199px) {
+  div.container-fluid.games {
+    width: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements {
+    width: 75%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content {
+    height: 250px;
+    margin: 2rem;
+    margin-top: 0;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left {
+    width: 45%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left {
+    height: 45%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo {
+    width: 50px;
+    height: 50px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo i.user-team-logo {
+    font-size: 48px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control {
+    padding: .37rem .65rem;
+    width: 60px;
+    height: 1.7rem;
+    position: relative;
+    left: 9px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football {
+    width: 50%;
+    height: 100px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football img.football-field {
+    width: 100%;
+    height: inherit;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo {
+    width: 50px;
+    height: 50px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo i.user-team-logo {
+    font-size: 48px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control {
+    padding: .37rem .65rem;
+    width: 60px;
+    height: 1.7rem;
+    position: relative;
+    left: 9px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left span.hosted {
+    width: 100%;
+    padding-left: .5rem;
+    font-size: 85%;
+    position: relative;
+    bottom: -1.6rem;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right {
+    width: 55%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right img.join-button {
+    width: 78px;
+    height: 78px;
+    position: relative;
+    top: -2rem;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option {
+    width: 100%;
+    height: 80px;
+    padding-top: 1rem;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option span.option-item {
+    font-size: 90%;
+    width: 35%;
+    height: 45px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.form-control {
+    width: 69%;
+    height: 40px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time,
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage {
+    width: 50px;
+    padding-right: 3px;
+    padding-left: 8px;
+    height: 40px;
+    margin-right: .3rem;
+    font-weight: 600;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time:last-child:not([name="advantage"]),
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage:last-child:not([name="advantage"]) {
+    width: 55px;
+    height: 40px;
+    margin-right: 0;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options span.No {
+    width: 100%;
+    height: 20px;
+    font-size: 85%;
+    font-weight: 600;
+    bottom: 9px;
+    right: -.1rem;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right {
+    min-height: 90%;
+    width: 25%;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities {
+    height: 130px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority {
+    width: max-content;
+    margin-top: .8rem;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority div.ascending {
+    width: 20px;
+    height: 20px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority span {
+    font-size: 85%;
+    padding-left: .3rem;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority div.descending {
+    width: 20px;
+    height: 20px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section {
+    height: 100px;
+    width: max-content;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section div.create-game-button {
+    width: 45px;
+    height: 45px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section div.create-game-button i.fas.fa-plus {
+    height: inherit;
+    font-size: 28px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section span.create-game-title {
+    font-size: 90%;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  div.container-fluid.games {
+    width: 80%;
+  }
+  div.container-fluid.games div.card#content div.elements {
+    width: 75%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content {
+    height: 100%;
+    margin: 2rem;
+    margin-top: 0;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left {
+    height: 45%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo {
+    width: 50px;
+    height: 50px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo i.user-team-logo {
+    font-size: 50px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control {
+    padding: .37rem .65rem;
+    width: 60px;
+    height: 1.7rem;
+    position: relative;
+    left: 9px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football {
+    width: 55%;
+    height: 120%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football img.football-field {
+    width: 100%;
+    height: inherit;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo {
+    width: 50px;
+    height: 50px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo i.user-team-logo {
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control {
+    padding: .37rem .65rem;
+    width: 60px;
+    height: 1.7rem;
+    position: relative;
+    left: 9px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left span.hosted {
+    width: 100%;
+    padding-left: .5rem;
+    font-size: 88%;
+    position: relative;
+    bottom: -1.6rem;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right {
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right img.join-button {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    top: -2rem;
+    order: 4;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option {
+    width: 100%;
+    height: 80px;
+    padding-top: 1rem;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option span.option-item {
+    font-size: 90%;
+    width: 35%;
+    height: 45px;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.form-control {
+    height: 40px;
+    width: 65%;
+    font-size: 90%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time,
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage {
+    width: 45px;
+    padding-right: 3px;
+    padding-left: 8px;
+    height: 40px;
+    margin-right: .3rem;
+    font-weight: 600;
+    font-size: 90%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time:last-child:not([name="advantage"]),
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage:last-child:not([name="advantage"]) {
+    width: 50px;
+    height: 40px;
+    margin-right: 0;
+    font-size: 90%;
+  }
+  div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options span.No {
+    width: 100%;
+    height: 20px;
+    font-size: 88%;
+    font-weight: 600;
+    bottom: 10px;
+    right: -.6rem;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right {
+    min-height: 90%;
+    width: 25%;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities {
+    height: 130px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority {
+    width: max-content;
+    margin-top: .8rem;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority div.ascending {
+    width: 16px;
+    height: 16px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority span {
+    font-size: 80%;
+    padding-left: .3rem;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.priorities div.Priority div.descending {
+    width: 16px;
+    height: 16px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section {
+    height: 100px;
+    width: max-content;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section div.create-game-button {
+    width: 45px;
+    height: 45px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section div.create-game-button i.fas.fa-plus {
+    height: inherit;
+    font-size: 28px;
+  }
+  div.container-fluid.games div.card#content div.sidebar-right div.create-game-section span.create-game-title {
+    font-size: 90%;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+}
+/*# sourceMappingURL=mediaGames.css.map */
