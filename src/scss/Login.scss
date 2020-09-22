@@ -23,26 +23,26 @@ div.modal-dialog.login-modal {
             div.title-login.modal-header {
                 border-bottom: none;
 
-                h2 {
+                h5 {
                     color: $color-white;
                     font-weight: bold;
+                    font-size: 1.4rem;
 
                     span {
                         font-weight: bold;
+                        font-size: 1.4rem;
                         color: $color-orange-1;
                     }
                 }
 
                 p.text-white {
                     margin-top: .5rem;
-                    font-size: 90%;
+                    font-size: 80%;
                     width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    text-align: center;
 
                     a {
-                        font-size: 85%;
+                        font-size: 80%;
                         color: red;
                         font-weight: bold;
                         width: max-content;
@@ -104,7 +104,7 @@ div.modal-dialog.login-modal {
 
 
                     div.password-block {
-                        height: 45.5px ;
+                        height: 45.5px;
 
                         input[name="password"] {
                             padding-right: 2rem;

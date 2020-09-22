@@ -28,27 +28,27 @@ div.modal-dialog.login-modal div.modal-content div.modal-body div.title-login.mo
   border-bottom: none;
 }
 
-div.modal-dialog.login-modal div.modal-content div.modal-body div.title-login.modal-header h2 {
+div.modal-dialog.login-modal div.modal-content div.modal-body div.title-login.modal-header h5 {
   color: #fff;
   font-weight: bold;
+  font-size: 1.4rem;
 }
 
-div.modal-dialog.login-modal div.modal-content div.modal-body div.title-login.modal-header h2 span {
+div.modal-dialog.login-modal div.modal-content div.modal-body div.title-login.modal-header h5 span {
   font-weight: bold;
+  font-size: 1.4rem;
   color: #ff9300;
 }
 
 div.modal-dialog.login-modal div.modal-content div.modal-body div.title-login.modal-header p.text-white {
   margin-top: .5rem;
-  font-size: 90%;
+  font-size: 80%;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 div.modal-dialog.login-modal div.modal-content div.modal-body div.title-login.modal-header p.text-white a {
-  font-size: 85%;
+  font-size: 80%;
   color: red;
   font-weight: bold;
   width: max-content;

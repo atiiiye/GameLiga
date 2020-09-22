@@ -65,11 +65,11 @@ class Login extends Component {
           toggle={this.toggle.bind(this)}
         >
           <ModalBody>
-            <ModalHeader className="title-login text-center mx-2">
-              <h2>
+            <ModalHeader className="title-login text-center">
+              {/* <h2 className="h2"> */}
                 Welcome <span>back</span>
-              </h2>
-              <p className="text-white px-2">
+              {/* </h2> */}
+              <p className="text-white">
                 Do not have account ? <NavLink to="/signup">Sign up</NavLink>
               </p>
             </ModalHeader>

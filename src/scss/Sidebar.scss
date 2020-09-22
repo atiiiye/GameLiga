@@ -26,9 +26,8 @@ div.sidebar-menu {
             &:active,
             &:focus,
             &:hover {
-                background-color: rgba($color: $color-orange-1, $alpha: .2);
-                // border-right-color: rgba($color: $color-orange-1, $alpha: .12);
-                border-left-color: rgba($color: $color-orange-1, $alpha: .12);
+                background-color: rgba($color: $color-orange-2, $alpha: .3);
+                border-left-color: rgba($color: $color-orange-1, $alpha: .2);
 
             }
 
@@ -51,7 +50,7 @@ div.sidebar-menu {
             }
 
             a.selected {
-                background-color: rgba($color: $color-orange-1, $alpha: .37);
+                background-color: rgba($color: $color-orange-2, $alpha: .37);
             }
         }
     }

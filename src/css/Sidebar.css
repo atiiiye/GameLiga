@@ -30,8 +30,8 @@ div.sidebar-menu ul.list-menu li.list-item {
 }
 
 div.sidebar-menu ul.list-menu li.list-item:active, div.sidebar-menu ul.list-menu li.list-item:focus, div.sidebar-menu ul.list-menu li.list-item:hover {
-  background-color: rgba(255, 147, 0, 0.2);
-  border-left-color: rgba(255, 147, 0, 0.12);
+  background-color: rgba(252, 137, 40, 0.3);
+  border-left-color: rgba(255, 147, 0, 0.2);
 }
 
 div.sidebar-menu ul.list-menu li.list-item a.nav-link {
@@ -53,6 +53,6 @@ div.sidebar-menu ul.list-menu li.list-item a.nav-link:focus {
 }
 
 div.sidebar-menu ul.list-menu li.list-item a.selected {
-  background-color: rgba(255, 147, 0, 0.37);
+  background-color: rgba(252, 137, 40, 0.37);
 }
 /*# sourceMappingURL=Sidebar.css.map */

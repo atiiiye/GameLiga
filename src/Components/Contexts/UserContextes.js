@@ -155,6 +155,7 @@ class UserContextes extends Component {
       if (err.response && err.response.status === 400) {
         this.setState({ loading: false });
         errorMessage("Username or Password is invalid");
+        // this.resetInputs()
       }
     }
   };
