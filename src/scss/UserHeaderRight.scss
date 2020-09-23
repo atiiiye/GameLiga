@@ -23,13 +23,20 @@ nav.navbar.user-header-right {
             p.text-center {
                 width: max-content;
                 height: 100%;
-                display: flex;
+                white-space: nowrap;
                 align-items: center;
                 margin-right: 2rem;
-                // margin-left: 1rem;
+                direction: ltr;
                 margin-bottom: 0;
                 font-weight: bold;
                 color: rgba($color: #ffffff, $alpha: .75);
+                // overflow: hidden;
+                // text-overflow: ellipsis;
+
+                &:hover {
+                    color: rgba($color: #ffffff, $alpha: .85);
+
+                }
             }
 
             a.nav-link-icon {

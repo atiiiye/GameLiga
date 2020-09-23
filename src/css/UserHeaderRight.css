@@ -29,12 +29,17 @@ nav.navbar.user-header-right div.navbar-right div.navbar-collapse.collapse.colla
 nav.navbar.user-header-right div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 p.text-center {
   width: max-content;
   height: 100%;
-  display: flex;
+  white-space: nowrap;
   align-items: center;
   margin-right: 2rem;
+  direction: ltr;
   margin-bottom: 0;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.75);
+}
+
+nav.navbar.user-header-right div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 p.text-center:hover {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 nav.navbar.user-header-right div.navbar-right div.navbar-collapse.collapse.collapse-user.row.part-1 a.nav-link-icon {

@@ -32,9 +32,9 @@ import UserContextes from "./Components/Contexts/UserContextes";
 
 class App extends Component {
 
-  componentDidMount() {
-    document.title = "Game Liga";
-  }
+  // componentDidMount() {
+  //   document.title = "Game Liga";
+  // }
 
   render() {
     return (
