@@ -223,7 +223,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.sc
   padding: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-title {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-1 th.header-table-titl.header-1 {
   border: 0;
   font-size: 80%;
   font-weight: 600;
@@ -242,7 +242,7 @@ div.container-fluid.leader-boards div.card#content div.all-view-component div.sc
   padding: 0;
 }
 
-div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 th.header-table-title {
+div.container-fluid.leader-boards div.card#content div.all-view-component div.scrollarea.area div.scrollarea-content.content div.all-view-table div.scroll-table div.table-content div.table-responsive table.all-table.table.table-striped thead.headers-table tr.header-table.line-1 div.header-table-part-2 th.header-table-title.header-2 {
   border: 0;
   font-size: 80%;
   font-weight: 600;

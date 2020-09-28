@@ -60,7 +60,7 @@ class LeaderBoards extends Component {
                           className="image-icon fas fa-user-circle"
                           id="user"
                         ></i>
-                        <p className="user-name">{isLogin().Username}</p>
+                        <p className="user-name">{isLogin()}</p>
                       </div>
                       <div className="section-2 col-md-5">
                         <span className="section-2-1">0</span>
@@ -118,15 +118,15 @@ class LeaderBoards extends Component {
                           </thead>
                           <tbody className="bodys-table">
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">1</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">{isLogin().Username}</div>
+                                  <div className="user-name">{isLogin()}</div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>
@@ -135,9 +135,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">2</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -152,9 +152,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">3</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -169,9 +169,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">100</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">4</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -186,9 +186,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">5</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -203,9 +203,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">6</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -220,9 +220,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">7</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -237,9 +237,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">8</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -254,9 +254,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">200</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
@@ -271,9 +271,9 @@ class LeaderBoards extends Component {
                               <td className="body-table-content">0</td>
                             </tr>
                             <tr className="body-table">
-                              <td className="body-table-content" colspan="4">
+                              <td className="body-table-content">
                                 <div className="table-data">
-                                  <i class="fas fa-medal" />
+                                  <i className="fas fa-medal" />
                                   <div className="number">200</div>
                                   <i
                                     className="image-icon fas fa-user-circle"
