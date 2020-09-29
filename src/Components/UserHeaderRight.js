@@ -27,8 +27,7 @@ class UserHeaderRight extends Component {
   toggle = () => this.setState(!isOpen);
 
   // componentDidMount() {
-
-  //   isLogin();
+  //  isLogin().Username;
   // }
 
   render() {
@@ -56,7 +55,7 @@ class UserHeaderRight extends Component {
               >
                 <p className="text-center">
                   {/* {context.username} */}
-                  {isLogin()}
+                  {isLogin().Username}
                 </p>
                 <Profile />
                 <Ticket />

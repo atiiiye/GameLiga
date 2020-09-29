@@ -32,7 +32,9 @@ class Console extends Component {
             <Card id="content">
               <div className="main-section">
                 <i className="image-icon fas fa-user-circle" id="user"></i>
-                <p className="username"> {isLogin()}</p>
+                <p className="username">
+                  {/* {isLogin()} */}
+                </p>
                 <span className="status-activation">
                   Active now .Sined uo 2 months age
                 </span>
