@@ -39,7 +39,6 @@ class Console extends Component {
                   Active now .Sined uo 2 months age
                 </span>
                 <div className="inputs">
-                  {/* <Form.Group className=""> */}
                   <div className="validation-box">
                     <Form.Control
                       type="text"
@@ -50,8 +49,6 @@ class Console extends Component {
                       // value={this.state.promotional}
                     />
                   </div>
-                  {/* </Form.Group> */}
-                  {/* <Form.Group className=""> */}
                   <div className="validation-box">
                     <Form.Control
                       type="text"
@@ -62,8 +59,6 @@ class Console extends Component {
                       // value={this.state.promotional}
                     />
                   </div>
-                  {/* </Form.Group> */}
-                  {/* <Form.Group className=""> */}
                   <div className="validation-box">
                     <Form.Control
                       type="text"
@@ -74,8 +69,6 @@ class Console extends Component {
                       // value={this.state.promotional}
                     />
                   </div>
-                  {/* </Form.Group> */}
-                  {/* <Form.Group className=""> */}
                   <div className="validation-box">
                     <Form.Control
                       type="text"
@@ -86,7 +79,6 @@ class Console extends Component {
                       // value={this.state.promotional}
                     />
                   </div>
-                  {/* </Form.Group> */}
                 </div>
 
                 <div className="nav-tabs">

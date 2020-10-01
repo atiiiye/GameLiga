@@ -18,21 +18,20 @@ import Profile from "./Profile";
 import { Context } from "./Contexts";
 
 import { isLogin } from "./../utils";
+import { TOKEN_KEY } from "./../utils";
 
 class UserHeaderRight extends Component {
   state = {
     isOpen: false,
   };
-
-  toggle = () => this.setState(!isOpen);
-
-  // componentDidMount() {
-  //  isLogin().Username;
+  // componentDidMount(){
+  //   let username = isLogin().Username;
+  //   console.log(username)
   // }
-
+  
+  toggle = () => this.setState(!isOpen);
+  
   render() {
-    // console.log("UserHeaderRight : renderred");
-
     return (
       <Context.Consumer>
         {(context) => (
