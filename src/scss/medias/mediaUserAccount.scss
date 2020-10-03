@@ -167,7 +167,7 @@
                         width: 100%;
 
                         div.swiper-slide.game.swiper-slide-prev,
-                        div.swiper-slide.game.swiper-slide-next ,
+                        div.swiper-slide.game.swiper-slide-next,
                         div.swiper-slide.game.swiper-slide-duplicate,
                         div.swiper-slide.game {
                             // width: 25%;
@@ -196,6 +196,7 @@
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(1);
                             }
+
                             div.online {
                                 width: 90%;
                                 padding: .5rem;
@@ -221,7 +222,7 @@
     }
 }
 
-@media(max-width:690px){
+@media(max-width:690px) {
     div.container-fluid.userAccount {
         width: 80%;
 
@@ -230,6 +231,7 @@
             padding-right: 0;
             width: 100%;
             min-height: 100%;
+            height: 100vh;
 
             div.row.games {
                 margin: .8rem 0;
@@ -239,7 +241,7 @@
                         width: 100%;
 
                         div.swiper-slide.game.swiper-slide-prev,
-                        div.swiper-slide.game.swiper-slide-next ,
+                        div.swiper-slide.game.swiper-slide-next,
                         div.swiper-slide.game.swiper-slide-duplicate,
                         div.swiper-slide.game {
                             width: 23%;
@@ -268,6 +270,7 @@
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(1);
                             }
+
                             div.online {
                                 width: 55%;
                                 padding: .5rem;
@@ -293,11 +296,11 @@
     }
 }
 
-@media(max-width:575px){
+@media(max-width:575px) {
     div.container-fluid.userAccount {
         width: 100%;
         background-size: 65% 100%, 100%;
-        -webkit-box-reflect:unset;
+        -webkit-box-reflect: unset;
 
         div.card#content {
             padding-left: 0;
@@ -313,7 +316,7 @@
                         width: 100%;
 
                         div.swiper-slide.game.swiper-slide-prev,
-                        div.swiper-slide.game.swiper-slide-next ,
+                        div.swiper-slide.game.swiper-slide-next,
                         div.swiper-slide.game.swiper-slide-duplicate,
                         div.swiper-slide.game {
                             // width: 23%;
@@ -344,6 +347,7 @@
                                 transform: scale(1);
                                 opacity: 1;
                             }
+
                             div.online {
                                 width: 50%;
                                 padding: .45rem;
@@ -368,11 +372,11 @@
     }
 }
 
-@media(max-width:450px){
+@media(max-width:450px) {
     div.container-fluid.userAccount {
         width: 100%;
         background-size: 65% 100%, 100%;
-        -webkit-box-reflect:unset;
+        -webkit-box-reflect: unset;
 
         div.card#content {
             padding-left: 0;
@@ -388,7 +392,7 @@
                         width: 100%;
 
                         div.swiper-slide.game.swiper-slide-prev,
-                        div.swiper-slide.game.swiper-slide-next ,
+                        div.swiper-slide.game.swiper-slide-next,
                         div.swiper-slide.game.swiper-slide-duplicate,
                         div.swiper-slide.game {
                             // width: 23%;
@@ -419,6 +423,7 @@
                                 transform: scale(1);
                                 opacity: 1;
                             }
+
                             div.online {
                                 width: 65%;
                                 padding: .4rem;
@@ -444,11 +449,11 @@
 }
 
 
-@media(max-width:365px){
+@media(max-width:365px) {
     div.container-fluid.userAccount {
         width: 100%;
         background-size: 65% 100%, 100%;
-        -webkit-box-reflect:unset;
+        -webkit-box-reflect: unset;
 
         div.card#content {
             padding-left: 0;
@@ -464,7 +469,7 @@
                         width: 100%;
 
                         div.swiper-slide.game.swiper-slide-prev,
-                        div.swiper-slide.game.swiper-slide-next ,
+                        div.swiper-slide.game.swiper-slide-next,
                         div.swiper-slide.game.swiper-slide-duplicate,
                         div.swiper-slide.game {
                             // width: 23%;
@@ -495,6 +500,7 @@
                                 transform: scale(1);
                                 opacity: 1;
                             }
+
                             div.online {
                                 width: 75%;
                                 padding: .4rem;
@@ -518,4 +524,3 @@
         }
     }
 }
-

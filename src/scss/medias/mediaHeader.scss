@@ -135,8 +135,11 @@
                 position: absolute;
                 right: 1rem;
                 top: 0;
+                height: 100%;
 
                 button.navbar-toggler {
+                    padding-bottom: 0;
+                    padding-top: 0;
 
                     &:focus {
                         border: none;
@@ -225,6 +228,9 @@
 
             div.nav-left {
                 width: 240px;
+                position: fixed;
+                left: 10px;
+                top: 8px;
 
                 div.empty-content {
                     // width: 85%;
@@ -268,10 +274,10 @@
             position: relative;
 
             div.hamburger-menu {
-
+                width: max-content;
                 position: absolute;
                 right: 1rem;
-                top: 0;
+                top: -5px;
 
                 button.navbar-toggler {
 
@@ -311,7 +317,7 @@
             }
 
             div.nav-right {
-                width: 40%;
+                width: 50%;
 
                 ul.navbar-nav {
                     padding-right: 0;
@@ -361,15 +367,12 @@
             }
 
             div.nav-left {
+                width: 30%;
+                position: fixed;
+                left: 8px;
+                top: 5px;
 
-                width: 190px;
-
-                div.empty-content {
-                    width: 85%;
-                    height: 1.6rem;
-                    position: relative;
-                    left: -25px
-                }
+                div.empty-content {}
 
                 h4.UFOGame {
                     font-weight: 600;
@@ -383,8 +386,8 @@
                 img.logo {
 
                     margin-right: 5px;
-                    width: 40px;
-                    height: 100%;
+                    width: 35px;
+                    height: 35px;
                 }
             }
         }
@@ -395,10 +398,6 @@
     div.container-fluid {
         nav.navbar {
             div.hamburger-menu {
-
-                position: absolute;
-                right: 1rem;
-                top: 0;
 
                 button.navbar-toggler {
                     span.navbar-toggler-icon {
@@ -466,9 +465,109 @@
 
             div.nav-left {
                 width: 140px;
+                position: fixed;
+                left: 5px;
+                top: 3px;
 
                 div.empty-content {
-                   display: none;
+                    display: none;
+                }
+
+                h4.UFOGame {
+                    font-weight: 600;
+                    width: auto;
+                    margin-bottom: 0;
+                    font-size: 90%;
+
+                    span {}
+                }
+
+                img.logo {
+
+                    margin-right: 5px;
+                    width: 30px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:375px) {
+    div.container-fluid {
+        nav.navbar {
+            padding: .5rem;
+
+            div.hamburger-menu {
+                button.navbar-toggler {
+                    span.navbar-toggler-icon {
+                        width: 2em;
+                        height: 2em;
+                        padding-bottom: 0;
+                        padding-left: 0;
+
+                    }
+
+                    .menu {
+                        border-radius: 4px;
+                        padding: 3px;
+
+                        &-line {
+                            width: 85%;
+                            height: 3px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+
+            div.nav-right {
+                width: 70%;
+
+                ul.navbar-nav {
+                    padding-right: 0;
+
+                    li.nav-item {
+                        padding-right: 3px;
+                        padding-top: 0;
+                        position: relative;
+                        left: -3rem;
+
+                        a.nav-link {
+                            padding-left: .5rem;
+                            padding-right: .5rem;
+                            font-size: 80%;
+                        }
+                    }
+
+                    div.buttons {
+                        width: 100%;
+
+                        li.nav-item {
+                            padding-right: 3px;
+                            margin-bottom: 0;
+
+                            a.nav-link#signup,
+                            a.nav-link#login {
+                                font-size: 60%;
+                                padding: .2rem .5rem;
+                            }
+                        }
+                    }
+
+                    div.navbar-collapse.collapse.show {}
+
+                    div.navbar-collapse.collapsing {
+                        height: 0;
+                    }
+                }
+            }
+
+            div.nav-left {
+                width: 30%;
+
+                div.empty-content {
+                    display: none;
                 }
 
                 h4.UFOGame {

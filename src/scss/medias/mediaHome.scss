@@ -818,7 +818,8 @@
         div.container-fluid.box-slider {
             div.row.pratition-slider {
                 div.sidebar-slider {
-                    width: 1%;
+                    // width: 0%;
+                    display: none;
 
                     div.card-columns.card-columns-slider {
                         display: none;
@@ -837,10 +838,11 @@
                 }
 
                 div.content-slider#content {
-                    width: 99%;
+                    width: 100%;
+                    height: 100vh;
 
                     div.main-content {
-                        height: 60%;
+                        height: 60vh;
 
                         div.titles {
                             div.top {}
@@ -907,6 +909,7 @@
                 }
 
                 div.images-content.images {
+                    height: 40vh;
                     img.image-fluid {
                         margin-top: 2.3rem;
                         width: 50%;

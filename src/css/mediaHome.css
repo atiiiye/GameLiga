@@ -463,16 +463,17 @@ body {
 
 @media (max-width: 455px) {
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider {
-    width: 1%;
+    display: none;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.sidebar-slider div.card-columns.card-columns-slider {
     display: none;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content {
-    width: 99%;
+    width: 100%;
+    height: 100vh;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content {
-    height: 60%;
+    height: 60vh;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.titles div.card-body-titles div.line-orange {
     border: 2px solid #ff9300;
@@ -508,6 +509,9 @@ body {
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.content-slider#content div.main-content div.swiper-container.swiper-container-initialized.swiper-container-horizontal div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     font-size: 14px;
+  }
+  section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images {
+    height: 40vh;
   }
   section.main-slider div.container-fluid.box-slider div.row.pratition-slider div.images-content.images img.image-fluid {
     margin-top: 2.3rem;

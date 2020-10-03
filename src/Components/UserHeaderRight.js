@@ -29,7 +29,7 @@ class UserHeaderRight extends Component {
   //   console.log(username)
   // }
   
-  toggle = () => this.setState(!isOpen);
+  toggle = () => this.setState(!this.state.isOpen);
   
   render() {
     return (
