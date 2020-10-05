@@ -15,14 +15,19 @@ div.container.not-found {
 
 div.container.not-found span.oops {
   height: max-content;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 1rem;
 }
 
+div.container.not-found span.oops::first-letter {
+  color: #ff9300;
+}
+
 div.container.not-found h1 {
   color: #fff;
+  font-family: 'Cochin';
 }
 
 div.container.not-found button {

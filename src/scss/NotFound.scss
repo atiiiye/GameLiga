@@ -10,24 +10,31 @@ div.container.not-found {
 
     span.oops {
         height: max-content;
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-weight: bold;
         color: $color-white;
         margin-bottom: 1rem;
+
+
+        &::first-letter {
+            color: $color-orange-1;
+        }
 
     }
 
     h1 {
         color: $color-white;
+        font-family: 'Cochin';
     }
 
     button {
         margin-top: 1rem;
         border: 1px solid $color-orange-1;
         border-radius: 28px;
-        &:hover{
+
+        &:hover {
             background-color: $color-orange-1;
-            border-color: $color-orange-1; 
+            border-color: $color-orange-1;
         }
 
         &:hover>a.nav-link {

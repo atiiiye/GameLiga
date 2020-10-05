@@ -18,9 +18,9 @@ li.nav-item-icon.nav-item#bell a.nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: .5rem;
   color: #b0b0b2;
   text-decoration: none;
+  padding: 0;
 }
 
 li.nav-item-icon.nav-item#bell a.nav-link:focus {

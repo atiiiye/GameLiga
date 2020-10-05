@@ -146,6 +146,8 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 div.box {
   width: 130px;
   height: 40px;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
   background-color: #1c1c22;
   border: 1px solid #ff9300;
   border-radius: 12px;

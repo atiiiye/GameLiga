@@ -20,6 +20,9 @@ class Chat extends Component {
                     <Sidebar />
                     <div className="container-fluid Chat">
                         <Card id="content">
+                            <div className="elements">
+                                <div className="single-line"></div>
+                            </div>
 
                         </Card>
                     </div>

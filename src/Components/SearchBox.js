@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+//import css
+import './../css/SearchBox.css'
+
 //import bootstrap
 import { Form } from "react-bootstrap";
 
