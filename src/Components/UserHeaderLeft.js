@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 //import css
 import './../css/UserHeaderLeft.css'
+import './../css/mediaUserHeaderLeft.css'
 
 
 //import image

@@ -150,11 +150,11 @@ class UserContextes extends Component {
       // this.props.dispatch({type:"LOGIN" , payload : data})
       this.setState({ redirect: true });
       this.resetInputs();
-      this.setState({ loading: false });
     } catch (err) {
       if (err.response && err.response.status === 400) {
-        this.setState({ loading: false });
         errorMessage("Username or Password is invalid");
+        this.setState({ loading: false });
+        console.log(this.state.loading)
         // this.resetInputs()
       }
     }

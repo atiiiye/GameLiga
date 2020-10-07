@@ -28,7 +28,7 @@ div.container-fluid.News div.card#content {
   border-radius: 0;
   position: relative;
   left: 0;
-  height: 100%;
+  height: 120%;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
@@ -40,5 +40,136 @@ div.container-fluid.News div.card#content div.elements {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+div.container-fluid.News div.card#content div.elements div.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.2rem;
+  margin-left: 1.8rem;
+  width: 80%;
+}
+
+div.container-fluid.News div.card#content div.elements div.title h2.h1 {
+  color: rgba(54, 54, 59, 0.7);
+  font-weight: bold;
+  text-align: left;
+  font-size: 3rem;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  padding: 1rem 0;
+  transform: rotate(90deg);
+  position: relative;
+  top: -60%;
+  right: -40%;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title img.logo {
+  width: 80px;
+  height: 100px;
+  margin-right: 1rem;
+  opacity: .2;
+  margin-right: 2rem;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title h1.h1.title-angel {
+  display: flex;
+  font-weight: bold;
+  width: max-content;
+  height: 100%;
+  font-size: 800%;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2rem;
+  opacity: .4;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title h1.h1.title-angel span.game {
+  color: rgba(255, 147, 0, 0.6);
+  letter-spacing: 2rem;
+  opacity: .4;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 100%;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.main-card-news {
+  width: 91%;
+  height: 35%;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.main-card-news svg.main-news {
+  width: 25%;
+  height: 100%;
+  order: 2;
+  position: relative;
+  left: -10%;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.main-card-news svg.main-news g.main-g {
+  fill: #f03c8d;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.main-card-news img.main-poster-news {
+  width: 45%;
+  height: 100%;
+  order: 1;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards {
+  width: 100%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-new {
+  width: 100%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-new img.news {
+  width: 80%;
+  height: 100%;
+  order: 1;
+}
+
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-new svg.single-news {
+  width: 20%;
+  height: 100%;
+  order: 2;
+  position: relative;
+  left: -10%;
 }
 /*# sourceMappingURL=News.css.map */

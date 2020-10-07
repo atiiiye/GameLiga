@@ -20,6 +20,7 @@ axios.interceptors.response.use(null, error => {
     if (!expectedError) {
         console.log('Logging the', error);
         errorMessage("An unexpected error occurred, Try again");
+        // this.context.setState({loading:false})
     }
 
     return Promise.reject(error)
