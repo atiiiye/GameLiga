@@ -1,0 +1,60 @@
+@import './base';
+
+div.create-Tournament-section {
+    height: 100px;
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    div.create-Tournament-button {
+        width: 45px;
+        height: 45px;
+        background-color: rgba($color: $color-orange-2, $alpha: .7);
+        border-radius: 50%;
+
+        &:active {
+            background-color: rgba($color: $color-orange-2, $alpha: .7);
+            box-shadow: 0 0 2px 2px rgba($color: #ffffff, $alpha: .35);
+        }
+
+        i.fas.fa-plus {
+            height: inherit;
+            font-size: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba($color: $color-background-1, $alpha: 1.0);
+        }
+    }
+
+    span.create-Tournament-title {
+        color: #ffffff;
+        font-size: 90%;
+        font-weight: 600;
+        margin-top: 5px;
+    }
+
+    div.modal-dialog.CreateTournament-modal {
+        div.modal-content {
+            background-color: rgba($color: $color-background-1, $alpha: .7);
+            border-color: $color-orange-1;
+            border-radius: 28px;
+            margin-top: 14%;
+
+            div.modal-body {
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                margin-right: 0;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}

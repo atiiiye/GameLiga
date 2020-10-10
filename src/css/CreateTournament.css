@@ -1,0 +1,63 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.create-Tournament-section {
+  height: 100px;
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.create-Tournament-section div.create-Tournament-button {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(252, 137, 40, 0.7);
+  border-radius: 50%;
+}
+
+div.create-Tournament-section div.create-Tournament-button:active {
+  background-color: rgba(252, 137, 40, 0.7);
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.35);
+}
+
+div.create-Tournament-section div.create-Tournament-button i.fas.fa-plus {
+  height: inherit;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1c1c22;
+}
+
+div.create-Tournament-section span.create-Tournament-title {
+  color: #ffffff;
+  font-size: 90%;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+div.create-Tournament-section div.modal-dialog.CreateTournament-modal div.modal-content {
+  background-color: rgba(28, 28, 34, 0.7);
+  border-color: #ff9300;
+  border-radius: 28px;
+  margin-top: 14%;
+}
+
+div.create-Tournament-section div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-right: 0;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+/*# sourceMappingURL=CreateTournament.css.map */

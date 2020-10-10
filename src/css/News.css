@@ -74,7 +74,7 @@ div.container-fluid.News div.card#content div.elements div.main-content-news div
   padding: 1rem 0;
   transform: rotate(90deg);
   position: relative;
-  top: -60%;
+  top: -55%;
   right: -40%;
 }
 
@@ -115,7 +115,7 @@ div.container-fluid.News div.card#content div.elements div.main-content-news div
 div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.main-card-news {
   width: 91%;
   height: 35%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1rem;
   border-radius: 2px;
   display: flex;
@@ -147,29 +147,29 @@ div.container-fluid.News div.card#content div.elements div.main-content-news div
   grid-template-columns: 45% 45%;
   justify-content: center;
   align-items: center;
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
-div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-new {
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-news {
   width: 100%;
   height: 90%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 2px;
   display: flex;
   justify-content: flex-end;
 }
 
-div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-new img.news {
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-news img.news {
   width: 80%;
   height: 100%;
   order: 1;
 }
 
-div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-new svg.single-news {
-  width: 20%;
+div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.all-cards div.card-news svg.single-news {
+  width: 25%;
   height: 100%;
   order: 2;
   position: relative;
-  left: -10%;
+  left: -5%;
 }
 /*# sourceMappingURL=News.css.map */

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 //import css
 import "./../css/News.css";
+import "./../css/mediaNews.css";
 
 //import image
 import logo5 from "./../images/logo5.png";
@@ -35,7 +36,7 @@ class News extends Component {
   };
 
   uploadFile = (files) => {
-    var formData = new FormData();
+    const formData = new FormData();
 
     files.map((file, index) => {
       formData.append(`file${index}`, file);
@@ -47,7 +48,7 @@ class News extends Component {
       const { data, status } = await news(this.state);
       if (status === 200) {
       }
-    } catch (error) {
+    } catch (err) {
       if (err.response && err.response.status === 400) {
       }
     }
@@ -92,14 +93,14 @@ class News extends Component {
                       </svg>
                     </div>
                     <div className="all-cards">
-                      <div className="card-new">
+                      <div className="card-news">
                         <img className="news" src={Poster1} alt="" />
 
                         <svg
                           className="single-news"
                           xmlns="http://www.w3.org/2000/svg"
                           version="1.0"
-                          viewBox="0 0 160.000000 385.000000"
+                          viewBox="0 0 160 190"
                           preserveAspectRatio="xMidYMid meet"
                           stroke="#959aa2"
                           stroke-width="2"
@@ -113,12 +114,13 @@ class News extends Component {
                           </g>
                         </svg>
                       </div>
-                      <div className="card-new">
+                      <div className="card-news">
+                        <img className="news" src={Poster1} alt="" />
                         <svg
                           className="single-news"
                           xmlns="http://www.w3.org/2000/svg"
                           version="1.0"
-                          viewBox="0 0 160.000000 385.000000"
+                          viewBox="0 0 160 190"
                           preserveAspectRatio="xMidYMid meet"
                           stroke="#959aa2"
                           stroke-width="2"
@@ -132,12 +134,12 @@ class News extends Component {
                           </g>
                         </svg>
                       </div>
-                      <div className="card-new">
+                      <div className="card-news">
                         <svg
                           className="single-news"
                           xmlns="http://www.w3.org/2000/svg"
                           version="1.0"
-                          viewBox="0 0 160.000000 385.000000"
+                          viewBox="0 0 160 190"
                           preserveAspectRatio="xMidYMid meet"
                           stroke="#959aa2"
                           stroke-width="2"
@@ -151,12 +153,12 @@ class News extends Component {
                           </g>
                         </svg>
                       </div>
-                      <div className="card-new">
+                      <div className="card-news">
                         <svg
                           className="single-news"
                           xmlns="http://www.w3.org/2000/svg"
                           version="1.0"
-                          viewBox="0 0 160.000000 385.000000"
+                          viewBox="0 0 160 190"
                           preserveAspectRatio="xMidYMid meet"
                           stroke="#959aa2"
                           stroke-width="2"

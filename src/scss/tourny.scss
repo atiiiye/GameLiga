@@ -276,5 +276,55 @@ div.container-fluid.Tourny {
             }
 
         }
+
+        div.sidebar-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            min-height: 90%;
+            // height: 100vh;
+            width: 25%;
+
+            div.priorities {
+                display: flex;
+                width: max-content;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 130px;
+
+                div.Priority {
+                    display: flex;
+                    justify-content: space-between;
+                    width: max-content;
+                    margin-top: .8rem;
+
+                    div.ascending {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 2px;
+                        display: flex;
+                        background-color: $color-orange-1;
+
+
+                    }
+
+                    span {
+                        font-size: 85%;
+                        color: $color-gray-2;
+                        align-self: center;
+                        padding-left: .3rem;
+                    }
+
+                    div.descending {
+                        width: 20px;
+                        border-radius: 2px;
+                        height: 20px;
+                        display: flex;
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
     }
 }

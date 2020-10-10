@@ -37,10 +37,10 @@ div.container-fluid.FinalResult div.card#content div.parent-content {
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content h2.h2.result.section-1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   color: #ffffff;
-  margin-top: 1rem;
+  margin-top: 5%;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 {
@@ -85,8 +85,8 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.football {
-  width: 50%;
-  height: 160px;
+  width: 65%;
+  height: 175px;
   background-color: #1c1c22;
   border: 1px solid #000000;
 }
@@ -135,7 +135,7 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 img.red-round {
