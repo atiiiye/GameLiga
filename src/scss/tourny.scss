@@ -177,7 +177,8 @@ div.container-fluid.Tourny {
                                     height: 45px;
                                     margin-right: 0;
                                     background-color: rgba($color: $color-orange-1, $alpha: .8);
-                                    color: #ffffff;
+                                    color: rgba($color: #ffffff, $alpha: .85);
+
 
                                     &:focus {
                                         box-shadow: 0 0 0 0.2rem rgba($color: $color-orange-1, $alpha: .25);
@@ -248,7 +249,8 @@ div.container-fluid.Tourny {
 
                                 span.year,
                                 span.month {
-                                    color: #ffffff;
+                                    color: rgba($color: #ffffff, $alpha: .85);
+
                                 }
 
                                 span.day {
@@ -321,7 +323,7 @@ div.container-fluid.Tourny {
                         border-radius: 2px;
                         height: 20px;
                         display: flex;
-                        background-color: #ffffff;
+                        background-color: rgba($color: #ffffff, $alpha: .85);
                     }
                 }
             }

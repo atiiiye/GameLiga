@@ -283,7 +283,7 @@ div.container-fluid.games div.card#content div.sidebar-right div.priorities div.
   border-radius: 2px;
   height: 20px;
   display: flex;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 div.container-fluid.games div.card#content div.sidebar-right div.create-game-section {

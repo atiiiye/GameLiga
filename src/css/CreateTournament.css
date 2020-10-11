@@ -41,14 +41,14 @@ div.create-Tournament-section span.create-Tournament-title {
   margin-top: 5px;
 }
 
-div.create-Tournament-section div.modal-dialog.CreateTournament-modal div.modal-content {
-  background-color: rgba(28, 28, 34, 0.7);
+div.modal-dialog.CreateTournament-modal div.modal-content {
+  background-color: rgba(28, 28, 34, 0.95);
   border-color: #ff9300;
   border-radius: 28px;
   margin-top: 14%;
 }
 
-div.create-Tournament-section div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body {
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body {
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,130 @@ div.create-Tournament-section div.modal-dialog.CreateTournament-modal div.modal-
   height: 100%;
   margin-right: 0;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-left div.form-fields {
+  padding: 0;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-left div.form-fields label.form-label {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 95%;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-left div.form-fields input.form-control {
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 1px solid #ff9300;
+  border-radius: 12px;
+  font-size: 95%;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-left div.form-fields input.form-control:focus {
+  box-shadow: 0 0 1px 0.2rem rgba(252, 137, 40, 0.27);
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+  height: 475px;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields {
+  padding: 0;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields label.form-label {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 95%;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box div.circle {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(28, 28, 34, 0.7);
+  border: 1px solid #959aa2;
+  border-radius: 50%;
+  margin: .1rem;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box i.fas.fa-plus {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 24px;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields input.form-control {
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 1px solid #ff9300;
+  border-radius: 12px;
+  font-size: 95%;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields input.form-control:focus {
+  box-shadow: 0 0 1px 0.2rem rgba(252, 137, 40, 0.27);
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-2.form-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-2.form-button button[type="submit"] {
+  background-color: #ff9300;
+  border-color: #ff9300;
+  border-radius: 28px;
+  outline: none;
+  font-size: 90%;
+  color: #fff;
+  padding: .7rem;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-2.form-button button[type="submit"]:focus {
+  box-shadow: 0 0 1px 0.2rem rgba(255, 147, 0, 0.3);
 }
 /*# sourceMappingURL=CreateTournament.css.map */

@@ -300,7 +300,8 @@ div.container-fluid.games {
                         border-radius: 2px;
                         height: 20px;
                         display: flex;
-                        background-color: #ffffff;
+                        background-color: rgba($color: #ffffff, $alpha: .85);
+
                     }
                 }
             }

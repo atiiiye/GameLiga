@@ -177,7 +177,7 @@ div.container-fluid.Tourny div.card#content div.elements div.card#tab-content di
   height: 45px;
   margin-right: 0;
   background-color: rgba(255, 147, 0, 0.8);
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing input.time:last-child:not([name="advantage"]):focus {
@@ -244,7 +244,7 @@ div.container-fluid.Tourny div.card#content div.elements div.card#tab-content di
 
 div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date div.date-box span.year,
 div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date div.date-box span.month {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-4 div.Date div.date-box span.day {
@@ -309,6 +309,6 @@ div.container-fluid.Tourny div.card#content div.sidebar-right div.priorities div
   border-radius: 2px;
   height: 20px;
   display: flex;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 /*# sourceMappingURL=tourny.css.map */

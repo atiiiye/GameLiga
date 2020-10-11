@@ -183,7 +183,7 @@ class Games extends Component {
                   </div>
                 </div>
                 <div className="create-game-section">
-                  <div className="create-game-button" onClick={this.createGame}>
+                  <div className="create-game-button" onClick={()=>this.createGame()}>
                     <i className="fas fa-plus"></i>
                   </div>
                   <span className="create-game-title">Create Game</span>

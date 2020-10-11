@@ -16,15 +16,15 @@ export class CreateTournament extends Component {
       timeGame: "",
       datom: "",
       type: "",
-      addPerson:"",
+      addPerson: "",
     },
     name: "",
     personal: "",
     buyIn: "",
     timeGame: "",
     datom: "",
-      type: "",
-    addPerson:"",
+    type: "",
+    addPerson: "",
     modal: false,
   };
 
@@ -44,7 +44,10 @@ export class CreateTournament extends Component {
     return (
       <React.Fragment>
         <div className="create-Tournament-section">
-          <div className="create-Tournament-button" onClick={this.createGame}>
+          <div
+            className="create-Tournament-button"
+            onClick={this.toggle.bind(this)}
+          >
             <i className="fas fa-plus"></i>
           </div>
           <span className="create-Tournament-title">Create Tournament</span>
@@ -56,7 +59,7 @@ export class CreateTournament extends Component {
         >
           <ModalBody>
             <Form
-              className="CreateTournament-form py-4"
+              className="CreateTournament-form p-2 pt-4"
               onSubmit={(e) => this.handleSubmit(e)}
             >
               <div className="section-left">
@@ -79,7 +82,7 @@ export class CreateTournament extends Component {
                   <Form.Label>Personal :</Form.Label>
                   <Form.Control
                     type="text"
-                    className="mb-1 mt-1"
+                    className="mb-1 mt-1 w-50"
                     id="personal"
                     name="personal"
                     value={this.state.personal}
@@ -93,7 +96,7 @@ export class CreateTournament extends Component {
                   <Form.Label>Buy in :</Form.Label>
                   <Form.Control
                     type="text"
-                    className="mb-1 mt-1"
+                    className="mb-1 mt-1 w-50"
                     id="buyIn"
                     name="buyIn"
                     value={this.state.buyIn}
@@ -107,7 +110,7 @@ export class CreateTournament extends Component {
                   <Form.Label>Time Game :</Form.Label>
                   <Form.Control
                     type="text"
-                    className="mb-1 mt-1"
+                    className="mb-1 mt-1 w-50"
                     id="timeGame"
                     name="timeGame"
                     value={this.state.timeGame}
@@ -121,9 +124,9 @@ export class CreateTournament extends Component {
                   <Form.Label>Datom :</Form.Label>
                   <Form.Control
                     type="text"
-                    className="mb-1 mt-1"
-                    id="datum"
-                    name="datum"
+                    className="mb-1 mt-1 w-50"
+                    id="datom"
+                    name="datom"
                     value={this.state.datom}
                     onChange={(e) => this.handleChange(e)}
                   />
@@ -133,40 +136,54 @@ export class CreateTournament extends Component {
                 </div>
               </div>
               <div className="section-right">
-                <div className="form-fields mb-4">
-                  <Form.Label>Add person :</Form.Label>
-                  <Form.Control
-                    type="text"
-                    className="mb-1 mt-1"
-                    id="addPerson"
-                    name="addPerson"
-                    value={this.state.addPerson}
-                    onChange={(e) => this.handleChange(e)}
-                  />
-                  {errors.addPerson.length > 0 && (
-                    <span className="form-validate">{errors.addPerson}</span>
-                  )}
-                </div>
-                <div className="form-fields mb-4">
-                  <Form.Label>Type :</Form.Label>
-                  <Form.Control
-                    type="text"
-                    className="mb-1 mt-1"
-                    id="type"
-                    name="type"
-                    value={this.state.type}
-                    onChange={(e) => this.handleChange(e)}
-                  />
-                  {errors.type.length > 0 && (
-                    <span className="form-validate">{errors.type}</span>
-                  )}
-                </div>
-              </div>
+                <div className="section-right-1">
+                  <div className="form-fields mb-4">
+                    <Form.Label>Add person :</Form.Label>
 
-              <div className="mt-5 form-button w-75">
-                <Button id="submit" variant="none" type="submit">
-                  CREATE TOURNAMENT
-                </Button>
+                    <div className="person-box">
+                      <div className="circle"></div>
+                      <div className="circle"></div>
+                      <div className="circle"></div>
+                      <i className="fas fa-plus"></i>
+                    </div>
+                    {/* <Form.Control
+                      type="text"
+                      className="mb-1 mt-1"
+                      id="addPerson"
+                      name="addPerson"
+                      value={this.state.addPerson}
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                    {errors.addPerson.length > 0 && (
+                      <span className="form-validate">{errors.addPerson}</span>
+                    )} */}
+                  </div>
+                  <div className="form-fields mb-4">
+                    <Form.Label>Type :</Form.Label>
+                    <Form.Control
+                      type="text"
+                      className="mb-1 mt-1"
+                      id="type"
+                      name="type"
+                      value={this.state.type}
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                    {errors.type.length > 0 && (
+                      <span className="form-validate">{errors.type}</span>
+                    )}
+                  </div>
+                </div>
+
+                <div className="form-button section-right-2">
+                  <Button
+                    id="submit"
+                    variant="none"
+                    type="submit"
+                    onClick={this.toggle.bind(this)}
+                  >
+                    ADD TOURNAMENT
+                  </Button>
+                </div>
               </div>
             </Form>
           </ModalBody>
