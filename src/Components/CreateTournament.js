@@ -26,6 +26,9 @@ export class CreateTournament extends Component {
     type: "",
     addPerson: "",
     modal: false,
+    persons: [{
+      id:0
+    }],
   };
 
   toggle = () => this.setState({ modal: !this.state.modal });
@@ -37,6 +40,19 @@ export class CreateTournament extends Component {
 
   handleChange = (e) => {
     console.log("input changes");
+  };
+
+  addPerson = () => {
+    this.setState((prevState) => {
+      let box_length = prevState.persons.length;
+      const new_person = { id: box_length };
+      if (box_length >= 4) {
+        console.log('more 4')
+      }
+      return {
+        persons: [...prevState.persons, new_person]
+      };
+    });
   };
 
   render() {
@@ -141,28 +157,22 @@ export class CreateTournament extends Component {
                     <Form.Label>Add person :</Form.Label>
 
                     <div className="person-box">
-                      <div className="circle"></div>
-                      <div className="circle"></div>
-                      <div className="circle"></div>
-                      <i className="fas fa-plus"></i>
+                      <div className="persons">
+                        {this.state.persons.map((item) => (
+                          <div className="person" key={item.id}></div>
+                        ))}
+                      </div>
+                      <i
+                        className="fas fa-plus"
+                        onClick={() => this.addPerson()}
+                      ></i>
                     </div>
-                    {/* <Form.Control
-                      type="text"
-                      className="mb-1 mt-1"
-                      id="addPerson"
-                      name="addPerson"
-                      value={this.state.addPerson}
-                      onChange={(e) => this.handleChange(e)}
-                    />
-                    {errors.addPerson.length > 0 && (
-                      <span className="form-validate">{errors.addPerson}</span>
-                    )} */}
                   </div>
                   <div className="form-fields mb-4">
                     <Form.Label>Type :</Form.Label>
                     <Form.Control
-                      type="text"
-                      className="mb-1 mt-1"
+                      type="select"
+                      className="mb-1 mt-1 w-75"
                       id="type"
                       name="type"
                       value={this.state.type}

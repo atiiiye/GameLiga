@@ -8,6 +8,9 @@ body {
   div.container-fluid.games {
     width: 100%;
   }
+  div.container-fluid.games div.card#content {
+    height: 120%;
+  }
   div.container-fluid.games div.card#content div.elements {
     width: 75%;
     height: 100%;

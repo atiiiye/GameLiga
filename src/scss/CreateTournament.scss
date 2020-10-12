@@ -123,30 +123,39 @@ div.modal-dialog.CreateTournament-modal {
                                 justify-content: flex-start;
                             }
 
-                            div.person-box {
+                            div.person-box{
                                 display: flex;
-                                justify-content: space-between;
                                 align-items: center;
-                                width: 240px;
+                                justify-content: space-between;
+                                width: 100%;
 
-                                div.circle {
-                                    width: 40px;
-                                    height: 40px;
-                                    background-color: rgba($color: $color-background-1, $alpha: .7);
-                                    border: 1px solid rgba($color: $color-gray-2, $alpha: 1.0);
-                                    border-radius: 50%;
-                                    margin: .1rem;
+                                div.persons {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    width: 80%;
+    
+                                    div.person {
+                                        width: 20%;
+                                        height: 40px;
+                                        background-color: rgba($color: $color-background-1, $alpha: .7);
+                                        border: 1px solid rgba($color: $color-gray-2, $alpha: 1.0);
+                                        border-radius: 50%;
+                                        margin: .1rem;
+                                    }
+    
                                 }
-
                                 i.fas.fa-plus {
                                     color: rgba($color: #ffffff, $alpha: .85);
                                     font-size: 24px;
-
+                                    width: 10%;
+    
                                     // &:focus {
                                     //     box-shadow: 0 0 1px .2rem rgba($color: #ffffff, $alpha: .27);
                                     // }
                                 }
                             }
+
 
                             input.form-control {
                                 background-color: rgba($color: #000000, $alpha: .35);

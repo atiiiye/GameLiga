@@ -60,9 +60,7 @@ class LeaderBoards extends Component {
                           className="image-icon fas fa-user-circle"
                           id="user"
                         ></i>
-                        <p className="user-name">
-                          {/* {isLogin()} */}
-                        </p>
+                        <p className="user-name">{isLogin().Username}</p>
                       </div>
                       <div className="section-2 col-md-5">
                         <span className="section-2-1">0</span>
@@ -129,7 +127,7 @@ class LeaderBoards extends Component {
                                     id="user"
                                   />
                                   <div className="user-name">
-                                    {/* {isLogin()} */}
+                                    {isLogin().Username}
                                   </div>
                                 </div>
                               </td>

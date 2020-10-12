@@ -81,7 +81,6 @@ div.container-fluid.News div.card#content div.elements div.main-content-news div
 div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title img.logo {
   width: 80px;
   height: 100px;
-  margin-right: 1rem;
   opacity: .2;
   margin-right: 2rem;
 }
@@ -113,7 +112,7 @@ div.container-fluid.News div.card#content div.elements div.main-content-news div
 }
 
 div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.main-card-news {
-  width: 91%;
+  width: 92%;
   height: 35%;
   background-color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1rem;

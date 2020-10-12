@@ -1,6 +1,5 @@
 @import './../base';
 
-
 @media(max-width :991px) {
     div.container-fluid {
         nav.navbar {
@@ -52,9 +51,7 @@
                     width: 45px;
                     height: 45px;
                 }
-
             }
-
         }
     }
 }
@@ -88,7 +85,6 @@
                     li.nav-item {
                         padding-right: 5px;
                         padding-top: 0;
-
 
                         a.nav-link {
                             font-size: 85%;
@@ -505,7 +501,6 @@
                         height: 2em;
                         padding-bottom: 0;
                         padding-left: 0;
-
                     }
 
                     .menu {

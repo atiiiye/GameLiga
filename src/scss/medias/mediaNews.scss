@@ -2,10 +2,7 @@
 
 @media(max-width:1200px) {
     div.container-fluid.News {
-
-        // background-image: url('./../images/soldier-background.png');
-        background-position: left;
-        // -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
+        width: 84%;
 
         div.card#content {
             left: 0;
@@ -13,9 +10,7 @@
             width: 100%;
             min-height: 100%;
 
-
             div.elements {
-
                 div.title {
                     padding: 1.2rem;
                     margin-left: 1.8rem;
@@ -40,19 +35,14 @@
                         img.logo {
                             width: 80px;
                             height: 100px;
-                            margin-right: 1rem;
-                            opacity: .2;
                             margin-right: 2rem;
                         }
-
-
 
                         h1.h1.title-angel {
                             width: max-content;
                             height: 100%;
                             font-size: 700%;
                             letter-spacing: 2rem;
-                            opacity: .4;
 
                             span.game {
                                 letter-spacing: 2rem;
@@ -65,7 +55,7 @@
                         height: 100%;
 
                         div.main-card-news {
-                            width: 91%;
+                            width: 93%;
                             height: 35%;
                             margin-bottom: 1rem;
 
@@ -90,6 +80,230 @@
                             display: grid;
                             grid-template-columns: 45% 45%;
                             grid-gap: 20px;
+
+                            div.card-news {
+                                width: 100%;
+                                height: 90%;
+                                border-radius: 2px;
+
+                                img.news {
+                                    width: 80%;
+                                    height: 100%;
+                                }
+
+                                svg.single-news {
+                                    width: 25%;
+                                    height: 100%;
+                                    left: -5%;
+
+                                    g {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    div.container-fluid.News {
+        div.card#content {
+            left: 0;
+            height: 120%;
+            width: 100%;
+            min-height: 100%;
+
+            div.elements {
+                div.title {
+                    padding: 1.2rem 0 1.2rem 0;
+                    margin-left: 1.8rem;
+                    width: 80%;
+
+                    h2.h1 {
+                        font-size: 3rem;
+                    }
+                }
+
+                div.main-content-news {
+                    width: 100%;
+                    height: 100%;
+
+                    div.sidebar-title {
+                        width: 100%;
+                        height: 100px;
+                        padding: 0;
+                        top: -45%;
+                        right: -40%;
+                        display: flex;
+                        justify-content: end;
+                        align-items: flex-end;
+
+                        img.logo {
+                            width: 70px;
+                            height: 90px;
+                            margin-right: 1.5rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        h1.h1.title-angel {
+                            width: max-content;
+                            height: 100%;
+                            font-size: 600%;
+                            letter-spacing: 1.5rem;
+                            opacity: .4;
+
+                            span.game {
+                                letter-spacing: 1.5rem;
+                            }
+                        }
+                    }
+
+                    div.parent-news {
+                        width: 85%;
+                        height: 100%;
+
+                        div.main-card-news {
+                            width: 93%;
+                            height: 30%;
+                            margin-bottom: 1rem;
+
+                            svg.main-news {
+                                width: 25%;
+                                height: 100%;
+                                order: 2;
+                                left: -10%;
+
+                                g.main-g {}
+                            }
+
+                            img.main-poster-news {
+                                width: 45%;
+                                height: 100%;
+                            }
+                        }
+
+                        div.all-cards {
+                            width: 100%;
+                            height: 65%;
+                            display: grid;
+                            grid-template-columns: 45% 45%;
+                            grid-gap: 20px;
+
+                            div.card-news {
+                                width: 100%;
+                                height: 90%;
+                                border-radius: 2px;
+
+                                img.news {
+                                    width: 80%;
+                                    height: 100%;
+                                }
+
+                                svg.single-news {
+                                    width: 25%;
+                                    height: 100%;
+                                    left: -5%;
+
+                                    g {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    div.container-fluid.News {
+        width: 80%;
+
+        div.card#content {
+            left: 0;
+            height: 120%;
+            width: 100%;
+            min-height: 100%;
+
+            div.elements {
+                div.title {
+                    padding: 1.2rem 0 1.2rem 0;
+                    margin-left: 1.5rem;
+                    width: 80%;
+
+                    h2.h1 {
+                        font-size: 2.8rem;
+                        text-align: left;
+                    }
+                }
+
+                div.main-content-news {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+
+                    div.sidebar-title {
+                        width: 100%;
+                        height: max-content;
+                        padding: 1rem 0;
+                        top: -45%;
+                        right: -40%;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+
+                        img.logo {
+                            width: 70px;
+                            height: 80px;
+                            margin-right: 1.5rem;
+                        }
+
+                        h1.h1.title-angel {
+                            width: max-content;
+                            height: 100%;
+                            font-size: 500%;
+                            letter-spacing: 1.5rem;
+
+                            span.game {
+                                letter-spacing: 1.5rem;
+                            }
+                        }
+                    }
+
+                    div.parent-news {
+                        width: 85%;
+                        height: 100%;
+
+                        div.main-card-news {
+                            width: 92%;
+                            height: 20%;
+                            margin-bottom: 1rem;
+
+                            svg.main-news {
+                                width: 25%;
+                                height: 100%;
+                                order: 2;
+                                left: -10%;
+
+                                g.main-g {}
+                            }
+
+                            img.main-poster-news {
+                                width: 45%;
+                                height: 100%;
+                            }
+                        }
+
+                        div.all-cards {
+                            width: 92%;
+                            height: 60%;
+                            display: flex;
+                            grid-template-columns: 80%;
+                            // grid-gap: 20px;
+                            flex-direction: column;
 
                             div.card-news {
                                 width: 100%;

@@ -30,6 +30,7 @@
 
                     div.online {
                         width: 70%;
+                        height: 35px;
                         padding-left: .5rem;
                         border-radius: 28px;
                         padding-top: .5rem;
@@ -80,12 +81,12 @@
                     }
 
                     div.online {
-                        width: 70%;
-                        // height: 22%;
+                        width: 80%;
+                        height: 35px;
                         padding-left: .5rem;
                         border-radius: 28px;
                         padding-top: .5rem;
-                        font-size: 85%;
+                        font-size: 80%;
                         padding-bottom: .5rem;
                     }
                 }
@@ -127,7 +128,7 @@
                     }
 
                     div.online {
-                        width: 70%;
+                        width: 80%;
                         padding-left: .5rem;
                         border-radius: 28px;
                         padding-top: .5rem;
@@ -174,13 +175,14 @@
 
                             img.game-image {
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
-                                transform: scale(.85);
+                                transform: scale(.83);
                                 opacity: .8;
                             }
 
                             div.online {
-                                width: 70%;
-                                padding: .5rem;
+                                width: 75%;
+                                height: 30px;
+                                padding: .3rem;
                                 font-size: 80%;
                                 position: relative;
                                 bottom: 1rem;
@@ -199,8 +201,8 @@
 
                             div.online {
                                 width: 90%;
-                                padding: .5rem;
-                                font-size: 85%;
+                                padding: .3rem;
+                                font-size: 83%;
                                 position: relative;
                                 bottom: 0;
 
@@ -254,7 +256,6 @@
 
                             div.online {
                                 width: 75%;
-                                padding: .5rem;
                                 font-size: 78%;
                                 position: relative;
                                 bottom: 1rem;
@@ -273,7 +274,6 @@
 
                             div.online {
                                 width: 55%;
-                                padding: .5rem;
                                 font-size: 80%;
                                 position: relative;
                                 bottom: 0;
@@ -329,9 +329,9 @@
                             }
 
                             div.online {
-                                width: 70%;
+                                width: 75%;
                                 padding: .4rem;
-                                font-size: 75%;
+                                font-size: 70%;
                                 position: relative;
                                 bottom: 1.1rem;
                             }
@@ -350,7 +350,7 @@
 
                             div.online {
                                 width: 50%;
-                                padding: .45rem;
+                                padding: .35rem;
                                 font-size: 78%;
                                 position: relative;
                                 bottom: 0;
@@ -405,9 +405,8 @@
                             }
 
                             div.online {
-                                width: 85%;
+                                width: 100%;
                                 padding: .35rem;
-                                font-size: 75%;
                                 position: relative;
                                 bottom: 1.1rem;
                             }
@@ -425,10 +424,8 @@
                             }
 
                             div.online {
-                                width: 65%;
-                                padding: .4rem;
-                                font-size: 78%;
-                                position: relative;
+                                width: 75%;
+                                padding: .3rem;
                                 bottom: 0;
 
                             }
@@ -476,15 +473,13 @@
 
                             img.game-image {
                                 width: 107px;
-                                -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(.85);
                                 opacity: .7;
                             }
 
                             div.online {
-                                width: 95%;
                                 padding: .3rem;
-                                font-size: 70%;
+                                font-size: 68%;
                                 position: relative;
                                 bottom: 1.1rem;
                             }
@@ -496,16 +491,13 @@
                             img.game-image {
                                 width: 125px;
                                 margin-bottom: .6rem;
-                                -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(1);
                                 opacity: 1;
                             }
 
                             div.online {
-                                width: 75%;
-                                padding: .4rem;
-                                font-size: 75%;
-                                position: relative;
+                                width: 80%;
+                                font-size: 70%;
                                 bottom: 0;
 
                             }
@@ -517,7 +509,6 @@
             div.empty-square {
                 width: 14%;
                 height: 20%;
-                position: absolute;
                 bottom: 0;
                 right: 0;
             }

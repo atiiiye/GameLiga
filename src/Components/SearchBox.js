@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 //import css
 import './../css/SearchBox.css'
+import './../css/mediaSearchBox.css'
 
 //import bootstrap
 import { Form } from "react-bootstrap";

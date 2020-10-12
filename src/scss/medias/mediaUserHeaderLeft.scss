@@ -3,9 +3,11 @@
 @media(max-width:991px) {
 
     nav.navbar.user-header-left {
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        width: 45%;
+        width: 35%;
+        padding-left: 0;
+        padding-right: 0;
 
         div.navbar-left {
             align-items: center;
@@ -17,7 +19,7 @@
                 width: 85px;
                 height: 2rem;
                 position: relative;
-                left: -25px
+                left: -25px;
             }
 
             h4.UFOGame {
@@ -29,7 +31,7 @@
             }
 
             img.logo {
-                margin-right: 8px;
+                margin-right: 1rem;
                 width: 50px;
                 height: 50px;
             }

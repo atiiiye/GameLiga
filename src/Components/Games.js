@@ -66,8 +66,6 @@ class Games extends Component {
           <Sidebar />
           <div className="container-fluid games">
             <Card id="content">
-              {/* <Swiper {...params} className="swiper-tabs"> */}
-
               <div className="elements">
                 <Navigation />
                 {this.state.box.map((item) => (
@@ -170,7 +168,6 @@ class Games extends Component {
                   </Card>
                 ))}
               </div>
-              {/* </Swiper> */}
               <div className="sidebar-right">
                 <div className="priorities">
                   <div className="Priority">

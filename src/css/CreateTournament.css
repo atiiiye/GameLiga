@@ -131,13 +131,20 @@ div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.Cr
 
 div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 240px;
+  justify-content: space-between;
+  width: 100%;
 }
 
-div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box div.circle {
-  width: 40px;
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box div.persons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box div.persons div.person {
+  width: 20%;
   height: 40px;
   background-color: rgba(28, 28, 34, 0.7);
   border: 1px solid #959aa2;
@@ -148,6 +155,7 @@ div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.Cr
 div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields div.person-box i.fas.fa-plus {
   color: rgba(255, 255, 255, 0.85);
   font-size: 24px;
+  width: 10%;
 }
 
 div.modal-dialog.CreateTournament-modal div.modal-content div.modal-body form.CreateTournament-form div.section-right div.section-right-1 div.form-fields input.form-control {

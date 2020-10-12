@@ -6,7 +6,7 @@ body {
 
 @media (max-width: 991px) {
   nav.navbar.user-header-right {
-    width: 100%;
+    width: 65%;
   }
   nav.navbar.user-header-right div.navbar-right {
     width: 50%;

@@ -9,7 +9,7 @@ body {
     width: 80%;
   }
   div.container-fluid.Shop div.card#content div.all-view-component div.title {
-    padding: 1rem;
+    padding: 1rem 0 1rem 0;
     margin-left: 1.5rem;
     width: 50%;
   }
