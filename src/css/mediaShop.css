@@ -33,7 +33,6 @@ body {
     height: 100vh;
   }
   div.container-fluid.Shop div.card#content div.all-view-component div.title {
-    padding: 1rem;
     margin-left: 0;
     width: 50%;
   }
