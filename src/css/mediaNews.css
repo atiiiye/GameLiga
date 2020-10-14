@@ -114,9 +114,6 @@ body {
     padding: 0;
     top: -45%;
     right: -40%;
-    display: flex;
-    justify-content: end;
-    align-items: flex-end;
   }
   div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title img.logo {
     width: 70px;
@@ -128,11 +125,10 @@ body {
     width: max-content;
     height: 100%;
     font-size: 600%;
-    letter-spacing: 1.5rem;
-    opacity: .4;
+    letter-spacing: 1.3rem;
   }
   div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title h1.h1.title-angel span.game {
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.3rem;
   }
   div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news {
     width: 85%;
@@ -200,12 +196,14 @@ body {
     height: 100%;
     display: flex;
     align-items: flex-start;
+    position: relative;
+    top: -6%;
   }
   div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title {
     width: 100%;
     height: max-content;
-    padding: 1rem 0;
-    top: -45%;
+    padding: 0;
+    top: -60%;
     right: -40%;
     display: flex;
     align-items: flex-end;
@@ -213,8 +211,9 @@ body {
   }
   div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title img.logo {
     width: 70px;
-    height: 80px;
+    height: 75px;
     margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   div.container-fluid.News div.card#content div.elements div.main-content-news div.sidebar-title h1.h1.title-angel {
     width: max-content;
@@ -228,6 +227,8 @@ body {
   div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news {
     width: 85%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   div.container-fluid.News div.card#content div.elements div.main-content-news div.parent-news div.main-card-news {
     width: 92%;

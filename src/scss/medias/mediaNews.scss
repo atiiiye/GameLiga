@@ -136,9 +136,7 @@
                         padding: 0;
                         top: -45%;
                         right: -40%;
-                        display: flex;
-                        justify-content: end;
-                        align-items: flex-end;
+
 
                         img.logo {
                             width: 70px;
@@ -151,11 +149,10 @@
                             width: max-content;
                             height: 100%;
                             font-size: 600%;
-                            letter-spacing: 1.5rem;
-                            opacity: .4;
+                            letter-spacing: 1.3rem;
 
                             span.game {
-                                letter-spacing: 1.5rem;
+                                letter-spacing: 1.3rem;
                             }
                         }
                     }
@@ -244,12 +241,14 @@
                     height: 100%;
                     display: flex;
                     align-items: flex-start;
+                    position: relative;
+                    top: -6%;
 
                     div.sidebar-title {
                         width: 100%;
                         height: max-content;
-                        padding: 1rem 0;
-                        top: -45%;
+                        padding: 0;
+                        top: -60%;
                         right: -40%;
                         display: flex;
                         align-items: flex-end;
@@ -257,8 +256,9 @@
 
                         img.logo {
                             width: 70px;
-                            height: 80px;
+                            height: 75px;
                             margin-right: 1.5rem;
+                            margin-bottom: 1.5rem;
                         }
 
                         h1.h1.title-angel {
@@ -276,6 +276,8 @@
                     div.parent-news {
                         width: 85%;
                         height: 100%;
+                        display: flex;
+                        flex-direction: column;
 
                         div.main-card-news {
                             width: 92%;
@@ -329,4 +331,9 @@
             }
         }
     }
+}
+
+
+@media(max-width:700px){
+
 }

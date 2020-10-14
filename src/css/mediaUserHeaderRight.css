@@ -6,7 +6,7 @@ body {
 
 @media (max-width: 991px) {
   nav.navbar.user-header-right {
-    width: 65%;
+    width: 50%;
   }
   nav.navbar.user-header-right div.navbar-right {
     width: 50%;
@@ -69,9 +69,6 @@ body {
 }
 
 @media (max-width: 880px) {
-  nav.navbar.user-header-right {
-    width: 100%;
-  }
   nav.navbar.user-header-right div.navbar-right {
     width: 50%;
   }
@@ -133,15 +130,12 @@ body {
 }
 
 @media (max-width: 767px) {
-  nav.navbar.user-header-right {
-    width: 100%;
-  }
   nav.navbar.user-header-right div.hamburger-menu {
     position: absolute;
     right: 1rem;
   }
-  nav.navbar.user-header-right div.hamburger-menu button.navbar-toggler {
-    border: 0;
+  nav.navbar.user-header-right div.hamburger-menu button.navbar-toggler:focus, nav.navbar.user-header-right div.hamburger-menu button.navbar-toggler:active {
+    outline: 0;
   }
   nav.navbar.user-header-right div.hamburger-menu button.navbar-toggler span.navbar-toggler-icon {
     display: flex;
@@ -268,9 +262,6 @@ body {
 }
 
 @media (max-width: 575px) {
-  nav.navbar.user-header-right {
-    width: 100%;
-  }
   nav.navbar.user-header-right div.hamburger-menu {
     position: absolute;
     right: 1rem;
