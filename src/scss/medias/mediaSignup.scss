@@ -1,5 +1,177 @@
 @import './../base';
 
+@media(max-width:1200px) {
+
+    div.card-body#card-form-signup {
+        background-position: right 96%, -10px -15px;
+        background-size: 40% 35%, cover;
+        position: relative;
+        right: -15%;
+        padding: 0;
+        width: 85%;
+
+        div.card-form {
+            border-radius: 9px;
+            margin: 2rem;
+            width: 65%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+
+            div.title {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                h1.h1 {
+                    font-size: 2.2rem;
+                }
+
+                p.text-muted {
+                    font-weight: bold;
+                    font-size: 75%;
+                    margin-bottom: .3rem;
+                    text-align: center;
+                }
+
+                a#goLogin {
+                    font-weight: bold;
+                    font-size: 75%;
+                    text-align: center;
+                }
+            }
+
+            form.form-signup {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 90%;
+                margin-top: 2rem;
+                padding: .9rem;
+
+                h3.h3 {
+                    display: flex;
+                    font-size: 95%;
+                    font-weight: bold;
+                    justify-content: center;
+                    margin-top: .5rem;
+                    margin-bottom: 1rem;
+                }
+
+                div.form-group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    label {
+                        display: flex;
+                        justify-content: center;
+                        justify-content: flex-start;
+                        font-size: 80%;
+
+                        a {
+                            font-size: 100%;
+                            font-weight: bold;
+                        }
+                    }
+
+                    label.label-check-box {
+                        font-size: 80%;
+
+                        a {
+                            padding-left: 3px;
+                        }
+                    }
+
+                    div.validation-box {
+                        padding-left: 0;
+
+                        input {
+                            border-radius: 9px;
+                            font-size: 80%;
+                            padding-left: .5rem;
+                        }
+
+
+                        div.password-block {
+                            height: 33px !important;
+
+                            input[name="password"] {
+                                padding-right: 2rem;
+
+                            }
+
+                            i.far.fa-eye {
+                                width: max-content;
+                                font-size: 15px;
+                                position: relative;
+                                bottom: 2rem;
+                                right: -92%;
+                                height: 30px;
+                                align-items: center;
+                            }
+
+                        }
+
+                        span.error {
+                            margin-top: .5rem;
+                            padding: .5rem;
+                        }
+
+                        input[type="range"] {
+                            padding-left: 0;
+                        }
+
+
+                        div.progress {
+                            padding: 0;
+                            height: .5rem;
+                        }
+
+                        button.generate-password {
+                            font-size: 78%;
+                            width: 55%;
+                            justify-content: center;
+                            padding-left: .15rem;
+                            padding-right: .15rem;
+
+                        }
+
+
+                    }
+
+                    div.captcha-block {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        div.captcha {
+                            width: 100px;
+                            height: 50px;
+                            margin-bottom: 1rem;
+                            font-size: 90%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    button.register {
+                        border-radius: 28px;
+                        outline: none;
+                        font-size: 95%;
+                        position: relative;
+                        left: 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media(max-width:991px) {
 
     div.card-body#card-form-signup {
@@ -86,21 +258,62 @@
                         }
                     }
 
-                    input {
-                        border-radius: 9px;
-                        font-size: 80%;
-                        padding-left: .5rem;
-                    }
+                    div.validation-box {
+                        padding-left: 0;
 
-                    div.form-check-inline {
-                        width: 10%;
-                        margin-right: 0;
 
-                        input[type="checkbox"] {
-                            width: 25px;
-                            height: 25px;
-                            margin-right: 0;
+                        input {
+                            border-radius: 9px;
+                            font-size: 80%;
+                            padding-left: .5rem;
                         }
+
+
+                        div.password-block {
+                            height: 33px !important;
+
+                            input[name="password"] {
+                                padding-right: 2rem;
+
+                            }
+
+                            i.far.fa-eye {
+                                width: max-content;
+                                font-size: 14px;
+                                position: relative;
+                                bottom: 2rem;
+                                right: -89%;
+                                height: 30px;
+                                align-items: center;
+                            }
+
+                        }
+
+                        span.error {
+                            margin-top: .5rem;
+                            padding: .5rem;
+                        }
+
+                        input[type="range"] {
+                            padding-left: 0;
+                        }
+
+
+                        div.progress {
+                            padding: 0;
+                            height: .5rem;
+                        }
+
+                        button.generate-password {
+                            font-size: 75%;
+                            width: 70%;
+                            justify-content: center;
+                            padding-left: .15rem;
+                            padding-right: .15rem;
+
+                        }
+
+
                     }
 
                     div.captcha-block {
@@ -221,20 +434,57 @@
                         }
                     }
 
-                    input {
-                        border-radius: 9px;
-                        font-size: 80%;
-                        padding-left: .5rem;
-                    }
+                    div.validation-box {
+                        padding-left: 0;
 
-                    div.form-check-inline {
-                        width: 12%;
-                        // margin-right: .1rem;
+                        input {
+                            border-radius: 9px;
+                            font-size: 80%;
+                            padding-left: .5rem;
+                        }
 
-                        input[type="checkbox"] {
-                            width: 25px;
-                            height: 25px;
-                            margin-right: 0;
+                        div.password-block {
+                            height: 33px !important;
+
+                            input[name="password"] {
+                                padding-right: 2rem;
+
+                            }
+
+                            i.far.fa-eye {
+                                width: max-content;
+                                font-size: 14px;
+                                position: relative;
+                                bottom: 2rem;
+                                right: -88%;
+                                height: 30px;
+                                align-items: center;
+                            }
+
+                        }
+
+                        span.error {
+                            margin-top: .5rem;
+                            padding: .5rem;
+                        }
+
+                        input[type="range"] {
+                            padding-left: 0;
+                        }
+
+
+                        div.progress {
+                            padding: 0;
+                            height: .5rem;
+                        }
+
+                        button.generate-password {
+                            font-size: 75%;
+                            width: 75%;
+                            justify-content: center;
+                            padding-left: .2rem;
+                            padding-right: .2rem;
+
                         }
                     }
 
@@ -356,20 +606,57 @@
                         }
                     }
 
-                    input {
-                        border-radius: 9px;
-                        font-size: 80%;
-                        padding-left: .5rem;
-                    }
+                    div.validation-box {
+                        padding-left: 0;
 
-                    div.form-check-inline {
-                        width: 12%;
-                        // margin-right: .1rem;
+                        input {
+                            border-radius: 9px;
+                            font-size: 80%;
+                            padding-left: .5rem;
+                        }
 
-                        input[type="checkbox"] {
-                            width: 23px;
-                            height: 23px;
-                            margin-right: 0;
+                        div.password-block {
+                            height: 33px !important;
+
+                            input[name="password"] {
+                                padding-right: 2rem;
+
+                            }
+
+                            i.far.fa-eye {
+                                width: max-content;
+                                font-size: 13px;
+                                position: relative;
+                                bottom: 2rem;
+                                right: -92%;
+                                height: 30px;
+                                align-items: center;
+                            }
+
+                        }
+
+                        span.error {
+                            margin-top: .5rem;
+                            padding: .5rem;
+                        }
+
+                        input[type="range"] {
+                            padding-left: 0;
+                        }
+
+
+                        div.progress {
+                            padding: 0;
+                            height: .5rem;
+                        }
+
+                        button.generate-password {
+                            font-size: 80%;
+                            width: 50%;
+                            justify-content: center;
+                            padding-left: .2rem;
+                            padding-right: .2rem;
+
                         }
                     }
 
@@ -435,6 +722,7 @@
                 p.text-muted {
                     font-size: 70%;
                     margin-bottom: .3rem;
+                    padding: .5rem;
                 }
 
                 a#goLogin {
@@ -489,20 +777,57 @@
                         }
                     }
 
-                    input {
-                        border-radius: 9px;
-                        font-size: 78%;
-                        padding-left: .5rem;
-                    }
+                    div.validation-box {
+                        padding-left: 0;
 
-                    div.form-check-inline {
-                        width: 9%;
-                        // margin-right: .1rem;
+                        input {
+                            border-radius: 9px;
+                            font-size: 78%;
+                            padding-left: .5rem;
+                        }
 
-                        input[type="checkbox"] {
-                            width: 20px;
-                            height: 20px;
-                            margin-right: 0;
+                        div.password-block {
+                            height: 33px !important;
+
+                            input[name="password"] {
+                                padding-right: 2rem;
+
+                            }
+
+                            i.far.fa-eye {
+                                width: max-content;
+                                font-size: 12px;
+                                position: relative;
+                                bottom: 2rem;
+                                right: -92%;
+                                height: 30px;
+                                align-items: center;
+                            }
+
+                        }
+
+                        span.error {
+                            margin-top: .5rem;
+                            padding: .5rem;
+                        }
+
+                        input[type="range"] {
+                            padding-left: 0;
+                        }
+
+
+                        div.progress {
+                            padding: 0;
+                            height: .5rem;
+                        }
+
+                        button.generate-password {
+                            font-size: 75%;
+                            width: 50%;
+                            justify-content: center;
+                            padding-left: .15rem;
+                            padding-right: .15rem;
+
                         }
                     }
 
@@ -534,7 +859,7 @@
     }
 }
 
-@media(max-width:350px){
+@media(max-width:350px) {
     div.card-body#card-form-signup {
         background-position: right 96%, -10px -22px;
         background-size: 28% 28%, cover;
@@ -620,21 +945,53 @@
                         }
                     }
 
-                    input {
-                        border-radius: 9px;
-                        font-size: 78%;
-                        padding-left: .5rem;
-                    }
+                    div.validation-box {
+                        padding-left: 0;
 
-                    div.form-check-inline {
-                        width: 8%;
-                        // margin-right: .1rem;
-                        // padding-bottom: 0;
+                        input {
+                            border-radius: 9px;
+                            font-size: 78%;
+                            padding-left: .5rem;
+                        }
 
-                        input[type="checkbox"] {
-                            width: 18px;
-                            height: 18px;
-                            margin-right: 0;
+                        div.password-block {
+                            height: 33px !important;
+
+                            input[name="password"] {
+                                padding-right: 2rem;
+
+                            }
+
+                            i.far.fa-eye {
+                                font-size: 12px;
+                                right: -91%;
+                                height: 30px;
+                            }
+
+                        }
+
+                        span.error {
+                            margin-top: .5rem;
+                            padding: .5rem;
+                        }
+
+                        input[type="range"] {
+                            padding-left: 0;
+                        }
+
+
+                        div.progress {
+                            padding: 0;
+                            height: .5rem;
+                        }
+
+                        button.generate-password {
+                            font-size: 75%;
+                            width: 50%;
+                            justify-content: center;
+                            padding-left: .15rem;
+                            padding-right: .15rem;
+
                         }
                     }
 

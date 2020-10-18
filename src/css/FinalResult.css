@@ -21,7 +21,7 @@ div.container-fluid.FinalResult div.card#content {
   border-radius: 0;
   position: relative;
   left: 0;
-  height: 100%;
+  height: 100vh;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
@@ -136,15 +136,16 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
+  height: 25%;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 img.red-round {
-  width: 70%;
-  height: 65%;
+  width: 8%;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 div.box {
-  width: 130px;
+  width: 18%;
   height: 40px;
   margin-bottom: .5rem;
   margin-top: .5rem;
@@ -155,17 +156,19 @@ div.container-fluid.FinalResult div.card#content div.parent-content div.section-
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.live-content.section-4 {
   display: flex;
+  justify-content: center;
   width: 45%;
   position: relative;
   left: -1.5rem;
+  width: 100%;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.live-content.section-4 div.live {
   border: 1px solid red;
   background-color: #1c1c22;
   border-radius: 2px;
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: 250px;
 }
 
 div.container-fluid.FinalResult div.card#content div.parent-content div.live-content.section-4 p.text-live {

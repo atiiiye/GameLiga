@@ -29,37 +29,6 @@ import { Context } from "./Contexts/index";
 
 class SignUp extends Component {
   state = {
-    // errors: {
-    //   firstName: "",
-    //   lastName: "",
-    //   nickName: "",
-    //   username: "",
-    //   email: "",
-    //   password: "",
-    //   confirmPassword: "",
-    //   phone: "",
-    //   promotional: "",
-    //   referred: "",
-    //   generate: 0,
-    // captchaInput: "",
-    // },
-    // firstName: "",
-    // lastName: "",
-    // nickName: "",
-    // username: "",
-    // email: "",
-    // password: "",
-    // confirmPassword: "",
-    // phone: "",
-    // promotional: "",
-    // referred: "",
-    // generate: 0,
-    // captcha: "",
-    // captchaInput: "",
-    // redirect: false,
-    // checkbox: false,
-    // loading: false,
-
     type: "text",
   };
 
@@ -80,34 +49,13 @@ class SignUp extends Component {
   //     (e)=>this.context.handleChange(e);
   // }
 
-  // postData = async () => {
-  //   this.setState({ loading: true });
-  //   try {
-  //     const { data, status } = await signup(this.state);
-  // if(status === 201) successMessage("Create account successfully , Please wait");
-  //     localStorage.setItem("token", data);
-  //     this.setState({ redirect: true });
-  //     this.setState({ loading: false });
-  //   } catch (err) {
-  //     if (err.response && err.response.status === 400) {
-  //       this.setState({ loading: false });
-  //       errorMessage("Your Information is invalid")
-  //       // const errors = { ...this.state.errors }
-  //       // errors.username = 'Username or E-mail is invalid ';
-  //       // this.setState({ errors })
-  //     }
-  //   }
-  // };
-
-
   render() {
 
     const { loading } = this.state;
     const { errors, password, redirect } = this.context;
-    // console.log("SignUp Context", this.context);
 
+    
     let progressStyle = "";
-
     if (password.length < 6) progressStyle = "danger";
     if (password.length >= 6) progressStyle = "warning";
     if (password.length >= 10) progressStyle = "success";

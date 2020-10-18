@@ -79,7 +79,7 @@ class Slider extends Component {
   };
 
   componentDidMount() {
-    // LogoutUtil();
+    LogoutUtil();
   }
 
   render() {

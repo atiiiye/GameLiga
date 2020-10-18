@@ -6,15 +6,14 @@ body {
 
 div.card-body#card-form-signup {
   background-image: url("./../images/screen-5.png"), url("./../images/background-signup.png");
-  background-position: right 96%, -10px -15px;
+  background-position: right 100%, -10px -15px;
   background-size: 40% 380px, cover;
   background-clip: content-box;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, repeat-y;
   display: flex;
   justify-content: flex-start;
   border-left: 2px solid #ff9300;
   border-top: 2px solid #ff9300;
-  height: max-content;
   border-bottom: 0;
   border-right: 0;
   border-radius: 0;
@@ -22,6 +21,7 @@ div.card-body#card-form-signup {
   right: -15%;
   padding: 0;
   width: 85%;
+  height: max-content;
 }
 
 div.card-body#card-form-signup div.card-form {
@@ -116,7 +116,6 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group lab
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group label.label-check-box {
   display: flex;
-  flex-direction: column;
   width: 90%;
   font-size: 80%;
 }
@@ -163,7 +162,6 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   bottom: 2rem;
   right: -90%;
   height: 30px;
-  display: flex;
   align-items: center;
   z-index: 100;
 }
@@ -203,7 +201,7 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
   font-size: 80%;
   border-radius: 28px;
   color: #ff9300;
-  width: 50%;
+  width: 55%;
   display: flex;
   justify-content: center;
   padding-left: .5rem;
@@ -219,13 +217,6 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.validation-box button.generate-password:hover {
   background-color: #ff9300;
   color: #ffffff;
-}
-
-div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.form-check-inline {
-  width: 10%;
-  margin-right: 0;
-  justify-content: center;
-  align-items: center;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block {
@@ -267,6 +258,10 @@ div.card-body#card-form-signup div.card-form form.form-signup div.form-group div
 div.card-body#card-form-signup div.card-form form.form-signup div.form-group div.captcha-block div.captcha-generate svg.refresh-captcha:active {
   transform: rotate(270deg);
   transition: all .1s ease;
+}
+
+div.card-body#card-form-signup div.card-form form.form-signup div.form-group span.MuiButtonBase-root.MuiIconButton-root {
+  padding: 0;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register {

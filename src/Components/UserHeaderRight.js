@@ -54,7 +54,7 @@ class UserHeaderRight extends Component {
               >
                 <p className="text-center">
                   {/* {context.username} */}
-                  {isLogin().Username}
+                  {isLogin().decoded.Username}
                 </p>
                 <Profile />
                 <Ticket />

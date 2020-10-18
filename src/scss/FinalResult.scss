@@ -19,7 +19,7 @@ div.container-fluid.FinalResult {
         border-radius: 0;
         position: relative;
         left: 0;
-        height: 100%;
+        height: 100vh;
         padding-left: 0;
         padding-right: 0;
         width: 100%;
@@ -133,14 +133,16 @@ div.container-fluid.FinalResult {
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-around;
+                width: 100%;
+                height: 25%;
 
                 img.red-round {
-                    width: 70%;
-                    height: 65%;
+                    width: 8%;
+                    // height: 65%;
                 }
 
                 div.box {
-                    width: 130px;
+                    width: 18%;
                     height: 40px;
                     margin-bottom: .5rem;
                     margin-top: .5rem;
@@ -153,16 +155,18 @@ div.container-fluid.FinalResult {
 
             div.live-content.section-4 {
                 display: flex;
+                justify-content: center;
                 width: 45%;
                 position: relative;
                 left: -1.5rem;
+                width: 100%;
 
                 div.live {
                     border: 1px solid red;
                     background-color: $color-background-1;
                     border-radius: 2px;
-                    width: 100%;
-                    height: 200px;
+                    width: 50%;
+                    height: 250px;
                 }
 
                 p.text-live {

@@ -42,7 +42,7 @@ class App extends Component {
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
+          <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
 
           <PrivateRoute exact path="/account" component={Account} />
 
