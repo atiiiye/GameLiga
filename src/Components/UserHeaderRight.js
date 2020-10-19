@@ -19,18 +19,20 @@ import { Context } from "./Contexts";
 
 import { isLogin } from "./../utils";
 import { TOKEN_KEY } from "./../utils";
+import jwt from "jsonwebtoken";
 
 class UserHeaderRight extends Component {
   state = {
     isOpen: false,
   };
+
   // componentDidMount(){
   //   let username = isLogin().Username;
   //   console.log(username)
   // }
-  
+
   toggle = () => this.setState(!this.state.isOpen);
-  
+
   render() {
     return (
       <Context.Consumer>

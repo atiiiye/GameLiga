@@ -77,7 +77,7 @@ class UserContextes extends Component {
       const { data, status } = await signup(this.state);
       if (status === 201) {
         successMessage("Create account successfully , Please wait");
-        // LoginUtil(data);
+        LoginUtil(data);
       }
       this.setState({ redirect: true });
       this.setState({ loading: false });

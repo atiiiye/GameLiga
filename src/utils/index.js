@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const TOKEN_KEY = "jwt";
+export let TOKEN_KEY = "jwt";
 
 export const LoginUtil = (data) => {
 
@@ -15,9 +15,7 @@ export const isLogin = () => {
 
   if (localStorage.getItem(TOKEN_KEY)) {
     const decoded = jwt.decode(localStorage.getItem(TOKEN_KEY));
-    console.log(decoded)
+    // console.log({decoded})
     return {decoded};
   }
-
-  // return false;
 };

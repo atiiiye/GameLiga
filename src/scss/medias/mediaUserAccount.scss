@@ -165,7 +165,7 @@
 
                 div.swiper-container.swiper-container-initialized.swiper-container-horizontal {
                     div.swiper-wrapper {
-                        width: 100%;
+                        // width: 100%;
 
                         div.swiper-slide.game.swiper-slide-prev,
                         div.swiper-slide.game.swiper-slide-next,
@@ -176,7 +176,7 @@
                             img.game-image {
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(.83);
-                                opacity: .8;
+                                opacity: .75;
                             }
 
                             div.online {
@@ -193,10 +193,11 @@
                             // width: 45%;
 
                             img.game-image {
-                                // width: 150px;
+                                width: 150px;
                                 margin-bottom: .6rem;
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(1);
+                                opacity: 1;
                             }
 
                             div.online {
@@ -251,7 +252,7 @@
                             img.game-image {
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(.85);
-                                opacity: .8;
+                                opacity: .75;
                             }
 
                             div.online {
@@ -263,17 +264,18 @@
                         }
 
                         div.swiper-slide.game.swiper-slide-active {
-                            width: 40%;
+                            width: 38%;
 
                             img.game-image {
-                                // width: 130px;
+                                width: 130px;
                                 margin-bottom: .6rem;
+                                opacity: 1.0;
                                 -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
                                 transform: scale(1);
                             }
 
                             div.online {
-                                width: 55%;
+                                width: 58%;
                                 font-size: 80%;
                                 position: relative;
                                 bottom: 0;
