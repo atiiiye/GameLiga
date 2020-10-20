@@ -5,7 +5,7 @@ import Home from "./Components/Home";
 import SignUp from "./Components/SignUp";
 import NotFound from "./Components/NotFound";
 import Account from "./Components/Account";
-import FinalResult from "./Components/FinalResult";
+import Tvlive from "./Components/Tvlive";
 import Games from "./Components/Games";
 import Tourny from "./Components/Tourny";
 import Liga from "./Components/Liga";
@@ -15,6 +15,9 @@ import Chat from "./Components/Chat";
 import Tutorial from "./Components/Tutorial";
 import Shop from "./Components/Shop";
 import News from "./Components/News";
+
+
+import HomeAdmin from './Components/AdminComponents/HomeAdmin'
 
 //import Routes
 import PrivateRoute from "./Components/Routes/PrivateRoute ";
@@ -42,11 +45,16 @@ class App extends Component {
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute exact restricted={false} path="/signup" component={SignUp} />
+          <PublicRoute
+            exact
+            restricted={false}
+            path="/signup"
+            component={SignUp}
+          />
 
           <PrivateRoute exact path="/account" component={Account} />
 
-          <PrivateRoute exact path="/tvlive" component={FinalResult} />
+          <PrivateRoute exact path="/tvlive" component={Tvlive} />
 
           <PrivateRoute exact path="/games" component={Games} />
 
@@ -66,10 +74,11 @@ class App extends Component {
 
           <PrivateRoute exact path="/news" component={News} />
 
+          <PrivateRoute exact path="/admin" component={HomeAdmin} />
+
           <PrivateRoute exact path="/404" component={NotFound} />
 
           <PrivateRoute exact path="" component={NotFound} />
-          
         </Switch>
       </UserContextes>
     );

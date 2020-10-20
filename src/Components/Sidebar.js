@@ -12,8 +12,8 @@ class Sidebar extends Component {
     return (
         <div className="sidebar-menu">
           <ul className="list-menu">
-            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/" exact >Home</NavLink></li>
-            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/account">My account</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/account">Home</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/myaccount">My account</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/console">Console</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/games">Games</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/tourny">Tourny</NavLink></li>
@@ -26,8 +26,15 @@ class Sidebar extends Component {
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/help">Help center</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/shop">Shop</NavLink></li>
             <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/chat">Chat</NavLink></li>
-            {/* <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/">Logout</NavLink></li> */}
-
+          {/* {
+            isAdmin
+              ? */}
+              <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/admin" >Admin panel</NavLink></li>
+              {/* :
+              ''
+          } */}
+          
+            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/" exact>Logout</NavLink></li>
           </ul>
         </div>
     );

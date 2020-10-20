@@ -1,0 +1,214 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-fluid.FinalResult {
+  background-image: url("./../images/background-stadium.png"), linear-gradient(0, transparent, rgba(0, 0, 0, 0.7) 100%);
+  background-repeat: no-repeat;
+  background-size: cover, 100%;
+  width: 100%;
+}
+
+div.container-fluid.FinalResult div.card#content {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  border-left: 1px solid #ff9300;
+  border-top: 2px solid #ff9300;
+  border-bottom: 0;
+  border-right: 0;
+  border-radius: 0;
+  position: relative;
+  left: 0;
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content h2.h2.result.section-1 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 5%;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 50%;
+  height: max-content;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo {
+  width: 70px;
+  height: max-content;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo i.user-team-logo {
+  font-size: 70px;
+  color: rgba(149, 154, 162, 0.7);
+  background-color: #1c1c22;
+  border: 1px solid #959aa2;
+  border-radius: 50%;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo div.result-win {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo div.result-win span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.own-logo div.result-win div.color-box {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.football {
+  width: 65%;
+  height: 175px;
+  background-color: #1c1c22;
+  border: 1px solid #000000;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.football img.football-field {
+  width: 100%;
+  height: inherit;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo {
+  width: 70px;
+  height: max-content;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo i.user-team-logo {
+  width: 100%;
+  background-color: #1c1c22;
+  border-radius: 50%;
+  border: 1px solid red;
+  height: 100%;
+  font-size: 70px;
+  color: rgba(149, 154, 162, 0.7);
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo div.result-lose {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo div.result-lose span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-2 div.other-logo div.result-lose div.color-box {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 25%;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 a.refree-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 a.refree-link button.refree-btn {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: rgba(255, 0, 0, 0.75);
+  border: 3px solid rgba(149, 154, 162, 0.9);
+  border-radius: 50%;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 a.refree-link button.refree-btn:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.section-3 div.box {
+  width: 18%;
+  height: 40px;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+  background-color: #1c1c22;
+  border: 1px solid #ff9300;
+  border-radius: 12px;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.live-content.section-4 {
+  display: flex;
+  justify-content: center;
+  width: 45%;
+  position: relative;
+  left: -1.5rem;
+  width: 100%;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.live-content.section-4 div.live {
+  border: 1px solid red;
+  background-color: #1c1c22;
+  border-radius: 2px;
+  width: 50%;
+  height: 250px;
+}
+
+div.container-fluid.FinalResult div.card#content div.parent-content div.live-content.section-4 p.text-live {
+  color: red;
+  font-weight: bold;
+  width: 50px;
+  height: inherit;
+  align-self: flex-end;
+  font-size: 90%;
+}
+
+div.container-fluid.FinalResult div.card#content div.empty-square {
+  width: 14%;
+  height: 25%;
+  border: 1px solid red;
+  background-color: #1c1c22;
+  border-bottom: 0;
+  border-right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/*# sourceMappingURL=Tvlive.css.map */
