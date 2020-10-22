@@ -27,6 +27,7 @@ import { Route, Switch } from "react-router-dom";
 // import packages
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { connect } from "react-redux";
+import { Admin } from "react-admin";
 
 //import contexts
 import UserContextes from "./Components/Contexts/UserContextes";
@@ -74,7 +75,11 @@ class App extends Component {
 
           <PrivateRoute exact path="/news" component={News} />
 
-          <PrivateRoute exact path="/admin" component={HomeAdmin} />
+          {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
+
+            <PrivateRoute exact path="/admin" component={HomeAdmin} />
+            
+          {/* </Admin> */}
 
           <PrivateRoute exact path="/404" component={NotFound} />
 

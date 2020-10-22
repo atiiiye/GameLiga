@@ -8,7 +8,7 @@ export class HomeAdmin extends Component {
     render() {
         return (
           <React.Fragment>
-            <h1 className="h1">welcome to HomeAdmin</h1>
+            <h1 className="h1">welcome to Admin Panel</h1>
           </React.Fragment>
         );
     }

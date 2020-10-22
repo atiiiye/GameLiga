@@ -3,6 +3,10 @@ import config from './../config.json';
 
 
 
+export function addNews() {
+      
+}
+
 export function news() {
     
     // return http.post(config.newsApi, {

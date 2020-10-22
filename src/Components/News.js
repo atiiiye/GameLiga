@@ -29,17 +29,19 @@ class News extends Component {
     event.preventDefault();
     if (this.validateForm(this.state.errors)) {
       console.info("Valid Form");
-      this.serviceNews();
+      this.uploadFile();
     } else {
       console.error("Invalid Form");
     }
   };
 
   uploadFile = (files) => {
-    const formData = new FormData();
-
+    
     files.map((file, index) => {
+      let formData = new FormData();
       formData.append(`file${index}`, file);
+
+      this.serviceNews();
     });
   };
 

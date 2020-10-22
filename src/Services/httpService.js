@@ -4,8 +4,8 @@ import axios from 'axios'
 import { errorMessage, successMessage } from "../utils/messages";
 
 axios.defaults.baseURL = "http://2.186.229.181:7580/api";
-axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 
 // const token = localStorage.getItem("token")
 // if(token) axios.defaults.headers.common["Authorization"] = `Bearer ${token}`
