@@ -8,6 +8,8 @@ import "./../css/mediaSidebar.css"
 import { NavLink } from "react-router-dom";
 
 class Sidebar extends Component {
+
+
   render() {
     return (
         <div className="sidebar-menu">
@@ -34,7 +36,7 @@ class Sidebar extends Component {
               ''
           } */}
           
-            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/" exact>Logout</NavLink></li>
+            <li className="list-item"><NavLink className="nav-link" activeClassName="selected" to="/logout" exact>Logout</NavLink></li>
           </ul>
         </div>
     );

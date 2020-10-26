@@ -35,8 +35,8 @@ class UserHeaderRight extends Component {
 
   render() {
     return (
-      <Context.Consumer>
-        {(context) => (
+      // <Context.Consumer>
+      //   {(context) => (
           <Navbar className="user-header-right" expand="md">
             <div className="hamburger-menu px-0" data-target="#collapse-navbar">
               <NavbarToggler onClick={this.toggle.bind(this)} className="px-0">
@@ -68,8 +68,8 @@ class UserHeaderRight extends Component {
               </Collapse>
             </div>
           </Navbar>
-        )}
-      </Context.Consumer>
+      //   )}
+      // </Context.Consumer>
     );
   }
 }

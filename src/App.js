@@ -15,6 +15,7 @@ import Chat from "./Components/Chat";
 import Tutorial from "./Components/Tutorial";
 import Shop from "./Components/Shop";
 import News from "./Components/News";
+import Logout from "./Components/Logout";
 
 
 import HomeAdmin from './Components/AdminComponents/HomeAdmin'
@@ -45,6 +46,7 @@ class App extends Component {
       <UserContextes>
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
+          <PrivateRoute exact path="/" component={Home} />
 
           <PublicRoute
             exact
@@ -74,6 +76,8 @@ class App extends Component {
           <PrivateRoute exact path="/shop" component={Shop} />
 
           <PrivateRoute exact path="/news" component={News} />
+
+          <PublicRoute exact restricted={false} path="/logout" component={Logout} />
 
           {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
