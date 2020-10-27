@@ -43,7 +43,7 @@ class Login extends Component {
     const { errors, redirect, loading } = this.context;
 
     if (redirect) {
-      return <Redirect to={{ pathname: "/account" }} />;
+      return (<Redirect to={{ pathname: "/account" }} />)
     }
     return (
       <React.Fragment>
@@ -123,14 +123,13 @@ class Login extends Component {
 
               <div className="mt-5 form-button w-75">
                 <Button
-                  className={`btn-block login ${
-                    !errors.username &&
+                  className={`btn-block login ${!errors.username &&
                     !errors.password &&
                     this.context.username &&
                     this.context.password
-                      ? ""
-                      : "disabled"
-                  }`}
+                    ? ""
+                    : "disabled"
+                    }`}
                   id="submit"
                   variant="none"
                   type="submit"

@@ -1,37 +1,34 @@
 import React, { Component } from "react";
 
 //import utils
-import {} from "../utils";
+import { LogoutUtil } from "../utils";
 
 //import routes
 import { Redirect } from "react-router-dom";
-import { Home } from "@material-ui/icons";
+
+//import contexts
+import { Context } from "./Contexts/index";
 
 export class Logout extends Component {
   state = {
     redirect: false,
   };
 
-  logout = () => {
-    console.log("Hi");
-    this.setState({ redirect: true });
-    console.log(this.state.redirect);
-    if (this.state.redirect) {
-      LogoutUtil();
-        // return
-        <Redirect to={{ pathname: "/" }} />;
-    }
+  static contextType = Context;
 
-    this.setState({ redirect: false });
-  };
+  // logout = () => {
+  //   LogoutUtil();
+  // };
 
   render() {
+
     return (
       <React.Fragment>
-        {/* <Home /> */}
-        {console.log("LOGOUT")}
-        {/* {this.logout.bind(this)} */}
+        {/* {console.log(this.context.redirect)} */}
+        {this.context.redirect = ""}
+        {/* {console.log(this.context.redirect)} */}
         <Redirect to={{ pathname: "/" }} />;
+        {LogoutUtil()}
       </React.Fragment>
     );
   }

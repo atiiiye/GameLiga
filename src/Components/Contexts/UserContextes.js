@@ -9,7 +9,7 @@ import { login, signup } from "../../Services/userService";
 //import utils
 import { errorMessage, successMessage } from "../../utils/messages";
 import { LoginUtil } from "./../../utils";
-import { LogoutUtil } from "./../../utils";
+// import { LogoutUtil } from "./../../utils";
 
 class UserContextes extends Component {
   state = {
@@ -75,12 +75,14 @@ class UserContextes extends Component {
     this.setState({ loading: true });
     try {
       const { data, status } = await signup(this.state);
-      if (status === 201) {
+      if (status === 201 || status === 200) {
         successMessage("Create account successfully , Please wait");
         LoginUtil(data);
       }
       this.setState({ redirect: true });
       this.setState({ loading: false });
+      // this.setState({ redirect: false });
+
     } catch (err) {
       if (err.response && err.response.status === 400) {
         this.setState({ loading: false });

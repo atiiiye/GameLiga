@@ -23,7 +23,7 @@ div.container-fluid.News {
         border-radius: 0;
         position: relative;
         left: 0;
-        height: 120%;
+        height: 120vh;
         padding-left: 0;
         padding-right: 0;
         width: 100%;
@@ -168,7 +168,8 @@ div.container-fluid.News {
                                 order: 2;
                                 position: relative;
                                 left: -5%;
-                                g{}
+
+                                g {}
                             }
                         }
                     }

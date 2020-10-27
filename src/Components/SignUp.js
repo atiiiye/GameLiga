@@ -45,7 +45,6 @@ class SignUp extends Component {
   }
 
   // componentDidUpdate() {
-
   //     (e)=>this.context.handleChange(e);
   // }
 
@@ -54,7 +53,7 @@ class SignUp extends Component {
     const { loading } = this.state;
     const { errors, password, redirect } = this.context;
 
-    
+
     let progressStyle = "";
     if (password.length < 6) progressStyle = "danger";
     if (password.length >= 6) progressStyle = "warning";
@@ -62,6 +61,7 @@ class SignUp extends Component {
 
     if (redirect) {
       return <Redirect to={{ pathname: "/account" }} />;
+
     }
     return (
       <React.Fragment>
@@ -377,8 +377,7 @@ class SignUp extends Component {
 
               <Form.Group className="row ml-1">
                 <Button
-                  className={`register col-sm-7 ${
-                    this.context.validateForm(errors) &&
+                  className={`register col-sm-7 ${this.context.validateForm(errors) &&
                     this.context.checkbox &&
                     this.context.username &&
                     this.context.password &&
@@ -387,9 +386,9 @@ class SignUp extends Component {
                     this.context.nickName &&
                     this.context.phone &&
                     this.context.captchaInput
-                      ? ""
-                      : "disabled"
-                  }`}
+                    ? ""
+                    : "disabled"
+                    }`}
                   variant="none"
                   type="submit"
                 >
