@@ -11,7 +11,7 @@ import "./../css/formlogin.css";
 //import image
 import sidan from "./../images/sidan.png";
 import background2 from "./../images/background2.png";
-import CounterStrike from "./../images/CounterStrike.png";
+// import CounterStrike from "./../images/CounterStrike.png";
 
 //import bootstrap
 import Card from "react-bootstrap/Card";
@@ -23,7 +23,6 @@ import "swiper/css/swiper.css";
 import { NavLink } from "react-router-dom";
 
 //import utils
-import { LogoutUtil } from "../utils";
 
 class Slider extends Component {
   state = {

@@ -46,7 +46,6 @@ class App extends Component {
       <UserContextes>
         <Switch>
           <PublicRoute exact restricted={false} path="/" component={Home} />
-          <PrivateRoute exact path="/" component={Home} />
 
           <PublicRoute
             exact
@@ -81,13 +80,17 @@ class App extends Component {
 
           {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
-            <PrivateRoute exact path="/admin" component={HomeAdmin} />
-            
+          <PrivateRoute exact path="/admin" component={HomeAdmin} />
+
           {/* </Admin> */}
 
           <PrivateRoute exact path="/404" component={NotFound} />
 
           <PrivateRoute exact path="" component={NotFound} />
+
+          <PublicRoute exact restricted={false} path="/404" component={NotFound} />
+
+          <PublicRoute exact restricted={false} path="" component={NotFound} />
         </Switch>
       </UserContextes>
     );

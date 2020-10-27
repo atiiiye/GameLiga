@@ -26,12 +26,15 @@ import { Context } from "./Contexts";
 class Login extends Component {
   state = {
     modal: false,
-    type: "text",
+    type: "password",
   };
 
   static contextType = Context;
 
-  toggle = () => this.setState({ modal: !this.state.modal });
+  toggle = () => {
+    this.setState({ modal: !this.state.modal });
+    this.context.resetInputs()
+  };
 
   VisiblePassword = () => {
     this.setState(({ type }) => ({

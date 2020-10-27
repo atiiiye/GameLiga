@@ -29,7 +29,7 @@ import { Context } from "./Contexts/index";
 
 class SignUp extends Component {
   state = {
-    type: "text",
+    type: "password",
   };
 
   static contextType = Context;
@@ -42,17 +42,13 @@ class SignUp extends Component {
 
   componentDidMount() {
     this.context.randomCode(6);
+    this.context.resetInputs();
   }
-
-  // componentDidUpdate() {
-  //     (e)=>this.context.handleChange(e);
-  // }
 
   render() {
 
     const { loading } = this.state;
     const { errors, password, redirect } = this.context;
-
 
     let progressStyle = "";
     if (password.length < 6) progressStyle = "danger";
@@ -61,7 +57,6 @@ class SignUp extends Component {
 
     if (redirect) {
       return <Redirect to={{ pathname: "/account" }} />;
-
     }
     return (
       <React.Fragment>

@@ -151,6 +151,8 @@ class UserContextes extends Component {
       }
       // this.props.dispatch({type:"LOGIN" , payload : data})
       this.setState({ redirect: true });
+      this.setState({ loading: false });
+
       this.resetInputs();
     } catch (err) {
       if (err.response && err.response.status === 400) {
@@ -326,6 +328,29 @@ class UserContextes extends Component {
     this.setState({
       username: "",
       password: "",
+      email: "",
+      firstName: "",
+      lastName: "",
+      nickName: "",
+      confirmPassword: "",
+      phone: "",
+      promotional: "",
+      referred: "",
+      checkbox: false,
+      captchaInput: "",
+      errors: {
+        firstName: "",
+        lastName: "",
+        nickName: "",
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        phone: "",
+        promotional: "",
+        referred: "",
+        captchaInput: "",
+      },
     });
   };
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 //import css
 import "./../css/LeaderBoards.css"
 
@@ -24,7 +23,8 @@ class LeaderBoards extends Component {
   state = {};
 
 
-  render() {;
+  render() {
+    ;
 
     return (
       <React.Fragment>
@@ -147,7 +147,9 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>
@@ -164,7 +166,9 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>
@@ -181,7 +185,9 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>
@@ -198,7 +204,9 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">700</td>
@@ -232,13 +240,15 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>
                               <td className="body-table-content">100p</td>
-                              <td className="body-table-content">0</td>
-                              <td className="body-table-content">0</td>
+                              <td className="body-table-content">43</td>
+                              <td className="body-table-content">12</td>
                             </tr>
                             <tr className="body-table">
                               <td className="body-table-content">
@@ -249,7 +259,9 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>
@@ -266,7 +278,9 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">600</td>
@@ -283,7 +297,9 @@ class LeaderBoards extends Component {
                                     className="image-icon fas fa-user-circle"
                                     id="user"
                                   />
-                                  <div className="user-name">user name</div>
+                                  <div className="user-name">
+                                    {isLogin().decoded.Username}
+                                  </div>
                                 </div>
                               </td>
                               <td className="body-table-content">6570</td>

@@ -10,7 +10,6 @@ import { NavItem, NavLink, Dropdown, DropdownMenu, DropdownToggle, DropdownItem,
 import TelegramIcon from '@material-ui/icons/Telegram';
 
 //import contexts
-import { TelegramContext } from './Contexts'
 
 class Telegram extends Component {
 
