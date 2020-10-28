@@ -5,6 +5,10 @@ import config from './../config.json';
 
 export function login(user) {
 
+    // var cors = require("cors");
+
+    // user.use(cors());
+    
     return http.post(config.loginApi, JSON.stringify({
         Username: user.username,
         Password: user.password

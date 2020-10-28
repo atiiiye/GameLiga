@@ -29,6 +29,7 @@ export class Logout extends Component {
         {/* {console.log(this.context.redirect)} */}
         <Redirect to={{ pathname: "/" }} />;
         {LogoutUtil()}
+        {/* {console.log(this.context)} */}
       </React.Fragment>
     );
   }

@@ -33,7 +33,7 @@ import { Admin } from "react-admin";
 //import contexts
 import UserContextes from "./Components/Contexts/UserContextes";
 
-//import utils
+
 
 class App extends Component {
 
@@ -49,7 +49,7 @@ class App extends Component {
 
           <PublicRoute
             exact
-            restricted={false}
+            restricted={true}
             path="/signup"
             component={SignUp}
           />
@@ -91,6 +91,7 @@ class App extends Component {
           <PublicRoute exact restricted={false} path="/404" component={NotFound} />
 
           <PublicRoute exact restricted={false} path="" component={NotFound} />
+          
         </Switch>
       </UserContextes>
     );
