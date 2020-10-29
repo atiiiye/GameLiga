@@ -47,8 +47,7 @@ class SignUp extends Component {
 
   render() {
 
-    const { loading } = this.state;
-    const { errors, password, redirect } = this.context;
+    const { errors, password, redirect, loading } = this.context;
 
     let progressStyle = "";
     if (password.length < 6) progressStyle = "danger";

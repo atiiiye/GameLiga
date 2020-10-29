@@ -6,6 +6,9 @@ import { Context } from "./index";
 //import services
 import { login, signup } from "../../Services/userService";
 
+//import routes
+import {  Redirect } from "react-router-dom";
+
 //import utils
 import { errorMessage, successMessage } from "../../utils/messages";
 import { LoginUtil } from "./../../utils";
@@ -81,13 +84,16 @@ class UserContextes extends Component {
       }
       this.setState({ redirect: true });
       this.setState({ loading: false });
+      // this.resetInputs();
       // this.setState({ redirect: false });
-
+      
     } catch (err) {
       if (err.response && err.response.status === 400) {
-        this.setState({ loading: false });
         errorMessage("Your Information is invalid");
+        this.setState({ loading: false });
       }
+      this.resetInputs();
+
     }
   };
 
@@ -148,19 +154,22 @@ class UserContextes extends Component {
       if (status === 200) {
         successMessage("You have logged in successfully");
         LoginUtil(data);
+        this.setState({ redirect: true });
+        // if (this.state.redirect) {
+        //   return <Redirect to={{ pathname: "/account" }} />;
+        //   console.log(this.state.redirect)
+        // }
       }
       // this.props.dispatch({type:"LOGIN" , payload : data})
-      this.setState({ redirect: true });
       this.setState({ loading: false });
-
       this.resetInputs();
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Username or Password is invalid");
         this.setState({ loading: false });
-        console.log(this.state.loading)
-        // this.resetInputs()
       }
+      this.resetInputs()
+
     }
   };
 
@@ -338,6 +347,7 @@ class UserContextes extends Component {
       referred: "",
       checkbox: false,
       captchaInput: "",
+      loading:false,
       errors: {
         firstName: "",
         lastName: "",

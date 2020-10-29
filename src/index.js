@@ -6,6 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 // import { Provider } from "react-redux";
 // import { store } from "./Components/stores";
 
+// var cors = require("cors");
+
+// App.use(cors());
 
 ReactDOM.render(
   // <React.StrictMode>

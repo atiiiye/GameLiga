@@ -12,6 +12,7 @@
     "axios": "^0.19.2",
     "cors": "^2.8.5",
     "history": "^5.0.0",
+    "http-proxy-middleware": "^1.0.6",
     "jsonwebtoken": "^8.5.1",
     "react": "^16.13.1",
     "react-admin": "^3.9.4",
@@ -30,11 +31,16 @@
     "redux-thunk": "^2.3.0",
     "swiper": "^5.4.5"
   },
-  "scripts": {
+  "proxy": "http://localhost:3000",
+    "serverUrlMock": "http://localhost:3000",
+  "serverUrlDev": "http://dev.server.domain:3000",
+    "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-mock": "cross-env NODE_ENV = mock && react-scripts start",
+    "start-dev": "cross-env NODE_ENV = dev && react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"

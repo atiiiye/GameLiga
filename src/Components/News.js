@@ -14,13 +14,11 @@ import UserHeader from "./UserHeader";
 import Sidebar from "./Sidebar";
 
 //import bootstrap
-import { Card, Form , Image} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 //import services
 import { news } from "./../Services/newsService";
 
-//import utils
-import { errorMessage, successMessage } from "../utils/messages";
 
 class News extends Component {
   state = {};

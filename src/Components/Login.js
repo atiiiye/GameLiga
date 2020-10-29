@@ -41,6 +41,11 @@ class Login extends Component {
       type: type === "text" ? "password" : "text",
     }));
   };
+  componentDidMount() {
+        // if (this.context.redirect) {
+        //   return <Redirect to={{ pathname: "/account" }} />;
+        // }
+  }
 
   render() {
     const { errors, redirect, loading } = this.context;
