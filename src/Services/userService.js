@@ -6,11 +6,11 @@ export function login(user) {
     // var cors = require("cors");
     // user.use(cors());
 
-//   const headers = {
-//     // "x-apikey": "59a7ad19f5a9fa0808f11931",
-//     "Access-Control-Allow-Origin": "*",
-//     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH",
-//   };
+  const headers = {
+    // "x-apikey": "59a7ad19f5a9fa0808f11931",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH",
+  };
     
     return http.post(
       config.loginApi,
@@ -19,7 +19,7 @@ export function login(user) {
         Password: user.password,
       }),
     //   {mode: "no-cors"},
-      //   { headers }
+    //   { headers }
     );
 }
 

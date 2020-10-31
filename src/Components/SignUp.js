@@ -27,12 +27,97 @@ import Checkbox from "@material-ui/core/Checkbox";
 //import contexts
 import { Context } from "./Contexts/index";
 
+//import utils
+import { LoginUtil } from "../utils";
+import { errorMessage, successMessage } from "../utils/messages";
+
+//import services
+import { signup } from "../Services/userService";
+
+
 class SignUp extends Component {
   state = {
-    type: "password",
+    errors: {
+      firstName: "",
+      lastName: "",
+      nickName: "",
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      phone: "",
+      promotional: "",
+      referred: "",
+      captchaInput: "",
+    },
+    firstName: "",
+    lastName: "",
+    nickName: "",
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phone: "",
+    promotional: "",
+    referred: "",
+    checkbox: false,
+    captcha: "",
+    captchaInput: "",
+    redirect: false,
+    loading: false,
+    type:"password"
   };
 
   static contextType = Context;
+
+  validateForm = (errors) => {
+    let valid = true;
+    Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
+    return valid;
+  };
+
+  handleSubmitSignup = (event) => {
+    event.preventDefault();
+    console.log("handleSubmitSignup");
+    if (
+      this.validateForm(this.state.errors) &&
+      this.state.checkbox &&
+      this.state.username &&
+      this.state.password &&
+      this.state.confirmPassword &&
+      this.state.email &&
+      this.state.nickName &&
+      this.state.phone &&
+      this.state.captchaInput
+    ) {
+      console.info("Valid Form");
+
+      this.postData();
+    } else {
+      console.error("Invalid Form");
+    }
+  };
+
+  postData = async () => {
+    this.setState({ loading: true });
+    try {
+      const { data, status } = await signup(this.state);
+      if (status === 201 || status === 200) {
+        successMessage("Create account successfully , Please wait");
+        LoginUtil(data);
+      }
+      this.setState({ redirect: true });
+      this.setState({ loading: false });
+      // this.resetInputs();
+      // this.setState({ redirect: false });
+    } catch (err) {
+      if (err.response && err.response.status === 400) {
+        errorMessage("Your Information is invalid");
+        this.setState({ loading: false });
+      }
+      this.resetInputs();
+    }
+  };
 
   handleVisiblePassword = () => {
     this.setState(({ type }) => ({
@@ -40,14 +125,204 @@ class SignUp extends Component {
     }));
   };
 
+  handleChange = (event) => {
+    event.preventDefault();
+
+    const { name, value } = event.target;
+    let errors = this.state.errors;
+    const validEmailRegex = RegExp(
+      /^([A-Za-z])(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+    );
+
+    switch (name) {
+      case "username":
+        if (value.length < 6 && value.match(/[a-zA-Z0-9]+$/)) {
+          errors.username = "Username must be 6 characters long!";
+        } else if (value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)) {
+          errors.username = "";
+        } else if (!value.match(/[a-zA-Z]+/) && value.length >= 6) {
+          errors.username = "Username can not be only number";
+        } else if (
+          (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
+          (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
+        ) {
+          errors.username = "please enter correct";
+        } else {
+          errors.username = "";
+        }
+        break;
+      case "email":
+        errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
+        break;
+      case "password":
+        errors.password =
+          value.length < 8
+            ? "Password at least must be 8 characters long!"
+            : "";
+        break;
+      case "confirmPassword":
+        errors.confirmPassword =
+          value != this.state.password ? "Password not match!" : "";
+        break;
+      case "firstName":
+        if (value.length < 6 && value.match(/^[a-zA-Z]+$/)) {
+          errors.firstName = "First Name must be 6 characters long!";
+        } else if (value.match(/^[a-zA-Z]+$/ && value.length > 6)) {
+          errors.firstName = "";
+        } else if (!value.match(/^[a-zA-Z]+$/) && value.length >= 6) {
+          errors.firstName = "please enter only letters";
+        } else if (!value.match(/^[a-zA-Z]+$/) && 1 < value.length < 6) {
+          errors.firstName = "please enter correct";
+        } else {
+          errors.firstName = "";
+        }
+        break;
+      case "lastName":
+        if (value.length < 6 && value.match(/^[a-zA-Z]+$/)) {
+          errors.lastName = "Last Name must be 6 characters long!";
+        } else if (value.match(/^[a-zA-Z]+$/ && value.length > 6)) {
+          errors.lastName = "";
+        } else if (!value.match(/^[a-zA-Z]+$/) && value.length >= 6) {
+          errors.lastName = "please enter only letters";
+        } else if (!value.match(/^[a-zA-Z]+$/) && 1 < value.length < 6) {
+          errors.lastName = "please enter correct";
+        } else {
+          errors.lastName = "";
+        }
+        break;
+      case "nickName":
+        if (value.length < 6 && value.match(/[a-zA-Z0-9]+$/)) {
+          errors.nickName = "Nick name must be 6 characters long!";
+        } else if (value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)) {
+          errors.nickName = "";
+        } else if (!value.match(/[a-zA-Z]+/) && value.length >= 6) {
+          errors.nickName = "Nick name can not be only number";
+        } else if (
+          (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
+          (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
+        ) {
+          errors.nickName = "please enter correct";
+        } else {
+          errors.nickName = "";
+        }
+        break;
+      case "phone":
+        if (value.length < 11 && value.match(/[0-9]+/)) {
+          errors.phone = "Phone must be 11 characters long!";
+        } else if (
+          (value.match(/[a-zA-Z]+/) && value.length <= 11) ||
+          (value.match(/[a-zA-Z]+/) && value.length > 11)
+        ) {
+          errors.phone = "please enter only number";
+        } else {
+          errors.phone = "";
+        }
+        break;
+      case "promotional":
+        if (value.length < 6 && value.match(/[a-zA-Z0-9]+/)) {
+          errors.promotional = "Code at least must be 6 characters!";
+        } else if (
+          (value.match(/[^a-zA-Z0-9]+/) && value.length >= 6) ||
+          (value.match(/[^a-zA-Z0-9]+/) && value.length < 6)
+        ) {
+          errors.promotional = "Code is invalid";
+        } else {
+          errors.promotional = "";
+        }
+        break;
+      case "referred":
+        if (value.length < 6 && value.match(/^[a-zA-Z]+$/)) {
+          errors.referred = "Code must be 6 characters long!";
+        } else if (value.match(/^[a-zA-Z]+$/ && value.length > 6)) {
+          errors.referred = "";
+        } else if (!value.match(/^[a-zA-Z]+$/) && value.length >= 6) {
+          errors.referred = "please enter only letters";
+        } else if (!value.match(/^[a-zA-Z]+$/) && value.length < 6) {
+          errors.referred = "Referred is not valid";
+        } else {
+          errors.referred = "";
+        }
+        break;
+      case "captchaInput":
+        if (value.length != 6 || value != this.state.captcha) {
+          errors.captchaInput = "Code is incorrect!";
+        } else {
+          errors.captchaInput = "";
+        }
+
+        break;
+      default:
+        return this.state;
+    }
+
+    this.setState({ errors, [name]: value });
+  };
+
+  handleChangeBox = (event) => {
+    this.setState({ checkbox: event.target.checked });
+  };
+
+  randomPassword = (length) => {
+    let chars =
+      "abcdefghijklmnopqrstuvwxyz!@#$%&*ABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
+    let pass = "";
+    for (let x = 0; x < length; x++) {
+      let i = Math.floor(Math.random() * chars.length);
+      pass += chars.charAt(i);
+    }
+
+    this.setState({ password: pass, confirmPassword: pass });
+  };
+
+  randomCode = (length) => {
+    let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPSTQRWXYZ1234567890";
+    let code = "";
+    for (let x = 0; x < length; x++) {
+      let i = Math.floor(Math.random() * chars.length);
+      code += chars.charAt(i);
+    }
+
+    this.setState({ captcha: code });
+  };
+
+  resetInputs = () => {
+    this.setState({
+      username: "",
+      password: "",
+      email: "",
+      firstName: "",
+      lastName: "",
+      nickName: "",
+      confirmPassword: "",
+      phone: "",
+      promotional: "",
+      referred: "",
+      checkbox: false,
+      captchaInput: "",
+      loading: false,
+      errors: {
+        firstName: "",
+        lastName: "",
+        nickName: "",
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        phone: "",
+        promotional: "",
+        referred: "",
+        captchaInput: "",
+      },
+    });
+  };
+
   componentDidMount() {
-    this.context.randomCode(6);
-    this.context.resetInputs();
+    this.randomCode(6);
+    this.resetInputs();
   }
 
   render() {
-
-    const { errors, password, redirect, loading } = this.context;
+    const { errors, password, redirect, loading } = this.state;
 
     let progressStyle = "";
     if (password.length < 6) progressStyle = "danger";
@@ -75,7 +350,7 @@ class SignUp extends Component {
             <Form
               id="signupForm"
               className="form-signup"
-              onSubmit={(e) => this.context.handleSubmitSignup(e)}
+              onSubmit={(e) => this.handleSubmitSignup(e)}
             >
               <ToastContainer limit={1} />
 
@@ -92,8 +367,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="User name"
                     name="username"
-                    onChange={(e) => this.context.handleChange(e)}
-                    value={this.context.username}
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.username}
                   />
                   {errors.username.length > 0 && (
                     <span className="error">{errors.username}</span>
@@ -112,8 +387,8 @@ class SignUp extends Component {
                       id="randomPassword"
                       className="form-control-plaintext "
                       placeholder="Password"
-                      onChange={(e) => this.context.handleChange(e)}
-                      value={this.context.password}
+                      onChange={(e) => this.handleChange(e)}
+                      value={this.state.password}
                       name="password"
                     />
                     <i
@@ -135,7 +410,7 @@ class SignUp extends Component {
                   <ProgressBar
                     className="form-control-plaintext"
                     variant={progressStyle}
-                    now={this.context.password.length * 10}
+                    now={this.state.password.length * 10}
                     min={0}
                     max={100}
                     name="progressbar"
@@ -151,7 +426,7 @@ class SignUp extends Component {
                     className="generate-password mt-3"
                     variant="warning"
                     type="button"
-                    onClick={() => this.context.randomPassword(11)}
+                    onClick={() => this.randomPassword(11)}
                   >
                     Generate Password
                   </Button>
@@ -168,8 +443,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="confirm password"
                     name="confirmPassword"
-                    value={this.context.confirmPassword}
-                    onChange={(e) => this.context.handleChange(e)}
+                    value={this.state.confirmPassword}
+                    onChange={(e) => this.handleChange(e)}
                   />
                   {errors.confirmPassword.length > 0 && (
                     <span className="error">{errors.confirmPassword}</span>
@@ -187,8 +462,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="E-mail address"
                     name="email"
-                    value={this.context.email}
-                    onChange={(e) => this.context.handleChange(e)}
+                    value={this.state.email}
+                    onChange={(e) => this.handleChange(e)}
                     noValidate
                   />
                   {errors.email.length > 0 && (
@@ -211,8 +486,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="Nick name"
                     name="nickName"
-                    onChange={(e) => this.context.handleChange(e)}
-                    value={this.context.nickName}
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.nickName}
                     noValidate
                   />
                   {errors.nickName.length > 0 && (
@@ -231,8 +506,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="First name"
                     name="firstName"
-                    onChange={(e) => this.context.handleChange(e)}
-                    value={this.context.firstName}
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.firstName}
                   />
                   {errors.firstName.length > 0 && (
                     <span className="error">{errors.firstName}</span>
@@ -250,8 +525,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="Last name"
                     name="lastName"
-                    onChange={(e) => this.context.handleChange(e)}
-                    value={this.context.lastName}
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.lastName}
                   />
                   {errors.lastName.length > 0 && (
                     <span className="error">{errors.lastName}</span>
@@ -269,8 +544,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="Phone number"
                     name="phone"
-                    onChange={(e) => this.context.handleChange(e)}
-                    value={this.context.phone}
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.phone}
                   />
                   {errors.phone.length > 0 && (
                     <span className="error">{errors.phone}</span>
@@ -288,8 +563,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="Promotional code"
                     name="promotional"
-                    onChange={(e) => this.context.handleChange(e)}
-                    value={this.context.promotional}
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.promotional}
                   />
                   {errors.promotional.length > 0 && (
                     <span className="error">{errors.promotional}</span>
@@ -307,8 +582,8 @@ class SignUp extends Component {
                     className="form-control-plaintext"
                     placeholder="Referred by"
                     name="referred"
-                    onChange={(e) => this.context.handleChange(e)}
-                    value={this.context.referred}
+                    onChange={(e) => this.handleChange(e)}
+                    value={this.state.referred}
                   />
                   {errors.referred.length > 0 && (
                     <span className="error">{errors.referred}</span>
@@ -322,10 +597,10 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="captcha-block col-sm-7">
                   <div className="captcha-generate">
-                    <div className="captcha">{this.context.captcha}</div>
+                    <div className="captcha">{this.state.captcha}</div>
                     <RefreshIcon
                       className="refresh-captcha"
-                      onClick={() => this.context.randomCode(6)}
+                      onClick={() => this.randomCode(6)}
                     />
                   </div>
 
@@ -334,8 +609,8 @@ class SignUp extends Component {
                       type="text"
                       name="captchaInput"
                       className="form-control-plaintext"
-                      onChange={(e) => this.context.handleChange(e)}
-                      value={this.context.captchaInput}
+                      onChange={(e) => this.handleChange(e)}
+                      value={this.state.captchaInput}
                       placeholder="please enter code"
                     />
                     {errors.captchaInput.length > 0 && (
@@ -357,8 +632,8 @@ class SignUp extends Component {
                 /> */}
 
                 <Checkbox
-                  checked={this.context.checkbox}
-                  onChange={(e) => this.context.handleChangeBox(e)}
+                  checked={this.state.checkbox}
+                  onChange={(e) => this.handleChangeBox(e)}
                   style={{ color: "rgba(255, 255, 255 , .88)" }}
                   inputProps={{ "aria-label": "secondary checkbox" }}
                 />
@@ -371,18 +646,19 @@ class SignUp extends Component {
 
               <Form.Group className="row ml-1">
                 <Button
-                  className={`register col-sm-7 ${this.context.validateForm(errors) &&
-                    this.context.checkbox &&
-                    this.context.username &&
-                    this.context.password &&
-                    this.context.confirmPassword &&
-                    this.context.email &&
-                    this.context.nickName &&
-                    this.context.phone &&
-                    this.context.captchaInput
-                    ? ""
-                    : "disabled"
-                    }`}
+                  className={`register col-sm-7 ${
+                    this.validateForm(errors) &&
+                    this.state.checkbox &&
+                    this.state.username &&
+                    this.state.password &&
+                    this.state.confirmPassword &&
+                    this.state.email &&
+                    this.state.nickName &&
+                    this.state.phone &&
+                    this.state.captchaInput
+                      ? ""
+                      : "disabled"
+                  }`}
                   variant="none"
                   type="submit"
                 >

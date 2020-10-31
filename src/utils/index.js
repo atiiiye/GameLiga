@@ -7,14 +7,15 @@ export const LoginUtil = (data) => {
 };
 
 export const LogoutUtil = () => {
-  // localStorage.removeItem(TOKEN_KEY);
-  localStorage.clear();
+  localStorage.removeItem(TOKEN_KEY);
+  // localStorage.clear();
 };
 
 export const isLogin = () => {
   if (localStorage.getItem(TOKEN_KEY)) {
     const decoded = jwt.decode(localStorage.getItem(TOKEN_KEY));
-    // console.log({decoded})
     return { decoded };
   }
 };
+
+

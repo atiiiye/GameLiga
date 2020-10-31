@@ -5,11 +5,11 @@ body {
 }
 
 div.card-body#card-form-signup {
-  background-image: url("./../images/screen-5.png"), url("./../images/background-signup.png");
-  background-position: right 100%, -10px -15px;
+  background-image: url("./../images/screen-5.png"), url("./../images/background-signup1.png");
+  background-position: right 100%, 100%;
   background-size: 40% 380px, cover;
   background-clip: content-box;
-  background-repeat: no-repeat, repeat-y;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;
   border-left: 2px solid #ff9300;

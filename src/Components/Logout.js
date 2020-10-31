@@ -16,20 +16,13 @@ export class Logout extends Component {
 
   static contextType = Context;
 
-  // logout = () => {
-  //   LogoutUtil();
-  // };
-
   render() {
 
     return (
       <React.Fragment>
-        {/* {console.log(this.context.redirect)} */}
-        {this.context.redirect = ""}
-        {/* {console.log(this.context.redirect)} */}
+        {this.state.redirect = ""}
         <Redirect to={{ pathname: "/" }} />;
         {LogoutUtil()}
-        {/* {console.log(this.context)} */}
       </React.Fragment>
     );
   }
