@@ -12,15 +12,15 @@ export function login(user) {
     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH",
   };
     
-    return http.post(
-      config.loginApi,
-      JSON.stringify({
-        Username: user.username,
-        Password: user.password,
-      }),
-    //   {mode: "no-cors"},
-    //   { headers }
-    );
+  return http.post(
+    config.loginApi,
+    JSON.stringify({
+      Username: user.username,
+      Password: user.password,
+    }),
+      // {mode: "no-cors"},
+      // { headers }
+  );
 }
 
 export function signup(user) {

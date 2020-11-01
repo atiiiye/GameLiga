@@ -22,6 +22,11 @@ import { login } from "../Services/userService";
 //import packages
 
 export default class Header extends Component {
+
+  componentWillUnmount() {
+    
+  }
+
   render() {
     // console.log(this.props.history)
     return (

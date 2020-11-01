@@ -31,9 +31,7 @@
     "redux-thunk": "^2.3.0",
     "swiper": "^5.4.5"
   },
-  "proxy": {
-    "*": "http://localhost:3000"
-  },
+  "proxy": "http://localhost:3000/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
