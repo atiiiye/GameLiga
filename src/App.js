@@ -91,7 +91,7 @@ class App extends Component {
           <PublicRoute exact restricted={false} path="/404" component={NotFound} />
 
           <PublicRoute exact restricted={false} path="" component={NotFound} />
-          
+
         </Switch>
       </UserContextes>
     );

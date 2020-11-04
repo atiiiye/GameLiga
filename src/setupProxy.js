@@ -1,18 +1,34 @@
-const proxy = require("http-proxy-middleware");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 const PORT = process.env.PORT || 3000;
 const express = require("express");
 const path = require("path");
 
 
 module.exports = function (app) {
-    app.use(
-      "http://2.186.229.181:7580/api/",
-      createProxyMiddleware({
-        target: "/Account/Login",
-        changeOrigin: true,
-      })
-    );
+  // app.use(
+  //   "http://2.186.229.181:7580/api/",
+  //   createProxyMiddleware({
+  //     target: "/Account/Login",
+  //     changeOrigin: true,
+  //   })
+  // );
   // };
+
+  // app.use(
+  //   'http://2.186.229.181:7580/api/Account/Login',
+  //   createProxyMiddleware({
+  //     target: 'http://localhost:3000',
+  //     changeOrigin: true,
+  //   })
+  // );
+
+  // app.use(
+  //   'http://2.186.229.181:7580/api/Account/CreateAccount',
+  //   createProxyMiddleware({
+  //     target: 'http://localhost:3000',
+  //     changeOrigin: true,
+  //   })
+  // );
 
   // app.use(express.static(__dirname));
   // app.use(

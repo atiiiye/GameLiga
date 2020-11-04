@@ -23,6 +23,7 @@ import "swiper/css/swiper.css";
 import { NavLink } from "react-router-dom";
 
 //import utils
+import { LogoutUtil } from "../utils";
 
 class Slider extends Component {
   state = {
@@ -78,7 +79,7 @@ class Slider extends Component {
   };
 
   componentDidMount() {
-    // LogoutUtil();
+    LogoutUtil();
   }
 
   render() {
