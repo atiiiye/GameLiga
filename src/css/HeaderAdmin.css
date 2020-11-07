@@ -1,0 +1,207 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-scroller {
+  display: flex;
+  position: relative;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar {
+  width: 20%;
+  padding: 0;
+  min-height: calc(100vh - 70px);
+  z-index: 11;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper {
+  width: 20%;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  background-color: #1c1c22;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.logo-link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.logo-link:focus {
+  outline: none;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.logo-link img.logo {
+  width: 50px;
+  height: 45px;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.title-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
+  margin-left: .5rem;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.title-link:focus {
+  outline: none;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.title-link div.empty-content {
+  display: flex;
+  width: 90px !important;
+  color: #36363b;
+  height: 2rem;
+  background-color: #36363b;
+  position: relative;
+  left: -25px;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.title-link h4.UFOGame {
+  color: #ff9300;
+  font-weight: 600;
+  z-index: 10;
+  width: auto;
+  margin-bottom: 0;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.title-link h4.UFOGame span {
+  color: #fff;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  margin-bottom: 60px;
+  padding-top: 70px;
+  width: 100%;
+  background-color: rgba(54, 54, 59, 0.4);
+  position: relative;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.nav-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.nav-category span.nav-link {
+  font-weight: bold;
+  font-size: 120%;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items:active > div.nav-link > svg.MuiSvgIcon-root {
+  transition: .3s transform ease-in-out;
+  transform: rotate(-90deg);
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items:hover {
+  background-color: #1c1c22;
+  border-bottom-right-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link {
+  width: 100%;
+  font-size: 100%;
+  color: #959aa2;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link:focus {
+  outline: none;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link span.menu-icon {
+  margin-right: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link span.menu-icon i {
+  font-size: 22px;
+  border: 1px solid #1c1c22;
+  border-radius: 50%;
+  background-color: #1c1c22;
+  padding: .6rem;
+  color: #fc8928;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link span.menu-icon svg.settings {
+  fill: #FC8928;
+  padding: .6rem;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link span.menu-title {
+  font-size: 95%;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link svg.MuiSvgIcon-root {
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: .5rem;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse {
+  z-index: 999;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(54, 54, 59, 0.4);
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu li.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #959aa2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 90%;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu li.nav-item:hover {
+  background-color: #1c1c22;
+  border-bottom-right-radius: 28px;
+  border-top-right-radius: 28px;
+}
+/*# sourceMappingURL=HeaderAdmin.css.map */
