@@ -18,7 +18,9 @@ import News from "./Components/News";
 import Logout from "./Components/Logout";
 
 
-import AdminPanel from './Components/AdminComponents/AdminPanel'
+import AdminPanel from './Components/AdminComponents/AdminPanel';
+import AddNews from './Components/AdminComponents/AddNews';
+
 
 //import Routes
 import PrivateRoute from "./Components/Routes/PrivateRoute ";
@@ -81,6 +83,8 @@ class App extends Component {
           {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
           <PrivateRoute exact path="/admin" component={AdminPanel} />
+
+          <PrivateRoute exact path="/add-news" component={AddNews} />
 
           {/* </Admin> */}
 

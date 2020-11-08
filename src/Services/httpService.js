@@ -18,7 +18,6 @@ axios.defaults.headers.common["Access-Control-Allow-Methods"] = "HEAD, GET, POST
 
 // axios.defaults.headers.common["X-Auth "] = TOKEN_KEY;
 
-console.log(axios.defaults.headers.common);
 
 axios.interceptors.response.use(null, (error) => {
   const expectedError =

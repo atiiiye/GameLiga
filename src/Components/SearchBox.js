@@ -10,6 +10,10 @@ import { Form } from "react-bootstrap";
 class SearchBox extends Component {
     state = {}
 
+    onChange = () => {
+
+    }
+
     render() {
         const { value, onChange } = this.props;
         return (
@@ -19,7 +23,7 @@ class SearchBox extends Component {
                 type="text"
                 name="query"
                 value={value}
-                onChange={e => onChange(e.target.value)}
+                onChange={(e) => this.onChange(e.target.value)}
             >
             </Form.Control>
         );

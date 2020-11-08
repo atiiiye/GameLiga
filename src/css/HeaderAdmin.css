@@ -39,7 +39,7 @@ div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.logo-link img.logo {
-  width: 50px;
+  width: 45px;
   height: 45px;
 }
 
@@ -57,7 +57,7 @@ div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar div.sidebar-brand-wrapper a.title-link div.empty-content {
   display: flex;
-  width: 90px !important;
+  width: 100px;
   color: #36363b;
   height: 2rem;
   background-color: #36363b;
@@ -88,6 +88,7 @@ div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav {
   width: 100%;
   background-color: rgba(54, 54, 59, 0.4);
   position: relative;
+  min-height: 100%;
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.nav-category {
@@ -104,24 +105,18 @@ div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.na
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-right: .5rem;
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items:active > div.nav-link > svg.MuiSvgIcon-root {
   transition: .3s transform ease-in-out;
-  transform: rotate(-90deg);
-}
-
-div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items:hover {
-  background-color: #1c1c22;
-  border-bottom-right-radius: 28px;
-  border-top-right-radius: 28px;
+  transform: rotate(-180deg);
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link {
@@ -131,7 +126,13 @@ div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.na
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0;
+  padding: 0 1rem;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link:hover {
+  background-color: #1c1c22;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.nav-link:focus {
@@ -170,11 +171,66 @@ div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.na
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse {
-  z-index: 999;
+  width: 95%;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse ul.nav.sub-menu {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse ul.nav.sub-menu li.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse ul.nav.sub-menu li.nav-item a.nav-link {
+  font-size: 90%;
+  color: #959aa2;
+  padding: 0;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse ul.nav.sub-menu li.nav-item a.nav-link:focus {
+  outline: none;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapsing {
+  width: 95%;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapsing ul.nav.sub-menu {
+  background-color: transparent;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapsing ul.nav.sub-menu li.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapsing ul.nav.sub-menu li.nav-item a.nav-link {
+  font-size: 90%;
+  color: #959aa2;
+  padding: 0;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapsing ul.nav.sub-menu li.nav-item a.nav-link:focus {
+  outline: none;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapsing ul.nav.sub-menu li.nav-item a.nav-link:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
   width: 100%;
 }
@@ -184,24 +240,104 @@ div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.na
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background-color: rgba(54, 54, 59, 0.4);
+  padding-top: 0;
+  background-color: transparent;
 }
 
 div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu li.nav-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: #959aa2;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 90%;
 }
 
-div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu li.nav-item:hover {
-  background-color: #1c1c22;
-  border-bottom-right-radius: 28px;
-  border-top-right-radius: 28px;
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu li.nav-item a.nav-link {
+  color: #959aa2;
+  font-size: 90%;
+  padding: 0;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:focus {
+  outline: none;
+}
+
+div.container-scroller nav.sidebar.sidebar-offcanvas.navbar#sidebar ul.nav li.nav-item.menu-items div.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper {
+  min-height: calc(100vh - 70px);
+  width: calc(100% - 244px);
+  transition: width .25s ease, margin .25s ease;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav {
+  background-color: rgba(54, 54, 59, 0.4);
+  left: 19.55%;
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler {
+  background-color: transparent;
+  padding: 0;
+  order: 1;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:focus, div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:active, div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:hover {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler svg.hamburger-menu {
+  font-size: 2.5rem;
+  fill: #959aa2;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-box {
+  background-color: transparent;
+  margin-left: .5rem;
+  width: 80%;
+  border-radius: 3px;
+  left: 0;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right p.text-center {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  width: max-content;
+  margin-bottom: 0;
+  margin-right: .5rem;
+}
+
+div.container-scroller div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right i#user {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 40px;
+  margin-right: 1rem;
+  order: 1;
 }
 /*# sourceMappingURL=HeaderAdmin.css.map */

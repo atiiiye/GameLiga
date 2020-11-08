@@ -34,7 +34,7 @@ div.container-scroller {
                 }
 
                 img.logo {
-                    width: 50px;
+                    width: 45px;
                     height: 45px;
                 }
             }
@@ -52,7 +52,7 @@ div.container-scroller {
 
                 div.empty-content {
                     display: flex;
-                    width: 90px !important;
+                    width: 100px;
                     color: $color-gray-1;
                     height: 2rem;
                     background-color: rgba($color: $color-gray-1, $alpha: 1.0);
@@ -85,6 +85,7 @@ div.container-scroller {
             width: 100%;
             background-color: rgba($color: $color-gray-1, $alpha: .4);
             position: relative;
+            min-height: 100%;
 
             li.nav-item.nav-category {
                 display: flex;
@@ -101,23 +102,17 @@ div.container-scroller {
 
             li.nav-item.menu-items {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
                 width: 100%;
                 margin-top: 1rem;
                 margin-bottom: 1rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
+                margin-right: .5rem;
 
                 &:active>div.nav-link>svg.MuiSvgIcon-root {
                     transition: .3s transform ease-in-out;
-                    transform: rotate(-90deg);
-                }
-
-                &:hover {
-                    background-color: rgba($color: $color-background-1, $alpha: 1.0);
-                    border-bottom-right-radius: 28px;
-                    border-top-right-radius: 28px;
+                    transform: rotate(-180deg);
                 }
 
                 div.nav-link {
@@ -127,7 +122,14 @@ div.container-scroller {
                     display: flex;
                     align-items: center;
                     text-decoration: none;
-                    padding: 0;
+                    padding: 0 1rem;
+
+
+                    &:hover {
+                        background-color: rgba($color: $color-background-1, $alpha: 1.0);
+                        border-bottom-right-radius: 30px;
+                        border-top-right-radius: 30px;
+                    }
 
                     &:focus {
                         outline: none;
@@ -167,15 +169,67 @@ div.container-scroller {
                 }
 
                 div.collapse {
-                    z-index: 999;
+                    width: 95%;
 
                     ul.nav.sub-menu {
-                        li.nav-item {}
+                        background-color: transparent;
+                        margin-bottom: 0;
+
+                        li.nav-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+
+                            a.nav-link {
+                                font-size: 90%;
+                                color: rgba($color: $color-gray-2, $alpha: 1.0);
+                                padding: 0;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.collapsing {
+                    width: 95%;
+
+                    ul.nav.sub-menu {
+                        background-color: transparent;
+
+                        li.nav-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+
+                            a.nav-link {
+                                font-size: 90%;
+                                color: rgba($color: $color-gray-2, $alpha: 1.0);
+                                padding: 0;
+
+                                &:focus {
+                                    outline: none;
+                                }
+
+
+                                &:hover {
+                                    color: rgba($color: #fff, $alpha: .75);
+                                }
+                            }
+                        }
                     }
                 }
 
                 div.collapse.show {
                     display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
                     flex-direction: column;
                     width: 100%;
                     // position: static;
@@ -185,29 +239,115 @@ div.container-scroller {
                         flex-direction: column;
                         align-items: center;
                         overflow: hidden;
-                        // width: 100%;
-                        background-color: rgba($color: $color-gray-1, $alpha: .4);
+                        padding-top: 0;
+                        background-color: transparent;
 
                         li.nav-item {
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
-                            // width: 100%;
-                            color: rgba($color: $color-gray-2, $alpha: 1.0);
                             margin-top: 1rem;
                             margin-bottom: 1rem;
-                            padding-left: 1rem;
-                            padding-right: 1rem;
-                            font-size: 90%;
 
-                            &:hover {
-                                background-color: rgba($color: $color-background-1, $alpha: 1.0);
-                                border-bottom-right-radius: 28px;
-                                border-top-right-radius: 28px;
+                            a.nav-link {
+                                color: rgba($color: $color-gray-2, $alpha: 1.0);
+                                font-size: 90%;
+                                padding: 0;
+
+                                &:focus {
+                                    outline: none;
+                                }
+
+
+                                &:hover {
+                                    color: rgba($color: #fff, $alpha: .75);
+                                }
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    div.container-fluid.page-body-wrapper {
+        min-height: calc(100vh - 70px);
+        width: calc(100% - 244px);
+        transition: width .25s ease, margin .25s ease;
+
+        nav.main-nav {
+            background-color: rgba($color: $color-gray-1, $alpha: .4);
+            left: 19.55%;
+            display: flex;
+            justify-content: flex-end;
+            height: 70px;
+
+            div.navbar-menu-wrapper {
+                display: flex;
+                // flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                div.navbar-menu-wrapper-left {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40%;
+
+                    button.navbar-toggler {
+                        background-color: transparent;
+                        padding: 0;
+                        order: 1;
+
+                        &:focus,
+                        &:active,
+                        &:hover {
+                            box-shadow: none;
+                            outline: none;
+                            border: none;
+                        }
+
+                        svg.hamburger-menu {
+                            font-size: 2.5rem;
+                            fill: rgba($color: $color-gray-2, $alpha: 1.0);
+                        }
+                    }
+
+                    input.search-box {
+                        background-color: transparent;
+                        margin-left: .5rem;
+                        width: 80%;
+                        border-radius: 3px;
+                        left: 0;
+                        // height: 1.8rem;
+                    }
+
+                }
+
+                div.navbar-menu-wrapper-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // height: 50px;
+                    width: max-content;
+
+                    p.text-center {
+                        color: rgba($color: #fff, $alpha: .75);
+                        font-weight: 500;
+                        width: max-content;
+                        margin-bottom: 0;
+                        margin-right: .5rem;
+                    }
+
+                    i#user {
+                        color: rgba($color: #fff, $alpha: .75);
+                        font-size: 40px;
+                        margin-right: 1rem;
+                        order: 1;
+                    }
+                }
+
             }
         }
     }

@@ -1,34 +1,33 @@
 import React, { Component } from 'react'
 
 //import css
-import './../../css/HeaderAdmin.css'
+import './../../css/HeaderAdmin.css';
+import './../../css/AdminSidebar.css';
+
 
 //import images
 import Logo from './../../images/logo5.png';
 
 //import boostrap
-import { Navbar, NavbarToggler, Collapse } from "reactstrap";
+import { Navbar, UncontrolledCollapse, Button } from "reactstrap";
 
 //import routes
 import { NavLink } from "react-router-dom";
 
 //import icons
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import SettingsIcon from '@material-ui/icons/Settings';
+import MenuIcon from '@material-ui/icons/Menu';
+
+//import components
+import SearchBox from './../SearchBox';
 
 class HeaderAdmin extends Component {
-
-    state = {
-        isOpen: false
-    }
-
-    toggle = () => this.setState({ isOpen: !this.state.isOpen });
-
 
     render() {
         return (
             <React.Fragment>
                 <div className="container-scroller">
+                    {/* <UncontrolledCollapse toggler="#sidebar" > */}
                     <Navbar
                         className="sidebar sidebar-offcanvas p-0"
                         expand="lg"
@@ -42,91 +41,114 @@ class HeaderAdmin extends Component {
                                 <h4 className="UFOGame">
                                     UFO<span>Game</span>
                                 </h4>
-                                <div className="empty-content"></div>
+                                {/* <div className="empty-content"></div> */}
                             </NavLink>
                         </div>
-
                         <ul className="nav">
                             <li className="nav-item nav-category">
                                 <span className="nav-link">Admin Panel</span>
                             </li>
-                            <li className="nav-item menu-items">
+                            <li className="nav-item menu-items" id="toggler1">
                                 <div className="nav-link" to="/admin">
                                     <span className="menu-icon">
-                                        <i class="fas fa-users-cog"></i>
+                                        <i className="fas fa-users-cog"></i>
                                     </span>
                                     <span className="menu-title">Users</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <Collapse isOpen={this.state.isOpen}>
-                                    <ul className="nav sub-menu"></ul>
-                                </Collapse>
+                                <UncontrolledCollapse toggler="#toggler1">
+                                    <ul className="nav sub-menu">
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">List Users</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Add User</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Delete User</NavLink></li>
+                                    </ul>
+                                </UncontrolledCollapse>
                             </li>
-                            <li className="nav-item menu-items">
+                            <li className="nav-item menu-items" id="toggler2">
                                 <div className="nav-link">
                                     <span className="menu-icon">
-                                        <i class="far fa-newspaper"></i>
+                                        <i className="far fa-newspaper"></i>
                                     </span>
                                     <span className="menu-title">News</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <Collapse isOpen={this.state.isOpen}>
-                                    <ul className="nav sub-menu"></ul>
-                                </Collapse>
+                                <UncontrolledCollapse toggler="#toggler2">
+                                    <ul className="nav sub-menu">
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">All News</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/add-news">Add News</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Edit News</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Delete News</NavLink></li>
+                                    </ul>
+                                </UncontrolledCollapse>
                             </li>
-                            <li className="nav-item menu-items">
+                            <li className="nav-item menu-items" id="toggler3">
                                 <div className="nav-link">
                                     <span className="menu-icon">
-                                        <i class="fas fa-edit"></i>
+                                        <i className="fas fa-edit"></i>
                                     </span>
                                     <span className="menu-title">Rules and Conditon</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <Collapse isOpen={this.state.isOpen}>
-                                    <ul className="nav sub-menu"></ul>
-                                </Collapse>
+                                <UncontrolledCollapse toggler="#toggler3">
+                                    <ul className="nav sub-menu">
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Rules</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Edit Rules</NavLink></li>
+                                    </ul>
+                                </UncontrolledCollapse>
                             </li>
-                            <li className="nav-item menu-items" onClick={() => this.toggle()}>
+                            <li className="nav-item menu-items" id="toggler4">
                                 <div className="nav-link">
                                     <span className="menu-icon">
-                                        <i class="fas fa-gamepad"></i>
+                                        <i className="fas fa-gamepad"></i>
                                     </span>
                                     <span className="menu-title">Games</span>
                                     <ExpandMoreIcon />
                                 </div>
+                                <UncontrolledCollapse toggler="#toggler4" >
+                                    <ul className="nav sub-menu">
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">List Games</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Add Games</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Delete Games</NavLink></li>
+                                    </ul>
+                                </UncontrolledCollapse>
                             </li>
-                            <li className="nav-item menu-items" onClick={() => this.toggle()}>
+                            <li className="nav-item menu-items" id="toggler5">
                                 <div className="nav-link">
                                     <span className="menu-icon">
-                                        <i class="material-icons">&#xe8b8;</i>
+                                        <i className="material-icons">&#xe8b8;</i>
                                     </span>
                                     <span className="menu-title">Setting</span>
                                     <ExpandMoreIcon />
-
                                 </div>
-                                <Collapse isOpen={this.state.isOpen}>
+                                <UncontrolledCollapse toggler="#toggler5" >
                                     <ul className="nav sub-menu">
-                                        <li className="nav-item">List Games</li>
-                                        <li className="nav-item">Add Games</li>
-                                        <li className="nav-item">Delete Games</li>
+                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Edie profile</NavLink></li>
                                     </ul>
-                                </Collapse>
+                                </UncontrolledCollapse>
                             </li>
                         </ul>
-
-                        {/* <div className="navbar-right"></div>
-                        <div className="navbar-left">
-                            <div className="hamburger-menu px-0" data-target="#coll-navbar">
-                                <NavbarToggler aria-controls="collapse" className="px-0">
-                                    <span className="menu navbar-toggler-icon">
-                                        <div className="menu-line menu-line-1"></div>
-                                        <div className="menu-line menu-line-2"></div>
-                                        <div className="menu-line menu-line-3"></div>
-                                    </span>
-                                </NavbarToggler>
-                            </div>
-                       </div> */}
                     </Navbar>
+
+                    {/* </UncontrolledCollapse> */}
+                    <div className="container-fluid page-body-wrapper">
+                        <Navbar className="fixed-top main-nav">
+                            <div className="navbar-menu-wrapper">
+                                <div className="navbar-menu-wrapper-right">
+                                    <i className="image-icon fas fa-user-circle" id="user" />
+                                    <p className="text-center">Admin User</p>
+
+                                </div>
+                                <div className="navbar-menu-wrapper-left">
+                                    <Button className="navbar-toggler" type="button">
+
+                                        <MenuIcon className="hamburger-menu" id="sidebar" />
+                                    </Button>
+                                    <SearchBox />
+                                </div>
+                            </div>
+                        </Navbar>
+
+                    </div>
                 </div>
             </React.Fragment>
         );

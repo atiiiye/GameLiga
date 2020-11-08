@@ -15,7 +15,6 @@ input.search-box {
   color: #959aa2;
   padding-left: 5px;
   position: relative;
-  left: -10px;
 }
 
 input.search-box:focus {

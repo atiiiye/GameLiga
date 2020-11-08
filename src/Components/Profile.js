@@ -22,7 +22,7 @@ class Profile extends Component {
             <React.Fragment>
                 <NavItem className="nav-item-icon" id="user" >
                     <NavLink to="/account" onClick={this.toggle.bind(this)} id="profile">
-                        <i className="image-icon fas fa-user-circle" id="user"></i>
+                        <i className="image-icon fas fa-user-circle" id="user" />
                     </NavLink>
                 </NavItem>
             </React.Fragment>
