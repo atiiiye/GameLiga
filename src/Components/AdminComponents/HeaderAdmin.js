@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 //import css
 import './../../css/HeaderAdmin.css';
+import './../../css/mediaHeaderAdmin.css';
 import './../../css/AdminSidebar.css';
-
 
 //import images
 import Logo from './../../images/logo5.png';
 
 //import boostrap
-import { Navbar, UncontrolledCollapse, Button } from "reactstrap";
+import { Navbar, UncontrolledCollapse, Button, Collapse } from "reactstrap";
 
 //import routes
 import { NavLink } from "react-router-dom";
@@ -22,16 +22,32 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchBox from './../SearchBox';
 
 class HeaderAdmin extends Component {
+    state = {
+        isOpen: false,
+    };
+
+    // componentDidUpdate() {
+    //     const listItems = document.querySelectorAll('li.nav-item.menu-items');
+    //     // console.log(listItems)
+    //     listItems.forEach(listItem => listItem.addEventListener('click', () => {
+    //         console.log(listItem.children.children)
+
+    //     }))
+    // }
+
+    toggle = () => this.setState({ isOpen: !this.state.isOpen });
 
     render() {
         return (
             <React.Fragment>
                 <div className="container-scroller">
-                    {/* <UncontrolledCollapse toggler="#sidebar" > */}
-                    <Navbar
-                        className="sidebar sidebar-offcanvas p-0"
+                    <Collapse
+                        toggler="#sidebar"
+                        className="sidebar navbar sidebar-offcanvas p-0 "
                         expand="lg"
-                        id="sidebar"
+                        isOpen={this.state.isOpen}
+
+                    // id="sidebar"
                     >
                         <div className="sidebar-brand-wrapper fixed-top">
                             <NavLink className="logo-link" to="/admin">
@@ -56,7 +72,7 @@ class HeaderAdmin extends Component {
                                     <span className="menu-title">Users</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <UncontrolledCollapse toggler="#toggler1">
+                                <UncontrolledCollapse toggler="#toggler1" className="sub-collapse">
                                     <ul className="nav sub-menu">
                                         <li className="nav-item"><NavLink className="nav-link" to="/admin">List Users</NavLink></li>
                                         <li className="nav-item"><NavLink className="nav-link" to="/admin">Add User</NavLink></li>
@@ -72,7 +88,7 @@ class HeaderAdmin extends Component {
                                     <span className="menu-title">News</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <UncontrolledCollapse toggler="#toggler2">
+                                <UncontrolledCollapse toggler="#toggler2" className="sub-collapse">
                                     <ul className="nav sub-menu">
                                         <li className="nav-item"><NavLink className="nav-link" to="/admin">All News</NavLink></li>
                                         <li className="nav-item"><NavLink className="nav-link" to="/add-news">Add News</NavLink></li>
@@ -89,7 +105,7 @@ class HeaderAdmin extends Component {
                                     <span className="menu-title">Rules and Conditon</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <UncontrolledCollapse toggler="#toggler3">
+                                <UncontrolledCollapse toggler="#toggler3" className="sub-collapse">
                                     <ul className="nav sub-menu">
                                         <li className="nav-item"><NavLink className="nav-link" to="/admin">Rules</NavLink></li>
                                         <li className="nav-item"><NavLink className="nav-link" to="/admin">Edit Rules</NavLink></li>
@@ -104,7 +120,7 @@ class HeaderAdmin extends Component {
                                     <span className="menu-title">Games</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <UncontrolledCollapse toggler="#toggler4" >
+                                <UncontrolledCollapse toggler="#toggler4" className="sub-collapse">
                                     <ul className="nav sub-menu">
                                         <li className="nav-item"><NavLink className="nav-link" to="/admin">List Games</NavLink></li>
                                         <li className="nav-item"><NavLink className="nav-link" to="/admin">Add Games</NavLink></li>
@@ -120,16 +136,17 @@ class HeaderAdmin extends Component {
                                     <span className="menu-title">Setting</span>
                                     <ExpandMoreIcon />
                                 </div>
-                                <UncontrolledCollapse toggler="#toggler5" >
+                                <UncontrolledCollapse toggler="#toggler5" className="sub-collapse">
                                     <ul className="nav sub-menu">
-                                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Edie profile</NavLink></li>
+                                        <li className="nav-item">
+                                            <NavLink className="nav-link" to="/admin">Edie profile</NavLink>
+                                        </li>
                                     </ul>
                                 </UncontrolledCollapse>
                             </li>
                         </ul>
-                    </Navbar>
+                    </Collapse>
 
-                    {/* </UncontrolledCollapse> */}
                     <div className="container-fluid page-body-wrapper">
                         <Navbar className="fixed-top main-nav">
                             <div className="navbar-menu-wrapper">
@@ -141,13 +158,12 @@ class HeaderAdmin extends Component {
                                 <div className="navbar-menu-wrapper-left">
                                     <Button className="navbar-toggler" type="button">
 
-                                        <MenuIcon className="hamburger-menu" id="sidebar" />
+                                        <MenuIcon className="hamburger-menu" id="sidebar" onClick={() => this.toggle()} />
                                     </Button>
                                     <SearchBox />
                                 </div>
                             </div>
                         </Navbar>
-
                     </div>
                 </div>
             </React.Fragment>

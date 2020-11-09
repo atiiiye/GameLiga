@@ -7,8 +7,11 @@ export class AddNews extends Component {
     render() {
         return (
             <React.Fragment>
-                <HeaderAdmin />
-                <div className="">Hello</div>
+                <div className="d-flex">
+                    <HeaderAdmin />
+                    {/* <div className=" btn btn-primary">Hi</div> */}
+
+                </div>
             </React.Fragment>
         )
     }
