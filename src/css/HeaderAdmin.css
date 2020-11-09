@@ -7,6 +7,7 @@ body {
 div.container-scroller {
   display: flex;
   position: relative;
+  transition: .2s all;
 }
 
 div.container-scroller div.container-fluid.page-body-wrapper {
