@@ -4,8 +4,8 @@
     div.container-scroller {
 
         div.sidebar.sidebar-offcanvas.navbar {
-            min-height: calc(100vh - 60px);
-            position: fixed;
+            min-height: calc(100vh);
+            // position: fixed;
             transition: transform .5s linear;
         }
 
@@ -119,6 +119,11 @@
                         transform: rotate(-180deg);
                     }
 
+                    &:hover>div.nav-link>span.menu-title {
+                        color: rgba($color: #fff, $alpha: .75);
+
+                    }
+
                     div.nav-link {
                         width: 100%;
                         font-size: 100%;
@@ -174,6 +179,7 @@
 
                     div.sub-collapse {
                         transition: transform .3 linear;
+                        height: max-content;
                         // min-height: calc(100vh - 60px);
                         // position: fixed;
                     }
@@ -181,7 +187,7 @@
                     div.sub-collapse.collapse {
                         width: 95%;
                         height: 0;
-                        transform: translate(0, 100%);
+                        // transform: translate(0, 100%);
 
                         ul.nav.sub-menu {
                             background-color: transparent;
@@ -211,7 +217,9 @@
 
                     div.sub-collapse.collapsing {
                         width: 95%;
-                        transform: translate(0, 100%);
+                        // transform: translate(0, 100%);
+                        height: max-content;
+
 
                         ul.nav.sub-menu {
                             background-color: transparent;
@@ -247,7 +255,9 @@
                         justify-content: flex-start;
                         flex-direction: column;
                         width: 100%;
-                        transform: translate(0, 0);
+                        // transform: translate(0, 0);
+                        height: max-content;
+
 
                         // position: static;
 
@@ -455,7 +465,6 @@
 
                     div.sub-collapse.collapse {
                         width: 95%;
-                        height: 0;
 
                         ul.nav.sub-menu {
                             background-color: transparent;
@@ -485,6 +494,8 @@
 
                     div.sub-collapse.collapsing {
                         width: 95%;
+                        height: max-content;
+
 
                         ul.nav.sub-menu {
                             background-color: transparent;
@@ -520,6 +531,7 @@
                         justify-content: flex-start;
                         flex-direction: column;
                         width: 100%;
+                        height: max-content;
                         // position: static;
 
                         ul.nav.sub-menu {
@@ -756,6 +768,7 @@
 
                     div.sub-collapse.collapsing {
                         width: 95%;
+                        height: max-content;
 
                         ul.nav.sub-menu {
                             background-color: transparent;
@@ -791,6 +804,7 @@
                         justify-content: flex-start;
                         flex-direction: column;
                         width: 100%;
+                        height: max-content;
                         // position: static;
 
                         ul.nav.sub-menu {

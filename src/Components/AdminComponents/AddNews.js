@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 
 //import components
-import HeaderAdmin from './HeaderAdmin'
+import AdminHeader from './AdminHeader'
 
 export class AddNews extends Component {
     render() {
         return (
             <React.Fragment>
                 <div className="d-flex">
-                    <HeaderAdmin />
+                    <AdminHeader />
                     {/* <div className=" btn btn-primary">Hi</div> */}
 
                 </div>

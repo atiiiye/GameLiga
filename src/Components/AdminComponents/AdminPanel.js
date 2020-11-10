@@ -4,14 +4,14 @@ import React, { Component } from 'react';
 import "./../../css/AdminPanel.css";
 
 //import components
-import HeaderAdmin from './HeaderAdmin';
+import AdminHeader from './AdminHeader';
 
 
 export class AdminPanel extends Component {
   render() {
     return (
       <React.Fragment>
-        <HeaderAdmin />
+        <AdminHeader />
       </React.Fragment>
     );
   }
