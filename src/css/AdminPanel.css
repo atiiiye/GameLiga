@@ -4,7 +4,11 @@ body {
   background-color: #1c1c22;
 }
 
-h1.h1 {
-  color: ivory;
+div.container-scroller {
+  display: flex;
+  position: relative;
+  transition: .2s all;
+  align-items: flex-start;
+  justify-content: start;
 }
 /*# sourceMappingURL=AdminPanel.css.map */
