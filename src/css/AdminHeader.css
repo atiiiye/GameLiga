@@ -4,20 +4,7 @@ body {
   background-color: #1c1c22;
 }
 
-div.container-fluid.page-body-wrapper {
-  min-height: calc(100vh - 70px);
-  width: calc(100% - 20%);
-  transition: width .65s ease, margin .65s ease, position .65s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin: 0;
-  position: fixed;
-  right: 0;
-}
-
-div.container-fluid.page-body-wrapper nav.main-nav {
+nav.main-nav {
   background-color: rgba(54, 54, 59, 0.4);
   left: 20%;
   display: flex;
@@ -29,38 +16,38 @@ div.container-fluid.page-body-wrapper nav.main-nav {
   left: 0;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper {
+nav.main-nav div.navbar-menu-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler {
   background-color: transparent;
   padding: 0;
   order: 1;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:focus, div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:active, div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:hover, div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:enabled {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:focus, nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:active, nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:hover, nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler:enabled {
   box-shadow: none;
   outline: none;
   border: none;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler svg.hamburger-menu {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler svg.hamburger-menu {
   font-size: 2.5rem;
   fill: #959aa2;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-box {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-box {
   background-color: transparent;
   margin-left: .5rem;
   width: 80%;
@@ -68,14 +55,14 @@ div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.n
   left: 0;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right {
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right p.text-center {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right p.text-center {
   color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
   width: max-content;
@@ -83,7 +70,7 @@ div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.n
   margin-right: .5rem;
 }
 
-div.container-fluid.page-body-wrapper nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right i#user {
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right i#user {
   color: rgba(255, 255, 255, 0.75);
   font-size: 40px;
   margin-right: 1rem;

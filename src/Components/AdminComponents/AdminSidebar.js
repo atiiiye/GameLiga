@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 //import images
-import Logo from './../../images/logo5.png';
+import Logo from "./../../images/logo5.png";
 
 //import css
-import './../../css/AdminSidebar.css'
+import "./../../css/AdminSidebar.css";
 
 //import routes
 import { NavLink } from "react-router-dom";
@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 import { Navbar, UncontrolledCollapse, Button, Collapse } from "reactstrap";
 
 //import icons
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 //import context
 import { Context } from "./../Contexts";
@@ -24,11 +24,10 @@ export class AdminSidebar extends Component {
     status: "Closed",
   };
 
-
   static contextType = Context;
 
-    render() {
-        console.log(this.context)
+  render() {
+    // console.log(this.context);
     return (
       <React.Fragment>
         <Collapse
@@ -65,29 +64,23 @@ export class AdminSidebar extends Component {
                 <span className="menu-title">Users</span>
                 <ExpandMoreIcon />
               </div>
+              </li>
               <UncontrolledCollapse
                 toggler="#toggler1"
                 className="sub-collapse"
               >
                 <ul className="nav sub-menu">
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      List Users
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Add User
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Delete User
-                    </NavLink>
-                  </li>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">List Users</li>
+                  </NavLink>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">Add User</li>
+                  </NavLink>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">Delete User</li>
+                  </NavLink>
                 </ul>
               </UncontrolledCollapse>
-            </li>
             <li className="nav-item menu-items" id="toggler2">
               <div className="nav-link">
                 <span className="menu-icon">
@@ -96,34 +89,27 @@ export class AdminSidebar extends Component {
                 <span className="menu-title">News</span>
                 <ExpandMoreIcon />
               </div>
-              <UncontrolledCollapse
-                toggler="#toggler2"
-                className="sub-collapse"
-              >
-                <ul className="nav sub-menu">
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      All News
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/add-news">
-                      Add News
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Edit News
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Delete News
-                    </NavLink>
-                  </li>
-                </ul>
-              </UncontrolledCollapse>
             </li>
+            <UncontrolledCollapse
+              toggler="#toggler2"
+              className="sub-collapse"
+              in={false}
+            >
+              <ul className="nav sub-menu">
+                <NavLink className="nav-link" to="/all-news">
+                  <li className="nav-item">All News</li>
+                </NavLink>
+                <NavLink className="nav-link" to="/add-news">
+                  <li className="nav-item">Add News</li>
+                </NavLink>
+                <NavLink className="nav-link" to="/edit=news">
+                  <li className="nav-item">Edit News</li>
+                </NavLink>
+                <NavLink className="nav-link" to="/delete-news">
+                  <li className="nav-item">Delete News</li>
+                </NavLink>
+              </ul>
+            </UncontrolledCollapse>
             <li className="nav-item menu-items" id="toggler3">
               <div className="nav-link">
                 <span className="menu-icon">
@@ -132,24 +118,20 @@ export class AdminSidebar extends Component {
                 <span className="menu-title">Rules and Conditon</span>
                 <ExpandMoreIcon />
               </div>
+              </li>
               <UncontrolledCollapse
                 toggler="#toggler3"
                 className="sub-collapse"
               >
                 <ul className="nav sub-menu">
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Rules
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Edit Rules
-                    </NavLink>
-                  </li>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">Rules</li>
+                  </NavLink>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">Edit Rules</li>
+                  </NavLink>
                 </ul>
               </UncontrolledCollapse>
-            </li>
             <li className="nav-item menu-items" id="toggler4">
               <div className="nav-link">
                 <span className="menu-icon">
@@ -158,29 +140,23 @@ export class AdminSidebar extends Component {
                 <span className="menu-title">Games</span>
                 <ExpandMoreIcon />
               </div>
+              </li>
               <UncontrolledCollapse
                 toggler="#toggler4"
                 className="sub-collapse"
               >
                 <ul className="nav sub-menu">
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      List Games
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Add Games
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Delete Games
-                    </NavLink>
-                  </li>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">List Games</li>
+                  </NavLink>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">Add Games</li>
+                  </NavLink>
+                  <NavLink className="nav-link" to="/admin">
+                    <li className="nav-item">Delete Games</li>
+                  </NavLink>
                 </ul>
               </UncontrolledCollapse>
-            </li>
             <li className="nav-item menu-items" id="toggler5">
               <div className="nav-link">
                 <span className="menu-icon">
@@ -189,19 +165,17 @@ export class AdminSidebar extends Component {
                 <span className="menu-title">Setting</span>
                 <ExpandMoreIcon />
               </div>
+              </li>
               <UncontrolledCollapse
                 toggler="#toggler5"
                 className="sub-collapse"
               >
                 <ul className="nav sub-menu">
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/admin">
-                      Edie profile
-                    </NavLink>
-                  </li>
+                  <NavLink className="nav-link" to="">
+                    <li className="nav-item">Edie profile</li>
+                  </NavLink>
                 </ul>
               </UncontrolledCollapse>
-            </li>
           </ul>
         </Collapse>
       </React.Fragment>
@@ -209,4 +183,4 @@ export class AdminSidebar extends Component {
   }
 }
 
-export default AdminSidebar
+export default AdminSidebar;

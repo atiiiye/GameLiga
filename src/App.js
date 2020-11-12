@@ -42,77 +42,58 @@ class App extends Component {
   render() {
     return (
       <UserContextes>
-        <AdminContextes>
-          <Switch>
-            <PublicRoute exact restricted={false} path="/" component={Home} />
+        <Switch>
+          <PublicRoute exact restricted={false} path="/" component={Home} />
 
-            <PublicRoute
-              exact
-              restricted={true}
-              path="/signup"
-              component={SignUp}
-            />
+          <PublicRoute
+            exact
+            restricted={true}
+            path="/signup"
+            component={SignUp}
+          />
 
-            <PrivateRoute exact path="/account" component={Account} />
+          <PrivateRoute exact path="/account" component={Account} />
 
-            <PrivateRoute exact path="/tvlive" component={Tvlive} />
+          <PrivateRoute exact path="/tvlive" component={Tvlive} />
 
-            <PrivateRoute exact path="/games" component={Games} />
+          <PrivateRoute exact path="/games" component={Games} />
 
-            <PrivateRoute exact path="/tourny" component={Tourny} />
+          <PrivateRoute exact path="/tourny" component={Tourny} />
 
-            <PrivateRoute exact path="/tutorial" component={Tutorial} />
+          <PrivateRoute exact path="/tutorial" component={Tutorial} />
 
-            <PrivateRoute
-              exact
-              path="/leader-boards"
-              component={LeaderBoards}
-            />
+          <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
 
-            <PrivateRoute exact path="/console" component={Console} />
+          <PrivateRoute exact path="/console" component={Console} />
 
-            <PrivateRoute exact path="/liga" component={Liga} />
+          <PrivateRoute exact path="/liga" component={Liga} />
 
-            <PrivateRoute exact path="/chat" component={Chat} />
+          <PrivateRoute exact path="/chat" component={Chat} />
 
-            <PrivateRoute exact path="/shop" component={Shop} />
+          <PrivateRoute exact path="/shop" component={Shop} />
 
-            <PrivateRoute exact path="/news" component={News} />
+          <PrivateRoute exact path="/news" component={News} />
 
-            <PublicRoute
-              exact
-              restricted={false}
-              path="/logout"
-              component={Logout}
-            />
+          <PublicRoute exact restricted={false} path="/logout" component={Logout} />
 
+          <AdminContextes>
             {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
             <PrivateRoute exact path="/admin" component={AdminPanel} />
 
-            <PrivateRoute exact path="/add-news" component={AddNews} />
+            <Route path="/add-news" component={AddNews} />
 
             {/* </Admin> */}
+          </AdminContextes>
 
-            <PrivateRoute exact path="/404" component={NotFound} />
+          <PrivateRoute exact path="/404" component={NotFound} />
 
-            <PrivateRoute exact path="" component={NotFound} />
+          <PrivateRoute exact path="" component={NotFound} />
 
-            <PublicRoute
-              exact
-              restricted={false}
-              path="/404"
-              component={NotFound}
-            />
+          <PublicRoute exact restricted={false} path="/404" component={NotFound} />
 
-            <PublicRoute
-              exact
-              restricted={false}
-              path=""
-              component={NotFound}
-            />
-          </Switch>
-        </AdminContextes>
+          <PublicRoute exact restricted={false} path="" component={NotFound} />
+        </Switch>
       </UserContextes>
     );
   }

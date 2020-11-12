@@ -6,7 +6,9 @@ body {
 
 div.sidebar.sidebar-offcanvas.navbar {
   min-height: calc(100vh);
+  height: 100% !important;
   transition: transform .45s linear;
+  background-color: rgba(54, 54, 59, 0.4);
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapse.show {
@@ -85,9 +87,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav {
   align-items: center;
   overflow: hidden;
   flex-wrap: nowrap;
-  margin-bottom: 60px;
   width: 100%;
-  background-color: rgba(54, 54, 59, 0.4);
   position: relative;
   min-height: 100%;
 }
@@ -112,7 +112,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: .5rem;
+  margin-right: 0;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items:active > div.nav-link > svg.MuiSvgIcon-root {
@@ -175,71 +175,98 @@ div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items
   margin-right: .5rem;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse {
   transition: transform .3 linear;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse {
-  width: 95%;
-  height: 0;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse ul.nav.sub-menu {
   background-color: transparent;
   margin-bottom: 0;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  font-size: 90%;
+  color: #ff9300;
+  padding: 0;
+  width: 80%;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse ul.nav.sub-menu a.nav-link:focus {
+  outline: none;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse ul.nav.sub-menu a.nav-link li.nav-item {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: left;
   width: 50%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item a.nav-link {
-  font-size: 90%;
-  color: #959aa2;
-  padding: 0;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item a.nav-link:focus {
-  outline: none;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapsing {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse {
   width: 95%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse ul.nav.sub-menu {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90%;
+  color: #ff9300;
+  padding: 0;
+  width: 80%;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link:focus {
+  outline: none;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link li.nav-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 50%;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapsing {
+  width: 95%;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapsing ul.nav.sub-menu {
   background-color: transparent;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  font-size: 90%;
+  color: #ff9300;
+  padding: 0;
+  width: 80%;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link:focus {
+  outline: none;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link li.nav-item {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link {
-  font-size: 90%;
-  color: #959aa2;
-  padding: 0;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link:focus {
-  outline: none;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse.show {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -247,7 +274,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items
   width: 100%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,26 +283,28 @@ div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items
   background-color: transparent;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link {
-  color: #959aa2;
+  justify-content: center;
+  color: #ff9300;
   font-size: 90%;
   padding: 0;
+  width: 80%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:focus {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link:focus {
   outline: none;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:hover {
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link:hover {
   color: rgba(255, 255, 255, 0.75);
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link li.nav-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapsing {
@@ -353,9 +382,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav {
   align-items: center;
   overflow: hidden;
   flex-wrap: nowrap;
-  margin-bottom: 60px;
   width: 100%;
-  background-color: rgba(54, 54, 59, 0.4);
   position: relative;
   min-height: 100%;
 }
@@ -380,7 +407,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items {
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: .5rem;
+  margin-right: 0;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items:active > div.nav-link > svg.MuiSvgIcon-root {
@@ -439,67 +466,67 @@ div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items di
   margin-right: .5rem;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse {
   width: 95%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse ul.nav.sub-menu {
   background-color: transparent;
   margin-bottom: 0;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  font-size: 90%;
+  color: #ff9300;
+  padding: 0;
+  width: 80%;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link:focus {
+  outline: none;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link li.nav-item {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: left;
   width: 50%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item a.nav-link {
-  font-size: 90%;
-  color: #959aa2;
-  padding: 0;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item a.nav-link:focus {
-  outline: none;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapsing {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapsing {
   width: 95%;
   height: max-content;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapsing ul.nav.sub-menu {
   background-color: transparent;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link {
+  justify-content: center;
   font-size: 90%;
-  color: #959aa2;
+  color: #ff9300;
   padding: 0;
+  width: 80%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link:focus {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link:focus {
   outline: none;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link li.nav-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 50%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse.show {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -508,7 +535,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items di
   height: max-content;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -517,26 +544,25 @@ div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items di
   background-color: transparent;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link {
-  color: #959aa2;
+  justify-content: center;
   font-size: 90%;
+  color: #ff9300;
   padding: 0;
+  width: 80%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:focus {
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link:focus {
   outline: none;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
+div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link li.nav-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 50%;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapse {
@@ -614,9 +640,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav {
   align-items: center;
   overflow: hidden;
   flex-wrap: nowrap;
-  margin-bottom: 60px;
   width: 100%;
-  background-color: rgba(54, 54, 59, 0.4);
   position: relative;
   min-height: 100%;
 }
@@ -641,7 +665,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items {
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: .5rem;
+  margin-right: 0;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items:active > div.nav-link > svg.MuiSvgIcon-root {
@@ -700,68 +724,68 @@ div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.
   margin-right: .5rem;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse {
   width: 95%;
   height: 0;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse ul.nav.sub-menu {
   background-color: transparent;
   margin-bottom: 0;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  font-size: 90%;
+  color: #ff9300;
+  padding: 0;
+  width: 80%;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link:focus {
+  outline: none;
+}
+
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse ul.nav.sub-menu a.nav-link li.nav-item {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: left;
   width: 50%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item a.nav-link {
-  font-size: 90%;
-  color: #959aa2;
-  padding: 0;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse ul.nav.sub-menu li.nav-item a.nav-link:focus {
-  outline: none;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapsing {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapsing {
   width: 95%;
   height: max-content;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapsing ul.nav.sub-menu {
   background-color: transparent;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link {
+  justify-content: center;
   font-size: 90%;
-  color: #959aa2;
+  color: #ff9300;
   padding: 0;
+  width: 80%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link:focus {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link:focus {
   outline: none;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapsing ul.nav.sub-menu li.nav-item a.nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapsing ul.nav.sub-menu a.nav-link li.nav-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 50%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse.show {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -770,7 +794,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.
   height: max-content;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -779,25 +803,24 @@ div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.
   background-color: transparent;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link {
-  color: #959aa2;
+  justify-content: center;
   font-size: 90%;
+  color: #ff9300;
   padding: 0;
+  width: 80%;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:focus {
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link:focus {
   outline: none;
 }
 
-div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.sub-collapse.collapse.show ul.nav.sub-menu li.nav-item a.nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
+div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav div.sub-collapse.collapse.show ul.nav.sub-menu a.nav-link li.nav-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 50%;
 }
 /*# sourceMappingURL=AdminSidebar.css.map */
