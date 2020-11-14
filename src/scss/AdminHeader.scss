@@ -1,81 +1,85 @@
 @import './base';
 
 
-    nav.main-nav {
-        background-color: rgba($color: $color-gray-1, $alpha: .4);
-        left: 20%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        height: 70px;
-        width: 100%;
-        position: relative;
-        left: 0;
+nav.main-nav {
+    background-color: rgba($color: $color-gray-1, $alpha: .4);
+    left: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    left: 0;
 
-        div.navbar-menu-wrapper {
+    div.navbar-menu-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        div.navbar-menu-wrapper-left {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            width: 100%;
+            justify-content: center;
+            width: 40%;
 
-            div.navbar-menu-wrapper-left {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 40%;
+            button.navbar-toggler {
+                background-color: transparent;
+                padding: 0;
+                order: 1;
 
-                button.navbar-toggler {
-                    background-color: transparent;
-                    padding: 0;
-                    order: 1;
-
-                    &:focus,
-                    &:active,
-                    &:hover,
-                    &:enabled {
-                        box-shadow: none;
-                        outline: none;
-                        border: none;
-                    }
-
-                    svg.hamburger-menu {
-                        font-size: 2.5rem;
-                        fill: rgba($color: $color-gray-2, $alpha: 1.0);
-                    }
+                &:focus,
+                &:active,
+                &:hover,
+                &:enabled {
+                    box-shadow: none;
+                    outline: none;
+                    border: none;
                 }
 
-                input.search-box {
-                    background-color: transparent;
-                    margin-left: .5rem;
-                    width: 80%;
-                    border-radius: 3px;
-                    left: 0;
-                    // height: 1.8rem;
+                svg.hamburger-menu {
+                    font-size: 2.5rem;
+                    fill: rgba($color: $color-light, $alpha: .85);
                 }
-
             }
 
-            div.navbar-menu-wrapper-right {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                // height: 50px;
+            input.search-box {
+                background-color: transparent;
+                margin-left: .5rem;
+                width: 80%;
+                border-radius: 3px;
+                left: 0;
+                // height: 1.8rem;
+
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+
+        }
+
+        div.navbar-menu-wrapper-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // height: 50px;
+            width: max-content;
+
+            p.text-center {
+                color: rgba($color: $color-light, $alpha: .85);
+                font-weight: 500;
                 width: max-content;
+                margin-bottom: 0;
+                margin-right: .5rem;
+            }
 
-                p.text-center {
-                    color: rgba($color: #fff, $alpha: .75);
-                    font-weight: 500;
-                    width: max-content;
-                    margin-bottom: 0;
-                    margin-right: .5rem;
-                }
-
-                i#user {
-                    color: rgba($color: #fff, $alpha: .75);
-                    font-size: 40px;
-                    margin-right: 1rem;
-                    order: 1;
-                }
+            i#user {
+                color: rgba($color: $color-light, $alpha: .85);
+                font-size: 40px;
+                margin-right: 1rem;
+                margin-left: .5rem;
             }
         }
     }
+}

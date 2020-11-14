@@ -44,7 +44,7 @@ nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler svg.hamburger-menu {
   font-size: 2.5rem;
-  fill: #959aa2;
+  fill: rgba(255, 255, 255, 0.85);
 }
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-box {
@@ -55,6 +55,10 @@ nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-b
   left: 0;
 }
 
+nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-box:focus {
+  box-shadow: none;
+}
+
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right {
   display: flex;
   align-items: center;
@@ -63,7 +67,7 @@ nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right {
 }
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right p.text-center {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   width: max-content;
   margin-bottom: 0;
@@ -71,9 +75,9 @@ nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right p.text-center
 }
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right i#user {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 40px;
   margin-right: 1rem;
-  order: 1;
+  margin-left: .5rem;
 }
 /*# sourceMappingURL=AdminHeader.css.map */

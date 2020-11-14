@@ -71,20 +71,18 @@ class Login extends Component {
 
     switch (name) {
       case "username":
-        if (value.length < 6 && value.match(/[a-zA-Z0-9]+$/)) {
-          errors.username = "Username must be 6 characters long!";
-        } else if (value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)) {
-          errors.username = "";
-        } else if (!value.match(/[a-zA-Z]+/) && value.length >= 6) {
-          errors.username = "Username can not be only number";
-        } else if (
-          (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
-          (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
-        ) {
-          errors.username = "please enter correct";
-        } else {
-          errors.username = "";
-        }
+        errors.username =
+          value.length < 6 && value.match(/[a-zA-Z0-9]+$/)
+            ? "Username must be 6 characters long!"
+            : value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)
+            ? ""
+            : !value.match(/[a-zA-Z]+/) && value.length >= 6
+            ? "Username can not be only number"
+            : (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
+              (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
+            ? "please enter correct"
+            : "";
+
         break;
       case "password":
         errors.password =
@@ -135,8 +133,6 @@ class Login extends Component {
         this.setState({ redirect: true });
       }
       // this.props.dispatch({type:"LOGIN" , payload : data})
-      this.setState({ loading: false });
-      this.resetInputs();
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Username or Password is invalid");

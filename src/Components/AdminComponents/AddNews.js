@@ -13,8 +13,10 @@ import "./../../css/AddNews.css";
 import { Form, FormGroup, Label, Input, FormText, Button } from "reactstrap";
 
 //import utils
-import "./../../utils/messages";
 import { errorMessage, successMessage } from "./../../utils/messages";
+
+//import services
+import { addNews } from "../../Services/newsService";
 
 export class AddNews extends Component {
   state = {
@@ -44,7 +46,7 @@ export class AddNews extends Component {
       this.state.file
     ) {
       console.info("Valid Form");
-      this.resetInputs();
+      this.newsAdd();
       successMessage("One news added");
     } else {
       console.error("Invalid Form");
@@ -54,32 +56,62 @@ export class AddNews extends Component {
 
   handleChangeAddNews = (event) => {
     event.preventDefault();
-    console.log("Hi");
 
     const { name, value } = event.target;
+    // this.state.file = event.target.files[0];
 
     let errors = this.state.errors;
+
     switch (name) {
       case "title":
-        if (value.length == 0) {
-          errors.title = "this field can not be empty";
-          console.log("title");
-        } else errors.title = "";
+        errors.title =
+          value.length == 0
+            ? "this field can not be empty"
+            : value.length < 10
+            ? "title must be 10 character at least"
+            : "";
         break;
       case "description":
-        if (value.length == 0)
-          errors.description = "this field can not be empty";
-        else errors.description = "";
+        errors.description =
+          value.length == 0
+            ? "this field can not be empty"
+            : value.length < 20
+            ? "title must be 20 character at least"
+            : "";
         break;
       case "file":
-        if (!value) errors.file = "this field can not be empty";
-        else errors.file = "";
+        errors.file = !value ? "this field can not be empty" : "";
         break;
       default:
         return this.state;
     }
 
-    this.setState({ errors, [name]: value });
+    this.setState({
+      errors,
+      [name]: value,
+      // file: event.target.files[0],
+    });
+  };
+
+  newsAdd = async () => {
+    this.setState({ loading: true });
+    try {
+      const { data, status } = await addNews(this.state);
+      console.log(status)
+      // if (status === 200) {
+      //   console.log("Succesfully :)");
+      // }
+      // this.setState({ loading: false });
+      // this.resetInputs();
+    } catch (error) {
+      if (error.response && error.response.status === 400) {
+        this.setState({ loading: false });
+      } else if (error.response && error.response.status === 404) {
+        this.setState({ loading: false });
+        errorMessage("not found error , try again");
+      }
+      // this.resetInputs();
+    }
   };
 
   resetInputs = () => {
@@ -97,7 +129,6 @@ export class AddNews extends Component {
 
   render() {
     const { errors, loading } = this.state;
-    console.log(this.state);
     return (
       <div style={{ display: "flex" }}>
         <div className="container-fluid page-body-wrapper">
@@ -109,6 +140,7 @@ export class AddNews extends Component {
             <Form
               className="add-news-form"
               onSubmit={(e) => this.handleSubmit(e)}
+              noValidate
             >
               <FormGroup>
                 <Label className="form-label" for="title">
@@ -123,6 +155,7 @@ export class AddNews extends Component {
                   value={this.state.title}
                   onChange={(e) => this.handleChangeAddNews(e)}
                   placeholder="Enter title of news"
+                  noValidate
                 />
                 {errors.title.length > 0 && (
                   <span className="form-validate">{errors.title}</span>
@@ -131,7 +164,7 @@ export class AddNews extends Component {
 
               <FormGroup>
                 <Label className="form-label" for="description">
-                  News text :
+                  Description :
                 </Label>
                 <Input
                   className="form-input"
@@ -142,6 +175,7 @@ export class AddNews extends Component {
                   value={this.state.description}
                   onChange={(e) => this.handleChangeAddNews(e)}
                   placeholder="Enter description of news"
+                  noValidate
                 />
                 {errors.description.length > 0 && (
                   <span className="form-validate">{errors.description}</span>
@@ -159,19 +193,17 @@ export class AddNews extends Component {
                   id="file"
                   value={this.state.file}
                   onChange={(e) => this.handleChangeAddNews(e)}
+                  noValidate
                 />
                 {errors.file.length > 0 && (
-                  <span className="form-validate">{errors.flie}</span>
+                  <span className="form-validate">{errors.file}</span>
                 )}
                 <FormText color="muted" className="description-file">
                   This is some placeholder block-level help text for the above
                   input. It's a bit lighter and easily wraps to a new line.
                 </FormText>
               </FormGroup>
-              <Button
-                className="button-add-news"
-                type="submit"
-              >
+              <Button className="button-add-news" type="submit">
                 Add news
               </Button>
             </Form>
