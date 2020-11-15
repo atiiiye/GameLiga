@@ -13,30 +13,19 @@ class AdminContextes extends Component {
 
   onEntering = () => {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
-    let sidebar = document.querySelector(".sidebar-offcanvas");
-    let nav = document.querySelector(" nav.main-nav");
     pageBodyWrapper.style.width = "80%";
-    // sidebar.style.width = "20%";
 
     console.log("Opening...");
   };
 
   onEntered = () => {
-    // if (e.target == this) {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
-    let sidebar = document.querySelector(".sidebar-offcanvas");
-    let nav = document.querySelector(" nav.main-nav");
     pageBodyWrapper.style.width = "80%";
-    // sidebar.style.width = "20%";
-
     console.log("Opened...");
-    // }
   };
 
   onExiting = () => {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
-    let sidebar = document.querySelector(".sidebar-offcanvas");
-    let nav = document.querySelector(" nav.main-nav");
     pageBodyWrapper.style.width = "100%";
 
     console.log("Closing...");
@@ -44,8 +33,6 @@ class AdminContextes extends Component {
 
   onExited = () => {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
-    let sidebar = document.querySelector(".sidebar-offcanvas");
-    let nav = document.querySelector(" nav.main-nav");
     pageBodyWrapper.style.width = "100%";
 
     console.log("Closed...");

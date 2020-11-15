@@ -22,7 +22,7 @@ export class AddNews extends Component {
   state = {
     title: "",
     description: "",
-    file: "",
+    file: null,
     loading: false,
     errors: {
       title: "",
@@ -58,8 +58,6 @@ export class AddNews extends Component {
     event.preventDefault();
 
     const { name, value } = event.target;
-    // this.state.file = event.target.files[0];
-
     let errors = this.state.errors;
 
     switch (name) {
@@ -67,17 +65,17 @@ export class AddNews extends Component {
         errors.title =
           value.length == 0
             ? "this field can not be empty"
-            : value.length < 10
-            ? "title must be 10 character at least"
-            : "";
+            : value.length < 1
+              ? "title must be 1 character at least"
+              : "";
         break;
       case "description":
         errors.description =
           value.length == 0
             ? "this field can not be empty"
-            : value.length < 20
-            ? "title must be 20 character at least"
-            : "";
+            : value.length < 1
+              ? "title must be 1 character at least"
+              : "";
         break;
       case "file":
         errors.file = !value ? "this field can not be empty" : "";
@@ -86,33 +84,49 @@ export class AddNews extends Component {
         return this.state;
     }
 
-    this.setState({
-      errors,
-      [name]: value,
-      // file: event.target.files[0],
-    });
+    this.setState({ errors, [name]: value });
   };
 
   newsAdd = async () => {
     this.setState({ loading: true });
     try {
+      // const formData = new FormData(addNews)
+      // console.log("object")
+      // formData.append('file', this.state.file)
+      // console.log(formData)
+
       const { data, status } = await addNews(this.state);
       console.log(status)
-      // if (status === 200) {
-      //   console.log("Succesfully :)");
-      // }
-      // this.setState({ loading: false });
-      // this.resetInputs();
+      if (status === 200) {
+        console.log("Succesfully :)");
+      }
+      this.setState({ loading: false });
+      this.resetInputs();
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        this.setState({ loading: false });
+        errorMessage("not found error , try again");
+
       } else if (error.response && error.response.status === 404) {
-        this.setState({ loading: false });
         errorMessage("not found error , try again");
       }
+      this.setState({ loading: false });
       // this.resetInputs();
     }
   };
+
+  handleChangeFile = (event) => {
+    event.preventDefault()
+    this.setState({ file: event.target.files[0] })
+  }
+
+  onClickHandler = () => {
+    // const fData = new FormData(document.getElementById("addNews"))
+    // fData.append("file", this.state.file)
+    // console.log('file', this.state.file)
+
+    // console.log("FormData : ", fData)
+
+  }
 
   resetInputs = () => {
     this.setState({
@@ -140,6 +154,7 @@ export class AddNews extends Component {
             <Form
               className="add-news-form"
               onSubmit={(e) => this.handleSubmit(e)}
+              id="addNews"
               noValidate
             >
               <FormGroup>
@@ -181,7 +196,9 @@ export class AddNews extends Component {
                   <span className="form-validate">{errors.description}</span>
                 )}
               </FormGroup>
+
               {loading && <Loader />}
+
               <FormGroup>
                 <Label className="form-label" for="file">
                   File :
@@ -191,19 +208,26 @@ export class AddNews extends Component {
                   type="file"
                   name="file"
                   id="file"
-                  value={this.state.file}
-                  onChange={(e) => this.handleChangeAddNews(e)}
+                  // value={this.state.file}
+                  accept="image/*"
+                  multiple={false}
+                  onChange={(e) => this.handleChangeFile(e)}
                   noValidate
                 />
                 {errors.file.length > 0 && (
                   <span className="form-validate">{errors.file}</span>
                 )}
+
                 <FormText color="muted" className="description-file">
                   This is some placeholder block-level help text for the above
                   input. It's a bit lighter and easily wraps to a new line.
                 </FormText>
               </FormGroup>
-              <Button className="button-add-news" type="submit">
+              <Button
+                className="button-add-news"
+                type="submit"
+              // onClick={this.onClickHandler}
+              >
                 Add news
               </Button>
             </Form>
