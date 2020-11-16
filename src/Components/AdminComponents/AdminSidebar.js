@@ -70,7 +70,7 @@ export class AdminSidebar extends Component {
                 <NavLink className="nav-link" to="/admin">
                   <li className="nav-item">List Users</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/admin">
+                <NavLink className="nav-link" to="/signup">
                   <li className="nav-item">Add User</li>
                 </NavLink>
                 <NavLink className="nav-link" to="/admin">
@@ -121,7 +121,7 @@ export class AdminSidebar extends Component {
                 <NavLink className="nav-link" to="/rules">
                   <li className="nav-item">Rules</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/admin">
+                <NavLink className="nav-link" to="/edit-rules">
                   <li className="nav-item">Edit Rules</li>
                 </NavLink>
               </ul>

@@ -1,0 +1,29 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+div.container-fluid.page-body-wrapper {
+  min-height: calc(100vh - 70px);
+  width: calc(100% - 20%);
+  transition: width 0.65s ease, margin 0.65s ease, position 0.65s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  height: max-content;
+}
+
+div.container-fluid.page-body-wrapper div.all-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+/*# sourceMappingURL=EditRules.css.map */

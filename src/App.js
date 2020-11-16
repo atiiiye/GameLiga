@@ -19,6 +19,7 @@ import Logout from "./Components/Logout";
 
 import AdminPanel from "./Components/AdminComponents/AdminPanel";
 import AddNews from "./Components/AdminComponents/AddNews";
+import EditRules from "./Components/AdminComponents/EditRules";
 
 //import Routes
 import PrivateRoute from "./Components/Routes/PrivateRoute ";
@@ -43,6 +44,7 @@ class App extends Component {
     return (
       <UserContextes>
         <Switch>
+          //* User Routes
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
           <PublicRoute
@@ -74,17 +76,27 @@ class App extends Component {
 
           <PrivateRoute exact path="/news" component={News} />
 
-          <PublicRoute exact restricted={false} path="/logout" component={Logout} />
+          <PublicRoute
+            exact
+            restricted={false}
+            path="/logout"
+            component={Logout}
+          />
+        //* End of User Routes
 
-          <AdminContextes>
+        //* Admin Routes
+        <AdminContextes>
             {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
             <PrivateRoute exact path="/admin" component={AdminPanel} />
 
             <Route path="/add-news" component={AddNews} />
 
+            <Route path="/edit-rules" component={EditRules} />
             {/* </Admin> */}
           </AdminContextes>
+        //* End of Admin Routes
+
 
           <PrivateRoute exact path="/404" component={NotFound} />
 

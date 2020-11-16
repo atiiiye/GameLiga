@@ -96,6 +96,7 @@ export class AddNews extends Component {
       // console.log(formData)
 
       const { data, status } = await addNews(this.state);
+      console.log(data)
       console.log(status)
       if (status === 200) {
         console.log("Succesfully :)");
