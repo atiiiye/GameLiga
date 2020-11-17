@@ -18,12 +18,111 @@ div.container-fluid.page-body-wrapper {
   height: max-content;
 }
 
-div.container-fluid.page-body-wrapper div.all-content {
+div.container-fluid.page-body-wrapper span.title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font-size: 110%;
+  padding: 2rem 0 1rem 0;
+  color: #ffffff;
+}
+
+div.container-fluid.page-body-wrapper div.all-content#editor {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 1rem;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: max-content;
+  margin: 2rem 0;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners label.ck.ck-label.ck-voice-label {
+  display: none;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__top.ck-reset_all {
+  width: 85%;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__top.ck-reset_all div.ck.ck-sticky-panel {
+  width: 100%;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__top.ck-reset_all div.ck.ck-sticky-panel div.ck.ck-sticky-panel__content {
+  width: 100%;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__top.ck-reset_all div.ck.ck-sticky-panel div.ck.ck-sticky-panel__content div.ck.ck-toolbar.ck-toolbar_grouping {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__top.ck-reset_all div.ck.ck-sticky-panel div.ck.ck-sticky-panel__content div.ck.ck-toolbar.ck-toolbar_grouping div.ck.ck-toolbar__items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: .5rem .7rem;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__top.ck-reset_all div.ck.ck-sticky-panel div.ck.ck-sticky-panel__content div.ck.ck-toolbar.ck-toolbar_grouping div.ck.ck-toolbar__items div.ck.ck-dropdown.ck-heading-dropdown {
+  width: 15%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__top.ck-reset_all div.ck.ck-sticky-panel div.ck.ck-sticky-panel__content div.ck.ck-toolbar.ck-toolbar_grouping div.ck.ck-toolbar__items div.ck.ck-dropdown.ck-heading-dropdown div.ck.ck-reset.ck-dropdown__panel.ck-dropdown__panel_se.ck-dropdown__panel-visible {
+  top: 43px;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__main {
+  width: 85%;
+  height: 500px;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__main div.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred {
+  height: 100%;
+}
+
+div.container-fluid.page-body-wrapper div.ck.ck-reset.ck-editor.ck-rounded-corners div.ck.ck-editor__main div.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused {
+  height: 100%;
+}
+
+div.container-fluid.page-body-wrapper div.button-offset {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.container-fluid.page-body-wrapper div.button-offset button.register-rules {
+  width: 15%;
+  font-size: 90%;
+  border: 1px solid #0075ff;
+  background-color: rgba(13, 129, 223, 0.27);
+  border-radius: 28px;
+}
+
+div.container-fluid.page-body-wrapper div.button-offset button.register-rules:focus, div.container-fluid.page-body-wrapper div.button-offset button.register-rules:hover {
+  box-shadow: none;
+  background-color: rgba(13, 129, 223, 0.95);
+}
+
+div.container-fluid.page-body-wrapper div.button-offset button.register-rules:hover > a.nav-link {
+  color: #fff;
 }
 /*# sourceMappingURL=EditRules.css.map */

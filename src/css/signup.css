@@ -275,15 +275,16 @@ div.card-body#card-form-signup div.card-form form.form-signup button.register {
   justify-content: center;
   color: #fff;
   left: 16%;
+  opacity: 1;
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 147, 0, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(255, 147, 0, 0.27);
 }
 
 div.card-body#card-form-signup div.card-form form.form-signup button.register.disabled {
-  background-color: #36363b;
-  border-color: #1c1c22;
-  color: #fff;
+  background-color: rgba(255, 147, 0, 0.5);
+  border-color: #FC8928;
+  color: rgba(255, 255, 255, 0.75);
 }
 /*# sourceMappingURL=signup.css.map */

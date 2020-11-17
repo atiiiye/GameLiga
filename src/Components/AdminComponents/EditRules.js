@@ -7,53 +7,43 @@ import './../../css/EditRules.css';
 import AdminHeader from "./AdminHeader";
 import AdminSidebar from "./AdminSidebar";
 
+//import bootstrap
+import { Button } from 'reactstrap';
+
 //import packages
-import { Editor, EditorState } from 'draft-js';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 
 //import services
 
 export class EditRules extends Component {
 
-  state = { editorState: EditorState.createEmpty() }
-
-  setEditor = (editor) => {
-    this.editor = editor;
-  };
-
-  onChange = (editorState) => this.setState({ editorState });
-
-  focusEditor = () => {
-    if (this.editor) {
-      this.editor.focus();
-    }
-  };
-
   componentDidMount() {
-    this.focusEditor();
+    ClassicEditor
+      .create(document.querySelector('#editor'))
+      .then(editor => {
+        window.editor = editor;
+      })
+      .catch(error => {
+        console.error('There was a problem initializing the editor.', error);
+      });
   }
 
-  // styles = {
-  //   editor: 
-  // };
 
   render() {
     return (
       <div>
         <div className="container-fluid page-body-wrapper">
           <AdminHeader />
-          <div
-            className="all-content"
-            style={{
-              border: '1px solid gray',
-              minHeight: '50%',
-              color: "#ffffff",
-            }}
-            onClick={this.focusEditor}>
-            <Editor
-              ref={this.setEditor}
-              editorState={this.state.editorState}
-              onChange={this.onChange}
-            />
+          <span className="title">
+            Please enter your desired rules
+            Then press the register key
+            </span>
+
+          <div id="editor" className="all-content"></div>
+          <div className="button-offset">
+
+          <Button className="register-rules">Register</Button>
           </div>
         </div>
         <AdminSidebar />

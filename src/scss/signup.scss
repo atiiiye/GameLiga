@@ -286,18 +286,20 @@ div.card-body#card-form-signup {
                 justify-content: center;
                 color: $color-white;
                 left: 16%;
+                opacity: 1;
 
                 &:focus {
-                    box-shadow: 0 0 0 .2rem rgba($color: $color-orange-1, $alpha: .25);
+                    box-shadow: 0 0 0 .2rem rgba($color: $color-orange-1, $alpha: .27);
                 }
 
                 a {}
             }
 
             button.register.disabled {
-                background-color: $color-gray-1;
-                border-color: $color-background-1;
-                color: $color-white;
+                background-color: rgba($color: $color-orange-1, $alpha: .5);
+                border-color: $color-orange-2;
+                color: rgba($color: $color-white, $alpha: .75);
+                // opacity: .65;
             }
 
             // }

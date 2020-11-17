@@ -24,7 +24,7 @@ import EditRules from "./Components/AdminComponents/EditRules";
 //import Routes
 import PrivateRoute from "./Components/Routes/PrivateRoute ";
 import PublicRoute from "./Components/Routes/PublicRoute";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // import packages
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -42,9 +42,8 @@ class App extends Component {
 
   render() {
     return (
-      <UserContextes>
-        <Switch>
-          //* User Routes
+      <Switch>
+        {/* <UserContextes> */}
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
           <PublicRoute
@@ -76,27 +75,21 @@ class App extends Component {
 
           <PrivateRoute exact path="/news" component={News} />
 
-          <PublicRoute
-            exact
-            restricted={false}
-            path="/logout"
-            component={Logout}
-          />
-        //* End of User Routes
+          <PublicRoute exact restricted={false} path="/logout" component={Logout} />
 
-        //* Admin Routes
-        <AdminContextes>
+
+
+          <AdminContextes>
             {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
             <PrivateRoute exact path="/admin" component={AdminPanel} />
 
-            <Route path="/add-news" component={AddNews} />
+            <PrivateRoute exact path="/add-news" component={AddNews} />
 
-            <Route path="/edit-rules" component={EditRules} />
+            <PrivateRoute exact path="/edit-rules" component={EditRules} />
+
             {/* </Admin> */}
           </AdminContextes>
-        //* End of Admin Routes
-
 
           <PrivateRoute exact path="/404" component={NotFound} />
 
@@ -105,8 +98,11 @@ class App extends Component {
           <PublicRoute exact restricted={false} path="/404" component={NotFound} />
 
           <PublicRoute exact restricted={false} path="" component={NotFound} />
-        </Switch>
-      </UserContextes>
+
+        {/* </UserContextes> */}
+      </Switch>
+
+
     );
   }
 }

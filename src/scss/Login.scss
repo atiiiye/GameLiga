@@ -179,6 +179,13 @@ div.modal-dialog.login-modal {
                             box-shadow: 0 0 1px .2rem rgba($color: $color-orange-1, $alpha: .3);
                         }
                     }
+
+                    button.login.disabled {
+                        background-color: rgba($color: $color-orange-1, $alpha: .5);
+                        border-color: $color-orange-2;
+                        color: rgba($color: $color-white, $alpha: .75);
+                        opacity: 1;
+                    }
                 }
             }
 
