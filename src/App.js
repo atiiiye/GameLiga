@@ -20,6 +20,7 @@ import Logout from "./Components/Logout";
 import AdminPanel from "./Components/AdminComponents/AdminPanel";
 import AddNews from "./Components/AdminComponents/AddNews";
 import EditRules from "./Components/AdminComponents/EditRules";
+import AllNews from "./Components/AdminComponents/AllNews";
 
 //import Routes
 import PrivateRoute from "./Components/Routes/PrivateRoute ";
@@ -42,41 +43,48 @@ class App extends Component {
 
   render() {
     return (
-      <Switch>
-        {/* <UserContextes> */}
-          <PublicRoute exact restricted={false} path="/" component={Home} />
+      <React.Fragment>
 
-          <PublicRoute
-            exact
-            restricted={true}
-            path="/signup"
-            component={SignUp}
-          />
+        <Switch>
+          <UserContextes>
+            <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PrivateRoute exact path="/account" component={Account} />
+            <PublicRoute
+              exact
+              restricted={true}
+              path="/signup"
+              component={SignUp}
+            />
 
-          <PrivateRoute exact path="/tvlive" component={Tvlive} />
+            <PrivateRoute exact path="/account" component={Account} />
 
-          <PrivateRoute exact path="/games" component={Games} />
+            <PrivateRoute exact path="/tvlive" component={Tvlive} />
 
-          <PrivateRoute exact path="/tourny" component={Tourny} />
+            <PrivateRoute exact path="/games" component={Games} />
 
-          <PrivateRoute exact path="/tutorial" component={Tutorial} />
+            <PrivateRoute exact path="/tourny" component={Tourny} />
 
-          <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
+            <PrivateRoute exact path="/tutorial" component={Tutorial} />
 
-          <PrivateRoute exact path="/console" component={Console} />
+            <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
 
-          <PrivateRoute exact path="/liga" component={Liga} />
+            <PrivateRoute exact path="/console" component={Console} />
 
-          <PrivateRoute exact path="/chat" component={Chat} />
+            <PrivateRoute exact path="/liga" component={Liga} />
 
-          <PrivateRoute exact path="/shop" component={Shop} />
+            <PrivateRoute exact path="/chat" component={Chat} />
 
-          <PrivateRoute exact path="/news" component={News} />
+            <PrivateRoute exact path="/shop" component={Shop} />
 
-          <PublicRoute exact restricted={false} path="/logout" component={Logout} />
+            <PrivateRoute exact path="/news" component={News} />
 
+            <PublicRoute exact restricted={false} path="/logout" component={Logout} />
+
+
+          </UserContextes>
+        </Switch>
+
+        <Switch>
 
 
           <AdminContextes>
@@ -88,20 +96,20 @@ class App extends Component {
 
             <PrivateRoute exact path="/edit-rules" component={EditRules} />
 
+            <PrivateRoute exact path="/all-news" component={AllNews} />
             {/* </Admin> */}
+
           </AdminContextes>
 
-          <PrivateRoute exact path="/404" component={NotFound} />
+          {/* <PrivateRoute exact path="/404" component={NotFound} /> */}
 
-          <PrivateRoute exact path="" component={NotFound} />
+          {/* <PrivateRoute exact path="" component={NotFound} /> */}
 
           <PublicRoute exact restricted={false} path="/404" component={NotFound} />
 
           <PublicRoute exact restricted={false} path="" component={NotFound} />
-
-        {/* </UserContextes> */}
-      </Switch>
-
+        </Switch>
+      </React.Fragment>
 
     );
   }

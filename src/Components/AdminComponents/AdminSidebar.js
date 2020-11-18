@@ -67,13 +67,13 @@ export class AdminSidebar extends Component {
             </li>
             <UncontrolledCollapse toggler="#toggler1" className="sub-collapse">
               <ul className="nav sub-menu">
-                <NavLink className="nav-link" to="/admin">
+                <NavLink className="nav-link" to="/all-users">
                   <li className="nav-item">List Users</li>
                 </NavLink>
                 <NavLink className="nav-link" to="/signup">
                   <li className="nav-item">Add User</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/admin">
+                <NavLink className="nav-link" to="/delete-user">
                   <li className="nav-item">Delete User</li>
                 </NavLink>
               </ul>
@@ -99,7 +99,7 @@ export class AdminSidebar extends Component {
                 <NavLink className="nav-link" to="/add-news">
                   <li className="nav-item">Add News</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/edit=news">
+                <NavLink className="nav-link" to="/edit-news">
                   <li className="nav-item">Edit News</li>
                 </NavLink>
                 <NavLink className="nav-link" to="/delete-news">
@@ -137,13 +137,13 @@ export class AdminSidebar extends Component {
             </li>
             <UncontrolledCollapse toggler="#toggler4" className="sub-collapse">
               <ul className="nav sub-menu">
-                <NavLink className="nav-link" to="/admin">
+                <NavLink className="nav-link" to="/all-games">
                   <li className="nav-item">List Games</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/admin">
+                <NavLink className="nav-link" to="/add-games">
                   <li className="nav-item">Add Games</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/admin">
+                <NavLink className="nav-link" to="/delete-games">
                   <li className="nav-item">Delete Games</li>
                 </NavLink>
               </ul>
@@ -159,8 +159,8 @@ export class AdminSidebar extends Component {
             </li>
             <UncontrolledCollapse toggler="#toggler5" className="sub-collapse">
               <ul className="nav sub-menu">
-                <NavLink className="nav-link" to="">
-                  <li className="nav-item">Edie profile</li>
+                <NavLink className="nav-link" to="/setting-profile">
+                  <li className="nav-item">Edit profile</li>
                 </NavLink>
               </ul>
             </UncontrolledCollapse>

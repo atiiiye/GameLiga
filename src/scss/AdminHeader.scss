@@ -22,7 +22,7 @@ nav.main-nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40%;
+            width: 30%;
 
             button.navbar-toggler {
                 background-color: transparent;
@@ -50,10 +50,12 @@ nav.main-nav {
                 width: 80%;
                 border-radius: 3px;
                 left: 0;
+                color: $color-gray-2;
                 // height: 1.8rem;
 
-                &:focus{
+                &:focus {
                     box-shadow: none;
+                    border-color: rgba($color: $color-light, $alpha: .8);
                 }
             }
 
@@ -68,7 +70,7 @@ nav.main-nav {
 
             p.text-center {
                 color: rgba($color: $color-light, $alpha: .85);
-                font-weight: 500;
+                font-weight: 600;
                 width: max-content;
                 margin-bottom: 0;
                 margin-right: .5rem;

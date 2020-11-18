@@ -27,7 +27,7 @@ nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 30%;
 }
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left button.navbar-toggler {
@@ -53,10 +53,12 @@ nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-b
   width: 80%;
   border-radius: 3px;
   left: 0;
+  color: #959aa2;
 }
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-left input.search-box:focus {
   box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right {
@@ -68,7 +70,7 @@ nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right {
 
 nav.main-nav div.navbar-menu-wrapper div.navbar-menu-wrapper-right p.text-center {
   color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
+  font-weight: 600;
   width: max-content;
   margin-bottom: 0;
   margin-right: .5rem;

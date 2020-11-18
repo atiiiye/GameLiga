@@ -119,6 +119,7 @@ div.container-fluid.page-body-wrapper {
       font-size: 90%;
       border: 1px solid $color-blue;
       background-color: rgba($color: $color-blue-2, $alpha: .27);
+      color: rgba($color: $color-blue, $alpha: .8);
       border-radius: 28px;
 
       // &:hover {
@@ -130,6 +131,8 @@ div.container-fluid.page-body-wrapper {
         // box-shadow: 0 0 1px .2rem rgba($color: $color-blue, $alpha: .27);
         box-shadow: none;
         background-color: rgba($color: $color-blue-2, $alpha: .95);
+        color: $color-white;
+
       }
 
       &:hover>a.nav-link {

@@ -35,9 +35,13 @@ class Console extends Component {
                 <p className="username">
                   {isLogin().decoded.Username}
                 </p>
-                <span className="status-activation">
-                  Active now .Sined uo 2 months age
+                <div className="status">
+                  <span className="status-activation">
+                    Active now .Sined uo 2 months age
                 </span>
+                  <span className="status-online"></span>
+                  <span className="status-offline d-none"></span>
+                </div>
                 <div className="inputs">
                   <div className="validation-box">
                     <Form.Control
@@ -45,8 +49,8 @@ class Console extends Component {
                       className="form-control-plaintext"
                       placeholder=""
                       name=""
-                      // onChange={this.handleChange}
-                      // value={this.state.promotional}
+                    // onChange={this.handleChange}
+                    // value={this.state.promotional}
                     />
                   </div>
                   <div className="validation-box">
@@ -55,8 +59,8 @@ class Console extends Component {
                       className="form-control-plaintext"
                       placeholder=""
                       name=""
-                      // onChange={this.handleChange}
-                      // value={this.state.promotional}
+                    // onChange={this.handleChange}
+                    // value={this.state.promotional}
                     />
                   </div>
                   <div className="validation-box">
@@ -65,8 +69,8 @@ class Console extends Component {
                       className="form-control-plaintext"
                       placeholder=""
                       name=""
-                      // onChange={this.handleChange}
-                      // value={this.state.promotional}
+                    // onChange={this.handleChange}
+                    // value={this.state.promotional}
                     />
                   </div>
                   <div className="validation-box">
@@ -75,8 +79,8 @@ class Console extends Component {
                       className="form-control-plaintext"
                       placeholder=""
                       name=""
-                      // onChange={this.handleChange}
-                      // value={this.state.promotional}
+                    // onChange={this.handleChange}
+                    // value={this.state.promotional}
                     />
                   </div>
                 </div>

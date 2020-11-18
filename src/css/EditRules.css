@@ -114,12 +114,14 @@ div.container-fluid.page-body-wrapper div.button-offset button.register-rules {
   font-size: 90%;
   border: 1px solid #0075ff;
   background-color: rgba(13, 129, 223, 0.27);
+  color: rgba(0, 117, 255, 0.8);
   border-radius: 28px;
 }
 
 div.container-fluid.page-body-wrapper div.button-offset button.register-rules:focus, div.container-fluid.page-body-wrapper div.button-offset button.register-rules:hover {
   box-shadow: none;
   background-color: rgba(13, 129, 223, 0.95);
+  color: #fff;
 }
 
 div.container-fluid.page-body-wrapper div.button-offset button.register-rules:hover > a.nav-link {

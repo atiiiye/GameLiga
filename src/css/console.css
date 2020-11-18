@@ -49,10 +49,42 @@ div.container-fluid.Console div.card#content div.main-section p.username {
   font-weight: 600;
 }
 
-div.container-fluid.Console div.card#content div.main-section span.status-activation {
+div.container-fluid.Console div.card#content div.main-section div.status {
+  position: relative;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.status span.status-activation {
   color: rgba(255, 255, 255, 0.6);
   margin-top: 1rem;
   font-weight: 600;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.status span.status-online {
+  position: absolute;
+  left: -4%;
+  width: 7px;
+  height: 7px;
+  color: #ffffff;
+  background: #28a745;
+  border-radius: 100%;
+  text-align: center;
+  font-size: .625rem;
+  line-height: 10.5;
+  top: 7px;
+}
+
+div.container-fluid.Console div.card#content div.main-section div.status span.status-offline {
+  position: absolute;
+  left: -4%;
+  width: 7px;
+  height: 7px;
+  color: #ffffff;
+  background: red;
+  border-radius: 100%;
+  text-align: center;
+  font-size: .625rem;
+  line-height: 10.5;
+  top: 7px;
 }
 
 div.container-fluid.Console div.card#content div.main-section div.inputs {
