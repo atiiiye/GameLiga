@@ -13,4 +13,27 @@ div.container-fluid.page-body-wrapper {
     right: 0;
     height: max-content;
 
+    div.parent-table {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        div.pagination-search-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div.pagination-section{
+                width: 50%;
+
+            }
+            div.search-section{
+                width: 50%;
+            }
+        }
+    }
 }

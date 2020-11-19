@@ -79,7 +79,7 @@ div.container-fluid.Console div.card#content div.main-section div.status span.st
   width: 7px;
   height: 7px;
   color: #ffffff;
-  background: red;
+  background: #dc3545;
   border-radius: 100%;
   text-align: center;
   font-size: .625rem;

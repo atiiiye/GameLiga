@@ -3,15 +3,15 @@ import React, { useEffect, useState, useMemo } from 'react'
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
-const PaginationPlugin = ({ total, prePage, currentPage, onPageChange }) => {
+const PaginationPlugin = ({ total = 0, itemsPerPage = 5, currentPage = 1, onPageChange }) => {
 
     const [totalPages, setTotalPages] = useState(0);
-    
+
     const paginationItems = useMemo(() => {
         const pages = []
         for (let i = 1; i < total; i++) {
-            pages.push(<PaginationItem active={i === currentPage} onClick={() => onPageChange(i)}>
-                <PaginationLink href="#" key={i}>
+            pages.push(<PaginationItem active={i === currentPage} onClick={() => onPageChange(i)} key={i}>
+                <PaginationLink href="#">
                     {i}
                 </PaginationLink>
             </PaginationItem>)
@@ -22,17 +22,17 @@ const PaginationPlugin = ({ total, prePage, currentPage, onPageChange }) => {
 
     useEffect(() => {
 
-        if (total > 0 && prePage > 0)
-            setTotalPages(Math.ceil(total / prePage))
+        if (total > 0 && itemsPerPage > 0)
+            setTotalPages(Math.ceil(total / itemsPerPage))
 
-    }, [total, prePage])
+    }, [total, itemsPerPage])
 
-    if( totalPages ===0) return null
+    if (totalPages === 0) return null
 
     return (
         <div>
             <Pagination>
-                <PaginationItem onClick={() => onPageChange( currentPage -1)} disabled={currentPage===1}>
+                <PaginationItem onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
                     <PaginationLink previous href="#" />
                 </PaginationItem>
                 {paginationItems}
