@@ -14,21 +14,21 @@ import SearchBox from '../SearchBox'
 import TableHead from '../../utils/DataTable/TableHead'
 import TableBody from '../../utils/DataTable/TableBody'
 import Loader from '../Loader'
+import http from './../../Services/httpService';
 
 
 const AllNews = () => {
 
     const [comments, setComments] = useState([])
-    // const [ loader , showLoader , hideLoader] = useFullPageLoader();
     const [loader, setLoader] = useState(false);
     const [totalItems, setTotalItems] = useState(0)
     const [currentPage, setCurrentPage] = useState()
-    const ITEMS_PER_PAGE = 5;
-
+    const ITEMS_PER_PAGE = 50;
 
     const headers = [
         { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date" },
-    ]
+    ];
+    
     const body = [
         { id: 1, Title: "Title1", Text: "Text news 1", Image: "Image 1", Auther: "Auther news 1", Date: "2020/10/10" },
         { id: 2, Title: "Title2", Text: "Text news 2", Image: "Image 2", Auther: "Auther news 2", Date: "2020/11/11" },
@@ -45,8 +45,8 @@ const AllNews = () => {
     useEffect(() => {
         const getData = () => {
             setLoader(true);
-            fetch("https://jsonplaceholder.typicode.com/comments")
-                .then(response => response)
+            http.get("https://jsonplaceholder.typicode.com/comments")
+                .then(response => response.json())
                 .then(json => {
                     console.log(json)
                     setLoader(false);
@@ -62,11 +62,11 @@ const AllNews = () => {
 
         setTotalItems(computedComments.length)
 
-        // return computedComments
-        //     .slice(
-        //         (currentPage - 1) * ITEMS_PER_PAGE,
-        //         (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
-        //     );
+        return computedComments
+            .slice(
+                (currentPage - 1) * ITEMS_PER_PAGE,
+                (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+            );
     }, [comments , currentPage])
 
     return (
@@ -81,7 +81,7 @@ const AllNews = () => {
                                     <PaginationLink first href="#" />
                                 </PaginationItem>
                             </Pagination> */}
-                            
+
                             <PaginationPlugin
                                 total={totalItems}
                                 itemsPerPage={ITEMS_PER_PAGE}
@@ -96,10 +96,10 @@ const AllNews = () => {
 
                     <Table id="allNews" className="mt-3" striped borderless hover>
                         <TableHead headers={headers} />
-                        <TableBody body={body} />
+                        <TableBody body={commentsData} />
                     </Table>
                 </div>
-                {loader && <Loader />}
+                { loader && <Loader /> }
             </div>
             <AdminSidebar />
         </div>

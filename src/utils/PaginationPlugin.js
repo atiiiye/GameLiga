@@ -4,16 +4,17 @@ import React, { useEffect, useState, useMemo } from 'react'
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 
-
-
-const PaginationPlugin = ({ total = 0, itemsPerPage = 5, currentPage = 1, onPageChange }) => {
+const PaginationPlugin = ({ total = 0, itemsPerPage = 10, currentPage = 1, onPageChange }) => {
 
     const [totalPages, setTotalPages] = useState(0);
 
     const paginationItems = useMemo(() => {
         const pages = []
         for (let i = 1; i < total; i++) {
-            pages.push(<PaginationItem active={i === currentPage} onClick={() => onPageChange(i)} key={i}>
+            pages.push(<PaginationItem
+                active={i === currentPage}
+                onClick={() => onPageChange(i)}
+                key={i}>
                 <PaginationLink href="#">
                     {i}
                 </PaginationLink>

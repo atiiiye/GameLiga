@@ -50,11 +50,11 @@ div.container-fluid.page-body-wrapper div.parent-table div.pagination-search-box
 
 div.container-fluid.page-body-wrapper div.parent-table div.pagination-search-box div.search-section input.search-box.form-control {
   width: 65%;
-  height: 70%;
+  height: 75%;
   background-color: rgba(255, 255, 255, 0.9);
   color: #959aa2;
   border: 1px solid rgba(149, 154, 162, 0.9);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 div.container-fluid.page-body-wrapper div.parent-table table#allNews {

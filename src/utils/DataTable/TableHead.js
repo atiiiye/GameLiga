@@ -11,7 +11,7 @@ const TableHead = ({ headers }) => {
 
     return (
         <thead>
-            {headers.map(header => (
+            { headers.map(header => (
                 <tr className="header-row" key={header.id}>
                     <div className="header-box">
                         <th className="header-head" >{header.id}</th>
