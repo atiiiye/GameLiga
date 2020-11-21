@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import './../../css/AllNews.css';
 
 //import bootstrap
-import { Table } from 'reactstrap'
+import { Table ,Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 
 //import components
 import AdminHeader from './AdminHeader'
@@ -23,7 +23,7 @@ const AllNews = () => {
     const [loader, setLoader] = useState(false);
     const [totalItems, setTotalItems] = useState(0)
     const [currentPage, setCurrentPage] = useState()
-    const ITEMS_PER_PAGE = 50;
+    const ITEMS_PER_PAGE = 5;
 
 
     const headers = [
@@ -42,32 +42,32 @@ const AllNews = () => {
         { id: 10, Title: "Title10", Text: "Text news 10", Image: "Image 10", Auther: "Auther news 10", Date: "2020/02/20" },
     ]
 
-    // useEffect(() => {
-    //     const getData = () => {
-    //         setLoader(true);
-    //         fetch("https://jsonplaceholder.typicode.com/comments")
-    //             .then(response => response)
-    //             .then(json => {
-    //                 console.log(json)
-    //                 setLoader(false);
-    //                 setComments(json)
-    //             })
-    //             .catch(error => console.log(error))
-    //     }
-    //     getData();
-    // }, [])
+    useEffect(() => {
+        const getData = () => {
+            setLoader(true);
+            fetch("https://jsonplaceholder.typicode.com/comments")
+                .then(response => response)
+                .then(json => {
+                    console.log(json)
+                    setLoader(false);
+                    setComments(json)
+                })
+                .catch(error => console.log(error))
+        }
+        getData();
+    }, [])
 
-    // const commentsData = useMemo(() => {
-    //     let computedComments = comments;
+    const commentsData = useMemo(() => {
+        let computedComments = comments;
 
-    //     setTotalItems(computedComments.length)
+        setTotalItems(computedComments.length)
 
-    //     return computedComments
-    //         .slice(
-    //             (currentPage - 1) * ITEMS_PER_PAGE,
-    //             (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
-    //         );
-    // }, [comments , currentPage])
+        // return computedComments
+        //     .slice(
+        //         (currentPage - 1) * ITEMS_PER_PAGE,
+        //         (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+        //     );
+    }, [comments , currentPage])
 
     return (
         <div style={{ display: "flex" }}>
@@ -76,6 +76,12 @@ const AllNews = () => {
                 <div className="parent-table">
                     <div className="pagination-search-box row">
                         <div className="pagination-section">
+                            {/* <Pagination>
+                                <PaginationItem>
+                                    <PaginationLink first href="#" />
+                                </PaginationItem>
+                            </Pagination> */}
+                            
                             <PaginationPlugin
                                 total={totalItems}
                                 itemsPerPage={ITEMS_PER_PAGE}
@@ -88,13 +94,12 @@ const AllNews = () => {
                         </div>
                     </div>
 
-                    <Table id="allNews" striped >
+                    <Table id="allNews" className="mt-3" striped borderless hover>
                         <TableHead headers={headers} />
                         <TableBody body={body} />
                     </Table>
                 </div>
                 {loader && <Loader />}
-
             </div>
             <AdminSidebar />
         </div>

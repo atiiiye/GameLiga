@@ -1,27 +1,40 @@
 import React from 'react';
 
-//import bootstrap
+//import css
+import './../../css/TableHead.css'
+
+//import packages
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+
 
 const TableHead = ({ headers }) => {
-
-    const stylesThead = {
-        color: "#fff",
-        fontWeight: "bold",
-        // display: "flex",
-        // flexDirection:"row",
-        // justifyContent:"flex-start"
-    }
 
     return (
         <thead>
             {headers.map(header => (
-                <tr key={header.id}>
-                    <th style={stylesThead} >{header.id}</th>
-                    <th style={stylesThead} >{header.Title}</th>
-                    <th style={stylesThead} >{header.Text}</th>
-                    <th style={stylesThead} >{header.Image}</th>
-                    <th style={stylesThead} >{header.Auther}</th>
-                    <th style={stylesThead} >{header.Date}</th>
+                <tr className="header-row" key={header.id}>
+                    <div className="header-box">
+                        <th className="header-head" >{header.id}</th>
+                    </div>
+                    <div className="header-box">
+                        <th className="header-head" >{header.Title}</th>
+                        <ArrowDownwardIcon className="sort-table" />
+                    </div>
+                    <div className="header-box">
+                        <th className="header-head" >{header.Text}</th>
+                        <ArrowDownwardIcon className="sort-table" />
+                    </div>
+                    <div className="header-box">
+                        <th className="header-head" >{header.Image}</th>
+                    </div>
+                    <div className="header-box">
+                        <th className="header-head" >{header.Auther}</th>
+                        <ArrowDownwardIcon className="sort-table" />
+                    </div>
+                    <div className="header-box">
+                        <th className="header-head" >{header.Date}</th>
+                        <ArrowDownwardIcon className="sort-table" />
+                    </div>
                 </tr>
             ))}
         </thead>

@@ -225,7 +225,16 @@ export class AddNews extends Component {
                 </FormText>
               </FormGroup>
               <Button
-                className="button-add-news"
+                className={`button-add-news 
+                ${!errors.title &&
+                  !errors.description &&
+                  !errors.file &&
+                  this.state.title &&
+                  this.state.description &&
+                  this.state.file
+                  ? ""
+                  : "disabled"
+                  }`}
                 type="submit"
               // onClick={this.onClickHandler}
               >

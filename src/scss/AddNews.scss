@@ -126,10 +126,21 @@ div.container-fluid.page-body-wrapper {
                 width: 15%;
 
                 &:focus {
-                    box-shadow: 0 0 1px .2rem rgba($color: $color-orange-1, $alpha: .3);
+                    // box-shadow: 0 0 1px .2rem rgba($color: $color-orange-1, $alpha: .3);
+                }
+            }
+
+            button.button-add-news.disabled {
+                background-color: rgba($color: $color-orange-2, $alpha: .27);
+                border-color: $color-orange-2;
+                color: rgba($color: $color-orange-2, $alpha: .7);
+
+                &:hover {
+                    color: $color-white;
+                    background-color: $color-orange-1;
+                    border-color: $color-orange-1;
                 }
             }
         }
     }
-
 }

@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useMemo } from 'react'
 
-
+//import bootstrap
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+
+
+
 
 const PaginationPlugin = ({ total = 0, itemsPerPage = 5, currentPage = 1, onPageChange }) => {
 

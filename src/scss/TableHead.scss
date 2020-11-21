@@ -1,0 +1,32 @@
+@import './base';
+
+thead {
+    margin-top: 1rem;
+    // display: flex;
+    // flex-direction: column;
+
+    tr.header-row {
+        display: flex;
+        width: 100% ;
+        justify-content: space-between;
+
+        div.header-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            th.header-head {
+                color: #000000;
+                font-weight: bold;
+            }
+
+            svg.sort-table {
+                font-size: 18px;
+
+            }
+
+
+        }
+    }
+
+}

@@ -124,7 +124,15 @@ div.container-fluid.page-body-wrapper div.all-content form.add-news-form button.
   width: 15%;
 }
 
-div.container-fluid.page-body-wrapper div.all-content form.add-news-form button.button-add-news:focus {
-  box-shadow: 0 0 1px 0.2rem rgba(255, 147, 0, 0.3);
+div.container-fluid.page-body-wrapper div.all-content form.add-news-form button.button-add-news.disabled {
+  background-color: rgba(252, 137, 40, 0.27);
+  border-color: #FC8928;
+  color: rgba(252, 137, 40, 0.7);
+}
+
+div.container-fluid.page-body-wrapper div.all-content form.add-news-form button.button-add-news.disabled:hover {
+  color: #fff;
+  background-color: #ff9300;
+  border-color: #ff9300;
 }
 /*# sourceMappingURL=AddNews.css.map */

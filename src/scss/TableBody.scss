@@ -1,0 +1,19 @@
+@import './base';
+
+tbody {
+    tr.body-row {
+
+        display: flex;
+        width: 100% ;
+        justify-content: space-between;
+
+        th.body-head {
+            color: rgba($color: $color-dark, $alpha: .5);
+        }
+
+        td.body-data {
+            color: rgba($color: $color-dark, $alpha: .5);
+
+        }
+    }
+}
