@@ -12,27 +12,27 @@ const TableHead = ({ headers }) => {
     return (
         <thead>
             { headers.map(header => (
-                <tr className="header-row" key={header.id}>
+                <tr className="header-row" key={header.index}>
                     <div className="header-box">
-                        <th className="header-head" >{header.id}</th>
+                        <th className="header-head" >#</th>
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Title}</th>
+                        <th className="header-head" >{header.Title.toUpperCase()}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Text}</th>
+                        <th className="header-head" >{header.Text.toUpperCase()}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Image}</th>
+                        <th className="header-head" >{header.Image.toUpperCase()}</th>
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Auther}</th>
+                        <th className="header-head" >{header.Auther.toUpperCase()}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Date}</th>
+                        <th className="header-head" >{header.Date.toUpperCase()}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                 </tr>
