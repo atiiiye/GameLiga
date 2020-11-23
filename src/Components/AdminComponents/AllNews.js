@@ -15,6 +15,7 @@ import TableHead from '../../utils/DataTable/TableHead'
 import TableBody from '../../utils/DataTable/TableBody'
 import Loader from '../Loader'
 import http from './../../Services/httpService';
+import DataTable from '../../utils/DataTable/DataTable';
 
 
 const AllNews = () => {
@@ -41,60 +42,44 @@ const AllNews = () => {
         { id: 9, Title: "Title9", Text: "Text news 9", Image: "Image 9", Auther: "Auther news 9", Date: "2020/02/20" },
         { id: 10, Title: "Title10", Text: "Text news 10", Image: "Image 10", Auther: "Auther news 10", Date: "2020/02/20" },
     ]
-    
-    const getData = () => {
-        setLoader(true);
-        http.get("https://jsonplaceholder.typicode.com/comments")
-            .then(response => {
-                setLoader(false);
-                console.log("response is :", response.data)
-                setComments(response.data)
-                console.log("comments is :", comments)
-            })
-            .catch(error => console.log(error))
-    }
 
-    useEffect(() => {
-        getData();
-    }, [])
 
-    const commentsData = useMemo(() => {
-        let computedComments = comments;
+    // useEffect(() => {
+    //     const getData = () => {
+    //         setLoader(true);
+    //         http.get("https://jsonplaceholder.typicode.com/comments")
+    //             .then(response => {
+    //                 setLoader(false);
+    //                 setComments(response.data)
 
-        setTotalItems(computedComments.length)
 
-        return computedComments
-            .slice(
-                (currentPage - 1) * ITEMS_PER_PAGE,
-                (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE,
-            );
-    }, [comments, currentPage])
+    //                 // console.log("response is :", response.data)/
+    //                 console.log("comments is :", comments)
+    //             })
+    //             .catch(error => console.log(error))
+    //     }
+
+
+    //     getData();
+    // }, [])
+
+    // const commentsData = useMemo(() => {
+    //     let computedComments = comments;
+
+    //     setTotalItems(computedComments.length)
+
+    //     return computedComments
+    //         .slice(
+    //             (currentPage - 1) * ITEMS_PER_PAGE,
+    //             (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE,
+    //         );
+    // }, [comments, currentPage])
 
     return (
         <div style={{ display: "flex" }}>
             <div className="container-fluid page-body-wrapper">
                 <AdminHeader />
-                <div className="parent-table">
-                    <div className="pagination-search-box row">
-                        <div className="pagination-section">
-                            <PaginationPlugin
-                                total={totalItems}
-                                itemsPerPage={ITEMS_PER_PAGE}
-                                currentPage={currentPage}
-                                onPageChange={page => setCurrentPage(page)}
-                            />
-                        </div>
-                        <div className="search-section">
-                            <SearchBox />
-                        </div>
-                    </div>
-
-                    <Table id="allNews" className="mt-3" striped borderless hover>
-                        <TableHead headers={headers} />
-                        <TableBody body={commentsData} />
-                    </Table>
-                </div>
-                {loader && <Loader />}
+                <DataTable />
             </div>
             <AdminSidebar />
         </div>

@@ -32,9 +32,9 @@ div.container-fluid.page-body-wrapper {
                 width: 50%;
                 height: 100%;
                 // overflow-x: hidden;
-                
+
             }
-            
+
             div.search-section {
                 width: 50%;
                 height: 100%;
@@ -42,18 +42,18 @@ div.container-fluid.page-body-wrapper {
                 align-items: center;
                 justify-content: flex-end;
 
-                input.search-box.form-control{
+                input.search-box.form-control {
                     width: 65%;
                     height: 75%;
-                    background-color: rgba($color: #ffffff, $alpha: .9);
-                    color: rgba($color: $color-gray-2, $alpha: 1.0);
+                    background-color: rgba($color: $color-light, $alpha: .9);
+                    color: rgba($color: $color-dark, $alpha: 1.0);
                     border: 1px solid rgba($color: $color-gray-2, $alpha: .9);
                     border-radius: 4px;
                 }
             }
         }
 
-        table#allNews{
+        table#allNews {
             background-color: rgba($color: $color-light, $alpha: .9);
         }
     }
