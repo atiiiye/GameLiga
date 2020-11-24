@@ -17,22 +17,22 @@ const TableHead = ({ headers }) => {
                         <th className="header-head" >#</th>
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Title.toUpperCase()}</th>
+                        <th className="header-head" >{header.Title}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Text.toUpperCase()}</th>
+                        <th className="header-head" >{header.Text}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Image.toUpperCase()}</th>
+                        <th className="header-head" >{header.Image}</th>
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Auther.toUpperCase()}</th>
+                        <th className="header-head" >{header.Auther}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Date.toUpperCase()}</th>
+                        <th className="header-head" >{header.Date}</th>
                         <ArrowDownwardIcon className="sort-table" />
                     </div>
                 </tr>

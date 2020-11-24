@@ -65,7 +65,7 @@ class SignUp extends Component {
     captchaInput: "",
     redirect: false,
     loading: false,
-    type:"password"
+    type: "password"
   };
 
   static contextType = Context;
@@ -646,8 +646,7 @@ class SignUp extends Component {
 
               <Form.Group className="row ml-1">
                 <Button
-                  className={`register col-sm-7 ${
-                    this.validateForm(errors) &&
+                  className={`register col-sm-7 ${this.validateForm(errors) &&
                     this.state.checkbox &&
                     this.state.username &&
                     this.state.password &&
@@ -656,9 +655,9 @@ class SignUp extends Component {
                     this.state.nickName &&
                     this.state.phone &&
                     this.state.captchaInput
-                      ? ""
-                      : "disabled"
-                  }`}
+                    ? ""
+                    : "disabled"
+                    }`}
                   variant="none"
                   type="submit"
                 >

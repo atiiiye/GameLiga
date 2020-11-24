@@ -12,6 +12,7 @@ import Poster1 from "./../images/news-1.png";
 //import components
 import UserHeader from "./UserHeader";
 import Sidebar from "./Sidebar";
+import PageTitle from "./PageTitle";
 
 //import bootstrap
 import { Card } from "react-bootstrap";
@@ -34,7 +35,7 @@ class News extends Component {
   };
 
   uploadFile = (files) => {
-    
+
     files.map((file, index) => {
       let formData = new FormData();
       formData.append(`file${index}`, file);
@@ -63,9 +64,8 @@ class News extends Component {
           <div className="container-fluid News">
             <Card id="content">
               <div className="elements">
-                <div className="title">
-                  <h2 className="h1">News</h2>
-                </div>
+                <PageTitle title={"News"} />
+
                 <div className="main-content-news">
                   <div className="parent-news">
                     <div className="main-card-news">

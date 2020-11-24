@@ -25,7 +25,7 @@ import AllNews from "./Components/AdminComponents/AllNews";
 //import Routes
 import PrivateRoute from "./Components/Routes/PrivateRoute ";
 import PublicRoute from "./Components/Routes/PublicRoute";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 // import packages
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -45,8 +45,10 @@ class App extends Component {
     return (
       <React.Fragment>
 
-        <Switch>
-          <UserContextes>
+        <UserContextes>
+          <Switch>
+            {/* <Route exact path="/" render={() => <Redirect to="/home" />} /> */}
+
             <PublicRoute exact restricted={false} path="/" component={Home} />
 
             <PublicRoute
@@ -81,34 +83,37 @@ class App extends Component {
             <PublicRoute exact restricted={false} path="/logout" component={Logout} />
 
 
-          </UserContextes>
-        </Switch>
+            {/* </Switch>
 
-        <Switch>
+        <Switch> */}
 
 
-          <AdminContextes>
-            {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
+            <AdminContextes>
+              {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
-            <PrivateRoute exact path="/admin" component={AdminPanel} />
+              <PrivateRoute exact path="/admin" component={AdminPanel} />
 
-            <PrivateRoute exact path="/add-news" component={AddNews} />
+              <PrivateRoute exact path="/add-news" component={AddNews} />
 
-            <PrivateRoute exact path="/edit-rules" component={EditRules} />
+              <PrivateRoute exact path="/edit-rules" component={EditRules} />
 
-            <PrivateRoute exact path="/all-news" component={AllNews} />
-            {/* </Admin> */}
+              <PrivateRoute exact path="/all-news" component={AllNews} />
+              {/* </Admin> */}
 
-          </AdminContextes>
+            </AdminContextes>
 
-          {/* <PrivateRoute exact path="/404" component={NotFound} /> */}
+            {/* <PrivateRoute exact path="/404" component={NotFound} /> */}
 
-          {/* <PrivateRoute exact path="" component={NotFound} /> */}
+            {/* <PrivateRoute exact path="" component={NotFound} /> */}
 
-          <PublicRoute exact restricted={false} path="/404" component={NotFound} />
+            <PublicRoute exact restricted={false} path="/404" component={NotFound} />
 
-          <PublicRoute exact restricted={false} path="" component={NotFound} />
-        </Switch>
+            <PublicRoute exact restricted={false} path="" component={NotFound} />
+
+            <Route exact path="" render={() => <Redirect to="/404" />} />
+            {/* <Route component={NotFound} /> */}
+          </Switch>
+        </UserContextes>
       </React.Fragment>
 
     );

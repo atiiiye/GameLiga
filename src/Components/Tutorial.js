@@ -3,6 +3,7 @@ import React, { Component } from "react";
 //import components
 import Sidebar from "./Sidebar";
 import UserHeader from "./UserHeader";
+import PageTitle from "./PageTitle";
 
 //import css
 import "./../css/Tutorial.css";
@@ -24,7 +25,7 @@ class Tutorial extends Component {
   handleBorderCards = () => {
     let boxCards = document.querySelectorAll('div.box-card')
     if (boxCards.length % 2 == 0) {
-      boxCards[boxCards.length-2].style.borderBottom =0
+      boxCards[boxCards.length - 2].style.borderBottom = 0
     }
   }
 
@@ -37,12 +38,7 @@ class Tutorial extends Component {
           <div className="container-fluid Tutorial">
             <Card id="content">
               <div className="all-view-component">
-                <div className="title">
-                  <h2 className="h1">
-                    Tutorial
-                  </h2>
-                </div>
-
+                <PageTitle title={"Tutorial"} />
                 <div className="all-box">
                   <div className="group-box">
                     <div className="box-card">

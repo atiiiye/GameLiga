@@ -225,6 +225,11 @@ div.container-fluid.games div.card#content div.elements div.card#tab-content div
   font-size: 95%;
 }
 
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.time::-webkit-inner-spin-button,
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options div.option input.advantage::-webkit-inner-spin-button {
+  display: none;
+}
+
 div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-right div.section-right div.options span.No {
   width: 100%;
   height: 20px;

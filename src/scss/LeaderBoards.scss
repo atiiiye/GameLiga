@@ -37,29 +37,12 @@ div.container-fluid.leader-boards {
             // align-items: center;
             justify-content: space-around;
 
-            div.title {
-                display: flex;
-                flex-direction: column;
-                // justify-content: flex-start;
-                align-items: flex-start;
-                padding: 1.2rem;
-                margin-left: 1.8rem;
-                width: 80%;
-
-                h2.h1 {
-                    color: rgba($color: $color-gray-1, $alpha: .7);
-                    // text-shadow: -3px -1px 0 rgba($color: $color-orange-1, $alpha: .2);
-                    font-weight: bold;
-                    text-align: left;
-                    font-size: 3rem;
-                }
-
-                p.text-muted {
-                    font-weight: bold;
-                    font-size: 75%;
-                    margin-bottom: .3rem;
-                    text-align: left;
-                }
+            p.text-muted {
+                font-weight: bold;
+                font-size: 75%;
+                margin-bottom: .3rem;
+                text-align: left;
+                margin-left: 3.2rem;
             }
 
             div.buttons-top {

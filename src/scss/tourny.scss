@@ -185,6 +185,10 @@ div.container-fluid.Tourny {
                                     }
                                 }
 
+                                &::-webkit-inner-spin-button {
+                                    display: none;
+                                }
+
                             }
 
                         }

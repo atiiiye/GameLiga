@@ -184,6 +184,10 @@ div.container-fluid.Tourny div.card#content div.elements div.card#tab-content di
   box-shadow: 0 0 0 0.2rem rgba(255, 147, 0, 0.25);
 }
 
+div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 div.timing input.time::-webkit-inner-spin-button {
+  display: none;
+}
+
 div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-3 span.waiting-title {
   color: rgba(149, 154, 162, 0.6);
   font-weight: 600;

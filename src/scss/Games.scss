@@ -230,6 +230,10 @@ div.container-fluid.games {
 
                                         }
 
+                                        &::-webkit-inner-spin-button {
+                                            display: none;
+                                        }
+
                                     }
                                 }
 

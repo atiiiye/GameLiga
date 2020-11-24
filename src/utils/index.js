@@ -12,10 +12,13 @@ export const LogoutUtil = () => {
 };
 
 export const isLogin = () => {
+
   if (localStorage.getItem(TOKEN_KEY)) {
     const decoded = jwt.decode(localStorage.getItem(TOKEN_KEY));
     return { decoded };
   }
+
+  return false
 };
 
 

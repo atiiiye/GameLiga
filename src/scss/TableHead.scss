@@ -7,7 +7,7 @@ thead {
 
     tr.header-row {
         display: flex;
-        width: 100% ;
+        width: 100%;
         justify-content: space-between;
 
         div.header-box {
@@ -19,11 +19,12 @@ thead {
                 color: #000000;
                 font-weight: bold;
                 padding-right: .25rem;
+                letter-spacing: .15rem;
             }
 
             svg.sort-table {
-                font-size: 16px;
-
+                font-size: 14px;
+                fill: $color-gray-2;
             }
 
 

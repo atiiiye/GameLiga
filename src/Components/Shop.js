@@ -11,6 +11,7 @@ import './../css/mediaShop.css';
 
 //import bootstrap
 import { Card } from "react-bootstrap";
+import PageTitle from './PageTitle';
 
 class Shop extends Component {
     render() {
@@ -23,9 +24,7 @@ class Shop extends Component {
                         <Card id="content">
 
                             <div className="all-view-component">
-                                <div className="title">
-                                    <h2 className="h1">Shop</h2>
-                                </div>
+                                <PageTitle title={"Shop"} />
 
                                 <div className="all-products">
                                     <div className="product"></div>

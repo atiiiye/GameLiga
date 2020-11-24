@@ -10,6 +10,7 @@ import { Table } from 'reactstrap';
 //import components
 import Sidebar from "./Sidebar";
 import UserHeader from "./UserHeader";
+import PageTitle from './PageTitle';
 
 //import packages
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -34,13 +35,11 @@ class LeaderBoards extends Component {
           <div className="container-fluid leader-boards">
             <Card id="content">
               <div className="all-view-component">
-                <div className="title">
-                  <h2 className="h1">Leader boards</h2>
-                  <p className="text-muted">
-                    View the weekly, monthly and all-time ranking for XP,
-                    earning and trophies
+                <PageTitle title={"Leader boards"} />
+                <p className="text-muted">
+                  View the weekly, monthly and all-time ranking for XP,
+                  earning and trophies
                   </p>
-                </div>
                 <div className="buttons-top">
                   <div className="all-button xp">XP</div>
                   <div className="all-button console">CONSOLE</div>

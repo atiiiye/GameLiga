@@ -15,16 +15,16 @@ import TableHead from '../../utils/DataTable/TableHead'
 import TableBody from '../../utils/DataTable/TableBody'
 import Loader from '../Loader'
 import http from './../../Services/httpService';
-import DataTable from '../../utils/DataTable/DataTable';
+// import DataTable from '../../utils/DataTable/DataTable';
 
 
 const AllNews = () => {
 
     const [comments, setComments] = useState([])
-    const [loader, setLoader] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [totalItems, setTotalItems] = useState(0)
-    const [currentPage, setCurrentPage] = useState()
-    const ITEMS_PER_PAGE = 50;
+    const [currentPage, setCurrentPage] = useState(1)
+    const ITEMS_PER_PAGE = 10;
 
     const headers = [
         { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date" },
@@ -44,42 +44,61 @@ const AllNews = () => {
     ]
 
 
-    // useEffect(() => {
-    //     const getData = () => {
-    //         setLoader(true);
-    //         http.get("https://jsonplaceholder.typicode.com/comments")
-    //             .then(response => {
-    //                 setLoader(false);
-    //                 setComments(response.data)
+    useEffect(() => {
+        const getData = async () => {
+            setLoading(true);
+            await http.get("https://jsonplaceholder.typicode.com/comments")
+                .then(response => {
+                    setLoading(false);
+                    setComments(response.data)
 
+                    // console.log("response is :", response.data)/
+                    console.log("comments is :", comments)
+                })
+                .catch(error => console.log(error))
+        }
+        getData();
+    }, [])
 
-    //                 // console.log("response is :", response.data)/
-    //                 console.log("comments is :", comments)
-    //             })
-    //             .catch(error => console.log(error))
-    //     }
+    const commentsData = useMemo(() => {
+        let computedComments = comments;
+        console.log("computedComments", computedComments.length)
 
+        setTotalItems(computedComments.length)
+        console.log("totalItems", totalItems)
 
-    //     getData();
-    // }, [])
-
-    // const commentsData = useMemo(() => {
-    //     let computedComments = comments;
-
-    //     setTotalItems(computedComments.length)
-
-    //     return computedComments
-    //         .slice(
-    //             (currentPage - 1) * ITEMS_PER_PAGE,
-    //             (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE,
-    //         );
-    // }, [comments, currentPage])
+        return computedComments
+            .slice(
+                (currentPage - 1) * ITEMS_PER_PAGE,
+                (currentPage - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE,
+            );
+    }, [comments, currentPage, totalItems])
 
     return (
         <div style={{ display: "flex" }}>
             <div className="container-fluid page-body-wrapper">
                 <AdminHeader />
-                <DataTable />
+                <div className="parent-table">
+                    <div className="pagination-search-box">
+                        <div className="pagination-section">
+                            <PaginationPlugin
+                                total={totalItems}
+                                itemsPerPage={ITEMS_PER_PAGE}
+                                currentPage={currentPage}
+                                onPageChange={page => setCurrentPage({ currentPage: page })}
+                            />
+                        </div>
+                        <div className="search-section">
+                            <SearchBox />
+                        </div>
+                    </div>
+
+                    <Table id="allNews" className="mt-3" striped borderless hover>
+                        <TableHead headers={headers} />
+                        <TableBody body={commentsData} />
+                    </Table>
+                    {loading && <Loader />}
+                </div>
             </div>
             <AdminSidebar />
         </div>
