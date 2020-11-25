@@ -16,7 +16,7 @@ thead {
             justify-content: center;
 
             th.header-head {
-                color: #000000;
+                color: rgba($color: $color-light, $alpha: .8);
                 font-weight: bold;
                 padding-right: .25rem;
                 letter-spacing: .15rem;
@@ -24,7 +24,7 @@ thead {
 
             svg.sort-table {
                 font-size: 14px;
-                fill: $color-gray-2;
+                fill: $color-dark;
             }
 
 

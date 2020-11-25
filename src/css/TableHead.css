@@ -21,7 +21,7 @@ thead tr.header-row div.header-box {
 }
 
 thead tr.header-row div.header-box th.header-head {
-  color: #000000;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   padding-right: .25rem;
   letter-spacing: .15rem;
@@ -29,6 +29,6 @@ thead tr.header-row div.header-box th.header-head {
 
 thead tr.header-row div.header-box svg.sort-table {
   font-size: 14px;
-  fill: #959aa2;
+  fill: #000000;
 }
 /*# sourceMappingURL=TableHead.css.map */

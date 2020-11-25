@@ -1,19 +1,37 @@
 @import './base';
 
 tbody {
+    max-width: 100%;
+
     tr.body-row {
 
         display: flex;
-        width: 100% ;
+        width: 100%;
         justify-content: space-between;
+        align-items: center;
 
         th.body-head {
             color: rgba($color: $color-dark, $alpha: .5);
         }
 
         td.body-data {
+            display: flex;
+            // width: 100%;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+
             color: rgba($color: $color-dark, $alpha: .5);
 
+            svg.edit-icon {
+                fill: rgba($color: $color-yellow, $alpha: 1.0);
+            }
+
+            i.material-icons {
+                color: rgba($color: $color-danger, $alpha: 1.0);
+            }
         }
+
+
     }
 }

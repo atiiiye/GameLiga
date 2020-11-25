@@ -1,51 +1,71 @@
 import React, { useEffect, useState, useMemo } from 'react'
 
 //import bootstrap
-import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+// import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+// import Pagination from 'react-bootstrap/Pagination'
 
+//import css 
+import "./../css/PaginationPlugin.css"
 
-const PaginationPlugin = ({ total = 0, itemsPerPage = 10, currentPage = 1, onPageChange }) => {
+import { range } from "lodash";
 
-    const [totalPages, setTotalPages] = useState(0);
+const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) => {
 
-    const paginationItems = useMemo(() => {
-        const pages = []
-        for (let i = 1; i < total; i++) {
-            pages.push(<PaginationItem
-                active={i === currentPage}
-                onClick={() => onPageChange(i)}
-                key={i}>
-                <PaginationLink href="#">
-                    {i}
-                </PaginationLink>
-            </PaginationItem>)
-        }
+    const pageCount = Math.ceil(total / itemsPerPage);
+    if (pageCount === 1) return null;
 
-        return pages;
-    }, [totalPages, currentPage])
+    const pages = range(1, pageCount + 1);
 
-    useEffect(() => {
-
-        if (total > 0 && itemsPerPage > 0)
-            setTotalPages(Math.ceil(total / itemsPerPage))
-
-    }, [total, itemsPerPage])
-
-    if (totalPages === 0) return null;
+    console.log("pages :", pages)
 
     return (
-        <div>
-            <Pagination>
-                <PaginationItem onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
-                    <PaginationLink previous href="#" />
-                </PaginationItem>
-                {paginationItems}
-                <PaginationItem onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-                    <PaginationLink next href="#" />
-                </PaginationItem>
-            </Pagination>
+        <nav aria-label="Page navigation" className="nav-pagination">
+            <ul className="pagination">
+                <li
+                    className={
+                        currentPage !== 1
+                            ? "page-item"
+                            : "page-item disabled"
+                    }
+                >
+                    <a
+                        className="page-link"
+                        onClick={() => onPageChange(currentPage - 1)}
+                    >
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                </li>
+                {pages.map(page => (
+                    <li
+                        key={page}
+                        className="page-item"
+                    >
+                        <a
+                            className={`page-link ${page === currentPage ? "active" : ""}`}
+                            onClick={() => onPageChange(page)}
+                        >
+                            {page}
+                        </a>
+                    </li>
 
-        </div>
+                ))}
+                {/* <Pagination.Ellipsis /> */}
+                <li
+                    className={
+                        currentPage === pageCount
+                            ? "page-item disabled"
+                            : "page-item "
+                    }
+                >
+                    <a
+                        className="page-link"
+                        onClick={() => onPageChange(currentPage + 1)}
+                    >
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     )
 }
 

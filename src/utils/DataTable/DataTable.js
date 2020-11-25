@@ -12,6 +12,7 @@ import Loader from '../../Components/Loader'
 import SearchBox from '../../Components/SearchBox'
 import http from '../../Services/httpService'
 import PaginationPlugin from '../PaginationPlugin'
+import SearchTable from './SearchTable'
 
 // const DataTable = () => {
 //     return ( 
@@ -24,7 +25,7 @@ import PaginationPlugin from '../PaginationPlugin'
 // export default DataTable;
 
 
-export class DataTable extends Component {
+class DataTable extends Component {
 
     state = {
         loading: false,
@@ -33,7 +34,7 @@ export class DataTable extends Component {
         comments: []
     }
 
-    ITEMS_PER_PAGE = 50;
+    ITEMS_PER_PAGE = 10;
 
     headers = [
         { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date" },
@@ -89,7 +90,7 @@ export class DataTable extends Component {
                         />
                     </div>
                     <div className="search-section">
-                        <SearchBox />
+                        <SearchTable />
                     </div>
                 </div>
 

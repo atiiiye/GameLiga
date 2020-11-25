@@ -4,17 +4,34 @@ body {
   background-color: #1c1c22;
 }
 
+tbody {
+  max-width: 100%;
+}
+
 tbody tr.body-row {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 tbody tr.body-row th.body-head {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 tbody tr.body-row td.body-data {
-  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+tbody tr.body-row td.body-data svg.edit-icon {
+  fill: #ffc107;
+}
+
+tbody tr.body-row td.body-data i.material-icons {
+  color: #dc3545;
 }
 /*# sourceMappingURL=TableBody.css.map */

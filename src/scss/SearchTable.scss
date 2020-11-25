@@ -1,0 +1,15 @@
+@import './base';
+
+div.parent-input {
+    width: 70%;
+
+    input.form-control.search-table {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    button.search-btn {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}

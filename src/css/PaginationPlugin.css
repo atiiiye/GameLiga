@@ -1,0 +1,41 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+nav.nav-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav.nav-pagination ul.pagination {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1px 0.1rem rgba(255, 255, 255, 0.2);
+}
+
+nav.nav-pagination ul.pagination li.page-item:hover > a.page-link {
+  text-shadow: 2px 2px 0.1rem rgba(255, 255, 255, 0.27);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 95%;
+}
+
+nav.nav-pagination ul.pagination li.page-item a.page-link {
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 90%;
+  background: transparent;
+  cursor: pointer;
+}
+
+nav.nav-pagination ul.pagination li.page-item a.page-link.active {
+  color: #000000;
+  font-size: 95%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+/*# sourceMappingURL=PaginationPlugin.css.map */

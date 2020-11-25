@@ -15,8 +15,10 @@ import TableHead from '../../utils/DataTable/TableHead'
 import TableBody from '../../utils/DataTable/TableBody'
 import Loader from '../Loader'
 import http from './../../Services/httpService';
+import DataTable from '../../utils/DataTable/DataTable';
+import SearchTable from '../../utils/DataTable/SearchTable';
 // import DataTable from '../../utils/DataTable/DataTable';
-
+import { paginate } from "./../../utils/paginate";
 
 const AllNews = () => {
 
@@ -24,10 +26,11 @@ const AllNews = () => {
     const [loading, setLoading] = useState(false);
     const [totalItems, setTotalItems] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
-    const ITEMS_PER_PAGE = 10;
+    const ITEMS_PER_PAGE = 25;
+    const pageSize = pageSize || 10;
 
     const headers = [
-        { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date" },
+        { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date", edit: "Edit", delete: "Delete" },
     ];
 
     const body = [
@@ -51,9 +54,6 @@ const AllNews = () => {
                 .then(response => {
                     setLoading(false);
                     setComments(response.data)
-
-                    // console.log("response is :", response.data)/
-                    console.log("comments is :", comments)
                 })
                 .catch(error => console.log(error))
         }
@@ -62,10 +62,8 @@ const AllNews = () => {
 
     const commentsData = useMemo(() => {
         let computedComments = comments;
-        console.log("computedComments", computedComments.length)
 
         setTotalItems(computedComments.length)
-        console.log("totalItems", totalItems)
 
         return computedComments
             .slice(
@@ -74,6 +72,9 @@ const AllNews = () => {
             );
     }, [comments, currentPage, totalItems])
 
+
+    // const archiveCourses = paginate(totalItems, currentPage, ITEMS_PER_PAGE)
+
     return (
         <div style={{ display: "flex" }}>
             <div className="container-fluid page-body-wrapper">
@@ -81,15 +82,16 @@ const AllNews = () => {
                 <div className="parent-table">
                     <div className="pagination-search-box">
                         <div className="pagination-section">
-                            <PaginationPlugin
+                            {/* <PaginationPlugin
                                 total={totalItems}
                                 itemsPerPage={ITEMS_PER_PAGE}
                                 currentPage={currentPage}
-                                onPageChange={page => setCurrentPage({ currentPage: page })}
-                            />
+                                onPageChange={page => setCurrentPage(page)}
+                            /> */}
+
                         </div>
                         <div className="search-section">
-                            <SearchBox />
+                            <SearchTable />
                         </div>
                     </div>
 
@@ -98,7 +100,16 @@ const AllNews = () => {
                         <TableBody body={commentsData} />
                     </Table>
                     {loading && <Loader />}
+                    <PaginationPlugin
+                        total={totalItems}
+                        itemsPerPage={ITEMS_PER_PAGE}
+                        currentPage={currentPage}
+                        pageSize={pageSize}
+                        onPageChange={page => setCurrentPage(page)}
+                    />
                 </div>
+
+                {/* <DataTable /> */}
             </div>
             <AdminSidebar />
         </div>
