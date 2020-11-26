@@ -32,16 +32,18 @@ div.container-fluid.page-body-wrapper div.parent-table div.pagination-search-box
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 55px;
 }
 
 div.container-fluid.page-body-wrapper div.parent-table div.pagination-search-box div.pagination-section {
-  width: 50%;
+  width: 55%;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 div.container-fluid.page-body-wrapper div.parent-table div.pagination-search-box div.search-section {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   align-items: center;

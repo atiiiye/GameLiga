@@ -4,21 +4,18 @@ import React, { useState, useEffect, useMemo } from 'react'
 import './../../css/AllNews.css';
 
 //import bootstrap
-import { Table, Pagination, PaginationItem, PaginationLink } from 'reactstrap'
+import { Table } from 'reactstrap'
 
 //import components
 import AdminHeader from './AdminHeader'
 import AdminSidebar from './AdminSidebar'
 import PaginationPlugin from './../../utils/PaginationPlugin'
-import SearchBox from '../SearchBox'
 import TableHead from '../../utils/DataTable/TableHead'
 import TableBody from '../../utils/DataTable/TableBody'
 import Loader from '../Loader'
 import http from './../../Services/httpService';
 import DataTable from '../../utils/DataTable/DataTable';
 import SearchTable from '../../utils/DataTable/SearchTable';
-// import DataTable from '../../utils/DataTable/DataTable';
-import { paginate } from "./../../utils/paginate";
 
 const AllNews = () => {
 
@@ -26,8 +23,7 @@ const AllNews = () => {
     const [loading, setLoading] = useState(false);
     const [totalItems, setTotalItems] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
-    const ITEMS_PER_PAGE = 25;
-    const pageSize = pageSize || 10;
+    const ITEMS_PER_PAGE = 10;
 
     const headers = [
         { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date", edit: "Edit", delete: "Delete" },
@@ -45,7 +41,6 @@ const AllNews = () => {
         { id: 9, Title: "Title9", Text: "Text news 9", Image: "Image 9", Auther: "Auther news 9", Date: "2020/02/20" },
         { id: 10, Title: "Title10", Text: "Text news 10", Image: "Image 10", Auther: "Auther news 10", Date: "2020/02/20" },
     ]
-
 
     useEffect(() => {
         const getData = async () => {
@@ -73,29 +68,28 @@ const AllNews = () => {
     }, [comments, currentPage, totalItems])
 
 
-    // const archiveCourses = paginate(totalItems, currentPage, ITEMS_PER_PAGE)
 
     return (
         <div style={{ display: "flex" }}>
             <div className="container-fluid page-body-wrapper">
                 <AdminHeader />
                 <div className="parent-table">
-                    <div className="pagination-search-box">
+                    {/* <div className="pagination-search-box">
                         <div className="pagination-section">
-                            {/* <PaginationPlugin
+                            <PaginationPlugin
                                 total={totalItems}
                                 itemsPerPage={ITEMS_PER_PAGE}
                                 currentPage={currentPage}
                                 onPageChange={page => setCurrentPage(page)}
-                            /> */}
+                            />
 
                         </div>
                         <div className="search-section">
                             <SearchTable />
                         </div>
-                    </div>
+                    </div> */}
 
-                    <Table id="allNews" className="mt-3" striped borderless hover>
+                    {/* <Table id="allNews" className="mt-3" striped borderless hover>
                         <TableHead headers={headers} />
                         <TableBody body={commentsData} />
                     </Table>
@@ -104,12 +98,31 @@ const AllNews = () => {
                         total={totalItems}
                         itemsPerPage={ITEMS_PER_PAGE}
                         currentPage={currentPage}
-                        pageSize={pageSize}
+                        onPageChange={page => setCurrentPage(page)}
+                    /> */}
+
+                    <DataTable
+                        totalItems={totalItems}
+                        ITEMS_PER_PAGE={ITEMS_PER_PAGE}
+                        currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}
+                        loading={loading}
+                        searchItems={commentsData}
+                    />
+
+                    <Table id="allNews" className="mt-3" striped borderless hover>
+                        <TableHead headers={headers} />
+                        <TableBody body={commentsData} />
+                    </Table>
+
+                    {loading && <Loader />}
+                    <PaginationPlugin
+                        total={totalItems}
+                        itemsPerPage={ITEMS_PER_PAGE}
+                        currentPage={currentPage}
                         onPageChange={page => setCurrentPage(page)}
                     />
                 </div>
-
-                {/* <DataTable /> */}
             </div>
             <AdminSidebar />
         </div>

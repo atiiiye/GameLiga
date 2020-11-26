@@ -5,6 +5,7 @@ import AdminHeader from "./AdminHeader";
 import AdminPanel from "./AdminPanel";
 import AdminSidebar from "./AdminSidebar";
 import Loader from "./../Loader";
+import PageTitle from "./../PageTitle"
 
 //import css
 import "./../../css/AddNews.css";
@@ -149,9 +150,10 @@ export class AddNews extends Component {
         <div className="container-fluid page-body-wrapper">
           <AdminHeader />
           <div className="all-content">
-            <div className="title-page">
+            {/* <div className="title-page">
               <h2 className="h1">Add News</h2>
-            </div>
+            </div> */}
+            <PageTitle title="Add News" />
             <Form
               className="add-news-form"
               onSubmit={(e) => this.handleSubmit(e)}
@@ -227,13 +229,13 @@ export class AddNews extends Component {
               <Button
                 className={`button-add-news 
                 ${!errors.title &&
-                  !errors.description &&
-                  !errors.file &&
-                  this.state.title &&
-                  this.state.description &&
-                  this.state.file
-                  ? ""
-                  : "disabled"
+                    !errors.description &&
+                    !errors.file &&
+                    this.state.title &&
+                    this.state.description &&
+                    this.state.file
+                    ? ""
+                    : "disabled"
                   }`}
                 type="submit"
               // onClick={this.onClickHandler}

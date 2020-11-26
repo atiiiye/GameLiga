@@ -8,6 +8,7 @@ import React, { useEffect, useState, useMemo } from 'react'
 import "./../css/PaginationPlugin.css"
 
 import { range } from "lodash";
+import { NavLink } from 'react-router-dom';
 
 const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) => {
 
@@ -18,51 +19,47 @@ const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) =>
 
     console.log("pages :", pages)
 
+    const pageLimit = (pages) => {
+        if (pages > 5) {
+            console.log('hhh')
+        }
+    }
+
     return (
         <nav aria-label="Page navigation" className="nav-pagination">
             <ul className="pagination">
-                <li
-                    className={
-                        currentPage !== 1
-                            ? "page-item"
-                            : "page-item disabled"
-                    }
-                >
-                    <a
+                <li className={`page-item ${currentPage !== 1 ? "" : "disabled"}`} >
+                    <NavLink
+                        to="#"
                         className="page-link"
                         onClick={() => onPageChange(currentPage - 1)}
                     >
-                        <i class="fa fa-angle-left"></i>
-                    </a>
+                        <i className="fa fa-angle-left"></i>
+                    </NavLink>
                 </li>
-                {pages.map(page => (
-                    <li
-                        key={page}
-                        className="page-item"
-                    >
-                        <a
-                            className={`page-link ${page === currentPage ? "active" : ""}`}
-                            onClick={() => onPageChange(page)}
-                        >
-                            {page}
-                        </a>
-                    </li>
-
-                ))}
-                {/* <Pagination.Ellipsis /> */}
+                {/* {pages.map(page => ( */}
                 <li
-                    className={
-                        currentPage === pageCount
-                            ? "page-item disabled"
-                            : "page-item "
-                    }
+                    // key={page}
+                    className="page-item"
                 >
-                    <a
+                    {/* <a
+                        className={`page-link ${pageCount === currentPage ? "active" : ""}`}
+                        onClick={() => onPageChange(pageCount)}
+                        href="#"
+                    >
+                        {total, "/", currentPage}
+                    </a> */}
+                    <pre className="page-number">{currentPage}  /  {pageCount}</pre>
+                </li>
+                {/* ))} */}
+                <li className={`page-item ${currentPage === pageCount ? "disabled" : ""}`}>
+                    <NavLink
+                        to="#"
                         className="page-link"
                         onClick={() => onPageChange(currentPage + 1)}
                     >
-                        <i class="fa fa-angle-right"></i>
-                    </a>
+                        <i className="fa fa-angle-right"></i>
+                    </NavLink>
                 </li>
             </ul>
         </nav>

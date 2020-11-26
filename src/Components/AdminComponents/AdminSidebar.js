@@ -39,7 +39,7 @@ export class AdminSidebar extends Component {
           onEntered={() => this.context.onEntered()}
           onExiting={() => this.context.onExiting()}
           onExited={() => this.context.onExited()}
-          // id="sidebar"
+        // id="sidebar"
         >
           <div className="sidebar-brand-wrapper">
             <NavLink className="logo-link" to="/admin">
@@ -68,10 +68,7 @@ export class AdminSidebar extends Component {
             <UncontrolledCollapse toggler="#toggler1" className="sub-collapse">
               <ul className="nav sub-menu">
                 <NavLink className="nav-link" to="/all-users">
-                  <li className="nav-item">List Users</li>
-                </NavLink>
-                <NavLink className="nav-link" to="/signup">
-                  <li className="nav-item">Add User</li>
+                  <li className="nav-item">,Users list</li>
                 </NavLink>
                 <NavLink className="nav-link" to="/delete-user">
                   <li className="nav-item">Delete User</li>
@@ -94,16 +91,10 @@ export class AdminSidebar extends Component {
             >
               <ul className="nav sub-menu">
                 <NavLink className="nav-link" to="/all-news">
-                  <li className="nav-item">All News</li>
+                  <li className="nav-item">News list</li>
                 </NavLink>
                 <NavLink className="nav-link" to="/add-news">
                   <li className="nav-item">Add News</li>
-                </NavLink>
-                <NavLink className="nav-link" to="/edit-news">
-                  <li className="nav-item">Edit News</li>
-                </NavLink>
-                <NavLink className="nav-link" to="/delete-news">
-                  <li className="nav-item">Delete News</li>
                 </NavLink>
               </ul>
             </UncontrolledCollapse>
@@ -138,7 +129,7 @@ export class AdminSidebar extends Component {
             <UncontrolledCollapse toggler="#toggler4" className="sub-collapse">
               <ul className="nav sub-menu">
                 <NavLink className="nav-link" to="/all-games">
-                  <li className="nav-item">List Games</li>
+                  <li className="nav-item">Games List</li>
                 </NavLink>
                 <NavLink className="nav-link" to="/add-games">
                   <li className="nav-item">Add Games</li>

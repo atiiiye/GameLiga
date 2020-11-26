@@ -16,7 +16,7 @@ tbody tr.body-row {
 }
 
 tbody tr.body-row th.body-head {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 tbody tr.body-row td.body-data {
@@ -24,7 +24,7 @@ tbody tr.body-row td.body-data {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 tbody tr.body-row td.body-data svg.edit-icon {

@@ -21,7 +21,7 @@ const TableBody = ({ body }) => {
                     <td className="body-data">{item.email}</td>
                     <td className="body-data">{"2020/10/10"}</td>
                     <td className="body-data"><EditIcon className="edit-icon" /></td>
-                    <td className="body-data"><i class="material-icons">&#xe872;</i></td>
+                    <td className="body-data"><i className="material-icons">&#xe872;</i></td>
                 </tr>
             ))}
         </tbody>

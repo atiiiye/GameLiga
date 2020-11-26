@@ -45,12 +45,12 @@ const TableHead = ({ headers }) => {
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Title')} />
                     </div>
                     <div className="header-box">
-                        <th className="header-head" >{header.Text}</th>
+                        <th className="header-head">{header.Text}</th>
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Text')} />
                     </div>
-                    <div className="header-box">
+                    {/* <div className="header-box">
                         <th className="header-head" >{header.Image}</th>
-                    </div>
+                    </div> */}
                     <div className="header-box">
                         <th className="header-head" >{header.Auther}</th>
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Auther')} />
