@@ -17,9 +17,10 @@ tbody {
         td.body-data {
             display: flex;
             // width: 100%;
-            justify-content: center;
+            justify-content: flex-start;
             flex-direction: row;
             align-items: center;
+            // text-align:left ;
 
             color: rgba($color: $color-dark, $alpha: .5);
 

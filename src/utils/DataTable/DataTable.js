@@ -30,7 +30,7 @@ const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, se
 
             </div>
             <div className="search-section">
-                <SearchTable searchItems={searchItems} />
+                <SearchTable searchItems={searchItems}  />
             </div>
         </div>
 

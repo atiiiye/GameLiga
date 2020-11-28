@@ -68,7 +68,7 @@ export class AdminSidebar extends Component {
             <UncontrolledCollapse toggler="#toggler1" className="sub-collapse">
               <ul className="nav sub-menu">
                 <NavLink className="nav-link" to="/all-users">
-                  <li className="nav-item">,Users list</li>
+                  <li className="nav-item">Users list</li>
                 </NavLink>
                 <NavLink className="nav-link" to="/delete-user">
                   <li className="nav-item">Delete User</li>

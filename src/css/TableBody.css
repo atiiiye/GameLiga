@@ -21,7 +21,7 @@ tbody tr.body-row th.body-head {
 
 tbody tr.body-row td.body-data {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
   align-items: center;
   color: rgba(0, 0, 0, 0.5);

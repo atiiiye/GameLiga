@@ -17,7 +17,7 @@ const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) =>
 
     const pages = range(1, pageCount + 1);
 
-    console.log("pages :", pages)
+    // console.log("pages :", pages)
 
     const pageLimit = (pages) => {
         if (pages > 5) {

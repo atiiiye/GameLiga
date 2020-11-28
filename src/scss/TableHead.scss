@@ -15,11 +15,13 @@ thead {
             align-items: center;
             justify-content: center;
 
+
             th.header-head {
                 color: rgba($color: $color-light, $alpha: .8);
                 font-weight: bold;
                 padding-right: .25rem;
-                letter-spacing: .15rem;
+                letter-spacing: .09rem;
+                // position: absolute;
             }
 
             svg.sort-table {
@@ -28,6 +30,11 @@ thead {
             }
 
 
+        }
+
+        div.header-box.title-box {
+            position: relative;
+            left: -8%;
         }
     }
 

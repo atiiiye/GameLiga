@@ -40,29 +40,29 @@ const TableHead = ({ headers }) => {
                     <div className="header-box">
                         <th className="header-head" >#</th>
                     </div>
-                    <div className="header-box">
-                        <th className="header-head" >{header.Title}</th>
+                    <div className="header-box title-box" >
+                        <th className="header-head">{header.Title}</th>
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Title')} />
                     </div>
-                    <div className="header-box">
+                    <div className="header-box title-box">
                         <th className="header-head">{header.Text}</th>
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Text')} />
                     </div>
-                    {/* <div className="header-box">
+                    {/* <div className="header-box" title-box>
                         <th className="header-head" >{header.Image}</th>
                     </div> */}
-                    <div className="header-box">
+                    <div className="header-box title-box">
                         <th className="header-head" >{header.Auther}</th>
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Auther')} />
                     </div>
-                    <div className="header-box">
+                    <div className="header-box title-box">
                         <th className="header-head" >{header.Date}</th>
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Date')} />
                     </div>
-                    <div className="header-box">
+                    <div className="header-box title-box">
                         <th className="header-head" >{header.edit}</th>
                     </div>
-                    <div className="header-box">
+                    <div className="header-box title-box">
                         <th className="header-head" >{header.delete}</th>
                     </div>
                 </tr>

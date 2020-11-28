@@ -89,25 +89,13 @@ const AllNews = () => {
                         </div>
                     </div> */}
 
-                    {/* <Table id="allNews" className="mt-3" striped borderless hover>
-                        <TableHead headers={headers} />
-                        <TableBody body={commentsData} />
-                    </Table>
-                    {loading && <Loader />}
-                    <PaginationPlugin
-                        total={totalItems}
-                        itemsPerPage={ITEMS_PER_PAGE}
-                        currentPage={currentPage}
-                        onPageChange={page => setCurrentPage(page)}
-                    /> */}
-
                     <DataTable
                         totalItems={totalItems}
                         ITEMS_PER_PAGE={ITEMS_PER_PAGE}
                         currentPage={currentPage}
                         setCurrentPage={setCurrentPage}
                         loading={loading}
-                        searchItems={commentsData}
+                        searchItems={comments}
                     />
 
                     <Table id="allNews" className="mt-3" striped borderless hover>
