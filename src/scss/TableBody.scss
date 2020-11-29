@@ -12,6 +12,7 @@ tbody {
 
         th.body-head {
             color: rgba($color: $color-dark, $alpha: .5);
+            width: max-content;
         }
 
         td.body-data {
@@ -21,15 +22,27 @@ tbody {
             flex-direction: row;
             align-items: center;
             // text-align:left ;
+            padding: .5rem;
+            // margin-right: .5rem;
+            cursor: pointer;
 
             color: rgba($color: $color-dark, $alpha: .5);
 
             svg.edit-icon {
-                fill: rgba($color: $color-yellow, $alpha: 1.0);
+                fill: rgba($color: $color-yellow, $alpha: .75);
+                
+                &:focus, &:hover {
+                    fill: rgba($color: $color-yellow, $alpha: 1.0);
+                }
             }
 
             i.material-icons {
-                color: rgba($color: $color-danger, $alpha: 1.0);
+                color: rgba($color: $color-danger, $alpha: .75);
+                
+                &:focus ,&:hover {
+                    color: rgba($color: $color-danger, $alpha: 1.0);
+                    
+                }
             }
         }
 

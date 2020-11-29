@@ -9,11 +9,12 @@ thead {
         display: flex;
         width: 100%;
         justify-content: space-between;
+        overflow: hidden;
 
         div.header-box {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
 
 
             th.header-head {
@@ -21,6 +22,9 @@ thead {
                 font-weight: bold;
                 padding-right: .25rem;
                 letter-spacing: .09rem;
+                display: flex;
+                justify-content: flex-start;
+
                 // position: absolute;
             }
 
@@ -28,7 +32,6 @@ thead {
                 font-size: 14px;
                 fill: $color-dark;
             }
-
 
         }
 

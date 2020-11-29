@@ -17,6 +17,7 @@ tbody tr.body-row {
 
 tbody tr.body-row th.body-head {
   color: rgba(0, 0, 0, 0.5);
+  width: max-content;
 }
 
 tbody tr.body-row td.body-data {
@@ -24,14 +25,24 @@ tbody tr.body-row td.body-data {
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
+  padding: .5rem;
+  cursor: pointer;
   color: rgba(0, 0, 0, 0.5);
 }
 
 tbody tr.body-row td.body-data svg.edit-icon {
+  fill: rgba(255, 193, 7, 0.75);
+}
+
+tbody tr.body-row td.body-data svg.edit-icon:focus, tbody tr.body-row td.body-data svg.edit-icon:hover {
   fill: #ffc107;
 }
 
 tbody tr.body-row td.body-data i.material-icons {
+  color: rgba(220, 53, 69, 0.75);
+}
+
+tbody tr.body-row td.body-data i.material-icons:focus, tbody tr.body-row td.body-data i.material-icons:hover {
   color: #dc3545;
 }
 /*# sourceMappingURL=TableBody.css.map */

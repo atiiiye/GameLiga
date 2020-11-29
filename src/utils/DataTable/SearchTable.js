@@ -31,11 +31,11 @@ const SearchTable = ({ value, onChange, searchItems }) => {
 
     const handleSearchChange = (event) => {
         const query = event.target.value
+        setQuery(query)
         // console.log("searchItems :", searchItems)
         // setQuery({ searchItems })
         setLoading(true)
         console.log("query is :", query)
-        setQuery(query)
 
 
         // const filteredItems = searchItems.filter(item => {
@@ -48,11 +48,9 @@ const SearchTable = ({ value, onChange, searchItems }) => {
 
 
         let filteredItems = searchItems.filter(value => {
-            // console.log("value :", value)
             if (value.body.toLowerCase().match(query.toLowerCase())) {
                 console.log('object')
                 return (
-                    // value.toLowerCase().includes(query.toLowerCase()) ||
                     value.body.toLowerCase().includes(query.toLowerCase())
                 );
             } else if (value.id.toString().toLowerCase().match(query.toLowerCase())) {
@@ -61,35 +59,20 @@ const SearchTable = ({ value, onChange, searchItems }) => {
                     value.id.toString().toLowerCase().includes(query.toLowerCase())
                 )
             }
+            else {
+                console.log('not match !')
+            }
+
+            return query
         });
 
         setQuery(filteredItems);
         setLoading(false)
+
         setRes(filteredItems);
 
         console.log("filteredItems is :", filteredItems)
     }
-
-    // const fetchSearchResults = () => {
-    //     let filteredData = searchItems.filter(value => {
-    //         return (
-    //             value.toLowerCase().includes(query.toLowerCase()) ||
-    //             value.status.toLowerCase().includes(query.toLowerCase()) ||
-    //             value.visits
-    //                 .toString()
-    //                 .toLowerCase()
-    //                 .includes(query.toLowerCase())
-    //         );
-    //     });
-
-    //     var searchString = query;
-    //     var responseData = res
-    //     if (searchString.length > 0) {
-    //         responseData = responseData.filter(l => {
-    //             console.log(l.name.toLowerCase().match(searchString));
-    //         })
-    //     }
-    // }
 
     return (
         <div className="parent-input" >
@@ -99,14 +82,15 @@ const SearchTable = ({ value, onChange, searchItems }) => {
                 placeholder="search"
                 type="text"
                 name="query"
-                value={query || ""}
-                onChange={(e) => handleSearchChange(e, value)}
+                value={query}
+                onChange={(e) => handleSearchChange(e)}
             >
             </Form.Control>
             {loading && <Loader />}
-            {
+
+            {/* {
                 res ? < TableBody body={setRes} /> : errorMessage("Search not found ...")
-            }
+            } */}
 
             {/* <Button className="search-btn " varient="primary" type="button"><SearchIcon /></Button> */}
         </div>

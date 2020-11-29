@@ -40,7 +40,7 @@ const TableHead = ({ headers }) => {
                     <div className="header-box">
                         <th className="header-head" >#</th>
                     </div>
-                    <div className="header-box title-box" >
+                    <div className="header-box title-box" style={{width : "10%"}}>
                         <th className="header-head">{header.Title}</th>
                         <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Title')} />
                     </div>

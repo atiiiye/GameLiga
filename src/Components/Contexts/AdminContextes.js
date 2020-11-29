@@ -15,27 +15,27 @@ class AdminContextes extends Component {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
     pageBodyWrapper.style.width = "80%";
 
-    console.log("Opening...");
+    // console.log("Opening...");
   };
 
   onEntered = () => {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
     pageBodyWrapper.style.width = "80%";
-    console.log("Opened...");
+    // console.log("Opened...");
   };
 
   onExiting = () => {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
     pageBodyWrapper.style.width = "100%";
 
-    console.log("Closing...");
+    // console.log("Closing...");
   };
 
   onExited = () => {
     let pageBodyWrapper = document.querySelector(".page-body-wrapper");
     pageBodyWrapper.style.width = "100%";
 
-    console.log("Closed...");
+    // console.log("Closed...");
   };
   render() {
     return (
