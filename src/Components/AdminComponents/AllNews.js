@@ -20,6 +20,7 @@ import SearchTable from '../../utils/DataTable/SearchTable';
 const AllNews = () => {
 
     const [comments, setComments] = useState([])
+    const [searchDefault, setSearchDefault] = useState([])
     const [loading, setLoading] = useState(false);
     const [totalItems, setTotalItems] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
@@ -42,6 +43,7 @@ const AllNews = () => {
         { id: 10, Title: "Title10", Text: "Text news 10", Image: "Image 10", Auther: "Auther news 10", Date: "2020/02/20" },
     ]
 
+
     useEffect(() => {
         const getData = async () => {
             setLoading(true);
@@ -49,6 +51,7 @@ const AllNews = () => {
                 .then(response => {
                     setLoading(false);
                     setComments(response.data)
+                    setSearchDefault(response.data)
                 })
                 .catch(error => console.log(error))
         }
@@ -68,27 +71,11 @@ const AllNews = () => {
     }, [comments, currentPage, totalItems])
 
 
-
     return (
         <div style={{ display: "flex" }}>
             <div className="container-fluid page-body-wrapper">
                 <AdminHeader />
                 <div className="parent-table">
-                    {/* <div className="pagination-search-box">
-                        <div className="pagination-section">
-                            <PaginationPlugin
-                                total={totalItems}
-                                itemsPerPage={ITEMS_PER_PAGE}
-                                currentPage={currentPage}
-                                onPageChange={page => setCurrentPage(page)}
-                            />
-
-                        </div>
-                        <div className="search-section">
-                            <SearchTable />
-                        </div>
-                    </div> */}
-
                     <DataTable
                         totalItems={totalItems}
                         ITEMS_PER_PAGE={ITEMS_PER_PAGE}

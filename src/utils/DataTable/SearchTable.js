@@ -5,10 +5,8 @@ import React, { useEffect, useState } from 'react'
 import './../../css/SearchTable.css'
 
 //import bootstrap
-import { Form, Button } from "react-bootstrap";
-
-//import packages
-import SearchIcon from '@material-ui/icons/Search';
+import { Form } from "react-bootstrap";
+import { Table } from 'reactstrap'
 
 //import utils
 import { errorMessage } from '../messages';
@@ -16,83 +14,104 @@ import { errorMessage } from '../messages';
 //import components
 import Loader from '../../Components/Loader';
 import TableBody from './TableBody';
+import TableHead from './TableHead';
 
+// import SearchField from 'react-search-field';
 
-const SearchTable = ({ value, onChange, searchItems }) => {
+const SearchTable = ({ value, onChange, searchItems, searchDefault }) => {
 
     const [loading, setLoading] = useState(false)
-    const [query, setQuery] = useState('')
-    const [message, setMessage] = useState('')
-    const [res, setRes] = useState('')
-    const [data, setData] = useState([])
+    const [query, setQuery] = useState()
+    // const [input, setInput] = useState('')
     const [filteredData, setFilteredData] = useState([])
+    const [searchInput, setSearchInput] = useState("");
 
 
+    // const handleChange = (event) => {
+    //     let data = event.target.value
+    //     setQuery(data)
+    //     setLoading(true)
+    //     // filtered()
+    //     console.log("query is :", query)      
+    // }
 
-    const handleSearchChange = (event) => {
-        const query = event.target.value
-        setQuery(query)
-        // console.log("searchItems :", searchItems)
-        // setQuery({ searchItems })
+
+    const handleChange = val => {
+        setSearchInput(val);
+        console.log('val :', val)
+        console.log('searchInput not mount :', searchInput)
         setLoading(true)
-        console.log("query is :", query)
+        filtered()
+    }
 
-
-        // const filteredItems = searchItems.filter(item => {
-        //     if (item.name.toLowerCase() === query.toLowerCase())
-        //         return (item)
-
-        //     else
-        //     errorMessage("Search not found ...");
-        // });
-
-
+    useEffect(() => {
+        console.log('searchInput mount:', searchInput)
         let filteredItems = searchItems.filter(value => {
-            if (value.body.toLowerCase().match(query.toLowerCase())) {
-                console.log('object')
-                return (
-                    value.body.toLowerCase().includes(query.toLowerCase())
-                );
-            } else if (value.id.toString().toLowerCase().match(query.toLowerCase())) {
-                console.log('object else')
-                return (
-                    value.id.toString().toLowerCase().includes(query.toLowerCase())
-                )
+
+            if (searchInput !== "" && value.body.toLowerCase().match(searchInput.toLocaleLowerCase())) {
+                console.log('body is match :)')
+                console.log(value);
+                // return value.body.toLowerCase().match(searchInput.toLowerCase())
+                  return < TableBody body = { value } />
+                    
+            } else if (searchInput !== "" && value.id.toString().toLowerCase().match(searchInput.toString().toLowerCase())) {
+                console.log('id is match :)')
+                console.log(value)
+                return <TableBody body={value} />
+
+                // return value.id.toString().toLowerCase().match(searchInput.toString().toLowerCase())
             }
             else {
-                console.log('not match !')
+                console.log('query is not match :(')
+                errorMessage("No news found !")
             }
 
-            return query
         });
-
-        setQuery(filteredItems);
         setLoading(false)
+    }, [searchInput])
 
-        setRes(filteredItems);
+    const filtered = () => {
+        // let filteredItems = searchItems.filter(value => {
+        //     // console.log('value.body :', value.body.toLowerCase())
+        //     if (searchInput !== "" && value.body.toLowerCase().match(searchInput.toLocaleLowerCase())) {
+        //         console.log('body is match :)')
+        //         // return value.body.toLowerCase().includes(searchInput.toLowerCase())
+        //         return <TableBody body={value} />
+        //     } else if (value.id.toString().toLowerCase().match(searchInput.toLowerCase())) {
+        //         console.log('id is match :)')
+        //         return value.id.toString().toLowerCase().includes(searchInput.toLowerCase())
+        //     }
+        //     else {
+        //         console.log('query is not match :(')
+        //         return []
+        //     }
 
-        console.log("filteredItems is :", filteredItems)
+
+        // });
+        // setInput(filteredItems);
+        // console.log("input :", input)
+        // setQuery(filteredItems);
+
+        // setLoading(false)
+        // setRes(filteredItems);
+        // console.log("filteredItems is :", filteredItems)
+        {/* {console.log("res :", res)} */ }
     }
+
 
     return (
         <div className="parent-input" >
-            {console.log("res :", res)}
             <Form.Control
                 className="search-table"
                 placeholder="search"
                 type="text"
                 name="query"
-                value={query}
-                onChange={(e) => handleSearchChange(e)}
+                value={searchInput}
+                onChange={(e) => handleChange(e.target.value)}
             >
             </Form.Control>
             {loading && <Loader />}
 
-            {/* {
-                res ? < TableBody body={setRes} /> : errorMessage("Search not found ...")
-            } */}
-
-            {/* <Button className="search-btn " varient="primary" type="button"><SearchIcon /></Button> */}
         </div>
     )
 }

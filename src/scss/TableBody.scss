@@ -11,7 +11,7 @@ tbody {
         align-items: center;
 
         th.body-head {
-            color: rgba($color: $color-dark, $alpha: .5);
+            color: rgba($color: $color-light, $alpha: .75);
             width: max-content;
         }
 
@@ -26,7 +26,7 @@ tbody {
             // margin-right: .5rem;
             cursor: pointer;
 
-            color: rgba($color: $color-dark, $alpha: .5);
+            color: rgba($color: $color-light, $alpha: .5);
 
             svg.edit-icon {
                 fill: rgba($color: $color-yellow, $alpha: .75);

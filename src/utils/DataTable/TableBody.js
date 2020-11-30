@@ -27,7 +27,6 @@ const TableBody = ({ body }) => {
         // console.log("filtered :", filtered)
         // (filtered)
         // body = [filtered]
-
     }
 
     // console.log(contents)

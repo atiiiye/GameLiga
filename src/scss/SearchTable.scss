@@ -8,6 +8,8 @@ div.parent-input {
         // border-top-right-radius: 0;
         background-color: rgba($color: $color-gray-2, $alpha: .1);
         border-color: rgba($color: $color-light, $alpha: .2);
+        color: rgba($color: $color-light, $alpha: .75);
+
 
         &::placeholder {
             color: rgba($color: $color-light, $alpha: .7);

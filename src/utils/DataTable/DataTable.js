@@ -13,7 +13,7 @@ import http from '../../Services/httpService'
 import PaginationPlugin from '../PaginationPlugin'
 import SearchTable from './SearchTable'
 
-const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, searchItems }) => {
+const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, searchItems ,  }) => {
 
     // const [loading, setLoading] = useState(false);
 
