@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,AAAA,cAAc,CAAC;EACd,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "../scss/LayoutAdmin.scss"
+    ],
+    "names": [],
+    "file": "LayoutAdmin.css"
+}

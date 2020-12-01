@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-
 //import css
 import './../../css/SearchTable.css'
 
 //import bootstrap
 import { Form } from "react-bootstrap";
-import { Table } from 'reactstrap'
 
 //import utils
 import { errorMessage } from '../messages';
@@ -14,89 +12,65 @@ import { errorMessage } from '../messages';
 //import components
 import Loader from '../../Components/Loader';
 import TableBody from './TableBody';
-import TableHead from './TableHead';
 
 // import SearchField from 'react-search-field';
 
-const SearchTable = ({ value, onChange, searchItems, searchDefault }) => {
+const SearchTable = ({ value, onChange, searchItems, searchDefault, headers }) => {
 
     const [loading, setLoading] = useState(false)
     const [query, setQuery] = useState()
     // const [input, setInput] = useState('')
-    const [filteredData, setFilteredData] = useState([])
+    const [filteredData, setFilteredData] = useState(false)
     const [searchInput, setSearchInput] = useState("");
-
-
-    // const handleChange = (event) => {
-    //     let data = event.target.value
-    //     setQuery(data)
-    //     setLoading(true)
-    //     // filtered()
-    //     console.log("query is :", query)      
-    // }
 
 
     const handleChange = val => {
         setSearchInput(val);
         console.log('val :', val)
-        console.log('searchInput not mount :', searchInput)
+        console.log('searchInput mount :', searchInput)
         setLoading(true)
         filtered()
+
     }
 
-    useEffect(() => {
-        console.log('searchInput mount:', searchInput)
-        let filteredItems = searchItems.filter(value => {
+    const filtered = () => {
 
+        searchItems.filter(value => {
             if (searchInput !== "" && value.body.toLowerCase().match(searchInput.toLocaleLowerCase())) {
                 console.log('body is match :)')
                 console.log(value);
+                // setFilteredData(true)
+                // return 'kkkk'
+                return <TableBody body={value} />
+
                 // return value.body.toLowerCase().match(searchInput.toLowerCase())
-                  return < TableBody body = { value } />
-                    
+
             } else if (searchInput !== "" && value.id.toString().toLowerCase().match(searchInput.toString().toLowerCase())) {
                 console.log('id is match :)')
                 console.log(value)
+                // setFilteredData(true)
                 return <TableBody body={value} />
-
                 // return value.id.toString().toLowerCase().match(searchInput.toString().toLowerCase())
+
             }
-            else {
+            else if (
+                searchInput !== "" && value.body.toLocaleLowerCase() !== searchInput.toString().toLowerCase()
+                // searchInput !== "" && value.name.toLocaleLowerCase() !== searchInput.toString().toLowerCase() ||
+                // searchInput !== "" && value.id.toString().toLowerCase() !== searchInput.toString().toLowerCase()
+            ) {
                 console.log('query is not match :(')
                 errorMessage("No news found !")
+                // return searchInput.toString().toLowerCase()
             }
 
         });
+    }
+
+    useEffect(() => {
+        console.log('searchInput update :', searchInput)
+        filtered()
         setLoading(false)
     }, [searchInput])
-
-    const filtered = () => {
-        // let filteredItems = searchItems.filter(value => {
-        //     // console.log('value.body :', value.body.toLowerCase())
-        //     if (searchInput !== "" && value.body.toLowerCase().match(searchInput.toLocaleLowerCase())) {
-        //         console.log('body is match :)')
-        //         // return value.body.toLowerCase().includes(searchInput.toLowerCase())
-        //         return <TableBody body={value} />
-        //     } else if (value.id.toString().toLowerCase().match(searchInput.toLowerCase())) {
-        //         console.log('id is match :)')
-        //         return value.id.toString().toLowerCase().includes(searchInput.toLowerCase())
-        //     }
-        //     else {
-        //         console.log('query is not match :(')
-        //         return []
-        //     }
-
-
-        // });
-        // setInput(filteredItems);
-        // console.log("input :", input)
-        // setQuery(filteredItems);
-
-        // setLoading(false)
-        // setRes(filteredItems);
-        // console.log("filteredItems is :", filteredItems)
-        {/* {console.log("res :", res)} */ }
-    }
 
 
     return (

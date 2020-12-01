@@ -146,107 +146,107 @@ export class AddNews extends Component {
   render() {
     const { errors, loading } = this.state;
     return (
-      <div style={{ display: "flex" }}>
-        <div className="container-fluid page-body-wrapper">
-          <AdminHeader />
-          <div className="all-content">
-            {/* <div className="title-page">
+      // <div style={{ display: "flex" }}>
+      <div className="container-fluid page-body-wrapper">
+        <AdminHeader />
+        <div className="all-content">
+          {/* <div className="title-page">
               <h2 className="h1">Add News</h2>
             </div> */}
-            <PageTitle title="Add News" />
-            <Form
-              className="add-news-form"
-              onSubmit={(e) => this.handleSubmit(e)}
-              id="addNews"
-              noValidate
-            >
-              <FormGroup>
-                <Label className="form-label" for="title">
-                  Title :
+          <PageTitle title="Add News" />
+          <Form
+            className="add-news-form"
+            onSubmit={(e) => this.handleSubmit(e)}
+            id="addNews"
+            noValidate
+          >
+            <FormGroup>
+              <Label className="form-label" for="title">
+                Title :
                 </Label>
-                <Input
-                  autoFocus
-                  className="form-input"
-                  type="text"
-                  name="title"
-                  id="title"
-                  value={this.state.title}
-                  onChange={(e) => this.handleChangeAddNews(e)}
-                  placeholder="Enter title of news"
-                  noValidate
-                />
-                {errors.title.length > 0 && (
-                  <span className="form-validate">{errors.title}</span>
-                )}
-              </FormGroup>
+              <Input
+                autoFocus
+                className="form-input"
+                type="text"
+                name="title"
+                id="title"
+                value={this.state.title}
+                onChange={(e) => this.handleChangeAddNews(e)}
+                placeholder="Enter title of news"
+                noValidate
+              />
+              {errors.title.length > 0 && (
+                <span className="form-validate">{errors.title}</span>
+              )}
+            </FormGroup>
 
-              <FormGroup>
-                <Label className="form-label" for="description">
-                  Description :
+            <FormGroup>
+              <Label className="form-label" for="description">
+                Description :
                 </Label>
-                <Input
-                  className="form-input"
-                  type="textarea"
-                  name="description"
-                  id="description"
-                  rows="10"
-                  value={this.state.description}
-                  onChange={(e) => this.handleChangeAddNews(e)}
-                  placeholder="Enter description of news"
-                  noValidate
-                />
-                {errors.description.length > 0 && (
-                  <span className="form-validate">{errors.description}</span>
-                )}
-              </FormGroup>
+              <Input
+                className="form-input"
+                type="textarea"
+                name="description"
+                id="description"
+                rows="10"
+                value={this.state.description}
+                onChange={(e) => this.handleChangeAddNews(e)}
+                placeholder="Enter description of news"
+                noValidate
+              />
+              {errors.description.length > 0 && (
+                <span className="form-validate">{errors.description}</span>
+              )}
+            </FormGroup>
 
-              {loading && <Loader />}
+            {loading && <Loader />}
 
-              <FormGroup>
-                <Label className="form-label" for="file">
-                  File :
+            <FormGroup>
+              <Label className="form-label" for="file">
+                File :
                 </Label>
-                <Input
-                  className="form-input"
-                  type="file"
-                  name="file"
-                  id="file"
-                  // value={this.state.file}
-                  accept="image/*"
-                  multiple={false}
-                  onChange={(e) => this.handleChangeFile(e)}
-                  noValidate
-                />
-                {errors.file.length > 0 && (
-                  <span className="form-validate">{errors.file}</span>
-                )}
+              <Input
+                className="form-input"
+                type="file"
+                name="file"
+                id="file"
+                // value={this.state.file}
+                accept="image/*"
+                multiple={false}
+                onChange={(e) => this.handleChangeFile(e)}
+                noValidate
+              />
+              {errors.file.length > 0 && (
+                <span className="form-validate">{errors.file}</span>
+              )}
 
-                <FormText color="muted" className="description-file">
-                  This is some placeholder block-level help text for the above
-                  input. It's a bit lighter and easily wraps to a new line.
+              <FormText color="muted" className="description-file">
+                This is some placeholder block-level help text for the above
+                input. It's a bit lighter and easily wraps to a new line.
                 </FormText>
-              </FormGroup>
-              <Button
-                className={`button-add-news 
+            </FormGroup>
+            <Button
+              className={`button-add-news 
                 ${!errors.title &&
-                    !errors.description &&
-                    !errors.file &&
-                    this.state.title &&
-                    this.state.description &&
-                    this.state.file
-                    ? ""
-                    : "disabled"
-                  }`}
-                type="submit"
-              // onClick={this.onClickHandler}
-              >
-                Add news
+                  !errors.description &&
+                  !errors.file &&
+                  this.state.title &&
+                  this.state.description &&
+                  this.state.file
+                  ? ""
+                  : "disabled"
+                }`}
+              type="submit"
+            // onClick={this.onClickHandler}
+            >
+              Add news
               </Button>
-            </Form>
-          </div>
+          </Form>
         </div>
-        <AdminSidebar />
       </div>
+      // <AdminSidebar />
+      // </div>
     );
   }
 }

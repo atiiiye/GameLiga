@@ -35,6 +35,7 @@ import { Admin } from "react-admin";
 //import contexts
 import UserContextes from "./Components/Contexts/UserContextes";
 import AdminContextes from "./Components/Contexts/AdminContextes";
+import LayoutAdmin from "./Components/AdminComponents/LayoutAdmin.jsx";
 
 class App extends Component {
   // componentDidMount() {
@@ -47,16 +48,8 @@ class App extends Component {
 
         {/* <UserContextes> */}
         <Switch>
-          {/* <Route exact path="/" render={() => <Redirect to="/home" />} /> */}
 
-          <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute
-            exact
-            restricted={true}
-            path="/signup"
-            component={SignUp}
-          />
 
           <PrivateRoute exact path="/account" component={Account} />
 
@@ -80,39 +73,56 @@ class App extends Component {
 
           <PrivateRoute exact path="/news" component={News} />
 
-          <PublicRoute exact restricted={false} path="/logout" component={Logout} />
 
 
           {/* </Switch>
 
-        <Switch> */}
+<Switch> */}
 
 
-          <AdminContextes>
-            {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
+          {/* <AdminContextes> */}
 
-            <PrivateRoute exact path="/admin" component={AdminPanel} />
+          {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
 
-            <PrivateRoute exact path="/add-news" component={AddNews} />
+          {/* <PrivateRoute exact path="/admin" component={AdminPanel} /> */}
 
-            <PrivateRoute exact path="/edit-rules" component={EditRules} />
+          {/* <PrivateRoute exact path="/add-news" component={AddNews} /> */}
 
-            <PrivateRoute exact path="/all-news" component={AllNews} />
-            {/* </Admin> */}
+          {/* <PrivateRoute exact path="/edit-rules" component={EditRules} /> */}
 
-          </AdminContextes>
+          {/* <PrivateRoute exact path="/news-list" component={AllNews} /> */}
 
-          <PrivateRoute exact path="/404" component={NotFound} />
+          {/* </Admin> */}
 
-          <PrivateRoute exact path="" component={NotFound} />
+          <PrivateRoute path="/admin" component={LayoutAdmin} />
+
+          {/* </AdminContextes> */}
+
+          {/* <PrivateRoute exact path="/404" component={NotFound} /> */}
+
+          {/* <PrivateRoute exact path="" component={NotFound} /> */}
+
+          <PublicRoute exact restricted={false} path="/" component={Home} />
+
+          <PublicRoute
+            exact
+            restricted={true}
+            path="/signup"
+            component={SignUp}
+          />
+
+          <PublicRoute exact restricted={false} path="/logout" component={Logout} />
 
           <PublicRoute exact restricted={false} path="/404" component={NotFound} />
 
           <PublicRoute exact restricted={false} path="" component={NotFound} />
 
+
           {/* <Route exact path="" render={() => <Redirect to="/404" />} /> */}
 
-          {/* <Route component={NotFound} /> */}
+          <Route component={NotFound} />
+
+
         </Switch>
         {/* </UserContextes> */}
       </React.Fragment>

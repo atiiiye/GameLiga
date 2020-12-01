@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React from 'react'
 
 //import bootstrap
 // import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
@@ -13,20 +13,16 @@ import { NavLink } from 'react-router-dom';
 const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) => {
 
     const pageCount = Math.ceil(total / itemsPerPage);
+    if (currentPage < 1) currentPage = 1
+    if (currentPage > pageCount) currentPage = pageCount
     if (pageCount === 1) return null;
 
-    const pages = range(1, pageCount + 1);
+    // const pages = range(1, pageCount + 1);
 
-    // console.log("pages :", pages)
-
-    const pageLimit = (pages) => {
-        if (pages > 5) {
-            console.log('hhh')
-        }
-    }
+    // console.log("page count :", pageCount)
 
     return (
-        <nav aria-label="Page navigation" className="nav-pagination">
+        <nav className="nav-pagination">
             <ul className="pagination">
                 <li className={`page-item ${currentPage !== 1 ? "" : "disabled"}`} >
                     <NavLink
@@ -38,10 +34,7 @@ const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) =>
                     </NavLink>
                 </li>
                 {/* {pages.map(page => ( */}
-                <li
-                    // key={page}
-                    className="page-item"
-                >
+                <li className="page-item">
                     {/* <a
                         className={`page-link ${pageCount === currentPage ? "active" : ""}`}
                         onClick={() => onPageChange(pageCount)}
@@ -49,7 +42,7 @@ const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) =>
                     >
                         {total, "/", currentPage}
                     </a> */}
-                    <pre className="page-number">{currentPage}  /  {pageCount}</pre>
+                    <pre className="page-number">{currentPage}  /  {pageCount} </pre>
                 </li>
                 {/* ))} */}
                 <li className={`page-item ${currentPage === pageCount ? "disabled" : ""}`}>

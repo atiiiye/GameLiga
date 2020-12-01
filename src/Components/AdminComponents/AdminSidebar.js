@@ -45,7 +45,7 @@ export class AdminSidebar extends Component {
             <NavLink className="logo-link" to="/admin">
               <img className="logo" src={Logo} alt="" />
             </NavLink>
-            <NavLink className="title-link" to="/admin">
+            <NavLink className="title-link" to="/admin/panel">
               <h4 className="UFOGame">
                 UFO<span>Game</span>
               </h4>
@@ -67,10 +67,10 @@ export class AdminSidebar extends Component {
             </li>
             <UncontrolledCollapse toggler="#toggler1" className="sub-collapse">
               <ul className="nav sub-menu">
-                <NavLink className="nav-link" to="/all-users">
+                <NavLink className="nav-link" to="/admin/users-list">
                   <li className="nav-item">Users list</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/delete-user">
+                <NavLink className="nav-link" to="/admin/delete-user">
                   <li className="nav-item">Delete User</li>
                 </NavLink>
               </ul>
@@ -90,10 +90,10 @@ export class AdminSidebar extends Component {
               in={false}
             >
               <ul className="nav sub-menu">
-                <NavLink className="nav-link" to="/all-news">
+                <NavLink className="nav-link" to="/admin/news-list">
                   <li className="nav-item">News list</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/add-news">
+                <NavLink className="nav-link" to="/admin/add-news">
                   <li className="nav-item">Add News</li>
                 </NavLink>
               </ul>
@@ -112,7 +112,7 @@ export class AdminSidebar extends Component {
                 <NavLink className="nav-link" to="/rules">
                   <li className="nav-item">Rules</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/edit-rules">
+                <NavLink className="nav-link" to="/admin/edit-rules">
                   <li className="nav-item">Edit Rules</li>
                 </NavLink>
               </ul>
@@ -128,13 +128,13 @@ export class AdminSidebar extends Component {
             </li>
             <UncontrolledCollapse toggler="#toggler4" className="sub-collapse">
               <ul className="nav sub-menu">
-                <NavLink className="nav-link" to="/all-games">
+                <NavLink className="nav-link" to="/admin/games-list">
                   <li className="nav-item">Games List</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/add-games">
+                <NavLink className="nav-link" to="/admin/add-games">
                   <li className="nav-item">Add Games</li>
                 </NavLink>
-                <NavLink className="nav-link" to="/delete-games">
+                <NavLink className="nav-link" to="/admin/delete-games">
                   <li className="nav-item">Delete Games</li>
                 </NavLink>
               </ul>
@@ -150,7 +150,7 @@ export class AdminSidebar extends Component {
             </li>
             <UncontrolledCollapse toggler="#toggler5" className="sub-collapse">
               <ul className="nav sub-menu">
-                <NavLink className="nav-link" to="/setting-profile">
+                <NavLink className="nav-link" to="/admin/setting-profile">
                   <li className="nav-item">Edit profile</li>
                 </NavLink>
               </ul>

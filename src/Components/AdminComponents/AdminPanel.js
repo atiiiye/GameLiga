@@ -11,19 +11,12 @@ export class AdminPanel extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container-scroller">
-          <AdminSidebar />
-          <div className="container-fluid page-body-wrapper">
-            <AdminHeader />
-          </div>
-          {/* <div
-          style={{
-            width: "250px",
-            height: "250px",
-            backgroundColor: "blue",
-          }}
-        ></div> */}
+        {/* <div className="container-scroller">
+          <AdminSidebar /> */}
+        <div className="container-fluid page-body-wrapper">
+          <AdminHeader />
         </div>
+        {/* </div> */}
       </React.Fragment>
     );
   }

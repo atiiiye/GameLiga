@@ -120,7 +120,7 @@ section.main-slider {
                 background: transparent;
                 position: relative;
                 left: 0;
-                height: 120%;
+                height: 100%;
                 padding-left: 0;
                 padding-right: 0;
                 width: 90%;
@@ -128,7 +128,7 @@ section.main-slider {
 
                 div.main-content {
                     display: flex;
-                    height: 60%;
+                    height: 50%;
 
                     div.titles {
                         display: flex;
@@ -281,29 +281,28 @@ section.main-slider {
                     }
                 }
 
-            }
+                div.images-content.images {
+                    width: 100%;
+                    display: flex;
+                    height: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #000000;
 
-            div.images-content.images {
-                width: 100%;
-                display: flex;
-                height: 45%;
-                justify-content: center;
-                align-items: center;
-                background-color: #000000;
+                    img.image-fluid.background {
+                        margin-top: 2.5rem;
+                        width: 50%;
+                        height: auto;
+                    }
 
-                img.image-fluid.background {
-                    margin-top: 2.5rem;
-                    width: 50%;
-                    height: auto;
-                }
+                    img.image-counterstrike.image-fluid {
+                        width: 30%;
+                        height: 100%;
+                        background-color: transparent;
+                        position: relative;
+                        bottom: 5%;
 
-                img.image-counterstrike.image-fluid {
-                    width: 30%;
-                    height: 100%;
-                    background-color: transparent;
-                    position: relative;
-                    bottom: 5%;
-
+                    }
                 }
             }
         }

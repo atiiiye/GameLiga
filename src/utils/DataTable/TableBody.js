@@ -8,12 +8,13 @@ import EditIcon from '@material-ui/icons/Edit';
 
 
 const TableBody = ({ body }) => {
+    console.log('body :', body)
 
     const [contents, setContents] = useState([body])
     // setContents([body])
 
     const onDeleteNews = (item) => {
-        
+
 
         if (window.confirm("Are you sure to delete ?")) {
 

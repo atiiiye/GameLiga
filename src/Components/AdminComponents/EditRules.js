@@ -32,22 +32,22 @@ export class EditRules extends Component {
 
   render() {
     return (
-      <div>
-        <div className="container-fluid page-body-wrapper">
-          <AdminHeader />
-          <span className="title">
-            Please enter your desired rules
-            Then press the register key
+      // <div>
+      <div className="container-fluid page-body-wrapper">
+        <AdminHeader />
+        <span className="title">
+          Please enter your desired rules
+          Then press the register key
             </span>
 
-          <div id="editor" className="all-content"></div>
-          <div className="button-offset">
+        <div id="editor" className="all-content"></div>
+        <div className="button-offset">
 
           <Button className="register-rules">Register</Button>
-          </div>
         </div>
-        <AdminSidebar />
       </div>
+      // {/* <AdminSidebar /> */ }
+      // {/* </div> */ }
     );
   }
 }

@@ -72,35 +72,40 @@ const AllNews = () => {
 
 
     return (
-        <div style={{ display: "flex" }}>
-            <div className="container-fluid page-body-wrapper">
-                <AdminHeader />
-                <div className="parent-table">
-                    <DataTable
-                        totalItems={totalItems}
-                        ITEMS_PER_PAGE={ITEMS_PER_PAGE}
-                        currentPage={currentPage}
-                        setCurrentPage={setCurrentPage}
-                        loading={loading}
-                        searchItems={comments}
-                    />
+        // <div style={{ display: "flex" }}>
+        <div className="container-fluid page-body-wrapper">
+            <AdminHeader />
+            {/* <div className="parent-table"> */}
+            {/* <div className="search-section">
+                <SearchTable searchItems={comments} />
+            </div> */}
+            <DataTable
+                totalItems={totalItems}
+                ITEMS_PER_PAGE={ITEMS_PER_PAGE}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                loading={loading}
+                searchItems={comments}
+                headers={headers}
+                body={commentsData}
+            />
 
-                    <Table id="allNews" className="mt-3" striped borderless hover>
-                        <TableHead headers={headers} />
-                        <TableBody body={commentsData} />
-                    </Table>
+            {/* <Table id="allNews" className="mt-3" striped borderless hover>
+                <TableHead headers={headers} />
+                <TableBody body={body} />
+            </Table> */}
 
-                    {loading && <Loader />}
-                    <PaginationPlugin
-                        total={totalItems}
-                        itemsPerPage={ITEMS_PER_PAGE}
-                        currentPage={currentPage}
-                        onPageChange={page => setCurrentPage(page)}
-                    />
-                </div>
-            </div>
-            <AdminSidebar />
+            {loading && <Loader />}
+            <PaginationPlugin
+                total={totalItems}
+                itemsPerPage={ITEMS_PER_PAGE}
+                currentPage={currentPage}
+                onPageChange={page => setCurrentPage(page)}
+            />
+            {/* </div> */}
         </div>
+        //     {/* <AdminSidebar />
+        // </div> */}
     )
 }
 
