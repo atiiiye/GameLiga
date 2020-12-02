@@ -153,7 +153,7 @@ class Slider extends Component {
 
                 <div className="images-content images">
                   {/* <img src={CounterStrike} className="image-counterstrike image-fluid" /> */}
-                  <img src={background2} className="image-fluid background" />
+                  <img src={background2} className="image-fluid background" alt="" />
                 </div>
               </Card>
             </div>

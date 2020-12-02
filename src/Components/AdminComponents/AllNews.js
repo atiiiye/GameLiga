@@ -20,7 +20,6 @@ import SearchTable from '../../utils/DataTable/SearchTable';
 const AllNews = () => {
 
     const [comments, setComments] = useState([])
-    const [searchDefault, setSearchDefault] = useState([])
     const [loading, setLoading] = useState(false);
     const [totalItems, setTotalItems] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
@@ -51,7 +50,6 @@ const AllNews = () => {
                 .then(response => {
                     setLoading(false);
                     setComments(response.data)
-                    setSearchDefault(response.data)
                 })
                 .catch(error => console.log(error))
         }
@@ -72,13 +70,9 @@ const AllNews = () => {
 
 
     return (
-        // <div style={{ display: "flex" }}>
         <div className="container-fluid page-body-wrapper">
             <AdminHeader />
             {/* <div className="parent-table"> */}
-            {/* <div className="search-section">
-                <SearchTable searchItems={comments} />
-            </div> */}
             <DataTable
                 totalItems={totalItems}
                 ITEMS_PER_PAGE={ITEMS_PER_PAGE}
@@ -89,23 +83,16 @@ const AllNews = () => {
                 headers={headers}
                 body={commentsData}
             />
-
-            {/* <Table id="allNews" className="mt-3" striped borderless hover>
-                <TableHead headers={headers} />
-                <TableBody body={body} />
-            </Table> */}
-
             {loading && <Loader />}
-            <PaginationPlugin
+
+            {/* <PaginationPlugin
                 total={totalItems}
                 itemsPerPage={ITEMS_PER_PAGE}
                 currentPage={currentPage}
                 onPageChange={page => setCurrentPage(page)}
-            />
+            /> */}
             {/* </div> */}
         </div>
-        //     {/* <AdminSidebar />
-        // </div> */}
     )
 }
 

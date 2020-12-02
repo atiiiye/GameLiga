@@ -162,7 +162,7 @@ class SignUp extends Component {
         break;
       case "confirmPassword":
         errors.confirmPassword =
-          value != this.state.password ? "Password not match!" : "";
+          value !== this.state.password ? "Password not match!" : "";
         break;
       case "firstName":
         if (value.length < 6 && value.match(/^[a-zA-Z]+$/)) {
@@ -244,7 +244,7 @@ class SignUp extends Component {
         }
         break;
       case "captchaInput":
-        if (value.length != 6 || value != this.state.captcha) {
+        if (value.length !== 6 || value !== this.state.captcha) {
           errors.captchaInput = "Code is incorrect!";
         } else {
           errors.captchaInput = "";

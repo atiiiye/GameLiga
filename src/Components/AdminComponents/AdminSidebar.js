@@ -10,7 +10,7 @@ import "./../../css/AdminSidebar.css";
 import { NavLink } from "react-router-dom";
 
 //import boostrap
-import { Navbar, UncontrolledCollapse, Button, Collapse } from "reactstrap";
+import { UncontrolledCollapse, Collapse } from "reactstrap";
 
 //import icons
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";

@@ -17,7 +17,7 @@ const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) =>
     if (currentPage > pageCount) currentPage = pageCount
     if (pageCount === 1) return null;
 
-    // const pages = range(1, pageCount + 1);
+    const pages = range(1, pageCount + 1);
 
     // console.log("page count :", pageCount)
 

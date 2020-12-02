@@ -32,7 +32,7 @@ export class EditRules extends Component {
 
   render() {
     return (
-      // <div>
+      // <div style={{ display: "flex" }}>
       <div className="container-fluid page-body-wrapper">
         <AdminHeader />
         <span className="title">

@@ -26,7 +26,7 @@ nav.nav-pagination ul.pagination li.page-item {
 
 nav.nav-pagination ul.pagination li.page-item:hover > a.page-link {
   text-shadow: 2px 1px 0.1rem rgba(255, 255, 255, 0.27);
-  color: rgba(255, 255, 255, 0.95);
+  color: white;
   font-size: 95%;
 }
 
@@ -34,7 +34,7 @@ nav.nav-pagination ul.pagination li.page-item a.page-link {
   width: 100%;
   height: 100%;
   border: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 90%;
   background: transparent;
   cursor: pointer;
@@ -55,7 +55,7 @@ nav.nav-pagination ul.pagination li.page-item a.page-link.active {
 
 nav.nav-pagination ul.pagination li.page-item pre.page-number {
   border: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 95%;
   background: transparent;
   cursor: pointer;

@@ -8,31 +8,35 @@ import EditIcon from '@material-ui/icons/Edit';
 
 
 const TableBody = ({ body }) => {
-    console.log('body :', body)
+    // console.log('body :', body)
 
-    const [contents, setContents] = useState([body])
-    // setContents([body])
+    const [contents, setContents] = useState([])
+
+    // useEffect(() => {
+    //     setContents([body])
+    // }, [contents, body])
 
     const onDeleteNews = (item) => {
 
-
         if (window.confirm("Are you sure to delete ?")) {
 
-            console.log(item)
+            // console.log(item)
 
-            setContents(prevState => { prevState.filter(data => data.id !== item.id) })
+            // const list = contents.slice();
+            // // Check to see if item passed in matches item in array
+            // list.some((el, i) => {
+            //     console.log('el', el)
+            //     console.log('i', i)
 
-            { console.log("contents is :", contents) }
+            //     if (el === item) {
+            //         // If item matches, remove it from array
+            //         list.splice(i, 1);
+            //         return true;
+            //     }
+            // });
+            // setContents(list)
         }
-
-        // console.log("filtered :", filtered)
-        // (filtered)
-        // body = [filtered]
     }
-
-    // console.log(contents)
-    // useEffect(() => {
-    // }, [])
 
 
     const onEditNews = (item) => {

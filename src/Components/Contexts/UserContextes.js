@@ -6,9 +6,6 @@ import { Context } from "./index";
 //import services
 import { login, signup } from "../../Services/userService";
 
-//import routes
-import {  Redirect } from "react-router-dom";
-
 //import utils
 import { errorMessage, successMessage } from "../../utils/messages";
 import { LoginUtil } from "./../../utils";
@@ -88,7 +85,7 @@ class UserContextes extends Component {
       this.setState({ loading: false });
       // this.resetInputs();
       // this.setState({ redirect: false });
-      
+
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Your Information is invalid");
@@ -180,9 +177,7 @@ class UserContextes extends Component {
 
     const { name, value } = event.target;
     let errors = this.state.errors;
-    const validEmailRegex = RegExp(
-      /^([A-Za-z])(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-    );
+    const validEmailRegex = RegExp(/^([A-Za-z])(([^<>()\\[\]\\.,;:\s@\\"]+(\.[^<>()\\[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\]\\.,;:\s@\\"]+\.)+[^<>()[\]\\.,;:\s@\\"]{2,})$/i);
 
     switch (name) {
       case "username":
@@ -349,7 +344,7 @@ class UserContextes extends Component {
       referred: "",
       checkbox: false,
       captchaInput: "",
-      loading:false,
+      loading: false,
       errors: {
         firstName: "",
         lastName: "",

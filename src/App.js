@@ -17,6 +17,7 @@ import Shop from "./Components/Shop";
 import News from "./Components/News";
 import Logout from "./Components/Logout";
 
+import LayoutAdmin from "./Components/AdminComponents/LayoutAdmin.jsx";
 import AdminPanel from "./Components/AdminComponents/AdminPanel";
 import AddNews from "./Components/AdminComponents/AddNews";
 import EditRules from "./Components/AdminComponents/EditRules";
@@ -35,7 +36,6 @@ import { Admin } from "react-admin";
 //import contexts
 import UserContextes from "./Components/Contexts/UserContextes";
 import AdminContextes from "./Components/Contexts/AdminContextes";
-import LayoutAdmin from "./Components/AdminComponents/LayoutAdmin.jsx";
 
 class App extends Component {
   // componentDidMount() {

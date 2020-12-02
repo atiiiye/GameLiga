@@ -14,13 +14,13 @@ import EditRules from './EditRules'
 import AdminContextes from '../Contexts/AdminContextes'
 import AdminPanel from './AdminPanel'
 import NotFound from '../NotFound'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 class LayoutAdmin extends Component {
     render() {
         return (
 
-            <switch>
+            <Switch>
                 <div className="layout-parent" style={{ display: "flex" }}>
                     <AdminContextes>
 
@@ -36,7 +36,7 @@ class LayoutAdmin extends Component {
                     </AdminContextes>
                 </div>
                 {/* <Route exact path="" component={NotFound} /> */}
-            </switch>
+            </Switch>
         )
     }
 }

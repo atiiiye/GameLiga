@@ -22,3 +22,6 @@
 [1126/093356.372:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [1130/090239.771:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [1201/080704.775:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1202/084529.555:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1202/140732.902:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1202/141007.087:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Atiye\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\83a7c451-2376-44b6-b7c0-f48c8f368d7f: The system cannot find the path specified. (0x3)

@@ -49,13 +49,20 @@ nav.main-nav {
                 margin-left: .5rem;
                 width: 80%;
                 border-radius: 3px;
+                border: 2px solid rgba($color: $color-gray-1, $alpha: .8);
                 left: 0;
-                // color: $color-light;
+                color: rgba($color: $color-light, $alpha: .8);
                 // height: 1.8rem;
 
                 &:focus {
                     box-shadow: none;
-                    border-color: rgba($color: $color-light, $alpha: .8);
+                    border-color: rgba($color: $color-gray-1, $alpha: .2);
+                    background-color: rgba($color: $color-gray-3, $alpha: .5);
+                }
+
+                &::placeholder {
+                    color: rgba($color: $color-light, $alpha: .5);
+
                 }
             }
 
