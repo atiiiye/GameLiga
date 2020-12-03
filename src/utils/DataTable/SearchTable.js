@@ -16,7 +16,7 @@ import DataTable from './DataTable';
 
 // import SearchField from 'react-search-field';
 
-const SearchTable = ({ onChange, value }) => {
+const SearchTable = ({ handleChange, value }) => {
 
     const [loading, setLoading] = useState(false)
     const [query, setQuery] = useState([])
@@ -37,10 +37,10 @@ const SearchTable = ({ onChange, value }) => {
                 type="text"
                 name="query"
                 value={value}
-                onChange={onChange}
+                onChange={(e) => handleChange(e.target.value)}
             >
             </Form.Control>
-            {loading && <Loader />}
+            {/* {loading && <Loader />} */}
         </div>
     )
 }

@@ -7,7 +7,7 @@ import { LogoutUtil } from "../utils";
 import { Redirect } from "react-router-dom";
 
 //import contexts
-import { Context } from "./Contexts/index";
+import { Context } from "../Contexts/index";
 
 export class Logout extends Component {
   state = {

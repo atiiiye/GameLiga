@@ -21,7 +21,7 @@ import { connect } from "react-redux";
 import { createBrowserHistory } from "history";
 
 //import contexts
-import { Context } from "./Contexts";
+import { Context } from "../Contexts";
 
 //import utils
 import { LoginUtil } from "../utils";
@@ -75,13 +75,13 @@ class Login extends Component {
           value.length < 6 && value.match(/[a-zA-Z0-9]+$/)
             ? "Username must be 6 characters long!"
             : value.match(/^[a-zA-Z0-9]+$/ && value.length > 6)
-            ? ""
-            : !value.match(/[a-zA-Z]+/) && value.length >= 6
-            ? "Username can not be only number"
-            : (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
-              (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
-            ? "please enter correct"
-            : "";
+              ? ""
+              : !value.match(/[a-zA-Z]+/) && value.length >= 6
+                ? "Username can not be only number"
+                : (!value.match(/^[a-zA-Z0-9]+$/) && 1 < value.length < 6) ||
+                  (!value.match(/^[a-zA-Z0-9]+$/) && value.length > 6)
+                  ? "please enter correct"
+                  : "";
 
         break;
       case "password":
@@ -226,14 +226,13 @@ class Login extends Component {
 
               <div className="mt-5 form-button w-75">
                 <Button
-                  className={`btn-block login ${
-                    !errors.username &&
-                    !errors.password &&
-                    this.state.username &&
-                    this.state.password
+                  className={`btn-block login ${!errors.username &&
+                      !errors.password &&
+                      this.state.username &&
+                      this.state.password
                       ? ""
                       : "disabled"
-                  }`}
+                    }`}
                   id="submit"
                   variant="none"
                   type="submit"

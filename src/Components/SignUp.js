@@ -25,7 +25,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Checkbox from "@material-ui/core/Checkbox";
 
 //import contexts
-import { Context } from "./Contexts/index";
+import { Context } from "../Contexts/index";
 
 //import utils
 import { LoginUtil } from "../utils";

@@ -24,15 +24,15 @@ thead tr.header-row div.header-box {
 thead tr.header-row div.header-box th.header-head {
   color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
-  padding-right: .25rem;
+  padding-right: .2rem;
   letter-spacing: .09rem;
   display: flex;
   justify-content: flex-start;
 }
 
 thead tr.header-row div.header-box svg.sort-table {
-  font-size: 14px;
-  fill: #000000;
+  font-size: 13px;
+  fill: #ffffff;
 }
 
 thead tr.header-row div.header-box.title-box {

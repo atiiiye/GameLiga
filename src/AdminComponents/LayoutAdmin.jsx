@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
 
 //import css 
-import './../../css/LayoutAdmin.css'
+import './../css/LayoutAdmin.css'
 
 //import routes
-import PrivateRoute from '../Routes/PrivateRoute '
+import PrivateRoute from './../Routes/PrivateRoute '
 
 //import components
 import AddNews from './AddNews'
 import AdminSidebar from './AdminSidebar'
 import AllNews from './AllNews'
 import EditRules from './EditRules'
-import AdminContextes from '../Contexts/AdminContextes'
+import AdminContextes from './../Contexts/AdminContextes'
 import AdminPanel from './AdminPanel'
-import NotFound from '../NotFound'
+import NotFound from '../Components/NotFound'
+
 import { Route, Switch } from 'react-router-dom'
 
 class LayoutAdmin extends Component {

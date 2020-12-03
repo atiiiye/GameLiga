@@ -12,70 +12,14 @@ import TableHead from './TableHead'
 import PaginationPlugin from '../PaginationPlugin'
 import SearchTable from './SearchTable'
 
-const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, searchItems, headers, body }) => {
-    const [loading, setLoading] = useState(false)
-    const [searchInput, setSearchInput] = useState("");
-    const [query, setQuery] = useState([])
-    const [bodyState, setBodyState] = useState([body])
-    const [totalItemsState, setTotalItems] = useState(searchItems.length)
+const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, headers, body, onDeleteNews, onEditNews, handleChange, value }) => {
 
 
-    const handleChange = val => {
-        setSearchInput(val);
-        setLoading(true)
-        filtered(val)
-    }
-
-    const filtered = (val) => {
-
-        let currentList = [];
-        let newList = [];
-
-        if (val !== "") {
-            currentList = searchItems;
-
-            newList = currentList.filter(value => {
-                const lc = value.body.toLowerCase();
-                const filter = val.toLowerCase();
-                return lc.match(filter);
-            });
-
-            console.log('new list ', newList)
-        } else {
-            newList = searchItems;
-        }
-        setQuery(newList)
-    }
-
-    // useEffect(() => {
-    //     setBodyState(body)
-    //     setTotalItems(totalItems.length)
-    //     console.log('bodyState mount:', bodyState)
-    //     console.log('totalItemsState mount:', totalItemsState)
-    // }, [])
-
-    useEffect(() => {
-        console.log('bodyState update:', bodyState)
-        console.log('totalItemsState update:', totalItemsState)
-        setBodyState(query)
-        setTotalItems(query.length)
-
-        body = query;
-        totalItems = query.length
-
-        console.log('body:', body)
-        console.log('totalItems:', totalItems)
-
-    }, [query, bodyState, totalItemsState])
-
-
+    // { console.log('body DataTable :', body) }
     return (
-
-        <div className="parent-table">
+        <React.Fragment>
             <div className="pagination-search-box">
                 <div className="pagination-section">
-                    {console.log('totalItems:', totalItems)}
-                    {console.log('body:', body)}
                     <PaginationPlugin
                         total={totalItems}
                         itemsPerPage={ITEMS_PER_PAGE}
@@ -85,15 +29,19 @@ const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, se
                 </div>
 
                 <div className="search-section">
-                    <SearchTable value={searchInput} onChange={(e) => handleChange(e.target.value)} />
+                    <SearchTable value={value} handleChange={handleChange} />
                 </div>
             </div>
 
             <Table id="allNews" className="mt-3" striped borderless hover>
                 <TableHead headers={headers} />
-                <TableBody body={body} />
+                <TableBody
+                    body={body}
+                    onDeleteNews={onDeleteNews}
+                    onEditNews={onEditNews}
+                />
             </Table>
-        </div>
+        </React.Fragment>
     );
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 //import css
-import './../../css/EditRules.css';
+import './../css/EditRules.css';
 
 //import components
 import AdminHeader from "./AdminHeader";

@@ -17,15 +17,15 @@ import Shop from "./Components/Shop";
 import News from "./Components/News";
 import Logout from "./Components/Logout";
 
-import LayoutAdmin from "./Components/AdminComponents/LayoutAdmin.jsx";
-import AdminPanel from "./Components/AdminComponents/AdminPanel";
-import AddNews from "./Components/AdminComponents/AddNews";
-import EditRules from "./Components/AdminComponents/EditRules";
-import AllNews from "./Components/AdminComponents/AllNews";
+import LayoutAdmin from "./AdminComponents/LayoutAdmin.jsx";
+import AdminPanel from "./AdminComponents/AdminPanel";
+import AddNews from "./AdminComponents/AddNews";
+import EditRules from "./AdminComponents/EditRules";
+import AllNews from "./AdminComponents/AllNews";
 
 //import Routes
-import PrivateRoute from "./Components/Routes/PrivateRoute ";
-import PublicRoute from "./Components/Routes/PublicRoute";
+import PrivateRoute from "./Routes/PrivateRoute ";
+import PublicRoute from "./Routes/PublicRoute";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 // import packages
@@ -34,8 +34,8 @@ import { connect } from "react-redux";
 import { Admin } from "react-admin";
 
 //import contexts
-import UserContextes from "./Components/Contexts/UserContextes";
-import AdminContextes from "./Components/Contexts/AdminContextes";
+import UserContextes from "./Contexts/UserContextes";
+import AdminContextes from "./Contexts/AdminContextes";
 
 class App extends Component {
   // componentDidMount() {

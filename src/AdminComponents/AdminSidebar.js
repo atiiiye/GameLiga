@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 //import images
-import Logo from "./../../images/logo5.png";
+import Logo from "./../images/logo5.png";
 
 //import css
-import "./../../css/AdminSidebar.css";
+import "./../css/AdminSidebar.css";
 
 //import routes
 import { NavLink } from "react-router-dom";
@@ -16,7 +16,7 @@ import { UncontrolledCollapse, Collapse } from "reactstrap";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 //import context
-import { Context } from "./../Contexts";
+import { Context } from "../Contexts";
 
 export class AdminSidebar extends Component {
   state = {

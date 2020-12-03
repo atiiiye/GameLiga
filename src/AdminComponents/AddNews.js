@@ -4,20 +4,20 @@ import React, { Component } from "react";
 import AdminHeader from "./AdminHeader";
 import AdminPanel from "./AdminPanel";
 import AdminSidebar from "./AdminSidebar";
-import Loader from "./../Loader";
-import PageTitle from "./../PageTitle"
+import Loader from "../Components/Loader";
+import PageTitle from "../Components/PageTitle"
 
 //import css
-import "./../../css/AddNews.css";
+import "./../css/AddNews.css";
 
 //import bootstrap
 import { Form, FormGroup, Label, Input, FormText, Button } from "reactstrap";
 
 //import utils
-import { errorMessage, successMessage } from "./../../utils/messages";
+import { errorMessage, successMessage } from "../utils/messages";
 
 //import services
-import { addNews } from "../../Services/newsService";
+import { addNews } from "../Services/newsService";
 
 export class AddNews extends Component {
   state = {

@@ -20,7 +20,7 @@ thead {
             th.header-head {
                 color: rgba($color: $color-light, $alpha: .8);
                 font-weight: bold;
-                padding-right: .25rem;
+                padding-right: .2rem;
                 letter-spacing: .09rem;
                 display: flex;
                 justify-content: flex-start;
@@ -29,9 +29,17 @@ thead {
             }
 
             svg.sort-table {
-                font-size: 14px;
-                fill: $color-dark;
+                font-size: 13px;
+                fill: $color-light;
             }
+
+            svg.sort-table.descending {
+                // font-size: 13px;
+                fill: $color-gray-1;
+                transform: rotate(180deg);
+                transition: transform .3s ease;
+            }
+
 
         }
 

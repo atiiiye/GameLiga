@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 //import css
-import "./../../css/AdminPanel.css";
+import "./../css/AdminPanel.css";
 
 //import components
 import AdminHeader from "./AdminHeader";

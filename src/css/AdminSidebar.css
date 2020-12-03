@@ -138,6 +138,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items
   background-color: #1c1c22;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
+  border-left: 3px solid #ff9300;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav li.nav-item.menu-items div.nav-link:focus {
@@ -429,6 +430,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items di
   background-color: #1c1c22;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
+  border-left: 3px solid #ff9300;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapsing ul.nav li.nav-item.menu-items div.nav-link:focus {
@@ -687,6 +689,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.
   background-color: #1c1c22;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
+  border-left: 3px solid #ff9300;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapse ul.nav li.nav-item.menu-items div.nav-link:focus {

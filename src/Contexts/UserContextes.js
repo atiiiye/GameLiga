@@ -4,11 +4,11 @@ import React, { Component } from "react";
 import { Context } from "./index";
 
 //import services
-import { login, signup } from "../../Services/userService";
+import { login, signup } from "../Services/userService";
 
 //import utils
-import { errorMessage, successMessage } from "../../utils/messages";
-import { LoginUtil } from "./../../utils";
+import { errorMessage, successMessage } from "../utils/messages";
+import { LoginUtil } from "../utils";
 // import { LogoutUtil } from "./../../utils";
 
 //!این کامپوننت از اجرای برنامه خارج شده است 
