@@ -4,9 +4,6 @@ import React, { Component } from "react";
 import "./../css/NotFound.css";
 import "./../css/mediaNotFound.css";
 
-//import components
-import UserHeaderLeft from "./UserHeaderLeft";
-
 //import bootstrap
 import { Button } from "react-bootstrap";
 

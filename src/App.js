@@ -17,39 +17,37 @@ import Shop from "./Components/Shop";
 import News from "./Components/News";
 import Logout from "./Components/Logout";
 
-import LayoutAdmin from "./AdminComponents/LayoutAdmin.jsx";
-import AdminPanel from "./AdminComponents/AdminPanel";
-import AddNews from "./AdminComponents/AddNews";
-import EditRules from "./AdminComponents/EditRules";
-import AllNews from "./AdminComponents/AllNews";
+import LayoutAdmin from "./AdminComponents/LayoutAdmin";
 
 //import Routes
 import PrivateRoute from "./Routes/PrivateRoute ";
 import PublicRoute from "./Routes/PublicRoute";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 // import packages
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { connect } from "react-redux";
-import { Admin } from "react-admin";
 
 //import contexts
 import UserContextes from "./Contexts/UserContextes";
-import AdminContextes from "./Contexts/AdminContextes";
+
+//import actions
+import { currentUser } from './Actions'
 
 class App extends Component {
+
   // componentDidMount() {
   //   document.title = "Game Liga";
   // }
 
   render() {
+
+    const { currentUserDispatch, currentUser } = this.props
     return (
       <React.Fragment>
 
         {/* <UserContextes> */}
         <Switch>
-
-
 
           <PrivateRoute exact path="/account" component={Account} />
 
@@ -73,43 +71,17 @@ class App extends Component {
 
           <PrivateRoute exact path="/news" component={News} />
 
-
-
-          {/* </Switch>
-
-<Switch> */}
-
-
-          {/* <AdminContextes> */}
-
-          {/* <Admin dataProvider={dataProvider} authProvider={authProvider}> */}
-
-          {/* <PrivateRoute exact path="/admin" component={AdminPanel} /> */}
-
-          {/* <PrivateRoute exact path="/add-news" component={AddNews} /> */}
-
-          {/* <PrivateRoute exact path="/edit-rules" component={EditRules} /> */}
-
-          {/* <PrivateRoute exact path="/news-list" component={AllNews} /> */}
-
-          {/* </Admin> */}
-
-          <PrivateRoute path="/admin" component={LayoutAdmin} />
-
-          {/* </AdminContextes> */}
-
-          {/* <PrivateRoute exact path="/404" component={NotFound} /> */}
-
-          {/* <PrivateRoute exact path="" component={NotFound} /> */}
+          {/* {
+            currentUserDispatch(currentUser.role === 'admin')
+              ? */}
+              <PrivateRoute path="/admin" component={LayoutAdmin} />
+          //     :
+          //     <Redirect to="/" />
+          {/* // } */}
 
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
-          <PublicRoute
-            exact
-            restricted={true}
-            path="/signup"
-            component={SignUp}
-          />
+          <PublicRoute exact restricted={true} path="/signup" component={SignUp} />
 
           <PublicRoute exact restricted={false} path="/logout" component={Logout} />
 
@@ -117,11 +89,9 @@ class App extends Component {
 
           <PublicRoute exact restricted={false} path="" component={NotFound} />
 
-
           {/* <Route exact path="" render={() => <Redirect to="/404" />} /> */}
 
           <Route component={NotFound} />
-
 
         </Switch>
         {/* </UserContextes> */}
@@ -131,4 +101,18 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  console.log("state :", state)
+  return {
+    currentUser: state.adminReducer,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    currentUserDispatch: role => dispatch(currentUser(role))
+  }
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

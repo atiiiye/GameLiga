@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 //import css
 import './../../css/TableHead.css'
@@ -9,6 +9,7 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const TableHead = ({ headers }) => {
     const [sortedField, setSortedField] = React.useState(null);
+    const [angleState, setAngleState] = React.useState([]);
 
     // const { news } = props;
 
@@ -34,10 +35,21 @@ const TableHead = ({ headers }) => {
     // }
 
     const toggle = () => {
-        let angel = document.querySelector('.sort-table')
-        console.log(angel)
-        angel.classList.toggle('descending')
+        let angles = document.querySelectorAll('.sort-table')
+
+        // setAngleState(angles)
+
+        angles.forEach(angle => angle.addEventListener('click', () => {
+            angle.classList.toggle('descending')
+            
+            console.log(angle);
+        }))
+        console.log(angles);
     }
+
+    useEffect(() => {
+        toggle()
+    }, [])
 
     return (
         <thead>
@@ -49,23 +61,33 @@ const TableHead = ({ headers }) => {
                     <div className="header-box title-box" style={{ width: "10%" }}>
                         <th className="header-head">{header.Title}</th>
                         <ArrowDownwardIcon
+                            focusable="true"
                             className="sort-table"
                             onClick={() => setSortedField('Title'), toggle} />
                     </div>
                     <div className="header-box title-box">
                         <th className="header-head">{header.Text}</th>
-                        <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Text'), toggle} />
+                        <ArrowDownwardIcon
+                            focusable="true"
+                            className="sort-table"
+                            onClick={() => setSortedField('Text'), toggle} />
                     </div>
                     {/* <div className="header-box" title-box>
                         <th className="header-head" >{header.Image}</th>
                     </div> */}
                     <div className="header-box title-box">
                         <th className="header-head" >{header.Auther}</th>
-                        <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Auther'), toggle} />
+                        <ArrowDownwardIcon
+                            focusable="true"
+                            className="sort-table"
+                            onClick={() => setSortedField('Auther'), toggle} />
                     </div>
                     <div className="header-box title-box">
                         <th className="header-head" >{header.Date}</th>
-                        <ArrowDownwardIcon className="sort-table" onClick={() => setSortedField('Date'), toggle} />
+                        <ArrowDownwardIcon
+                            focusable="true"
+                            className="sort-table"
+                            onClick={() => setSortedField('Date'), toggle} />
                     </div>
                     <div className="header-box title-box">
                         <th className="header-head" >{header.edit}</th>

@@ -33,11 +33,12 @@ thead tr.header-row div.header-box th.header-head {
 thead tr.header-row div.header-box svg.sort-table {
   font-size: 13px;
   fill: #ffffff;
+  transform: rotate(0deg);
+  transition: transform .3s ease;
 }
 
 thead tr.header-row div.header-box svg.sort-table.descending {
-  fill: #36363b;
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
   transition: transform .3s ease;
 }
 

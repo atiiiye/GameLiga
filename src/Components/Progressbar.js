@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+// ! این کامپوننت از اجرا برنامه برنامه خارج شده است
 class Progressbar extends Component {
   state = {
       percent: 0,

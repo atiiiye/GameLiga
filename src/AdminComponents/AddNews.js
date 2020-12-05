@@ -2,8 +2,6 @@ import React, { Component } from "react";
 
 //import components
 import AdminHeader from "./AdminHeader";
-import AdminPanel from "./AdminPanel";
-import AdminSidebar from "./AdminSidebar";
 import Loader from "../Components/Loader";
 import PageTitle from "../Components/PageTitle"
 

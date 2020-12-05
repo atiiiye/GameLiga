@@ -1,7 +1,7 @@
 import { createStore, compose, applyMiddleware } from "redux";
-import { reducers } from "./../Reducers";
+import { reducers } from "../Reducers";
 import thunk from "redux-thunk";
-import { userSignup, userLogin } from "./../Actions";
+import { userSignup, userLogin } from "../Actions";
 
 export const store = createStore(
   reducers, compose(
@@ -10,7 +10,7 @@ export const store = createStore(
   )
 );
 
-// store.dispatch(userSignup);
+store.dispatch(userSignup);
 store.dispatch(userLogin);
 
 

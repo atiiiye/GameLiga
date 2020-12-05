@@ -107,8 +107,8 @@ div.container-fluid.Tourny div.card#content div.elements div.card#tab-content di
 }
 
 div.container-fluid.Tourny div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-child-2 div.section1 div.join-button {
-  width: 42%;
-  height: 82%;
+  width: 30%;
+  height: 80%;
   background-image: url("./../images/green-button.png");
   background-repeat: no-repeat;
   display: flex;

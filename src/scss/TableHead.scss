@@ -31,12 +31,13 @@ thead {
             svg.sort-table {
                 font-size: 13px;
                 fill: $color-light;
+                transform: rotate(0deg);
+                transition: transform .3s ease;
             }
 
             svg.sort-table.descending {
-                // font-size: 13px;
-                fill: $color-gray-1;
-                transform: rotate(180deg);
+                // fill: $color-gray-3;
+                transform: rotate(-180deg);
                 transition: transform .3s ease;
             }
 

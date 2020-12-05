@@ -18,7 +18,7 @@ import { NavLink, Redirect } from "react-router-dom";
 //import packages
 import { ToastContainer } from "react-toastify";
 import { connect } from "react-redux";
-import { createBrowserHistory } from "history";
+// import { createBrowserHistory } from "history";
 
 //import contexts
 import { Context } from "../Contexts";

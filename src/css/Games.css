@@ -98,6 +98,10 @@ div.container-fluid.games div.card#content div.elements div.card#tab-content div
   box-shadow: 0 0 0 0;
 }
 
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.own-logo div.difference input.difference-number.form-control::-webkit-inner-spin-button {
+  display: none;
+}
+
 div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.football {
   width: 50%;
   height: 100px;
@@ -138,6 +142,10 @@ div.container-fluid.games div.card#content div.elements div.card#tab-content div
 
 div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control:focus {
   box-shadow: 0 0 0 0;
+}
+
+div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left div.section-left div.other-logo div.difference input.difference-number.form-control::-webkit-inner-spin-button {
+  display: none;
 }
 
 div.container-fluid.games div.card#content div.elements div.card#tab-content div.tab-content-parent div.tab-content-left span.hosted {

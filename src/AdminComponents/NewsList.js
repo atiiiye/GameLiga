@@ -1,23 +1,20 @@
 import React, { useState, useEffect, useMemo } from 'react'
 
 //import css
-import './../css/AllNews.css';
+import './../css/NewsList.css';
 
 //import bootstrap
 import { Table } from 'reactstrap'
 
 //import components
 import AdminHeader from './AdminHeader'
-import AdminSidebar from './AdminSidebar'
 import PaginationPlugin from '../utils/PaginationPlugin'
-import TableHead from '../utils/DataTable/TableHead'
-import TableBody from '../utils/DataTable/TableBody'
 import Loader from '../Components/Loader'
 import http from '../Services/httpService';
 import DataTable from '../utils/DataTable/DataTable';
-import SearchTable from '../utils/DataTable/SearchTable';
+import PageTitle from '../Components/PageTitle';
 
-const AllNews = () => {
+const NewsList = () => {
 
     const [comments, setComments] = useState([])
     const [loading, setLoading] = useState(false);
@@ -47,7 +44,7 @@ const AllNews = () => {
         setSearchInput(val);
         console.log('searchInput :', searchInput)
         setLoading(true)
-        filtered(searchInput)
+        filtered(val)
     }
 
     useEffect(() => {
@@ -98,12 +95,14 @@ const AllNews = () => {
 
 
     useEffect(() => {
+        filtered(searchInput)
         handleChange(searchInput)
     }, [searchInput])
 
     return (
         <div className="container-fluid page-body-wrapper">
             <AdminHeader />
+            <PageTitle title="News List" />
             <div className="parent-table">
                 <DataTable
                     totalItems={totalItems}
@@ -132,4 +131,4 @@ const AllNews = () => {
     )
 }
 
-export default AllNews
+export default NewsList
