@@ -12,7 +12,7 @@ import TableHead from './TableHead'
 import PaginationPlugin from '../PaginationPlugin'
 import SearchTable from './SearchTable'
 
-const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, headers, body, onDeleteNews, onEditNews, handleChange, value }) => {
+const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, headers, body, onDeleteNews, onEditNews, handleChange, value, sortBy}) => {
 
 
     // { console.log('body DataTable :', body) }
@@ -34,7 +34,10 @@ const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, he
             </div>
 
             <Table id="allNews" className="mt-3" striped borderless hover>
-                <TableHead headers={headers} />
+                <TableHead
+                    headers={headers}
+                    sortBy={sortBy}
+                    />
                 <TableBody
                     body={body}
                     onDeleteNews={onDeleteNews}

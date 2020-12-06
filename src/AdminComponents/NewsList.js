@@ -23,6 +23,24 @@ const NewsList = () => {
     const ITEMS_PER_PAGE = 10;
     const [searchInput, setSearchInput] = useState("");
     const [query, setQuery] = useState([])
+    const [sortedField, setSortedField] = React.useState(null);
+
+    const [currentSort, setCurrentSort] = useState('default')
+
+    const sortTypes = {
+        up: {
+            class: 'sort-up',
+            fn: (a, b) => a - b
+        },
+        down: {
+            class: 'sort-down',
+            fn: (a, b) => b - a
+        },
+        default: {
+            class: 'sort',
+            fn: (a, b) => a
+        }
+    };
 
 
     const headers = [
@@ -42,7 +60,7 @@ const NewsList = () => {
 
     const handleChange = val => {
         setSearchInput(val);
-        console.log('searchInput :', searchInput)
+        // console.log('searchInput :', searchInput)
         setLoading(true)
         filtered(val)
     }
@@ -77,7 +95,7 @@ const NewsList = () => {
             newList = comments;
         }
         setComments(newList)
-        console.log('comments :', comments)
+        // console.log('comments :', comments)
     }
 
     const commentsData = useMemo(() => {
@@ -85,6 +103,7 @@ const NewsList = () => {
 
         setTotalItems(computedComments.length)
         setLoading(false);
+
 
         return computedComments
             .slice(
@@ -98,6 +117,23 @@ const NewsList = () => {
         filtered(searchInput)
         handleChange(searchInput)
     }, [searchInput])
+    
+    const compareBy = (key) => {
+        console.log('compareBy')
+        return function (a, b) {
+            if (a[key] < b[key]) return -1;
+            if (a[key] > b[key]) return 1;
+            return 0;
+        };
+    }
+
+        
+    const sortBy = (key) => {
+        let arrayCopy = [...comments];
+        console.log('sortBy')
+        arrayCopy.sort(compareBy(key));
+        commentsData({ arrayCopy });
+    }
 
     return (
         <div className="container-fluid page-body-wrapper">
@@ -115,9 +151,12 @@ const NewsList = () => {
                     handleChange={handleChange}
                     onDeleteNews={onDeleteNews}
                     onEditNews={onEditNews}
+                    sortBy={sortBy}
+                    sortTypes={sortTypes}
+                    currentSort={currentSort}
                 />
 
-                {console.log('commentsData :', commentsData)}
+                {/* {console.log('commentsData :', commentsData)} */}
                 {loading && <Loader />}
 
                 <PaginationPlugin

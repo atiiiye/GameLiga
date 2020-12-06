@@ -15,9 +15,11 @@
 //   };
 // };
 
+import { ADMIN_USER } from "./actionTypes"
+
 export const currentUser = (role) => {
   return {
-    type: "ADMIN_USER",
+    type: ADMIN_USER,
     currentUser: {
       role: 'admin',
     }

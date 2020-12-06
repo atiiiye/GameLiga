@@ -13,18 +13,21 @@ thead tr.header-row {
   width: 100%;
   justify-content: space-between;
   overflow: hidden;
+  padding: 0 .8rem;
 }
 
 thead tr.header-row div.header-box {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  cursor: pointer;
 }
 
 thead tr.header-row div.header-box th.header-head {
   color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   padding-right: .2rem;
+  padding-left: 0;
   letter-spacing: .09rem;
   display: flex;
   justify-content: flex-start;

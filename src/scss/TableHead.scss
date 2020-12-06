@@ -10,17 +10,20 @@ thead {
         width: 100%;
         justify-content: space-between;
         overflow: hidden;
+        padding: 0 .8rem;
 
         div.header-box {
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            cursor: pointer;
 
 
             th.header-head {
                 color: rgba($color: $color-light, $alpha: .8);
                 font-weight: bold;
                 padding-right: .2rem;
+                padding-left: 0;
                 letter-spacing: .09rem;
                 display: flex;
                 justify-content: flex-start;
@@ -36,11 +39,9 @@ thead {
             }
 
             svg.sort-table.descending {
-                // fill: $color-gray-3;
                 transform: rotate(-180deg);
                 transition: transform .3s ease;
             }
-
 
         }
 

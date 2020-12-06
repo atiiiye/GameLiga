@@ -1,3 +1,5 @@
+//! این کامپوننت از اجرای برنامه خارج شده است
+
 function userReducer(state = {}, action) {
   switch (action.type) {
     case "LOGIN":
