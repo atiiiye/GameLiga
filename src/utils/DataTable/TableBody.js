@@ -18,7 +18,7 @@ const TableBody = ({ body, onDeleteNews, onEditNews }) => {
                     <th className="body-head" id="0" scope="row">{item.id}</th>
                     <td className="body-data" id="1" >{item.name}</td>
                     <td className="body-data" id="2">{item.body}</td>
-                    {/* <td className="body-data" id="3">{item.postId}</td> */}
+                    <td className="body-data" id="3">{item.postId}</td>
                     <td className="body-data" id="4">{item.email}</td>
                     <td className="body-data" id="5">{"2020/10/10"}</td>
                     <td className="body-data" id="6"><EditIcon className="edit-icon" onClick={() => onEditNews(item)} /></td>

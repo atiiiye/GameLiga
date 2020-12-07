@@ -13,6 +13,7 @@ tbody tr.body-row {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  padding: 0 .8rem;
 }
 
 tbody tr.body-row th.body-head {
@@ -22,10 +23,11 @@ tbody tr.body-row th.body-head {
 
 tbody tr.body-row td.body-data {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
   padding: .5rem;
+  padding-right: 0;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
 }

@@ -12,41 +12,112 @@ thead tr.header-row {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  overflow: hidden;
   padding: 0 .8rem;
 }
 
-thead tr.header-row div.header-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  cursor: pointer;
-}
-
-thead tr.header-row div.header-box th.header-head {
+thead tr.header-row th.header-head {
   color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
-  padding-right: .2rem;
-  padding-left: 0;
+  padding-right: 0;
+  padding-left: .5rem;
   letter-spacing: .09rem;
   display: flex;
   justify-content: flex-start;
-}
-
-thead tr.header-row div.header-box svg.sort-table {
-  font-size: 13px;
-  fill: #ffffff;
-  transform: rotate(0deg);
-  transition: transform .3s ease;
-}
-
-thead tr.header-row div.header-box svg.sort-table.descending {
-  transform: rotate(-180deg);
-  transition: transform .3s ease;
-}
-
-thead tr.header-row div.header-box.title-box {
+  align-items: center;
+  cursor: pointer;
   position: relative;
-  left: -8%;
+}
+
+thead tr.header-row th.header-head.title {
+  width: 15%;
+}
+
+thead tr.header-row th.header-head.title::before {
+  position: relative;
+  right: -3.4rem;
+  content: "\2191";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.title::after {
+  position: relative;
+  left: .8rem;
+  content: "\2193";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.text {
+  width: 25%;
+  justify-content: center;
+}
+
+thead tr.header-row th.header-head.text::before {
+  position: relative;
+  right: -3.5rem;
+  content: "\2191";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.text::after {
+  position: relative;
+  right: -1rem;
+  content: "\2193";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.auther {
+  width: 15%;
+  justify-content: center;
+}
+
+thead tr.header-row th.header-head.auther::before {
+  position: relative;
+  right: -4.8rem;
+  content: "\2191";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.auther::after {
+  position: relative;
+  right: -1rem;
+  content: "\2193";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.date {
+  width: 15%;
+  justify-content: flex-end;
+}
+
+thead tr.header-row th.header-head.date::before {
+  position: relative;
+  right: -3.6rem;
+  content: "\2191";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.date::after {
+  position: relative;
+  right: -1rem;
+  content: "\2193";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+thead tr.header-row th.header-head.delete,
+thead tr.header-row th.header-head.edit {
+  width: 5%;
+}
+
+thead tr.header-row th.header-head.edit {
+  width: max-content;
+  right: -2.5%;
+}
+
+thead tr.header-row th.header-head.descending::after {
+  color: black;
+}
+
+thead tr.header-row th.header-head.ascending::before {
+  color: black;
 }
 /*# sourceMappingURL=TableHead.css.map */

@@ -5,70 +5,59 @@ import './../../css/TableHead.css'
 
 //import packages
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import { ChevronLeft } from '@material-ui/icons';
 
 
-const TableHead = ({ headers, sortBy }) => {
+const TableHead = ({ headers, sortBy, body }) => {
     const [angleState, setAngleState] = React.useState([]);
 
 
     const toggle = () => {
-        let angles = document.querySelectorAll('.sort-table')
-        angles.forEach(angle => angle.addEventListener('click', () => {
-            angle.classList.toggle('descending')
-            
-            console.log(angle);
+        let tHeaders = document.querySelectorAll('th.header-head')
+        tHeaders.forEach(tHeader => tHeader.addEventListener('click', () => {
+            if (tHeader.classList.contains('descending')) {
+
+                tHeader.classList.remove('descending')
+                tHeader.classList.add('ascending')
+            } else if (tHeader.classList.contains('ascending')) {
+
+                tHeader.classList.remove('ascending')
+                tHeader.classList.add('descending')
+            } else {
+                tHeader.classList.add('ascending')
+            }
+
+            console.log(tHeader);
         }))
     }
 
     // useEffect(() => {
     //     setAngleState(toggle)
-
-    // }, [angleState])
+    //     iterator()
+    // }, [])
+    // const iterator = () => {
+    //     let items = body.map(item => console.log(item))
+    // }
 
     return (
         <thead>
             { headers.map(header => (
                 <tr className="header-row" key={header.id}>
-                    <div className="header-box" id={0}>
-                        <th className="header-head" >#</th>
-                    </div>
-                    <div className="header-box title-box" id={1} onClick={() => sortBy(header.Title), toggle}>
-                        <th className="header-head">{header.Title}</th>
-                        <ArrowDownwardIcon
-                            focusable="true"
-                            className="sort-table"
-                            />
-                    </div>
-                    <div className="header-box title-box" id={2} onClick={() => sortBy(header.Text), toggle}>
-                        <th className="header-head">{header.Text}</th>
-                        <ArrowDownwardIcon
-                            focusable="true"
-                            className="sort-table"
-                            />
-                    </div>
-                    {/* <div className="header-box title-box" id={3}>
-                        <th className="header-head" >{header.Image}</th>
-                    </div> */}
-                    <div className="header-box title-box" id={4} onClick={() => sortBy(header.Auther), toggle}>
-                        <th className="header-head" >{header.Auther}</th>
-                        <ArrowDownwardIcon
-                            focusable="true"
-                            className="sort-table"
-                            />
-                    </div>
-                    <div className="header-box title-box" id={5} onClick={() => sortBy(header.Date), toggle}>
-                        <th className="header-head" >{header.Date}</th>
-                        <ArrowDownwardIcon
-                            focusable="true"
-                            className="sort-table"
-                            />
-                    </div>
-                    <div className="header-box title-box" id={6}>
-                        <th className="header-head" >{header.edit}</th>
-                    </div>
-                    <div className="header-box title-box" id={7}>
-                        <th className="header-head" >{header.delete}</th>
-                    </div>
+                    <th className="header-head" >#</th>
+
+                    <th className="header-head title" id="1" onClick={() => sortBy(header.Title), toggle}>{header.Title}</th>
+
+                    <th className="header-head text" id="2" onClick={() => sortBy(header.Text), toggle}>{header.Text}</th>
+
+                    <th className="header-head" id="3" onClick={() => sortBy(header.Image), toggle}>{header.Image}</th>
+
+                    <th className="header-head auther" id="4" onClick={() => sortBy(header.Auther), toggle}>{header.Auther}</th>
+
+                    <th className="header-head date" id="5" onClick={() => sortBy(header.Date), toggle}>{header.Date}</th>
+
+                    <th className="header-head edit" id="6" >{header.edit}</th>
+
+                    <th className="header-head delete" id="7" >{header.delete}</th>
                 </tr>
             ))}
         </thead>

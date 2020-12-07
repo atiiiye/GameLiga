@@ -13,6 +13,7 @@ import Loader from '../Components/Loader'
 import http from '../Services/httpService';
 import DataTable from '../utils/DataTable/DataTable';
 import PageTitle from '../Components/PageTitle';
+import { errorMessage } from '../utils/messages';
 
 const NewsList = () => {
 
@@ -76,6 +77,7 @@ const NewsList = () => {
                 .catch(error => console.log(error))
         }
         getData();
+        sortBy('Title')
     }, [])
 
     const filtered = (val) => {
@@ -92,7 +94,7 @@ const NewsList = () => {
             });
             console.log('new list ', newList)
         } else {
-            newList = comments;
+            newList = commentsData;
         }
         setComments(newList)
         // console.log('comments :', comments)
@@ -113,26 +115,35 @@ const NewsList = () => {
     }, [comments, currentPage, totalItems])
 
 
-    useEffect(() => {
-        filtered(searchInput)
-        handleChange(searchInput)
-    }, [searchInput])
-    
-    const compareBy = (key) => {
+    // useEffect(() => {
+    //     filtered(searchInput)
+    //     handleChange(searchInput)
+    // }, [searchInput])
+
+    const compareBy = () => {
         console.log('compareBy')
         return function (a, b) {
-            if (a[key] < b[key]) return -1;
-            if (a[key] > b[key]) return 1;
+            if (a < b) return -1;
+            if (a > b) return 1;
             return 0;
         };
     }
 
-        
+
     const sortBy = (key) => {
-        let arrayCopy = [...comments];
-        console.log('sortBy')
-        arrayCopy.sort(compareBy(key));
-        commentsData({ arrayCopy });
+        console.log(key)
+        console.log(comments)
+        switch (key) {
+            case 'Title':
+                let name = [comments.map(comment => comment.name)]
+                name.sort(compareBy());
+                {console.log(name)}
+                return name;
+
+            default:
+                return comments;
+        }
+        // commentsData({ arrayCopy });
     }
 
     return (
@@ -152,8 +163,6 @@ const NewsList = () => {
                     onDeleteNews={onDeleteNews}
                     onEditNews={onEditNews}
                     sortBy={sortBy}
-                    sortTypes={sortTypes}
-                    currentSort={currentSort}
                 />
 
                 {/* {console.log('commentsData :', commentsData)} */}

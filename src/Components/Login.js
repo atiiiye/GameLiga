@@ -106,6 +106,7 @@ class Login extends Component {
     ) {
       console.info("Valid Form");
       this.goAccount();
+      this.blurModal(this.state.loading)
     } else {
       console.error("Invalid Form");
     }
@@ -123,6 +124,26 @@ class Login extends Component {
     });
   };
 
+  blurModal = (loading) => {
+    let modalBody = document.querySelector('.form-login')
+    let modalHeader = document.querySelector('.title-login')
+    let inputElem = document.querySelectorAll('.form-control')
+    let link = document.querySelector('a.back-to-signup')
+    console.log(loading)
+    if (!loading) {
+      modalBody.style.filter = 'blur(2px)'
+      // modalHeader.style.filter = 'blur(2px)'
+      inputElem.forEach((item) => item.setAttribute('disabled',true))
+      link.style.diplay='none'
+    } else if (loading) {
+      modalBody.style.filter = 'blur(0px)'
+      modalHeader.style.filter = 'blur(0px)'
+      inputElem.forEach((item) => item.setAttribute('disabled', false))
+      link.setAttribute('disabled', false)
+
+    }
+  }
+
   goAccount = async () => {
     this.setState({ loading: true });
     try {
@@ -130,17 +151,25 @@ class Login extends Component {
       if (status === 200) {
         successMessage("You have logged in successfully");
         LoginUtil(data);
+        this.setState({ loading: false });
         this.setState({ redirect: true });
+        this.blurModal(this.state.loading)
+
       }
       // this.props.dispatch({type:"LOGIN" , payload : data})
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Username or Password is invalid");
         this.setState({ loading: false });
+        this.blurModal()
+
       }
+      this.blurModal(this.state.loading)
+
       this.resetInputs();
     }
   };
+
 
   render() {
     const { errors, redirect, loading } = this.state;
@@ -173,7 +202,7 @@ class Login extends Component {
               Welcome <span>back</span>
               {/* </h2> */}
               <p className="text-white">
-                Do not have account ? <NavLink to="/signup">Sign up</NavLink>
+                Do not have account ? <NavLink className="back-to-signup" to="/signup">Sign up</NavLink>
               </p>
             </ModalHeader>
 
@@ -227,11 +256,11 @@ class Login extends Component {
               <div className="mt-5 form-button w-75">
                 <Button
                   className={`btn-block login ${!errors.username &&
-                      !errors.password &&
-                      this.state.username &&
-                      this.state.password
-                      ? ""
-                      : "disabled"
+                    !errors.password &&
+                    this.state.username &&
+                    this.state.password
+                    ? ""
+                    : "disabled"
                     }`}
                   id="submit"
                   variant="none"

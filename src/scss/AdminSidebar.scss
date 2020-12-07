@@ -6,6 +6,7 @@ div.sidebar.sidebar-offcanvas.navbar {
     // position: fixed;
     transition: transform .35s linear;
     background-color: rgba($color: $color-gray-1, $alpha: .4);
+    // filter: blur(3px);
     //   margin-right: auto;
 }
 

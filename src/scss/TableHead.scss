@@ -9,46 +9,147 @@ thead {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        overflow: hidden;
+        // overflow: hidden;
         padding: 0 .8rem;
 
-        div.header-box {
+        // div.header-box {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: flex-start;
+        //     cursor: pointer;
+
+
+        th.header-head {
+            color: rgba($color: $color-light, $alpha: .8);
+            font-weight: bold;
+            padding-right: 0;
+            padding-left: .5rem;
+            letter-spacing: .09rem;
             display: flex;
-            align-items: center;
             justify-content: flex-start;
+            align-items: center;
             cursor: pointer;
-
-
-            th.header-head {
-                color: rgba($color: $color-light, $alpha: .8);
-                font-weight: bold;
-                padding-right: .2rem;
-                padding-left: 0;
-                letter-spacing: .09rem;
-                display: flex;
-                justify-content: flex-start;
-
-                // position: absolute;
-            }
-
-            svg.sort-table {
-                font-size: 13px;
-                fill: $color-light;
-                transform: rotate(0deg);
-                transition: transform .3s ease;
-            }
-
-            svg.sort-table.descending {
-                transform: rotate(-180deg);
-                transition: transform .3s ease;
-            }
-
-        }
-
-        div.header-box.title-box {
             position: relative;
-            left: -8%;
+
         }
+
+        th.header-head.title {
+            width: 15%;
+
+
+            &::before {
+                position: relative;
+                right: -3.4rem;
+                content: "\2191";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+
+            &::after {
+                position: relative;
+                left: .8rem;
+                content: "\2193";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+        }
+
+        th.header-head.text {
+            width: 25%;
+            justify-content: center;
+
+            &::before {
+                position: relative;
+                right: -3.5rem;
+                content: "\2191";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+
+            &::after {
+                position: relative;
+                right: -1rem;
+                content: "\2193";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+        }
+
+        th.header-head.auther {
+            width: 15%;
+            justify-content: center;
+
+            &::before {
+                position: relative;
+                right: -4.8rem;
+                content: "\2191";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+
+            &::after {
+                position: relative;
+                right: -1rem;
+                content: "\2193";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+        }
+
+        th.header-head.date {
+            width: 15%;
+            justify-content: flex-end;
+
+            &::before {
+                position: relative;
+                right: -3.6rem;
+                content: "\2191";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+
+            &::after {
+                position: relative;
+                right: -1rem;
+                content: "\2193";
+                color: rgba($color: $color-light, $alpha: .8);
+            }
+
+        }
+
+        th.header-head.delete,
+        th.header-head.edit {
+            width: 5%;
+        }
+
+        th.header-head.edit {
+            width: max-content;
+            right: -2.5%;
+        }
+
+        th.header-head.descending {
+            &::after {
+                color: rgba($color: $color-dark, $alpha: 1.0);
+            }
+        }
+
+        th.header-head.ascending {
+            &::before {
+                color: rgba($color: $color-dark, $alpha: 1.0);
+            }
+        }
+
+        // svg.sort-table {
+        //     font-size: 13px;
+        //     fill: $color-light;
+        //     transform: rotate(0deg);
+        //     transition: transform .3s ease;
+        // }
+
+        // svg.sort-table.descending {
+        //     transform: rotate(-180deg);
+        //     transition: transform .3s ease;
+        // }
+
+        // }
+
+        // div.header-box.title-box {
+        //     position: relative;
+        //     left: -8%;
+        // }
     }
 
 }
