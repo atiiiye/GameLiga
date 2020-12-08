@@ -5,7 +5,6 @@ import './../../css/TableHead.css'
 
 //import packages
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import { ChevronLeft } from '@material-ui/icons';
 
 
 const TableHead = ({ headers, sortBy, body }) => {

@@ -14,6 +14,7 @@ import http from '../Services/httpService';
 import DataTable from '../utils/DataTable/DataTable';
 import PageTitle from '../Components/PageTitle';
 import { errorMessage } from '../utils/messages';
+import { filter } from 'lodash';
 
 const NewsList = () => {
 
@@ -59,53 +60,27 @@ const NewsList = () => {
         console.log(item)
     }
 
-    const handleChange = val => {
-        setSearchInput(val);
-        // console.log('searchInput :', searchInput)
-        setLoading(true)
-        filtered(val)
+
+    const getData = async () => {
+        setLoading(true);
+        await http.get("https://jsonplaceholder.typicode.com/comments")
+            .then(response => {
+                setLoading(false);
+                setComments(response.data)
+            })
+            .catch(error => console.log(error))
     }
 
+    
     useEffect(() => {
-        const getData = async () => {
-            setLoading(true);
-            await http.get("https://jsonplaceholder.typicode.com/comments")
-                .then(response => {
-                    setLoading(false);
-                    setComments(response.data)
-                })
-                .catch(error => console.log(error))
-        }
         getData();
-        sortBy('Title')
     }, [])
-
-    const filtered = (val) => {
-        let currentList = [];
-        let newList = [];
-
-        if (val !== "") {
-            currentList = comments;
-
-            newList = currentList.filter(value => {
-                const lc = value.body.toLowerCase();
-                const filter = val.toLowerCase();
-                return lc.match(filter);
-            });
-            console.log('new list ', newList)
-        } else {
-            newList = commentsData;
-        }
-        setComments(newList)
-        // console.log('comments :', comments)
-    }
 
     const commentsData = useMemo(() => {
         let computedComments = comments;
 
         setTotalItems(computedComments.length)
         setLoading(false);
-
 
         return computedComments
             .slice(
@@ -114,11 +89,40 @@ const NewsList = () => {
             );
     }, [comments, currentPage, totalItems])
 
+    const handleChange = val => {
+        setSearchInput(val);
+        // console.log('searchInput :', searchInput)
+        filtered(val)
+    }
 
-    // useEffect(() => {
-    //     filtered(searchInput)
-    //     handleChange(searchInput)
-    // }, [searchInput])
+
+    
+    const filtered = (val) => {
+
+        let currentList = [];
+        let newList = [];
+
+        if (val !== "") {
+            currentList = comments;
+            newList = currentList.filter(value => {
+                const lc = value.body.toLowerCase();
+                console.log('val :', val)
+                const filter = val.toLowerCase();
+                return lc.match(filter);
+            });
+            console.log('new list ', newList)
+        } else {
+            currentList = comments;
+            newList = comments
+            return newList
+        }
+        // console.log('comments :', comments)
+        setComments(newList)
+        newList = [];
+        console.log('new list end', newList)
+
+        console.log('comments :', comments)
+    }
 
     const compareBy = () => {
         console.log('compareBy')
@@ -137,7 +141,7 @@ const NewsList = () => {
             case 'Title':
                 let name = [comments.map(comment => comment.name)]
                 name.sort(compareBy());
-                {console.log(name)}
+                { console.log(name) }
                 return name;
 
             default:
@@ -163,9 +167,11 @@ const NewsList = () => {
                     onDeleteNews={onDeleteNews}
                     onEditNews={onEditNews}
                     sortBy={sortBy}
+                    sortTypes={sortTypes}
                 />
 
-                {/* {console.log('commentsData :', commentsData)} */}
+                {console.log('comments render :', comments)}
+
                 {loading && <Loader />}
 
                 <PaginationPlugin

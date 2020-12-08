@@ -1,9 +1,5 @@
 import React from 'react'
 
-//import bootstrap
-// import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
-// import Pagination from 'react-bootstrap/Pagination'
-
 //import css 
 import "./../css/PaginationPlugin.css"
 
@@ -15,7 +11,7 @@ const PaginationPlugin = ({ total, itemsPerPage, currentPage, onPageChange }) =>
     const pageCount = Math.ceil(total / itemsPerPage);
     if (currentPage < 1) currentPage = 1
     if (currentPage > pageCount) currentPage = pageCount
-    if (pageCount === 1) return null;
+    if (pageCount <= 1) return null;
 
     const pages = range(1, pageCount + 1);
 

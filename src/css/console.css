@@ -22,7 +22,7 @@ div.container-fluid.Console div.card#content {
   border-radius: 0;
   position: relative;
   left: 0;
-  height: 140vh;
+  height: 100%;
   padding-left: 0;
   padding-right: 0;
   width: 100%;

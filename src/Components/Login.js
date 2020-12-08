@@ -109,6 +109,8 @@ class Login extends Component {
       this.blurModal(this.state.loading)
     } else {
       console.error("Invalid Form");
+      this.blurModal(this.state.loading)
+
     }
   };
 
@@ -126,22 +128,19 @@ class Login extends Component {
 
   blurModal = (loading) => {
     let modalBody = document.querySelector('.form-login')
-    let modalHeader = document.querySelector('.title-login')
     let inputElem = document.querySelectorAll('.form-control')
-    let link = document.querySelector('a.back-to-signup')
-    console.log(loading)
-    if (!loading) {
-      modalBody.style.filter = 'blur(2px)'
-      // modalHeader.style.filter = 'blur(2px)'
-      inputElem.forEach((item) => item.setAttribute('disabled',true))
-      link.style.diplay='none'
-    } else if (loading) {
-      modalBody.style.filter = 'blur(0px)'
-      modalHeader.style.filter = 'blur(0px)'
-      inputElem.forEach((item) => item.setAttribute('disabled', false))
-      link.setAttribute('disabled', false)
+    let button = document.querySelector('.login')
 
+    if (loading) {
+      modalBody.style.filter = 'blur(2px)'
+      inputElem.forEach((item) => item.setAttribute('disabled', true))
+      button.setAttribute('disabled', true)
+    } else if (!loading) {
+      modalBody.style.filter = 'blur(0px)'
+      inputElem.forEach((item) => item.removeAttribute('disabled', true))
+      button.removeAttribute('disabled', true)
     }
+    // this.setState({ loading: true });
   }
 
   goAccount = async () => {
@@ -153,19 +152,16 @@ class Login extends Component {
         LoginUtil(data);
         this.setState({ loading: false });
         this.setState({ redirect: true });
-        this.blurModal(this.state.loading)
-
       }
       // this.props.dispatch({type:"LOGIN" , payload : data})
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Username or Password is invalid");
-        this.setState({ loading: false });
-        this.blurModal()
-
+        
       }
+      
+      this.setState({ loading: false });
       this.blurModal(this.state.loading)
-
       this.resetInputs();
     }
   };

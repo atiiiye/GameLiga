@@ -1,0 +1,118 @@
+@import 'base';
+
+div.container-fluid.userAccount {
+
+    background-image: url('./../images/background-games.png'), linear-gradient(0, transparent, rgba(0, 0, 0, .7) 100%);
+    background-color: $color-pink-1;
+    background-repeat: no-repeat;
+    background-size: 65% 140vh, 100%;
+    -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 20%, #000f);
+    width: 100%;
+
+    div.card#content {
+        background-color: rgba($color: #000000, $alpha: .4);
+        display: flex;
+        border-left: 1px solid $color-orange-1;
+        border-top: 2px solid $color-orange-1;
+        border-bottom: 0;
+        border-right: 0;
+        border-radius: 0;
+        position: relative;
+        left: 0;
+        height: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        min-height: 100%;
+
+        div.row.games {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+
+            div.game {
+                margin: auto;
+                padding: 0;
+                width: 20%;
+                margin-bottom: 1.5rem;
+                margin-right: auto;
+                // min-height: 70% ;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                &:hover {
+                    transform: scale(1.05);
+                    transition: all .3s ease-in;
+                }
+
+                img.game-image {
+                    height: 50%;
+                    width: 65%;
+                    border-radius: 20px;
+                    margin-bottom: 1rem;
+                    -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
+
+                    // &::after {
+                    //     content: "";
+                    //     // background-image: inherit;
+                    //     // width: inherit;
+                    //     // height: inherit;
+                    //     position: absolute;
+                    //     bottom: -30%;
+                    //     background: linear-gradient(to bottom, transparent 75%, #000f);
+                    //     z-index: 1;
+                    //     transform: scaleY(-1);
+                    // }
+
+                    // &::before {
+                    //     content: "";
+                    //     // background-image: inherit;
+                    //     background:  linear-gradient(to bottom, transparent 75%, #000f), -moz-element(img);
+                    //     transform: scaleY(-1);
+                    //     position: absolute;
+                    //     height: 50%;
+                    //     width: 360px;
+                    //     top: 247px;
+                    //     left: 0px;
+                    // }
+                }
+
+                // img.game-image-ref{
+                //     display: block;
+                //     transform: scaleY(-1);
+                //     -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(75%, transparent), to(rgba(0, 0, 0, 0.5)));
+                // }
+
+                div.online {
+                    width: 55%;
+                    // height: 22%;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: .5rem;
+                    border: 1px solid $color-gray-2;
+                    border-radius: 28px;
+                    background: rgba($color: #000000, $alpha: 1.0);
+                    color: $color-gray-2;
+                    font-size: 90%;
+                    z-index: 10;
+
+                }
+            }
+        }
+
+        div.empty-square {
+            width: 14%;
+            height: 25%;
+            border: 1px solid $color-danger;
+            background-color: $color-background-1;
+            border-bottom: 0;
+            border-right: 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

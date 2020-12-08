@@ -8,7 +8,7 @@ div.container-scroller {
     justify-content: start;
 
     div.container-fluid.page-body-wrapper {
-        min-height: calc(100vh - 70px);
+        min-height: calc(100% - 70px) !important;
         width: calc(100% - 20%);
         transition: width .65s ease, margin .65s ease, position .65s ease;
         display: flex;

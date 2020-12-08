@@ -23,7 +23,7 @@ div.container-fluid.userAccount div.card#content {
   border-radius: 0;
   position: relative;
   left: 0;
-  height: 140vh;
+  height: 100%;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
@@ -40,7 +40,7 @@ div.container-fluid.userAccount div.card#content div.row.games {
 div.container-fluid.userAccount div.card#content div.row.games div.game {
   margin: auto;
   padding: 0;
-  width: 17.5%;
+  width: 20%;
   margin-bottom: 1.5rem;
   margin-right: auto;
   display: flex;
@@ -56,14 +56,14 @@ div.container-fluid.userAccount div.card#content div.row.games div.game:hover {
 
 div.container-fluid.userAccount div.card#content div.row.games div.game img.game-image {
   height: 50%;
-  width: 180px;
+  width: 65%;
   border-radius: 20px;
   margin-bottom: 1rem;
   -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
 }
 
 div.container-fluid.userAccount div.card#content div.row.games div.game div.online {
-  width: 75%;
+  width: 55%;
   display: flex;
   justify-content: flex-start;
   padding: .5rem;
@@ -86,4 +86,4 @@ div.container-fluid.userAccount div.card#content div.empty-square {
   bottom: 0;
   right: 0;
 }
-/*# sourceMappingURL=UserAccount.css.map */
+/*# sourceMappingURL=Account.css.map */

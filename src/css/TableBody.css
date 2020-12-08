@@ -14,6 +14,7 @@ tbody tr.body-row {
   justify-content: space-between;
   align-items: center;
   padding: 0 .8rem;
+  position: relative;
 }
 
 tbody tr.body-row th.body-head {
@@ -27,7 +28,6 @@ tbody tr.body-row td.body-data {
   flex-direction: row;
   align-items: center;
   padding: .5rem;
-  padding-right: 0;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -46,5 +46,10 @@ tbody tr.body-row td.body-data i.material-icons {
 
 tbody tr.body-row td.body-data i.material-icons:focus, tbody tr.body-row td.body-data i.material-icons:hover {
   color: #dc3545;
+}
+
+tbody tr.body-row td.edit {
+  width: 2%;
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=TableBody.css.map */
