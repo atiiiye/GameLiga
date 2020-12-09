@@ -131,16 +131,19 @@ class Login extends Component {
     let inputElem = document.querySelectorAll('.form-control')
     let button = document.querySelector('.login')
 
+    console.log(this.state.loading)
+    
     if (loading) {
       modalBody.style.filter = 'blur(2px)'
       inputElem.forEach((item) => item.setAttribute('disabled', true))
       button.setAttribute('disabled', true)
     } else if (!loading) {
-      modalBody.style.filter = 'blur(0px)'
+      modalBody.style.filter = 'none'
       inputElem.forEach((item) => item.removeAttribute('disabled', true))
       button.removeAttribute('disabled', true)
     }
     // this.setState({ loading: true });
+    console.log(this.state.loading)
   }
 
   goAccount = async () => {

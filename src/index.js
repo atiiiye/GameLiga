@@ -5,9 +5,14 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { reducers } from "./Reducers";
-import { createStore } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore , applyMiddleware } from "redux";
+import { createLogger } from 'redux-logger'
 
-export const store = createStore(reducers)
+const middleware = [];
+if (process.env.NODE_ENV !== 'production') middleware.push(createLogger())
+
+const store = createStore(reducers, composeWithDevTools(applyMiddleware(...middleware)) )
 
 ReactDOM.render(
   // <React.StrictMode>

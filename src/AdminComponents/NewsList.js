@@ -25,6 +25,7 @@ const NewsList = () => {
     const ITEMS_PER_PAGE = 10;
     const [searchInput, setSearchInput] = useState("");
     const [query, setQuery] = useState([])
+    const [Data, setData] = useState([])
     const [sortedField, setSortedField] = React.useState(null);
 
     const [currentSort, setCurrentSort] = useState('default')
@@ -71,7 +72,7 @@ const NewsList = () => {
             .catch(error => console.log(error))
     }
 
-    
+
     useEffect(() => {
         getData();
     }, [])
@@ -91,36 +92,45 @@ const NewsList = () => {
 
     const handleChange = val => {
         setSearchInput(val);
-        // console.log('searchInput :', searchInput)
         filtered(val)
     }
 
 
-    
-    const filtered = (val) => {
-
+    const filtered = async (val) => {
         let currentList = [];
         let newList = [];
 
+        console.log('new list start', newList)
+
+        // let xxx= comments.filter(comment => comment.body.toLowerCase().indexOf(val.toLowerCase()) > -1)
+        // console.log('xxx :', xxx)
+
+        // setComments(xxx)
+
+        await getData()
+
         if (val !== "") {
             currentList = comments;
+
             newList = currentList.filter(value => {
                 const lc = value.body.toLowerCase();
                 console.log('val :', val)
                 const filter = val.toLowerCase();
-                return lc.match(filter);
+                if (lc.match(filter)) return lc.match(filter);
             });
-            console.log('new list ', newList)
-        } else {
-            currentList = comments;
-            newList = comments
-            return newList
-        }
-        // console.log('comments :', comments)
-        setComments(newList)
-        newList = [];
-        console.log('new list end', newList)
 
+
+            console.log('new list ', newList)
+        } else if (val === "") {
+            setCurrentPage(1)
+            return newList = []
+        }
+
+        
+        console.log('comments :', comments)
+        setComments(newList)
+
+        console.log('new list end', newList)
         console.log('comments :', comments)
     }
 
@@ -132,7 +142,6 @@ const NewsList = () => {
             return 0;
         };
     }
-
 
     const sortBy = (key) => {
         console.log(key)
@@ -170,7 +179,7 @@ const NewsList = () => {
                     sortTypes={sortTypes}
                 />
 
-                {console.log('comments render :', comments)}
+                {/* {console.log('comments render :', comments)} */}
 
                 {loading && <Loader />}
 

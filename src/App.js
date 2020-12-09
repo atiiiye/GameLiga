@@ -75,9 +75,9 @@ class App extends Component {
             currentUserDispatch(currentUser.role === 'admin')
               ?  */}
               <PrivateRoute path="/admin" component={LayoutAdmin} />
-              {/* :
-               <Redirect to="/" />
-           } */}
+          {/* //     :
+          //      <Redirect to="/" />
+          //  } */}
 
           <PublicRoute exact restricted={false} path="/" component={Home} />
 
@@ -102,7 +102,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log("state :", state)
+  console.log("state :", state)
   return {
     currentUser: state.adminReducer,
   }
