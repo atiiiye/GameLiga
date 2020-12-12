@@ -60,12 +60,14 @@ class SignUp extends Component {
     phone: "",
     promotional: "",
     referred: "",
-    checkbox: false,
     captcha: "",
     captchaInput: "",
+    type: "password",
+    checkbox: false,
     redirect: false,
     loading: false,
-    type: "password"
+    disabled: false,
+
   };
 
   static contextType = Context;
@@ -100,20 +102,23 @@ class SignUp extends Component {
 
   postData = async () => {
     this.setState({ loading: true });
+    this.setState({ disabled: true });
     try {
       const { data, status } = await signup(this.state);
       if (status === 201 || status === 200) {
         successMessage("Create account successfully , Please wait");
         LoginUtil(data);
       }
-      this.setState({ redirect: true });
       this.setState({ loading: false });
+      this.setState({ disabled: false });
+      this.setState({ redirect: true });
       // this.resetInputs();
       // this.setState({ redirect: false });
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Your Information is invalid");
         this.setState({ loading: false });
+        this.setState({ disabled: false });
       }
       this.resetInputs();
     }
@@ -300,6 +305,7 @@ class SignUp extends Component {
       checkbox: false,
       captchaInput: "",
       loading: false,
+      disabled: false,
       errors: {
         firstName: "",
         lastName: "",
@@ -322,7 +328,7 @@ class SignUp extends Component {
   }
 
   render() {
-    const { errors, password, redirect, loading } = this.state;
+    const { errors, password, redirect, loading ,disabled } = this.state;
 
     let progressStyle = "";
     if (password.length < 6) progressStyle = "danger";
@@ -363,12 +369,13 @@ class SignUp extends Component {
                 <div className="validation-box col-sm-7">
                   <Form.Control
                     autoFocus
+                    name="username"
                     type="text"
                     className="form-control-plaintext"
                     placeholder="User name"
-                    name="username"
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.username}
+                    disabled={disabled}
                   />
                   {errors.username.length > 0 && (
                     <span className="error">{errors.username}</span>
@@ -383,13 +390,15 @@ class SignUp extends Component {
                 <div className="validation-box col-sm-7">
                   <div className="password-block">
                     <Form.Control
+                      name="password"
                       type={this.state.type}
                       id="randomPassword"
                       className="form-control-plaintext "
                       placeholder="Password"
                       onChange={(e) => this.handleChange(e)}
                       value={this.state.password}
-                      name="password"
+                      disabled={disabled}
+
                     />
                     <i
                       className="far fa-eye"
@@ -427,6 +436,7 @@ class SignUp extends Component {
                     variant="warning"
                     type="button"
                     onClick={() => this.randomPassword(11)}
+                    disabled={disabled}
                   >
                     Generate Password
                   </Button>
@@ -439,12 +449,13 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="confirmPassword"
                     type="password"
                     className="form-control-plaintext"
                     placeholder="confirm password"
-                    name="confirmPassword"
                     value={this.state.confirmPassword}
                     onChange={(e) => this.handleChange(e)}
+                    disabled={disabled}
                   />
                   {errors.confirmPassword.length > 0 && (
                     <span className="error">{errors.confirmPassword}</span>
@@ -458,13 +469,13 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="email"
                     type="email"
                     className="form-control-plaintext"
                     placeholder="E-mail address"
-                    name="email"
                     value={this.state.email}
                     onChange={(e) => this.handleChange(e)}
-                    noValidate
+                    disabled={disabled}
                   />
                   {errors.email.length > 0 && (
                     <span className="error">{errors.email}</span>
@@ -482,13 +493,13 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="nickName"
                     type="text"
                     className="form-control-plaintext"
                     placeholder="Nick name"
-                    name="nickName"
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.nickName}
-                    noValidate
+                    disabled={disabled}
                   />
                   {errors.nickName.length > 0 && (
                     <span className="error">{errors.nickName}</span>
@@ -502,12 +513,13 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="firstName"
                     type="text"
                     className="form-control-plaintext"
                     placeholder="First name"
-                    name="firstName"
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.firstName}
+                    disabled={disabled}
                   />
                   {errors.firstName.length > 0 && (
                     <span className="error">{errors.firstName}</span>
@@ -521,12 +533,13 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="lastName"
                     type="text"
                     className="form-control-plaintext"
                     placeholder="Last name"
-                    name="lastName"
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.lastName}
+                    disabled={disabled}
                   />
                   {errors.lastName.length > 0 && (
                     <span className="error">{errors.lastName}</span>
@@ -540,12 +553,14 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="phone"
                     type="text"
                     className="form-control-plaintext"
                     placeholder="Phone number"
-                    name="phone"
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.phone}
+                    disabled={disabled}
+
                   />
                   {errors.phone.length > 0 && (
                     <span className="error">{errors.phone}</span>
@@ -559,12 +574,13 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="promotional"
                     type="text"
                     className="form-control-plaintext"
                     placeholder="Promotional code"
-                    name="promotional"
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.promotional}
+                    disabled={disabled}
                   />
                   {errors.promotional.length > 0 && (
                     <span className="error">{errors.promotional}</span>
@@ -578,12 +594,13 @@ class SignUp extends Component {
                 </Form.Label>
                 <div className="validation-box col-sm-7">
                   <Form.Control
+                    name="referred"
                     type="text"
                     className="form-control-plaintext"
                     placeholder="Referred by"
-                    name="referred"
                     onChange={(e) => this.handleChange(e)}
                     value={this.state.referred}
+                    disabled={disabled}
                   />
                   {errors.referred.length > 0 && (
                     <span className="error">{errors.referred}</span>
@@ -606,12 +623,13 @@ class SignUp extends Component {
 
                   <div className="validation-box ">
                     <Form.Control
-                      type="text"
                       name="captchaInput"
+                      type="text"
                       className="form-control-plaintext"
                       onChange={(e) => this.handleChange(e)}
                       value={this.state.captchaInput}
                       placeholder="please enter code"
+                      disabled={disabled}
                     />
                     {errors.captchaInput.length > 0 && (
                       <span className="error">{errors.captchaInput}</span>

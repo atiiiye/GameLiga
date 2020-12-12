@@ -192,7 +192,7 @@ div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse ul.na
   font-size: 90%;
   color: #ff9300;
   padding: 0;
-  width: 80%;
+  width: 100%;
 }
 
 div.sidebar.sidebar-offcanvas.navbar.collapse.show ul.nav div.sub-collapse ul.nav.sub-menu a.nav-link:focus {

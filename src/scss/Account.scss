@@ -34,9 +34,9 @@ div.container-fluid.userAccount {
             div.game {
                 margin: auto;
                 padding: 0;
-                width: 20%;
+                width: 19%;
+                margin: 0;
                 margin-bottom: 1.5rem;
-                margin-right: auto;
                 // min-height: 70% ;
                 display: flex;
                 flex-direction: column;
@@ -50,55 +50,24 @@ div.container-fluid.userAccount {
 
                 img.game-image {
                     height: 50%;
-                    width: 65%;
+                    width: 70%;
                     border-radius: 20px;
                     margin-bottom: 1rem;
                     -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
-
-                    // &::after {
-                    //     content: "";
-                    //     // background-image: inherit;
-                    //     // width: inherit;
-                    //     // height: inherit;
-                    //     position: absolute;
-                    //     bottom: -30%;
-                    //     background: linear-gradient(to bottom, transparent 75%, #000f);
-                    //     z-index: 1;
-                    //     transform: scaleY(-1);
-                    // }
-
-                    // &::before {
-                    //     content: "";
-                    //     // background-image: inherit;
-                    //     background:  linear-gradient(to bottom, transparent 75%, #000f), -moz-element(img);
-                    //     transform: scaleY(-1);
-                    //     position: absolute;
-                    //     height: 50%;
-                    //     width: 360px;
-                    //     top: 247px;
-                    //     left: 0px;
-                    // }
                 }
 
-                // img.game-image-ref{
-                //     display: block;
-                //     transform: scaleY(-1);
-                //     -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(75%, transparent), to(rgba(0, 0, 0, 0.5)));
-                // }
-
                 div.online {
-                    width: 55%;
+                    width: 60%;
                     // height: 22%;
                     display: flex;
                     justify-content: flex-start;
-                    padding: .5rem;
+                    padding: .3rem .5rem;
                     border: 1px solid $color-gray-2;
                     border-radius: 28px;
-                    background: rgba($color: #000000, $alpha: 1.0);
+                    background: rgba($color: $color-dark, $alpha: 1.0);
                     color: $color-gray-2;
                     font-size: 90%;
                     z-index: 10;
-
                 }
             }
         }

@@ -135,6 +135,8 @@ class News extends Component {
                         </svg>
                       </div>
                       <div className="card-news">
+                        <img className="news" src={Poster1} alt="" />
+
                         <svg
                           className="single-news"
                           xmlns="http://www.w3.org/2000/svg"
@@ -154,6 +156,8 @@ class News extends Component {
                         </svg>
                       </div>
                       <div className="card-news">
+                        <img className="news" src={Poster1} alt="" />
+
                         <svg
                           className="single-news"
                           xmlns="http://www.w3.org/2000/svg"

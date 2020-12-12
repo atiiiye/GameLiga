@@ -42,6 +42,7 @@ class Login extends Component {
     password: "",
     redirect: false,
     loading: false,
+    disabled: false,
   };
 
   static contextType = Context;
@@ -99,6 +100,7 @@ class Login extends Component {
 
   handleSubmitLogin = (event) => {
     event.preventDefault();
+
     if (
       this.validateForm(this.state.errors) &&
       this.state.username &&
@@ -106,10 +108,8 @@ class Login extends Component {
     ) {
       console.info("Valid Form");
       this.goAccount();
-      this.blurModal(this.state.loading)
     } else {
       console.error("Invalid Form");
-      this.blurModal(this.state.loading)
 
     }
   };
@@ -119,6 +119,7 @@ class Login extends Component {
       username: "",
       password: "",
       loading: false,
+      disabled: false,
       errors: {
         username: "",
         password: "",
@@ -126,52 +127,37 @@ class Login extends Component {
     });
   };
 
-  blurModal = (loading) => {
-    let modalBody = document.querySelector('.form-login')
-    let inputElem = document.querySelectorAll('.form-control')
-    let button = document.querySelector('.login')
-
-    console.log(this.state.loading)
-    
-    if (loading) {
-      modalBody.style.filter = 'blur(2px)'
-      inputElem.forEach((item) => item.setAttribute('disabled', true))
-      button.setAttribute('disabled', true)
-    } else if (!loading) {
-      modalBody.style.filter = 'none'
-      inputElem.forEach((item) => item.removeAttribute('disabled', true))
-      button.removeAttribute('disabled', true)
-    }
-    // this.setState({ loading: true });
-    console.log(this.state.loading)
-  }
-
   goAccount = async () => {
     this.setState({ loading: true });
+    this.setState({ disabled: true });
+    console.log('disabled : ', this.state.disabled)
+
     try {
       const { data, status } = await login(this.state);
       if (status === 200) {
         successMessage("You have logged in successfully");
         LoginUtil(data);
         this.setState({ loading: false });
+        this.setState({ disabled: false });
+
         this.setState({ redirect: true });
       }
       // this.props.dispatch({type:"LOGIN" , payload : data})
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Username or Password is invalid");
-        
+
       }
-      
+
       this.setState({ loading: false });
-      this.blurModal(this.state.loading)
+      this.setState({ disabled: false });
       this.resetInputs();
     }
   };
 
 
   render() {
-    const { errors, redirect, loading } = this.state;
+    const { errors, redirect, loading, disabled } = this.state;
 
     if (redirect) {
       return <Redirect to={{ pathname: "/account" }} />;
@@ -222,6 +208,7 @@ class Login extends Component {
                   placeholder="User name"
                   value={this.state.username}
                   onChange={(e) => this.handleChangeLogin(e)}
+                  disabled={disabled}
                 />
                 {errors.username.length > 0 && (
                   <span className="form-validate">{errors.username}</span>
@@ -238,6 +225,8 @@ class Login extends Component {
                     placeholder="Password"
                     value={this.state.password}
                     onChange={(e) => this.handleChangeLogin(e)}
+                    disabled={disabled}
+
                   />
                   <i
                     className="far fa-eye"
@@ -264,6 +253,8 @@ class Login extends Component {
                   id="submit"
                   variant="none"
                   type="submit"
+                // disabled={disabled}
+
                 >
                   LOG IN
                 </Button>

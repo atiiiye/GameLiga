@@ -37,7 +37,6 @@ const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, he
                 <TableHead
                     headers={headers}
                     sortBy={sortBy}
-                    body={body}
                     />
                 <TableBody
                     body={body}

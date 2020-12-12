@@ -40,9 +40,9 @@ div.container-fluid.userAccount div.card#content div.row.games {
 div.container-fluid.userAccount div.card#content div.row.games div.game {
   margin: auto;
   padding: 0;
-  width: 20%;
+  width: 19%;
+  margin: 0;
   margin-bottom: 1.5rem;
-  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -56,17 +56,17 @@ div.container-fluid.userAccount div.card#content div.row.games div.game:hover {
 
 div.container-fluid.userAccount div.card#content div.row.games div.game img.game-image {
   height: 50%;
-  width: 65%;
+  width: 70%;
   border-radius: 20px;
   margin-bottom: 1rem;
   -webkit-box-reflect: below 1px linear-gradient(to bottom, transparent 75%, #000f);
 }
 
 div.container-fluid.userAccount div.card#content div.row.games div.game div.online {
-  width: 55%;
+  width: 60%;
   display: flex;
   justify-content: flex-start;
-  padding: .5rem;
+  padding: .3rem .5rem;
   border: 1px solid #959aa2;
   border-radius: 28px;
   background: black;

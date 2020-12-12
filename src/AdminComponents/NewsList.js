@@ -3,9 +3,6 @@ import React, { useState, useEffect, useMemo } from 'react'
 //import css
 import './../css/NewsList.css';
 
-//import bootstrap
-import { Table } from 'reactstrap'
-
 //import components
 import AdminHeader from './AdminHeader'
 import PaginationPlugin from '../utils/PaginationPlugin'
@@ -14,7 +11,6 @@ import http from '../Services/httpService';
 import DataTable from '../utils/DataTable/DataTable';
 import PageTitle from '../Components/PageTitle';
 import { errorMessage } from '../utils/messages';
-import { filter } from 'lodash';
 
 const NewsList = () => {
 
@@ -25,9 +21,7 @@ const NewsList = () => {
     const ITEMS_PER_PAGE = 10;
     const [searchInput, setSearchInput] = useState("");
     const [query, setQuery] = useState([])
-    const [Data, setData] = useState([])
     const [sortedField, setSortedField] = React.useState(null);
-
     const [currentSort, setCurrentSort] = useState('default')
 
     const sortTypes = {
@@ -45,7 +39,6 @@ const NewsList = () => {
         }
     };
 
-
     const headers = [
         { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date", edit: "Edit", delete: "Delete" },
     ];
@@ -61,17 +54,16 @@ const NewsList = () => {
         console.log(item)
     }
 
-
     const getData = async () => {
         setLoading(true);
         await http.get("https://jsonplaceholder.typicode.com/comments")
             .then(response => {
                 setLoading(false);
                 setComments(response.data)
+                setQuery(response.data)
             })
             .catch(error => console.log(error))
     }
-
 
     useEffect(() => {
         getData();
@@ -95,63 +87,56 @@ const NewsList = () => {
         filtered(val)
     }
 
-
-    const filtered = async (val) => {
-        let currentList = [];
-        let newList = [];
-
-        console.log('new list start', newList)
+    const filtered = (val) => {
+        
+        setComments(query)
 
         // let xxx= comments.filter(comment => comment.body.toLowerCase().indexOf(val.toLowerCase()) > -1)
         // console.log('xxx :', xxx)
 
-        // setComments(xxx)
-
-        await getData()
+        let currentList = [];
+        let newList = [];
 
         if (val !== "") {
-            currentList = comments;
+            currentList = query;
 
             newList = currentList.filter(value => {
-                const lc = value.body.toLowerCase();
-                console.log('val :', val)
+                const lc = value.name.toLowerCase();
+                const bc = value.body.toLowerCase();
                 const filter = val.toLowerCase();
-                if (lc.match(filter)) return lc.match(filter);
+                return lc.match(filter) ;
             });
-
-
-            console.log('new list ', newList)
-        } else if (val === "") {
+        } else {
             setCurrentPage(1)
             return newList = []
         }
-
-        
-        console.log('comments :', comments)
         setComments(newList)
-
-        console.log('new list end', newList)
-        console.log('comments :', comments)
+        newList = []
     }
 
-    const compareBy = () => {
+    const compareBy = (key) => {
         console.log('compareBy')
         return function (a, b) {
-            if (a < b) return -1;
-            if (a > b) return 1;
+            if (a[key] < b[key]) return -1;
+            if (a[key] > b[key]) return 1;
             return 0;
         };
     }
 
     const sortBy = (key) => {
-        console.log(key)
-        console.log(comments)
         switch (key) {
             case 'Title':
-                let name = [comments.map(comment => comment.name)]
-                name.sort(compareBy());
-                { console.log(name) }
+                let name = comments.map(comment => Object.values(comment))
+                name.sort(compareBy(2));
+                { console.log("name :",name) }
+                // { console.log("comments[name] :", comments[name]) }
                 return name;
+                // setComments(name)
+            case 'Text':
+                let text = comments.map(comment => Object.values(comment))
+                text.sort(compareBy(3));
+                { console.log("text :", text) }
+                return text;
 
             default:
                 return comments;
@@ -176,10 +161,7 @@ const NewsList = () => {
                     onDeleteNews={onDeleteNews}
                     onEditNews={onEditNews}
                     sortBy={sortBy}
-                    sortTypes={sortTypes}
                 />
-
-                {/* {console.log('comments render :', comments)} */}
 
                 {loading && <Loader />}
 
