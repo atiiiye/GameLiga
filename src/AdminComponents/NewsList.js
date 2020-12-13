@@ -21,23 +21,10 @@ const NewsList = () => {
     const ITEMS_PER_PAGE = 10;
     const [searchInput, setSearchInput] = useState("");
     const [query, setQuery] = useState([])
-    const [sortedField, setSortedField] = React.useState(null);
+    const [sortedField, setSortedField] = useState(null);
     const [currentSort, setCurrentSort] = useState('default')
 
-    const sortTypes = {
-        up: {
-            class: 'sort-up',
-            fn: (a, b) => a - b
-        },
-        down: {
-            class: 'sort-down',
-            fn: (a, b) => b - a
-        },
-        default: {
-            class: 'sort',
-            fn: (a, b) => a
-        }
-    };
+
 
     const headers = [
         { id: 0, Title: "Title", Text: "Text", Image: "Image", Auther: "Auther", Date: "Date", edit: "Edit", delete: "Delete" },
@@ -88,7 +75,7 @@ const NewsList = () => {
     }
 
     const filtered = (val) => {
-        
+
         setComments(query)
 
         // let xxx= comments.filter(comment => comment.body.toLowerCase().indexOf(val.toLowerCase()) > -1)
@@ -104,7 +91,7 @@ const NewsList = () => {
                 const lc = value.name.toLowerCase();
                 const bc = value.body.toLowerCase();
                 const filter = val.toLowerCase();
-                return lc.match(filter) ;
+                return lc.match(filter);
             });
         } else {
             setCurrentPage(1)
@@ -116,6 +103,7 @@ const NewsList = () => {
 
     const compareBy = (key) => {
         console.log('compareBy')
+
         return function (a, b) {
             if (a[key] < b[key]) return -1;
             if (a[key] > b[key]) return 1;
@@ -123,15 +111,42 @@ const NewsList = () => {
         };
     }
 
+    const sortTypes = {
+        up: {
+            class: 'sort-up',
+            fn: (a, b) => a - b
+        },
+        down: {
+            class: 'sort-down',
+            fn: (a, b) => b - a
+        },
+        default: {
+            class: 'sort',
+            fn: (a, b) => a
+        }
+    };
+    
+   const onSortChange = () => {
+        let nextSort;
+
+        if (currentSort === 'down') nextSort = 'up';
+        else if (currentSort === 'up') nextSort = 'default';
+        else if (currentSort === 'default') nextSort = 'down';
+
+        setCurrentSort(nextSort)
+
+    };
+
     const sortBy = (key) => {
+
+
         switch (key) {
             case 'Title':
-                let name = comments.map(comment => Object.values(comment))
-                name.sort(compareBy(2));
-                { console.log("name :",name) }
-                // { console.log("comments[name] :", comments[name]) }
+                let name = [comments.map(comment => comment.name)]
+                name.sort(compareBy(0));
+                { console.log("name :", name) }
                 return name;
-                // setComments(name)
+            // setComments(name)
             case 'Text':
                 let text = comments.map(comment => Object.values(comment))
                 text.sort(compareBy(3));

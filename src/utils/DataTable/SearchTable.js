@@ -22,7 +22,7 @@ const SearchTable = ({ handleChange, value }) => {
         <div className="parent-input" >
             <Form.Control
                 className="search-table"
-                placeholder="search by title"
+                placeholder="search news"
                 type="text"
                 name="query"
                 value={value}

@@ -331,8 +331,8 @@ class SignUp extends Component {
     const { errors, password, redirect, loading ,disabled } = this.state;
 
     let progressStyle = "";
-    if (password.length < 6) progressStyle = "danger";
-    if (password.length >= 6) progressStyle = "warning";
+    if (password.length < 8) progressStyle = "danger";
+    if (password.length >= 8) progressStyle = "warning";
     if (password.length >= 10) progressStyle = "success";
 
     if (redirect) {

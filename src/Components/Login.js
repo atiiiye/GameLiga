@@ -17,8 +17,6 @@ import { NavLink, Redirect } from "react-router-dom";
 
 //import packages
 import { ToastContainer } from "react-toastify";
-import { connect } from "react-redux";
-// import { createBrowserHistory } from "history";
 
 //import contexts
 import { Context } from "../Contexts";
@@ -130,7 +128,6 @@ class Login extends Component {
   goAccount = async () => {
     this.setState({ loading: true });
     this.setState({ disabled: true });
-    console.log('disabled : ', this.state.disabled)
 
     try {
       const { data, status } = await login(this.state);
@@ -146,7 +143,6 @@ class Login extends Component {
     } catch (err) {
       if (err.response && err.response.status === 400) {
         errorMessage("Username or Password is invalid");
-
       }
 
       this.setState({ loading: false });
@@ -154,7 +150,6 @@ class Login extends Component {
       this.resetInputs();
     }
   };
-
 
   render() {
     const { errors, redirect, loading, disabled } = this.state;
@@ -266,11 +261,5 @@ class Login extends Component {
     );
   }
 }
-
-// const mapStateToProps = (state) => {
-//     return {
-//       username: state.username,
-//     };
-// }
 
 export default Login;
