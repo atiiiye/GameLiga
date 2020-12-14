@@ -12,7 +12,7 @@ import TableHead from './TableHead'
 import PaginationPlugin from '../PaginationPlugin'
 import SearchTable from './SearchTable'
 
-const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, headers, body, onDeleteNews, onEditNews, handleChange, value, sortBy}) => {
+const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, headers, body, onDeleteNews, onEditNews, handleChange, value, sortBy, onSortChange}) => {
 
 
     // { console.log('body DataTable :', body) }
@@ -37,6 +37,7 @@ const DataTable = ({ totalItems, ITEMS_PER_PAGE, currentPage, setCurrentPage, he
                 <TableHead
                     headers={headers}
                     sortBy={sortBy}
+                    onSortChange={onSortChange}
                     />
                 <TableBody
                     body={body}

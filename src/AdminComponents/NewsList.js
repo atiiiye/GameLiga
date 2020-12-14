@@ -23,6 +23,7 @@ const NewsList = () => {
     const [query, setQuery] = useState([])
     const [sortedField, setSortedField] = useState(null);
     const [currentSort, setCurrentSort] = useState('default')
+    const [sortType, setSortType] = useState('desc');
 
 
 
@@ -105,28 +106,28 @@ const NewsList = () => {
         console.log('compareBy')
 
         return function (a, b) {
-            if (a[key] < b[key]) return -1;
-            if (a[key] > b[key]) return 1;
+            if (a.body < b.body) return -1;
+            if (a.body > b.body) return 1;
             return 0;
         };
     }
 
-    const sortTypes = {
-        up: {
-            class: 'sort-up',
-            fn: (a, b) => a - b
-        },
-        down: {
-            class: 'sort-down',
-            fn: (a, b) => b - a
-        },
-        default: {
-            class: 'sort',
-            fn: (a, b) => a
-        }
-    };
-    
-   const onSortChange = () => {
+    // const sortTypes = {
+    //     up: {
+    //         class: 'sort-up',
+    //         fn: (a, b) => a - b
+    //     },
+    //     down: {
+    //         class: 'sort-down',
+    //         fn: (a, b) => b - a
+    //     },
+    //     default: {
+    //         class: 'sort',
+    //         fn: (a, b) => a
+    //     }
+    // };
+
+    const onSortChange = () => {
         let nextSort;
 
         if (currentSort === 'down') nextSort = 'up';
@@ -139,19 +140,33 @@ const NewsList = () => {
 
     const sortBy = (key) => {
 
-
         switch (key) {
             case 'Title':
-                let name = [comments.map(comment => comment.name)]
-                name.sort(compareBy(0));
+                let name = comments.map(comment => comment.name.toLowerCase())
+                name.sort((a, b) => {
+                    const isReversed = (sortType === 'asc') ? 1 : -1
+                    console.log(isReversed)
+
+                    // return isReversed * a.localeCampare(b)
+                });
                 { console.log("name :", name) }
                 return name;
             // setComments(name)
             case 'Text':
-                let text = comments.map(comment => Object.values(comment))
-                text.sort(compareBy(3));
+                let body=comments.body
+                // let text = comments.map(comment => (comment.body.toLowerCase()))
+                let text = comments.sort(compareBy());
                 { console.log("text :", text) }
-                return text;
+
+                setComments(text)
+                // return text
+                // for (let i=0; i < text.length; i++) {
+
+                //     let data = comments[i]
+              
+                //     console.log('data :', data)
+                //     // return comments[text];
+                // }               
 
             default:
                 return comments;
@@ -176,6 +191,7 @@ const NewsList = () => {
                     onDeleteNews={onDeleteNews}
                     onEditNews={onEditNews}
                     sortBy={sortBy}
+                    onSortChange={onSortChange}
                 />
 
                 {loading && <Loader />}

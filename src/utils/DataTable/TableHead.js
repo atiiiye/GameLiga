@@ -7,13 +7,13 @@ import './../../css/TableHead.css'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 
-const TableHead = ({ headers, sortBy }) => {
+const TableHead = ({ headers, sortBy, onSortChange}) => {
     const [angleState, setAngleState] = React.useState([]);
 
 
     const toggle = () => {
         let tHeaders = document.querySelectorAll('th.header-head');
-        
+
         tHeaders.forEach(tHeader => tHeader.addEventListener('click', () => {
             let contentTag = tHeader.innerHTML;
 
@@ -27,9 +27,12 @@ const TableHead = ({ headers, sortBy }) => {
                 tHeader.classList.add('ascending')
             }
 
-            sortBy(contentTag)
 
-            console.log(tHeader);
+            if (tHeader.classList.contains('descending'))
+                sortBy(contentTag)//acs
+            else if (tHeader.classList.contains('ascending'))
+                //desc
+                console.log(tHeader);
         }))
     }
 
