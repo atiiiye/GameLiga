@@ -23,7 +23,7 @@ const NewsList = () => {
     const [query, setQuery] = useState([])
     const [sortedField, setSortedField] = useState(null);
     const [currentSort, setCurrentSort] = useState('default')
-    const [sortType, setSortType] = useState('desc');
+    const [sortType, setSortType] = useState(true);
 
 
 
@@ -73,6 +73,7 @@ const NewsList = () => {
     const handleChange = val => {
         setSearchInput(val);
         filtered(val)
+        setCurrentPage(1)
     }
 
     const filtered = (val) => {
@@ -103,12 +104,12 @@ const NewsList = () => {
     }
 
     const compareBy = (key) => {
-        console.log('compareBy')
-
         return function (a, b) {
-            if (a.body < b.body) return -1;
-            if (a.body > b.body) return 1;
-            return 0;
+            if (sortType) return a.body - b.body;
+            if (!sortType) return b.body - a.body;
+
+            setSortType(!sortType)
+            // return 0;
         };
     }
 
@@ -135,7 +136,6 @@ const NewsList = () => {
         else if (currentSort === 'default') nextSort = 'down';
 
         setCurrentSort(nextSort)
-
     };
 
     const sortBy = (key) => {
@@ -152,12 +152,12 @@ const NewsList = () => {
                 { console.log("name :", name) }
                 return name;
             // setComments(name)
+            
             case 'Text':
                 let body=comments.body
                 // let text = comments.map(comment => (comment.body.toLowerCase()))
                 let text = comments.sort(compareBy());
                 { console.log("text :", text) }
-
                 setComments(text)
                 // return text
                 // for (let i=0; i < text.length; i++) {
