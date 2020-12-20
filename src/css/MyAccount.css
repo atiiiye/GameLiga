@@ -4,14 +4,14 @@ body {
   background-color: #1c1c22;
 }
 
-div.container-fluid.Console {
+div.container-fluid.MyAccount {
   background-image: url("./../images/background-console.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
 }
 
-div.container-fluid.Console div.card#content {
+div.container-fluid.MyAccount div.card#content {
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@ div.container-fluid.Console div.card#content {
   min-height: 100%;
 }
 
-div.container-fluid.Console div.card#content div.main-section {
+div.container-fluid.MyAccount div.card#content div.main-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,28 +38,28 @@ div.container-fluid.Console div.card#content div.main-section {
   height: 70%;
 }
 
-div.container-fluid.Console div.card#content div.main-section i.image-icon.fas.fa-user-circle {
+div.container-fluid.MyAccount div.card#content div.main-section i.image-icon.fas.fa-user-circle {
   font-size: 70px;
   color: rgba(255, 255, 255, 0.6);
 }
 
-div.container-fluid.Console div.card#content div.main-section p.username {
+div.container-fluid.MyAccount div.card#content div.main-section p.username {
   color: rgba(255, 255, 255, 0.6);
   margin-top: 1rem;
   font-weight: 600;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.status {
+div.container-fluid.MyAccount div.card#content div.main-section div.status {
   position: relative;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.status span.status-activation {
+div.container-fluid.MyAccount div.card#content div.main-section div.status span.status-activation {
   color: rgba(255, 255, 255, 0.6);
   margin-top: 1rem;
   font-weight: 600;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.status span.status-online {
+div.container-fluid.MyAccount div.card#content div.main-section div.status span.status-online {
   position: absolute;
   left: -4%;
   width: 7px;
@@ -73,7 +73,7 @@ div.container-fluid.Console div.card#content div.main-section div.status span.st
   top: 7px;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.status span.status-offline {
+div.container-fluid.MyAccount div.card#content div.main-section div.status span.status-offline {
   position: absolute;
   left: -4%;
   width: 7px;
@@ -87,7 +87,7 @@ div.container-fluid.Console div.card#content div.main-section div.status span.st
   top: 7px;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.inputs {
+div.container-fluid.MyAccount div.card#content div.main-section div.inputs {
   display: flex;
   width: max-content;
   margin-top: 2rem;
@@ -95,14 +95,14 @@ div.container-fluid.Console div.card#content div.main-section div.inputs {
   justify-content: center;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.inputs div.validation-box {
+div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box {
   display: flex;
   flex-direction: column;
   padding: 0;
   width: 100%;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.inputs div.validation-box input {
+div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box input {
   border: 1px solid #ff9300;
   border-radius: 9px;
   background-color: #000;
@@ -111,11 +111,11 @@ div.container-fluid.Console div.card#content div.main-section div.inputs div.val
   width: 90%;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.inputs div.validation-box input:focus {
+div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box input:focus {
   box-shadow: 0 0 0 0.1rem rgba(255, 147, 0, 0.25);
 }
 
-div.container-fluid.Console div.card#content div.main-section div.nav-tabs {
+div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs {
   margin-top: 2rem;
   width: 56%;
   display: flex;
@@ -123,21 +123,21 @@ div.container-fluid.Console div.card#content div.main-section div.nav-tabs {
   border-bottom: 2px solid #36363b;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined {
+div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
+div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
   border: none;
   color: white;
   background-color: transparent;
 }
 
-div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link:focus, div.container-fluid.Console div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link:active {
+div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link:focus, div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link:active {
   outline: none;
   border-bottom: 2px solid #ff9300;
 }
-/*# sourceMappingURL=console.css.map */
+/*# sourceMappingURL=MyAccount.css.map */

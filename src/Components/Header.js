@@ -94,8 +94,8 @@ export default class Header extends Component {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/studi">
-                      Studi
+                    <NavLink className="nav-link" to="/tutorial">
+                      Tutorial
                     </NavLink>
                   </li>
                 </Navbar.Collapse>

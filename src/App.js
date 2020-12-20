@@ -9,7 +9,7 @@ import Tvlive from "./Components/Tvlive";
 import Games from "./Components/Games";
 import Tourny from "./Components/Tourny";
 import Liga from "./Components/Liga";
-import Console from "./Components/Console";
+import MyAccount from "./Components/MyAccount";
 import LeaderBoards from "./Components/LeaderBoards";
 import Chat from "./Components/Chat";
 import Tutorial from "./Components/Tutorial";
@@ -61,7 +61,7 @@ class App extends Component {
 
           <PrivateRoute exact path="/leader-boards" component={LeaderBoards} />
 
-          <PrivateRoute exact path="/console" component={Console} />
+          <PrivateRoute exact path="/myaccount" component={MyAccount} />
 
           <PrivateRoute exact path="/liga" component={Liga} />
 

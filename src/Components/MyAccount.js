@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 //import css
-import "./../css/console.css";
-import "./../css/mediaConsole.css";
+import "./../css/MyAccount.css";
+import "./../css/mediaMyAccount.css";
 
 //import components
 import Sidebar from "./Sidebar";
@@ -18,7 +18,7 @@ import { Card, Form, Nav } from "react-bootstrap";
 import { isLogin } from '../utils';
 
 
-class Console extends Component {
+class MyAccount extends Component {
   state = {};
 
 
@@ -28,7 +28,7 @@ class Console extends Component {
         <UserHeader />
         <div className="display" style={{ display: "flex" }}>
           <Sidebar />
-          <div className="container-fluid Console">
+          <div className="container-fluid MyAccount">
             <Card id="content">
               <div className="main-section">
                 <i className="image-icon fas fa-user-circle" id="user"></i>
@@ -133,4 +133,4 @@ class Console extends Component {
   }
 }
 
-export default Console;
+export default MyAccount;

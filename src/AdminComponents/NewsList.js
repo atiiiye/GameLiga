@@ -24,6 +24,7 @@ const NewsList = () => {
     const [sortedField, setSortedField] = useState(null);
     const [currentSort, setCurrentSort] = useState('default')
     const [sortType, setSortType] = useState(true);
+    const [temp, setTemp] = useState(true);
 
 
 
@@ -105,28 +106,13 @@ const NewsList = () => {
 
     const compareBy = (key) => {
         return function (a, b) {
-            if (sortType) return a.body - b.body;
-            if (!sortType) return b.body - a.body;
+            if (sortType) return a.body > b.body;
+            if (!sortType) return b.body < a.body;
 
             setSortType(!sortType)
             // return 0;
         };
     }
-
-    // const sortTypes = {
-    //     up: {
-    //         class: 'sort-up',
-    //         fn: (a, b) => a - b
-    //     },
-    //     down: {
-    //         class: 'sort-down',
-    //         fn: (a, b) => b - a
-    //     },
-    //     default: {
-    //         class: 'sort',
-    //         fn: (a, b) => a
-    //     }
-    // };
 
     const onSortChange = () => {
         let nextSort;
@@ -152,21 +138,25 @@ const NewsList = () => {
                 { console.log("name :", name) }
                 return name;
             // setComments(name)
-            
+
             case 'Text':
-                let body=comments.body
+                let text
                 // let text = comments.map(comment => (comment.body.toLowerCase()))
-                let text = comments.sort(compareBy());
+                if (temp)  text = comments.sort((a, b) => a.body > b.body);
+                else text = comments.sort((a, b) => a.body < b.body);
+            
                 { console.log("text :", text) }
                 setComments(text)
-                // return text
-                // for (let i=0; i < text.length; i++) {
+                setTemp(!temp)
+                console.log('temp :', temp)
+            // return text
+            // for (let i=0; i < text.length; i++) {
 
-                //     let data = comments[i]
-              
-                //     console.log('data :', data)
-                //     // return comments[text];
-                // }               
+            //     let data = comments[i]
+
+            //     console.log('data :', data)
+            //     // return comments[text];
+            // }               
 
             default:
                 return comments;

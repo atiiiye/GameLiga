@@ -1,7 +1,7 @@
 @import './../base';
 
 @media(max-width:1199px) {
-    div.container-fluid.Console {
+    div.container-fluid.MyAccount {
         div.card#content {
             div.main-section {
                 i.image-icon.fas.fa-user-circle {}
@@ -33,7 +33,7 @@
 }
 
 @media(max-width:991px) {
-    div.container-fluid.Console {
+    div.container-fluid.MyAccount {
         div.card#content {
             div.main-section {
                 i.image-icon.fas.fa-user-circle {}
@@ -75,7 +75,7 @@
 }
 
 @media(max-width:867px) {
-    div.container-fluid.Console {
+    div.container-fluid.MyAccount {
         div.card#content {
             div.main-section {
                 i.image-icon.fas.fa-user-circle {
@@ -127,7 +127,7 @@
 }
 
 @media(max-width:768px) {
-    div.container-fluid.Console {
+    div.container-fluid.MyAccount {
         width: 80%;
 
         div.card#content {
@@ -189,7 +189,7 @@
 }
 
 @media(max-width:650px) {
-    div.container-fluid.Console {
+    div.container-fluid.MyAccount {
         width: 80%;
 
         div.card#content {
@@ -250,7 +250,7 @@
 }
 
 @media(max-width:575px) {
-    div.container-fluid.Console{
+    div.container-fluid.MyAccount{
         width: 100%;
     }
 }

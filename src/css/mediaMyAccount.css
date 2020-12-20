@@ -1,0 +1,172 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #1c1c22;
+}
+
+@media (max-width: 1199px) {
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs {
+    width: 85%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs {
+    width: 70%;
+  }
+}
+
+@media (max-width: 991px) {
+  div.container-fluid.MyAccount div.card#content div.main-section span.status-activation {
+    margin-top: .8rem;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs {
+    width: 82%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box {
+    width: 95%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box input {
+    padding-left: .4rem;
+    width: 90%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs {
+    width: 78%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 867px) {
+  div.container-fluid.MyAccount div.card#content div.main-section i.image-icon.fas.fa-user-circle {
+    font-size: 70px;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section p.username {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section span.status-activation {
+    margin-top: .8rem;
+    font-weight: 600;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs {
+    width: 82%;
+    margin-top: 2rem;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box {
+    padding: 0;
+    width: 95%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box input {
+    padding-left: .4rem;
+    width: 90%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs {
+    margin-top: 2.2rem;
+    width: 85%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined {
+    width: 100%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
+    font-size: 92%;
+  }
+}
+
+@media (max-width: 768px) {
+  div.container-fluid.MyAccount {
+    width: 80%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section {
+    height: 70%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section i.image-icon.fas.fa-user-circle {
+    font-size: 65px;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section p.username {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 95%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section span.status-activation {
+    margin-top: .8rem;
+    font-weight: 600;
+    font-size: 95%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box {
+    padding: 0;
+    width: 95%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box input {
+    padding-left: .4rem;
+    width: 90%;
+    height: 35px;
+    font-size: 95%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs {
+    margin-top: 2.2rem;
+    width: 92%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined {
+    width: 100%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
+    font-size: 85%;
+    padding: .5rem .8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  div.container-fluid.MyAccount {
+    width: 80%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section {
+    height: 70%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section i.image-icon.fas.fa-user-circle {
+    font-size: 60px;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section p.username {
+    margin-top: .7rem;
+    font-weight: 600;
+    font-size: 90%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section span.status-activation {
+    margin-top: .5rem;
+    font-weight: 600;
+    font-size: 90%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs {
+    width: 78%;
+    margin-top: 2rem;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box {
+    width: 95%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.inputs div.validation-box input {
+    padding-left: .35rem;
+    width: 90%;
+    height: 33px;
+    font-size: 90%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs {
+    margin-top: 2.2rem;
+    width: 100%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined {
+    width: 100%;
+  }
+  div.container-fluid.MyAccount div.card#content div.main-section div.nav-tabs div.nav-list.nav.card-header-undefined div.nav-item a.nav-item.nav-link {
+    font-size: 85%;
+    padding: .5rem .75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  div.container-fluid.MyAccount {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=mediaMyAccount.css.map */
